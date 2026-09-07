@@ -1,0 +1,62 @@
+{
+  "source": {
+    "program": 150,
+    "source": {
+      "program": 150,
+      "id": "episode_106370340_seat_0",
+      "episode": 106370340,
+      "seat": 0,
+      "team": "JustinLee",
+      "rank": 10,
+      "submission": 56065461,
+      "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T08:02:02.csv",
+      "replay_sha256": "5284f2fdf9dfdebb5b694d2de797f2daf6b60ae13fcb898db6793983217536e2"
+    },
+    "scope": "Exact single recorded course, no inferred original branching policy",
+    "changes": "None beyond existing library normalization; all 719 source actions already verified",
+    "reuse": "User-authorized borrowing of public replay actions; no separate source-code license supplied",
+    "deployment_validation": {
+      "generic_debug_thread_equal_games": {
+        "justin_150_vs_justin_154": 16,
+        "atakan_161_vs_king_rc4": 16
+      },
+      "source_parity": "results/replay_library_parity.json",
+      "pass_self": "results/refresh_0804_checks",
+      "broad_league": "results/refresh_0804_league",
+      "scope": "Exact library wrappers with immutable data, per-instance program choice, observation only; normalized719actions each"
+    },
+    "fresh_comparisons": {
+      "directory": "results/justin_fresh_850000",
+      "seeds": "850000..850511, both seats",
+      "games_per_opponent": 1024,
+      "scope": "One fixed source course; wins a majority versus8listed opponents but has substantial tail losses, notably King"
+    },
+    "native_audits": [
+      "results/justin_native_v4.json",
+      "results/justin_native_binghua.json"
+    ]
+  },
+  "terminal_ideas": {
+    "recall": {
+      "donor": "https://www.kaggle.com/code/yamakawanin/king-v4e-rc4",
+      "source_sha256": "26ffba5273e4432dbc4ec822d5a65b09d3e9f1473c3ce813c528812eeb45779d",
+      "layer": "Dusta latest-departure recall active in King RC4"
+    },
+    "liquidation": {
+      "source": "research/refresh_0504/notebooks/lynnsakurai/farming-score-a-mathematical-approach/extracted_MAIN_B64.py",
+      "source_sha256": "1dc166ae2bf0c56a44fac4482f469b8812968c4cb32459cb9860f5077897a7d4",
+      "route_origin": "Thomas Tschinkel public state router; identical decoded blob SHA aabfbe9164937e4f46b59582479cebc5a1615a5652fa804adb172742f998db11",
+      "author": "Lynn Sakurai/Arlene",
+      "changes": "Typed C++ port of source capacity guard and final-step liquidation",
+      "reuse": "User-authorized public notebook borrowing; separate license not supplied in retrieved metadata",
+      "status": "8628 original actions match; generic/debug/thread, PASS and self checks pass. 256 games against each of nine opponents; no rating or global superiority claim."
+    }
+  },
+  "local_changes": "New generic C++ terminal overlay; existing SELL slots preserved and quantities raised to shed capacity, missing products appended; same-turn deposits settled by exact engine rather than predicted as a certificate",
+  "mode": 1,
+  "code_sha256": "e1c6c1316b331bba8ea6cbae829c1df4d3a983abc80698b66c550c56a583dfbc",
+  "causal_evidence": "results/terminal_justin_causal.json",
+  "status": "Required deployment checks complete; retained after broad league comparison. Combined recall variant passes fresh 1024-game gates against ten opponents; mode1 retained as causal control.",
+  "reuse": "User explicitly authorized public replay/code component borrowing. Donor restrictions and unknown licenses retained in nested metadata.",
+  "validation": "results/justin_terminal_validation.json"
+}

@@ -1,0 +1,27 @@
+{
+  "time": "2026-09-07 13:02 UTC",
+  "scope": "Crop fertilization proposal/compile/continuation tests against public_router,32common discovery seeds bothseats",
+  "parent": "investment_context_guarded_001_best",
+  "biology": {
+    "239_source_lifecycles_harvest_totals_exact": true,
+    "positive_proposals": 414,
+    "proposal_seconds_range": [
+      5.4263e-05,
+      7.7284e-05
+    ]
+  },
+  "runs": {
+    "fertilization_001": "Driver empty seed-list crash after estimates; no complete results",
+    "fertilization_002": "Single changed day,24proposals; output improved but lost later guards/labor or wheat overflow",
+    "fertilization_003": "Rebound route continuation restores workforce, but sell-all berry change moves existing source trades and hurts value",
+    "fertilization_004": "Original sale requests preserved. Top day20strawberry adds2sold per activatedgame46/64; mean cash+56.78125,margin+46.34375,zero labor gain/loss; pending wider league",
+    "fertilization_005": "Other herd context seed1005 currently running"
+  },
+  "replay_correction": "Aggregate fertilizer gap is mostly wheat/carrot. Current strawberry productive-day rate90.85%; crop-mix comparisons underway. Mengfei wheat-tomato-carrot rotation identified for larger change.",
+  "limitations": [
+    "Current-price output ranking excludes endogenous later price effects and route cost",
+    "Wheat+2canbe entirely discarded despite exact production; storage/deposit/sale closure needed",
+    "One crop edit per policy so far",
+    "Physical day guard is not a finance certificate"
+  ]
+}

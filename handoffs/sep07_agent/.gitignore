@@ -1,0 +1,9 @@
+# Historical build inputs and logs are part of the evidence snapshot.
+!**/build/
+!**/build/**
+!**/*.log
+!**/*.so
+# Reproduction writes here, leaving the frozen inputs unchanged.
+/_work/
+**/__pycache__/
+*.pyc

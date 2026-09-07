@@ -1,0 +1,20 @@
+{
+  "result": "matched_actions=719",
+  "scope": "All 719 source actions; current worker count normalized",
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "g++",
+    "-std=c++20",
+    "-O2",
+    "-DVERIFY_TEACHER",
+    "-I",
+    "/home/pavel/Programming/kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/tests/public_router_parity.cpp",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/leader_program0_tape/source/agent.cpp",
+    "-o",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/teacher_parity"
+  ]
+}

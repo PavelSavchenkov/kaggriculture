@@ -1,0 +1,11 @@
+mask,name,predicted_own_delta,predicted_rival_delta,predicted_margin_delta,predicted_rival_milk_revenue_delta,chosen_branch
+0,baseline,6563,3005,3558,2949,2
+1,rival_flows,3887,5829,-1942,4706,0
+2,own_flows,5819,3005,2814,2949,2
+3,both_flows,3799,6625,-2826,4706,0
+4,future_shops,9177,14314,-5137,13914,0
+5,rival_flows_and_shops,1238,13002,-11764,13391,0
+6,own_flows_and_shops,8329,14314,-5985,13914,0
+7,all_three,494,13346,-12852,13391,0
+15,all_three_and_rival_fixed_cost,494,13346,-12852,13391,0
+31,all_three_fixed_and_exact_consumption_calendar,2657,14949,-12292,13649,0

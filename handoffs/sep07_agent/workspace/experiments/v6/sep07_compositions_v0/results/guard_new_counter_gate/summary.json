@@ -1,0 +1,104 @@
+[
+  {
+    "agent": "guarded_hires_v3",
+    "opponent": "binghua_116",
+    "summary": {
+      "agent_a": "guarded_hires_v3",
+      "agent_b": "binghua_116",
+      "seconds": 1.21897,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.391602,
+      "mean_cash": 91637.3,
+      "mean_margin": -2351.9,
+      "cash_cvar10": 58064.8,
+      "margin_cvar10": -15555.7,
+      "pass_J": 84922.8
+    }
+  },
+  {
+    "agent": "guarded_hires_v3",
+    "opponent": "john_128",
+    "summary": {
+      "agent_a": "guarded_hires_v3",
+      "agent_b": "john_128",
+      "seconds": 1.20034,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.491211,
+      "mean_cash": 91232.5,
+      "mean_margin": 366.233,
+      "cash_cvar10": 57985.3,
+      "margin_cvar10": -14648.7,
+      "pass_J": 84583.1
+    }
+  },
+  {
+    "agent": "guarded_hires_v3",
+    "opponent": "john_131",
+    "summary": {
+      "agent_a": "guarded_hires_v3",
+      "agent_b": "john_131",
+      "seconds": 1.19591,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.556641,
+      "mean_cash": 96426.3,
+      "mean_margin": 286.037,
+      "cash_cvar10": 59199.2,
+      "margin_cvar10": -11245.8,
+      "pass_J": 88980.9
+    }
+  },
+  {
+    "agent": "opening_router_v3",
+    "opponent": "binghua_116",
+    "summary": {
+      "agent_a": "opening_router_v3",
+      "agent_b": "binghua_116",
+      "seconds": 1.20032,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.383789,
+      "mean_cash": 91477.5,
+      "mean_margin": -2511.01,
+      "cash_cvar10": 58004.8,
+      "margin_cvar10": -15828.5,
+      "pass_J": 84782.9
+    }
+  },
+  {
+    "agent": "opening_router_v3",
+    "opponent": "john_128",
+    "summary": {
+      "agent_a": "opening_router_v3",
+      "agent_b": "john_128",
+      "seconds": 1.19689,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.485352,
+      "mean_cash": 91078.3,
+      "mean_margin": 213.602,
+      "cash_cvar10": 57923.3,
+      "margin_cvar10": -14951.9,
+      "pass_J": 84447.3
+    }
+  },
+  {
+    "agent": "opening_router_v3",
+    "opponent": "john_131",
+    "summary": {
+      "agent_a": "opening_router_v3",
+      "agent_b": "john_131",
+      "seconds": 1.19233,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.551758,
+      "mean_cash": 96270.8,
+      "mean_margin": 133.071,
+      "cash_cvar10": 59147,
+      "margin_cvar10": -11342.7,
+      "pass_J": 88846
+    }
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "ttv_exact_duplicate": true,
+  "market_v4": {
+    "ranking_calls": 34512,
+    "calls_with_multiple_sales": 1541,
+    "ranking_changes": 123,
+    "action_changes_vs_thomas": 113,
+    "actions": 34512,
+    "positive_impact_rows": 284
+  },
+  "counterexample": [
+    [
+      "SELL",
+      "WHEAT",
+      99
+    ],
+    [
+      "HIRE"
+    ],
+    [
+      "SELL",
+      "MILK",
+      1
+    ]
+  ]
+}

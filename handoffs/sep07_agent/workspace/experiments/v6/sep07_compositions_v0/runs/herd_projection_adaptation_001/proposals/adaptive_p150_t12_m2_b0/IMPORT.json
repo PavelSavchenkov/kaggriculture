@@ -1,0 +1,69 @@
+{
+  "source_program": 150,
+  "source_metadata": "league/top_replay_library/IMPORT.json",
+  "terminal_parent": "candidates/justin_recall_v0",
+  "local_changes": "New typed explicit-service candidate biology, own or relative revenue objective, decision before earliest changed structure, per-instance observation-only choice",
+  "buffer": 0,
+  "mode": 2,
+  "mode_definition": "0 projected cash,1 projected margin,2 current shop count,3 current demand units per cycle; simple modes choose cow/sheep at purchase and preserve ties",
+  "status": "experimental, model and full deployment validation pending",
+  "source": {
+    "program": 150,
+    "id": "episode_106370340_seat_0",
+    "episode": 106370340,
+    "seat": 0,
+    "team": "JustinLee",
+    "rank": 10,
+    "submission": 56065461,
+    "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T08:02:02.csv",
+    "replay_sha256": "5284f2fdf9dfdebb5b694d2de797f2daf6b60ae13fcb898db6793983217536e2"
+  },
+  "terminal_component_lineage": {
+    "recall": {
+      "donor": "https://www.kaggle.com/code/yamakawanin/king-v4e-rc4",
+      "source_sha256": "26ffba5273e4432dbc4ec822d5a65b09d3e9f1473c3ce813c528812eeb45779d",
+      "layer": "Dusta latest-departure recall active in King RC4"
+    },
+    "liquidation": {
+      "source": "research/refresh_0504/notebooks/lynnsakurai/farming-score-a-mathematical-approach/extracted_MAIN_B64.py",
+      "source_sha256": "1dc166ae2bf0c56a44fac4482f469b8812968c4cb32459cb9860f5077897a7d4",
+      "route_origin": "Thomas Tschinkel public state router; identical decoded blob SHA aabfbe9164937e4f46b59582479cebc5a1615a5652fa804adb172742f998db11",
+      "author": "Lynn Sakurai/Arlene",
+      "changes": "Typed C++ port of source capacity guard and final-step liquidation",
+      "reuse": "User-authorized public notebook borrowing; separate license not supplied in retrieved metadata",
+      "status": "8628 original actions match; generic/debug/thread, PASS and self checks pass. 256 games against each of nine opponents; no rating or global superiority claim."
+    }
+  },
+  "run_source_sha256": {
+    "src/audit_adaptive_tickets.cpp": "43f3b50b0f94842931955306b0423385b6389e930130e35c98d2034eafae1ca1",
+    "include/ticket_trace.hpp": "f3fd4742944a8e618de3f009aca06b9a639cf512acdc42836629f34a04e6f6a9",
+    "include/ticket_estimate.hpp": "1f8e871d145b9b0a8790441355d7e588e1590488d989642fc3aa9cc58222569d",
+    "include/day_override.hpp": "07d7477302c7f9bc06bd2bf48eef9f0c5fc100b69dcc97c3c4e93272ae480f0d",
+    "include/economics.hpp": "1f21960648c33a05b4ff1328a1a6e2788eece11aa546bd321832cd0ce5f22171",
+    "include/count_spans.hpp": "5b2c86df5a6b1b645ddd0ed8c6dbdc320f75193820f07f3ab0394505c5c05e8e",
+    "include/animal_ticket.hpp": "9c4c0f1080fd477e5ee0e7af96bb7a0c42a0401e7bad6abc1e79b9d082fd97d1",
+    "include/opening_features.hpp": "d97c438466363f5723bca0bb03b38d09debe9fc751192ee1939281829f4d4216",
+    "include/composition.hpp": "98aa35afe3b844f651a9b6a4718077a6b3899b6263ef78564d9e778d0b8cfc17",
+    "include/biology.hpp": "82225498387721be96a6fc0da45323086faa9f1057ff3a5607b909b23876bb23",
+    "include/day_contract.hpp": "a46823968d09e6dd6435a637c908e1d652f18e7793114a5e91bc53ff9c569cd2",
+    "include/planned_opening.hpp": "b9a4ae72039849ff33d18a2b6411659a205f3873f66836afa3a47dc9b44197e6",
+    "include/crop_service.hpp": "9a2651c237240464fb384a46a9c25ca4ada6ac5cea21bd793e520743abf41ad5",
+    "include/market_course.hpp": "cc56db531ec61322dfc9c86de08bb32da9b1b77809036e031638c342051155b2",
+    "include/profile.hpp": "ee9a5305aa3778dca3e6272b1f4d38afd0f4a806b3c5c5414367626a34e70724",
+    "include/scenario_io.hpp": "d89b073e59539cbda69276b78e51c5d7e2ef488b7d6f359288ad5b7cc900bde9",
+    "include/estimate.hpp": "7c5e29d7ecd6779d821e721df011e19f46a028c6737dbe8d9f9910028c89db33",
+    "include/species_template.hpp": "631b3bcbb40d6b198590054b9918e4d94ed8a000698e5d59342782e577982f0c",
+    "include/terminal_layer.hpp": "a7c808873b6643d1b256835a8c21efe6f5ac6680a1fec245a6d87fe0aa22527f",
+    "include/proposals.hpp": "1639b83195677c5cd8f98066a65bbc8e28d5a6fe2692cf64a9bf701c0d7cc9b5",
+    "include/adaptive_ticket.hpp": "0e6b7ec17d568fc7be5ba0fa4732cd6b82de935412227e5afb2ee9aa9a6bec21",
+    "include/finance7_layer.hpp": "599ee364b1ab7ab5d1a1070c59e453cd82f6b6dc69631f6bfe3451015eb7b632",
+    "include/guarded_day.hpp": "ee708a53ecf18edb4c0efc1b983a16458ebd57d4d973928f00fda0cc08b2b9ec",
+    "include/evaluation.hpp": "3a2821900ef5cbe2094ff25be19a8cf48d41e5aa7b4d83d9528221b5fa692b3e",
+    "include/market_tape.hpp": "f223dafef369e33013b2e5a55460aff8358652ded520a16128e5b26d17faf72c",
+    "include/herd_forecast.hpp": "d446032580fed7628095cb1e736b57b0a64a44d7982ca26ed550f4dab9ec91dc",
+    "league/top_replay_library/IMPORT.json": "2f6aac4b348590ef12840705fd1ba62692c06f2a076647d1cdf591107fa360c5",
+    "candidates/justin_recall_v0/IMPORT.json": "18a0bdb6176a857d86f4c1bf3851dcee1aa7d6ed35f460eec4611ed0bd5b58a4"
+  },
+  "reuse": "User authorized public replay borrowing; Goose-portfolio notebook attributes Apache2 baseline.",
+  "shop_choice_idea": "User: more milk-demand shops means more cows; more wool-demand shops means more sheep."
+}

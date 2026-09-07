@@ -1,0 +1,166 @@
+{
+  "name": "titan_frontier",
+  "scenario": "Fully enabled official rules with independent shop stream; discovery seeds1000..1063, both seats; no fresh promotion claim",
+  "source_parity": {
+    "result": "matched_actions=11504",
+    "coverage": {
+      "competing_supply": 6604,
+      "changed_market_turns": 3677,
+      "route_default": 5454,
+      "route_yarn_first": 3786,
+      "parent_schedule": 4900,
+      "route_yarn_second": 2264
+    },
+    "config": {
+      "turnsPerDay": 24,
+      "townShopSellInterval": 4,
+      "townCenterSellInterval": 24,
+      "maxMarketOrdersPerTurn": 10,
+      "shedCapacity": 100
+    },
+    "scope": "Eight recorded streams plus eight forced shop/similarity/stock/weed streams; no Python local gameplay"
+  },
+  "generic_debug_thread_full_record_matches": 16,
+  "self_play_games": 8,
+  "pass": {
+    "games": 256,
+    "wins": 256,
+    "ties": 0,
+    "mean_cash": 156950.2578125,
+    "mean_margin": 153950.2578125,
+    "margin_cvar10": 96505.9,
+    "pass_J": 145461
+  },
+  "head_to_head_parent": {
+    "games": 128,
+    "wins": 123,
+    "ties": 0,
+    "mean_cash": 85101.640625,
+    "mean_margin": 4793.0234375,
+    "margin_cvar10": -2157.08,
+    "pass_J": 76718.9
+  },
+  "common_opponents": {
+    "shop_herd_s6_m3_g1": {
+      "new": {
+        "games": 128,
+        "wins": 12,
+        "ties": 0,
+        "mean_cash": 81841.2890625,
+        "mean_margin": -16258.5859375,
+        "margin_cvar10": -29520.1,
+        "pass_J": 72449.4
+      },
+      "parent": {
+        "games": 128,
+        "wins": 12,
+        "ties": 0,
+        "mean_cash": 81839.7890625,
+        "mean_margin": -16262.2109375,
+        "margin_cvar10": -29520.1,
+        "pass_J": 72448.2
+      },
+      "changed_complete_game_records": 8,
+      "paired_mean_margin_delta": 3.625
+    },
+    "teammate_shoprouter": {
+      "new": {
+        "games": 128,
+        "wins": 18,
+        "ties": 0,
+        "mean_cash": 78322.7890625,
+        "mean_margin": -11510.1953125,
+        "margin_cvar10": -26261.5,
+        "pass_J": 69462.3
+      },
+      "parent": {
+        "games": 128,
+        "wins": 18,
+        "ties": 0,
+        "mean_cash": 78322.7890625,
+        "mean_margin": -11510.1953125,
+        "margin_cvar10": -26261.5,
+        "pass_J": 69462.3
+      },
+      "changed_complete_game_records": 0,
+      "paired_mean_margin_delta": 0.0
+    },
+    "king_rc4": {
+      "new": {
+        "games": 128,
+        "wins": 5,
+        "ties": 0,
+        "mean_cash": 80035.484375,
+        "mean_margin": -12762.7578125,
+        "margin_cvar10": -27265.3,
+        "pass_J": 71116.2
+      },
+      "parent": {
+        "games": 128,
+        "wins": 5,
+        "ties": 0,
+        "mean_cash": 80035.484375,
+        "mean_margin": -12762.7578125,
+        "margin_cvar10": -27265.3,
+        "pass_J": 71116.2
+      },
+      "changed_complete_game_records": 0,
+      "paired_mean_margin_delta": 0.0
+    },
+    "binghua_116": {
+      "new": {
+        "games": 128,
+        "wins": 14,
+        "ties": 0,
+        "mean_cash": 81441.6796875,
+        "mean_margin": -12882.3203125,
+        "margin_cvar10": -29805.1,
+        "pass_J": 72245.3
+      },
+      "parent": {
+        "games": 128,
+        "wins": 14,
+        "ties": 0,
+        "mean_cash": 81441.6796875,
+        "mean_margin": -12882.3203125,
+        "margin_cvar10": -29805.1,
+        "pass_J": 72245.3
+      },
+      "changed_complete_game_records": 0,
+      "paired_mean_margin_delta": 0.0
+    },
+    "public_terminal_router": {
+      "new": {
+        "games": 128,
+        "wins": 2,
+        "ties": 0,
+        "mean_cash": 79826.328125,
+        "mean_margin": -16316.5390625,
+        "margin_cvar10": -28130.7,
+        "pass_J": 71017.8
+      },
+      "parent": {
+        "games": 128,
+        "wins": 2,
+        "ties": 0,
+        "mean_cash": 79826.328125,
+        "mean_margin": -16316.5390625,
+        "margin_cvar10": -28130.7,
+        "pass_J": 71017.8
+      },
+      "changed_complete_game_records": 0,
+      "paired_mean_margin_delta": 0.0
+    }
+  },
+  "source_files": {
+    "league/titan_frontier/source/agent.cpp": "e92228741cbf949e65128dbce3e63a5a85618a40e80687d24b75b3819aac2336",
+    "league/titan_frontier/source/agent.hpp": "e29e207bbe3230dfc22623c98abdeec866282e1efdb126ddb54a1b86c4ee62fd",
+    "league/titan_frontier/source/routes.inc": "08befb602daa5f4be611cac0c93eb54067c9a7baa90799be0ef4aa954ecd7391"
+  },
+  "build": "build/refresh_1010/generic/build.json",
+  "debug_build": "build/refresh_1010/debug_pair/build.json",
+  "build_dependency_snapshot": "build/refresh_1010/source_snapshot.json",
+  "status": "Retained as a faithful audited external reference; no incumbent promotion",
+  "learning": "Similarity-gated early finished-product sales strongly beat the same production parent but are nearly inactive against this modern panel. Earlier sales also change funding and downstream production; do not call this an equal-production timing result.",
+  "causal_profile": "results/refresh_1010_screen/titan_overlay_causal.json"
+}

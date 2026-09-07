@@ -1,0 +1,36 @@
+[
+  {
+    "agent": "guarded_hires_v3",
+    "opponent": "pass",
+    "summary": {
+      "agent_a": "guarded_hires_v3",
+      "agent_b": "pass",
+      "seconds": 0.194764,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 154454,
+      "mean_margin": 151454,
+      "cash_cvar10": 111882,
+      "margin_cvar10": 108882,
+      "pass_J": 145940
+    }
+  },
+  {
+    "agent": "opening_router_v3",
+    "opponent": "pass",
+    "summary": {
+      "agent_a": "opening_router_v3",
+      "agent_b": "pass",
+      "seconds": 0.219308,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 154088,
+      "mean_margin": 151088,
+      "cash_cvar10": 111517,
+      "margin_cvar10": 108517,
+      "pass_J": 145573
+    }
+  }
+]

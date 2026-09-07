@@ -1,0 +1,15 @@
+{
+  "origin": "experiments/v2/aug31_four_random_shops_league_foundry/candidates/replay/replay_arman_ge3000_94541153",
+  "source_sha256": {
+    "README.md": "bda7815c4d13c2cd2e881bf6a48e16346be4a0356ba5a8f6a073b14196de411d",
+    "agent.json": "a3544d423bc73efa6dfe88d51daf14cc5dd1d9324d2e6e9b052d18478df149bf",
+    "source/agent.cpp": "b252cc9e546c47479dc84ad3b4997f9d0cfb739dae99dc69bd10c58789e70be7",
+    "source/agent.hpp": "3cf32e78cf8db021ec4e83f2e60cebebf807814b5c2a7fbe61f681f976379b84",
+    "source/tape.inc": "61e2fe66d79a379697f7829b5286a9c5db952cacb0ba428c55a3eb456d3de5e5"
+  },
+  "changes": [
+    "Copy into this experiment",
+    "Repair moved includes; policy unchanged"
+  ],
+  "rating_scope": "Historical source selection band, not a rating measured in this experiment"
+}

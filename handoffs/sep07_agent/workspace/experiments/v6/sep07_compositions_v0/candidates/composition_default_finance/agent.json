@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "composition_default_finance",
+  "header": "source/agent.hpp",
+  "type": "compositions::greedy::Agent<0,true,true,false,1,true>",
+  "sources": [
+    "source/agent.cpp",
+    "../composition_greedy_v0/source/agent.cpp"
+  ]
+}

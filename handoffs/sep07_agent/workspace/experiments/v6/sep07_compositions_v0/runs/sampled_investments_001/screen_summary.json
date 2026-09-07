@@ -1,0 +1,1752 @@
+{
+  "aggregate": [
+    {
+      "candidate": "sample_early_m0_r0",
+      "wins": 297,
+      "games": 512,
+      "utility": 0.580078125,
+      "margin_gain": -3331.224609375,
+      "min_opponent_gain": -3580.8125,
+      "seconds": 0.7431298
+    },
+    {
+      "candidate": "sample_early_m0_r1",
+      "wins": 297,
+      "games": 512,
+      "utility": 0.580078125,
+      "margin_gain": -3331.224609375,
+      "min_opponent_gain": -3580.8125,
+      "seconds": 0.7215887
+    },
+    {
+      "candidate": "sample_early_m1_r0",
+      "wins": 321,
+      "games": 512,
+      "utility": 0.642578125,
+      "margin_gain": -1907.658203125,
+      "min_opponent_gain": -2148.765625,
+      "seconds": 0.7219089
+    },
+    {
+      "candidate": "sample_early_m1_r1",
+      "wins": 321,
+      "games": 512,
+      "utility": 0.642578125,
+      "margin_gain": -1907.658203125,
+      "min_opponent_gain": -2148.765625,
+      "seconds": 0.7178412
+    },
+    {
+      "candidate": "sample_early_m32_r0",
+      "wins": 303,
+      "games": 512,
+      "utility": 0.591796875,
+      "margin_gain": -3181.28125,
+      "min_opponent_gain": -3415.546875,
+      "seconds": 0.8618824
+    },
+    {
+      "candidate": "sample_early_m32_r1",
+      "wins": 316,
+      "games": 512,
+      "utility": 0.6328125,
+      "margin_gain": -1981.650390625,
+      "min_opponent_gain": -2238.265625,
+      "seconds": 0.839857
+    },
+    {
+      "candidate": "sample_early_m64_r0",
+      "wins": 303,
+      "games": 512,
+      "utility": 0.591796875,
+      "margin_gain": -3181.28125,
+      "min_opponent_gain": -3415.546875,
+      "seconds": 1.046659
+    },
+    {
+      "candidate": "sample_early_m64_r1",
+      "wins": 321,
+      "games": 512,
+      "utility": 0.642578125,
+      "margin_gain": -1907.658203125,
+      "min_opponent_gain": -2148.765625,
+      "seconds": 1.01807
+    },
+    {
+      "candidate": "sample_early_m8_r0",
+      "wins": 303,
+      "games": 512,
+      "utility": 0.591796875,
+      "margin_gain": -3181.28125,
+      "min_opponent_gain": -3415.546875,
+      "seconds": 0.7545583
+    },
+    {
+      "candidate": "sample_early_m8_r1",
+      "wins": 321,
+      "games": 512,
+      "utility": 0.642578125,
+      "margin_gain": -1907.658203125,
+      "min_opponent_gain": -2148.765625,
+      "seconds": 0.7371751
+    },
+    {
+      "candidate": "sample_late_m0_r0",
+      "wins": 360,
+      "games": 512,
+      "utility": 0.75,
+      "margin_gain": -184.068359375,
+      "min_opponent_gain": -512.84375,
+      "seconds": 0.7930136
+    },
+    {
+      "candidate": "sample_late_m0_r1",
+      "wins": 364,
+      "games": 512,
+      "utility": 0.76953125,
+      "margin_gain": 0.0,
+      "min_opponent_gain": 0.0,
+      "seconds": 0.7023242
+    },
+    {
+      "candidate": "sample_late_m1_r0",
+      "wins": 362,
+      "games": 512,
+      "utility": 0.765625,
+      "margin_gain": -60.59765625,
+      "min_opponent_gain": -415.1875,
+      "seconds": 0.7086021
+    },
+    {
+      "candidate": "sample_late_m1_r1",
+      "wins": 359,
+      "games": 512,
+      "utility": 0.75390625,
+      "margin_gain": -215.572265625,
+      "min_opponent_gain": -614.25,
+      "seconds": 0.7203865
+    },
+    {
+      "candidate": "sample_late_m32_r0",
+      "wins": 366,
+      "games": 512,
+      "utility": 0.76953125,
+      "margin_gain": -29.78125,
+      "min_opponent_gain": -120.921875,
+      "seconds": 0.7863113
+    },
+    {
+      "candidate": "sample_late_m32_r1",
+      "wins": 356,
+      "games": 512,
+      "utility": 0.740234375,
+      "margin_gain": -388.876953125,
+      "min_opponent_gain": -675.734375,
+      "seconds": 0.786581
+    },
+    {
+      "candidate": "sample_late_m64_r0",
+      "wins": 366,
+      "games": 512,
+      "utility": 0.76953125,
+      "margin_gain": -31.296875,
+      "min_opponent_gain": -169.296875,
+      "seconds": 0.93171
+    },
+    {
+      "candidate": "sample_late_m64_r1",
+      "wins": 356,
+      "games": 512,
+      "utility": 0.740234375,
+      "margin_gain": -402.060546875,
+      "min_opponent_gain": -675.734375,
+      "seconds": 0.959465
+    },
+    {
+      "candidate": "sample_late_m8_r0",
+      "wins": 366,
+      "games": 512,
+      "utility": 0.76953125,
+      "margin_gain": -43.42578125,
+      "min_opponent_gain": -120.921875,
+      "seconds": 0.7280316
+    },
+    {
+      "candidate": "sample_late_m8_r1",
+      "wins": 360,
+      "games": 512,
+      "utility": 0.748046875,
+      "margin_gain": -281.64453125,
+      "min_opponent_gain": -614.25,
+      "seconds": 0.7568717
+    }
+  ],
+  "opponents": [
+    {
+      "candidate": "sample_early_m64_r0",
+      "opponent": "opening_router_v4",
+      "wins": 58,
+      "ties": 0,
+      "utility": 0.90625,
+      "margin_gain": -3113.578125,
+      "seconds": 0.126681
+    },
+    {
+      "candidate": "sample_early_m1_r1",
+      "opponent": "king_rc4",
+      "wins": 45,
+      "ties": 0,
+      "utility": 0.703125,
+      "margin_gain": -1823.140625,
+      "seconds": 0.0951712
+    },
+    {
+      "candidate": "sample_late_m8_r0",
+      "opponent": "atakan_value_margin",
+      "wins": 39,
+      "ties": 0,
+      "utility": 0.609375,
+      "margin_gain": -81.40625,
+      "seconds": 0.0862128
+    },
+    {
+      "candidate": "sample_late_m8_r0",
+      "opponent": "public_router",
+      "wins": 57,
+      "ties": 0,
+      "utility": 0.890625,
+      "margin_gain": -44.03125,
+      "seconds": 0.098248
+    },
+    {
+      "candidate": "sample_late_m64_r1",
+      "opponent": "public_router_v5",
+      "wins": 48,
+      "ties": 0,
+      "utility": 0.75,
+      "margin_gain": -410.265625,
+      "seconds": 0.122302
+    },
+    {
+      "candidate": "sample_early_m0_r1",
+      "opponent": "public_router_v5",
+      "wins": 42,
+      "ties": 0,
+      "utility": 0.65625,
+      "margin_gain": -3474.5625,
+      "seconds": 0.0869584
+    },
+    {
+      "candidate": "sample_early_m0_r1",
+      "opponent": "opening_router_v4",
+      "wins": 56,
+      "ties": 0,
+      "utility": 0.875,
+      "margin_gain": -3247.78125,
+      "seconds": 0.0827821
+    },
+    {
+      "candidate": "sample_late_m0_r1",
+      "opponent": "opening_router_v4",
+      "wins": 63,
+      "ties": 0,
+      "utility": 0.984375,
+      "margin_gain": 0.0,
+      "seconds": 0.0854653
+    },
+    {
+      "candidate": "sample_early_m0_r0",
+      "opponent": "atakan_value_margin",
+      "wins": 24,
+      "ties": 0,
+      "utility": 0.375,
+      "margin_gain": -3353.0,
+      "seconds": 0.0877833
+    },
+    {
+      "candidate": "sample_late_m8_r1",
+      "opponent": "opening_router_v4",
+      "wins": 60,
+      "ties": 0,
+      "utility": 0.9375,
+      "margin_gain": -614.25,
+      "seconds": 0.0899614
+    },
+    {
+      "candidate": "sample_early_m8_r0",
+      "opponent": "atakan_value_margin",
+      "wins": 26,
+      "ties": 0,
+      "utility": 0.40625,
+      "margin_gain": -3282.765625,
+      "seconds": 0.0937787
+    },
+    {
+      "candidate": "sample_early_m64_r0",
+      "opponent": "atakan_demand",
+      "wins": 29,
+      "ties": 0,
+      "utility": 0.453125,
+      "margin_gain": -2760.625,
+      "seconds": 0.132297
+    },
+    {
+      "candidate": "sample_late_m8_r1",
+      "opponent": "king_rc4",
+      "wins": 50,
+      "ties": 0,
+      "utility": 0.78125,
+      "margin_gain": -192.0625,
+      "seconds": 0.0998683
+    },
+    {
+      "candidate": "sample_late_m8_r0",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 2,
+      "ties": 56,
+      "utility": 0.46875,
+      "margin_gain": -91.40625,
+      "seconds": 0.0839485
+    },
+    {
+      "candidate": "sample_early_m64_r1",
+      "opponent": "public_router",
+      "wins": 53,
+      "ties": 0,
+      "utility": 0.828125,
+      "margin_gain": -1987.640625,
+      "seconds": 0.124764
+    },
+    {
+      "candidate": "sample_late_m8_r0",
+      "opponent": "public_router_v5",
+      "wins": 51,
+      "ties": 0,
+      "utility": 0.796875,
+      "margin_gain": -88.96875,
+      "seconds": 0.0868297
+    },
+    {
+      "candidate": "sample_early_m0_r0",
+      "opponent": "king_rc4",
+      "wins": 40,
+      "ties": 0,
+      "utility": 0.625,
+      "margin_gain": -3330.71875,
+      "seconds": 0.0976312
+    },
+    {
+      "candidate": "sample_early_m0_r0",
+      "opponent": "public_router",
+      "wins": 48,
+      "ties": 0,
+      "utility": 0.75,
+      "margin_gain": -3369.15625,
+      "seconds": 0.0887877
+    },
+    {
+      "candidate": "sample_early_m8_r1",
+      "opponent": "public_router",
+      "wins": 53,
+      "ties": 0,
+      "utility": 0.828125,
+      "margin_gain": -1987.640625,
+      "seconds": 0.0980016
+    },
+    {
+      "candidate": "sample_late_m1_r0",
+      "opponent": "opening_router_v4",
+      "wins": 62,
+      "ties": 0,
+      "utility": 0.96875,
+      "margin_gain": -254.84375,
+      "seconds": 0.0856979
+    },
+    {
+      "candidate": "sample_late_m8_r1",
+      "opponent": "public_router",
+      "wins": 54,
+      "ties": 0,
+      "utility": 0.84375,
+      "margin_gain": -471.90625,
+      "seconds": 0.0942196
+    },
+    {
+      "candidate": "sample_early_m64_r0",
+      "opponent": "king_rc4",
+      "wins": 40,
+      "ties": 0,
+      "utility": 0.625,
+      "margin_gain": -3168.203125,
+      "seconds": 0.14015
+    },
+    {
+      "candidate": "sample_late_m32_r1",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 6,
+      "ties": 46,
+      "utility": 0.453125,
+      "margin_gain": -345.28125,
+      "seconds": 0.104008
+    },
+    {
+      "candidate": "sample_early_m64_r1",
+      "opponent": "public_router_v5",
+      "wins": 45,
+      "ties": 0,
+      "utility": 0.703125,
+      "margin_gain": -2037.578125,
+      "seconds": 0.131043
+    },
+    {
+      "candidate": "sample_early_m64_r1",
+      "opponent": "atakan_demand",
+      "wins": 30,
+      "ties": 0,
+      "utility": 0.46875,
+      "margin_gain": -1556.3125,
+      "seconds": 0.124507
+    },
+    {
+      "candidate": "sample_early_m64_r0",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 4,
+      "ties": 0,
+      "utility": 0.0625,
+      "margin_gain": -3200.515625,
+      "seconds": 0.123856
+    },
+    {
+      "candidate": "sample_early_m64_r0",
+      "opponent": "atakan_value_margin",
+      "wins": 26,
+      "ties": 0,
+      "utility": 0.40625,
+      "margin_gain": -3282.765625,
+      "seconds": 0.130073
+    },
+    {
+      "candidate": "sample_early_m1_r1",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 5,
+      "ties": 16,
+      "utility": 0.203125,
+      "margin_gain": -2035.3125,
+      "seconds": 0.0911227
+    },
+    {
+      "candidate": "sample_early_m32_r0",
+      "opponent": "public_router",
+      "wins": 48,
+      "ties": 0,
+      "utility": 0.75,
+      "margin_gain": -3192.953125,
+      "seconds": 0.109807
+    },
+    {
+      "candidate": "sample_late_m8_r1",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 6,
+      "ties": 46,
+      "utility": 0.453125,
+      "margin_gain": -345.28125,
+      "seconds": 0.101154
+    },
+    {
+      "candidate": "sample_early_m1_r1",
+      "opponent": "teammate_shoprouter",
+      "wins": 56,
+      "ties": 0,
+      "utility": 0.875,
+      "margin_gain": -2148.765625,
+      "seconds": 0.0932756
+    },
+    {
+      "candidate": "sample_early_m8_r1",
+      "opponent": "teammate_shoprouter",
+      "wins": 56,
+      "ties": 0,
+      "utility": 0.875,
+      "margin_gain": -2148.765625,
+      "seconds": 0.0962561
+    },
+    {
+      "candidate": "sample_late_m0_r0",
+      "opponent": "atakan_demand",
+      "wins": 43,
+      "ties": 0,
+      "utility": 0.671875,
+      "margin_gain": 236.046875,
+      "seconds": 0.0826507
+    },
+    {
+      "candidate": "sample_early_m32_r0",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 4,
+      "ties": 0,
+      "utility": 0.0625,
+      "margin_gain": -3200.515625,
+      "seconds": 0.109764
+    },
+    {
+      "candidate": "sample_late_m0_r1",
+      "opponent": "atakan_value_margin",
+      "wins": 39,
+      "ties": 0,
+      "utility": 0.609375,
+      "margin_gain": 0.0,
+      "seconds": 0.0851711
+    },
+    {
+      "candidate": "sample_early_m8_r0",
+      "opponent": "teammate_shoprouter",
+      "wins": 56,
+      "ties": 0,
+      "utility": 0.875,
+      "margin_gain": -3415.546875,
+      "seconds": 0.0971669
+    },
+    {
+      "candidate": "sample_late_m0_r1",
+      "opponent": "atakan_demand",
+      "wins": 41,
+      "ties": 0,
+      "utility": 0.640625,
+      "margin_gain": 0.0,
+      "seconds": 0.0863646
+    },
+    {
+      "candidate": "sample_early_m1_r1",
+      "opponent": "public_router",
+      "wins": 53,
+      "ties": 0,
+      "utility": 0.828125,
+      "margin_gain": -1987.640625,
+      "seconds": 0.0886841
+    },
+    {
+      "candidate": "sample_early_m1_r0",
+      "opponent": "atakan_demand",
+      "wins": 30,
+      "ties": 0,
+      "utility": 0.46875,
+      "margin_gain": -1556.3125,
+      "seconds": 0.0887471
+    },
+    {
+      "candidate": "sample_early_m1_r1",
+      "opponent": "public_router_v5",
+      "wins": 45,
+      "ties": 0,
+      "utility": 0.703125,
+      "margin_gain": -2037.578125,
+      "seconds": 0.0961325
+    },
+    {
+      "candidate": "sample_early_m8_r0",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 4,
+      "ties": 0,
+      "utility": 0.0625,
+      "margin_gain": -3200.515625,
+      "seconds": 0.0963295
+    },
+    {
+      "candidate": "sample_late_m1_r1",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 3,
+      "ties": 54,
+      "utility": 0.46875,
+      "margin_gain": -177.34375,
+      "seconds": 0.0844999
+    },
+    {
+      "candidate": "sample_late_m32_r1",
+      "opponent": "atakan_demand",
+      "wins": 42,
+      "ties": 0,
+      "utility": 0.65625,
+      "margin_gain": -11.046875,
+      "seconds": 0.0986173
+    },
+    {
+      "candidate": "sample_late_m8_r0",
+      "opponent": "opening_router_v4",
+      "wins": 63,
+      "ties": 0,
+      "utility": 0.984375,
+      "margin_gain": -120.921875,
+      "seconds": 0.0925879
+    },
+    {
+      "candidate": "sample_early_m32_r0",
+      "opponent": "teammate_shoprouter",
+      "wins": 56,
+      "ties": 0,
+      "utility": 0.875,
+      "margin_gain": -3415.546875,
+      "seconds": 0.111725
+    },
+    {
+      "candidate": "sample_late_m32_r0",
+      "opponent": "teammate_shoprouter",
+      "wins": 60,
+      "ties": 0,
+      "utility": 0.9375,
+      "margin_gain": -98.46875,
+      "seconds": 0.111055
+    },
+    {
+      "candidate": "sample_early_m1_r1",
+      "opponent": "atakan_demand",
+      "wins": 30,
+      "ties": 0,
+      "utility": 0.46875,
+      "margin_gain": -1556.3125,
+      "seconds": 0.0841632
+    },
+    {
+      "candidate": "sample_early_m1_r0",
+      "opponent": "public_router",
+      "wins": 53,
+      "ties": 0,
+      "utility": 0.828125,
+      "margin_gain": -1987.640625,
+      "seconds": 0.0889388
+    },
+    {
+      "candidate": "sample_late_m8_r1",
+      "opponent": "atakan_demand",
+      "wins": 43,
+      "ties": 0,
+      "utility": 0.671875,
+      "margin_gain": 298.796875,
+      "seconds": 0.0991173
+    },
+    {
+      "candidate": "sample_early_m1_r0",
+      "opponent": "teammate_shoprouter",
+      "wins": 56,
+      "ties": 0,
+      "utility": 0.875,
+      "margin_gain": -2148.765625,
+      "seconds": 0.090277
+    },
+    {
+      "candidate": "sample_early_m8_r0",
+      "opponent": "opening_router_v4",
+      "wins": 58,
+      "ties": 0,
+      "utility": 0.90625,
+      "margin_gain": -3113.578125,
+      "seconds": 0.0931852
+    },
+    {
+      "candidate": "sample_late_m1_r1",
+      "opponent": "atakan_value_margin",
+      "wins": 39,
+      "ties": 0,
+      "utility": 0.609375,
+      "margin_gain": -295.40625,
+      "seconds": 0.0854309
+    },
+    {
+      "candidate": "sample_late_m64_r0",
+      "opponent": "atakan_value_margin",
+      "wins": 39,
+      "ties": 0,
+      "utility": 0.609375,
+      "margin_gain": -71.3125,
+      "seconds": 0.116779
+    },
+    {
+      "candidate": "sample_late_m64_r0",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 2,
+      "ties": 56,
+      "utility": 0.46875,
+      "margin_gain": -91.40625,
+      "seconds": 0.109033
+    },
+    {
+      "candidate": "sample_early_m64_r1",
+      "opponent": "teammate_shoprouter",
+      "wins": 56,
+      "ties": 0,
+      "utility": 0.875,
+      "margin_gain": -2148.765625,
+      "seconds": 0.121971
+    },
+    {
+      "candidate": "sample_early_m0_r0",
+      "opponent": "teammate_shoprouter",
+      "wins": 54,
+      "ties": 0,
+      "utility": 0.84375,
+      "margin_gain": -3580.8125,
+      "seconds": 0.103666
+    },
+    {
+      "candidate": "sample_early_m0_r0",
+      "opponent": "opening_router_v4",
+      "wins": 56,
+      "ties": 0,
+      "utility": 0.875,
+      "margin_gain": -3247.78125,
+      "seconds": 0.0857387
+    },
+    {
+      "candidate": "sample_late_m8_r0",
+      "opponent": "teammate_shoprouter",
+      "wins": 60,
+      "ties": 0,
+      "utility": 0.9375,
+      "margin_gain": -98.46875,
+      "seconds": 0.0942578
+    },
+    {
+      "candidate": "sample_early_m64_r1",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 5,
+      "ties": 16,
+      "utility": 0.203125,
+      "margin_gain": -2035.3125,
+      "seconds": 0.127164
+    },
+    {
+      "candidate": "sample_late_m1_r1",
+      "opponent": "public_router",
+      "wins": 54,
+      "ties": 0,
+      "utility": 0.84375,
+      "margin_gain": -439.6875,
+      "seconds": 0.08692
+    },
+    {
+      "candidate": "sample_early_m0_r1",
+      "opponent": "public_router",
+      "wins": 48,
+      "ties": 0,
+      "utility": 0.75,
+      "margin_gain": -3369.15625,
+      "seconds": 0.0917801
+    },
+    {
+      "candidate": "sample_late_m1_r0",
+      "opponent": "public_router_v5",
+      "wins": 51,
+      "ties": 0,
+      "utility": 0.796875,
+      "margin_gain": 0.0,
+      "seconds": 0.0833111
+    },
+    {
+      "candidate": "sample_early_m0_r1",
+      "opponent": "teammate_shoprouter",
+      "wins": 54,
+      "ties": 0,
+      "utility": 0.84375,
+      "margin_gain": -3580.8125,
+      "seconds": 0.091499
+    },
+    {
+      "candidate": "sample_early_m32_r0",
+      "opponent": "king_rc4",
+      "wins": 40,
+      "ties": 0,
+      "utility": 0.625,
+      "margin_gain": -3168.203125,
+      "seconds": 0.112097
+    },
+    {
+      "candidate": "sample_early_m8_r1",
+      "opponent": "public_router_v5",
+      "wins": 45,
+      "ties": 0,
+      "utility": 0.703125,
+      "margin_gain": -2037.578125,
+      "seconds": 0.092637
+    },
+    {
+      "candidate": "sample_late_m8_r1",
+      "opponent": "public_router_v5",
+      "wins": 48,
+      "ties": 0,
+      "utility": 0.75,
+      "margin_gain": -410.265625,
+      "seconds": 0.0916742
+    },
+    {
+      "candidate": "sample_early_m32_r1",
+      "opponent": "opening_router_v4",
+      "wins": 54,
+      "ties": 0,
+      "utility": 0.84375,
+      "margin_gain": -2058.359375,
+      "seconds": 0.103585
+    },
+    {
+      "candidate": "sample_late_m1_r0",
+      "opponent": "teammate_shoprouter",
+      "wins": 60,
+      "ties": 0,
+      "utility": 0.9375,
+      "margin_gain": 0.0,
+      "seconds": 0.0966723
+    },
+    {
+      "candidate": "sample_late_m8_r1",
+      "opponent": "atakan_value_margin",
+      "wins": 39,
+      "ties": 0,
+      "utility": 0.609375,
+      "margin_gain": -314.0625,
+      "seconds": 0.0874208
+    },
+    {
+      "candidate": "sample_late_m0_r0",
+      "opponent": "king_rc4",
+      "wins": 49,
+      "ties": 0,
+      "utility": 0.765625,
+      "margin_gain": -460.8125,
+      "seconds": 0.103695
+    },
+    {
+      "candidate": "sample_late_m64_r1",
+      "opponent": "king_rc4",
+      "wins": 50,
+      "ties": 0,
+      "utility": 0.78125,
+      "margin_gain": -249.140625,
+      "seconds": 0.123837
+    },
+    {
+      "candidate": "sample_late_m1_r0",
+      "opponent": "public_router",
+      "wins": 57,
+      "ties": 0,
+      "utility": 0.890625,
+      "margin_gain": 0.0,
+      "seconds": 0.0883022
+    },
+    {
+      "candidate": "sample_late_m64_r1",
+      "opponent": "atakan_demand",
+      "wins": 42,
+      "ties": 0,
+      "utility": 0.65625,
+      "margin_gain": -116.515625,
+      "seconds": 0.113569
+    },
+    {
+      "candidate": "sample_late_m1_r0",
+      "opponent": "atakan_demand",
+      "wins": 42,
+      "ties": 0,
+      "utility": 0.65625,
+      "margin_gain": 185.25,
+      "seconds": 0.0859147
+    },
+    {
+      "candidate": "sample_late_m0_r0",
+      "opponent": "opening_router_v4",
+      "wins": 63,
+      "ties": 0,
+      "utility": 0.984375,
+      "margin_gain": 0.0,
+      "seconds": 0.0841395
+    },
+    {
+      "candidate": "sample_early_m64_r1",
+      "opponent": "atakan_value_margin",
+      "wins": 28,
+      "ties": 0,
+      "utility": 0.4375,
+      "margin_gain": -1784.375,
+      "seconds": 0.128237
+    },
+    {
+      "candidate": "sample_late_m1_r1",
+      "opponent": "public_router_v5",
+      "wins": 50,
+      "ties": 0,
+      "utility": 0.78125,
+      "margin_gain": -296.25,
+      "seconds": 0.094015
+    },
+    {
+      "candidate": "sample_early_m1_r0",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 5,
+      "ties": 16,
+      "utility": 0.203125,
+      "margin_gain": -2035.3125,
+      "seconds": 0.0875839
+    },
+    {
+      "candidate": "sample_early_m32_r1",
+      "opponent": "atakan_demand",
+      "wins": 31,
+      "ties": 0,
+      "utility": 0.484375,
+      "margin_gain": -1505.296875,
+      "seconds": 0.103978
+    },
+    {
+      "candidate": "sample_early_m32_r1",
+      "opponent": "atakan_value_margin",
+      "wins": 30,
+      "ties": 0,
+      "utility": 0.46875,
+      "margin_gain": -1747.109375,
+      "seconds": 0.0956327
+    },
+    {
+      "candidate": "sample_early_m64_r0",
+      "opponent": "public_router_v5",
+      "wins": 42,
+      "ties": 0,
+      "utility": 0.65625,
+      "margin_gain": -3316.0625,
+      "seconds": 0.12657
+    },
+    {
+      "candidate": "sample_early_m32_r1",
+      "opponent": "teammate_shoprouter",
+      "wins": 56,
+      "ties": 0,
+      "utility": 0.875,
+      "margin_gain": -2218.78125,
+      "seconds": 0.106113
+    },
+    {
+      "candidate": "sample_early_m8_r1",
+      "opponent": "atakan_demand",
+      "wins": 30,
+      "ties": 0,
+      "utility": 0.46875,
+      "margin_gain": -1556.3125,
+      "seconds": 0.0921464
+    },
+    {
+      "candidate": "sample_early_m0_r0",
+      "opponent": "public_router_v5",
+      "wins": 42,
+      "ties": 0,
+      "utility": 0.65625,
+      "margin_gain": -3474.5625,
+      "seconds": 0.0947387
+    },
+    {
+      "candidate": "sample_late_m0_r0",
+      "opponent": "teammate_shoprouter",
+      "wins": 60,
+      "ties": 0,
+      "utility": 0.9375,
+      "margin_gain": -98.46875,
+      "seconds": 0.0973214
+    },
+    {
+      "candidate": "sample_early_m8_r1",
+      "opponent": "opening_router_v4",
+      "wins": 59,
+      "ties": 0,
+      "utility": 0.921875,
+      "margin_gain": -1888.140625,
+      "seconds": 0.0878604
+    },
+    {
+      "candidate": "sample_late_m0_r0",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 2,
+      "ties": 48,
+      "utility": 0.40625,
+      "margin_gain": -512.84375,
+      "seconds": 0.144393
+    },
+    {
+      "candidate": "sample_early_m0_r1",
+      "opponent": "atakan_demand",
+      "wins": 29,
+      "ties": 0,
+      "utility": 0.453125,
+      "margin_gain": -2999.3125,
+      "seconds": 0.0891904
+    },
+    {
+      "candidate": "sample_early_m32_r1",
+      "opponent": "public_router_v5",
+      "wins": 40,
+      "ties": 0,
+      "utility": 0.625,
+      "margin_gain": -2238.265625,
+      "seconds": 0.113295
+    },
+    {
+      "candidate": "sample_early_m8_r1",
+      "opponent": "king_rc4",
+      "wins": 45,
+      "ties": 0,
+      "utility": 0.703125,
+      "margin_gain": -1823.140625,
+      "seconds": 0.0945008
+    },
+    {
+      "candidate": "sample_early_m1_r1",
+      "opponent": "atakan_value_margin",
+      "wins": 28,
+      "ties": 0,
+      "utility": 0.4375,
+      "margin_gain": -1784.375,
+      "seconds": 0.0855799
+    },
+    {
+      "candidate": "sample_late_m0_r1",
+      "opponent": "public_router",
+      "wins": 57,
+      "ties": 0,
+      "utility": 0.890625,
+      "margin_gain": 0.0,
+      "seconds": 0.088159
+    },
+    {
+      "candidate": "sample_early_m64_r0",
+      "opponent": "teammate_shoprouter",
+      "wins": 56,
+      "ties": 0,
+      "utility": 0.875,
+      "margin_gain": -3415.546875,
+      "seconds": 0.133987
+    },
+    {
+      "candidate": "sample_late_m32_r1",
+      "opponent": "public_router",
+      "wins": 52,
+      "ties": 0,
+      "utility": 0.8125,
+      "margin_gain": -675.734375,
+      "seconds": 0.0928847
+    },
+    {
+      "candidate": "sample_early_m8_r0",
+      "opponent": "king_rc4",
+      "wins": 40,
+      "ties": 0,
+      "utility": 0.625,
+      "margin_gain": -3168.203125,
+      "seconds": 0.0995571
+    },
+    {
+      "candidate": "sample_early_m0_r1",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 4,
+      "ties": 0,
+      "utility": 0.0625,
+      "margin_gain": -3294.453125,
+      "seconds": 0.0932082
+    },
+    {
+      "candidate": "sample_early_m0_r1",
+      "opponent": "atakan_value_margin",
+      "wins": 24,
+      "ties": 0,
+      "utility": 0.375,
+      "margin_gain": -3353.0,
+      "seconds": 0.0864758
+    },
+    {
+      "candidate": "sample_early_m64_r0",
+      "opponent": "public_router",
+      "wins": 48,
+      "ties": 0,
+      "utility": 0.75,
+      "margin_gain": -3192.953125,
+      "seconds": 0.133045
+    },
+    {
+      "candidate": "sample_late_m32_r0",
+      "opponent": "opening_router_v4",
+      "wins": 63,
+      "ties": 0,
+      "utility": 0.984375,
+      "margin_gain": -120.921875,
+      "seconds": 0.0921467
+    },
+    {
+      "candidate": "sample_early_m1_r0",
+      "opponent": "public_router_v5",
+      "wins": 45,
+      "ties": 0,
+      "utility": 0.703125,
+      "margin_gain": -2037.578125,
+      "seconds": 0.0903867
+    },
+    {
+      "candidate": "sample_late_m0_r1",
+      "opponent": "king_rc4",
+      "wins": 51,
+      "ties": 0,
+      "utility": 0.796875,
+      "margin_gain": 0.0,
+      "seconds": 0.0893669
+    },
+    {
+      "candidate": "sample_late_m64_r0",
+      "opponent": "teammate_shoprouter",
+      "wins": 60,
+      "ties": 0,
+      "utility": 0.9375,
+      "margin_gain": -85.125,
+      "seconds": 0.115454
+    },
+    {
+      "candidate": "sample_late_m64_r0",
+      "opponent": "king_rc4",
+      "wins": 51,
+      "ties": 0,
+      "utility": 0.796875,
+      "margin_gain": -29.4375,
+      "seconds": 0.114102
+    },
+    {
+      "candidate": "sample_early_m32_r0",
+      "opponent": "public_router_v5",
+      "wins": 42,
+      "ties": 0,
+      "utility": 0.65625,
+      "margin_gain": -3316.0625,
+      "seconds": 0.103266
+    },
+    {
+      "candidate": "sample_late_m64_r1",
+      "opponent": "opening_router_v4",
+      "wins": 60,
+      "ties": 0,
+      "utility": 0.9375,
+      "margin_gain": -614.25,
+      "seconds": 0.113248
+    },
+    {
+      "candidate": "sample_early_m8_r0",
+      "opponent": "public_router",
+      "wins": 48,
+      "ties": 0,
+      "utility": 0.75,
+      "margin_gain": -3192.953125,
+      "seconds": 0.0902024
+    },
+    {
+      "candidate": "sample_early_m64_r1",
+      "opponent": "opening_router_v4",
+      "wins": 59,
+      "ties": 0,
+      "utility": 0.921875,
+      "margin_gain": -1888.140625,
+      "seconds": 0.128687
+    },
+    {
+      "candidate": "sample_late_m0_r1",
+      "opponent": "teammate_shoprouter",
+      "wins": 60,
+      "ties": 0,
+      "utility": 0.9375,
+      "margin_gain": 0.0,
+      "seconds": 0.0973692
+    },
+    {
+      "candidate": "sample_late_m32_r1",
+      "opponent": "atakan_value_margin",
+      "wins": 38,
+      "ties": 0,
+      "utility": 0.59375,
+      "margin_gain": -461.625,
+      "seconds": 0.0988446
+    },
+    {
+      "candidate": "sample_late_m32_r0",
+      "opponent": "atakan_value_margin",
+      "wins": 39,
+      "ties": 0,
+      "utility": 0.609375,
+      "margin_gain": -71.3125,
+      "seconds": 0.0950941
+    },
+    {
+      "candidate": "sample_late_m1_r0",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 2,
+      "ties": 60,
+      "utility": 0.5,
+      "margin_gain": 0,
+      "seconds": 0.0890451
+    },
+    {
+      "candidate": "sample_late_m0_r1",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 2,
+      "ties": 60,
+      "utility": 0.5,
+      "margin_gain": 0,
+      "seconds": 0.0842816
+    },
+    {
+      "candidate": "sample_late_m64_r1",
+      "opponent": "atakan_value_margin",
+      "wins": 38,
+      "ties": 0,
+      "utility": 0.59375,
+      "margin_gain": -461.625,
+      "seconds": 0.125035
+    },
+    {
+      "candidate": "sample_early_m32_r1",
+      "opponent": "king_rc4",
+      "wins": 45,
+      "ties": 0,
+      "utility": 0.703125,
+      "margin_gain": -1929.171875,
+      "seconds": 0.107168
+    },
+    {
+      "candidate": "sample_late_m0_r0",
+      "opponent": "public_router",
+      "wins": 57,
+      "ties": 0,
+      "utility": 0.890625,
+      "margin_gain": -44.03125,
+      "seconds": 0.0865493
+    },
+    {
+      "candidate": "sample_early_m32_r0",
+      "opponent": "atakan_value_margin",
+      "wins": 26,
+      "ties": 0,
+      "utility": 0.40625,
+      "margin_gain": -3282.765625,
+      "seconds": 0.102512
+    },
+    {
+      "candidate": "sample_late_m32_r1",
+      "opponent": "teammate_shoprouter",
+      "wins": 60,
+      "ties": 0,
+      "utility": 0.9375,
+      "margin_gain": -343.671875,
+      "seconds": 0.103461
+    },
+    {
+      "candidate": "sample_late_m32_r0",
+      "opponent": "public_router",
+      "wins": 57,
+      "ties": 0,
+      "utility": 0.890625,
+      "margin_gain": -44.03125,
+      "seconds": 0.0971192
+    },
+    {
+      "candidate": "sample_early_m0_r1",
+      "opponent": "king_rc4",
+      "wins": 40,
+      "ties": 0,
+      "utility": 0.625,
+      "margin_gain": -3330.71875,
+      "seconds": 0.0996947
+    },
+    {
+      "candidate": "sample_late_m1_r1",
+      "opponent": "teammate_shoprouter",
+      "wins": 60,
+      "ties": 0,
+      "utility": 0.9375,
+      "margin_gain": -106.625,
+      "seconds": 0.102333
+    },
+    {
+      "candidate": "sample_late_m64_r0",
+      "opponent": "opening_router_v4",
+      "wins": 63,
+      "ties": 0,
+      "utility": 0.984375,
+      "margin_gain": -169.296875,
+      "seconds": 0.122805
+    },
+    {
+      "candidate": "sample_early_m1_r1",
+      "opponent": "opening_router_v4",
+      "wins": 59,
+      "ties": 0,
+      "utility": 0.921875,
+      "margin_gain": -1888.140625,
+      "seconds": 0.083712
+    },
+    {
+      "candidate": "sample_late_m32_r0",
+      "opponent": "atakan_demand",
+      "wins": 43,
+      "ties": 0,
+      "utility": 0.671875,
+      "margin_gain": 246.140625,
+      "seconds": 0.0917913
+    },
+    {
+      "candidate": "sample_early_m32_r0",
+      "opponent": "opening_router_v4",
+      "wins": 58,
+      "ties": 0,
+      "utility": 0.90625,
+      "margin_gain": -3113.578125,
+      "seconds": 0.115712
+    },
+    {
+      "candidate": "sample_late_m0_r1",
+      "opponent": "public_router_v5",
+      "wins": 51,
+      "ties": 0,
+      "utility": 0.796875,
+      "margin_gain": 0.0,
+      "seconds": 0.0861465
+    },
+    {
+      "candidate": "sample_early_m32_r1",
+      "opponent": "public_router",
+      "wins": 53,
+      "ties": 0,
+      "utility": 0.828125,
+      "margin_gain": -2161.125,
+      "seconds": 0.0991823
+    },
+    {
+      "candidate": "sample_early_m8_r0",
+      "opponent": "atakan_demand",
+      "wins": 29,
+      "ties": 0,
+      "utility": 0.453125,
+      "margin_gain": -2760.625,
+      "seconds": 0.0964693
+    },
+    {
+      "candidate": "sample_late_m1_r0",
+      "opponent": "king_rc4",
+      "wins": 49,
+      "ties": 0,
+      "utility": 0.765625,
+      "margin_gain": -415.1875,
+      "seconds": 0.0908117
+    },
+    {
+      "candidate": "sample_late_m32_r0",
+      "opponent": "king_rc4",
+      "wins": 51,
+      "ties": 0,
+      "utility": 0.796875,
+      "margin_gain": -58.25,
+      "seconds": 0.101905
+    },
+    {
+      "candidate": "sample_late_m64_r1",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 6,
+      "ties": 46,
+      "utility": 0.453125,
+      "margin_gain": -345.28125,
+      "seconds": 0.111779
+    },
+    {
+      "candidate": "sample_early_m8_r1",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 5,
+      "ties": 16,
+      "utility": 0.203125,
+      "margin_gain": -2035.3125,
+      "seconds": 0.0862548
+    },
+    {
+      "candidate": "sample_late_m32_r1",
+      "opponent": "king_rc4",
+      "wins": 50,
+      "ties": 0,
+      "utility": 0.78125,
+      "margin_gain": -249.140625,
+      "seconds": 0.101863
+    },
+    {
+      "candidate": "sample_early_m1_r0",
+      "opponent": "king_rc4",
+      "wins": 45,
+      "ties": 0,
+      "utility": 0.703125,
+      "margin_gain": -1823.140625,
+      "seconds": 0.10039
+    },
+    {
+      "candidate": "sample_late_m32_r0",
+      "opponent": "public_router_v5",
+      "wins": 51,
+      "ties": 0,
+      "utility": 0.796875,
+      "margin_gain": 0.0,
+      "seconds": 0.0989287
+    },
+    {
+      "candidate": "sample_early_m1_r0",
+      "opponent": "atakan_value_margin",
+      "wins": 28,
+      "ties": 0,
+      "utility": 0.4375,
+      "margin_gain": -1784.375,
+      "seconds": 0.0883805
+    },
+    {
+      "candidate": "sample_late_m64_r0",
+      "opponent": "atakan_demand",
+      "wins": 43,
+      "ties": 0,
+      "utility": 0.671875,
+      "margin_gain": 246.140625,
+      "seconds": 0.120275
+    },
+    {
+      "candidate": "sample_early_m32_r0",
+      "opponent": "atakan_demand",
+      "wins": 29,
+      "ties": 0,
+      "utility": 0.453125,
+      "margin_gain": -2760.625,
+      "seconds": 0.0969994
+    },
+    {
+      "candidate": "sample_early_m0_r0",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 4,
+      "ties": 0,
+      "utility": 0.0625,
+      "margin_gain": -3294.453125,
+      "seconds": 0.0997656
+    },
+    {
+      "candidate": "sample_late_m8_r1",
+      "opponent": "teammate_shoprouter",
+      "wins": 60,
+      "ties": 0,
+      "utility": 0.9375,
+      "margin_gain": -204.125,
+      "seconds": 0.0934561
+    },
+    {
+      "candidate": "sample_late_m8_r0",
+      "opponent": "atakan_demand",
+      "wins": 43,
+      "ties": 0,
+      "utility": 0.671875,
+      "margin_gain": 236.046875,
+      "seconds": 0.0934186
+    },
+    {
+      "candidate": "sample_late_m32_r0",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 2,
+      "ties": 56,
+      "utility": 0.46875,
+      "margin_gain": -91.40625,
+      "seconds": 0.0982713
+    },
+    {
+      "candidate": "sample_early_m1_r0",
+      "opponent": "opening_router_v4",
+      "wins": 59,
+      "ties": 0,
+      "utility": 0.921875,
+      "margin_gain": -1888.140625,
+      "seconds": 0.0872049
+    },
+    {
+      "candidate": "sample_early_m8_r1",
+      "opponent": "atakan_value_margin",
+      "wins": 28,
+      "ties": 0,
+      "utility": 0.4375,
+      "margin_gain": -1784.375,
+      "seconds": 0.089518
+    },
+    {
+      "candidate": "sample_late_m32_r1",
+      "opponent": "opening_router_v4",
+      "wins": 60,
+      "ties": 0,
+      "utility": 0.9375,
+      "margin_gain": -614.25,
+      "seconds": 0.0944807
+    },
+    {
+      "candidate": "sample_late_m1_r0",
+      "opponent": "atakan_value_margin",
+      "wins": 39,
+      "ties": 0,
+      "utility": 0.609375,
+      "margin_gain": 0.0,
+      "seconds": 0.0888471
+    },
+    {
+      "candidate": "sample_late_m8_r0",
+      "opponent": "king_rc4",
+      "wins": 51,
+      "ties": 0,
+      "utility": 0.796875,
+      "margin_gain": -58.25,
+      "seconds": 0.0925283
+    },
+    {
+      "candidate": "sample_early_m32_r1",
+      "opponent": "investment_context_guarded_001_best",
+      "wins": 7,
+      "ties": 16,
+      "utility": 0.234375,
+      "margin_gain": -1995.09375,
+      "seconds": 0.110903
+    },
+    {
+      "candidate": "sample_late_m32_r1",
+      "opponent": "public_router_v5",
+      "wins": 48,
+      "ties": 0,
+      "utility": 0.75,
+      "margin_gain": -410.265625,
+      "seconds": 0.0924217
+    },
+    {
+      "candidate": "sample_late_m1_r1",
+      "opponent": "opening_router_v4",
+      "wins": 60,
+      "ties": 0,
+      "utility": 0.9375,
+      "margin_gain": -614.25,
+      "seconds": 0.08576
+    },
+    {
+      "candidate": "sample_early_m64_r1",
+      "opponent": "king_rc4",
+      "wins": 45,
+      "ties": 0,
+      "utility": 0.703125,
+      "margin_gain": -1823.140625,
+      "seconds": 0.131697
+    },
+    {
+      "candidate": "sample_early_m0_r0",
+      "opponent": "atakan_demand",
+      "wins": 29,
+      "ties": 0,
+      "utility": 0.453125,
+      "margin_gain": -2999.3125,
+      "seconds": 0.0850186
+    },
+    {
+      "candidate": "sample_early_m8_r0",
+      "opponent": "public_router_v5",
+      "wins": 42,
+      "ties": 0,
+      "utility": 0.65625,
+      "margin_gain": -3316.0625,
+      "seconds": 0.0878692
+    },
+    {
+      "candidate": "sample_late_m64_r1",
+      "opponent": "public_router",
+      "wins": 52,
+      "ties": 0,
+      "utility": 0.8125,
+      "margin_gain": -675.734375,
+      "seconds": 0.127424
+    },
+    {
+      "candidate": "sample_late_m64_r1",
+      "opponent": "teammate_shoprouter",
+      "wins": 60,
+      "ties": 0,
+      "utility": 0.9375,
+      "margin_gain": -343.671875,
+      "seconds": 0.122271
+    },
+    {
+      "candidate": "sample_late_m64_r0",
+      "opponent": "public_router_v5",
+      "wins": 51,
+      "ties": 0,
+      "utility": 0.796875,
+      "margin_gain": 0.0,
+      "seconds": 0.117881
+    },
+    {
+      "candidate": "sample_late_m0_r0",
+      "opponent": "atakan_value_margin",
+      "wins": 39,
+      "ties": 0,
+      "utility": 0.609375,
+      "margin_gain": -81.40625,
+      "seconds": 0.100692
+    },
+    {
+      "candidate": "sample_late_m64_r0",
+      "opponent": "public_router",
+      "wins": 57,
+      "ties": 0,
+      "utility": 0.890625,
+      "margin_gain": -49.9375,
+      "seconds": 0.115381
+    },
+    {
+      "candidate": "sample_late_m1_r1",
+      "opponent": "king_rc4",
+      "wins": 50,
+      "ties": 0,
+      "utility": 0.78125,
+      "margin_gain": -112.46875,
+      "seconds": 0.0899558
+    },
+    {
+      "candidate": "sample_late_m1_r1",
+      "opponent": "atakan_demand",
+      "wins": 43,
+      "ties": 0,
+      "utility": 0.671875,
+      "margin_gain": 317.453125,
+      "seconds": 0.0914719
+    },
+    {
+      "candidate": "sample_late_m0_r0",
+      "opponent": "public_router_v5",
+      "wins": 47,
+      "ties": 0,
+      "utility": 0.734375,
+      "margin_gain": -511.03125,
+      "seconds": 0.0935727
+    }
+  ],
+  "choice_counts": {
+    "sample_late_m0_r0": {
+      "9@11": 428,
+      "11@11": 74,
+      "-1@30": 8,
+      "10@11": 2
+    },
+    "sample_late_m0_r1": {
+      "9@11": 367,
+      "11@11": 122,
+      "10@11": 6,
+      "-1@30": 8,
+      "11@15": 2,
+      "10@15": 6,
+      "9@15": 1
+    },
+    "sample_late_m1_r0": {
+      "9@11": 372,
+      "11@11": 110,
+      "10@11": 14,
+      "-1@30": 9,
+      "9@15": 7
+    },
+    "sample_late_m1_r1": {
+      "10@11": 75,
+      "9@11": 307,
+      "11@11": 122,
+      "-1@30": 8
+    },
+    "sample_late_m8_r0": {
+      "9@11": 390,
+      "10@11": 10,
+      "11@11": 96,
+      "-1@30": 9,
+      "9@15": 3,
+      "10@15": 4
+    },
+    "sample_late_m8_r1": {
+      "10@11": 97,
+      "9@11": 291,
+      "11@11": 116,
+      "-1@30": 8
+    },
+    "sample_late_m32_r0": {
+      "9@11": 386,
+      "10@11": 10,
+      "11@11": 98,
+      "-1@30": 9,
+      "9@15": 3,
+      "10@15": 6
+    },
+    "sample_late_m32_r1": {
+      "10@11": 105,
+      "9@11": 275,
+      "11@11": 124,
+      "-1@30": 8
+    },
+    "sample_late_m64_r0": {
+      "9@11": 380,
+      "10@11": 8,
+      "11@11": 100,
+      "-1@30": 9,
+      "10@15": 10,
+      "9@15": 5
+    },
+    "sample_late_m64_r1": {
+      "10@11": 107,
+      "9@11": 273,
+      "11@11": 124,
+      "-1@30": 8
+    },
+    "sample_early_m0_r0": {
+      "9@3": 432,
+      "11@6": 80
+    },
+    "sample_early_m0_r1": {
+      "9@3": 432,
+      "11@6": 80
+    },
+    "sample_early_m1_r0": {
+      "10@3": 144,
+      "9@3": 288,
+      "11@6": 80
+    },
+    "sample_early_m1_r1": {
+      "10@3": 144,
+      "9@3": 288,
+      "11@6": 80
+    },
+    "sample_early_m8_r0": {
+      "10@6": 48,
+      "9@3": 288,
+      "9@6": 80,
+      "11@6": 96
+    },
+    "sample_early_m8_r1": {
+      "10@3": 144,
+      "9@3": 288,
+      "11@6": 80
+    },
+    "sample_early_m32_r0": {
+      "10@6": 48,
+      "9@3": 288,
+      "9@6": 80,
+      "11@6": 96
+    },
+    "sample_early_m32_r1": {
+      "10@3": 144,
+      "9@3": 144,
+      "11@3": 144,
+      "11@6": 80
+    },
+    "sample_early_m64_r0": {
+      "10@6": 48,
+      "9@3": 288,
+      "9@6": 80,
+      "11@6": 96
+    },
+    "sample_early_m64_r1": {
+      "10@3": 144,
+      "9@3": 288,
+      "11@6": 80
+    }
+  },
+  "historical_parent_full_nonprofile_records_equal": 64,
+  "status": "Discovery complete; no automatic promotion"
+}

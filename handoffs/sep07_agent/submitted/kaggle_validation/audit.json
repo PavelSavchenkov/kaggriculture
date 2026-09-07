@@ -1,0 +1,28 @@
+{
+  "episode": 106421415,
+  "rewards": [
+    66800.0,
+    69098.0
+  ],
+  "statuses": [
+    "DONE",
+    "DONE"
+  ],
+  "submitted_actions": 1438,
+  "action_mismatches": 0,
+  "logs": [
+    {
+      "seat": 0,
+      "calls": 719,
+      "total_seconds": 0.151812,
+      "max_seconds": 0.120083
+    },
+    {
+      "seat": 1,
+      "calls": 719,
+      "total_seconds": 0.162214,
+      "max_seconds": 0.122497
+    }
+  ],
+  "replay_sha256": "efb6e0afe78d0425f2860a7e96701af70ceff4ab13bca8953e19631ad9c7d63b"
+}

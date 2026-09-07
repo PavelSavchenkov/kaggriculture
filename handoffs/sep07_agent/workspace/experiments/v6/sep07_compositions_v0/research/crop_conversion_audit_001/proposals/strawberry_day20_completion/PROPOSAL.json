@@ -1,0 +1,87 @@
+{
+  "id": "strawberry_day20_completion",
+  "episode": 106446230,
+  "team": "3\uc815\ud6c8",
+  "x": 9,
+  "y": 3,
+  "start_day": 7,
+  "end_day": 24,
+  "crop": "STRAWBERRY",
+  "rank": 1,
+  "status": "Uncompiled replay-derived proposal; profitability not proven",
+  "donor_seat": 1,
+  "submission": 56063995,
+  "leaderboard_rank_at_selection": 3,
+  "replay_sha256": "d4c287570042a072aae9adde70d63c3382bde1b117fe3be300eac4ad87069275",
+  "local_match": {
+    "agent": "investment_context_guarded_001_best",
+    "seed": 1000,
+    "seat": 0,
+    "opponent": "public_router"
+  },
+  "donor_totals": {
+    "harvested": {
+      "STRAWBERRY": 8
+    },
+    "seed_cost": 100,
+    "fertilizer_units": 2,
+    "unit_operations": {
+      "PLANT": 1,
+      "WATER": 10,
+      "FERTILIZE": 2,
+      "HARVEST": 4,
+      "DIG": 1
+    },
+    "harvest_quote_value_on_donor_price_path": 930,
+    "fertilizer_quote_opportunity_cost_on_donor_path": 117,
+    "shadow_contribution_before_labor_land_and_market_feedback": 713
+  },
+  "local_totals": {
+    "harvested": {
+      "STRAWBERRY": 6
+    },
+    "seed_cost": 100,
+    "fertilizer_units": 1,
+    "unit_operations": {
+      "PLANT": 1,
+      "WATER": 10,
+      "FERTILIZE": 1,
+      "HARVEST": 4
+    },
+    "harvest_quote_value_on_donor_price_path": 774,
+    "fertilizer_quote_opportunity_cost_on_donor_path": 63,
+    "shadow_contribution_before_labor_land_and_market_feedback": 611
+  },
+  "harvest_delta": {
+    "WHEAT": 0,
+    "CARROT": 0,
+    "TOMATO": 0,
+    "STRAWBERRY": 2,
+    "MELON": 0
+  },
+  "seed_cost_delta": 0,
+  "fertilizer_units_delta": 1,
+  "unit_operation_delta": {
+    "PLANT": 0,
+    "WATER": 0,
+    "HARVEST": 0,
+    "FERTILIZE": 1,
+    "DIG": 1
+  },
+  "shadow_contribution_delta": 102,
+  "valuation_limit": "Diagnostic values both schedules at donor contemporaneous harvest quotes and fertilizer opportunity quotes. This is not realized crop-specific cash, marginal market pricing, or a profit claim.",
+  "matching_species_output_service_examples": 128,
+  "distinct_donor_episodes": 6,
+  "implementation_dependencies": [
+    "Rebuild fertilizer purchase/reserve/pickup and carried inventory constraints; animal-supplied fertilizer still has sale opportunity cost.",
+    "Compile complete affected worker days with seed, water, fertilizer, harvest, drop and sale jobs; rebind downstream physical-state guards.",
+    "Revalue all own product sales and rival revenue under changed market supply; enforce sale capacity and terminal liquidation.",
+    "Check every retained day until the affected crop leaves the bed, not just the edited fertilizer day."
+  ],
+  "artifact_sha256": {
+    "donor_tile_events.json": "dc0d477dbb37235ddba89e1c2f10fa87ff8ce716d7df7db1fb839f1a9f8d83f2",
+    "donor_lifecycles.json": "8ed3481b13703fb853cb73da81d5c70b2c750c9331587ac03b92b2f53f2316a8",
+    "local_lifecycles.json": "4a8bea6f698499fe5e5d4e45f7d3493f68a231b58bcc41a2e0af6422a6b412d1",
+    "donor_complete_day_actions.json": "9243d268d462f6bfd5674b669e8462672cfef146f440a476138c6b0a76da98d8"
+  }
+}

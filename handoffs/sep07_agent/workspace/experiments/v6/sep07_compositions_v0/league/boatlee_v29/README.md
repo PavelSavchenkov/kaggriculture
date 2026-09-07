@@ -1,0 +1,3 @@
+# boatlee_v29
+
+Faithful experimental C++ port of Boatlee V29-R1. RngRng-derived complete production course, eight-step weed recovery and stateful premium sales using public residual supply, inventory reserves, demand, mirror guard and finite sale budgets. Per-instance state; legal observations only. Exact source and original episode credits in IMPORT.json. 11,504source actions match; generic/debug/thread, PASS/self checks pass. Broad256games:255wins versus archivedBoatlee,141Jun,35v4,1King/public,0Justin/Binghua/teammate. Retained reference, not promoted. Evidence: results/boatlee_v29_validation.json.

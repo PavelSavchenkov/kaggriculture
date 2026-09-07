@@ -1,0 +1,1255 @@
+{
+  "aggregate": [
+    {
+      "candidate": "early_animal_adaptive_r0_c0_b0",
+      "wins": 252,
+      "games": 384,
+      "mean_margin_gain": -2346.3235
+    },
+    {
+      "candidate": "early_animal_adaptive_r0_c0_b500",
+      "wins": 252,
+      "games": 384,
+      "mean_margin_gain": -2346.3235
+    },
+    {
+      "candidate": "early_animal_adaptive_r0_c3_b0",
+      "wins": 252,
+      "games": 384,
+      "mean_margin_gain": -2396.2335
+    },
+    {
+      "candidate": "early_animal_adaptive_r0_c3_b500",
+      "wins": 252,
+      "games": 384,
+      "mean_margin_gain": -2396.2335
+    },
+    {
+      "candidate": "early_animal_adaptive_r0_c8_b0",
+      "wins": 252,
+      "games": 384,
+      "mean_margin_gain": -2396.2335
+    },
+    {
+      "candidate": "early_animal_adaptive_r0_c8_b500",
+      "wins": 252,
+      "games": 384,
+      "mean_margin_gain": -2396.2335
+    },
+    {
+      "candidate": "early_animal_adaptive_r1_c0_b0",
+      "wins": 252,
+      "games": 384,
+      "mean_margin_gain": -2346.3235
+    },
+    {
+      "candidate": "early_animal_adaptive_r1_c0_b500",
+      "wins": 252,
+      "games": 384,
+      "mean_margin_gain": -2346.3235
+    },
+    {
+      "candidate": "early_animal_adaptive_r1_c3_b0",
+      "wins": 252,
+      "games": 384,
+      "mean_margin_gain": -2396.2335
+    },
+    {
+      "candidate": "early_animal_adaptive_r1_c3_b500",
+      "wins": 252,
+      "games": 384,
+      "mean_margin_gain": -2396.2335
+    },
+    {
+      "candidate": "early_animal_adaptive_r1_c8_b0",
+      "wins": 256,
+      "games": 384,
+      "mean_margin_gain": -2264.8774999999996
+    },
+    {
+      "candidate": "early_animal_adaptive_r1_c8_b500",
+      "wins": 256,
+      "games": 384,
+      "mean_margin_gain": -2264.8774999999996
+    },
+    {
+      "candidate": "early_animal_d15_i10",
+      "wins": 200,
+      "games": 384,
+      "mean_margin_gain": -5234.880166666666
+    },
+    {
+      "candidate": "early_animal_d15_i11",
+      "wins": 176,
+      "games": 384,
+      "mean_margin_gain": -5557.278666666666
+    },
+    {
+      "candidate": "early_animal_d15_i9",
+      "wins": 221,
+      "games": 384,
+      "mean_margin_gain": -4631.863333333333
+    },
+    {
+      "candidate": "early_animal_d3_i10",
+      "wins": 254,
+      "games": 384,
+      "mean_margin_gain": -2768.3798333333334
+    },
+    {
+      "candidate": "early_animal_d3_i11",
+      "wins": 205,
+      "games": 384,
+      "mean_margin_gain": -5167.343166666667
+    },
+    {
+      "candidate": "early_animal_d3_i9",
+      "wins": 231,
+      "games": 384,
+      "mean_margin_gain": -4665.277833333334
+    },
+    {
+      "candidate": "early_animal_d6_i10",
+      "wins": 234,
+      "games": 384,
+      "mean_margin_gain": -3712.5895
+    },
+    {
+      "candidate": "early_animal_d6_i11",
+      "wins": 152,
+      "games": 384,
+      "mean_margin_gain": -7678.712833333333
+    },
+    {
+      "candidate": "early_animal_d6_i9",
+      "wins": 235,
+      "games": 384,
+      "mean_margin_gain": -3935.6286666666665
+    },
+    {
+      "candidate": "early_animal_d9_i10",
+      "wins": 212,
+      "games": 384,
+      "mean_margin_gain": -4537.915
+    },
+    {
+      "candidate": "early_animal_d9_i11",
+      "wins": 193,
+      "games": 384,
+      "mean_margin_gain": -4976.011666666666
+    },
+    {
+      "candidate": "early_animal_d9_i9",
+      "wins": 230,
+      "games": 384,
+      "mean_margin_gain": -4533.46
+    },
+    {
+      "candidate": "early_animal_parent",
+      "wins": 284,
+      "games": 384,
+      "mean_margin_gain": 0.0
+    },
+    {
+      "candidate": "early_animal_wait",
+      "wins": 190,
+      "games": 384,
+      "mean_margin_gain": -6190.599333333334
+    }
+  ],
+  "opponents": [
+    {
+      "a": "early_animal_d6_i9",
+      "b": "teammate_shoprouter",
+      "wins": 54,
+      "utility": 0.84375,
+      "margin_delta": -4120.739999999999
+    },
+    {
+      "a": "early_animal_adaptive_r1_c8_b500",
+      "b": "teammate_shoprouter",
+      "wins": 56,
+      "utility": 0.875,
+      "margin_delta": -3553.959999999999
+    },
+    {
+      "a": "early_animal_adaptive_r0_c0_b500",
+      "b": "king_rc4",
+      "wins": 51,
+      "utility": 0.796875,
+      "margin_delta": 0.0
+    },
+    {
+      "a": "early_animal_adaptive_r0_c0_b500",
+      "b": "opening_router_v4",
+      "wins": 56,
+      "utility": 0.875,
+      "margin_delta": -3349.5
+    },
+    {
+      "a": "early_animal_d15_i9",
+      "b": "investment_context_guarded_001_best",
+      "wins": 0,
+      "utility": 0,
+      "margin_delta": -4515.44
+    },
+    {
+      "a": "early_animal_adaptive_r0_c3_b500",
+      "b": "investment_context_guarded_001_best",
+      "wins": 2,
+      "utility": 0.5,
+      "margin_delta": 0
+    },
+    {
+      "a": "early_animal_adaptive_r1_c8_b500",
+      "b": "public_router",
+      "wins": 48,
+      "utility": 0.75,
+      "margin_delta": -3335.74
+    },
+    {
+      "a": "early_animal_adaptive_r0_c8_b500",
+      "b": "teammate_shoprouter",
+      "wins": 54,
+      "utility": 0.84375,
+      "margin_delta": -3747.0999999999995
+    },
+    {
+      "a": "early_animal_d6_i11",
+      "b": "public_router",
+      "wins": 36,
+      "utility": 0.5625,
+      "margin_delta": -7908.85
+    },
+    {
+      "a": "early_animal_d3_i10",
+      "b": "king_rc4",
+      "wins": 36,
+      "utility": 0.5625,
+      "margin_delta": -6035.719
+    },
+    {
+      "a": "early_animal_d6_i9",
+      "b": "public_router_v5",
+      "wins": 37,
+      "utility": 0.578125,
+      "margin_delta": -3995.502
+    },
+    {
+      "a": "early_animal_d15_i9",
+      "b": "public_router",
+      "wins": 48,
+      "utility": 0.75,
+      "margin_delta": -4636.05
+    },
+    {
+      "a": "early_animal_adaptive_r1_c3_b0",
+      "b": "public_router_v5",
+      "wins": 41,
+      "utility": 0.640625,
+      "margin_delta": -3646.611
+    },
+    {
+      "a": "early_animal_d6_i11",
+      "b": "teammate_shoprouter",
+      "wins": 46,
+      "utility": 0.71875,
+      "margin_delta": -7887.83
+    },
+    {
+      "a": "early_animal_d9_i10",
+      "b": "investment_context_guarded_001_best",
+      "wins": 0,
+      "utility": 0,
+      "margin_delta": -3858.66
+    },
+    {
+      "a": "early_animal_adaptive_r0_c3_b0",
+      "b": "public_router_v5",
+      "wins": 41,
+      "utility": 0.640625,
+      "margin_delta": -3646.611
+    },
+    {
+      "a": "early_animal_d9_i10",
+      "b": "opening_router_v4",
+      "wins": 45,
+      "utility": 0.703125,
+      "margin_delta": -4567.83
+    },
+    {
+      "a": "early_animal_d3_i10",
+      "b": "teammate_shoprouter",
+      "wins": 60,
+      "utility": 0.9375,
+      "margin_delta": -1127.4699999999993
+    },
+    {
+      "a": "early_animal_adaptive_r1_c3_b500",
+      "b": "opening_router_v4",
+      "wins": 56,
+      "utility": 0.875,
+      "margin_delta": -3433.59
+    },
+    {
+      "a": "early_animal_adaptive_r0_c8_b500",
+      "b": "public_router_v5",
+      "wins": 41,
+      "utility": 0.640625,
+      "margin_delta": -3646.611
+    },
+    {
+      "a": "early_animal_adaptive_r1_c0_b0",
+      "b": "investment_context_guarded_001_best",
+      "wins": 2,
+      "utility": 0.5,
+      "margin_delta": 0
+    },
+    {
+      "a": "early_animal_d9_i11",
+      "b": "public_router_v5",
+      "wins": 25,
+      "utility": 0.390625,
+      "margin_delta": -5484.610000000001
+    },
+    {
+      "a": "early_animal_adaptive_r1_c8_b0",
+      "b": "investment_context_guarded_001_best",
+      "wins": 2,
+      "utility": 0.5,
+      "margin_delta": 0
+    },
+    {
+      "a": "early_animal_d6_i11",
+      "b": "public_router_v5",
+      "wins": 16,
+      "utility": 0.25,
+      "margin_delta": -8127.41
+    },
+    {
+      "a": "early_animal_d9_i11",
+      "b": "opening_router_v4",
+      "wins": 35,
+      "utility": 0.546875,
+      "margin_delta": -5098.08
+    },
+    {
+      "a": "early_animal_adaptive_r1_c0_b500",
+      "b": "teammate_shoprouter",
+      "wins": 54,
+      "utility": 0.84375,
+      "margin_delta": -3688.4699999999993
+    },
+    {
+      "a": "early_animal_d15_i9",
+      "b": "opening_router_v4",
+      "wins": 49,
+      "utility": 0.765625,
+      "margin_delta": -4747.42
+    },
+    {
+      "a": "early_animal_d9_i9",
+      "b": "investment_context_guarded_001_best",
+      "wins": 0,
+      "utility": 0,
+      "margin_delta": -4304.03
+    },
+    {
+      "a": "early_animal_d9_i11",
+      "b": "teammate_shoprouter",
+      "wins": 53,
+      "utility": 0.828125,
+      "margin_delta": -5334.549999999999
+    },
+    {
+      "a": "early_animal_d6_i11",
+      "b": "investment_context_guarded_001_best",
+      "wins": 0,
+      "utility": 0,
+      "margin_delta": -6727.27
+    },
+    {
+      "a": "early_animal_adaptive_r1_c0_b500",
+      "b": "investment_context_guarded_001_best",
+      "wins": 2,
+      "utility": 0.5,
+      "margin_delta": 0
+    },
+    {
+      "a": "early_animal_d6_i9",
+      "b": "investment_context_guarded_001_best",
+      "wins": 0,
+      "utility": 0,
+      "margin_delta": -3791.16
+    },
+    {
+      "a": "early_animal_adaptive_r1_c3_b500",
+      "b": "king_rc4",
+      "wins": 51,
+      "utility": 0.796875,
+      "margin_delta": 0.0
+    },
+    {
+      "a": "early_animal_d3_i9",
+      "b": "public_router",
+      "wins": 48,
+      "utility": 0.75,
+      "margin_delta": -3895.69
+    },
+    {
+      "a": "early_animal_adaptive_r0_c3_b500",
+      "b": "teammate_shoprouter",
+      "wins": 54,
+      "utility": 0.84375,
+      "margin_delta": -3747.0999999999995
+    },
+    {
+      "a": "early_animal_d3_i11",
+      "b": "public_router_v5",
+      "wins": 27,
+      "utility": 0.421875,
+      "margin_delta": -4901.47
+    },
+    {
+      "a": "early_animal_adaptive_r0_c0_b0",
+      "b": "public_router_v5",
+      "wins": 41,
+      "utility": 0.640625,
+      "margin_delta": -3564.971
+    },
+    {
+      "a": "early_animal_d15_i11",
+      "b": "investment_context_guarded_001_best",
+      "wins": 0,
+      "utility": 0,
+      "margin_delta": -4735.78
+    },
+    {
+      "a": "early_animal_d15_i9",
+      "b": "teammate_shoprouter",
+      "wins": 53,
+      "utility": 0.828125,
+      "margin_delta": -4714.529999999999
+    },
+    {
+      "a": "early_animal_adaptive_r1_c0_b0",
+      "b": "public_router",
+      "wins": 48,
+      "utility": 0.75,
+      "margin_delta": -3475.0
+    },
+    {
+      "a": "early_animal_parent",
+      "b": "investment_context_guarded_001_best",
+      "wins": 2,
+      "utility": 0.5,
+      "margin_delta": 0
+    },
+    {
+      "a": "early_animal_adaptive_r0_c0_b500",
+      "b": "teammate_shoprouter",
+      "wins": 54,
+      "utility": 0.84375,
+      "margin_delta": -3688.4699999999993
+    },
+    {
+      "a": "early_animal_d6_i9",
+      "b": "public_router",
+      "wins": 48,
+      "utility": 0.75,
+      "margin_delta": -3897.24
+    },
+    {
+      "a": "early_animal_adaptive_r0_c3_b0",
+      "b": "opening_router_v4",
+      "wins": 56,
+      "utility": 0.875,
+      "margin_delta": -3433.59
+    },
+    {
+      "a": "early_animal_d6_i10",
+      "b": "teammate_shoprouter",
+      "wins": 58,
+      "utility": 0.90625,
+      "margin_delta": -3850.5199999999995
+    },
+    {
+      "a": "early_animal_adaptive_r1_c8_b0",
+      "b": "teammate_shoprouter",
+      "wins": 56,
+      "utility": 0.875,
+      "margin_delta": -3553.959999999999
+    },
+    {
+      "a": "early_animal_d3_i9",
+      "b": "public_router_v5",
+      "wins": 37,
+      "utility": 0.578125,
+      "margin_delta": -3998.908
+    },
+    {
+      "a": "early_animal_adaptive_r0_c3_b500",
+      "b": "public_router_v5",
+      "wins": 41,
+      "utility": 0.640625,
+      "margin_delta": -3646.611
+    },
+    {
+      "a": "early_animal_d15_i10",
+      "b": "teammate_shoprouter",
+      "wins": 52,
+      "utility": 0.8125,
+      "margin_delta": -5384.44
+    },
+    {
+      "a": "early_animal_parent",
+      "b": "public_router",
+      "wins": 57,
+      "utility": 0.890625,
+      "margin_delta": 0.0
+    },
+    {
+      "a": "early_animal_adaptive_r0_c0_b500",
+      "b": "public_router",
+      "wins": 48,
+      "utility": 0.75,
+      "margin_delta": -3475.0
+    },
+    {
+      "a": "early_animal_wait",
+      "b": "investment_context_guarded_001_best",
+      "wins": 0,
+      "utility": 0,
+      "margin_delta": -6032.56
+    },
+    {
+      "a": "early_animal_d3_i11",
+      "b": "opening_router_v4",
+      "wins": 43,
+      "utility": 0.671875,
+      "margin_delta": -4501.639999999999
+    },
+    {
+      "a": "early_animal_d15_i10",
+      "b": "king_rc4",
+      "wins": 38,
+      "utility": 0.59375,
+      "margin_delta": -5147.000999999999
+    },
+    {
+      "a": "early_animal_adaptive_r0_c3_b500",
+      "b": "king_rc4",
+      "wins": 51,
+      "utility": 0.796875,
+      "margin_delta": 0.0
+    },
+    {
+      "a": "early_animal_adaptive_r0_c3_b0",
+      "b": "investment_context_guarded_001_best",
+      "wins": 2,
+      "utility": 0.5,
+      "margin_delta": 0
+    },
+    {
+      "a": "early_animal_adaptive_r0_c3_b0",
+      "b": "king_rc4",
+      "wins": 51,
+      "utility": 0.796875,
+      "margin_delta": 0.0
+    },
+    {
+      "a": "early_animal_d9_i9",
+      "b": "king_rc4",
+      "wins": 40,
+      "utility": 0.625,
+      "margin_delta": -4483.86
+    },
+    {
+      "a": "early_animal_adaptive_r0_c0_b0",
+      "b": "teammate_shoprouter",
+      "wins": 54,
+      "utility": 0.84375,
+      "margin_delta": -3688.4699999999993
+    },
+    {
+      "a": "early_animal_d3_i9",
+      "b": "investment_context_guarded_001_best",
+      "wins": 0,
+      "utility": 0,
+      "margin_delta": -6032.56
+    },
+    {
+      "a": "early_animal_d6_i10",
+      "b": "public_router",
+      "wins": 48,
+      "utility": 0.75,
+      "margin_delta": -3657.25
+    },
+    {
+      "a": "early_animal_d9_i11",
+      "b": "public_router",
+      "wins": 44,
+      "utility": 0.6875,
+      "margin_delta": -5253.94
+    },
+    {
+      "a": "early_animal_d6_i9",
+      "b": "opening_router_v4",
+      "wins": 56,
+      "utility": 0.875,
+      "margin_delta": -3901.41
+    },
+    {
+      "a": "early_animal_d3_i11",
+      "b": "king_rc4",
+      "wins": 36,
+      "utility": 0.5625,
+      "margin_delta": -6035.719
+    },
+    {
+      "a": "early_animal_d9_i9",
+      "b": "opening_router_v4",
+      "wins": 53,
+      "utility": 0.828125,
+      "margin_delta": -4558.51
+    },
+    {
+      "a": "early_animal_adaptive_r0_c8_b0",
+      "b": "teammate_shoprouter",
+      "wins": 54,
+      "utility": 0.84375,
+      "margin_delta": -3747.0999999999995
+    },
+    {
+      "a": "early_animal_adaptive_r1_c8_b0",
+      "b": "king_rc4",
+      "wins": 51,
+      "utility": 0.796875,
+      "margin_delta": 0.0
+    },
+    {
+      "a": "early_animal_d3_i9",
+      "b": "king_rc4",
+      "wins": 36,
+      "utility": 0.5625,
+      "margin_delta": -6035.719
+    },
+    {
+      "a": "early_animal_adaptive_r1_c0_b0",
+      "b": "opening_router_v4",
+      "wins": 56,
+      "utility": 0.875,
+      "margin_delta": -3349.5
+    },
+    {
+      "a": "early_animal_parent",
+      "b": "public_router_v5",
+      "wins": 51,
+      "utility": 0.796875,
+      "margin_delta": 0.0
+    },
+    {
+      "a": "early_animal_wait",
+      "b": "king_rc4",
+      "wins": 36,
+      "utility": 0.5625,
+      "margin_delta": -6035.719
+    },
+    {
+      "a": "early_animal_adaptive_r1_c3_b0",
+      "b": "opening_router_v4",
+      "wins": 56,
+      "utility": 0.875,
+      "margin_delta": -3433.59
+    },
+    {
+      "a": "early_animal_adaptive_r1_c8_b0",
+      "b": "public_router_v5",
+      "wins": 41,
+      "utility": 0.640625,
+      "margin_delta": -3446.455
+    },
+    {
+      "a": "early_animal_d3_i10",
+      "b": "public_router_v5",
+      "wins": 40,
+      "utility": 0.625,
+      "margin_delta": -1145.1599999999999
+    },
+    {
+      "a": "early_animal_adaptive_r1_c0_b500",
+      "b": "public_router",
+      "wins": 48,
+      "utility": 0.75,
+      "margin_delta": -3475.0
+    },
+    {
+      "a": "early_animal_adaptive_r0_c8_b0",
+      "b": "investment_context_guarded_001_best",
+      "wins": 2,
+      "utility": 0.5,
+      "margin_delta": 0
+    },
+    {
+      "a": "early_animal_d9_i10",
+      "b": "public_router",
+      "wins": 46,
+      "utility": 0.71875,
+      "margin_delta": -4680.0
+    },
+    {
+      "a": "early_animal_adaptive_r0_c0_b0",
+      "b": "opening_router_v4",
+      "wins": 56,
+      "utility": 0.875,
+      "margin_delta": -3349.5
+    },
+    {
+      "a": "early_animal_parent",
+      "b": "teammate_shoprouter",
+      "wins": 60,
+      "utility": 0.9375,
+      "margin_delta": 0.0
+    },
+    {
+      "a": "early_animal_parent",
+      "b": "opening_router_v4",
+      "wins": 63,
+      "utility": 0.984375,
+      "margin_delta": 0.0
+    },
+    {
+      "a": "early_animal_d6_i9",
+      "b": "king_rc4",
+      "wins": 40,
+      "utility": 0.625,
+      "margin_delta": -3907.7199999999993
+    },
+    {
+      "a": "early_animal_adaptive_r0_c8_b500",
+      "b": "opening_router_v4",
+      "wins": 56,
+      "utility": 0.875,
+      "margin_delta": -3433.59
+    },
+    {
+      "a": "early_animal_adaptive_r1_c0_b0",
+      "b": "teammate_shoprouter",
+      "wins": 54,
+      "utility": 0.84375,
+      "margin_delta": -3688.4699999999993
+    },
+    {
+      "a": "early_animal_adaptive_r0_c3_b500",
+      "b": "public_router",
+      "wins": 48,
+      "utility": 0.75,
+      "margin_delta": -3550.1
+    },
+    {
+      "a": "early_animal_d9_i10",
+      "b": "public_router_v5",
+      "wins": 29,
+      "utility": 0.453125,
+      "margin_delta": -4687.6
+    },
+    {
+      "a": "early_animal_adaptive_r0_c8_b500",
+      "b": "investment_context_guarded_001_best",
+      "wins": 2,
+      "utility": 0.5,
+      "margin_delta": 0
+    },
+    {
+      "a": "early_animal_d15_i9",
+      "b": "king_rc4",
+      "wins": 38,
+      "utility": 0.59375,
+      "margin_delta": -4459.139999999999
+    },
+    {
+      "a": "early_animal_d3_i11",
+      "b": "public_router",
+      "wins": 46,
+      "utility": 0.71875,
+      "margin_delta": -4708.75
+    },
+    {
+      "a": "early_animal_adaptive_r1_c3_b0",
+      "b": "public_router",
+      "wins": 48,
+      "utility": 0.75,
+      "margin_delta": -3550.1
+    },
+    {
+      "a": "early_animal_adaptive_r0_c8_b0",
+      "b": "public_router",
+      "wins": 48,
+      "utility": 0.75,
+      "margin_delta": -3550.1
+    },
+    {
+      "a": "early_animal_adaptive_r0_c8_b0",
+      "b": "opening_router_v4",
+      "wins": 56,
+      "utility": 0.875,
+      "margin_delta": -3433.59
+    },
+    {
+      "a": "early_animal_d6_i11",
+      "b": "king_rc4",
+      "wins": 30,
+      "utility": 0.46875,
+      "margin_delta": -7390.09
+    },
+    {
+      "a": "early_animal_adaptive_r1_c0_b0",
+      "b": "public_router_v5",
+      "wins": 41,
+      "utility": 0.640625,
+      "margin_delta": -3564.971
+    },
+    {
+      "a": "early_animal_d6_i10",
+      "b": "investment_context_guarded_001_best",
+      "wins": 0,
+      "utility": 0,
+      "margin_delta": -3703.23
+    },
+    {
+      "a": "early_animal_d3_i10",
+      "b": "public_router",
+      "wins": 55,
+      "utility": 0.859375,
+      "margin_delta": -971.7799999999997
+    },
+    {
+      "a": "early_animal_adaptive_r1_c3_b500",
+      "b": "public_router",
+      "wins": 48,
+      "utility": 0.75,
+      "margin_delta": -3550.1
+    },
+    {
+      "a": "early_animal_d15_i11",
+      "b": "king_rc4",
+      "wins": 34,
+      "utility": 0.53125,
+      "margin_delta": -5442.641
+    },
+    {
+      "a": "early_animal_parent",
+      "b": "king_rc4",
+      "wins": 51,
+      "utility": 0.796875,
+      "margin_delta": 0.0
+    },
+    {
+      "a": "early_animal_adaptive_r0_c0_b0",
+      "b": "king_rc4",
+      "wins": 51,
+      "utility": 0.796875,
+      "margin_delta": 0.0
+    },
+    {
+      "a": "early_animal_d9_i11",
+      "b": "investment_context_guarded_001_best",
+      "wins": 4,
+      "utility": 0.0625,
+      "margin_delta": -3912.28
+    },
+    {
+      "a": "early_animal_d9_i10",
+      "b": "teammate_shoprouter",
+      "wins": 54,
+      "utility": 0.84375,
+      "margin_delta": -4782.739999999999
+    },
+    {
+      "a": "early_animal_d3_i9",
+      "b": "teammate_shoprouter",
+      "wins": 54,
+      "utility": 0.84375,
+      "margin_delta": -4126.57
+    },
+    {
+      "a": "early_animal_adaptive_r1_c8_b500",
+      "b": "opening_router_v4",
+      "wins": 58,
+      "utility": 0.90625,
+      "margin_delta": -3253.1099999999997
+    },
+    {
+      "a": "early_animal_d6_i10",
+      "b": "public_router_v5",
+      "wins": 34,
+      "utility": 0.53125,
+      "margin_delta": -3726.627
+    },
+    {
+      "a": "early_animal_adaptive_r0_c3_b500",
+      "b": "opening_router_v4",
+      "wins": 56,
+      "utility": 0.875,
+      "margin_delta": -3433.59
+    },
+    {
+      "a": "early_animal_d9_i10",
+      "b": "king_rc4",
+      "wins": 38,
+      "utility": 0.59375,
+      "margin_delta": -4650.66
+    },
+    {
+      "a": "early_animal_adaptive_r0_c8_b500",
+      "b": "king_rc4",
+      "wins": 51,
+      "utility": 0.796875,
+      "margin_delta": 0.0
+    },
+    {
+      "a": "early_animal_d3_i10",
+      "b": "opening_router_v4",
+      "wins": 63,
+      "utility": 0.984375,
+      "margin_delta": -1297.5900000000001
+    },
+    {
+      "a": "early_animal_wait",
+      "b": "teammate_shoprouter",
+      "wins": 50,
+      "utility": 0.78125,
+      "margin_delta": -6308.57
+    },
+    {
+      "a": "early_animal_d15_i10",
+      "b": "public_router",
+      "wins": 46,
+      "utility": 0.71875,
+      "margin_delta": -5282.469999999999
+    },
+    {
+      "a": "early_animal_adaptive_r0_c8_b500",
+      "b": "public_router",
+      "wins": 48,
+      "utility": 0.75,
+      "margin_delta": -3550.1
+    },
+    {
+      "a": "early_animal_adaptive_r1_c3_b500",
+      "b": "public_router_v5",
+      "wins": 41,
+      "utility": 0.640625,
+      "margin_delta": -3646.611
+    },
+    {
+      "a": "early_animal_adaptive_r0_c0_b500",
+      "b": "investment_context_guarded_001_best",
+      "wins": 2,
+      "utility": 0.5,
+      "margin_delta": 0
+    },
+    {
+      "a": "early_animal_d9_i11",
+      "b": "king_rc4",
+      "wins": 32,
+      "utility": 0.5,
+      "margin_delta": -4772.61
+    },
+    {
+      "a": "early_animal_d15_i11",
+      "b": "public_router_v5",
+      "wins": 18,
+      "utility": 0.28125,
+      "margin_delta": -5944.25
+    },
+    {
+      "a": "early_animal_adaptive_r1_c0_b500",
+      "b": "king_rc4",
+      "wins": 51,
+      "utility": 0.796875,
+      "margin_delta": 0.0
+    },
+    {
+      "a": "early_animal_adaptive_r1_c0_b0",
+      "b": "king_rc4",
+      "wins": 51,
+      "utility": 0.796875,
+      "margin_delta": 0.0
+    },
+    {
+      "a": "early_animal_d15_i10",
+      "b": "investment_context_guarded_001_best",
+      "wins": 0,
+      "utility": 0,
+      "margin_delta": -5117.84
+    },
+    {
+      "a": "early_animal_d3_i11",
+      "b": "teammate_shoprouter",
+      "wins": 53,
+      "utility": 0.828125,
+      "margin_delta": -4823.919999999999
+    },
+    {
+      "a": "early_animal_adaptive_r0_c0_b0",
+      "b": "investment_context_guarded_001_best",
+      "wins": 2,
+      "utility": 0.5,
+      "margin_delta": 0
+    },
+    {
+      "a": "early_animal_adaptive_r1_c8_b0",
+      "b": "public_router",
+      "wins": 48,
+      "utility": 0.75,
+      "margin_delta": -3335.74
+    },
+    {
+      "a": "early_animal_adaptive_r0_c8_b0",
+      "b": "king_rc4",
+      "wins": 51,
+      "utility": 0.796875,
+      "margin_delta": 0.0
+    },
+    {
+      "a": "early_animal_adaptive_r0_c3_b0",
+      "b": "teammate_shoprouter",
+      "wins": 54,
+      "utility": 0.84375,
+      "margin_delta": -3747.0999999999995
+    },
+    {
+      "a": "early_animal_adaptive_r1_c8_b500",
+      "b": "investment_context_guarded_001_best",
+      "wins": 2,
+      "utility": 0.5,
+      "margin_delta": 0
+    },
+    {
+      "a": "early_animal_adaptive_r1_c3_b0",
+      "b": "teammate_shoprouter",
+      "wins": 54,
+      "utility": 0.84375,
+      "margin_delta": -3747.0999999999995
+    },
+    {
+      "a": "early_animal_adaptive_r0_c0_b0",
+      "b": "public_router",
+      "wins": 48,
+      "utility": 0.75,
+      "margin_delta": -3475.0
+    },
+    {
+      "a": "early_animal_adaptive_r1_c8_b500",
+      "b": "king_rc4",
+      "wins": 51,
+      "utility": 0.796875,
+      "margin_delta": 0.0
+    },
+    {
+      "a": "early_animal_d6_i10",
+      "b": "king_rc4",
+      "wins": 40,
+      "utility": 0.625,
+      "margin_delta": -3732.74
+    },
+    {
+      "a": "early_animal_d15_i11",
+      "b": "opening_router_v4",
+      "wins": 30,
+      "utility": 0.46875,
+      "margin_delta": -5530.23
+    },
+    {
+      "a": "early_animal_adaptive_r1_c8_b0",
+      "b": "opening_router_v4",
+      "wins": 58,
+      "utility": 0.90625,
+      "margin_delta": -3253.1099999999997
+    },
+    {
+      "a": "early_animal_d15_i10",
+      "b": "opening_router_v4",
+      "wins": 39,
+      "utility": 0.609375,
+      "margin_delta": -5162.95
+    },
+    {
+      "a": "early_animal_adaptive_r1_c0_b500",
+      "b": "public_router_v5",
+      "wins": 41,
+      "utility": 0.640625,
+      "margin_delta": -3564.971
+    },
+    {
+      "a": "early_animal_d9_i9",
+      "b": "public_router",
+      "wins": 48,
+      "utility": 0.75,
+      "margin_delta": -4521.46
+    },
+    {
+      "a": "early_animal_d9_i9",
+      "b": "public_router_v5",
+      "wins": 35,
+      "utility": 0.546875,
+      "margin_delta": -4624.21
+    },
+    {
+      "a": "early_animal_adaptive_r0_c8_b0",
+      "b": "public_router_v5",
+      "wins": 41,
+      "utility": 0.640625,
+      "margin_delta": -3646.611
+    },
+    {
+      "a": "early_animal_adaptive_r1_c3_b0",
+      "b": "king_rc4",
+      "wins": 51,
+      "utility": 0.796875,
+      "margin_delta": 0.0
+    },
+    {
+      "a": "early_animal_d15_i11",
+      "b": "public_router",
+      "wins": 42,
+      "utility": 0.65625,
+      "margin_delta": -5772.3009999999995
+    },
+    {
+      "a": "early_animal_adaptive_r0_c3_b0",
+      "b": "public_router",
+      "wins": 48,
+      "utility": 0.75,
+      "margin_delta": -3550.1
+    },
+    {
+      "a": "early_animal_adaptive_r1_c0_b500",
+      "b": "opening_router_v4",
+      "wins": 56,
+      "utility": 0.875,
+      "margin_delta": -3349.5
+    },
+    {
+      "a": "early_animal_wait",
+      "b": "public_router_v5",
+      "wins": 24,
+      "utility": 0.375,
+      "margin_delta": -6276.78
+    },
+    {
+      "a": "early_animal_d15_i11",
+      "b": "teammate_shoprouter",
+      "wins": 52,
+      "utility": 0.8125,
+      "margin_delta": -5918.469999999999
+    },
+    {
+      "a": "early_animal_d9_i9",
+      "b": "teammate_shoprouter",
+      "wins": 54,
+      "utility": 0.84375,
+      "margin_delta": -4708.69
+    },
+    {
+      "a": "early_animal_d6_i10",
+      "b": "opening_router_v4",
+      "wins": 54,
+      "utility": 0.84375,
+      "margin_delta": -3605.17
+    },
+    {
+      "a": "early_animal_adaptive_r1_c3_b0",
+      "b": "investment_context_guarded_001_best",
+      "wins": 2,
+      "utility": 0.5,
+      "margin_delta": 0
+    },
+    {
+      "a": "early_animal_d3_i10",
+      "b": "investment_context_guarded_001_best",
+      "wins": 0,
+      "utility": 0,
+      "margin_delta": -6032.56
+    },
+    {
+      "a": "early_animal_d3_i11",
+      "b": "investment_context_guarded_001_best",
+      "wins": 0,
+      "utility": 0,
+      "margin_delta": -6032.56
+    },
+    {
+      "a": "early_animal_adaptive_r1_c3_b500",
+      "b": "investment_context_guarded_001_best",
+      "wins": 2,
+      "utility": 0.5,
+      "margin_delta": 0
+    },
+    {
+      "a": "early_animal_adaptive_r0_c0_b500",
+      "b": "public_router_v5",
+      "wins": 41,
+      "utility": 0.640625,
+      "margin_delta": -3564.971
+    },
+    {
+      "a": "early_animal_adaptive_r1_c8_b500",
+      "b": "public_router_v5",
+      "wins": 41,
+      "utility": 0.640625,
+      "margin_delta": -3446.455
+    },
+    {
+      "a": "early_animal_d3_i9",
+      "b": "opening_router_v4",
+      "wins": 56,
+      "utility": 0.875,
+      "margin_delta": -3902.22
+    },
+    {
+      "a": "early_animal_wait",
+      "b": "public_router",
+      "wins": 48,
+      "utility": 0.75,
+      "margin_delta": -6202.706999999999
+    },
+    {
+      "a": "early_animal_wait",
+      "b": "opening_router_v4",
+      "wins": 32,
+      "utility": 0.5,
+      "margin_delta": -6287.26
+    },
+    {
+      "a": "early_animal_adaptive_r1_c3_b500",
+      "b": "teammate_shoprouter",
+      "wins": 54,
+      "utility": 0.84375,
+      "margin_delta": -3747.0999999999995
+    },
+    {
+      "a": "early_animal_d6_i11",
+      "b": "opening_router_v4",
+      "wins": 24,
+      "utility": 0.375,
+      "margin_delta": -8030.826999999999
+    },
+    {
+      "a": "early_animal_d15_i9",
+      "b": "public_router_v5",
+      "wins": 33,
+      "utility": 0.515625,
+      "margin_delta": -4718.6
+    },
+    {
+      "a": "early_animal_d15_i10",
+      "b": "public_router_v5",
+      "wins": 25,
+      "utility": 0.390625,
+      "margin_delta": -5314.58
+    }
+  ],
+  "status": "No improvement; physical entry coverage and downstream execution diagnosis required"
+}

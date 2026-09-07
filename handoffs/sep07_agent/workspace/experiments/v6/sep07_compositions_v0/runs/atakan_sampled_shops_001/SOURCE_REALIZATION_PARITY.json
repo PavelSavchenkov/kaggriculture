@@ -1,0 +1,42 @@
+{
+  "sampling": {
+    "stratified_mean_demand_equalities": 13122
+  },
+  "full_games_matching_forecast_selected_fixed_course": 3840,
+  "per_policy_games": {
+    "atakan_integrated_s0_own": 384,
+    "atakan_integrated_s0_margin": 384,
+    "atakan_integrated_s1_own": 384,
+    "atakan_integrated_s1_margin": 384,
+    "atakan_integrated_s8_own": 384,
+    "atakan_integrated_s8_margin": 384,
+    "atakan_integrated_s32_own": 384,
+    "atakan_integrated_s32_margin": 384,
+    "atakan_integrated_s64_own": 384,
+    "atakan_integrated_s64_margin": 384
+  },
+  "commands": [
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "g++",
+      "-std=c++20",
+      "-O2",
+      "-I",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/generic/source_snapshot",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/tests/sampling_checks.cpp",
+      "-o",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/tests/sampling_checks"
+    ],
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/tests/sampling_checks"
+    ]
+  ],
+  "sampling_binary_sha256": "4702d60b0707e19547bc8ef56d0425efbdee9a6deabc8f0c058b9161a4725e8d"
+}

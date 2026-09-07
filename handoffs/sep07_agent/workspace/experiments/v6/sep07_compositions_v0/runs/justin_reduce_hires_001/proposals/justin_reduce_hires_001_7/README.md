@@ -1,0 +1,3 @@
+# justin_reduce_hires_001_7
+
+Source course 150 from the experiment's top_replay_library; exact source lineage remains in its IMPORT.json. Remove the final daily hire with original services on day 19; selected tile index -1 (-1 means no service edit). Preserve all other day work, end stocks and economic orders. V30 rebuilds the complete worker day. Local code proposes and estimates the service edit. Contract from discovery seed 1000 seat 0 versus public_router. No seed or hidden input is used at runtime. Fixed complete course with normalized worker counts; discovery artifact, not promoted. Full later dependencies are tested in live-opponent games.

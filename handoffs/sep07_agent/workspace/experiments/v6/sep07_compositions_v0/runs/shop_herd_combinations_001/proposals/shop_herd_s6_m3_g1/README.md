@@ -1,0 +1,5 @@
+# shop_herd_s6_m3_g1
+
+Justin Lee replay150 with local terminal recovery, guarded V30 worker days, and the user’s shop-demand rule for two day7 purchases. Choose sheep when observed wool demand exceeds milk demand, otherwise retain cows; ties retain cows. Mode3 counts Yarn’s two units, mode2 counts shops. Purchase, pickup, placement and mixed-product deposits/sales are changed together. Runtime uses only observed shops and own/public state. The fixed source days are reused only under their physical starting conditions.
+
+Validated on1,024 fresh games per11 opponents, both seats, plus256 native RNG games perthree opponents, generic/debug/thread equality, self-play and PASS. See results/shop_herd_validation.json for exact metrics and limitations. Mode3 is the primary league improvement:599/1024wins against previousbest, margin+$1582;972/1024teammate. Changed-herd schedules still lose some labor savings; mean gains do not imply all tails improve. Source, copied components and local/user ideas are recorded separately in IMPORT.json.

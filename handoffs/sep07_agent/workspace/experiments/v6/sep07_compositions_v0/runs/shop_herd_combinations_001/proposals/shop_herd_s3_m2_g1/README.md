@@ -1,0 +1,3 @@
+# shop_herd_s3_m2_g1
+
+Experimental shop-conditioned purchases on Justin150's terminal-improved course. Choose cows or sheep from currently observed milk/wool shop demand; preserve the original animal on ties. Purchase, pickup, placement and output handling are changed together. Reuse of full day plans requires their original physical starting state and excludes changed purchase/transfer days. Changed herds therefore lose some existing labor savings until their days are rebuilt. The user's shop adaptation intuition is the policy source; source replay and local component lineage are in IMPORT.json. Discovery only; fresh and deployment checks pending.

@@ -1,0 +1,27 @@
+{
+  "program": 161,
+  "source": {
+    "program": 161,
+    "id": "episode_106384618_seat_1",
+    "episode": 106384618,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "rank": 11,
+    "submission": 56058092,
+    "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T08:02:02.csv",
+    "replay_sha256": "6994bd40560f822bb3c130a75ed3a790712a70cfb92c59335a171ab7554ca244"
+  },
+  "scope": "Exact single recorded course, no inferred original branching policy",
+  "changes": "None beyond existing library normalization; all 719 source actions already verified",
+  "reuse": "User-authorized borrowing of public replay actions; no separate source-code license supplied",
+  "deployment_validation": {
+    "generic_debug_thread_equal_games": {
+      "justin_150_vs_justin_154": 16,
+      "atakan_161_vs_king_rc4": 16
+    },
+    "source_parity": "results/replay_library_parity.json",
+    "pass_self": "results/refresh_0804_checks",
+    "broad_league": "results/refresh_0804_league",
+    "scope": "Exact library wrappers with immutable data, per-instance program choice, observation only; normalized719actions each"
+  }
+}

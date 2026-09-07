@@ -1,0 +1,5 @@
+# justin_guarded_hires_001_best
+
+Justin terminal variant with complete V30 days selected by C++ league search. A physical day-start mismatch retains the parent day. Source services, dated composition and economic order slots are preserved; one hire is removed per compiled day. Future finance is not certified by the guard. Discovery only:32 games per opponent against parent/v4/King/Binghua/public/Jun, seeds1000..1015 both seats. Every accepted addition has nondecreasing mean margin and win utility in all six matchups, with strictly positive aggregate margin gain. Required deployment, broader, native and fresh checks pass. Exact local/source lineage in IMPORT.json. No hidden runtime inputs.
+
+Fresh1024/opponent:969 teammate wins,915 v4,852 public,666 King,726 Binghua,967 parent wins. Against parent mean margin$1380, tail-$244; King mean$826, tail-$20195. PASS256J149294. In32 pairedv4games,22fewerhires save$1471 with all production, trade quantities/timing, dated lives and service unchanged; faults26→10. Results: results/justin_guarded_validation.json.

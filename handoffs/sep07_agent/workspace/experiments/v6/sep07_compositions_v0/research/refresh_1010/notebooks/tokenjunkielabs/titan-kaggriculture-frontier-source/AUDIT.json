@@ -1,0 +1,97 @@
+{
+  "source_sha256": "16d7f213e06c563487e5f613f8c94116a094b36ba46927329cbfc3b4195d461d",
+  "source_url": "https://www.kaggle.com/code/tokenjunkielabs/titan-kaggriculture-frontier-source",
+  "pinned_repository": "https://github.com/woahwhattheheck/commons/tree/cf88ace1ba45a170fb8ba09986b5f7cb1413381b/revenue/kaggriculture/cloud-frontier-policy",
+  "authors": [
+    "Kaito Fukami: complete v43 routes and sparse shop/weed/SELL controller",
+    "Igor Zharov: selected legal observation, projected inventory, and price-impact helpers",
+    "LARK / Commons: finished-product sale advance for public farm signature distance<=2"
+  ],
+  "license": "Apache-2.0; exact LICENSE and NOTICE.txt copied from notebook",
+  "module_sha256": {
+    "scripts.v19_terminal.py": "5de2444e49b554e3957ba91f653604d0ec4a4e4bc3d1ceb4aca528ec74efd8a2",
+    "scripts.v21_route_memory_search.py": "a6fec2ac0aed7c763918921030fe038949ce11e380e14ee06e963c1e15de5c72",
+    "scripts.v22_market_impact.py": "41a99cc81eaadcbb6c67885974c8133af3872f730c2b7389bf99602f52da3ed8",
+    "scripts.v22_weed_repair.py": "74bb8dc7812cf740ab3098fa5b6b8b976831cfa6b6c8f3fb1978d0af84f11fce",
+    "v19_terminal.py": "5de2444e49b554e3957ba91f653604d0ec4a4e4bc3d1ceb4aca528ec74efd8a2",
+    "v23.planner.py": "299d7289581f326380467f316e0594ba94e9350812bae9b8ed935a82c3e8ef07",
+    "v23.policy_library.py": "d49e36a3a51c190e571c05f2359c85bf1bb38f8af5fe12ba4397cb71419e9f7e",
+    "v23.simulator.py": "c4cdeba82f3897e45c623b1a61acb1e180920196e24712b2ce0650538e2a3094",
+    "v23.state_encoder.py": "0f20488c2d154fa9d50bbd1db8b07433bd1e336b95535c11a7759f9eeb8314e0",
+    "v24.market_maker.py": "7c1a2f267ee4813bd7bcc5423bb9a49e80984666ff57987051092645b16ea885",
+    "v43.sparse_router.py": "11792b929ab984f60e73a6087a0440f56bea7293ba1b2abbd976542b96996842"
+  },
+  "routes": [
+    {
+      "name": "default",
+      "actions": 719,
+      "canonical_sha256": "ca788fddbc3ef4b9d4b5f68828f26421cf2e750788827750f6dbef1c913ea5ae"
+    },
+    {
+      "name": "yarn_first",
+      "actions": 719,
+      "canonical_sha256": "81b1f33b1ec34feb187dd49efa6b406e57f07a1a0fa69fe89435da2a76ab9938"
+    },
+    {
+      "name": "yarn_second",
+      "actions": 719,
+      "canonical_sha256": "b23527929389d05c08017a2a79bfdb1e09901b0cebcda79f8553e7adda0ca742"
+    }
+  ],
+  "active_components": [
+    "Three Kaito v43 fixed courses selected by first/second observed Yarn shop at88/153",
+    "All three bounded weed-repair controllers updated every turn; DIG, intended retry, eight prior-action replays",
+    "Kaito SELL-slot ordering by current official price-impact score and demand-recovery factor",
+    "Igor projected own shed and pickup reserves",
+    "LARK full finished-product sale quantities/additional SELL slots only when public farm signature distance<=2"
+  ],
+  "inactive_components": [
+    "Disabled bakery market-maker; step-zero call only resets it",
+    "Unused terminal, quantity MPC, simulator, route library and market-maker alternatives"
+  ],
+  "literal_curve_difference": "Kaito sparse parent uses current official hinge curves for CARROT/TOMATO/EGG. Igor/LARK additional-sale ranking retains older log/linear/linear below-equilibrium curves.",
+  "ports": [
+    "league/titan_frontier",
+    "league/kaito_v43"
+  ],
+  "validation": "results/titan_frontier_validation.json",
+  "novelty_and_result": "Similarity-gated early finished-product sales strongly beat the same production parent but are nearly inactive against this modern panel. Earlier sales also change funding and downstream production; do not call this an equal-production timing result.",
+  "head_to_head_parent": {
+    "games": 128,
+    "wins": 123,
+    "ties": 0,
+    "mean_cash": 85101.640625,
+    "mean_margin": 4793.0234375,
+    "margin_cvar10": -2157.08,
+    "pass_J": 76718.9
+  },
+  "best_agent_screen": {
+    "new": {
+      "games": 128,
+      "wins": 12,
+      "ties": 0,
+      "mean_cash": 81841.2890625,
+      "mean_margin": -16258.5859375,
+      "margin_cvar10": -29520.1,
+      "pass_J": 72449.4
+    },
+    "parent": {
+      "games": 128,
+      "wins": 12,
+      "ties": 0,
+      "mean_cash": 81839.7890625,
+      "mean_margin": -16262.2109375,
+      "margin_cvar10": -29520.1,
+      "pass_J": 72448.2
+    },
+    "changed_complete_game_records": 8,
+    "paired_mean_margin_delta": 3.625
+  },
+  "rating": null,
+  "decision": "Keep the faithful port and baseline for league research; borrow the observed-similarity sale-regime idea, not an unverified blanket sale advance. No incumbent change.",
+  "exact_raw_route_shared_prefix_lengths": {
+    "default/yarn_first": 88,
+    "default/yarn_second": 153,
+    "yarn_first/yarn_second": 88
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "program": 89,
+  "source": {
+    "program": 89,
+    "id": "episode_106322139_seat_0",
+    "episode": 106322139,
+    "seat": 0,
+    "team": "Mao Nishino (mao1756)",
+    "rank": 12,
+    "submission": 56064507,
+    "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T03:14:45.csv",
+    "replay_sha256": "54b3e3fdc6ef3a822b2c1e25bbce427fab2c833e54c104808bedb91d0e793e41"
+  },
+  "variant": 2,
+  "sell_all_changed_output": true,
+  "change": "Local whole-family GOOSE to COW substitution, preserving source dates/tiles/service routes. Structures, animal inputs and output commodities change together. Complete-game checks and broad comparisons recorded below; altered production and funding can still fail in other scenarios.",
+  "experiment": "results/species_templates_screen_summary.json",
+  "validation": {
+    "generic4thread_debug_pair1thread_equal_games": 16,
+    "pass_self": "species_selected_checks",
+    "broad_league": "species_selected_league",
+    "source_identity": "species_templates_public_001/parity.json"
+  }
+}

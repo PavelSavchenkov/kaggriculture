@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "kaito_v43",
+  "header": "source/agent.hpp",
+  "type": "compositions::kaito_v43::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../titan_frontier/source/agent.cpp"
+  ]
+}

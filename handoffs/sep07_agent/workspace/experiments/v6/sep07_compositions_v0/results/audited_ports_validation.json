@@ -1,0 +1,45 @@
+[
+  {
+    "generic": "kaito_v58_checks/kaito_v58_vs_opening_router_v1.json",
+    "debug": "kaito_v58_debug.json",
+    "identical_games": 16
+  },
+  {
+    "generic": "fresh_counter_league/junghoon_78_vs_mao_85.json",
+    "debug": "junghoon_mao85_debug.json",
+    "identical_games": 16
+  },
+  {
+    "generic": "fresh_counter_league/mao_89_vs_pass.json",
+    "debug": "mao89_pass_debug.json",
+    "identical_games": 16
+  },
+  {
+    "agent": "kaito_v58",
+    "pass_games": 16,
+    "pass_J": 151016,
+    "self_games": 16,
+    "self_utility": 0.5
+  },
+  {
+    "agent": "junghoon_78",
+    "pass_games": 256,
+    "pass_J": 130217,
+    "self_games": 256,
+    "self_utility": 0.5
+  },
+  {
+    "agent": "mao_85",
+    "pass_games": 256,
+    "pass_J": 143205,
+    "self_games": 256,
+    "self_utility": 0.5
+  },
+  {
+    "agent": "mao_89",
+    "pass_games": 256,
+    "pass_J": 143088,
+    "self_games": 256,
+    "self_utility": 0.5
+  }
+]

@@ -1,0 +1,342 @@
+[
+  {
+    "agent": "binghua_116",
+    "opponent": "pass",
+    "summary": {
+      "agent_a": "binghua_116",
+      "agent_b": "pass",
+      "seconds": 0.0155499,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 167560,
+      "mean_margin": 164560,
+      "cash_cvar10": 119444,
+      "margin_cvar10": 116444,
+      "pass_J": 157937
+    }
+  },
+  {
+    "agent": "binghua_116",
+    "opponent": "binghua_116",
+    "summary": {
+      "agent_a": "binghua_116",
+      "agent_b": "binghua_116",
+      "seconds": 0.0376103,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 80955,
+      "mean_margin": 0,
+      "cash_cvar10": 48296,
+      "margin_cvar10": 0,
+      "pass_J": 74423.2
+    }
+  },
+  {
+    "agent": "binghua_116",
+    "opponent": "john_128",
+    "summary": {
+      "agent_a": "binghua_116",
+      "agent_b": "john_128",
+      "seconds": 0.0290757,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.75,
+      "mean_cash": 77338.4,
+      "mean_margin": 592,
+      "cash_cvar10": 47447,
+      "margin_cvar10": -3477,
+      "pass_J": 71360.1
+    }
+  },
+  {
+    "agent": "binghua_116",
+    "opponent": "john_131",
+    "summary": {
+      "agent_a": "binghua_116",
+      "agent_b": "john_131",
+      "seconds": 0.037809,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 85843.8,
+      "mean_margin": 1042,
+      "cash_cvar10": 47782,
+      "margin_cvar10": -8087,
+      "pass_J": 78231.4
+    }
+  },
+  {
+    "agent": "binghua_116",
+    "opponent": "composition_greedy_v1",
+    "summary": {
+      "agent_a": "binghua_116",
+      "agent_b": "composition_greedy_v1",
+      "seconds": 0.096414,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 103791,
+      "mean_margin": 39776.6,
+      "cash_cvar10": 56070,
+      "margin_cvar10": 12687,
+      "pass_J": 94247
+    }
+  },
+  {
+    "agent": "john_128",
+    "opponent": "pass",
+    "summary": {
+      "agent_a": "john_128",
+      "agent_b": "pass",
+      "seconds": 0.0204128,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 167776,
+      "mean_margin": 164776,
+      "cash_cvar10": 117830,
+      "margin_cvar10": 114830,
+      "pass_J": 157786
+    }
+  },
+  {
+    "agent": "john_128",
+    "opponent": "binghua_116",
+    "summary": {
+      "agent_a": "john_128",
+      "agent_b": "binghua_116",
+      "seconds": 0.0277935,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.25,
+      "mean_cash": 76746.4,
+      "mean_margin": -592,
+      "cash_cvar10": 47856,
+      "margin_cvar10": -4222,
+      "pass_J": 70968.3
+    }
+  },
+  {
+    "agent": "john_128",
+    "opponent": "john_128",
+    "summary": {
+      "agent_a": "john_128",
+      "agent_b": "john_128",
+      "seconds": 0.0369159,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 76708,
+      "mean_margin": 0,
+      "cash_cvar10": 48465,
+      "margin_cvar10": 0,
+      "pass_J": 71059.4
+    }
+  },
+  {
+    "agent": "john_128",
+    "opponent": "john_131",
+    "summary": {
+      "agent_a": "john_128",
+      "agent_b": "john_131",
+      "seconds": 0.0361912,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.375,
+      "mean_cash": 83226.2,
+      "mean_margin": -813.5,
+      "cash_cvar10": 48590,
+      "margin_cvar10": -7448,
+      "pass_J": 76299
+    }
+  },
+  {
+    "agent": "john_128",
+    "opponent": "composition_greedy_v1",
+    "summary": {
+      "agent_a": "john_128",
+      "agent_b": "composition_greedy_v1",
+      "seconds": 0.0947193,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 98969.1,
+      "mean_margin": 35559.2,
+      "cash_cvar10": 56706,
+      "margin_cvar10": 13222,
+      "pass_J": 90516.4
+    }
+  },
+  {
+    "agent": "john_131",
+    "opponent": "pass",
+    "summary": {
+      "agent_a": "john_131",
+      "agent_b": "pass",
+      "seconds": 0.0169049,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 156218,
+      "mean_margin": 153218,
+      "cash_cvar10": 124078,
+      "margin_cvar10": 121078,
+      "pass_J": 149790
+    }
+  },
+  {
+    "agent": "john_131",
+    "opponent": "binghua_116",
+    "summary": {
+      "agent_a": "john_131",
+      "agent_b": "binghua_116",
+      "seconds": 0.0353589,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 84801.8,
+      "mean_margin": -1042,
+      "cash_cvar10": 55869,
+      "margin_cvar10": -13022,
+      "pass_J": 79015.2
+    }
+  },
+  {
+    "agent": "john_131",
+    "opponent": "john_128",
+    "summary": {
+      "agent_a": "john_131",
+      "agent_b": "john_128",
+      "seconds": 0.0370463,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.625,
+      "mean_cash": 84039.8,
+      "mean_margin": 813.5,
+      "cash_cvar10": 56038,
+      "margin_cvar10": -14107,
+      "pass_J": 78439.4
+    }
+  },
+  {
+    "agent": "john_131",
+    "opponent": "john_131",
+    "summary": {
+      "agent_a": "john_131",
+      "agent_b": "john_131",
+      "seconds": 0.0272735,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 92571.9,
+      "mean_margin": 0,
+      "cash_cvar10": 56962,
+      "margin_cvar10": 0,
+      "pass_J": 85449.9
+    }
+  },
+  {
+    "agent": "john_131",
+    "opponent": "composition_greedy_v1",
+    "summary": {
+      "agent_a": "john_131",
+      "agent_b": "composition_greedy_v1",
+      "seconds": 0.0851932,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 107959,
+      "mean_margin": 37548.8,
+      "cash_cvar10": 65305,
+      "margin_cvar10": 18046,
+      "pass_J": 99428.5
+    }
+  },
+  {
+    "agent": "composition_greedy_v1",
+    "opponent": "pass",
+    "summary": {
+      "agent_a": "composition_greedy_v1",
+      "agent_b": "pass",
+      "seconds": 0.0761611,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 112542,
+      "mean_margin": 109542,
+      "cash_cvar10": 101632,
+      "margin_cvar10": 98632.5,
+      "pass_J": 110360
+    }
+  },
+  {
+    "agent": "composition_greedy_v1",
+    "opponent": "binghua_116",
+    "summary": {
+      "agent_a": "composition_greedy_v1",
+      "agent_b": "binghua_116",
+      "seconds": 0.105591,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0,
+      "mean_cash": 64014.7,
+      "mean_margin": -39776.6,
+      "cash_cvar10": 43383,
+      "margin_cvar10": -79938,
+      "pass_J": 59888.3
+    }
+  },
+  {
+    "agent": "composition_greedy_v1",
+    "opponent": "john_128",
+    "summary": {
+      "agent_a": "composition_greedy_v1",
+      "agent_b": "john_128",
+      "seconds": 0.0898827,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0,
+      "mean_cash": 63409.8,
+      "mean_margin": -35559.2,
+      "cash_cvar10": 43484,
+      "margin_cvar10": -75241,
+      "pass_J": 59424.7
+    }
+  },
+  {
+    "agent": "composition_greedy_v1",
+    "opponent": "john_131",
+    "summary": {
+      "agent_a": "composition_greedy_v1",
+      "agent_b": "john_131",
+      "seconds": 0.0879552,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0,
+      "mean_cash": 70410.6,
+      "mean_margin": -37548.8,
+      "cash_cvar10": 43836,
+      "margin_cvar10": -64853,
+      "pass_J": 65095.7
+    }
+  },
+  {
+    "agent": "composition_greedy_v1",
+    "opponent": "composition_greedy_v1",
+    "summary": {
+      "agent_a": "composition_greedy_v1",
+      "agent_b": "composition_greedy_v1",
+      "seconds": 0.144561,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 77399.7,
+      "mean_margin": 0,
+      "cash_cvar10": 52161,
+      "margin_cvar10": -4083.5,
+      "pass_J": 72351.9
+    }
+  }
+]

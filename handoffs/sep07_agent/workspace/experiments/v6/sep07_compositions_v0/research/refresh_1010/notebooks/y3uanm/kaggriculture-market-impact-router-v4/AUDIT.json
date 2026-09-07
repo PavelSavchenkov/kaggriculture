@@ -1,0 +1,215 @@
+{
+  "source_url": "https://www.kaggle.com/code/y3uanm/kaggriculture-market-impact-router-v4",
+  "source_sha256": "639ca6fd2e82bc57f800ac51a5a258e49df0ee3bedf8973507f470730225640f",
+  "parent_source_sha256": "197b1ceef97d2ee20b833457ecbf06c0969832086c086ee6596bd0752e57a3c1",
+  "decoded_thomas_blob_sha256": "aabfbe9164937e4f46b59582479cebc5a1615a5652fa804adb172742f998db11",
+  "novelty": "Ranks existing SELL slots by quantity times predicted price loss; non-SELL slots remain in position. The caller supplies projected own shed instead of shared market inventory. Its CARROT/TOMATO/EGG below-equilibrium curves are older than the official hinge curves.",
+  "evidence": {
+    "ranking_calls": 34512,
+    "calls_with_multiple_sales": 1541,
+    "ranking_changes": 123,
+    "action_changes_vs_thomas": 113,
+    "actions": 34512,
+    "positive_impact_rows": 284
+  },
+  "replay_files": [
+    "replays/episode-106273396-replay.json",
+    "replays/episode-106275959-replay.json",
+    "replays/episode-106276127-replay.json",
+    "replays/episode-106276684-replay.json",
+    "replays/episode-106277936-replay.json",
+    "replays/episode-106277938-replay.json",
+    "replays/episode-106278712-replay.json",
+    "replays/episode-106278780-replay.json",
+    "replays/episode-106401177-replay.json",
+    "replays/episode-106402105-replay.json",
+    "replays/episode-106402121-replay.json",
+    "replays/episode-106406713-replay.json",
+    "replays/episode-106409342-replay.json",
+    "replays/episode-106410975-replay.json",
+    "replays/episode-106411219-replay.json",
+    "replays/episode-106411972-replay.json",
+    "replays/episode-106414415-replay.json",
+    "replays/episode-106415357-replay.json",
+    "replays/episode-106415741-replay.json",
+    "replays/episode-106415893-replay.json",
+    "replays/episode-106416293-replay.json",
+    "replays/episode-106417216-replay.json",
+    "replays/episode-106418140-replay.json",
+    "replays/episode-106419058-replay.json"
+  ],
+  "minimum_observed_shared_inventory": {
+    "WHEAT": 9455,
+    "CARROT": 9540,
+    "TOMATO": 9556,
+    "STRAWBERRY": 9763,
+    "MELON": 9989,
+    "EGG": 9484,
+    "MILK": 9865,
+    "WOOL": 9628,
+    "FERTILIZER": 10000
+  },
+  "maximum_projected_shed_plus_quantity": {
+    "WHEAT": 130,
+    "CARROT": 172,
+    "TOMATO": 116,
+    "STRAWBERRY": 78,
+    "MELON": 48,
+    "EGG": 42,
+    "MILK": 51,
+    "WOOL": 126,
+    "FERTILIZER": 46
+  },
+  "zero_impact_condition": "For every ranked sale, current_quote <= fixed_curve_price(projected_own_shed[item] + quantity) gives zero impact; then stable ranking preserves the parent action. This is conditional and does not hold universally on the recorded observations.",
+  "positive_impact_products": {
+    "WHEAT": 0,
+    "FERTILIZER": 0,
+    "WOOL": 0,
+    "MILK": 0,
+    "MELON": 0,
+    "STRAWBERRY": 0,
+    "TOMATO": 0,
+    "CARROT": 284,
+    "EGG": 0
+  },
+  "positive_impact_examples": [
+    {
+      "item": "CARROT",
+      "quantity": 1,
+      "projected_own_shed": 15,
+      "current_quote": 56,
+      "predicted_later_quote": 46
+    },
+    {
+      "item": "CARROT",
+      "quantity": 7,
+      "projected_own_shed": 8,
+      "current_quote": 54,
+      "predicted_later_quote": 46
+    },
+    {
+      "item": "CARROT",
+      "quantity": 1,
+      "projected_own_shed": 8,
+      "current_quote": 54,
+      "predicted_later_quote": 46
+    },
+    {
+      "item": "CARROT",
+      "quantity": 8,
+      "projected_own_shed": 8,
+      "current_quote": 54,
+      "predicted_later_quote": 46
+    },
+    {
+      "item": "CARROT",
+      "quantity": 2,
+      "projected_own_shed": 2,
+      "current_quote": 54,
+      "predicted_later_quote": 46
+    },
+    {
+      "item": "CARROT",
+      "quantity": 9,
+      "projected_own_shed": 12,
+      "current_quote": 54,
+      "predicted_later_quote": 46
+    },
+    {
+      "item": "CARROT",
+      "quantity": 3,
+      "projected_own_shed": 12,
+      "current_quote": 54,
+      "predicted_later_quote": 46
+    },
+    {
+      "item": "CARROT",
+      "quantity": 9,
+      "projected_own_shed": 9,
+      "current_quote": 53,
+      "predicted_later_quote": 46
+    },
+    {
+      "item": "CARROT",
+      "quantity": 7,
+      "projected_own_shed": 7,
+      "current_quote": 52,
+      "predicted_later_quote": 46
+    },
+    {
+      "item": "CARROT",
+      "quantity": 1,
+      "projected_own_shed": 2,
+      "current_quote": 56,
+      "predicted_later_quote": 46
+    },
+    {
+      "item": "CARROT",
+      "quantity": 2,
+      "projected_own_shed": 2,
+      "current_quote": 52,
+      "predicted_later_quote": 46
+    },
+    {
+      "item": "CARROT",
+      "quantity": 1,
+      "projected_own_shed": 12,
+      "current_quote": 49,
+      "predicted_later_quote": 46
+    }
+  ],
+  "non_universal_counterexample": {
+    "scope": "Synthetic low-shared-inventory helper inputs; reachability in a full normal game not claimed",
+    "market_before": [
+      [
+        "SELL",
+        "MILK",
+        1
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "SELL",
+        "WHEAT",
+        99
+      ]
+    ],
+    "prices": {
+      "MILK": 1029,
+      "WHEAT": 125
+    },
+    "projected_own_shed": {
+      "MILK": 1,
+      "WHEAT": 99
+    },
+    "market_after": [
+      [
+        "SELL",
+        "WHEAT",
+        99
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "SELL",
+        "MILK",
+        1
+      ]
+    ]
+  },
+  "rating": null,
+  "decision": "Literal projected-own-shed ranking under older price curves changes reachable actions, but worsens average margin versus every tested common opponent and loses to its Thomas parent.",
+  "cpp_port": "league/market_impact_v4",
+  "validation": "results/market_impact_v4_validation.json",
+  "head_to_head_parent": {
+    "games": 128,
+    "wins": 5,
+    "ties": 28,
+    "mean_cash": 89600.296875,
+    "mean_margin": -524.078125,
+    "margin_cvar10": -1391.77,
+    "pass_J": 81957.4
+  }
+}

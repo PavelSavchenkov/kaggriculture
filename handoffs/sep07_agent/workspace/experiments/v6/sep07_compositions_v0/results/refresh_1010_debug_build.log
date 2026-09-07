@@ -1,0 +1,9 @@
+DEBUG conda.gateways.logging:set_log_level(223): log_level set to 10
+DEBUG conda.gateways.subprocess:subprocess_call(97): executing>> /usr/bin/bash /tmp/tmpn2prp8w3
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/src/arena.cpp: In lambda function:
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/src/arena.cpp:7:57: warning: converting to ‘compositions::titan_frontier::AgentCore’ from initializer list would use explicit constructor ‘compositions::titan_frontier::AgentCore::AgentCore(bool)’
+    7 |     return compositions::run_batch(o, [] { return PairA{}; }, [] { return PairB{}; });
+      |                                                         ^
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/src/arena.cpp:7:57: note: in C++11 and above a default constructor can be explicit
+
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1010/debug_pair/arena

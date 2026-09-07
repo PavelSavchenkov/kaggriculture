@@ -1,0 +1,359 @@
+[
+  {
+    "agent": "binghua_116",
+    "opponent": "opening_router_v3",
+    "summary": {
+      "agent_a": "binghua_116",
+      "agent_b": "opening_router_v3",
+      "seconds": 0.315658,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.574219,
+      "mean_cash": 91603.2,
+      "mean_margin": 2564.28,
+      "cash_cvar10": 49901,
+      "margin_cvar10": -8811.15,
+      "pass_J": 83262.7
+    }
+  },
+  {
+    "agent": "binghua_116",
+    "opponent": "guarded_hires_v3",
+    "summary": {
+      "agent_a": "binghua_116",
+      "agent_b": "guarded_hires_v3",
+      "seconds": 0.3142,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.566406,
+      "mean_cash": 91603.6,
+      "mean_margin": 2403.43,
+      "cash_cvar10": 49901.9,
+      "margin_cvar10": -8894.23,
+      "pass_J": 83263.2
+    }
+  },
+  {
+    "agent": "binghua_116",
+    "opponent": "public_router",
+    "summary": {
+      "agent_a": "binghua_116",
+      "agent_b": "public_router",
+      "seconds": 0.311776,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.378906,
+      "mean_cash": 87400.5,
+      "mean_margin": -928.164,
+      "cash_cvar10": 50689.2,
+      "margin_cvar10": -7878.15,
+      "pass_J": 80058.2
+    }
+  },
+  {
+    "agent": "binghua_116",
+    "opponent": "teammate_shoprouter",
+    "summary": {
+      "agent_a": "binghua_116",
+      "agent_b": "teammate_shoprouter",
+      "seconds": 0.329392,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.613281,
+      "mean_cash": 84385.6,
+      "mean_margin": 1776.71,
+      "cash_cvar10": 46664,
+      "margin_cvar10": -2666.46,
+      "pass_J": 76841.3
+    }
+  },
+  {
+    "agent": "binghua_116",
+    "opponent": "junghoon_78",
+    "summary": {
+      "agent_a": "binghua_116",
+      "agent_b": "junghoon_78",
+      "seconds": 0.310442,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.636719,
+      "mean_cash": 97099.8,
+      "mean_margin": 6703.55,
+      "cash_cvar10": 51591.7,
+      "margin_cvar10": -10791.5,
+      "pass_J": 87998.2
+    }
+  },
+  {
+    "agent": "binghua_116",
+    "opponent": "mao_85",
+    "summary": {
+      "agent_a": "binghua_116",
+      "agent_b": "mao_85",
+      "seconds": 0.311587,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.660156,
+      "mean_cash": 92299.5,
+      "mean_margin": 4782.25,
+      "cash_cvar10": 50874.1,
+      "margin_cvar10": -7544.88,
+      "pass_J": 84014.4
+    }
+  },
+  {
+    "agent": "binghua_116",
+    "opponent": "mao_89",
+    "summary": {
+      "agent_a": "binghua_116",
+      "agent_b": "mao_89",
+      "seconds": 0.311035,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.683594,
+      "mean_cash": 88837.9,
+      "mean_margin": 3477.21,
+      "cash_cvar10": 48685.9,
+      "margin_cvar10": -3523.15,
+      "pass_J": 80807.5
+    }
+  },
+  {
+    "agent": "john_128",
+    "opponent": "opening_router_v3",
+    "summary": {
+      "agent_a": "john_128",
+      "agent_b": "opening_router_v3",
+      "seconds": 0.315937,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.464844,
+      "mean_cash": 88095.1,
+      "mean_margin": -663.996,
+      "cash_cvar10": 46376.8,
+      "margin_cvar10": -16021.4,
+      "pass_J": 79751.5
+    }
+  },
+  {
+    "agent": "john_128",
+    "opponent": "guarded_hires_v3",
+    "summary": {
+      "agent_a": "john_128",
+      "agent_b": "guarded_hires_v3",
+      "seconds": 0.31009,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.449219,
+      "mean_cash": 88096.8,
+      "mean_margin": -833.199,
+      "cash_cvar10": 46378.4,
+      "margin_cvar10": -16068.2,
+      "pass_J": 79753.1
+    }
+  },
+  {
+    "agent": "john_128",
+    "opponent": "public_router",
+    "summary": {
+      "agent_a": "john_128",
+      "agent_b": "public_router",
+      "seconds": 0.308759,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.152344,
+      "mean_cash": 83164.5,
+      "mean_margin": -5220,
+      "cash_cvar10": 45714.3,
+      "margin_cvar10": -15275.2,
+      "pass_J": 75674.5
+    }
+  },
+  {
+    "agent": "john_128",
+    "opponent": "teammate_shoprouter",
+    "summary": {
+      "agent_a": "john_128",
+      "agent_b": "teammate_shoprouter",
+      "seconds": 0.333584,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.464844,
+      "mean_cash": 81510.2,
+      "mean_margin": 64.3711,
+      "cash_cvar10": 44443.6,
+      "margin_cvar10": -3535.5,
+      "pass_J": 74096.9
+    }
+  },
+  {
+    "agent": "john_128",
+    "opponent": "junghoon_78",
+    "summary": {
+      "agent_a": "john_128",
+      "agent_b": "junghoon_78",
+      "seconds": 0.294767,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.558594,
+      "mean_cash": 95518.2,
+      "mean_margin": 6069.66,
+      "cash_cvar10": 48826.2,
+      "margin_cvar10": -15338.1,
+      "pass_J": 86179.8
+    }
+  },
+  {
+    "agent": "john_128",
+    "opponent": "mao_85",
+    "summary": {
+      "agent_a": "john_128",
+      "agent_b": "mao_85",
+      "seconds": 0.311186,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.574219,
+      "mean_cash": 89843.9,
+      "mean_margin": 3614.6,
+      "cash_cvar10": 47361.4,
+      "margin_cvar10": -6103.27,
+      "pass_J": 81347.4
+    }
+  },
+  {
+    "agent": "john_128",
+    "opponent": "mao_89",
+    "summary": {
+      "agent_a": "john_128",
+      "agent_b": "mao_89",
+      "seconds": 0.321419,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.695312,
+      "mean_cash": 87230.5,
+      "mean_margin": 3761.3,
+      "cash_cvar10": 46467.4,
+      "margin_cvar10": -2511.62,
+      "pass_J": 79077.9
+    }
+  },
+  {
+    "agent": "john_131",
+    "opponent": "opening_router_v3",
+    "summary": {
+      "agent_a": "john_131",
+      "agent_b": "opening_router_v3",
+      "seconds": 0.315969,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.589844,
+      "mean_cash": 94423,
+      "mean_margin": 1131.71,
+      "cash_cvar10": 55927.4,
+      "margin_cvar10": -11618.3,
+      "pass_J": 86723.9
+    }
+  },
+  {
+    "agent": "john_131",
+    "opponent": "guarded_hires_v3",
+    "summary": {
+      "agent_a": "john_131",
+      "agent_b": "guarded_hires_v3",
+      "seconds": 0.302858,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.574219,
+      "mean_cash": 94425.6,
+      "mean_margin": 962.953,
+      "cash_cvar10": 55930.5,
+      "margin_cvar10": -11867.7,
+      "pass_J": 86726.6
+    }
+  },
+  {
+    "agent": "john_131",
+    "opponent": "public_router",
+    "summary": {
+      "agent_a": "john_131",
+      "agent_b": "public_router",
+      "seconds": 0.307644,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.492188,
+      "mean_cash": 89499.7,
+      "mean_margin": -2221.5,
+      "cash_cvar10": 54950.1,
+      "margin_cvar10": -17667.3,
+      "pass_J": 82589.8
+    }
+  },
+  {
+    "agent": "john_131",
+    "opponent": "teammate_shoprouter",
+    "summary": {
+      "agent_a": "john_131",
+      "agent_b": "teammate_shoprouter",
+      "seconds": 0.327083,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.722656,
+      "mean_cash": 88597.2,
+      "mean_margin": 3469.9,
+      "cash_cvar10": 53077.5,
+      "margin_cvar10": -11560.1,
+      "pass_J": 81493.3
+    }
+  },
+  {
+    "agent": "john_131",
+    "opponent": "junghoon_78",
+    "summary": {
+      "agent_a": "john_131",
+      "agent_b": "junghoon_78",
+      "seconds": 0.292685,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.859375,
+      "mean_cash": 102332,
+      "mean_margin": 11998.1,
+      "cash_cvar10": 60632.3,
+      "margin_cvar10": -3712.38,
+      "pass_J": 93992.4
+    }
+  },
+  {
+    "agent": "john_131",
+    "opponent": "mao_85",
+    "summary": {
+      "agent_a": "john_131",
+      "agent_b": "mao_85",
+      "seconds": 0.30938,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.839844,
+      "mean_cash": 96164,
+      "mean_margin": 5774.27,
+      "cash_cvar10": 56846.9,
+      "margin_cvar10": -2390.19,
+      "pass_J": 88300.6
+    }
+  },
+  {
+    "agent": "john_131",
+    "opponent": "mao_89",
+    "summary": {
+      "agent_a": "john_131",
+      "agent_b": "mao_89",
+      "seconds": 0.305563,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.996094,
+      "mean_cash": 93558.1,
+      "mean_margin": 5623.52,
+      "cash_cvar10": 55256.6,
+      "margin_cvar10": 788.731,
+      "pass_J": 85897.8
+    }
+  }
+]

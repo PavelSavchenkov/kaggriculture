@@ -1,0 +1,12 @@
+{
+  "result": "matched_actions=14380",
+  "scope": "Sixteen recorded streams plus four forced shop/stock/price streams, including positive-ranking cases; no Python local gameplay",
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1010/market_v4_parity",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/tests/market_impact_v4_cases.txt"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "source_sha256": {
+    "agents/common/api/agent_api.hpp": "c441308471aa746d7c3d6e668688d39d1f77249ccd56b15fed3368d11c5aa3d8",
+    "agents/common/api/observation.hpp": "5287df4bb141c2112059c86786e5030956f317e61a572595c91d0e8b8edeba87",
+    "agents/common/runtime/observation_builder.hpp": "4ef231815a587f899540aadbeaf3cef9f7083cd343f893f6524fc2551ac09d4f",
+    "experiments/v6/sep07_compositions_v0/include/evaluation.hpp": "3a2821900ef5cbe2094ff25be19a8cf48d41e5aa7b4d83d9528221b5fa692b3e",
+    "experiments/v6/sep07_compositions_v0/include/profile.hpp": "ee9a5305aa3778dca3e6272b1f4d38afd0f4a806b3c5c5414367626a34e70724",
+    "experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/debug/registry.hpp": "dc772816e061315a83bb742b451dd900eded4452ab1242589587256ad1ed7f91",
+    "experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_demand/source/agent.cpp": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+    "experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_demand/source/agent.hpp": "fd7a36a35bde4eca095367789e71fda6cfd26e84c7f08362ee459287616c41d2",
+    "experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_value_margin/source/agent.cpp": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+    "experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_value_margin/source/agent.hpp": "633f18165114349689218cc3a9408e3f5d5da8e69a38694289724435132df860",
+    "experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/source/agent.cpp": "27d57e627693d7845333fb5277cc23f6dff283533f6901da7ad1afa1cae12fbd",
+    "experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/source/agent.hpp": "053af78a510e2477bf025733d7b13580e99ea4016776e9a217580683769512b5",
+    "experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/source/audit.hpp": "46e1132f3b4d804c3820a8ed62976a22f58a93c453d2093e709f7091221c458a",
+    "experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/source/data.inc": "da5fab51d6cce627986fd8d34edb5c1075d8672ddb1d97c95e2e6cf9eb939f97",
+    "experiments/v6/sep07_compositions_v0/src/arena.cpp": "8645ba4a4bb409af105451ede58e5a708a5b65200a706c49afc5aeaa561762db",
+    "fast_game_engine/pyrandom.hpp": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
+    "fast_game_engine/sim.hpp": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a"
+  },
+  "binaries": [
+    {
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "g++",
+        "-std=c++20",
+        "-march=native",
+        "-mtune=native",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-pthread",
+        "-O1",
+        "-g",
+        "-DKAG_VERIFY_MASKS",
+        "-DCOMPOSITIONS_PAIR",
+        "-I",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/debug/source_snapshot",
+        "-I",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/debug/source_snapshot/experiments/v6/sep07_compositions_v0/include",
+        "-I",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/debug/source_snapshot/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/debug",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/debug/source_snapshot/experiments/v6/sep07_compositions_v0/src/arena.cpp",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/debug/source_snapshot/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_demand/source/agent.cpp",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/debug/source_snapshot/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_value_margin/source/agent.cpp",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/debug/source_snapshot/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/source/agent.cpp",
+        "-o",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/debug/arena"
+      ],
+      "binary_sha256": "421915a1baba75654236c6be134b8aaa8052f5ce636bd97cbf114b76ad3e872c"
+    }
+  ]
+}

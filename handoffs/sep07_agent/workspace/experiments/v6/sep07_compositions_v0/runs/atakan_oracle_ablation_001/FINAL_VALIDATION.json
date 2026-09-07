@@ -1,0 +1,61 @@
+{
+  "scope": "Offline oracle diagnostic only. No deployable policy or promotion.",
+  "unchanged_source_experiment_artifacts": 174,
+  "source_experiment_final_manifest_sha256": "926cdc96db2407b7cd0c1d7b327b2e75a956fa2301a34ba9f10a00599968a1b4",
+  "commands": [
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_oracle_ablation_001/prepare.py"
+    ],
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_oracle_ablation_001/run.py"
+    ],
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_oracle_ablation_001/analyze.py"
+    ],
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_oracle_ablation_001/freeze.py"
+    ]
+  ],
+  "artifact_sha256": {
+    "INPUT_LINEAGE.json": "256ee1642eff2025d38000b7b085a63a446d96cc3c92d857c2512f404c284dea",
+    "LEARNINGS.md": "fb7b791e696c18d50a0ef1facdcada70908e04b0ac6166b6acf3bb60d05ed849",
+    "README.md": "50efb681f64fbe4f770fa0120305f705df74a932d99a27ce97a2ea346c144b2f",
+    "REPORT.json": "684e871f1812b0fab8549025d2e5f3f87f55b64bd57cb10bc82000cda74eb562",
+    "analysis.log": "362b798fbb1e861819faf3830d39bd90ebbb7d3cfb83bdc2136a5f058f181ea0",
+    "analyze.py": "27a3d567e5d4ee15182589769212843add37a9a9cdf8dade6bd1155a842c20e7",
+    "build/BUILD.json": "8862901f4797ee8644fc45d0b36abe38efe8f71bfcea80691bbe1ace21a6bfa2",
+    "build/compile.log": "7c374e9262d6285788e427ec76b3b0b61dc6f9ff05cc42ea67634bffc64a8cf9",
+    "build/oracle_diagnostic": "01754e38e49b71c5dfa5e7de93fb50693c6f392dc5fceeba948852d5dcbd1753",
+    "cases.json": "3aff76dfec55c3cff683b11d138f29fa7b7dd60886a0bb38a21c21992731c09f",
+    "forecasts.json": "3f393ee35779cc194fd021286389e77914a8b029fe9c44a9e14676750658643b",
+    "freeze.py": "d9f93cc43a98cd61213d385260c063dd42f6488e0fabb7f84bb704aafe737ece",
+    "inputs/expected.json": "496bd9a5f99cfe59016f15dffa907ebb791d05e3b30a147c96f832b2fca95070",
+    "inputs/oracles.txt": "75f21b54da4621560a5af9477054401b211568a388cfe16c27f0e2e3e0d6a8b0",
+    "metrics.csv": "2755f0029ce68a2d0f52567ef5f61aa1b5d67e6e263d1824db715023f98eebcc",
+    "prepare.py": "9e682eb53f806ab244afcaca73abb4d3ee2f664cb3e39b58ce968adb866f9328",
+    "run.py": "194408877669bdb21149270a182e6876c23bfd97b9a45a7cfb0c5d1b7327b281",
+    "seed1028_v5.csv": "4fe4dc618823cc28c09f93d3876a3f330939c9b022d2fcd476ae062c1ddaa0a8",
+    "seed1028_v5.json": "3183accda9e04b6908445903f54510f7140e5ac91aaf063dbd95f783deffdd48",
+    "source/driver.cpp": "bee950d2bfe6f6ca6233112cfe11ba0307c9eda0aaf3a8d65df2f7823edebe8a"
+  }
+}

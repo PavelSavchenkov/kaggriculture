@@ -1,0 +1,21 @@
+{
+  "parent": "candidates/investment_context_guarded_001_best",
+  "source_lineage": "candidates/investment_context_guarded_001_best/IMPORT.json",
+  "seed": 1005,
+  "original_purchase": {
+    "step": 88,
+    "order": 1,
+    "cell": 42,
+    "item": "COW"
+  },
+  "seconds_per_solver_attempt": 6,
+  "entry_days": [
+    3,
+    6,
+    9,
+    12,
+    15
+  ],
+  "status": "Complete diagnostic; original-day entries fail funding; do not promote",
+  "scope": "Single earlier animal opportunity with original species parameter; complete V30 entry days and inherited service suffix; downstream branch and execution realization must be audited."
+}

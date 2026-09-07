@@ -1,0 +1,183 @@
+[
+  {
+    "name": "upstream",
+    "sha256": "7343e706350d9f75964761b4d064c2d1292ad5a379e0a7c5c76da015ac2b6407",
+    "bytes": 317562
+  },
+  {
+    "name": "_V51_ROUTE",
+    "sha256": "fb5b2df4223dfbc95cd37f9129de983c37a745145dcb14f698b716c2e1650ff8",
+    "bytes": 122608,
+    "parent": "upstream"
+  },
+  {
+    "name": "_V54_ROUTE",
+    "sha256": "2a9b59257efce66b7072e12d4674c45d09263c322a2d80a9e8eda8463c0a4d34",
+    "bytes": 118793,
+    "parent": "upstream"
+  },
+  {
+    "name": "_V55_LIVE_ROUTE",
+    "sha256": "0fce5e3f1c02196aeb6496b03f13e6489413b89e3bea91ad8abfcce49a23db23",
+    "bytes": 116093,
+    "parent": "upstream"
+  },
+  {
+    "name": "_V56_YARN_ROUTE",
+    "sha256": "4049c2b99e5dee87ec21e01748dba720d31b6f8d182b6d1601f1ebfa526e78bd",
+    "bytes": 117134,
+    "parent": "upstream"
+  },
+  {
+    "name": "_V57_PET_ROUTE",
+    "sha256": "042988978d40dd8048d0aa548e8300dfb3a814398a939291d299a3a5f738e89d",
+    "bytes": 117332,
+    "parent": "upstream"
+  },
+  {
+    "name": "_V58_RECOVERY_ROUTE",
+    "sha256": "f4791a374077ffe78bdeb8dcb43d378e94013f3abc67c27feea42df9a28e66ac",
+    "bytes": 115657,
+    "parent": "upstream"
+  },
+  {
+    "name": "_V58_SMOOTHIE_ROUTE",
+    "sha256": "67f6e29b328d6b314a328f9b919ada9a5eb7194f65b1303f210508648452864b",
+    "bytes": 117826,
+    "parent": "upstream"
+  },
+  {
+    "name": "_V58_CLONE_ROUTE",
+    "sha256": "af85543deb4e7b7b698af7039d2a03d66b22f05ead33b2c29b5910775390f8af",
+    "bytes": 118569,
+    "parent": "upstream"
+  },
+  {
+    "name": "_V58_KNOWN_YARN_ROUTE",
+    "sha256": "faf3f9a049b4d30d3f5d5b5bbc092157eda8d927b4afbc0d845489257c07b397",
+    "bytes": 114096,
+    "parent": "upstream"
+  },
+  {
+    "name": "_V58_ICE_MINIMAX_ROUTE",
+    "sha256": "e941d0caa9b8280d33f95bac1fae8086a5d856f97d62ea5ccc6b096f458b7eaf",
+    "bytes": 118072,
+    "parent": "upstream"
+  },
+  {
+    "name": "_V58_BAKERY_YARN_ROUTE",
+    "sha256": "042988978d40dd8048d0aa548e8300dfb3a814398a939291d299a3a5f738e89d",
+    "bytes": 117332,
+    "parent": "upstream"
+  },
+  {
+    "name": "_V58_PIZZA_RECOVERY_ROUTE",
+    "sha256": "e3e39da21969ea5a313273ea61636bf4c39a65d547ffad4bbf211a9643b35cf9",
+    "bytes": 115855,
+    "parent": "upstream"
+  },
+  {
+    "name": "_V51_BASE_SOURCE",
+    "sha256": "3b36352aa26f4fc6c58f11a543cda4734b29156516b6aae8cfbfd00eea512427",
+    "bytes": 137521
+  },
+  {
+    "name": "_V50_MODULES",
+    "sha256": "d343c632b3ca462e7e118d2d63c0611bf38023ecf885580d55f7edb9ad127394",
+    "bytes": 4507,
+    "parent": "_V51_BASE_SOURCE"
+  },
+  {
+    "name": "_V50_GIN_ROUTE",
+    "sha256": "2a795c78164bae241f61ab14497f34881633f12a09d5b866b1072300fae38bf6",
+    "bytes": 120076,
+    "parent": "_V51_BASE_SOURCE"
+  },
+  {
+    "name": "_V50_BASE_SOURCE",
+    "sha256": "1f33ff8d7d2bcfb71813c0f02e78d84e1136688e11fac2abb0ab0ab7766c5310",
+    "bytes": 117135
+  },
+  {
+    "name": "_V49_MODULES",
+    "sha256": "dff7906658c9d3cff2ddaf562b7a1a53cb48ef08642b193fe603a51bcc4e372a",
+    "bytes": 164845,
+    "parent": "_V50_BASE_SOURCE"
+  },
+  {
+    "name": "_V49_ROUTES",
+    "sha256": "a659fa10965c779aca068a465a65a7e4d2327189335c2d5824a1d03924cc252b",
+    "bytes": 681343,
+    "parent": "_V50_BASE_SOURCE"
+  },
+  {
+    "name": "v50.hybrid",
+    "sha256": "4b1d1ea9711d57775c36e12fc662b410b3979fc9575966a1d4c82762d8e638bf",
+    "bytes": 1650
+  },
+  {
+    "name": "v50.suffix_router",
+    "sha256": "c1bef3d368adec501fb8010ecdb758e2e97ad13bb54a77a4447fac60cf2afb74",
+    "bytes": 2567
+  },
+  {
+    "name": "scripts.v21_route_memory_search",
+    "sha256": "a6fec2ac0aed7c763918921030fe038949ce11e380e14ee06e963c1e15de5c72",
+    "bytes": 296
+  },
+  {
+    "name": "v19_terminal",
+    "sha256": "5de2444e49b554e3957ba91f653604d0ec4a4e4bc3d1ceb4aca528ec74efd8a2",
+    "bytes": 12832
+  },
+  {
+    "name": "scripts.v22_market_impact",
+    "sha256": "41a99cc81eaadcbb6c67885974c8133af3872f730c2b7389bf99602f52da3ed8",
+    "bytes": 5906
+  },
+  {
+    "name": "scripts.v22_weed_repair",
+    "sha256": "5cecabf289279305cc78c22bb7daed956e4eae2922b080b725326df678283ec5",
+    "bytes": 4798
+  },
+  {
+    "name": "v23.state_encoder",
+    "sha256": "0f20488c2d154fa9d50bbd1db8b07433bd1e336b95535c11a7759f9eeb8314e0",
+    "bytes": 7424
+  },
+  {
+    "name": "v23.simulator",
+    "sha256": "c4cdeba82f3897e45c623b1a61acb1e180920196e24712b2ce0650538e2a3094",
+    "bytes": 6409
+  },
+  {
+    "name": "v23.policy_library",
+    "sha256": "d49e36a3a51c190e571c05f2359c85bf1bb38f8af5fe12ba4397cb71419e9f7e",
+    "bytes": 6188
+  },
+  {
+    "name": "v23.planner",
+    "sha256": "299d7289581f326380467f316e0594ba94e9350812bae9b8ed935a82c3e8ef07",
+    "bytes": 3279
+  },
+  {
+    "name": "v24.market_maker",
+    "sha256": "7c1a2f267ee4813bd7bcc5423bb9a49e80984666ff57987051092645b16ea885",
+    "bytes": 29647
+  },
+  {
+    "name": "v44.gold_floor",
+    "sha256": "4f454ccba7bab432911ad0c01a292d33351584f7f5171cab53bd40501070fc9e",
+    "bytes": 28757
+  },
+  {
+    "name": "v48.fast_route_router",
+    "sha256": "baa4825cc8b3a8f3b58ab5feebfdd5da8497c882d9e70a10780946aa5b03e40c",
+    "bytes": 5490
+  },
+  {
+    "name": "v49.residual_controller",
+    "sha256": "f5a9c9f973e3c844cc0963954379bf1860fbfa4a18308f0e9a6f36d4f1d04d64",
+    "bytes": 33645
+  }
+]

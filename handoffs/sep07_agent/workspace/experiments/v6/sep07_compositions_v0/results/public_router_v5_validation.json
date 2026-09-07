@@ -1,0 +1,271 @@
+{
+  "package": "league/public_router_v5",
+  "source_sha256": "b87a27ed614a33329be85f1b662e51cf4078a019fee937afcebbbbf2f51f8522",
+  "source_parity": {
+    "result": "matched_actions=10073",
+    "coverage": {
+      "block0_route0": 2017,
+      "block1_route4": 578,
+      "block2_route0": 2016,
+      "block3_route0": 2017,
+      "block4_route3": 1289,
+      "block1_route2": 1152,
+      "block4_route0": 715,
+      "block1_route1": 288
+    },
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "g++",
+      "-std=c++20",
+      "-O2",
+      "-I",
+      "/home/pavel/Programming/kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/tests/router_v5_parity.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/public_router_v5/source/agent.cpp",
+      "-o",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/router_v5_parity"
+    ],
+    "scope": "Eight recorded719-action streams, six forced shop/price streams, seven reset/backward/out-of-range cases; Python only an exogenous action oracle"
+  },
+  "common_seed_screen": {
+    "seeds": "1000..1063, both seats",
+    "kind": "Discovery panel, not a fresh promotion gate",
+    "comparisons": {
+      "shop_herd_guarded_001_best": {
+        "public_router_v5": {
+          "games": 128,
+          "wins": 36,
+          "ties": 0,
+          "mean_cash": 91837.71875,
+          "mean_margin": -2777.03125,
+          "mean_failed_unit_actions": 46.1953125,
+          "margin_cvar10": -9650.38,
+          "pass_J": 83565.8,
+          "all_complete_719_turns": true,
+          "scenario": "official_rules_independent_shop_stream"
+        },
+        "older_public_sixday": {
+          "games": 128,
+          "wins": 6,
+          "ties": 0,
+          "mean_cash": 80897.71875,
+          "mean_margin": -11997.203125,
+          "mean_failed_unit_actions": 75.6328125,
+          "margin_cvar10": -17956.8,
+          "pass_J": 72130.3,
+          "all_complete_719_turns": true,
+          "scenario": "official_rules_independent_shop_stream"
+        },
+        "paired_mean_margin_difference": 9220.171875
+      },
+      "teammate_shoprouter": {
+        "public_router_v5": {
+          "games": 128,
+          "wins": 128,
+          "ties": 0,
+          "mean_cash": 105628.0703125,
+          "mean_margin": 25421.96875,
+          "mean_failed_unit_actions": 45.2265625,
+          "margin_cvar10": 13319.2,
+          "pass_J": 96852.1,
+          "all_complete_719_turns": true,
+          "scenario": "official_rules_independent_shop_stream"
+        },
+        "older_public_sixday": {
+          "games": 128,
+          "wins": 0,
+          "ties": 0,
+          "mean_cash": 28.03125,
+          "mean_margin": -155924.953125,
+          "mean_failed_unit_actions": 590.890625,
+          "margin_cvar10": -196854,
+          "pass_J": 22.425,
+          "all_complete_719_turns": true,
+          "scenario": "official_rules_independent_shop_stream"
+        },
+        "paired_mean_margin_difference": 181346.921875
+      },
+      "king_rc4": {
+        "public_router_v5": {
+          "games": 128,
+          "wins": 85,
+          "ties": 0,
+          "mean_cash": 93137.5234375,
+          "mean_margin": 1997.3828125,
+          "mean_failed_unit_actions": 47.1484375,
+          "margin_cvar10": -3798.23,
+          "pass_J": 85323.4,
+          "all_complete_719_turns": true,
+          "scenario": "official_rules_independent_shop_stream"
+        },
+        "older_public_sixday": {
+          "games": 128,
+          "wins": 14,
+          "ties": 0,
+          "mean_cash": 81522.6484375,
+          "mean_margin": -5878.4140625,
+          "mean_failed_unit_actions": 78.8515625,
+          "margin_cvar10": -16389.8,
+          "pass_J": 73440.6,
+          "all_complete_719_turns": true,
+          "scenario": "official_rules_independent_shop_stream"
+        },
+        "paired_mean_margin_difference": 7875.796875
+      },
+      "binghua_116": {
+        "public_router_v5": {
+          "games": 128,
+          "wins": 84,
+          "ties": 0,
+          "mean_cash": 92238.1953125,
+          "mean_margin": 1338.2421875,
+          "mean_failed_unit_actions": 47.078125,
+          "margin_cvar10": -11260.5,
+          "pass_J": 84180.8,
+          "all_complete_719_turns": true,
+          "scenario": "official_rules_independent_shop_stream"
+        },
+        "older_public_sixday": {
+          "games": 128,
+          "wins": 23,
+          "ties": 0,
+          "mean_cash": 84172.015625,
+          "mean_margin": -3175.7734375,
+          "mean_failed_unit_actions": 61.1171875,
+          "margin_cvar10": -9628.15,
+          "pass_J": 75781.8,
+          "all_complete_719_turns": true,
+          "scenario": "official_rules_independent_shop_stream"
+        },
+        "paired_mean_margin_difference": 4514.015625
+      },
+      "public_terminal_router": {
+        "public_router_v5": {
+          "games": 128,
+          "wins": 128,
+          "ties": 0,
+          "mean_cash": 103453.953125,
+          "mean_margin": 13893.0234375,
+          "mean_failed_unit_actions": 45.453125,
+          "margin_cvar10": 4433.62,
+          "pass_J": 94956.2,
+          "all_complete_719_turns": true,
+          "scenario": "official_rules_independent_shop_stream"
+        },
+        "older_public_sixday": {
+          "games": 128,
+          "wins": 8,
+          "ties": 0,
+          "mean_cash": 81758.4609375,
+          "mean_margin": -8034.1875,
+          "mean_failed_unit_actions": 77.515625,
+          "margin_cvar10": -14628.2,
+          "pass_J": 73717.6,
+          "all_complete_719_turns": true,
+          "scenario": "official_rules_independent_shop_stream"
+        },
+        "paired_mean_margin_difference": 21927.2109375
+      }
+    }
+  },
+  "head_to_head_older_public_sixday": {
+    "games": 128,
+    "wins": 128,
+    "ties": 0,
+    "mean_cash": 160149.4765625,
+    "mean_margin": 160126.1484375,
+    "mean_failed_unit_actions": 44.765625,
+    "margin_cvar10": 113194,
+    "pass_J": 150758,
+    "all_complete_719_turns": true,
+    "scenario": "official_rules_independent_shop_stream"
+  },
+  "pass": {
+    "games": 256,
+    "wins": 256,
+    "ties": 0,
+    "mean_cash": 159965.8828125,
+    "mean_margin": 156965.8828125,
+    "mean_failed_unit_actions": 45.609375,
+    "margin_cvar10": 111345,
+    "pass_J": 150842,
+    "all_complete_719_turns": true,
+    "scenario": "official_rules_independent_shop_stream"
+  },
+  "self": {
+    "games": 8,
+    "wins": 0,
+    "ties": 8,
+    "mean_cash": 78408.75,
+    "mean_margin": 0.0,
+    "mean_failed_unit_actions": 43.75,
+    "margin_cvar10": 0,
+    "pass_J": 73369.2,
+    "all_complete_719_turns": true,
+    "scenario": "official_rules_independent_shop_stream"
+  },
+  "native_shop_incumbent_check": {
+    "games": 128,
+    "wins": 44,
+    "ties": 0,
+    "mean_cash": 87410.09375,
+    "mean_margin": -2476.9296875,
+    "mean_failed_unit_actions": 46.640625,
+    "margin_cvar10": -10237.5,
+    "pass_J": 80294.1,
+    "all_complete_719_turns": true,
+    "scenario": "official_native_rng"
+  },
+  "generic_debug_thread_full_records_identical": 16,
+  "builds": {
+    "generic": {
+      "build_manifest": "build/refresh_1112/generic/build.json",
+      "frozen_dependency_tree": "build/refresh_1112/generic/source_snapshot",
+      "binary_sha256": "55801fa37ee686b37a74ed25656aa7a89456c0783da815e9d75fc91f63b0c9a2",
+      "current_policy_matches_frozen_compiled_sources": true
+    },
+    "debug_pair": {
+      "build_manifest": "build/refresh_1112/debug_pair/build.json",
+      "frozen_dependency_tree": "build/refresh_1112/debug_pair/source_snapshot",
+      "binary_sha256": "8546313bf0a93874e45a5cfcc9e1a48f93bd0e98a084d9512309bc0d1cfa2c23",
+      "current_policy_matches_frozen_compiled_sources": true
+    }
+  },
+  "policy_source_sha256": {
+    "experiments/v6/sep07_compositions_v0/league/public_router_v5/source/agent.cpp": "e4fe1bbafe32350f2693e3cddc0e3d2a3a8bf2f141afbeb0711fa3736be6cdc6",
+    "experiments/v6/sep07_compositions_v0/league/public_router_v5/source/agent.hpp": "c8d4e76b9f7876a7bf2ee72ad447fadfe8a4d2f9ae6cf6eea5d816a4e8f60caa",
+    "experiments/v6/sep07_compositions_v0/league/public_router_v5/source/data.inc": "5e21dfaef1eeccfc9c59776dac144eac6c5c0928305a83a8df775cb47855d361"
+  },
+  "operational_and_source_claim_differences": [
+    "Source-author93.76% against689 frozen tapes is not an independently verified current-league win rate; supplied notebook omits the full evaluation outcomes and provenance.json",
+    "All five full tapes have short differing prefixes (first divergence1\u201312), rather than literally identical full opening actions; safe physical compatibility at every splice is not proven by the notebook text",
+    "The actual callable unconditionally selects tape0 again at288 and432; it does not retain the previously selected tape across those boundaries",
+    "Only Yarn count, observed milk demand, and carrot quote are read by decision nodes; opponent/cash/tile features computed by Python do not influence this particular controller",
+    "Current local matches have roughly45\u201346 failed unit actions per game. This does not establish tile desynchronization; it also does not support a blanket claim that every scheduled action succeeds",
+    "Local C++ normalizes active worker count and semantically ignored action arguments; reset, backwards step, and719-or-later PASS behavior match the supplied callable"
+  ],
+  "decision": "Faithful distinct strong external opponent ready for catalog registration; still below our guarded adaptive incumbent on this panel; no submission or promotion",
+  "source_hashes_of_results": {
+    "results/refresh_1112_screen/COMMANDS.json": "19647c1ac0f550546bea82ae309bf9cc33884ff8956b331b04aeff1e087ba762",
+    "results/refresh_1112_screen/debug16.json": "aae278fea43e0b1dd7fbb63b68ff7b93c5148c31c7c4dff40beaed2f6d14deee",
+    "results/refresh_1112_screen/generic16.json": "45c9d47f1c7aa990193a206af46b0df4aca21cea799c4b28da385ed6ce322bdc",
+    "results/refresh_1112_screen/native_best128.json": "c845cc757b68998db4d31860902d3d4228bf8c7f059f0b9bb4e7bb2abfd96f16",
+    "results/refresh_1112_screen/pass256.json": "744c5d6cbc8fae0f16b03f5f3f161b75a5f6779aa516704be49f9c7175776be7",
+    "results/refresh_1112_screen/profile_best32.json": "56c598d59b0adf1c0191a770ef4665023f4d445f99d20352861994a5b5bc98e5",
+    "results/refresh_1112_screen/public_router_v5_vs_binghua_116.json": "77c338fe3219475dfa5724c7ddf1fef9d9986d4563f99e3c4ea067f2a4295f79",
+    "results/refresh_1112_screen/public_router_v5_vs_king_rc4.json": "9c853c62a8bfea88d2aaa7d0f40a9bd3072609985cf65893712b06ed69b99b32",
+    "results/refresh_1112_screen/public_router_v5_vs_public_sixday.json": "b6030922fc9616d2c49ed86ccc5730d93298ef76cb1af8789451f0d49ed08e19",
+    "results/refresh_1112_screen/public_router_v5_vs_public_terminal_router.json": "f25600244b8b2003e2416545f9c12222233075aee983d278d8c23fd314e0d8fd",
+    "results/refresh_1112_screen/public_router_v5_vs_shop_herd_guarded_001_best.json": "aea8f3bcc7a8e2400b5265f15be2866c0d574c3135b03958f4c3880d4d863e4c",
+    "results/refresh_1112_screen/public_router_v5_vs_teammate_shoprouter.json": "a442602b47f53494144abd6897bb29f7f541932278f6b42c14b29f1fe309d4d4",
+    "results/refresh_1112_screen/public_sixday_vs_binghua_116.json": "70916b63d0fa0968074dbb8446ab092016c07b14c7528aeeb37ed233ce75c669",
+    "results/refresh_1112_screen/public_sixday_vs_king_rc4.json": "93aa66dcfda7b0907ad8db12c38413c2d23d0c096f8e4cc0ca7d0693c9256f0c",
+    "results/refresh_1112_screen/public_sixday_vs_public_terminal_router.json": "f8a8d51732919481add3d811fa5f0570df3c4cf4e6cf14dc4ce2d511a281cfce",
+    "results/refresh_1112_screen/public_sixday_vs_shop_herd_guarded_001_best.json": "c9f66477ca3e81f754ac16420b2e8c69a1483e6ea35e2a561fc69686cbc5a024",
+    "results/refresh_1112_screen/public_sixday_vs_teammate_shoprouter.json": "4cdb23d41706f8f7b9a32709a3470e08af4689910a947007a0218011aa4d9100",
+    "results/refresh_1112_screen/self8.json": "f9fb0d10f87520bb43462bf9fbf41e65143f67033ad8138b84575533e6740eb8"
+  }
+}

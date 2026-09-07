@@ -1,0 +1,104 @@
+[
+  {
+    "agent": "firstday_m85_v0",
+    "opponent": "pass",
+    "summary": {
+      "agent_a": "firstday_m85_v0",
+      "agent_b": "pass",
+      "seconds": 0.0207147,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 159118,
+      "mean_margin": 156118,
+      "cash_cvar10": 123186,
+      "margin_cvar10": 120186,
+      "pass_J": 151932
+    }
+  },
+  {
+    "agent": "firstday_m85_v0",
+    "opponent": "firstday_m85_v0",
+    "summary": {
+      "agent_a": "firstday_m85_v0",
+      "agent_b": "firstday_m85_v0",
+      "seconds": 0.0279891,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 86919.9,
+      "mean_margin": 0,
+      "cash_cvar10": 54878,
+      "margin_cvar10": 0,
+      "pass_J": 80511.5
+    }
+  },
+  {
+    "agent": "firstday_m85_v0",
+    "opponent": "firstday_m85_sale7",
+    "summary": {
+      "agent_a": "firstday_m85_v0",
+      "agent_b": "firstday_m85_sale7",
+      "seconds": 0.0373749,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0,
+      "mean_cash": 86723.6,
+      "mean_margin": -353.625,
+      "cash_cvar10": 54392,
+      "margin_cvar10": -884,
+      "pass_J": 80257.3
+    }
+  },
+  {
+    "agent": "firstday_m85_sale7",
+    "opponent": "pass",
+    "summary": {
+      "agent_a": "firstday_m85_sale7",
+      "agent_b": "pass",
+      "seconds": 0.0172644,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 159102,
+      "mean_margin": 156102,
+      "cash_cvar10": 123163,
+      "margin_cvar10": 120163,
+      "pass_J": 151914
+    }
+  },
+  {
+    "agent": "firstday_m85_sale7",
+    "opponent": "firstday_m85_v0",
+    "summary": {
+      "agent_a": "firstday_m85_sale7",
+      "agent_b": "firstday_m85_v0",
+      "seconds": 0.0306101,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 87077.2,
+      "mean_margin": 353.625,
+      "cash_cvar10": 55276,
+      "margin_cvar10": 164,
+      "pass_J": 80717
+    }
+  },
+  {
+    "agent": "firstday_m85_sale7",
+    "opponent": "firstday_m85_sale7",
+    "summary": {
+      "agent_a": "firstday_m85_sale7",
+      "agent_b": "firstday_m85_sale7",
+      "seconds": 0.0289825,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 86889.8,
+      "mean_margin": 0,
+      "cash_cvar10": 54824,
+      "margin_cvar10": 0,
+      "pass_J": 80476.6
+    }
+  }
+]

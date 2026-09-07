@@ -1,0 +1,69 @@
+{
+  "scope": "Observed replay decisions only; no counterfactual strength or original private branch formula established",
+  "statistics": "statistics.json",
+  "source_hashes": "SOURCES.json and per-record replay_sha256",
+  "priority_cases": [
+    {
+      "id": "atakan_three_way",
+      "submission_id": 56058092,
+      "programs": {"cow": 156, "sheep": 160, "goose": 157},
+      "branch_step": 226,
+      "identical_normalized_action_prefix_length": 226,
+      "evidence": "atakan_three_way/MANIFEST.json",
+      "exact_input_comparisons": ["exact_cases/atakan_cow_sheep.json", "exact_cases/atakan_cow_goose.json"],
+      "observations": [
+        "The same purchase slots choose 1 animal at226 and 2 at241; the same former melon sites receive them at258/259/260",
+        "Cow and sheep have identical own physical/private state except money at226; goose differs additionally in shed wheat",
+        "All three species are immediately affordable in all four observed main-route decisions"
+      ],
+      "legal_feature_hypotheses": [
+        {"rule": "SHEEP if any revealed Yarn; otherwise COW if observed milk demand>=2; otherwise GOOSE", "fits_observed_main_route_games": 4, "observed_main_route_games": 4},
+        {"rule": "SHEEP if current wool quote>=195; otherwise COW if current milk quote>=180; otherwise GOOSE", "fits_observed_main_route_games": 4, "observed_main_route_games": 4}
+      ],
+      "caveat": "Thresholds describe this tiny sample; test economic selectors and avoid treating either rule as the original source code"
+    },
+    {
+      "id": "jeonghun_early_three_way",
+      "submission_id": 56063995,
+      "step": 150,
+      "observed_games": 6,
+      "purchase_counts_by_species": {"COW": 2, "SHEEP": 2, "GOOSE": 2},
+      "exact_input_comparisons": ["exact_cases/jeonghun_cow_goose.json", "exact_cases/jeonghun_sheep_goose.json"],
+      "observation": "Cow/goose can share a physical boundary except cash; sheep already differs in worker/tile/private state",
+      "candidate_rule": "SHEEP if any revealed Yarn; otherwise GOOSE when egg demand>0 and egg demand>=milk demand; otherwise COW",
+      "candidate_rule_fit": "6/6 observations; causal condition unproven"
+    },
+    {
+      "id": "mengfei_two_day7_substitutions",
+      "submission_id": 56047440,
+      "steps": [169, 176],
+      "observed_games": 6,
+      "evidence": "key_purchase_cases.json",
+      "exact_input_comparison": "exact_cases/mengfei_sheep_cow.json",
+      "observation": "Two Yarn games buy sheep and four other games buy cows, with unchanged cow batch at150; farm state is compatible except cash but shed differs"
+    },
+    {
+      "id": "late_reveal_investments",
+      "evidence": ["key_purchase_cases.json", "placements.json"],
+      "examples": [
+        {"episode": 106402121, "seat": 1, "player": "ymg_aq", "purchases": [[361, "SHEEP", 2], [362, "SHEEP", 2]], "placements": [406, 439, 447, 447]},
+        {"episode": 106411219, "seat": 0, "player": "ymg_aq", "purchases": [[505, "GOOSE", 1]], "placements": [511]},
+        {"episode": 106415741, "seat": 0, "player": "ymg_aq", "purchases": [[433, "GOOSE", 1]], "placements": [496]},
+        {"episode": 106392884, "seat": 1, "player": "自己找差距", "purchases": [[361, "COW", 5]], "placements": [375, 377, 378, 381, 382]}
+      ],
+      "observation": "All examples buy immediately after a reveal with no compatible ready structure; placement follows crop exits and construction",
+      "caveat": "Neither intentional delay nor positive marginal profit has been established"
+    }
+  ],
+  "negative_findings": [
+    {"evidence": "failed_and_zero_orders.json", "finding": "All11 positive animal orders that failed were cash-limited; Atakan's64→65 cow sequence is failure/retry"},
+    {"evidence": "failed_and_zero_orders.json", "finding": "16 explicit zero-quantity sheep orders include fixed217 placeholders; missing purchases are not evidence of intentional wait"},
+    {"evidence": "structure_reuse_cases.json", "finding": "Two empty coop→pasture conversions and one vacated-pasture replacement are observed; intentional animal escape is not established"},
+    {"evidence": "statistics.json", "finding": "Some successful placements bypass closer available sites, but reservations by other workers may explain them"}
+  ],
+  "recommended_tests": [
+    "Atakan portfolio from the shared226 boundary under demand rules and cheap marginal economic valuation",
+    "Match acquisition and productive placement dates separately, including crop exits and build/service routes",
+    "Check late batch investments with exact C++ scheduling before accepting estimated profit"
+  ]
+}

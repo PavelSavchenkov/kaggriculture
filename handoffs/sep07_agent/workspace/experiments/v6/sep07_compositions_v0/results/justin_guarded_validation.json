@@ -1,0 +1,128 @@
+{
+  "fresh": {
+    "seeds": "1050000..1050511, both seats",
+    "results": "results/justin_guarded_fresh_1050000",
+    "opponents": {
+      "binghua_116": {
+        "win_utility": 0.708984,
+        "mean_margin": 4304.13,
+        "margin_cvar10": -4605.46,
+        "wins": 726,
+        "ties": 0,
+        "games": 1024
+      },
+      "john_131": {
+        "win_utility": 0.700195,
+        "mean_margin": 4531.48,
+        "margin_cvar10": -6109.4,
+        "wins": 717,
+        "ties": 0,
+        "games": 1024
+      },
+      "junghoon_78": {
+        "win_utility": 0.767578,
+        "mean_margin": 10116.3,
+        "margin_cvar10": -9350.88,
+        "wins": 786,
+        "ties": 0,
+        "games": 1024
+      },
+      "justin_recall_v0": {
+        "win_utility": 0.944336,
+        "mean_margin": 1380.35,
+        "margin_cvar10": -244.505,
+        "wins": 967,
+        "ties": 0,
+        "games": 1024
+      },
+      "king_rc4": {
+        "win_utility": 0.650391,
+        "mean_margin": 826.064,
+        "margin_cvar10": -20194.7,
+        "wins": 666,
+        "ties": 0,
+        "games": 1024
+      },
+      "opening_router_v4": {
+        "win_utility": 0.893555,
+        "mean_margin": 5749.96,
+        "margin_cvar10": -2189.71,
+        "wins": 915,
+        "ties": 0,
+        "games": 1024
+      },
+      "public_capacity_router": {
+        "win_utility": 0.824219,
+        "mean_margin": 3161.82,
+        "margin_cvar10": -2651.18,
+        "wins": 844,
+        "ties": 0,
+        "games": 1024
+      },
+      "public_router": {
+        "win_utility": 0.832031,
+        "mean_margin": 3309.43,
+        "margin_cvar10": -2440.87,
+        "wins": 852,
+        "ties": 0,
+        "games": 1024
+      },
+      "teammate_shoprouter": {
+        "win_utility": 0.946289,
+        "mean_margin": 7718.31,
+        "margin_cvar10": -593.942,
+        "wins": 969,
+        "ties": 0,
+        "games": 1024
+      },
+      "ticket_p116_t9_i9": {
+        "win_utility": 0.682617,
+        "mean_margin": 3827.14,
+        "margin_cvar10": -5778.9,
+        "wins": 698,
+        "ties": 2,
+        "games": 1024
+      }
+    }
+  },
+  "broad": "results/justin_guarded_league",
+  "native": [
+    "results/justin_guarded_native_justin_recall_v0.json",
+    "results/justin_guarded_native_king_rc4.json"
+  ],
+  "deployment": {
+    "generic4thread_debug1thread_full_records_equal": 16,
+    "old_v4_default_unchanged_full_records": 16,
+    "pass_self": "results/justin_guarded_checks"
+  },
+  "causal": {
+    "paired_games": 32,
+    "opponent": "opening_router_v4",
+    "equal_outcomes": {
+      "produced": true,
+      "sold": true,
+      "discarded": true,
+      "revenue": true,
+      "opponent_cash": true
+    },
+    "equal_profile_fields": {
+      "lives": false,
+      "buys": true,
+      "seed_buys": true,
+      "buy_hours": true,
+      "sell_hours": true,
+      "land": true,
+      "land_cost": true,
+      "weed_digs": true,
+      "lives_with_exact_intraday_start_end": false,
+      "per_tile_day_lives_and_service_masks": true
+    },
+    "hire_change": -22,
+    "hire_cost_change": -1471,
+    "cash_margin_change": 1471,
+    "unit_fault_change": -16,
+    "shed_ge90_change": 1,
+    "scope": "Per-tile item, origin day, occupied-day mask and all daily service masks equal after sorting. Intraday start/end times and list order differ. Output, trade quantities/timing and rival cash unchanged; complete route rewrites save labor."
+  },
+  "PASS_256_J": 149294
+}

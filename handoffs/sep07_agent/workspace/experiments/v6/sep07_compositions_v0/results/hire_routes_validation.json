@@ -1,0 +1,25 @@
+{
+  "deployment": [
+    {
+      "generic": "combine_hires_001_best_vs_opening_router_v2",
+      "debug": "combine_hires_debug",
+      "identical_games": 16
+    },
+    {
+      "generic": "hire_day1_counter_vs_hire_day4_counter",
+      "debug": "hire_day1_day4_debug",
+      "identical_games": 16
+    },
+    {
+      "generic": "hire_day9_counter_vs_pass",
+      "debug": "hire_day9_debug",
+      "identical_games": 16
+    }
+  ],
+  "paired_profiles": 32,
+  "result": "All 32 games save exactly $487 and five hires; biological/service calendars, output, sales, purchases, land and discards unchanged.",
+  "combination_generic_debug_games": 16,
+  "v3_wrapper_equal_games": 1024,
+  "v3_generic_debug_equal_games": 16,
+  "arman_parent_equal_games": 1024
+}

@@ -1,0 +1,28 @@
+{
+  "started_utc": "2026-09-07T12:49:02.486489+00:00",
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/day_scheduler/improve_fertilization",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/fertilization_001",
+    "1000",
+    "24",
+    "5"
+  ],
+  "source_sha256": {
+    "src/improve_fertilization.cpp": "19636b04a21bcb358afd9a86aaa0cba81a5d999cf35a394f4e36752296820a9a",
+    "include/day_compile_helpers.hpp": "3f29af8aca1c72a4720dca939f9c2bb807aee08e94da65fc28a198839554dcb5",
+    "include/day_contract.hpp": "a46823968d09e6dd6435a637c908e1d652f18e7793114a5e91bc53ff9c569cd2",
+    "include/biology.hpp": "82225498387721be96a6fc0da45323086faa9f1057ff3a5607b909b23876bb23",
+    "include/guarded_day.hpp": "6375ec72e127709f4770e302a7779ba0c7421b9c8e8696ec8c9170966b085eb9",
+    "scheduler/CMakeLists.txt": "8ceab7b31d68562d67825a283fa0b6ab13419a0c8732ee5a29fb757e1901199e"
+  },
+  "binary_sha256": "acaaaa40e5459777f6b5fff4a7842bc312d50c458d1a58a6dc07e4e7e657cdb3",
+  "source_parent": "candidates/investment_context_guarded_001_best",
+  "lineage": "Local crop-service proposals from dated source biology. V30 full-day solver and guarded execution; funding/guard/export helpers copied unchanged from compile_animal_entries.cpp and rebuild_investment_days.cpp. Baseline crop outputs checked, unmatched lifecycles excluded. Current-quote value is a heuristic, excludes labor and market impact; exact complete games decide value. Source replay ancestry remains in parent IMPORT.json.",
+  "returncode": 139,
+  "finished_utc": "2026-09-07T12:49:04.456778+00:00"
+}

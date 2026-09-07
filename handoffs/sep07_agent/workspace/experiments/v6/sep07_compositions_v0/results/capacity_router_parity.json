@@ -1,0 +1,26 @@
+[
+  {
+    "terminal": false,
+    "cases": 8628,
+    "result": "matched_actions=8628",
+    "route_actions": {
+      "7015cc00acfa4922": 6370,
+      "dc76e4003029ac51": 895,
+      "ab9669b9abfbea4e": 1077,
+      "a84d06f1d12add7c": 286
+    },
+    "scope": "8 recorded +4 forced branch/capacity/floor-price-terminal full sequences, full public tiles"
+  },
+  {
+    "terminal": true,
+    "cases": 8628,
+    "result": "matched_actions=8628",
+    "route_actions": {
+      "7015cc00acfa4922": 6370,
+      "dc76e4003029ac51": 895,
+      "ab9669b9abfbea4e": 1077,
+      "a84d06f1d12add7c": 286
+    },
+    "scope": "8 recorded +4 forced branch/capacity/floor-price-terminal full sequences, full public tiles"
+  }
+]

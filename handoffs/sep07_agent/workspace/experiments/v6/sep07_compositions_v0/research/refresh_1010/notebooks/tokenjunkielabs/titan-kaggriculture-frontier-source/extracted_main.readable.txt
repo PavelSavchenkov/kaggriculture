@@ -1,0 +1,246 @@
+"""v43: climb-safe common opening with two observable shop branches."""
+import base64
+import json
+import sys
+import types
+import zlib
+
+def _v43_package(name):
+    module = sys.modules.get(name)
+    if module is None:
+        module = types.ModuleType(name)
+        module.__file__ = '<bundled-package:' + name + '>'
+        module.__package__ = name
+        module.__path__ = []
+        sys.modules[name] = module
+    return module
+
+def _v43_load(name, source):
+    parent, _, child = name.rpartition('.')
+    if parent:
+        _v43_package(parent)
+    module = types.ModuleType(name)
+    module.__file__ = '<bundled:' + name + '>'
+    module.__package__ = parent
+    sys.modules[name] = module
+    exec(compile(source, module.__file__, 'exec'), module.__dict__)
+    if parent:
+        setattr(sys.modules[parent], child, module)
+    return module
+_V43_MODULES = json.loads(zlib.decompress(base64.b85decode('<omitted literal of 24485 bytes>')).decode('utf-8'))
+_V43_MODULE_ORDER = ['scripts.v21_route_memory_search', 'v19_terminal', 'scripts.v19_terminal', 'scripts.v22_market_impact', 'scripts.v22_weed_repair', 'v23.state_encoder', 'v23.simulator', 'v23.policy_library', 'v23.planner', 'v24.market_maker', 'v43.sparse_router']
+for _v43_name in _V43_MODULE_ORDER:
+    _v43_load(_v43_name, _V43_MODULES[_v43_name])
+_V43_ROUTES = json.loads(zlib.decompress(base64.b85decode('<omitted literal of 31685 bytes>')).decode('utf-8'))
+from v23.state_encoder import get as _v43_get
+from v43.sparse_router import SparseShopRouterConfig as _V43Config
+from v43.sparse_router import build_sparse_shop_router as _v43_build
+_V43_CONFIG = _V43Config(**{'yarn_first_start': 88, 'yarn_second_start': 153, 'bakery_market_maker': False, 'egg_batch': 10, 'egg_cash_reserve': 2500.0, 'shed_headroom': 15})
+_V43_POLICY = _v43_build(_V43_ROUTES, _V43_CONFIG)
+
+def agent(obs, configuration=None):
+    try:
+        return _V43_POLICY(obs, configuration)
+    except Exception:
+        seat = 1 if int(_v43_get(obs, 'player', 0) or 0) == 1 else 0
+        farms = list(_v43_get(obs, 'farms', []) or [])
+        farm = farms[seat] if seat < len(farms) else {}
+        return {'farmer': ['PASS'], 'hands': [['PASS'] for _ in _v43_get(farm, 'hands', []) or []], 'market': []}
+
+def _kaggle_submission_entrypoint(obs, configuration=None):
+    return agent(obs, configuration)
+import copy
+import math
+_PRICE_FLOOR = 1
+_DEMAND_ALPHA = 0.25
+_MARKET_PARAMS = {'WHEAT': (25, 10000, 400, 'sqrt', 0.8, 'log', 0.2), 'CARROT': (35, 10000, 450, 'log', 0.2, 'sqrt', 0.7), 'TOMATO': (60, 10000, 200, 'linear', 0.4, 'sqrt', 0.6), 'STRAWBERRY': (120, 10000, 100, 'sqrt', 0.7, 'linear', 1.6), 'MELON': (250, 10000, 300, 'log', 0.2, 'sq', 3.6), 'EGG': (50, 10000, 332, 'linear', 0.4, 'log', 0.2), 'MILK': (160, 10000, 122, 'sqrt', 0.6, 'linear', 1.6), 'WOOL': (200, 10000, 105, 'log', 0.2, 'sq', 3.2), 'FERTILIZER': (100, 10000, 200, 'linear', 0.4, 'linear', 0.4)}
+_SHOP_PRODUCTS = {'BAKERY': ('EGG', 'WHEAT'), 'PIZZA_SHOP': ('MILK', 'TOMATO', 'WHEAT'), 'BRUNCH_SPOT': ('EGG', 'WHEAT', 'STRAWBERRY'), 'YARN_STORE': ('WOOL',), 'ICE_CREAM_SHOP': ('STRAWBERRY', 'MILK', 'WHEAT'), 'PET_CAFE': ('CARROT',), 'SMOOTHIE_SHOP': ('STRAWBERRY', 'MILK'), 'FARMERS_MARKET': ('WHEAT', 'CARROT', 'TOMATO', 'STRAWBERRY')}
+
+def _get(value, key, default=None):
+    if isinstance(value, dict):
+        return value.get(key, default)
+    getter = getattr(value, 'get', None)
+    if callable(getter):
+        return getter(key, default)
+    return getattr(value, key, default)
+
+def _copy_action(action):
+    action = copy.deepcopy(action or {})
+    return {'farmer': list(action.get('farmer') or ['PASS']), 'hands': [list(order or ['PASS']) for order in action.get('hands') or []], 'market': [list(order) for order in action.get('market') or []]}
+
+def _seat(obs):
+    return 1 if int(_get(obs, 'player', 0) or 0) == 1 else 0
+
+def _farm(obs, seat):
+    farms = list(_get(obs, 'farms', []) or [])
+    return farms[seat] if seat < len(farms) else {}
+
+def _shed_access(size):
+    half = size // 2
+    return {(half - 1, half - 1), (half, half - 1), (half - 1, half), (half, half)}
+
+def _projected_shed(obs, action):
+    farm = _farm(obs, _seat(obs))
+    private = _get(obs, 'private', {}) or {}
+    projected = {key: max(0, int(value or 0)) for key, value in dict(_get(private, 'shed', {}) or {}).items()}
+    inventories = list(_get(private, 'inventories', []) or [])
+    positions = [_get(farm, 'farmer', [0, 0]), *list(_get(farm, 'hands', []) or [])]
+    unit_actions = [action.get('farmer', ['PASS']), *list(action.get('hands') or [])]
+    tiles = list(_get(farm, 'tiles', []) or [])
+    access = _shed_access(len(tiles) or 10)
+    for index, unit_action in enumerate(unit_actions):
+        if index >= len(positions) or index >= len(inventories):
+            continue
+        position = positions[index]
+        if not isinstance(position, (list, tuple)) or len(position) < 2:
+            continue
+        x, y = (int(position[0]), int(position[1]))
+        if (x, y) not in access or not (0 <= y < len(tiles) and 0 <= x < len(tiles[y])):
+            continue
+        inventory = {key: max(0, int(value or 0)) for key, value in dict(inventories[index] or {}).items()}
+        if unit_action and unit_action[0] == 'DROP':
+            deposits = inventory.items()
+        elif unit_action and unit_action[0] == 'PLACE' and (len(unit_action) >= 2):
+            item = unit_action[1]
+            tile = tiles[y][x]
+            structure = {'COW': 'PASTURE', 'SHEEP': 'PASTURE', 'GOOSE': 'COOP'}.get(item)
+            if structure and isinstance(tile, dict) and (tile.get('kind') == structure) and (not tile.get('animal')):
+                continue
+            try:
+                requested = int(unit_action[2]) if len(unit_action) >= 3 else 1
+            except (TypeError, ValueError):
+                continue
+            deposits = ((item, min(max(0, requested), inventory.get(item, 0))),)
+        else:
+            continue
+        for item, quantity in deposits:
+            room = max(0, 100 - sum(projected.values()))
+            amount = min(max(0, int(quantity or 0)), room)
+            if amount:
+                projected[item] = projected.get(item, 0) + amount
+    return projected
+
+def _v17_pickup_reserve(action, item):
+    reserve = 0
+    orders = [action.get('farmer', ['PASS']), *list(action.get('hands') or [])]
+    for order in orders:
+        if isinstance(order, (list, tuple)) and len(order) >= 2 and (order[0] == 'PICKUP') and (order[1] == item):
+            reserve += max(0, int(order[2])) if len(order) >= 3 else 1
+    return reserve
+
+def _shape(name, value):
+    value = max(0.0, float(value))
+    if name == 'linear':
+        return value
+    if name == 'sq':
+        return value * value
+    if name == 'sqrt':
+        return math.sqrt(value)
+    if name == 'log':
+        return math.log1p(value)
+    if name == 'log10':
+        return math.log10(1.0 + value)
+    raise ValueError(name)
+
+def _market_price(item, inventory):
+    base, equilibrium, scale, below_func, below_target, above_func, above_target = _MARKET_PARAMS[item]
+    if inventory < equilibrium:
+        amplitude = below_target * base / _shape(below_func, scale)
+        price = base + amplitude * _shape(below_func, equilibrium - inventory)
+    else:
+        amplitude = above_target * base / _shape(above_func, scale)
+        price = base - amplitude * _shape(above_func, inventory - equilibrium)
+    return max(_PRICE_FLOOR, int(round(price)))
+
+def _is_sell(order):
+    return isinstance(order, (list, tuple)) and len(order) >= 3 and (order[0] == 'SELL') and (order[1] in _MARKET_PARAMS)
+
+def _impact_score(obs, order):
+    if not _is_sell(order):
+        return float('-inf')
+    item = str(order[1])
+    try:
+        quantity = max(0, int(order[2]))
+    except (TypeError, ValueError):
+        return 0.0
+    market = _get(obs, 'market', {}) or {}
+    inventory = _get(market, 'inventory', {}) or {}
+    prices = _get(market, 'prices', {}) or {}
+    current_inventory = int(_get(inventory, item, 10000) or 0)
+    current_quote = float(_get(prices, item, _market_price(item, current_inventory)) or 0)
+    later_quote = float(_market_price(item, current_inventory + quantity))
+    return float(quantity) * max(0.0, current_quote - later_quote)
+
+def _demand_per_day(obs, configuration, item):
+    town = _get(obs, 'town', {}) or {}
+    shops = list(_get(town, 'unlocked_shops', []) or [])
+    turns_per_day = int(_get(configuration, 'turnsPerDay', 24) or 24)
+    shop_interval = max(1, int(_get(configuration, 'townShopSellInterval', 4) or 4))
+    demand = 0.0
+    for shop in shops:
+        products = _SHOP_PRODUCTS.get(shop, ())
+        if item in products:
+            demand += turns_per_day / shop_interval * (2 if len(products) == 1 else 1)
+    if item != 'FERTILIZER':
+        center_interval = max(1, int(_get(configuration, 'townCenterSellInterval', 24) or 24))
+        demand += turns_per_day / center_interval
+    return demand
+
+def _order_score(obs, configuration, order):
+    score = _impact_score(obs, order)
+    if score <= 0 or not _is_sell(order):
+        return score
+    item = str(order[1])
+    quantity = max(0, int(order[2]))
+    market = _get(obs, 'market', {}) or {}
+    inventory = _get(market, 'inventory', {}) or {}
+    current_inventory = int(_get(inventory, item, 10000) or 0)
+    demand = max(0.25, _demand_per_day(obs, configuration, item))
+    excess = max(0.0, current_inventory + quantity - 10000)
+    urgency = min(1.0, excess / demand / 10.0)
+    return score * (1.0 + _DEMAND_ALPHA * urgency)
+'LARK observed-stock sale overlay, Apache-2.0; production stays with Kaito.\n\nNo new farm route selection, no parent reconstruction, no seed access.\n'
+_FRONTIER_PARENT = agent
+_FINISHED = ('MILK', 'WOOL', 'EGG', 'STRAWBERRY', 'MELON', 'TOMATO', 'CARROT')
+_FRONTIER_STATE = {}
+
+def sell_finished(obs, action, configuration=None):
+    """Preserve parent capital/feed slots; use spare slots for observed goods."""
+    action = _copy_action(action)
+    projected = _projected_shed(obs, action)
+    for item in _FINISHED:
+        projected[item] = max(0, projected.get(item, 0) - _v17_pickup_reserve(action, item))
+    market = [list(o) for o in action.get('market', [])]
+    handled = set()
+    for order in market:
+        if len(order) >= 3 and order[0] == 'SELL' and (order[1] in _FINISHED):
+            item = order[1]
+            order[2] = projected.get(item, 0) if item not in handled else 0
+            handled.add(item)
+    sales = [['SELL', item, projected.get(item, 0)] for item in _FINISHED if item not in handled and projected.get(item, 0) > 0]
+    sales.sort(key=lambda o: _order_score(obs, configuration, o), reverse=True)
+    capacity = int(_get(configuration, 'maxMarketOrdersPerTurn', 10))
+    action['market'] = market + sales[:max(0, capacity - len(market))]
+    return action
+
+def agent(obs, configuration=None):
+    seat, step = (_seat(obs), int(_get(obs, 'step', 0)))
+    state = _FRONTIER_STATE.get(seat)
+    if state is None or step <= state['last_step']:
+        state = {'last_step': -1, 'changed_market_turns': 0}
+        _FRONTIER_STATE[seat] = state
+    parent_action = _FRONTIER_PARENT(obs, configuration)
+    from v19_terminal import clone_distance
+    distance = clone_distance(obs)
+    state['sale_regime'] = 'competing_supply' if distance <= 2 else 'parent_schedule'
+    result = sell_finished(obs, parent_action, configuration) if distance <= 2 else parent_action
+    state['last_step'] = step
+    state['changed_market_turns'] += result['market'] != parent_action.get('market', [])
+    state['route'] = _V43_POLICY.states[seat]['route']
+    return result
+
+def _kaggle_submission_entrypoint(obs, configuration=None):
+    return agent(obs, configuration)
+
+def lark_frontier_submission_entrypoint(observation, configuration=None):
+    return agent(observation, configuration)

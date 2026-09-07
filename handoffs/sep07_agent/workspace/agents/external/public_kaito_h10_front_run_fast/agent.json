@@ -1,0 +1,7 @@
+{
+  "format_version": 1,
+  "name": "public_kaito_h10_front_run_fast",
+  "header": "source/agent.hpp",
+  "type": "league::public_optimized::kaito_h10_front_run_fast::Policy",
+  "sources": ["source/agent.cpp", "source/base/agent.cpp"]
+}

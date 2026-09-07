@@ -1,0 +1,56 @@
+{
+  "source_program": 150,
+  "source_metadata": "league/top_replay_library/IMPORT.json",
+  "ticket": 9,
+  "original": 10,
+  "replacement": 11,
+  "estimated_cash_delta": 535.5,
+  "compiler": "Local exact animal identity trace plus optional output repair; old dated worker service reused",
+  "status": "experimental, complete deployment checks pending",
+  "source": {
+    "program": 150,
+    "id": "episode_106370340_seat_0",
+    "episode": 106370340,
+    "seat": 0,
+    "team": "JustinLee",
+    "rank": 10,
+    "submission": 56065461,
+    "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T08:02:02.csv",
+    "replay_sha256": "5284f2fdf9dfdebb5b694d2de797f2daf6b60ae13fcb898db6793983217536e2"
+  },
+  "local_compiler_sha256": {
+    "src/search_animal_tickets.cpp": "fddebccba8fe18703b39f91e807d8bb620abb3fceeb5575614a86e4cbdc3367c",
+    "include/animal_ticket.hpp": "6ed63d55ecd58ab96c3de28a3933eb98e03a1f4a263d7b139ccfe7855601769f",
+    "include/terminal_layer.hpp": "a7c808873b6643d1b256835a8c21efe6f5ac6680a1fec245a6d87fe0aa22527f",
+    "include/ticket_trace.hpp": "f3fd4742944a8e618de3f009aca06b9a639cf512acdc42836629f34a04e6f6a9",
+    "include/ticket_estimate.hpp": "1f8e871d145b9b0a8790441355d7e588e1590488d989642fc3aa9cc58222569d",
+    "include/market_tape.hpp": "f223dafef369e33013b2e5a55460aff8358652ded520a16128e5b26d17faf72c",
+    "include/biology.hpp": "82225498387721be96a6fc0da45323086faa9f1057ff3a5607b909b23876bb23",
+    "include/evaluation.hpp": "3a2821900ef5cbe2094ff25be19a8cf48d41e5aa7b4d83d9528221b5fa692b3e",
+    "include/profile.hpp": "ee9a5305aa3778dca3e6272b1f4d38afd0f4a806b3c5c5414367626a34e70724"
+  },
+  "snapshot_scope": "Compiler source at lineage attachment; verify binary build hash for exact executed version",
+  "reuse": "User authorized borrowing public replay schedules; no separate replay code license supplied",
+  "parent": {
+    "program": 150,
+    "terminal_mode": 3,
+    "terminal_lineage": "candidates/justin_recall_v0/IMPORT.json",
+    "ordering": "Terminal parent before animal overlay. Recompile affected workforce days after any composition change; no guarded day plans silently reused."
+  },
+  "terminal_component_lineage": {
+    "recall": {
+      "donor": "https://www.kaggle.com/code/yamakawanin/king-v4e-rc4",
+      "source_sha256": "26ffba5273e4432dbc4ec822d5a65b09d3e9f1473c3ce813c528812eeb45779d",
+      "layer": "Dusta latest-departure recall active in King RC4"
+    },
+    "liquidation": {
+      "source": "research/refresh_0504/notebooks/lynnsakurai/farming-score-a-mathematical-approach/extracted_MAIN_B64.py",
+      "source_sha256": "1dc166ae2bf0c56a44fac4482f469b8812968c4cb32459cb9860f5077897a7d4",
+      "route_origin": "Thomas Tschinkel public state router; identical decoded blob SHA aabfbe9164937e4f46b59582479cebc5a1615a5652fa804adb172742f998db11",
+      "author": "Lynn Sakurai/Arlene",
+      "changes": "Typed C++ port of source capacity guard and final-step liquidation",
+      "reuse": "User-authorized public notebook borrowing; separate license not supplied in retrieved metadata",
+      "status": "8628 original actions match; generic/debug/thread, PASS and self checks pass. 256 games against each of nine opponents; no rating or global superiority claim."
+    }
+  }
+}

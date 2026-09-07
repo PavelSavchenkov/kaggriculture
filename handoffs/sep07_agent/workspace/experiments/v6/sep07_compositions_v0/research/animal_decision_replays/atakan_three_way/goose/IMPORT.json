@@ -1,0 +1,280 @@
+{
+  "branch_label": "goose",
+  "source": {
+    "episode": 106374592,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:55:51.999000",
+    "replay_sha256": "9e618de2d4d4cd6bf17f99338efd2e428a2c5d05d18a5f51ed920595ad946224",
+    "replay_file": "replays/episode-106374592-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "final_cash": 78966.0,
+    "final_margin": -2252.0,
+    "all_shops": [
+      "FARMERS_MARKET",
+      "PET_CAFE",
+      "PIZZA_SHOP",
+      "YARN_STORE",
+      "SMOOTHIE_SHOP",
+      "BAKERY",
+      "FARMERS_MARKET",
+      "PET_CAFE"
+    ],
+    "purchase_sequence": [
+      {
+        "step": 0,
+        "animal": "COW",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 0
+      },
+      {
+        "step": 1,
+        "animal": "SHEEP",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 5
+      },
+      {
+        "step": 2,
+        "animal": "SHEEP",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 2
+      },
+      {
+        "step": 64,
+        "animal": "COW",
+        "actual": 0,
+        "requested": 1,
+        "order_index": 1
+      },
+      {
+        "step": 65,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 1
+      },
+      {
+        "step": 90,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 1
+      },
+      {
+        "step": 150,
+        "animal": "COW",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 5
+      },
+      {
+        "step": 169,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 2
+      },
+      {
+        "step": 176,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 1
+      },
+      {
+        "step": 195,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 4
+      },
+      {
+        "step": 195,
+        "animal": "SHEEP",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 5
+      },
+      {
+        "step": 217,
+        "animal": "SHEEP",
+        "actual": 0,
+        "requested": 0,
+        "order_index": 2
+      },
+      {
+        "step": 226,
+        "animal": "GOOSE",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 2
+      },
+      {
+        "step": 241,
+        "animal": "GOOSE",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 3
+      },
+      {
+        "step": 265,
+        "animal": "SHEEP",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 8
+      }
+    ],
+    "placement_sequence": [
+      {
+        "step": 4,
+        "animal": "COW",
+        "x": 4,
+        "y": 4
+      },
+      {
+        "step": 5,
+        "animal": "COW",
+        "x": 4,
+        "y": 3
+      },
+      {
+        "step": 7,
+        "animal": "SHEEP",
+        "x": 3,
+        "y": 4
+      },
+      {
+        "step": 9,
+        "animal": "SHEEP",
+        "x": 3,
+        "y": 3
+      },
+      {
+        "step": 69,
+        "animal": "COW",
+        "x": 4,
+        "y": 2
+      },
+      {
+        "step": 95,
+        "animal": "COW",
+        "x": 2,
+        "y": 4
+      },
+      {
+        "step": 156,
+        "animal": "COW",
+        "x": 5,
+        "y": 3
+      },
+      {
+        "step": 156,
+        "animal": "COW",
+        "x": 5,
+        "y": 4
+      },
+      {
+        "step": 177,
+        "animal": "COW",
+        "x": 6,
+        "y": 4
+      },
+      {
+        "step": 183,
+        "animal": "COW",
+        "x": 5,
+        "y": 2
+      },
+      {
+        "step": 199,
+        "animal": "COW",
+        "x": 6,
+        "y": 3
+      },
+      {
+        "step": 200,
+        "animal": "SHEEP",
+        "x": 7,
+        "y": 4
+      },
+      {
+        "step": 205,
+        "animal": "SHEEP",
+        "x": 6,
+        "y": 2
+      },
+      {
+        "step": 258,
+        "animal": "GOOSE",
+        "x": 1,
+        "y": 4
+      },
+      {
+        "step": 259,
+        "animal": "GOOSE",
+        "x": 3,
+        "y": 2
+      },
+      {
+        "step": 260,
+        "animal": "GOOSE",
+        "x": 4,
+        "y": 1
+      },
+      {
+        "step": 270,
+        "animal": "SHEEP",
+        "x": 2,
+        "y": 3
+      }
+    ],
+    "total_actual_purchases": {
+      "GOOSE": 3,
+      "COW": 9,
+      "SHEEP": 5
+    }
+  },
+  "existing_library_program": 157,
+  "raw_actions_sha256": "1e4cf656e084f8b9f7f34df0472c9a42d94252340f265fdea37174d7c00cf46b",
+  "typed_tape_sha256": "c933dd1fb3404e7317fa4973e3b74c81ef15756c2262ec3e402497495d2a7904",
+  "normalized_actions_sha256": "c933dd1fb3404e7317fa4973e3b74c81ef15756c2262ec3e402497495d2a7904",
+  "input_sha256": {
+    "research/refresh_0804/animal_instances.csv": "95e5d7ac1689de265706f7710f91289b9fbacfec5313a91243a30ea4856549ce",
+    "research/refresh_0804/crop_instances.csv": "6def5414095088b735a2b88dc186fff14ec57893f8ca6eda8b78fe69c45f47e4",
+    "research/refresh_0804/animal_days.csv": "8dd616b24359fa3f73386c6da498052ceedb4eebe4b5bb1826cf0b670ef1e402",
+    "research/refresh_0804/crop_days.csv": "c92d5af3a9bc3045d7f9e7a898daae10e50cd46046462de8f2e686a175ee0d43",
+    "research/refresh_0804/unit_events.csv": "9df1dad07fe3fb70eedb2f8dd0a51f4e290983d15e53bfaaafcca09fc977b11b",
+    "research/refresh_0804/transactions.csv": "261450200d722d878216672aa17fa09702769e116694683ee9d6dfb5b93f82cc",
+    "research/refresh_0804/daily_product.csv": "7c8f23ffdbac12ac18eae5d6f1cacf6a6ba8b32d9eeeacfdd0f11da5c6077efe",
+    "research/refresh_0804/tile_transitions.csv": "fed06f556aac404730639629747faa3c7c254941d51c8267853d781999ffb1ce",
+    "research/refresh_0804/day_templates/episode_106374592_seat_1.json.gz": "85a128c562721b5f6f72a3766a97c4cfd31bfa8f8ec9e6e1c65fa24200af383c"
+  },
+  "artifacts_sha256": {
+    "animal_days.csv": "27dacef48284c16ee88412a656b65f4b4c718493350ae6b6a71e85c80b9cac29",
+    "animal_instances.csv": "0e14a9a55e9478717a12f06b50dceabd28a0a2a3b81ca1b312e113b3c24d8cd7",
+    "animal_placements.json": "16ad0490e70bfca3baecf5d45b380f1250d940ab961e8472b3528d07652d5b9b",
+    "animal_purchases.json": "21a2c63db9a82792df8034fbf967ec88055948e15d0418dce72c460446ac1fe8",
+    "composition.json": "8726f260a91030855c48e6e45c9e6ecf27fe312f432a6302004220298c56e470",
+    "crop_days.csv": "9d1aadbb70329725a471e5b6ab72e5348a5371ae8fb8ca1a2bf453b8e07e3ea4",
+    "crop_instances.csv": "4b7386c391954e209b89eb58f10dbdbf34fa5b6cbbf1ebd0b19fc2b885746edd",
+    "daily_product.csv": "105f3460ecf8ecbb1819f6c8954936e76c8a3fa2800005fc6046bd59dce33bf6",
+    "daily_service_harvest_trade.json": "d0f024350766c891e41ceaaafc6fdb8e292c617798b4ff356f9f50fab3a4960c",
+    "day_templates.json.gz": "85a128c562721b5f6f72a3766a97c4cfd31bfa8f8ec9e6e1c65fa24200af383c",
+    "normalized_actions_719.json": "466dc3ffc5b1ed711388836944aac8037c98e53ea2b4eca998609fea12dcc7fb",
+    "raw_actions_719.json": "849a471c56da9a5a588c8e00bb45f5a16b56c8d67b9886c0bc501c324c6b63a1",
+    "state_before_226.json": "37bd13effb2c219a11f4bf801f20fa5dad45437cd8914678fa8f2d517f703eb7",
+    "tile_transitions.csv": "5c62de7c26ac9eb23bbec65e304ce679441ebb946eee720ba2b8b2ca5b1855c3",
+    "transactions.csv": "6d2e3e556b8ca778e9b29eaf171e910ec80b99cf501e831ddb49eeae6c34a830",
+    "typed_tape_719.json": "466dc3ffc5b1ed711388836944aac8037c98e53ea2b4eca998609fea12dcc7fb",
+    "unit_events.csv": "d533019e3c52cbffdd7ad34efa2bf7c913adf8bfc80ce3763c650f3891957ccd"
+  }
+}

@@ -1,0 +1,104 @@
+[
+  {
+    "agent": "hire_day1_day9",
+    "opponent": "pass",
+    "summary": {
+      "agent_a": "hire_day1_day9",
+      "agent_b": "pass",
+      "seconds": 0.0212632,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 159630,
+      "mean_margin": 156630,
+      "cash_cvar10": 123687,
+      "margin_cvar10": 120687,
+      "pass_J": 152441
+    }
+  },
+  {
+    "agent": "hire_day1_day9",
+    "opponent": "hire_day1_day9",
+    "summary": {
+      "agent_a": "hire_day1_day9",
+      "agent_b": "hire_day1_day9",
+      "seconds": 0.0321091,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 87410.2,
+      "mean_margin": 0,
+      "cash_cvar10": 55348,
+      "margin_cvar10": 0,
+      "pass_J": 80997.8
+    }
+  },
+  {
+    "agent": "hire_day1_day9",
+    "opponent": "hire_day1_day4",
+    "summary": {
+      "agent_a": "hire_day1_day9",
+      "agent_b": "hire_day1_day4",
+      "seconds": 0.0290436,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 87410.2,
+      "mean_margin": 31,
+      "cash_cvar10": 55348,
+      "margin_cvar10": 31,
+      "pass_J": 80997.8
+    }
+  },
+  {
+    "agent": "hire_day1_day4",
+    "opponent": "pass",
+    "summary": {
+      "agent_a": "hire_day1_day4",
+      "agent_b": "pass",
+      "seconds": 0.0198349,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 159595,
+      "mean_margin": 156595,
+      "cash_cvar10": 123656,
+      "margin_cvar10": 120656,
+      "pass_J": 152407
+    }
+  },
+  {
+    "agent": "hire_day1_day4",
+    "opponent": "hire_day1_day9",
+    "summary": {
+      "agent_a": "hire_day1_day4",
+      "agent_b": "hire_day1_day9",
+      "seconds": 0.0287516,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0,
+      "mean_cash": 87379.2,
+      "mean_margin": -31,
+      "cash_cvar10": 55317,
+      "margin_cvar10": -31,
+      "pass_J": 80966.8
+    }
+  },
+  {
+    "agent": "hire_day1_day4",
+    "opponent": "hire_day1_day4",
+    "summary": {
+      "agent_a": "hire_day1_day4",
+      "agent_b": "hire_day1_day4",
+      "seconds": 0.0305206,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 87379.2,
+      "mean_margin": 0,
+      "cash_cvar10": 55317,
+      "margin_cvar10": 0,
+      "pass_J": 80966.8
+    }
+  }
+]

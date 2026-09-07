@@ -1,0 +1,534 @@
+{
+  "cases": [
+    {
+      "summary": {
+        "case": "public_router_v5_vs_shop_herd_guarded_001_best",
+        "games": 128,
+        "wins": 36,
+        "ties": 0,
+        "mean_margin": -2777.03125
+      },
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/arena",
+        "--a",
+        "public_router_v5",
+        "--b",
+        "shop_herd_guarded_001_best",
+        "--games",
+        "64",
+        "--threads",
+        "4",
+        "--seed-start",
+        "1000",
+        "--seat-mode",
+        "both",
+        "--validate",
+        "--output",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/results/refresh_1112_screen/public_router_v5_vs_shop_herd_guarded_001_best.json"
+      ]
+    },
+    {
+      "summary": {
+        "case": "public_router_v5_vs_teammate_shoprouter",
+        "games": 128,
+        "wins": 128,
+        "ties": 0,
+        "mean_margin": 25421.96875
+      },
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/arena",
+        "--a",
+        "public_router_v5",
+        "--b",
+        "teammate_shoprouter",
+        "--games",
+        "64",
+        "--threads",
+        "4",
+        "--seed-start",
+        "1000",
+        "--seat-mode",
+        "both",
+        "--validate",
+        "--output",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/results/refresh_1112_screen/public_router_v5_vs_teammate_shoprouter.json"
+      ]
+    },
+    {
+      "summary": {
+        "case": "public_router_v5_vs_king_rc4",
+        "games": 128,
+        "wins": 85,
+        "ties": 0,
+        "mean_margin": 1997.3828125
+      },
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/arena",
+        "--a",
+        "public_router_v5",
+        "--b",
+        "king_rc4",
+        "--games",
+        "64",
+        "--threads",
+        "4",
+        "--seed-start",
+        "1000",
+        "--seat-mode",
+        "both",
+        "--validate",
+        "--output",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/results/refresh_1112_screen/public_router_v5_vs_king_rc4.json"
+      ]
+    },
+    {
+      "summary": {
+        "case": "public_router_v5_vs_binghua_116",
+        "games": 128,
+        "wins": 84,
+        "ties": 0,
+        "mean_margin": 1338.2421875
+      },
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/arena",
+        "--a",
+        "public_router_v5",
+        "--b",
+        "binghua_116",
+        "--games",
+        "64",
+        "--threads",
+        "4",
+        "--seed-start",
+        "1000",
+        "--seat-mode",
+        "both",
+        "--validate",
+        "--output",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/results/refresh_1112_screen/public_router_v5_vs_binghua_116.json"
+      ]
+    },
+    {
+      "summary": {
+        "case": "public_router_v5_vs_public_terminal_router",
+        "games": 128,
+        "wins": 128,
+        "ties": 0,
+        "mean_margin": 13893.0234375
+      },
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/arena",
+        "--a",
+        "public_router_v5",
+        "--b",
+        "public_terminal_router",
+        "--games",
+        "64",
+        "--threads",
+        "4",
+        "--seed-start",
+        "1000",
+        "--seat-mode",
+        "both",
+        "--validate",
+        "--output",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/results/refresh_1112_screen/public_router_v5_vs_public_terminal_router.json"
+      ]
+    },
+    {
+      "summary": {
+        "case": "public_sixday_vs_shop_herd_guarded_001_best",
+        "games": 128,
+        "wins": 6,
+        "ties": 0,
+        "mean_margin": -11997.203125
+      },
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/arena",
+        "--a",
+        "public_sixday",
+        "--b",
+        "shop_herd_guarded_001_best",
+        "--games",
+        "64",
+        "--threads",
+        "4",
+        "--seed-start",
+        "1000",
+        "--seat-mode",
+        "both",
+        "--validate",
+        "--output",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/results/refresh_1112_screen/public_sixday_vs_shop_herd_guarded_001_best.json"
+      ]
+    },
+    {
+      "summary": {
+        "case": "public_sixday_vs_teammate_shoprouter",
+        "games": 128,
+        "wins": 0,
+        "ties": 0,
+        "mean_margin": -155924.953125
+      },
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/arena",
+        "--a",
+        "public_sixday",
+        "--b",
+        "teammate_shoprouter",
+        "--games",
+        "64",
+        "--threads",
+        "4",
+        "--seed-start",
+        "1000",
+        "--seat-mode",
+        "both",
+        "--validate",
+        "--output",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/results/refresh_1112_screen/public_sixday_vs_teammate_shoprouter.json"
+      ]
+    },
+    {
+      "summary": {
+        "case": "public_sixday_vs_king_rc4",
+        "games": 128,
+        "wins": 14,
+        "ties": 0,
+        "mean_margin": -5878.4140625
+      },
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/arena",
+        "--a",
+        "public_sixday",
+        "--b",
+        "king_rc4",
+        "--games",
+        "64",
+        "--threads",
+        "4",
+        "--seed-start",
+        "1000",
+        "--seat-mode",
+        "both",
+        "--validate",
+        "--output",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/results/refresh_1112_screen/public_sixday_vs_king_rc4.json"
+      ]
+    },
+    {
+      "summary": {
+        "case": "public_sixday_vs_binghua_116",
+        "games": 128,
+        "wins": 23,
+        "ties": 0,
+        "mean_margin": -3175.7734375
+      },
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/arena",
+        "--a",
+        "public_sixday",
+        "--b",
+        "binghua_116",
+        "--games",
+        "64",
+        "--threads",
+        "4",
+        "--seed-start",
+        "1000",
+        "--seat-mode",
+        "both",
+        "--validate",
+        "--output",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/results/refresh_1112_screen/public_sixday_vs_binghua_116.json"
+      ]
+    },
+    {
+      "summary": {
+        "case": "public_sixday_vs_public_terminal_router",
+        "games": 128,
+        "wins": 8,
+        "ties": 0,
+        "mean_margin": -8034.1875
+      },
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/arena",
+        "--a",
+        "public_sixday",
+        "--b",
+        "public_terminal_router",
+        "--games",
+        "64",
+        "--threads",
+        "4",
+        "--seed-start",
+        "1000",
+        "--seat-mode",
+        "both",
+        "--validate",
+        "--output",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/results/refresh_1112_screen/public_sixday_vs_public_terminal_router.json"
+      ]
+    },
+    {
+      "summary": {
+        "case": "public_router_v5_vs_public_sixday",
+        "games": 128,
+        "wins": 128,
+        "ties": 0,
+        "mean_margin": 160126.1484375
+      },
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/arena",
+        "--a",
+        "public_router_v5",
+        "--b",
+        "public_sixday",
+        "--games",
+        "64",
+        "--threads",
+        "4",
+        "--seed-start",
+        "1000",
+        "--seat-mode",
+        "both",
+        "--validate",
+        "--output",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/results/refresh_1112_screen/public_router_v5_vs_public_sixday.json"
+      ]
+    },
+    {
+      "summary": {
+        "case": "pass256",
+        "games": 256,
+        "wins": 256,
+        "ties": 0,
+        "mean_margin": 156965.8828125
+      },
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/arena",
+        "--a",
+        "public_router_v5",
+        "--b",
+        "pass",
+        "--games",
+        "128",
+        "--threads",
+        "4",
+        "--seed-start",
+        "1000",
+        "--seat-mode",
+        "both",
+        "--validate",
+        "--output",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/results/refresh_1112_screen/pass256.json"
+      ]
+    },
+    {
+      "summary": {
+        "case": "self8",
+        "games": 8,
+        "wins": 0,
+        "ties": 8,
+        "mean_margin": 0.0
+      },
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/arena",
+        "--a",
+        "public_router_v5",
+        "--b",
+        "public_router_v5",
+        "--games",
+        "4",
+        "--threads",
+        "2",
+        "--seed-start",
+        "1000",
+        "--seat-mode",
+        "both",
+        "--validate",
+        "--output",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/results/refresh_1112_screen/self8.json"
+      ]
+    },
+    {
+      "summary": {
+        "case": "debug16",
+        "games": 16,
+        "wins": 16,
+        "ties": 0,
+        "mean_margin": 163482.0
+      },
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/debug_pair/arena",
+        "--a",
+        "public_router_v5",
+        "--b",
+        "public_sixday",
+        "--games",
+        "8",
+        "--threads",
+        "1",
+        "--seed-start",
+        "1000",
+        "--seat-mode",
+        "both",
+        "--validate",
+        "--output",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/results/refresh_1112_screen/debug16.json"
+      ]
+    },
+    {
+      "summary": {
+        "case": "generic16",
+        "games": 16,
+        "wins": 16,
+        "ties": 0,
+        "mean_margin": 163482.0
+      },
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/arena",
+        "--a",
+        "public_router_v5",
+        "--b",
+        "public_sixday",
+        "--games",
+        "8",
+        "--threads",
+        "16",
+        "--seed-start",
+        "1000",
+        "--seat-mode",
+        "both",
+        "--validate",
+        "--output",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/results/refresh_1112_screen/generic16.json"
+      ]
+    },
+    {
+      "summary": {
+        "case": "native_best128",
+        "games": 128,
+        "wins": 44,
+        "ties": 0,
+        "mean_margin": -2476.9296875
+      },
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/arena",
+        "--a",
+        "public_router_v5",
+        "--b",
+        "shop_herd_guarded_001_best",
+        "--games",
+        "64",
+        "--threads",
+        "4",
+        "--seed-start",
+        "1000",
+        "--seat-mode",
+        "both",
+        "--validate",
+        "--output",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/results/refresh_1112_screen/native_best128.json",
+        "--native-shops"
+      ]
+    },
+    {
+      "summary": {
+        "case": "profile_best32",
+        "games": 32,
+        "wins": 6,
+        "ties": 0,
+        "mean_margin": -3377.0
+      },
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/arena",
+        "--a",
+        "public_router_v5",
+        "--b",
+        "shop_herd_guarded_001_best",
+        "--games",
+        "16",
+        "--threads",
+        "4",
+        "--seed-start",
+        "1000",
+        "--seat-mode",
+        "both",
+        "--validate",
+        "--output",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/results/refresh_1112_screen/profile_best32.json",
+        "--profile"
+      ]
+    }
+  ],
+  "generic_debug_thread_records_identical": 16
+}

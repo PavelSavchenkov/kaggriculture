@@ -1,0 +1,5 @@
+# shop_herd_guarded_001_best
+
+Parent shop_herd_s6_m3_g1 with complete V30 days selected by C++ league search. A physical day-start mismatch retains the parent day. Source services, dated composition and economic order slots are preserved; one hire is removed per compiled day. Future finance is not certified by the guard. Discovery only:32 games per opponent against parent/v4/King/Binghua/public/Jun, seeds1000..1015 both seats. Every accepted addition has nondecreasing mean margin and win utility in all six matchups, with strictly positive aggregate margin gain. Required deployment, broader and fresh checks pending. Exact local/source lineage in IMPORT.json. No hidden runtime inputs.
+
+Validated on fresh seeds1200000..1200511, both seats:996/1024wins versus teammate. Mean margin and win utility nondecrease across all12common-seed opponents versus the submitted parent. Parent comparison: 295wins, 660ties /1024, mean margin+$304.0. PASS256J151008. Native, generic/debug/thread, PASS/self and16parent regression records pass. Evidence: `results/shop_herd_guarded_validation.json`. The submitted freeze remains separate.

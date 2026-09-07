@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "atakan_value_own",
+  "header": "source/agent.hpp",
+  "type": "compositions::atakan_value_own::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../source/agent.cpp"
+  ]
+}

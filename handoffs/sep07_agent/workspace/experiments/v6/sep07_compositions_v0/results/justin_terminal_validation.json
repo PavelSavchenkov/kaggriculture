@@ -1,0 +1,122 @@
+{
+  "generic4thread_debug_pair1thread_equal_games": 16,
+  "pair": [
+    "justin_liquidate_v0",
+    "justin_recall_v0"
+  ],
+  "parent_identity": "terminalmode0 versusv4 matches all32 generic source profile game records",
+  "causal_profiles": "results/terminal_justin_causal.json",
+  "pass_self": "results/justin_terminal_checks",
+  "scope": "Per-instance parent state, config-derived capacity, immutable tables, legal observation only",
+  "fresh": {
+    "path": "results/justin_terminal_fresh_1000000",
+    "seeds": "1000000..1000511, both seats",
+    "opponents": {
+      "binghua_116": {
+        "win_utility": 0.697266,
+        "mean_cash": 91826.2,
+        "mean_margin": 3392.97,
+        "margin_cvar10": -5558.76,
+        "pass_J": 84852.4,
+        "wins": 714,
+        "ties": 0,
+        "games": 1024
+      },
+      "john_131": {
+        "win_utility": 0.672852,
+        "mean_cash": 95552.9,
+        "mean_margin": 3602.2,
+        "margin_cvar10": -7148.37,
+        "pass_J": 87785.4,
+        "wins": 689,
+        "ties": 0,
+        "games": 1024
+      },
+      "junghoon_78": {
+        "win_utility": 0.757812,
+        "mean_cash": 101951,
+        "mean_margin": 9994.58,
+        "margin_cvar10": -10367.8,
+        "pass_J": 93649.6,
+        "wins": 776,
+        "ties": 0,
+        "games": 1024
+      },
+      "justin_150": {
+        "win_utility": 0.95459,
+        "mean_cash": 91847.8,
+        "mean_margin": 829.908,
+        "margin_cvar10": -385.417,
+        "pass_J": 84645.7,
+        "wins": 977,
+        "ties": 1,
+        "games": 1024
+      },
+      "justin_liquidate_v0": {
+        "win_utility": 0.93457,
+        "mean_cash": 91809.5,
+        "mean_margin": 135.486,
+        "margin_cvar10": -676.427,
+        "pass_J": 84606.2,
+        "wins": 957,
+        "ties": 0,
+        "games": 1024
+      },
+      "king_rc4": {
+        "win_utility": 0.604492,
+        "mean_cash": 90587.3,
+        "mean_margin": 604.887,
+        "margin_cvar10": -20953.8,
+        "pass_J": 83680.6,
+        "wins": 619,
+        "ties": 0,
+        "games": 1024
+      },
+      "opening_router_v4": {
+        "win_utility": 0.855469,
+        "mean_cash": 94127.7,
+        "mean_margin": 4100.52,
+        "margin_cvar10": -4079.44,
+        "pass_J": 86764.8,
+        "wins": 876,
+        "ties": 0,
+        "games": 1024
+      },
+      "public_router": {
+        "win_utility": 0.678711,
+        "mean_cash": 91255.8,
+        "mean_margin": 2076.62,
+        "margin_cvar10": -3525.45,
+        "pass_J": 84525,
+        "wins": 695,
+        "ties": 0,
+        "games": 1024
+      },
+      "teammate_shoprouter": {
+        "win_utility": 0.883789,
+        "mean_cash": 89475.3,
+        "mean_margin": 6763.96,
+        "margin_cvar10": -1447.46,
+        "pass_J": 82736,
+        "wins": 905,
+        "ties": 0,
+        "games": 1024
+      },
+      "ticket_p116_t9_i9": {
+        "win_utility": 0.698242,
+        "mean_cash": 93214.8,
+        "mean_margin": 2866.37,
+        "margin_cvar10": -6763.82,
+        "pass_J": 86043.8,
+        "wins": 715,
+        "ties": 0,
+        "games": 1024
+      }
+    }
+  },
+  "native": [
+    "results/justin_terminal_native_parent.json",
+    "results/justin_terminal_native_liquidate.json"
+  ],
+  "broad": "results/justin_terminal_league"
+}

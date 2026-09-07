@@ -1,0 +1,14 @@
+{
+  "parent": "opening_router_v3",
+  "components": [
+    "runs/reduce_hires_001/proposals/reduce_hires_001_3",
+    "runs/reduce_hires_001/proposals/reduce_hires_001_5",
+    "runs/reduce_hires_001/proposals/reduce_hires_001_8",
+    "runs/reduce_hires_001/proposals/reduce_hires_001_21",
+    "runs/reduce_hires_001/proposals/reduce_hires_001_22",
+    "runs/reduce_hires_001/proposals/reduce_hires_001_24",
+    "runs/reduce_hires_001/proposals/reduce_hires_001_25"
+  ],
+  "changes": "New local physical day-start guard over complete source55/V30 schedules; copied parent components retain their recorded attribution.",
+  "scope": "Exact used/occupied tile state, shed, seeds, owned quadrants and reset worker position; no claim that this certifies future financing."
+}

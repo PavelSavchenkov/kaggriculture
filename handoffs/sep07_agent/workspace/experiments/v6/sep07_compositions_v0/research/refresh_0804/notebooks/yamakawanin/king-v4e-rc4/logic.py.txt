@@ -1,0 +1,1516 @@
+import json,zlib,base64,copy
+
+# Immutable PROGRAM extracted to PROGRAM.json
+
+# Immutable MARKET_LIB extracted to MARKET_LIB.json
+
+BAL={'BAKERY','BRUNCH_SPOT','FARMERS_MARKET'}
+
+MILK={'ICE_CREAM_SHOP','PIZZA_SHOP','SMOOTHIE_SHOP'}
+
+PRODUCTS=('WHEAT','CARROT','TOMATO','STRAWBERRY','MELON','EGG','MILK','WOOL','FERTILIZER')
+
+ANIMALS=('GOOSE','COW','SHEEP')
+
+CROPS=('WHEAT','CARROT','TOMATO','STRAWBERRY','MELON')
+
+SHOPN=('BAKERY','PIZZA_SHOP','BRUNCH_SPOT','YARN_STORE','ICE_CREAM_SHOP','PET_CAFE','SMOOTHIE_SHOP','FARMERS_MARKET')
+
+_TS=(400.,450.,200.,100.,300.,332.,122.,105.,200.)
+
+def _cat(s):
+    if s in BAL:return 'BAL'
+    if s in MILK:return 'MILK'
+    if s=='PET_CAFE':return 'PET'
+    if s=='YARN_STORE':return 'YARN'
+    return 'BAL'
+
+def _s2(sh):
+    if sh and sh[0]=='YARN_STORE':return 'YARN_FIRST'
+    if len(sh)>1 and sh[1]=='YARN_STORE':return 'YARN_SECOND'
+    return _cat(sh[0]) if sh else 'BAL'
+
+def _fam(sh):
+    if sh and sh[0]=='YARN_STORE':return 'YARN_FIRST'
+    if len(sh)>1 and sh[1]=='YARN_STORE':return 'YARN_SECOND'
+    if len(sh)>2 and sh[2]=='YARN_STORE':return 'YARN_THIRD'
+    return _cat(sh[0]) if sh else 'BAL'
+
+def _key(step,sh):
+    if step<72:return 'OPENING',step
+    if step<144:return 'S1_'+_cat(sh[0] if sh else ''),step-72
+    if step<216:return 'S2_'+_s2(sh),step-144
+    ph=min(9,step//72);return f'P{ph}_{_fam(sh)}',step-ph*72
+
+def _feat(o):
+    m=((o.get('market',{}) or {}).get('inventory',{}) or {});pr=o.get('private',{}) or {};shed=pr.get('shed',{}) or {};seeds=pr.get('seeds',{}) or {};fs=o.get('farms',[]) or [];p=int(o.get('player',0) or 0);f=fs[p] if 0<=p<len(fs) else {};cows=sheep=goose=0;cc={c:0 for c in CROPS}
+    for row in f.get('tiles',[]) or []:
+        for t in row or []:
+            if not isinstance(t,dict):continue
+            a=t.get('animal');cows+=a=='COW';sheep+=a=='SHEEP';goose+=a=='GOOSE';c=t.get('crop');
+            if c in cc:cc[c]+=1
+    sc={s:0 for s in SHOPN}
+    for s in list(((o.get('town',{}) or {}).get('unlocked_shops',[]) or [])):
+        if s in sc:sc[s]+=1
+    return [int(m.get(x,10000) or 0) for x in PRODUCTS]+[int(shed.get(x,0) or 0) for x in PRODUCTS+ANIMALS]+[int(seeds.get(x,0) or 0) for x in CROPS]+[int(f.get('money',0) or 0),cows,sheep,goose]+[cc[x] for x in CROPS]+[sc[x] for x in SHOPN]
+
+def _dist(a,b):
+    d=sum(1.5*abs(a[i]-b[i])/_TS[i] for i in range(9));d+=sum(.35*abs(a[i]-b[i])/10. for i in range(9,21));d+=sum(.25*abs(a[i]-b[i])/10. for i in range(21,26));d+=.15*abs(a[26]-b[26])/2000.;d+=sum(.7*abs(a[i]-b[i])/4. for i in range(27,30));d+=sum(.4*abs(a[i]-b[i])/10. for i in range(30,35));d+=sum(2.*abs(a[i]-b[i]) for i in range(35,43));return d
+
+def _market(o,step,sh,default):
+    k=_key(step,sh)[0];items=MARKET_LIB.get(str(step),{}).get(k)
+    if not items:return default
+    f=_feat(o);return copy.deepcopy(min(items,key=lambda x:_dist(f,x[0]))[1])
+
+def _safe(a,o):
+    # Only structural sanitation. Never replace choreography with a global scheduler.
+    fs=o.get('farms',[]) or [];p=int(o.get('player',0) or 0);f=fs[p] if 0<=p<len(fs) else {};nh=len(f.get('hands',[]) or [])
+    h=list(a.get('hands',[]) or [])
+    if len(h)>nh:h=h[:nh]
+    elif len(h)<nh:h += [['PASS'] for _ in range(nh-len(h))]
+    a['hands']=h
+    if not isinstance(a.get('farmer'),list) or not a['farmer']:a['farmer']=['PASS']
+    if not isinstance(a.get('market'),list):a['market']=[]
+    return a
+
+_V3J2_S1_OVERRIDE={0:None,1:None}
+
+def agent(obs,configuration=None):
+    try:
+        step=max(0,min(718,int(obs.get('step', int(obs.get('day',0) or 0)*24 + int(obs.get('hour',0) or 0)) or 0)));sh=list(((obs.get('town',{}) or {}).get('unlocked_shops',[]) or []));p=int(obs.get('player',0) or 0)
+        if step==0: _V3J2_S1_OVERRIDE[p]=None
+        if step==72 and sh and sh[0]=='YARN_STORE':
+            fs=obs.get('farms',[]) or []; opp=fs[1-p] if len(fs)>=2 else {}
+            if float(opp.get('money',0) or 0)<=180.0: _V3J2_S1_OVERRIDE[p]='BAL'
+        route_sh=sh
+        if 72<=step<144 and _V3J2_S1_OVERRIDE.get(p)=='BAL':
+            route_sh=['BAKERY']+list(sh[1:])
+        k,i=_key(step,route_sh)
+        if k not in PROGRAM:
+            if 144<=step<216 and 'YARN_SECOND' in k:k='S2_YARN_SECOND'
+            else:k='OPENING';i=min(step,71)
+        a=copy.deepcopy(PROGRAM[k][i]);a['market']=_market(obs,step,route_sh,a.get('market',[]));return _safe(a,obs)
+    except Exception:
+        fs=obs.get('farms',[]) if hasattr(obs,'get') else [];p=int(obs.get('player',0) or 0) if hasattr(obs,'get') else 0;nh=len(fs[p].get('hands',[]) or []) if 0<=p<len(fs) else 0
+        return {'farmer':['PASS'],'hands':[['PASS'] for _ in range(nh)],'market':[]}
+
+_base_agent=agent
+
+def _opening_capital_guard(a,o):
+    step=int(o.get('step',int(o.get('day',0) or 0)*24+int(o.get('hour',0) or 0)) or 0)
+    if step!=1:return a
+    m=list(a.get('market',[]) or [])
+    if not m:return a
+    fs=o.get('farms',[]) or [];p=int(o.get('player',0) or 0);f=fs[p] if 0<=p<len(fs) else {}
+    cash=float(f.get('money',0) or 0);prices=((o.get('market',{}) or {}).get('prices',{}) or {})
+    seed_cost={'WHEAT':10,'CARROT':20,'TOMATO':50,'STRAWBERRY':100,'MELON':80};animal_cost={'GOOSE':300,'COW':400,'SHEEP':500}
+    # Exact visible-price check for the canonical opening basket. Trigger only if
+    # the original order would fail a HIRE/animal purchase; normal OceanMix
+    # replays remain byte-for-byte unchanged.
+    hires=0;risk=False
+    for x in m[:10]:
+        if not isinstance(x,list) or not x:continue
+        op=x[0]
+        try:q=max(0,int(x[2])) if len(x)>=3 else 1
+        except:q=1
+        if op=='BUY_PRODUCT':
+            c=float(prices.get(x[1],0) or 0);cash-=min(q,int(cash//c) if c>0 else q)*c
+        elif op=='BUY_SEED':
+            c=seed_cost.get(x[1],0);cash-=min(q,int(cash//c) if c else q)*c
+        elif op=='BUY_ANIMAL':
+            c=animal_cost.get(x[1],0);got=min(q,int(cash//c) if c else q)
+            if got<q:risk=True
+            cash-=got*c
+        elif op=='HIRE':
+            # first five opening hires cost 1,1,2,3,5
+            fib=(1,1,2,3,5,8,13,21,34,55)
+            c=fib[min(hires,len(fib)-1)]
+            if cash<c:risk=True
+            else:cash-=c;hires+=1
+    # BUY_PRODUCT executes one unit at a time and its price can rise during
+    # the order.  The visible-price estimate above can therefore be a few
+    # coins optimistic near the structural-purchase boundary.  Keep a tiny
+    # reserve so an opening that is within $10 of exhausting the basket is
+    # treated as threatened even if the coarse estimate did not yet record
+    # a partial HIRE/animal fill.  The minimum reserve across the 31 source
+    # OceanMix trajectories is $13, so this does not alter any source replay.
+    if not risk and cash >= 10:return a
+    hard=[x for x in m if isinstance(x,list) and x and x[0] in ('HIRE','BUY_ANIMAL','BUY_LAND')]
+    seeds=[x for x in m if isinstance(x,list) and x and x[0]=='BUY_SEED']
+    products=[x for x in m if isinstance(x,list) and x and x[0]=='BUY_PRODUCT']
+    sells=[x for x in m if isinstance(x,list) and x and x[0]=='SELL']
+    used={id(x) for x in hard+seeds+products+sells};other=[x for x in m if id(x) not in used]
+    a['market']=(sells+hard+seeds+other+products)[:10]
+    return a
+
+def agent(obs,configuration=None):
+    a=_base_agent(obs,configuration)
+    try:return _opening_capital_guard(a,obs)
+    except Exception:return a
+
+main = agent
+
+_reviewed_agent = agent
+
+_reviewed_programme_agent = _base_agent
+
+_HYBRID_WHEAT_PROBE = 6
+
+_HYBRID_WHEAT_RESERVE = 5
+
+_HYBRID_STRUCTURAL_BUDGET = 2842.0
+
+def _hybrid_opening_action(obs, configuration=None):
+    step = int(obs.get('step', int(obs.get('day', 0) or 0) * 24 + int(obs.get('hour', 0) or 0)) or 0)
+    if step == 0:
+        a = _reviewed_programme_agent(obs, configuration)
+        a = copy.deepcopy(a)
+        a['market'] = [['BUY_PRODUCT', 'WHEAT', _HYBRID_WHEAT_PROBE]]
+        return a
+    if step != 1:
+        return _reviewed_agent(obs, configuration)
+
+    # Use the canonical pre-guard programme so the normal q=6 case preserves
+    # the empirically strong interleaving discovered from Tetsuya replays.
+    a = copy.deepcopy(_reviewed_programme_agent(obs, configuration))
+    market = list(a.get('market', []) or [])
+    rest = [
+        order for order in market
+        if not (
+            isinstance(order, list) and len(order) >= 2
+            and order[0] == 'BUY_PRODUCT' and order[1] == 'WHEAT'
+        )
+    ]
+    sell_qty = max(1, _HYBRID_WHEAT_PROBE - _HYBRID_WHEAT_RESERVE)
+    sell = ['SELL', 'WHEAT', sell_qty]
+    candidate_market = [sell] + rest
+
+    # Counter-countermeasure.  At index 0 our one-unit sale is quoted from the
+    # currently visible market before either player's index-0 commit, so the
+    # displayed Wheat price is the exact proceeds of this first sale.  If that
+    # still leaves the canonical structural basket underfunded, preserve hard
+    # assets by moving HIRE/animal/land purchases ahead of seeds.  This branch
+    # does not trigger in the normal q=6 matchups used for selection.
+    try:
+        farms = obs.get('farms', []) or []
+        player = int(obs.get('player', 0) or 0)
+        own = farms[player] if 0 <= player < len(farms) else {}
+        cash = float(own.get('money', 0) or 0)
+        price = float((((obs.get('market', {}) or {}).get('prices', {}) or {}).get('WHEAT', 0) or 0))
+        projected = cash + max(0.0, price) * sell_qty
+        if projected + 1e-9 < _HYBRID_STRUCTURAL_BUDGET:
+            hard = [x for x in rest if isinstance(x, list) and x and x[0] in ('HIRE', 'BUY_ANIMAL', 'BUY_LAND')]
+            seeds = [x for x in rest if isinstance(x, list) and x and x[0] == 'BUY_SEED']
+            other = [x for x in rest if x not in hard and x not in seeds]
+            candidate_market = [sell] + hard + seeds + other
+    except Exception:
+        pass
+
+    a['market'] = candidate_market[:10]
+    return a
+
+def agent(obs, configuration=None):
+    try:
+        return _hybrid_opening_action(obs, configuration)
+    except Exception:
+        return _reviewed_agent(obs, configuration)
+
+def kaggle_entry(observation, configuration=None):
+    return agent(observation, configuration)
+
+_DUSTA_LIQUID_PRODUCTS = ('WHEAT','CARROT','TOMATO','STRAWBERRY','MELON','EGG','MILK','WOOL','FERTILIZER')
+
+_DUSTA_SHED_ACCESS = ((4,4),(5,4),(4,5),(5,5))
+
+_base_hybrid_entry = agent
+
+def _dusta_terminal_overlay(obs, configuration=None):
+    a = copy.deepcopy(_base_hybrid_entry(obs, configuration))
+    step = int(obs.get('step', int(obs.get('day', 0) or 0) * 24 + int(obs.get('hour', 0) or 0)) or 0)
+    if step < 708:
+        return a
+    try:
+        player = int(obs.get('player', 0) or 0)
+        farms = obs.get('farms', []) or []
+        farm = farms[player] if 0 <= player < len(farms) else {}
+        private = obs.get('private', {}) or {}
+        inventories = private.get('inventories', []) or []
+        positions = [farm.get('farmer', [4,4])] + list(farm.get('hands', []) or [])
+        acts = [a.get('farmer', ['PASS'])] + list(a.get('hands', []) or [])
+        n = len(positions)
+        acts = acts[:n] + [['PASS'] for _ in range(max(0, n-len(acts)))]
+        expected = {k:int((private.get('shed', {}) or {}).get(k, 0) or 0) for k in _DUSTA_LIQUID_PRODUCTS}
+        final_step = 718
+        for i, pos in enumerate(positions):
+            inv = inventories[i] if i < len(inventories) and isinstance(inventories[i], dict) else {}
+            carried = sum(int(inv.get(k, 0) or 0) for k in _DUSTA_LIQUID_PRODUCTS)
+            if carried <= 0:
+                continue
+            x, y = int(pos[0]), int(pos[1])
+            bx, by = min(_DUSTA_SHED_ACCESS, key=lambda q: abs(q[0]-x)+abs(q[1]-y))
+            dist = abs(bx-x)+abs(by-y)
+            # d movement turns + one DROP turn must fit by step 718.
+            if step < final_step - dist:
+                continue
+            if dist == 0:
+                acts[i] = ['DROP']
+                for k in _DUSTA_LIQUID_PRODUCTS:
+                    expected[k] += int(inv.get(k, 0) or 0)
+            elif x < bx:
+                acts[i] = ['EAST']
+            elif x > bx:
+                acts[i] = ['WEST']
+            elif y < by:
+                acts[i] = ['SOUTH']
+            else:
+                acts[i] = ['NORTH']
+        a['farmer'] = acts[0] if acts else ['PASS']
+        a['hands'] = acts[1:]
+        if step >= 712:
+            a['market'] = [['SELL', k, q] for k, q in expected.items() if q > 0][:10]
+    except Exception:
+        return a
+    return a
+
+def dusta_kaggle_entry(observation, configuration=None):
+    return _dusta_terminal_overlay(observation, configuration)
+
+_DUSTA_V2_PRODUCTS = ('WHEAT','CARROT','TOMATO','STRAWBERRY','MELON','EGG','MILK','WOOL','FERTILIZER')
+
+_DUSTA_V2_SHED = ((4,4),(5,4),(4,5),(5,5))
+
+def _dusta_terminal_v2(obs, configuration=None):
+    # IMPORTANT: bypass the old Dusta v1 terminal overlay and start from the
+    # reviewed Hybrid programme directly.
+    a = copy.deepcopy(_base_hybrid_entry(obs, configuration))
+    step = int(obs.get('step', int(obs.get('day', 0) or 0) * 24 + int(obs.get('hour', 0) or 0)) or 0)
+    if step < 708:
+        return a
+    try:
+        player = int(obs.get('player', 0) or 0)
+        farms = obs.get('farms', []) or []
+        farm = farms[player] if 0 <= player < len(farms) else {}
+        private = obs.get('private', {}) or {}
+        inventories = private.get('inventories', []) or []
+        positions = [farm.get('farmer', [4,4])] + list(farm.get('hands', []) or [])
+        acts = [a.get('farmer', ['PASS'])] + list(a.get('hands', []) or [])
+        acts = acts[:len(positions)] + [['PASS'] for _ in range(max(0, len(positions)-len(acts)))]
+        final_step = 718
+
+        # Latest-safe-departure recall.
+        for i, pos in enumerate(positions):
+            inv = inventories[i] if i < len(inventories) and isinstance(inventories[i], dict) else {}
+            carried = sum(int(inv.get(k, 0) or 0) for k in _DUSTA_V2_PRODUCTS)
+            if carried <= 0:
+                continue
+            x, y = int(pos[0]), int(pos[1])
+            bx, by = min(_DUSTA_V2_SHED, key=lambda q: abs(q[0]-x)+abs(q[1]-y))
+            dist = abs(bx-x)+abs(by-y)
+            if step < final_step - dist:
+                continue
+            if dist == 0:
+                acts[i] = ['DROP']
+            elif x < bx:
+                acts[i] = ['EAST']
+            elif x > bx:
+                acts[i] = ['WEST']
+            elif y < by:
+                acts[i] = ['SOUTH']
+            else:
+                acts[i] = ['NORTH']
+
+        a['farmer'] = acts[0] if acts else ['PASS']
+        a['hands'] = acts[1:]
+
+        if step >= 709:
+            # Predict inventory available after this turn's DROP phase.
+            predicted = {
+                k: int((private.get('shed', {}) or {}).get(k, 0) or 0)
+                for k in _DUSTA_V2_PRODUCTS
+            }
+            for i, act in enumerate(acts):
+                if not (isinstance(act, list) and act and act[0] == 'DROP'):
+                    continue
+                if i >= len(positions):
+                    continue
+                x, y = int(positions[i][0]), int(positions[i][1])
+                if (x, y) not in _DUSTA_V2_SHED:
+                    continue
+                inv = inventories[i] if i < len(inventories) and isinstance(inventories[i], dict) else {}
+                for k in _DUSTA_V2_PRODUCTS:
+                    predicted[k] += int(inv.get(k, 0) or 0)
+
+            # Critical v2 fix: preserve expert market orders exactly and append
+            # only quantities not already covered by expert SELL orders.
+            market = list(a.get('market', []) or [])
+            covered = {k: 0 for k in _DUSTA_V2_PRODUCTS}
+            for order in market:
+                if (isinstance(order, list) and len(order) >= 3 and
+                    order[0] == 'SELL' and order[1] in covered):
+                    try:
+                        covered[order[1]] += max(0, int(order[2]))
+                    except Exception:
+                        pass
+
+            prices = ((obs.get('market', {}) or {}).get('prices', {}) or {})
+            extras = []
+            for k in _DUSTA_V2_PRODUCTS:
+                q = max(0, predicted[k] - covered[k])
+                if q > 0:
+                    extras.append((float(prices.get(k, 0) or 0), k, q))
+            extras.sort(reverse=True)
+
+            for _, k, q in extras:
+                if len(market) >= 10:
+                    break
+                market.append(['SELL', k, q])
+            a['market'] = market[:10]
+    except Exception:
+        return a
+    return a
+
+def dusta_v2_kaggle_entry(observation, configuration=None):
+    return _dusta_terminal_v2(observation, configuration)
+
+agent = dusta_v2_kaggle_entry
+
+_SUPER_MODE = {0: 'UNKNOWN', 1: 'UNKNOWN'}
+
+_SUPER_CURRENT_PLAYER = None
+
+_SUPER_ORIGINAL_S2 = _s2
+
+_SUPER_BASE_AGENT = agent
+
+def _super_s2(shop_prefix):
+    player = _SUPER_CURRENT_PLAYER
+    mode = _SUPER_MODE.get(player) if player is not None else None
+
+    # Preserve the established MILK -> YARN correction for both confirmed
+    # E776 and OceanMix-like programme opponents.  The unresolved label is
+    # retained as a conservative fallback if turn-47 classification is missed.
+    if mode in ('E776_LIKE', 'E776_CONFIRMED', 'OCEANMIX_LIKE'):
+        if (
+            shop_prefix
+            and shop_prefix[0] in MILK
+            and len(shop_prefix) > 1
+            and shop_prefix[1] == 'YARN_STORE'
+        ):
+            return 'MILK'
+
+    # E776-specific BAL -> YARN stability repair.  Seven dedicated prefix
+    # seeds showed that S2_MILK removes the isolated -5k collapse while
+    # keeping the branch mostly winning; it is enabled only after a public
+    # turn-47 worker-position signature confirms E776-like behaviour.
+    if mode == 'E776_CONFIRMED':
+        if (
+            len(shop_prefix) > 1
+            and shop_prefix[0] in BAL
+            and shop_prefix[1] == 'YARN_STORE'
+        ):
+            return 'MILK'
+
+    # PET -> YARN anti-mirror repair for OceanMix-like opponents.  A single
+    # S2 BAL detour breaks the mirror-collision regime, then the untouched
+    # router returns to YARN_SECOND from P3 onward.
+    if mode == 'OCEANMIX_LIKE':
+        if (
+            len(shop_prefix) > 1
+            and shop_prefix[0] == 'PET_CAFE'
+            and shop_prefix[1] == 'YARN_STORE'
+        ):
+            return 'BAL'
+
+    return _SUPER_ORIGINAL_S2(shop_prefix)
+
+_s2 = _super_s2
+
+def _super_classify_opening(obs, player):
+    """Classify only from information visible in the official observation."""
+    try:
+        farms = obs.get('farms', []) or []
+        opponent = farms[1 - player]
+        opponent_money = float(opponent.get('money', 0) or 0)
+        wheat_inventory = int(
+            ((((obs.get('market', {}) or {}).get('inventory', {}) or {}).get('WHEAT', 0)) or 0)
+        )
+        # Our fixed step-0 probe buys six Wheat.  E776 leaves its opening market
+        # queue empty, yielding the characteristic public state below.  Dusta
+        # v1/v2 and hierarchical-v6 do not satisfy both conditions.
+        if opponent_money >= 2999.0 and wheat_inventory >= 9992:
+            return 'E776_LIKE'
+    except Exception:
+        pass
+    return 'OTHER'
+
+def _super_agent(observation, configuration=None):
+    global _SUPER_CURRENT_PLAYER
+    player = int(observation.get('player', 0) or 0)
+    step = int(observation.get('step', 0) or 0)
+    if step == 0:
+        _SUPER_MODE[player] = 'UNKNOWN'
+    elif step == 1 and _SUPER_MODE.get(player) == 'UNKNOWN':
+        _SUPER_MODE[player] = _super_classify_opening(observation, player)
+
+    # OceanMix and E776 are intentionally indistinguishable at step 1 under
+    # our reversible Wheat probe.  Before the first shop unlock they diverge
+    # in a fully public physical signature: at turn 47, E776's third hired
+    # hand is parked at [5,5], while reviewed OceanMix is at [4,4].  Across
+    # 50 random validation seeds this signature was invariant.  Dusta is
+    # already classified OTHER at step 1, so it cannot enter this branch.
+    if step == 47 and _SUPER_MODE.get(player) == 'E776_LIKE':
+        resolved = 'OTHER'
+        try:
+            farms = observation.get('farms', []) or []
+            opp = farms[1 - player]
+            hands = list(opp.get('hands', []) or [])
+            opp_money = float(opp.get('money', 0) or 0)
+            if len(hands) > 2:
+                h2 = tuple(hands[2])
+                if h2 == (5, 5) and 225.0 <= opp_money <= 240.0:
+                    resolved = 'E776_CONFIRMED'
+                elif h2 == (4, 4) and 225.0 <= opp_money <= 240.0:
+                    resolved = 'OCEANMIX_LIKE'
+        except Exception:
+            resolved = 'OTHER'
+        # Do not leave an unconfirmed early fingerprint active for the rest of
+        # the game; unknown opponents should fall back to the generic router.
+        _SUPER_MODE[player] = resolved
+
+    _SUPER_CURRENT_PLAYER = player
+    try:
+        action = copy.deepcopy(_SUPER_BASE_AGENT(observation, configuration))
+    finally:
+        _SUPER_CURRENT_PLAYER = None
+
+    if step >= 708:
+        market = list(action.get('market', []) or [])
+        sell_slots = []
+        sells = []
+        for index, order in enumerate(market):
+            if (
+                isinstance(order, list)
+                and len(order) >= 3
+                and order[0] == 'SELL'
+            ):
+                sell_slots.append(index)
+                sells.append((index, order))
+        # Stable sort only within the original SELL slots.  Non-SELL market
+        # operations keep their exact positions and relative execution order.
+        sells.sort(key=lambda pair: (-float(pair[1][2]), pair[0]))
+        for slot, (_, order) in zip(sell_slots, sells):
+            market[slot] = order
+        action['market'] = market[:10]
+    return action
+
+def dusta_super_kaggle_entry(observation, configuration=None):
+    return _super_agent(observation, configuration)
+
+agent = dusta_super_kaggle_entry
+
+_V2_BASE_AGENT = agent
+
+_V2_QUEUE = {0: {}, 1: {}}
+
+_V2_LAST_DAY = {0: -1, 1: -1}
+
+def _v2_is_pass(act):
+    return isinstance(act, list) and (not act or act[0] == 'PASS')
+
+def _v2_positions(obs, player):
+    farms = obs.get('farms', []) or []
+    farm = farms[player] if 0 <= player < len(farms) else {}
+    return [farm.get('farmer', [4, 4])] + list(farm.get('hands', []) or [])
+
+def _v2_tile(obs, player, pos):
+    try:
+        x, y = int(pos[0]), int(pos[1])
+        farm = (obs.get('farms', []) or [])[player]
+        return (farm.get('tiles', []) or [])[y][x]
+    except Exception:
+        return None
+
+def _v2_structural_recovery(action, obs, player, step):
+    """Conservative same-day transaction recovery for weed-blocked BUILDs.
+
+    A failed BUILD is not allowed to be silently assumed successful by the
+    open-loop programme.  We DIG now, enqueue the original BUILD, and replay
+    only that actor's displaced non-PASS actions until natural PASS slack absorbs
+    the one-turn delay.  No queue survives a day boundary.
+    """
+    day = step // 24
+    if _V2_LAST_DAY.get(player) != day:
+        _V2_QUEUE[player] = {}
+        _V2_LAST_DAY[player] = day
+
+    out = copy.deepcopy(action)
+    positions = _v2_positions(obs, player)
+    acts = [out.get('farmer', ['PASS'])] + list(out.get('hands', []) or [])
+    if len(acts) < len(positions):
+        acts += [['PASS'] for _ in range(len(positions) - len(acts))]
+    else:
+        acts = acts[:len(positions)]
+
+    queues = _V2_QUEUE.setdefault(player, {})
+    newacts = list(acts)
+    for idx, base_act in enumerate(acts):
+        q = queues.get(idx, [])
+        # Existing debt executes first.  Current non-PASS programme work is
+        # queued behind it; PASS provides safe slack to catch up.
+        if q:
+            exec_act = q.pop(0)
+            if not _v2_is_pass(base_act):
+                q.append(copy.deepcopy(base_act))
+            newacts[idx] = exec_act
+            if q:
+                queues[idx] = q
+            else:
+                queues.pop(idx, None)
+            continue
+
+        # Enter recovery only for a guaranteed structural no-op: BUILD_* on WEED.
+        op = base_act[0] if isinstance(base_act, list) and base_act else None
+        if op in ('BUILD_PASTURE', 'BUILD_COOP') and idx < len(positions):
+            tile = _v2_tile(obs, player, positions[idx])
+            if isinstance(tile, dict) and tile.get('kind') == 'WEED':
+                newacts[idx] = ['DIG']
+                queues[idx] = [copy.deepcopy(base_act)]
+
+    out['farmer'] = newacts[0] if newacts else ['PASS']
+    out['hands'] = newacts[1:]
+    return out
+
+def _v2_terminal_sell_slots(action, step):
+    """Sort only SELL orders *within their original SELL slots*.
+
+    v1 grouped every non-SELL ahead of every SELL, unintentionally changing the
+    relative market schedule.  Here non-SELL order positions are untouched.
+    """
+    if step < 708:
+        return action
+    out = copy.deepcopy(action)
+    market = list(out.get('market', []) or [])
+    slots = []
+    sells = []
+    for i, order in enumerate(market):
+        if isinstance(order, list) and len(order) >= 3 and order[0] == 'SELL':
+            slots.append(i)
+            sells.append((i, order))
+    sells.sort(key=lambda pair: (-float(pair[1][2]), pair[0]))
+    for slot, (_, order) in zip(slots, sells):
+        market[slot] = order
+    out['market'] = market[:10]
+    return out
+
+def _v2_agent(observation, configuration=None):
+    player = int(observation.get('player', 0) or 0)
+    step = int(observation.get('step', int(observation.get('day', 0) or 0) * 24 + int(observation.get('hour', 0) or 0)) or 0)
+
+    # Reset all per-episode state for this seat.
+    if step == 0:
+        _V2_QUEUE[player] = {}
+        _V2_LAST_DAY[player] = -1
+
+    action = copy.deepcopy(_V2_BASE_AGENT(observation, configuration))
+    action = _v2_structural_recovery(action, observation, player, step)
+    # `_V2_BASE_AGENT` has already applied v1's terminal reorder.  Reconstructing
+    # the pre-v1 ordering is impossible here, so this function is intentionally a
+    # no-op unless v1 left multiple SELL slots interspersed with non-SELLs.
+    # The final static review below verifies the terminal path separately.
+    return action
+
+def replay_distilled_super_agent_v2(observation, configuration=None):
+    return _v2_agent(observation, configuration)
+
+agent = replay_distilled_super_agent_v2
+
+_CHAMP_BASE = agent
+
+def agent(observation, configuration=None):
+    a=copy.deepcopy(_CHAMP_BASE(observation,configuration))
+    m=list(a.get('market',[]) or [])
+    sells=[x for x in m if isinstance(x,list) and x and x[0]=='SELL']
+    other=[x for x in m if not (isinstance(x,list) and x and x[0]=='SELL')]
+    a['market']=(sells+other)[:10]
+    return a
+
+_STEP_BASE=agent
+
+def agent(observation,configuration=None):
+    o=observation
+    if isinstance(o,dict) and 'step' not in o:
+        o=dict(o);o['step']=int(o.get('day',0) or 0)*24+int(o.get('hour',0) or 0)
+    return _STEP_BASE(o,configuration)
+
+_SFM_BASE=agent
+
+def agent(observation,configuration=None):
+    a=copy.deepcopy(_SFM_BASE(observation,configuration));m=list(a.get('market',[]) or []);order=[];qty={};other=[]
+    for x in m:
+        if isinstance(x,list) and len(x)>=3 and x[0]=='SELL':
+            item=x[1]
+            try:q=max(0,int(x[2]))
+            except:q=0
+            if item not in qty:order.append(item);qty[item]=0
+            qty[item]+=q
+        else:other.append(x)
+    a['market']=([['SELL',k,qty[k]] for k in order if qty[k]>0]+other)[:10];return a
+
+_AEGISFARM_V1_BASE = agent
+
+def aegisfarm_v1(observation, configuration=None):
+    return _AEGISFARM_V1_BASE(observation, configuration)
+
+agent = aegisfarm_v1
+
+_OQ_BASE=agent
+
+_OQ_Q0=3
+
+def opening_q_agent(observation,configuration=None):
+    o=observation
+    if isinstance(o,dict) and 'step' not in o:
+        o=dict(o);o['step']=int(o.get('day',0) or 0)*24+int(o.get('hour',0) or 0)
+    a=copy.deepcopy(_OQ_BASE(o,configuration));s=int(o.get('step',0) or 0)
+    if s==0:
+        m=[x for x in list(a.get('market',[]) or []) if not (isinstance(x,list) and len(x)>=3 and x[0]=='BUY_PRODUCT' and x[1]=='WHEAT')]
+        if _OQ_Q0>0:m=[['BUY_PRODUCT','WHEAT',_OQ_Q0]]+m
+        a['market']=m[:10]
+    elif s==1:
+        m=[]
+        for x in list(a.get('market',[]) or []):
+            if isinstance(x,list) and len(x)>=3 and x[1]=='WHEAT' and x[0] in ('BUY_PRODUCT','SELL'):continue
+            m.append(x)
+        delta=5-_OQ_Q0
+        if delta>0:m=[['BUY_PRODUCT','WHEAT',delta]]+m
+        elif delta<0:m=[['SELL','WHEAT',-delta]]+m
+        a['market']=m[:10]
+    return a
+
+agent=opening_q_agent
+
+_CAP_BASE = agent
+
+_CAP_ORIG_KEY = _key
+
+_CAP_MODE = {0: 'NORMAL', 1: 'NORMAL'}
+
+_CAP_OPP_WHEAT_BUY = {0: 0, 1: 0}
+
+_CAP_CURRENT_PLAYER = None
+
+def _cap_key(step, shops):
+    """Use only prefix-compatible whole-programme blocks at 72-turn boundaries."""
+    player = _CAP_CURRENT_PLAYER
+    mode = _CAP_MODE.get(player, 'NORMAL') if player is not None else 'NORMAL'
+    if (
+        mode == 'MEDIUM_CAPITAL'
+        and shops
+        and shops[0] in BAL
+        and 'YARN_STORE' not in list(shops[:2])
+    ):
+        if 144 <= step < 216:
+            return 'S2_MILK', step - 144
+        if 216 <= step < 288:
+            return 'P3_YARN_THIRD', step - 216
+    return _CAP_ORIG_KEY(step, shops)
+
+_key = _cap_key
+
+def capital_adaptive_aegis(observation, configuration=None):
+    global _CAP_CURRENT_PLAYER
+    o = observation
+    if isinstance(o, dict) and 'step' not in o:
+        o = dict(o)
+        o['step'] = int(o.get('day', 0) or 0) * 24 + int(o.get('hour', 0) or 0)
+    player = int(o.get('player', 0) or 0)
+    step = int(o.get('step', 0) or 0)
+
+    if step == 0:
+        _CAP_MODE[player] = 'NORMAL'
+        _CAP_OPP_WHEAT_BUY[player] = 0
+    elif step == 1:
+        inv = int((((o.get('market', {}) or {}).get('inventory', {}) or {}).get('WHEAT', 10000)) or 10000)
+        # With our q0=3 opening and one unit of town consumption, 9996 is the
+        # public no-opponent-buy reference inventory at step 1.
+        opp_buy = max(0, 9996 - inv)
+        _CAP_OPP_WHEAT_BUY[player] = opp_buy
+        if 11 <= opp_buy <= 18:
+            _CAP_MODE[player] = 'MEDIUM_CAPITAL'
+        elif opp_buy >= 20:
+            _CAP_MODE[player] = 'WHEAT_SHOCK'
+        else:
+            _CAP_MODE[player] = 'NORMAL'
+
+    _CAP_CURRENT_PLAYER = player
+    try:
+        a = copy.deepcopy(_CAP_BASE(o, configuration))
+    finally:
+        _CAP_CURRENT_PLAYER = None
+
+    # Public-market shock arbitrage.  This replaces only the step-1 Wheat
+    # top-up; it never touches worker choreography or later programme inputs.
+    if step == 1 and _CAP_MODE.get(player) == 'WHEAT_SHOCK':
+        opp_buy = int(_CAP_OPP_WHEAT_BUY.get(player, 0) or 0)
+        sell_qty = 1 if opp_buy >= 45 else 3
+        market = []
+        for x in list(a.get('market', []) or []):
+            if isinstance(x, list) and len(x) >= 2 and x[1] == 'WHEAT' and x[0] in ('BUY_PRODUCT', 'SELL'):
+                continue
+            market.append(x)
+        a['market'] = ([['SELL', 'WHEAT', sell_qty]] + market)[:10]
+    return a
+
+agent = capital_adaptive_aegis
+
+import types as _ar_types
+
+# Immutable _AR_ROUTER_SRC extracted to _AR_ROUTER_SRC.py
+
+_AR_ROUTER=_ar_types.ModuleType('_ar_router')
+
+exec(compile(_AR_ROUTER_SRC,'<_ar_router>','exec'),_AR_ROUTER.__dict__)
+
+_AR_BASE=agent
+
+_AR_LOCK={0:False,1:False}
+
+_AR_EVENTS=[(49, 50, 'WHEAT', 2), (73, 74, 'WHEAT', 2), (100, 101, 'WHEAT', 2), (122, 123, 'WHEAT', 2), (164, 165, 'WHEAT', 9)]
+
+_AR_NSHIFT=5
+
+def _ar_fp(o,p):
+    try:
+        fs=list(o.get('farms',[]) or []);opp=fs[1-p]
+        inv=int(((((o.get('market',{}) or {}).get('inventory',{}) or {}).get('WHEAT',10000)) or 10000))
+        return inv==9983 and abs(float(opp.get('money',0) or 0)-2636.0)<0.01 and len(list(opp.get('hands',[]) or []))==0
+    except Exception:return False
+
+def _ar_reduce_sale(a,item,q):
+    rem=q;m=[]
+    for x in list(a.get('market',[]) or []):
+        if rem>0 and isinstance(x,list) and len(x)>=3 and x[0]=='SELL' and x[1]==item:
+            y=list(x);take=min(rem,max(0,int(y[2] or 0)));y[2]-=take;rem-=take
+            if y[2]>0:m.append(y)
+        else:m.append(x)
+    a['market']=m[:10]
+
+def anti_router_syncmirror(observation,configuration=None):
+    o=observation
+    if isinstance(o,dict) and 'step' not in o:
+        o=dict(o);o['step']=int(o.get('day',0) or 0)*24+int(o.get('hour',0) or 0)
+    p=int(o.get('player',0) or 0);s=int(o.get('step',0) or 0)
+    if s==0:_AR_LOCK[p]=False
+    # Keep the shadow state synchronized from turn 0, even before classification.
+    try:shadow=copy.deepcopy(_AR_ROUTER.agent(o,configuration))
+    except TypeError:shadow=copy.deepcopy(_AR_ROUTER.agent(o))
+    basea=copy.deepcopy(_AR_BASE(o,configuration))
+    if s==1 and _ar_fp(o,p):
+        _AR_LOCK[p]=True
+        _CAP_MODE[p]='ROUTER_CONFIRMED'
+        # Exact sync search: no Wheat transaction on turn 1; keep all structural buys.
+        basea['market']=[x for x in list(basea.get('market',[]) or []) if not (isinstance(x,list) and len(x)>=2 and x[1]=='WHEAT' and x[0] in ('BUY_PRODUCT','SELL'))]
+        return basea
+    if not _AR_LOCK.get(p,False):return basea
+    if s==2:
+        # Exact sync search: replace Router's SELL 1 with BUY 1. End-of-turn private/physical state matches Router, cash deficit only $1.
+        shadow['market']=[x for x in list(shadow.get('market',[]) or []) if not (isinstance(x,list) and len(x)>=2 and x[1]=='WHEAT' and x[0] in ('BUY_PRODUCT','SELL'))]
+        shadow['market']=[['BUY_PRODUCT','WHEAT',1]]+shadow['market']
+        return shadow
+    if s>=3:
+        a=shadow
+        # Inventory-conserving schedule timing edges: pre-sell, then subtract the same quantity at the original sale turn.
+        for pre,orig,item,q0 in _AR_EVENTS[:_AR_NSHIFT]:
+            if s==pre:
+                shed=((o.get('private',{}) or {}).get('shed',{}) or {});q=min(q0,max(0,int(shed.get(item,0) or 0)))
+                if q>0:a['market']=([['SELL',item,q]]+list(a.get('market',[]) or []))[:10]
+                break
+            if s==orig:
+                _ar_reduce_sale(a,item,q0);break
+        return a
+    return basea
+
+agent=anti_router_syncmirror
+
+_Q30_Q = 30
+
+_Q30_RESERVE = 5
+
+_Q30_STATE = {0:{},1:{}}
+
+def _q30_step(o):
+    if isinstance(o,dict) and 'step' in o: return int(o.get('step',0) or 0)
+    return int((o or {}).get('day',0) or 0)*24+int((o or {}).get('hour',0) or 0)
+
+def _q30_merge_sell(m):
+    order=[]; qty={}; other=[]
+    for x in list(m or []):
+        if isinstance(x,list) and len(x)>=3 and x[0]=='SELL':
+            k=x[1]
+            try:q=max(0,int(x[2]))
+            except:q=0
+            if k not in qty: order.append(k); qty[k]=0
+            qty[k]+=q
+        else: other.append(x)
+    return ([['SELL',k,qty[k]] for k in order if qty[k]>0]+other)[:10]
+
+def _q30_farm_signature(f):
+    tiles=f.get('tiles',[]) or []
+    sig=[]
+    for row in tiles:
+        rr=[]
+        for t in row:
+            if isinstance(t,dict):
+                if 'animal' in t: rr.append(('A',t.get('animal')))
+                elif t.get('kind')=='PLANT': rr.append(('P',t.get('crop')))
+                else: rr.append((t.get('kind'),None))
+            else: rr.append(t)
+        sig.append(tuple(rr))
+    return (tuple(map(tuple,sig)), tuple(f.get('farmer',[]) or []), tuple(tuple(x) for x in (f.get('hands',[]) or [])), tuple(f.get('unlocked_quadrants',[]) or []))
+
+def generic_q30(observation, configuration=None):
+    o=observation
+    if isinstance(o,dict) and 'step' not in o:
+        o=dict(o); o['step']=_q30_step(o)
+    p=int(o.get('player',0) or 0); s=_q30_step(o)
+    if s==0: _Q30_STATE[p]={}
+    # Identity-free physical/terminal baseline: reviewed programme + Dusta v2 + generic recovery.
+    a=copy.deepcopy(_dusta_terminal_v2(o,configuration))
+    try: a=_v2_structural_recovery(a,o,p,s)
+    except Exception: pass
+    m=list(a.get('market',[]) or [])
+    # Active reversible opening probe.
+    if s==0:
+        m=[x for x in m if not (isinstance(x,list) and len(x)>=2 and x[0] in ('BUY_PRODUCT','SELL') and x[1]=='WHEAT')]
+        m=[['BUY_PRODUCT','WHEAT',_Q30_Q]]+m
+    elif s==1:
+        inv=int((((o.get('market',{}) or {}).get('inventory',{}) or {}).get('WHEAT',10000)) or 10000)
+        # Public response estimate: after our q30 and deterministic town tick.
+        # Reference no-opponent response is 10000-30-1 = 9969.
+        opp_buy=max(0,9969-inv)
+        _Q30_STATE[p]['opp_buy']=opp_buy
+        if opp_buy<=5: mode='LOW'
+        elif opp_buy>=20: mode='HIGH'
+        else: mode='MID'
+        _Q30_STATE[p]['mode']=mode
+        m=[x for x in m if not (isinstance(x,list) and len(x)>=2 and x[0] in ('BUY_PRODUCT','SELL') and x[1]=='WHEAT')]
+        m=[['SELL','WHEAT',_Q30_Q-_Q30_RESERVE]]+m
+    # Generic SELL-first and merge.
+    sells=[x for x in m if isinstance(x,list) and x and x[0]=='SELL']
+    other=[x for x in m if not (isinstance(x,list) and x and x[0]=='SELL')]
+    m=_q30_merge_sell(sells+other)
+    # Strict near-mirror terminal/local tie-break: larger lots first.
+    try:
+        fs=o.get('farms',[]) or []
+        if len(fs)>=2 and s>=600 and _q30_farm_signature(fs[p])==_q30_farm_signature(fs[1-p]) and abs(float(fs[p].get('money',0) or 0)-float(fs[1-p].get('money',0) or 0))<=10:
+            ss=[x for x in m if isinstance(x,list) and len(x)>=3 and x[0]=='SELL']
+            oo=[x for x in m if not (isinstance(x,list) and len(x)>=3 and x[0]=='SELL')]
+            ss=sorted(ss,key=lambda x:(-int(x[2]),str(x[1])))
+            m=(ss+oo)[:10]
+    except Exception: pass
+    if s>=708:
+        ss=[x for x in m if isinstance(x,list) and len(x)>=3 and x[0]=='SELL']
+        oo=[x for x in m if not (isinstance(x,list) and len(x)>=3 and x[0]=='SELL')]
+        ss=sorted(ss,key=lambda x:-int(x[2]))
+        m=(ss+oo)[:10]
+    a['market']=m[:10]
+    return a
+
+agent=generic_q30
+
+_Q30V1_STATE={0:{},1:{}}
+
+def _q30v1_cap_wheat(m,o,p):
+    try:
+        fs=o.get('farms',[]) or []
+        if len(fs)<2 or _q30_farm_signature(fs[p])!=_q30_farm_signature(fs[1-p]): return m
+        virtual=float(fs[1-p].get('money',0) or 0)
+        prices=((o.get('market',{}) or {}).get('prices',{}) or {})
+        out=[]
+        for x in list(m or []):
+            y=list(x) if isinstance(x,list) else x
+            if isinstance(y,list) and len(y)>=3 and y[0]=='SELL':
+                try: virtual += max(0,int(y[2]))*float(prices.get(y[1],0) or 0)
+                except Exception: pass
+                out.append(y); continue
+            if isinstance(y,list) and len(y)>=3 and y[0]=='BUY_PRODUCT' and y[1]=='WHEAT':
+                price=max(1.0,float(prices.get('WHEAT',1) or 1))
+                # One-unit conservative reserve absorbs intra-order price increases.
+                maxq=max(0,int((virtual-1.0)//price))
+                try:q=max(0,int(y[2]))
+                except:q=0
+                q=min(q,maxq)
+                if q>0:
+                    y[2]=q; virtual-=q*price; out.append(y)
+                continue
+            # Only WHEAT BUY_PRODUCT is probe-sensitive. Keep structural orders unchanged.
+            out.append(y)
+        return out[:10]
+    except Exception:
+        return m
+
+def generic_q30_v1(observation,configuration=None):
+    o=observation
+    if isinstance(o,dict) and 'step' not in o:
+        o=dict(o);o['step']=_q30_step(o)
+    p=int(o.get('player',0) or 0);s=_q30_step(o)
+    if s==0:_Q30V1_STATE[p]={}
+    a=copy.deepcopy(_dusta_terminal_v2(o,configuration))
+    try:a=_v2_structural_recovery(a,o,p,s)
+    except Exception:pass
+    m=list(a.get('market',[]) or [])
+    if s==0:
+        m=[x for x in m if not (isinstance(x,list) and len(x)>=2 and x[0] in ('BUY_PRODUCT','SELL') and x[1]=='WHEAT')]
+        m=[['BUY_PRODUCT','WHEAT',30]]+m
+    elif s==1:
+        inv=int((((o.get('market',{}) or {}).get('inventory',{}) or {}).get('WHEAT',10000)) or 10000)
+        opp_buy=max(0,9969-inv);_Q30V1_STATE[p]['opp_buy']=opp_buy
+        _Q30V1_STATE[p]['mode']='LOW' if opp_buy<=5 else ('HIGH' if opp_buy>=20 else 'MID')
+        m=[x for x in m if not (isinstance(x,list) and len(x)>=2 and x[0] in ('BUY_PRODUCT','SELL') and x[1]=='WHEAT')]
+        m=[['SELL','WHEAT',25]]+m
+    sells=[x for x in m if isinstance(x,list) and x and x[0]=='SELL'];other=[x for x in m if not (isinstance(x,list) and x and x[0]=='SELL')]
+    m=_q30_merge_sell(sells+other)
+    if s>=2 and _Q30V1_STATE[p].get('mode')=='LOW':
+        m=_q30v1_cap_wheat(m,o,p)
+    try:
+        fs=o.get('farms',[]) or []
+        if len(fs)>=2 and s>=600 and _q30_farm_signature(fs[p])==_q30_farm_signature(fs[1-p]) and abs(float(fs[p].get('money',0) or 0)-float(fs[1-p].get('money',0) or 0))<=10:
+            ss=[x for x in m if isinstance(x,list) and len(x)>=3 and x[0]=='SELL'];oo=[x for x in m if not (isinstance(x,list) and len(x)>=3 and x[0]=='SELL')]
+            ss=sorted(ss,key=lambda x:(-int(x[2]),str(x[1])));m=(ss+oo)[:10]
+    except Exception:pass
+    if s>=708:
+        ss=[x for x in m if isinstance(x,list) and len(x)>=3 and x[0]=='SELL'];oo=[x for x in m if not (isinstance(x,list) and len(x)>=3 and x[0]=='SELL')]
+        ss=sorted(ss,key=lambda x:-int(x[2]));m=(ss+oo)[:10]
+    a['market']=m[:10];return a
+
+agent=generic_q30_v1
+
+_q30v2a_base=generic_q30_v1
+
+def _q30_has_sale(m,item):
+    return any(isinstance(x,list) and len(x)>=2 and x[0]=='SELL' and x[1]==item for x in (m or []))
+
+def _q30_add_sale(m,item,q):
+    if q<=0 or _q30_has_sale(m,item) or len(m)>=10:return m
+    return list(m)+[['SELL',item,int(q)]]
+
+def _q30_maturing(opp,day):
+    st=me=0
+    for row in (opp.get('tiles',[]) or []):
+        for t in (row or []):
+            if not isinstance(t,dict) or t.get('kind')!='PLANT':continue
+            age=day-int(t.get('planted_day',0) or 0); y=int(t.get('yield_units',0) or 0)
+            if t.get('crop')=='STRAWBERRY' and (age>=8 or y>0):st+=1
+            elif t.get('crop')=='MELON' and (age>=9 or y>0):me+=1
+    return st,me
+
+def q30_v2a(observation,configuration=None):
+    a=copy.deepcopy(_q30v2a_base(observation,configuration))
+    try:
+        o=observation if isinstance(observation,dict) else {};s=_q30_step(o);p=int(o.get('player',0) or 0)
+        if s<240:return a
+        farms=o.get('farms',[]) or []; me=farms[p]; opp=farms[1-p]
+        shed=((o.get('private',{}) or {}).get('shed',{}) or {})
+        prices=((o.get('market',{}) or {}).get('prices',{}) or {})
+        shops=list(((o.get('town',{}) or {}).get('unlocked_shops',[]) or []))
+        m=list(a.get('market',[]) or [])
+        dairy=any(x in ('SMOOTHIE_SHOP','PIZZA_SHOP','ICE_CREAM_SHOP') for x in shops)
+        berry=any(x in ('SMOOTHIE_SHOP','BRUNCH_SPOT','ICE_CREAM_SHOP','FARMERS_MARKET') for x in shops)
+        yarn='YARN_STORE' in shops; carrot=('PET_CAFE' in shops or 'FARMERS_MARKET' in shops)
+        # Small liquidity/price-resilience batches. Avoid replacing an expert's existing sale.
+        if dairy and int(shed.get('MILK',0) or 0)>=4 and float(prices.get('MILK',0) or 0)>=80:
+            m=_q30_add_sale(m,'MILK',min(4,int(shed.get('MILK',0) or 0)))
+        if (s%4)==1:
+            if yarn and int(shed.get('WOOL',0) or 0)>=2 and float(prices.get('WOOL',0) or 0)>=35:
+                m=_q30_add_sale(m,'WOOL',min(3,int(shed.get('WOOL',0) or 0)))
+            if berry and int(shed.get('STRAWBERRY',0) or 0)>=3 and float(prices.get('STRAWBERRY',0) or 0)>=85:
+                m=_q30_add_sale(m,'STRAWBERRY',min(3,int(shed.get('STRAWBERRY',0) or 0)))
+            if carrot and int(shed.get('CARROT',0) or 0)>=2 and float(prices.get('CARROT',0) or 0)>=30:
+                m=_q30_add_sale(m,'CARROT',min(3,int(shed.get('CARROT',0) or 0)))
+        # Public-board supply forecast: pre-monetize only when competitor supply is visibly near.
+        st,mel=_q30_maturing(opp,int(o.get('day',0) or 0))
+        if st>=4 and int(shed.get('STRAWBERRY',0) or 0)>=3 and float(prices.get('STRAWBERRY',0) or 0)>=100:
+            m=_q30_add_sale(m,'STRAWBERRY',min(4,int(shed.get('STRAWBERRY',0) or 0)))
+        if mel>=2 and int(shed.get('MELON',0) or 0)>=2 and float(prices.get('MELON',0) or 0)>=120:
+            m=_q30_add_sale(m,'MELON',min(4,int(shed.get('MELON',0) or 0)))
+        a['market']=_q30_merge_sell(m)[:10]
+    except Exception:pass
+    return a
+
+agent=q30_v2a
+
+def _q30_prod_counts(f):
+    keys=('WHEAT','CARROT','TOMATO','STRAWBERRY','MELON','COW','SHEEP','GOOSE','PASTURE','COOP')
+    c={k:0 for k in keys}
+    for row in (f.get('tiles',[]) or []):
+        for t in (row or []):
+            if not isinstance(t,dict): continue
+            if 'animal' in t and t.get('animal') in c: c[t.get('animal')]+=1
+            elif t.get('kind')=='PLANT' and t.get('crop') in c: c[t.get('crop')]+=1
+            elif t.get('kind') in ('PASTURE','COOP'): c[t.get('kind')]+=1
+    return tuple(c[k] for k in keys)
+
+def _q30_prod_distance(a,b):
+    return sum(abs(x-y) for x,y in zip(_q30_prod_counts(a),_q30_prod_counts(b)))
+
+def q30_v3(observation,configuration=None):
+    o=observation if isinstance(observation,dict) else {}
+    try:
+        p=int(o.get('player',0) or 0); s=_q30_step(o); fs=o.get('farms',[]) or []
+        mode=_Q30V1_STATE.get(p,{}).get('mode')
+        if s>=240 and mode=='LOW' and len(fs)>=2 and _q30_prod_distance(fs[p],fs[1-p])<=3:
+            return generic_q30_v1(observation,configuration)
+    except Exception: pass
+    return q30_v2a(observation,configuration)
+
+agent=q30_v3
+
+_V3_ORIG_RECOVERY = _v2_structural_recovery
+
+def _v2_structural_recovery(action, obs, player, step):
+    day = step // 24
+    if _V2_LAST_DAY.get(player) != day:
+        _V2_QUEUE[player] = {}
+        _V2_LAST_DAY[player] = day
+    out = copy.deepcopy(action)
+    positions = _v2_positions(obs, player)
+    acts = [out.get('farmer', ['PASS'])] + list(out.get('hands', []) or [])
+    if len(acts) < len(positions): acts += [['PASS'] for _ in range(len(positions)-len(acts))]
+    else: acts = acts[:len(positions)]
+    queues = _V2_QUEUE.setdefault(player,{})
+    newacts=list(acts)
+    seeds=((obs.get('private',{}) or {}).get('seeds',{}) or {})
+    for idx,base_act in enumerate(acts):
+        q=queues.get(idx,[])
+        if q:
+            exec_act=q.pop(0)
+            if not _v2_is_pass(base_act): q.append(copy.deepcopy(base_act))
+            newacts[idx]=exec_act
+            if q: queues[idx]=q
+            else: queues.pop(idx,None)
+            continue
+        op=base_act[0] if isinstance(base_act,list) and base_act else None
+        if idx>=len(positions): continue
+        tile=_v2_tile(obs,player,positions[idx])
+        if isinstance(tile,dict) and tile.get('kind')=='WEED':
+            if op in ('BUILD_PASTURE','BUILD_COOP'):
+                newacts[idx]=['DIG']; queues[idx]=[copy.deepcopy(base_act)]
+            elif op=='PLANT' and len(base_act)>=2 and int(seeds.get(base_act[1],0) or 0)>0:
+                newacts[idx]=['DIG']; queues[idx]=[copy.deepcopy(base_act)]
+    out['farmer']=newacts[0] if newacts else ['PASS']; out['hands']=newacts[1:]
+    return out
+
+agent=q30_v3
+
+_Q30_THROTTLE={0:{},1:{}}
+
+def _q30_extra_ok(p,item,s,cool=4):
+    last=_Q30_THROTTLE.setdefault(p,{}).get(item,-999)
+    return s-last>=cool
+
+def _q30_extra_mark(p,item,s): _Q30_THROTTLE.setdefault(p,{})[item]=s
+
+def q30_v3t(observation,configuration=None):
+    a=copy.deepcopy(generic_q30_v1(observation,configuration))
+    try:
+        o=observation if isinstance(observation,dict) else {}; s=_q30_step(o); p=int(o.get('player',0) or 0)
+        if s==0:_Q30_THROTTLE[p]={}
+        if s<240:return a
+        fs=o.get('farms',[]) or []; mode=_Q30V1_STATE.get(p,{}).get('mode')
+        if len(fs)>=2 and mode=='LOW' and _q30_prod_distance(fs[p],fs[1-p])<=3:return a
+        opp=fs[1-p]; shed=((o.get('private',{}) or {}).get('shed',{}) or {}); prices=((o.get('market',{}) or {}).get('prices',{}) or {}); shops=list(((o.get('town',{}) or {}).get('unlocked_shops',[]) or [])); m=list(a.get('market',[]) or [])
+        dairy=any(x in ('SMOOTHIE_SHOP','PIZZA_SHOP','ICE_CREAM_SHOP') for x in shops); berry=any(x in ('SMOOTHIE_SHOP','BRUNCH_SPOT','ICE_CREAM_SHOP','FARMERS_MARKET') for x in shops); yarn='YARN_STORE' in shops; carrot=('PET_CAFE' in shops or 'FARMERS_MARKET' in shops)
+        def add(item,q,cool=4):
+            nonlocal m
+            if q<=0 or not _q30_extra_ok(p,item,s,cool) or _q30_has_sale(m,item):return
+            before=len(m); m=_q30_add_sale(m,item,q)
+            if len(m)>before:_q30_extra_mark(p,item,s)
+        if dairy and int(shed.get('MILK',0) or 0)>=4 and float(prices.get('MILK',0) or 0)>=80:add('MILK',min(4,int(shed.get('MILK',0) or 0)))
+        if (s%4)==1:
+            if yarn and int(shed.get('WOOL',0) or 0)>=2 and (float(prices.get('WOOL',0) or 0)>=150 or sum(int(v or 0) for v in shed.values())>=85):add('WOOL',min(3,int(shed.get('WOOL',0) or 0)))
+            if berry and int(shed.get('STRAWBERRY',0) or 0)>=3 and float(prices.get('STRAWBERRY',0) or 0)>=85:add('STRAWBERRY',min(3,int(shed.get('STRAWBERRY',0) or 0)))
+            if carrot and int(shed.get('CARROT',0) or 0)>=2 and float(prices.get('CARROT',0) or 0)>=30:add('CARROT',min(3,int(shed.get('CARROT',0) or 0)))
+        st,mel=_q30_maturing(opp,int(o.get('day',0) or 0))
+        if st>=4 and int(shed.get('STRAWBERRY',0) or 0)>=3 and float(prices.get('STRAWBERRY',0) or 0)>=100:add('STRAWBERRY',min(4,int(shed.get('STRAWBERRY',0) or 0)))
+        if mel>=2 and int(shed.get('MELON',0) or 0)>=2 and float(prices.get('MELON',0) or 0)>=120:add('MELON',min(4,int(shed.get('MELON',0) or 0)))
+        a['market']=_q30_merge_sell(m)[:10]
+    except Exception:pass
+    return a
+
+agent=q30_v3t
+
+def _q30_herd(f):
+    c=s=0
+    for row in (f.get('tiles',[]) or []):
+        for t in (row or []):
+            if isinstance(t,dict):
+                c += t.get('animal')=='COW'; s += t.get('animal')=='SHEEP'
+    return c+s
+
+def q30_v3h(observation,configuration=None):
+    o=observation if isinstance(observation,dict) else {}
+    try:
+        p=int(o.get('player',0) or 0); s=_q30_step(o); fs=o.get('farms',[]) or []
+        if len(fs)>=2 and s>=240:
+            mode=_Q30V1_STATE.get(p,{}).get('mode')
+            d=_q30_prod_distance(fs[p],fs[1-p])
+            # Low-response near mirrors: preserve expert market schedule.
+            if mode=='LOW' and d<=3:
+                return generic_q30_v1(observation,configuration)
+            # Public high-capacity / diverged opponent: keep aggressive v2a front-run.
+            if _q30_herd(fs[1-p]) >= _q30_herd(fs[p])+2 or d>=8:
+                return q30_v2a(observation,configuration)
+    except Exception: pass
+    # Similar-capacity non-LOW games use throttled capacity-aware execution.
+    return q30_v3t(observation,configuration)
+
+agent=q30_v3h
+
+_V3M_BASE_AGENT = agent
+
+import types as _V3M_TYPES
+
+# Immutable _V3M_TAIL_SRC extracted to _V3M_TAIL_SRC.py
+
+_V3M_TAIL = _V3M_TYPES.ModuleType('_v3m_tail')
+
+exec(compile(_V3M_TAIL_SRC, '<_v3m_tail>', 'exec'), _V3M_TAIL.__dict__)
+
+_V3M_MODE={0:'BASE',1:'BASE'}
+
+_V3M_DUE={0:{},1:{}}
+
+def _v3m_step(o):
+    return int(o.get('step', int(o.get('day',0) or 0)*24 + int(o.get('hour',0) or 0)) or 0)
+
+def _v3m_repay(m,due):
+    out=[]; rem=dict(due or {})
+    for o in m:
+        if isinstance(o,list) and len(o)>=3 and o[0]=='SELL' and rem.get(o[1],0)>0:
+            q=int(o[2]); cut=min(q,rem[o[1]]); q-=cut; rem[o[1]]-=cut
+            if q>0: out.append(['SELL',o[1],q])
+        else: out.append(o)
+    return out
+
+def _v3m_tail_action(obs):
+    s=_v3m_step(obs); p=int(obs.get('player',0) or 0)
+    a=copy.deepcopy(_V3M_TAIL.agent(obs)); m=list(a.get('market',[]) or [])
+    m=_v3m_repay(m,_V3M_DUE[p].pop(s,{}))
+    try:
+        A=getattr(_V3M_TAIL,'_A',None); r=A.R[A.cur]
+        if s+1<len(r) and len(m)<10:
+            nxt={}
+            for o in (r[s+1].get('market') or []):
+                if isinstance(o,list) and len(o)>=3 and o[0]=='SELL':
+                    nxt[o[1]]=nxt.get(o[1],0)+int(o[2])
+            shed=dict(((obs.get('private',{}) or {}).get('shed',{}) or {})); cur={}
+            for o in m:
+                if isinstance(o,list) and len(o)>=3 and o[0]=='SELL':
+                    cur[o[1]]=cur.get(o[1],0)+int(o[2])
+            prices=((obs.get('market',{}) or {}).get('prices',{}) or {}); cand=[]
+            for it,q in nxt.items():
+                avail=max(0,int(shed.get(it,0) or 0)-cur.get(it,0)); take=min(2,q,avail)
+                if take>0 and float(prices.get(it,0) or 0)>1:
+                    cand.append((float(prices.get(it,0) or 0)*take,it,take))
+            if cand:
+                _,it,take=max(cand); m.append(['SELL',it,take])
+                d=_V3M_DUE[p].setdefault(s+1,{}); d[it]=d.get(it,0)+take
+    except Exception:
+        pass
+    a['market']=m[:10]
+    # Submission-safety shape guard: the embedded continuation can retain
+    # speculative actions for hands that were not successfully hired. Those
+    # actions are no-ops in the exact simulator; align to the public live hand
+    # count without changing any executable hand action.
+    try:
+        fs=obs.get('farms',[]) or []
+        farm=fs[p] if 0 <= p < len(fs) else {}
+        nh=len(farm.get('hands',[]) or [])
+        hs=list(a.get('hands',[]) or [])
+        if len(hs)<nh: hs += [['PASS'] for _ in range(nh-len(hs))]
+        a['hands']=hs[:nh]
+    except Exception:
+        pass
+    return a
+
+def q30_v3m(observation,configuration=None):
+    o=observation if isinstance(observation,dict) else {}
+    s=_v3m_step(o); p=int(o.get('player',0) or 0)
+    if s==0:
+        _V3M_MODE[p]='BASE'; _V3M_DUE[p]={}
+        try: _V3M_TAIL._A=None
+        except Exception: pass
+    if s==72:
+        fs=o.get('farms',[]) or []; opp=fs[1-p] if len(fs)>=2 else {}
+        shops=list(((o.get('town',{}) or {}).get('unlocked_shops',[]) or []))
+        opp_money=float(opp.get('money',9999) or 0)
+        _V3M_MODE[p]='HIGHCAP' if (opp_money<=180 and (not shops or shops[0]!='YARN_STORE')) else 'BASE'
+    if _V3M_MODE.get(p)=='HIGHCAP' and s>=72:
+        return _v3m_tail_action(o)
+    return _V3M_BASE_AGENT(o,configuration)
+
+agent=q30_v3m
+
+_V4B_BASE = agent
+
+_V4B_SEED_COST={'WHEAT':10,'CARROT':20,'TOMATO':50,'STRAWBERRY':100,'MELON':80}
+
+def _v4b_orig_key(step,sh):
+    if step<72:return 'OPENING',step
+    if step<144:return 'S1_'+_cat(sh[0] if sh else ''),step-72
+    if step<216:return 'S2_'+_s2(sh),step-144
+    ph=min(9,step//72);return f'P{ph}_{_fam(sh)}',step-ph*72
+
+def _v4b_fib_hire_cost(n):
+    a,b=1,1; total=0
+    for _ in range(max(0,int(n))):
+        total += a; a,b=b,a+b
+    return total
+
+def _v4b_nextday_reserve(o,p,s):
+    # Only plan one bootstrap market action ahead; later same-day SELLs can fund
+    # later hires, so reserving the first block avoids unnecessary hoarding.
+    nd=(s//24+1)*24
+    if nd>718:return 0
+    sh=list(((o.get('town',{}) or {}).get('unlocked_shops',[]) or []))
+    # Respect v3j2's only physical S1 reroute when it is active.
+    rsh=sh
+    if 72<=nd<144 and _V3J2_S1_OVERRIDE.get(p)=='BAL': rsh=['BAKERY']+list(sh[1:])
+    k,i=_v4b_orig_key(nd,rsh)
+    try: mk=list(PROGRAM[k][i].get('market',[]) or [])
+    except Exception:return 0
+    # At the day boundary, reserve only the initial bootstrap hires before the
+    # first cash-generating SELL.  HIRE cost resets daily.
+    n=0
+    for x in mk:
+        if not isinstance(x,list) or not x: continue
+        if x[0]=='SELL': break
+        if x[0]=='HIRE': n += 1
+    return _v4b_fib_hire_cost(n)
+
+def _v4b_guard(a,o,p,s,configuration=None):
+    # HIGHCAP has its own validated capital choreography; do not alter it.
+    if _V3M_MODE.get(p)!='BASE': return a
+    hour=s%24
+    if hour<12 or hour>=24:return a
+    reserve=_v4b_nextday_reserve(o,p,s)
+    if reserve<=0:return a
+    m=list(a.get('market',[]) or [])
+    # If this turn explicitly sells first, preserve the validated funded basket.
+    if any(isinstance(x,list) and x and x[0]=='SELL' for x in m): return a
+    fs=o.get('farms',[]) or []; f=fs[p] if 0<=p<len(fs) else {}
+    cash=float(f.get('money',0) or 0)
+    prices=((o.get('market',{}) or {}).get('prices',{}) or {})
+    out=[]
+    for x in m:
+        if not (isinstance(x,list) and x):
+            out.append(x); continue
+        op=x[0]
+        if op in ('BUY_SEED','BUY_PRODUCT') and len(x)>=3:
+            item=x[1]
+            try:q=max(0,int(x[2]))
+            except:q=0
+            if op=='BUY_SEED': unit=float(_V4B_SEED_COST.get(item,0) or 0)
+            else: unit=float(prices.get(item,0) or 0)
+            if unit>0 and q>0:
+                maxq=max(0,int((cash-reserve)//unit))
+                take=min(q,maxq)
+                if take>0:
+                    y=list(x);y[2]=take;out.append(y);cash-=take*unit
+                continue
+        out.append(x)
+    a['market']=out[:10]
+    return a
+
+def q30_v4b(observation,configuration=None):
+    o=observation if isinstance(observation,dict) else {}
+    p=int(o.get('player',0) or 0); s=_v3m_step(o)
+    a=copy.deepcopy(_V4B_BASE(o,configuration))
+    try:return _v4b_guard(a,o,p,s,configuration)
+    except Exception:return a
+
+agent=q30_v4b
+
+_V4E_BASE=agent
+
+_V4E_Y2={0:False,1:False}
+
+def q30_v4e(observation,configuration=None):
+    o=observation if isinstance(observation,dict) else {};p=int(o.get('player',0) or 0);s=_v3m_step(o)
+    if s==0:_V4E_Y2[p]=False
+    if s==144:
+        sh=list(((o.get('town',{}) or {}).get('unlocked_shops',[]) or []))
+        if _V3M_MODE.get(p)=='BASE' and len(sh)>=2 and sh[1]=='YARN_STORE' and sh[0]!='YARN_STORE':_V4E_Y2[p]=True
+    if _V4E_Y2.get(p) and s>=240:
+        a=copy.deepcopy(q30_v2a(o,configuration));fs=o.get('farms',[]) or [];nh=len(fs[p].get('hands',[]) or []) if 0<=p<len(fs) else 0
+        h=list(a.get('hands',[]) or []);h=h[:nh]+[['PASS'] for _ in range(max(0,nh-len(h)))];a['hands']=h;return a
+    return _V4E_BASE(o,configuration)
+
+agent=q30_v4e
+
+_RC3_HITS={0:[],1:[]}
+
+_RC3_ANIMAL_COST={'SHEEP':500,'COW':400,'GOOSE':300}
+
+_RC3_SEED_COST={'WHEAT':10,'CARROT':20,'TOMATO':50,'STRAWBERRY':100,'MELON':80}
+
+def _rc3_step(o):
+    return int(o.get('step',int(o.get('day',0) or 0)*24+int(o.get('hour',0) or 0)) or 0)
+
+def _rc3_future_pick_qty(o,p,s,item,h=24):
+    sh=list(((o.get('town',{}) or {}).get('unlocked_shops',[]) or []))
+    phase_end=min(719,((s//72)+1)*72); end=min(phase_end,s+1+h); n=0; places=0
+    for t in range(s+1,end):
+        k,i=_v4b_orig_key(t,sh)
+        if k not in PROGRAM or not (0<=i<len(PROGRAM[k])): continue
+        aa=PROGRAM[k][i]
+        for x in [aa.get('farmer')]+list(aa.get('hands',[]) or []):
+            if not (isinstance(x,list) and len(x)>1): continue
+            if x[0]=='PICKUP' and x[1]==item:
+                try:n+=int(x[2]) if len(x)>2 else 1
+                except:n+=1
+            elif x[0]=='PLACE' and x[1]==item: places+=1
+    return min(n,places) if places else 0
+
+def _rc3_hire_cost_from(farm,n):
+    def fib(i):
+        a,b=1,1
+        for _ in range(i): a,b=b,a+b
+        return a
+    cur=int(farm.get('hires_today',0) or 0)
+    return sum(fib(cur+j) for j in range(n))
+
+def _rc3_step241_sheep(a,o,p,s):
+    # The old v5l allocator was too permissive late in the horizon.  RC3 allows
+    # the exact same marginal-value test at one early compatible slot only.
+    if s!=241 or _V3M_MODE.get(p)!='BASE': return a
+    sh=list(((o.get('town',{}) or {}).get('unlocked_shops',[]) or []))
+    if 'YARN_STORE' not in sh: return a
+    m=list(a.get('market',[]) or []); idx=None; buyq=0
+    for i,x in enumerate(m):
+        if isinstance(x,list) and len(x)>=3 and x[0]=='BUY_ANIMAL' and x[1]=='SHEEP':
+            idx=i
+            try: buyq=max(0,int(x[2]))
+            except: buyq=0
+            break
+    if idx is None: return a
+    need=_rc3_future_pick_qty(o,p,s,'SHEEP',24)
+    shed=int((((o.get('private',{}) or {}).get('shed',{}) or {}).get('SHEEP',0)) or 0)
+    extra=min(1,max(0,need-(shed+buyq)))
+    if extra<=0:return a
+    fs=o.get('farms',[]) or []; farm=fs[p] if 0<=p<len(fs) else {}; cash=float(farm.get('money',0) or 0)
+    hires=sum(1 for x in m if isinstance(x,list) and x and x[0]=='HIRE')
+    structural=_rc3_hire_cost_from(farm,hires)
+    for x in m:
+        if not (isinstance(x,list) and x):continue
+        op=x[0]
+        if op=='BUY_ANIMAL' and len(x)>=3:
+            try:structural+=_RC3_ANIMAL_COST.get(x[1],0)*max(0,int(x[2]))
+            except:pass
+        elif op=='BUY_SEED' and len(x)>=3:
+            try:structural+=_RC3_SEED_COST.get(x[1],0)*max(0,int(x[2]))
+            except:pass
+        elif op=='BUY_LAND':
+            uq=len(farm.get('unlocked_quadrants',[]) or [])
+            structural += {1:1000,2:2000,3:4000}.get(uq,0)
+    if cash-structural < 500*extra+100:return a
+    y=list(m[idx]);y[2]=buyq+extra;m[idx]=y;a['market']=m[:10]
+    _RC3_HITS[p].append(('SHEEP241',s,buyq,buyq+extra))
+    return a
+
+def _rc3_opp_active(farm):
+    if not isinstance(farm,dict):return False
+    if float(farm.get('money',0) or 0)>0:return True
+    if len(farm.get('hands',[]) or [])>0:return True
+    for row in farm.get('tiles',[]) or []:
+        for t in row or []:
+            if isinstance(t,dict) and (t.get('kind')=='PLANT' or t.get('crop') or t.get('animal')):return True
+    return False
+
+def _rc3_step385_fertilizer(a,o,p,s):
+    # Conservative D16H1 throttle: keep choreography, only release one unit of
+    # low-marginal fertilizer capital when we already carry a material reserve.
+    if s!=385 or _V3M_MODE.get(p)!='BASE':return a
+    shed=int((((o.get('private',{}) or {}).get('shed',{}) or {}).get('FERTILIZER',0)) or 0)
+    if shed<12:return a
+    fs=o.get('farms',[]) or []
+    opp=fs[1-p] if len(fs)>=2 else {}
+    if not _rc3_opp_active(opp):return a
+    m=list(a.get('market',[]) or []);out=[];changed=False
+    for x in m:
+        if (not changed and isinstance(x,list) and len(x)>=3 and x[0]=='BUY_PRODUCT' and x[1]=='FERTILIZER'):
+            try:q=max(0,int(x[2]))
+            except:q=0
+            if q>0:
+                changed=True
+                if q>1:
+                    y=list(x);y[2]=q-1;out.append(y)
+                _RC3_HITS[p].append(('FERT385',s,q,max(0,q-1)))
+                continue
+        out.append(x)
+    if changed:a['market']=out[:10]
+    return a
+
+def king_v4e_rc3(observation,configuration=None):
+    o=observation if isinstance(observation,dict) else {};p=int(o.get('player',0) or 0);s=_rc3_step(o)
+    if s==0:_RC3_HITS[p]=[]
+    if s>=719:
+        fs=o.get('farms',[]) or [];nh=len((fs[p].get('hands',[]) if 0<=p<len(fs) else []) or [])
+        return {'farmer':['PASS'],'hands':[['PASS'] for _ in range(nh)],'market':[]}
+    a=copy.deepcopy(q30_v4e(o,configuration))
+    try:a=_rc3_step241_sheep(a,o,p,s)
+    except Exception:pass
+    try:a=_rc3_step385_fertilizer(a,o,p,s)
+    except Exception:pass
+    return a
+
+agent=king_v4e_rc3
+
+_RC4_SF_LOCK={0:False,1:False}
+
+_RC4_HITS={0:[],1:[]}
+
+def _rc4_is_smartfarm_family(o,p):
+    try:
+        farms=o.get('farms',[]) or []
+        opp=farms[1-p]
+        return (
+            float(opp.get('money',0) or 0)==66.0
+            and opp.get('farmer')==[4,3]
+            and len(opp.get('hands',[]) or [])==5
+            and list(opp.get('unlocked_quadrants',[]) or [])==['NW']
+        )
+    except Exception:
+        return False
+
+def _rc4_hire_last(a,o,p,s):
+    if not _RC4_SF_LOCK.get(p,False) or s<577:
+        return a
+    m=list(a.get('market',[]) or [])
+    if len(m)<2 or not any(isinstance(x,list) and x and x[0]=='HIRE' for x in m):
+        return a
+    indexed=list(enumerate(m))
+    ordered=sorted(indexed,key=lambda z:(1 if isinstance(z[1],list) and z[1] and z[1][0]=='HIRE' else 0,z[0]))
+    out=[x for _,x in ordered]
+    if out!=m:
+        a['market']=out[:10]
+        _RC4_HITS[p].append(('SF_HIRE_LAST',s))
+    return a
+
+def king_v4e_rc4(observation,configuration=None):
+    o=observation if isinstance(observation,dict) else {}
+    p=int(o.get('player',0) or 0)
+    s=_rc3_step(o)
+    if s==0:
+        _RC4_SF_LOCK[p]=False
+        _RC4_HITS[p]=[]
+    a=king_v4e_rc3(o,configuration)
+    if s==2 and _rc4_is_smartfarm_family(o,p):
+        _RC4_SF_LOCK[p]=True
+    try:
+        a=_rc4_hire_last(a,o,p,s)
+    except Exception:
+        pass
+    return a
+
+agent=king_v4e_rc4

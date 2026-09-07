@@ -1,0 +1,104 @@
+[
+  {
+    "agent": "species_78_goose_cow",
+    "opponent": "pass",
+    "summary": {
+      "agent_a": "species_78_goose_cow",
+      "agent_b": "pass",
+      "seconds": 0.0144844,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 139281,
+      "mean_margin": 136281,
+      "cash_cvar10": 115730,
+      "margin_cvar10": 112730,
+      "pass_J": 134571
+    }
+  },
+  {
+    "agent": "species_78_goose_cow",
+    "opponent": "species_78_goose_cow",
+    "summary": {
+      "agent_a": "species_78_goose_cow",
+      "agent_b": "species_78_goose_cow",
+      "seconds": 0.0260851,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 96761.1,
+      "mean_margin": 0,
+      "cash_cvar10": 61697,
+      "margin_cvar10": 0,
+      "pass_J": 89748.3
+    }
+  },
+  {
+    "agent": "species_78_goose_cow",
+    "opponent": "species_89_goose_cow_sell",
+    "summary": {
+      "agent_a": "species_78_goose_cow",
+      "agent_b": "species_89_goose_cow_sell",
+      "seconds": 0.0361512,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 112528,
+      "mean_margin": 46482.5,
+      "cash_cvar10": 80557,
+      "margin_cvar10": 30537,
+      "pass_J": 106134
+    }
+  },
+  {
+    "agent": "species_89_goose_cow_sell",
+    "opponent": "pass",
+    "summary": {
+      "agent_a": "species_89_goose_cow_sell",
+      "agent_b": "pass",
+      "seconds": 0.0207067,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 161013,
+      "mean_margin": 158013,
+      "cash_cvar10": 111475,
+      "margin_cvar10": 108475,
+      "pass_J": 151105
+    }
+  },
+  {
+    "agent": "species_89_goose_cow_sell",
+    "opponent": "species_78_goose_cow",
+    "summary": {
+      "agent_a": "species_89_goose_cow_sell",
+      "agent_b": "species_78_goose_cow",
+      "seconds": 0.0363041,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0,
+      "mean_cash": 66045.6,
+      "mean_margin": -46482.5,
+      "cash_cvar10": 50020,
+      "margin_cvar10": -89399,
+      "pass_J": 62840.5
+    }
+  },
+  {
+    "agent": "species_89_goose_cow_sell",
+    "opponent": "species_89_goose_cow_sell",
+    "summary": {
+      "agent_a": "species_89_goose_cow_sell",
+      "agent_b": "species_89_goose_cow_sell",
+      "seconds": 0.0289509,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 72579.1,
+      "mean_margin": 0,
+      "cash_cvar10": 45831,
+      "margin_cvar10": 0,
+      "pass_J": 67229.5
+    }
+  }
+]

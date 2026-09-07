@@ -1,0 +1,33 @@
+{
+  "source_program": 150,
+  "source_metadata": "league/top_replay_library/IMPORT.json",
+  "ticket": 16,
+  "original": 9,
+  "replacement": 10,
+  "estimated_cash_delta": -1039,
+  "compiler": "Local exact animal identity trace plus optional output repair; old dated worker service reused",
+  "status": "experimental, complete deployment checks pending",
+  "source": {
+    "program": 150,
+    "id": "episode_106370340_seat_0",
+    "episode": 106370340,
+    "seat": 0,
+    "team": "JustinLee",
+    "rank": 10,
+    "submission": 56065461,
+    "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T08:02:02.csv",
+    "replay_sha256": "5284f2fdf9dfdebb5b694d2de797f2daf6b60ae13fcb898db6793983217536e2"
+  },
+  "local_compiler_sha256": {
+    "src/search_animal_tickets.cpp": "0703616156381d68c53a1ced14901bcf9532e63cb236ed412dd1458b9139f4aa",
+    "include/animal_ticket.hpp": "58569783c158d6d2ac19b5dcf95fcb75cdd12dccd4b5727a9479bed5184a36df",
+    "include/ticket_trace.hpp": "127b5b9f87494733c1353b01b06e195f47655fc3ae81cc35e6892cf640f9fcac",
+    "include/ticket_estimate.hpp": "1f8e871d145b9b0a8790441355d7e588e1590488d989642fc3aa9cc58222569d",
+    "include/market_tape.hpp": "f223dafef369e33013b2e5a55460aff8358652ded520a16128e5b26d17faf72c",
+    "include/biology.hpp": "82225498387721be96a6fc0da45323086faa9f1057ff3a5607b909b23876bb23",
+    "include/evaluation.hpp": "3a2821900ef5cbe2094ff25be19a8cf48d41e5aa7b4d83d9528221b5fa692b3e",
+    "include/profile.hpp": "ee9a5305aa3778dca3e6272b1f4d38afd0f4a806b3c5c5414367626a34e70724"
+  },
+  "snapshot_scope": "Compiler source at lineage attachment; verify binary build hash for exact executed version",
+  "reuse": "User authorized borrowing public replay schedules; no separate replay code license supplied"
+}

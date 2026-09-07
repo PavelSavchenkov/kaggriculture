@@ -1,0 +1,3 @@
+# remove_care_001_6
+
+Source course 55 from the experiment's top_replay_library; exact source lineage remains in its IMPORT.json. Remove CARE and the final daily hire on day 22 at tile (4,1) while preserving all other day work, end stocks and economic orders. V30 rebuilds the complete worker day. Local code proposes and estimates the service edit. Contract from discovery seed 1000 seat 0 versus public_router. No seed or hidden input is used at runtime. Fixed complete course with normalized worker counts; discovery artifact, not promoted. Full later dependencies are tested in live-opponent games.

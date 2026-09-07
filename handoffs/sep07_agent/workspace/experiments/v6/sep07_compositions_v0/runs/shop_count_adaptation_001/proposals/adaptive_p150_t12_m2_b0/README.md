@@ -1,0 +1,3 @@
+# adaptive_p150_t12_m2_b0
+
+Experimental single cow/sheep choice on Justin150’s terminal-improved course. Choose at purchase from currently observed milk/wool shop demand; preserve the original animal on ties. Mode2 counts shops, mode3 counts demand units (Yarn counts twice). Purchase, pickup, placement and mixed-product deposits/sales are changed together. Original service routes are reused and require exact realization checks. No optimized day plans reused. The user supplied the shop-choice intuition. Initial 64-game screens per opponent are in the run; fresh and deployment checks remain pending. Exact lineage is in IMPORT.json.

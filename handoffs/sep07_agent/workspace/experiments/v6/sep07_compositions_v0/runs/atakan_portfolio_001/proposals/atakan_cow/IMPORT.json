@@ -1,0 +1,72 @@
+{
+  "donors": [
+    {
+      "branch": 0,
+      "name": "cow",
+      "program": 156,
+      "episode": 106371597,
+      "seat": 1,
+      "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+      "source_import": "research/animal_decision_replays/atakan_three_way/cow/IMPORT.json",
+      "model_inputs_sha256": {
+        "daily_service_harvest_trade.json": "44ace01d4efddd44fdbd0bda0879eb3277e2fe44ab609071b025edc593824b9d",
+        "unit_events.csv": "83048da619ac31f75624303319398bcfd85cf330a89b298ee6801026da1bdd61",
+        "raw_actions_719.json": "76ab12f9e4fcc68e86749cbeb2f5739cf42c9f3faa554b793d4a41c9478b1b98"
+      }
+    },
+    {
+      "branch": 1,
+      "name": "sheep",
+      "program": 160,
+      "episode": 106380079,
+      "seat": 1,
+      "replay_sha256": "74e8da725d11254e9d2496f62f57fd30b4295955158a510b8e92657507e2de1d",
+      "source_import": "research/animal_decision_replays/atakan_three_way/sheep/IMPORT.json",
+      "model_inputs_sha256": {
+        "daily_service_harvest_trade.json": "c7ddf484d068330da80cb39b33fe8d4468fb3cdf0b57a041fdc7ec467ef8475f",
+        "unit_events.csv": "f408b60b96ec8ce5e03eba040e5cbac88431e4999a03897bd06ebc69fe78b834",
+        "raw_actions_719.json": "3ca126849a3a519964eb404dcf003151970c5e2a4f8567c6a29e33a64a34c9ab"
+      }
+    },
+    {
+      "branch": 2,
+      "name": "goose",
+      "program": 157,
+      "episode": 106374592,
+      "seat": 1,
+      "replay_sha256": "9e618de2d4d4cd6bf17f99338efd2e428a2c5d05d18a5f51ed920595ad946224",
+      "source_import": "research/animal_decision_replays/atakan_three_way/goose/IMPORT.json",
+      "model_inputs_sha256": {
+        "daily_service_harvest_trade.json": "d0f024350766c891e41ceaaafc6fdb8e292c617798b4ff356f9f50fab3a4960c",
+        "unit_events.csv": "d533019e3c52cbffdd7ad34efa2bf7c913adf8bfc80ce3763c650f3891957ccd",
+        "raw_actions_719.json": "849a471c56da9a5a588c8e00bb45f5a16b56c8d67b9886c0bc501c324c6b63a1"
+      }
+    }
+  ],
+  "shared_exact_normalized_action_prefix": 226,
+  "original_branch_logic": "Not supplied; all routing formulas below are locally inferred experiments",
+  "flow_model": "Recorded successful own product purchases/sales after226 are immutable quantity forecasts; fixed animal/seed/land/hire costs retained. No donor future quotes, shops or rival flows are runtime inputs.",
+  "model_lineage": "Whole-farm flow pricing follows local include/animal_investment_value.hpp; public-herd full-service forecast follows include/herd_forecast.hpp, which attributes the portfolio idea to Dmitrii Gluzdov S38. This implementation is independently stored here.",
+  "limitations": [
+    "Donor successful quantities assume donor logistics/funding; actual continuation can deviate",
+    "Known shops plus discounted expected unknown shops are a forecast, not future observations",
+    "Rival current animals only, full daily care/feed and sale; future crops, expansion, labor and private stocks are unknown",
+    "Daily midpoint pricing ignores intraday scheduling and cash feasibility",
+    "Goose donor before226 has20wheat versus28 in cow/sheep; identical source actions do not imply identical realized states"
+  ],
+  "local_formula_source_hashes": {
+    "include/animal_investment_value.hpp": "e6a0838b930f6ecf9677acb432923fb1579e77b7a8672764e28ba4c9cb25312a",
+    "include/herd_forecast.hpp": "d446032580fed7628095cb1e736b57b0a64a44d7982ca26ed550f4dab9ec91dc"
+  },
+  "mode": 0,
+  "formula": "Routing disabled: source156",
+  "status": "Archived experimental control; not selected for league registration",
+  "validation": "runs/atakan_portfolio_001/REPORT.json",
+  "policy_source_sha256": {
+    "agent.cpp": "27d57e627693d7845333fb5277cc23f6dff283533f6901da7ad1afa1cae12fbd",
+    "agent.hpp": "053af78a510e2477bf025733d7b13580e99ea4016776e9a217580683769512b5",
+    "audit.hpp": "46e1132f3b4d804c3820a8ed62976a22f58a93c453d2093e709f7091221c458a",
+    "data.inc": "da5fab51d6cce627986fd8d34edb5c1075d8672ddb1d97c95e2e6cf9eb939f97",
+    "diagnostics.cpp": "003f6c4d121b8e7dae043daf72769625549856d9baf7e29bef4a19fb18357471"
+  }
+}

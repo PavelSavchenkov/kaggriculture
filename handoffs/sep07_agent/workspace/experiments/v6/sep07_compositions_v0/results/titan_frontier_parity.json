@@ -1,0 +1,19 @@
+{
+  "result": "matched_actions=11504",
+  "coverage": {
+    "competing_supply": 6604,
+    "changed_market_turns": 3677,
+    "route_default": 5454,
+    "route_yarn_first": 3786,
+    "parent_schedule": 4900,
+    "route_yarn_second": 2264
+  },
+  "config": {
+    "turnsPerDay": 24,
+    "townShopSellInterval": 4,
+    "townCenterSellInterval": 24,
+    "maxMarketOrdersPerTurn": 10,
+    "shedCapacity": 100
+  },
+  "scope": "Eight recorded streams plus eight forced shop/similarity/stock/weed streams; no Python local gameplay"
+}

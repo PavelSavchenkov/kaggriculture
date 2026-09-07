@@ -1,0 +1,160 @@
+import json
+import math
+from pathlib import Path
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+plt.style.use('ggplot')
+working = Path('/kaggle/working') if Path('/kaggle/working').exists() else Path('work/multi_competition/local_runs/kaggriculture')
+working.mkdir(parents=True, exist_ok=True)
+
+# ---- cell ----
+
+CROPS = {
+    'WHEAT':      {'seed': 10, 'first_yield_day': 2, 'max_yield_day': 4,  'interval': 0, 'max_yield': 6, 'ongoing': False, 'base_price': 25},
+    'CARROT':     {'seed': 20, 'first_yield_day': 2, 'max_yield_day': 3,  'interval': 0, 'max_yield': 4, 'ongoing': False, 'base_price': 35},
+    'TOMATO':     {'seed': 50, 'first_yield_day': 8, 'max_yield_day': 8,  'interval': 1, 'max_yield': 4, 'ongoing': True,  'base_price': 60},
+    'STRAWBERRY': {'seed': 100,'first_yield_day': 10,'max_yield_day': 10, 'interval': 2, 'max_yield': 4, 'ongoing': True,  'base_price': 120},
+    'MELON':      {'seed': 80, 'first_yield_day': 10,'max_yield_day': 12, 'interval': 0, 'max_yield': 6, 'ongoing': False, 'base_price': 250},
+}
+DEFAULTS = {'episodeSteps': 720, 'turnsPerDay': 24, 'shedCapacity': 100, 'maxMarketOrdersPerTurn': 10, 'farmHandCostMult': 1}
+MARKET = {
+    'WHEAT': {'base': 25, 'T': 400, 'below_func': 'sqrt', 'below_target': 0.80, 'above_func': 'log', 'above_target': 0.20},
+    'CARROT': {'base': 35, 'T': 450, 'below_func': 'hinge', 'below_target': 1.00, 'above_func': 'sqrt', 'above_target': 0.70},
+    'TOMATO': {'base': 60, 'T': 200, 'below_func': 'hinge', 'below_target': 0.40, 'above_func': 'sqrt', 'above_target': 0.60},
+    'STRAWBERRY': {'base': 120, 'T': 100, 'below_func': 'sqrt', 'below_target': 0.70, 'above_func': 'linear', 'above_target': 1.60},
+    'MELON': {'base': 250, 'T': 300, 'below_func': 'log', 'below_target': 0.20, 'above_func': 'sq', 'above_target': 3.60},
+}
+
+# ---- cell ----
+
+def unfertilized_daily_yield(crop, age):
+    c = CROPS[crop]
+    if c['ongoing']:
+        if age < c['first_yield_day']:
+            return 0
+        if (age - c['first_yield_day']) % c['interval'] != 0:
+            return 0
+        production_index = (age - c['first_yield_day']) // c['interval'] + 1
+        return 1 if production_index <= c['max_yield'] else 0
+    window_start = (c['max_yield_day'] + 1) // 2
+    peak_age = min(c['max_yield_day'], window_start + c['max_yield'] - 2)
+    units = min(c['max_yield'], 1 + peak_age - window_start + 1)
+    return units if age == peak_age else 0
+
+crop_rows = []
+for crop, c in CROPS.items():
+    cumulative = 0
+    last_positive = None
+    peak_age = None
+    peak_units = -1
+    for age in range(0, 20):
+        y = unfertilized_daily_yield(crop, age)
+        cumulative += y
+        if y > 0:
+            last_positive = age
+        if cumulative > peak_units:
+            peak_units = cumulative
+            peak_age = age
+        crop_rows.append({'crop': crop, 'age': age, 'yield_units_that_day': y, 'cumulative_units': cumulative})
+
+crop_df = pd.DataFrame(crop_rows)
+crop_summary = crop_df.groupby('crop').agg(
+    total_unfertilized_units=('yield_units_that_day', 'sum'),
+    last_effective_age=('age', lambda s: int(s[crop_df.loc[s.index, 'yield_units_that_day'] > 0].max())),
+).reset_index()
+crop_summary['seed_cost'] = crop_summary['crop'].map(lambda x: CROPS[x]['seed'])
+crop_summary['base_price'] = crop_summary['crop'].map(lambda x: CROPS[x]['base_price'])
+crop_summary['gross_at_base'] = crop_summary['total_unfertilized_units'] * crop_summary['base_price']
+crop_summary['net_seed_only'] = crop_summary['gross_at_base'] - crop_summary['seed_cost']
+crop_summary['occupied_days_denominator'] = crop_summary['last_effective_age'] + 1
+crop_summary['net_per_occupied_day'] = crop_summary['net_seed_only'] / crop_summary['occupied_days_denominator']
+expected = {'WHEAT': (4, 4), 'CARROT': (3, 3), 'TOMATO': (4, 11), 'STRAWBERRY': (4, 16), 'MELON': (6, 10)}
+for row in crop_summary.itertuples():
+    assert (row.total_unfertilized_units, row.last_effective_age) == expected[row.crop]
+crop_summary['field_units'] = 25 * crop_summary['total_unfertilized_units']
+crop_summary.sort_values('net_per_occupied_day', ascending=False)
+
+# ---- cell ----
+
+fig, axes = plt.subplots(1, 3, figsize=(15, 4))
+for crop in CROPS:
+    sub = crop_df[crop_df['crop'] == crop]
+    axes[0].plot(sub['age'], sub['cumulative_units'], marker='o', label=crop)
+axes[0].set_title('Unfertilized cumulative crop units')
+axes[0].set_xlabel('Age in days')
+axes[0].set_ylabel('Units')
+axes[0].legend(fontsize=8)
+
+crop_summary.sort_values('net_per_occupied_day').plot.barh(x='crop', y='net_per_occupied_day', ax=axes[1], color='#3a7f63', legend=False)
+axes[1].set_title('Seed-only net per occupied day')
+axes[1].set_xlabel('Money / tile / day at base price')
+
+crop_summary.plot.bar(x='crop', y='field_units', ax=axes[2], color='#9b6538', legend=False)
+axes[2].axhline(DEFAULTS['shedCapacity'], color='black', linewidth=1, linestyle='--')
+axes[2].set_title('25-tile lifetime yield vs shed capacity')
+axes[2].set_ylabel('Product units (not all simultaneous)')
+fig.tight_layout()
+fig.savefig(working / 'kaggriculture_crop_timing.png', dpi=160)
+plt.show()
+
+# ---- cell ----
+
+def fib_sequence(n):
+    seq = []
+    a, b = 1, 1
+    for _ in range(n):
+        seq.append(a)
+        a, b = b, a + b
+    return seq
+
+hires = list(range(0, 21))
+fibs = fib_sequence(max(hires) + 1)
+labor_rows = []
+for n in hires:
+    total_cost = sum(fibs[:n]) * DEFAULTS['farmHandCostMult']
+    optimistic_hand_actions = sum(max(0, DEFAULTS['turnsPerDay'] - 1 - i // DEFAULTS['maxMarketOrdersPerTurn']) for i in range(n))
+    labor_rows.append({
+        'hires': n,
+        'daily_hire_cost': total_cost,
+        'optimistic_total_actions': DEFAULTS['turnsPerDay'] + optimistic_hand_actions,
+        'cost_per_extra_action': total_cost / optimistic_hand_actions if optimistic_hand_actions else np.nan,
+    })
+labor_df = pd.DataFrame(labor_rows)
+assert labor_df.loc[12, 'daily_hire_cost'] == 376
+assert labor_df.loc[12, 'optimistic_total_actions'] == 298
+
+fig, axes = plt.subplots(1, 2, figsize=(12, 4))
+labor_df.plot(x='hires', y='daily_hire_cost', marker='o', ax=axes[0], color='#304f8c', legend=False)
+axes[0].set_title('Fibonacci daily hire cost')
+axes[0].set_ylabel('Money')
+labor_df.plot(x='hires', y='optimistic_total_actions', marker='o', ax=axes[1], color='#8f3f55', legend=False)
+axes[1].set_title('Optimistic daily action ceiling')
+axes[1].set_ylabel('Actions including farmer')
+fig.tight_layout()
+fig.savefig(working / 'kaggriculture_labor_budget.png', dpi=160)
+plt.show()
+
+labor_df.head(13)
+
+# ---- cell ----
+
+market_df = pd.DataFrame(MARKET).T.reset_index().rename(columns={'index': 'product'})
+crop_summary.to_csv(working / 'kaggriculture_crop_summary.csv', index=False)
+labor_df.to_csv(working / 'kaggriculture_labor_budget.csv', index=False)
+market_df.to_csv(working / 'kaggriculture_market_params.csv', index=False)
+summary = {
+    'competition': 'kaggriculture',
+    'source_commit': 'bbda347572cf5134e56f0eb49e8058e2560f9844',
+    'apache_2_0_parameter_excerpt': True,
+    'defaults': DEFAULTS,
+    'crop_order_by_net_per_occupied_day': crop_summary.sort_values('net_per_occupied_day', ascending=False)['crop'].tolist(),
+    'twelve_hires_daily_cost': int(labor_df.loc[labor_df['hires'] == 12, 'daily_hire_cost'].iloc[0]),
+    'twelve_hires_optimistic_actions': int(labor_df.loc[labor_df['hires'] == 12, 'optimistic_total_actions'].iloc[0]),
+    'submission_created': False,
+    'leaderboard_score': None,
+}
+(working / 'summary.json').write_text(json.dumps(summary, indent=2))
+print(json.dumps(summary, indent=2))

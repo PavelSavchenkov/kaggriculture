@@ -1,0 +1,20 @@
+sixday-rl
+=========
+
+PRODUCTION BACKBONE — NOT OUR WORK
+  "Six-Day Public-State Fieldbook" by Yusuke Hayashi (yhay81), Apache License 2.0.
+  Kaggle notebook: https://www.kaggle.com/code/yhay81/six-day-public-state-fieldbook
+  Source dataset:  https://www.kaggle.com/datasets/yhay81/six-day-public-state-agent-source
+  Files _sixday_main.py and agent.so are built verbatim from that published source
+  (all 7 files SHA-256 verified against the hashes published in the notebook, then
+  compiled with: g++ -O3 -std=c++17 -shared -fPIC -I. -o agent.so policy.cpp
+  submission_bridge.cpp). Design, route tapes and decision trees belong to the
+  original author.
+
+MARKET-DENIAL HEAD — OUR ORIGINAL WORK
+  The 13-parameter additive selling policy in main.py (_W / _BIAS) was trained by us
+  with evolution strategies. It only APPENDS extra non-wheat SELL orders into leftover
+  market slots and never removes or reorders a backbone order.
+
+Apache-2.0 requires this notice to be preserved. See the upstream notebook for the
+full license text.

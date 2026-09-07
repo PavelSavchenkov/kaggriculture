@@ -1,0 +1,23 @@
+{
+  "source": "TITAN bundled unmodified Kaito v43 sparse shop policy; same source/module/route hashes as ../titan_frontier/IMPORT.json",
+  "parent_source_parity": {
+    "result": "matched_actions=11504",
+    "coverage": {
+      "route_default": 5454,
+      "route_yarn_first": 3786,
+      "route_yarn_second": 2264
+    },
+    "config": {
+      "turnsPerDay": 24,
+      "townShopSellInterval": 4,
+      "townCenterSellInterval": 24,
+      "maxMarketOrdersPerTurn": 10,
+      "shedCapacity": 100
+    },
+    "scope": "Eight recorded streams plus eight forced shop/similarity/stock/weed streams; no Python local gameplay"
+  },
+  "cpp_parent": "titan_frontier::AgentCore(false)",
+  "purpose": "Causal baseline; disables only the local sale overlay flag",
+  "license": "Apache-2.0; retained license and notices in ../titan_frontier",
+  "rating": null
+}

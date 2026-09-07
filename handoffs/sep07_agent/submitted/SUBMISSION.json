@@ -1,0 +1,59 @@
+{
+  "requested_utc": "2026-09-07T10:21:56.606827+00:00",
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "kaggle",
+    "competitions",
+    "submit",
+    "kaggriculture",
+    "-f",
+    "/home/pavel/Programming/kaggriculture/submissions/sep7-shop-herd-adaptive-v1/submission.tar.gz",
+    "-m",
+    "sep7 adaptive herd: observed milk/wool demand + Justin replay150 + terminal recovery +22 guarded V30 days; frozen C++3980/4096 vs teammate; packed62/64 exact"
+  ],
+  "archive_sha256": "53acf9d1d5e3206e28ea6f365af39786a9e74c4b3bfe6851b5bd21e8740901f4",
+  "attempts": 1,
+  "status": "SubmissionStatus.COMPLETE",
+  "returncode": 0,
+  "stdout": "3 submissions remaining today.\nSuccessfully submitted to Kaggriculture\n",
+  "stderr": "\n  0%|          | 0.00/21.1k [00:00<?, ?B/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 21.1k/21.1k [00:00<00:00, 57.6kB/s]\n\n",
+  "submission_id": 56074695,
+  "server_date": "2026-09-07 10:21:58.623000",
+  "submission_url": "https://www.kaggle.com/competitions/kaggriculture/submissions?dialog=episodes-submission-56074695",
+  "public_score_at_validation": "600.0",
+  "terminal_observed_utc": "2026-09-07T10:25:26.207897+00:00",
+  "validation_episode_id": 106421415,
+  "validation_audit": {
+    "episode": 106421415,
+    "rewards": [
+      66800.0,
+      69098.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "submitted_actions": 1438,
+    "action_mismatches": 0,
+    "logs": [
+      {
+        "seat": 0,
+        "calls": 719,
+        "total_seconds": 0.151812,
+        "max_seconds": 0.120083
+      },
+      {
+        "seat": 1,
+        "calls": 719,
+        "total_seconds": 0.162214,
+        "max_seconds": 0.122497
+      }
+    ],
+    "replay_sha256": "efb6e0afe78d0425f2860a7e96701af70ceff4ab13bca8953e19631ad9c7d63b"
+  },
+  "task_status": "COMPLETE",
+  "uploads": 1
+}

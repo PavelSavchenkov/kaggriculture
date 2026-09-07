@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "atakan_161",
+  "header": "source/agent.hpp",
+  "type": "compositions::atakan_161::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../top_replay_library/source/agent.cpp"
+  ]
+}

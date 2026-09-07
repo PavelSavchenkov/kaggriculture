@@ -1,0 +1,29 @@
+{
+  "result": "matched_actions=10073",
+  "coverage": {
+    "block0_route0": 2017,
+    "block1_route4": 578,
+    "block2_route0": 2016,
+    "block3_route0": 2017,
+    "block4_route3": 1289,
+    "block1_route2": 1152,
+    "block4_route0": 715,
+    "block1_route1": 288
+  },
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "g++",
+    "-std=c++20",
+    "-O2",
+    "-I",
+    "/home/pavel/Programming/kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/tests/router_v5_parity.cpp",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/public_router_v5/source/agent.cpp",
+    "-o",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1112/router_v5_parity"
+  ],
+  "scope": "Eight recorded719-action streams, six forced shop/price streams, seven reset/backward/out-of-range cases; Python only an exogenous action oracle"
+}

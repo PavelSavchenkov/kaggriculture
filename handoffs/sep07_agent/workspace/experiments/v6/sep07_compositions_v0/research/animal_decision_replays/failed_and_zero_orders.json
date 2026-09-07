@@ -1,0 +1,2296 @@
+[
+  {
+    "episode": 106369025,
+    "seat": 0,
+    "team": "Mengfei Li",
+    "team_id": 16622349,
+    "submission_id": 56047440,
+    "rank": 2,
+    "leaderboard_score": 2852.9,
+    "episode_create_time": "2026-09-07T06:31:50.976000",
+    "replay_sha256": "0367756367b64ea7fa1aacec7970c49fc0b6872d514c343086b613b9d45d9670",
+    "replay_file": "replays/episode-106369025-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 217,
+    "day": 9,
+    "hour": 1,
+    "shops": [
+      "FARMERS_MARKET",
+      "BRUNCH_SPOT",
+      "ICE_CREAM_SHOP"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 1,
+      "WOOL": 0
+    },
+    "own_money": 186.0,
+    "opponent_money": 1080.0,
+    "prices": {
+      "EGG": 52,
+      "MILK": 120,
+      "WOOL": 190
+    },
+    "herd": {
+      "COW": 9,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": []
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "ed6f4a36c52a601cf59c11f97fd38e062574136dc51ed3a80693dd827fe378ac",
+    "action_sha256": "9dcc2a39296bf4b417f5440cd253556bb41c32218bc9b4aface6282e2befd3cd",
+    "turns_since_last_shop": 1,
+    "order_index": 2,
+    "animal": "SHEEP",
+    "requested": 0,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "nonpositive_ignored",
+    "cash_before_order": 316.0,
+    "immediately_affordable": {
+      "GOOSE": true,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "SELL",
+        "FERTILIZER",
+        2
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "BUY_ANIMAL",
+        "SHEEP",
+        0
+      ],
+      [
+        "BUY_PRODUCT",
+        "FERTILIZER",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 64,
+    "day": 2,
+    "hour": 16,
+    "shops": [],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 0,
+      "WOOL": 0
+    },
+    "own_money": 233.0,
+    "opponent_money": 157.0,
+    "prices": {
+      "EGG": 50,
+      "MILK": 175,
+      "WOOL": 212
+    },
+    "herd": {
+      "SHEEP": 2,
+      "COW": 2
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          4,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "178dc30ccc6a5c7126cfde276ebccbf178a2960eb4355080d764da972d1a88b8",
+    "action_sha256": "58120fb1cab3debcbc210bb3935c9ecca006949ea12f26eaf05e74bb37c270be",
+    "turns_since_last_shop": null,
+    "order_index": 1,
+    "animal": "COW",
+    "requested": 1,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "positive_request",
+    "cash_before_order": 223.0,
+    "immediately_affordable": {
+      "GOOSE": false,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "BUY_SEED",
+        "WHEAT",
+        1
+      ],
+      [
+        "BUY_ANIMAL",
+        "COW",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 217,
+    "day": 9,
+    "hour": 1,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "BAKERY",
+      "SMOOTHIE_SHOP"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 2,
+      "WOOL": 0
+    },
+    "own_money": 411.0,
+    "opponent_money": 583.0,
+    "prices": {
+      "EGG": 52,
+      "MILK": 203,
+      "WOOL": 189
+    },
+    "herd": {
+      "COW": 9,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": []
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "96ccd1bc2c47d31b7d41f25b03dc2eab768dba6750d94026f21ec12f7e71c7a4",
+    "action_sha256": "9dcc2a39296bf4b417f5440cd253556bb41c32218bc9b4aface6282e2befd3cd",
+    "turns_since_last_shop": 1,
+    "order_index": 2,
+    "animal": "SHEEP",
+    "requested": 0,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "nonpositive_ignored",
+    "cash_before_order": 540.0,
+    "immediately_affordable": {
+      "GOOSE": true,
+      "COW": true,
+      "SHEEP": true
+    },
+    "market_action": [
+      [
+        "SELL",
+        "FERTILIZER",
+        2
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "BUY_ANIMAL",
+        "SHEEP",
+        0
+      ],
+      [
+        "BUY_PRODUCT",
+        "FERTILIZER",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106373411,
+    "seat": 0,
+    "team": "Mengfei Li",
+    "team_id": 16622349,
+    "submission_id": 56047440,
+    "rank": 2,
+    "leaderboard_score": 2852.9,
+    "episode_create_time": "2026-09-07T06:51:50.302000",
+    "replay_sha256": "86c4d54b33629f81381d9c75062f28f241145cb5f371da527629824af3ab340c",
+    "replay_file": "replays/episode-106373411-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 217,
+    "day": 9,
+    "hour": 1,
+    "shops": [
+      "YARN_STORE",
+      "YARN_STORE",
+      "SMOOTHIE_SHOP"
+    ],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 1,
+      "WOOL": 4
+    },
+    "own_money": 160.0,
+    "opponent_money": 949.0,
+    "prices": {
+      "EGG": 51,
+      "MILK": 133,
+      "WOOL": 239
+    },
+    "herd": {
+      "COW": 6,
+      "SHEEP": 7
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": []
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "dfabe09c669cc18ed7e530d177c38c5f04431c500dc797fdb825e7e32d858d46",
+    "action_sha256": "9dcc2a39296bf4b417f5440cd253556bb41c32218bc9b4aface6282e2befd3cd",
+    "turns_since_last_shop": 1,
+    "order_index": 2,
+    "animal": "SHEEP",
+    "requested": 0,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "nonpositive_ignored",
+    "cash_before_order": 288.0,
+    "immediately_affordable": {
+      "GOOSE": false,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "SELL",
+        "FERTILIZER",
+        2
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "BUY_ANIMAL",
+        "SHEEP",
+        0
+      ],
+      [
+        "BUY_PRODUCT",
+        "FERTILIZER",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106374592,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:55:51.999000",
+    "replay_sha256": "9e618de2d4d4cd6bf17f99338efd2e428a2c5d05d18a5f51ed920595ad946224",
+    "replay_file": "replays/episode-106374592-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 64,
+    "day": 2,
+    "hour": 16,
+    "shops": [],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 0,
+      "WOOL": 0
+    },
+    "own_money": 233.0,
+    "opponent_money": 222.0,
+    "prices": {
+      "EGG": 50,
+      "MILK": 175,
+      "WOOL": 212
+    },
+    "herd": {
+      "SHEEP": 2,
+      "COW": 2
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          4,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "178dc30ccc6a5c7126cfde276ebccbf178a2960eb4355080d764da972d1a88b8",
+    "action_sha256": "58120fb1cab3debcbc210bb3935c9ecca006949ea12f26eaf05e74bb37c270be",
+    "turns_since_last_shop": null,
+    "order_index": 1,
+    "animal": "COW",
+    "requested": 1,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "positive_request",
+    "cash_before_order": 223.0,
+    "immediately_affordable": {
+      "GOOSE": false,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "BUY_SEED",
+        "WHEAT",
+        1
+      ],
+      [
+        "BUY_ANIMAL",
+        "COW",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106374592,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:55:51.999000",
+    "replay_sha256": "9e618de2d4d4cd6bf17f99338efd2e428a2c5d05d18a5f51ed920595ad946224",
+    "replay_file": "replays/episode-106374592-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 217,
+    "day": 9,
+    "hour": 1,
+    "shops": [
+      "FARMERS_MARKET",
+      "PET_CAFE",
+      "PIZZA_SHOP"
+    ],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 1,
+      "WOOL": 0
+    },
+    "own_money": 174.0,
+    "opponent_money": 760.0,
+    "prices": {
+      "EGG": 51,
+      "MILK": 133,
+      "WOOL": 189
+    },
+    "herd": {
+      "COW": 9,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": []
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "96ccd1bc2c47d31b7d41f25b03dc2eab768dba6750d94026f21ec12f7e71c7a4",
+    "action_sha256": "9dcc2a39296bf4b417f5440cd253556bb41c32218bc9b4aface6282e2befd3cd",
+    "turns_since_last_shop": 1,
+    "order_index": 2,
+    "animal": "SHEEP",
+    "requested": 0,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "nonpositive_ignored",
+    "cash_before_order": 302.0,
+    "immediately_affordable": {
+      "GOOSE": true,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "SELL",
+        "FERTILIZER",
+        2
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "BUY_ANIMAL",
+        "SHEEP",
+        0
+      ],
+      [
+        "BUY_PRODUCT",
+        "FERTILIZER",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106377266,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T07:07:51.259000",
+    "replay_sha256": "26f59cb69e2ca22c700814ba74ed6bc7956e66451dc48fbeace8de241e12aa88",
+    "replay_file": "replays/episode-106377266-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 64,
+    "day": 2,
+    "hour": 16,
+    "shops": [],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 0,
+      "WOOL": 0
+    },
+    "own_money": 229.0,
+    "opponent_money": 107.0,
+    "prices": {
+      "EGG": 50,
+      "MILK": 175,
+      "WOOL": 212
+    },
+    "herd": {
+      "SHEEP": 2,
+      "COW": 2
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          4,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "178dc30ccc6a5c7126cfde276ebccbf178a2960eb4355080d764da972d1a88b8",
+    "action_sha256": "58120fb1cab3debcbc210bb3935c9ecca006949ea12f26eaf05e74bb37c270be",
+    "turns_since_last_shop": null,
+    "order_index": 1,
+    "animal": "COW",
+    "requested": 1,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "positive_request",
+    "cash_before_order": 219.0,
+    "immediately_affordable": {
+      "GOOSE": false,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "BUY_SEED",
+        "WHEAT",
+        1
+      ],
+      [
+        "BUY_ANIMAL",
+        "COW",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106377266,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T07:07:51.259000",
+    "replay_sha256": "26f59cb69e2ca22c700814ba74ed6bc7956e66451dc48fbeace8de241e12aa88",
+    "replay_file": "replays/episode-106377266-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 217,
+    "day": 9,
+    "hour": 1,
+    "shops": [
+      "BAKERY",
+      "ICE_CREAM_SHOP",
+      "ICE_CREAM_SHOP"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 2,
+      "WOOL": 0
+    },
+    "own_money": 187.0,
+    "opponent_money": 365.0,
+    "prices": {
+      "EGG": 53,
+      "MILK": 181,
+      "WOOL": 189
+    },
+    "herd": {
+      "COW": 9,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": []
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "96ccd1bc2c47d31b7d41f25b03dc2eab768dba6750d94026f21ec12f7e71c7a4",
+    "action_sha256": "9dcc2a39296bf4b417f5440cd253556bb41c32218bc9b4aface6282e2befd3cd",
+    "turns_since_last_shop": 1,
+    "order_index": 2,
+    "animal": "SHEEP",
+    "requested": 0,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "nonpositive_ignored",
+    "cash_before_order": 317.0,
+    "immediately_affordable": {
+      "GOOSE": true,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "SELL",
+        "FERTILIZER",
+        2
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "BUY_ANIMAL",
+        "SHEEP",
+        0
+      ],
+      [
+        "BUY_PRODUCT",
+        "FERTILIZER",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106377268,
+    "seat": 0,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T07:07:51.261000",
+    "replay_sha256": "79f4bb0684865db5daaf4710f07580abfb98324915e07089d44e7976865d8456",
+    "replay_file": "replays/episode-106377268-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 64,
+    "day": 2,
+    "hour": 16,
+    "shops": [],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 0,
+      "WOOL": 0
+    },
+    "own_money": 233.0,
+    "opponent_money": 105.0,
+    "prices": {
+      "EGG": 50,
+      "MILK": 175,
+      "WOOL": 212
+    },
+    "herd": {
+      "SHEEP": 2,
+      "COW": 2
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          4,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "178dc30ccc6a5c7126cfde276ebccbf178a2960eb4355080d764da972d1a88b8",
+    "action_sha256": "58120fb1cab3debcbc210bb3935c9ecca006949ea12f26eaf05e74bb37c270be",
+    "turns_since_last_shop": null,
+    "order_index": 1,
+    "animal": "COW",
+    "requested": 1,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "positive_request",
+    "cash_before_order": 223.0,
+    "immediately_affordable": {
+      "GOOSE": false,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "BUY_SEED",
+        "WHEAT",
+        1
+      ],
+      [
+        "BUY_ANIMAL",
+        "COW",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106377269,
+    "seat": 0,
+    "team": "Mengfei Li",
+    "team_id": 16622349,
+    "submission_id": 56047440,
+    "rank": 2,
+    "leaderboard_score": 2852.9,
+    "episode_create_time": "2026-09-07T07:07:51.259000",
+    "replay_sha256": "950ddfc3d3a6705590bb18c8f5d5f4c55d29fbc5ca1137bee3de49cd274329bc",
+    "replay_file": "replays/episode-106377269-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 217,
+    "day": 9,
+    "hour": 1,
+    "shops": [
+      "YARN_STORE",
+      "PET_CAFE",
+      "BRUNCH_SPOT"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 0,
+      "WOOL": 2
+    },
+    "own_money": 127.0,
+    "opponent_money": 731.0,
+    "prices": {
+      "EGG": 50,
+      "MILK": 118,
+      "WOOL": 235
+    },
+    "herd": {
+      "COW": 6,
+      "SHEEP": 7
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": []
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "dfabe09c669cc18ed7e530d177c38c5f04431c500dc797fdb825e7e32d858d46",
+    "action_sha256": "9dcc2a39296bf4b417f5440cd253556bb41c32218bc9b4aface6282e2befd3cd",
+    "turns_since_last_shop": 1,
+    "order_index": 2,
+    "animal": "SHEEP",
+    "requested": 0,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "nonpositive_ignored",
+    "cash_before_order": 245.0,
+    "immediately_affordable": {
+      "GOOSE": false,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "SELL",
+        "FERTILIZER",
+        2
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "BUY_ANIMAL",
+        "SHEEP",
+        0
+      ],
+      [
+        "BUY_PRODUCT",
+        "FERTILIZER",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106380079,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T07:19:51.316000",
+    "replay_sha256": "74e8da725d11254e9d2496f62f57fd30b4295955158a510b8e92657507e2de1d",
+    "replay_file": "replays/episode-106380079-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 64,
+    "day": 2,
+    "hour": 16,
+    "shops": [],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 0,
+      "WOOL": 0
+    },
+    "own_money": 234.0,
+    "opponent_money": 156.0,
+    "prices": {
+      "EGG": 50,
+      "MILK": 175,
+      "WOOL": 212
+    },
+    "herd": {
+      "SHEEP": 2,
+      "COW": 2
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          4,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "178dc30ccc6a5c7126cfde276ebccbf178a2960eb4355080d764da972d1a88b8",
+    "action_sha256": "58120fb1cab3debcbc210bb3935c9ecca006949ea12f26eaf05e74bb37c270be",
+    "turns_since_last_shop": null,
+    "order_index": 1,
+    "animal": "COW",
+    "requested": 1,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "positive_request",
+    "cash_before_order": 224.0,
+    "immediately_affordable": {
+      "GOOSE": false,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "BUY_SEED",
+        "WHEAT",
+        1
+      ],
+      [
+        "BUY_ANIMAL",
+        "COW",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106380079,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T07:19:51.316000",
+    "replay_sha256": "74e8da725d11254e9d2496f62f57fd30b4295955158a510b8e92657507e2de1d",
+    "replay_file": "replays/episode-106380079-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 217,
+    "day": 9,
+    "hour": 1,
+    "shops": [
+      "PIZZA_SHOP",
+      "PET_CAFE",
+      "YARN_STORE"
+    ],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 1,
+      "WOOL": 2
+    },
+    "own_money": 424.0,
+    "opponent_money": 325.0,
+    "prices": {
+      "EGG": 51,
+      "MILK": 202,
+      "WOOL": 192
+    },
+    "herd": {
+      "COW": 9,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": []
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "96ccd1bc2c47d31b7d41f25b03dc2eab768dba6750d94026f21ec12f7e71c7a4",
+    "action_sha256": "9dcc2a39296bf4b417f5440cd253556bb41c32218bc9b4aface6282e2befd3cd",
+    "turns_since_last_shop": 1,
+    "order_index": 2,
+    "animal": "SHEEP",
+    "requested": 0,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "nonpositive_ignored",
+    "cash_before_order": 553.0,
+    "immediately_affordable": {
+      "GOOSE": true,
+      "COW": true,
+      "SHEEP": true
+    },
+    "market_action": [
+      [
+        "SELL",
+        "FERTILIZER",
+        2
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "BUY_ANIMAL",
+        "SHEEP",
+        0
+      ],
+      [
+        "BUY_PRODUCT",
+        "FERTILIZER",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106381779,
+    "seat": 0,
+    "team": "Mengfei Li",
+    "team_id": 16622349,
+    "submission_id": 56047440,
+    "rank": 2,
+    "leaderboard_score": 2852.9,
+    "episode_create_time": "2026-09-07T07:27:52.420000",
+    "replay_sha256": "bec08f66738cf4db4c478784a3b44c30465dd0e4b3613fb10eaf702b4b236400",
+    "replay_file": "replays/episode-106381779-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 217,
+    "day": 9,
+    "hour": 1,
+    "shops": [
+      "PIZZA_SHOP",
+      "PET_CAFE",
+      "ICE_CREAM_SHOP"
+    ],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 2,
+      "WOOL": 0
+    },
+    "own_money": 323.0,
+    "opponent_money": 588.0,
+    "prices": {
+      "EGG": 51,
+      "MILK": 203,
+      "WOOL": 189
+    },
+    "herd": {
+      "COW": 9,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": []
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "ed6f4a36c52a601cf59c11f97fd38e062574136dc51ed3a80693dd827fe378ac",
+    "action_sha256": "9dcc2a39296bf4b417f5440cd253556bb41c32218bc9b4aface6282e2befd3cd",
+    "turns_since_last_shop": 1,
+    "order_index": 2,
+    "animal": "SHEEP",
+    "requested": 0,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "nonpositive_ignored",
+    "cash_before_order": 452.0,
+    "immediately_affordable": {
+      "GOOSE": true,
+      "COW": true,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "SELL",
+        "FERTILIZER",
+        2
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "BUY_ANIMAL",
+        "SHEEP",
+        0
+      ],
+      [
+        "BUY_PRODUCT",
+        "FERTILIZER",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106384618,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T07:39:51.356000",
+    "replay_sha256": "6994bd40560f822bb3c130a75ed3a790712a70cfb92c59335a171ab7554ca244",
+    "replay_file": "replays/episode-106384618-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 64,
+    "day": 2,
+    "hour": 16,
+    "shops": [],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 0,
+      "WOOL": 0
+    },
+    "own_money": 236.0,
+    "opponent_money": 313.0,
+    "prices": {
+      "EGG": 50,
+      "MILK": 175,
+      "WOOL": 212
+    },
+    "herd": {
+      "SHEEP": 2,
+      "COW": 2
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          4,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "178dc30ccc6a5c7126cfde276ebccbf178a2960eb4355080d764da972d1a88b8",
+    "action_sha256": "58120fb1cab3debcbc210bb3935c9ecca006949ea12f26eaf05e74bb37c270be",
+    "turns_since_last_shop": null,
+    "order_index": 1,
+    "animal": "COW",
+    "requested": 1,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "positive_request",
+    "cash_before_order": 226.0,
+    "immediately_affordable": {
+      "GOOSE": false,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "BUY_SEED",
+        "WHEAT",
+        1
+      ],
+      [
+        "BUY_ANIMAL",
+        "COW",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106386401,
+    "seat": 0,
+    "team": "Mengfei Li",
+    "team_id": 16622349,
+    "submission_id": 56047440,
+    "rank": 2,
+    "leaderboard_score": 2852.9,
+    "episode_create_time": "2026-09-07T07:48:22.069000",
+    "replay_sha256": "0b2e5bbff10417e2fecf1519ce9ba05440702c3cbf2e3cc668640c61c3d8b5b4",
+    "replay_file": "replays/episode-106386401-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 217,
+    "day": 9,
+    "hour": 1,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "PIZZA_SHOP",
+      "PIZZA_SHOP"
+    ],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 3,
+      "WOOL": 0
+    },
+    "own_money": 423.0,
+    "opponent_money": 805.0,
+    "prices": {
+      "EGG": 51,
+      "MILK": 217,
+      "WOOL": 189
+    },
+    "herd": {
+      "COW": 9,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": []
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "ed6f4a36c52a601cf59c11f97fd38e062574136dc51ed3a80693dd827fe378ac",
+    "action_sha256": "9dcc2a39296bf4b417f5440cd253556bb41c32218bc9b4aface6282e2befd3cd",
+    "turns_since_last_shop": 1,
+    "order_index": 2,
+    "animal": "SHEEP",
+    "requested": 0,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "nonpositive_ignored",
+    "cash_before_order": 551.0,
+    "immediately_affordable": {
+      "GOOSE": true,
+      "COW": true,
+      "SHEEP": true
+    },
+    "market_action": [
+      [
+        "SELL",
+        "FERTILIZER",
+        2
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "BUY_ANIMAL",
+        "SHEEP",
+        0
+      ],
+      [
+        "BUY_PRODUCT",
+        "FERTILIZER",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106388243,
+    "seat": 0,
+    "team": "Mengfei Li",
+    "team_id": 16622349,
+    "submission_id": 56047440,
+    "rank": 2,
+    "leaderboard_score": 2852.9,
+    "episode_create_time": "2026-09-07T07:56:21.579000",
+    "replay_sha256": "c5417f7fbd2ac300bfea3440fca6069ddc6a720ab90a6c1bd96dae3a49767957",
+    "replay_file": "replays/episode-106388243-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 217,
+    "day": 9,
+    "hour": 1,
+    "shops": [
+      "PET_CAFE",
+      "PET_CAFE",
+      "SMOOTHIE_SHOP"
+    ],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 1,
+      "WOOL": 0
+    },
+    "own_money": 157.0,
+    "opponent_money": 726.0,
+    "prices": {
+      "EGG": 51,
+      "MILK": 133,
+      "WOOL": 189
+    },
+    "herd": {
+      "COW": 9,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": []
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "ed6f4a36c52a601cf59c11f97fd38e062574136dc51ed3a80693dd827fe378ac",
+    "action_sha256": "9dcc2a39296bf4b417f5440cd253556bb41c32218bc9b4aface6282e2befd3cd",
+    "turns_since_last_shop": 1,
+    "order_index": 2,
+    "animal": "SHEEP",
+    "requested": 0,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "nonpositive_ignored",
+    "cash_before_order": 285.0,
+    "immediately_affordable": {
+      "GOOSE": false,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "SELL",
+        "FERTILIZER",
+        2
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "BUY_ANIMAL",
+        "SHEEP",
+        0
+      ],
+      [
+        "BUY_PRODUCT",
+        "FERTILIZER",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106392679,
+    "seat": 0,
+    "team": "自己找差距",
+    "team_id": 16660726,
+    "submission_id": 56068263,
+    "rank": 10,
+    "leaderboard_score": 2772.5,
+    "episode_create_time": "2026-09-07T08:16:23.101000",
+    "replay_sha256": "ab08712a7d4acd976001190f316f56b7661f5c0873c62c198159703274b29e7e",
+    "replay_file": "replays/episode-106392679-replay.json",
+    "cohorts": [
+      "refresh_0914"
+    ],
+    "step": 217,
+    "day": 9,
+    "hour": 1,
+    "shops": [
+      "BRUNCH_SPOT",
+      "ICE_CREAM_SHOP",
+      "SMOOTHIE_SHOP"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 2,
+      "WOOL": 0
+    },
+    "own_money": 175.0,
+    "opponent_money": 175.0,
+    "prices": {
+      "EGG": 53,
+      "MILK": 181,
+      "WOOL": 189
+    },
+    "herd": {
+      "COW": 9,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": []
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "0c5d63a349a7a149c40db69fe9e3f8c3e29ba6faebee61b88e542a1f64ec50bf",
+    "action_sha256": "20b22bb8e34a42764c724281039288fe977d79953e4bf527846bf563fddce1fd",
+    "turns_since_last_shop": 1,
+    "order_index": 2,
+    "animal": "SHEEP",
+    "requested": 0,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "nonpositive_ignored",
+    "cash_before_order": 223.0,
+    "immediately_affordable": {
+      "GOOSE": false,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "SELL",
+        "FERTILIZER",
+        1
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "BUY_ANIMAL",
+        "SHEEP",
+        0
+      ],
+      [
+        "PASS"
+      ]
+    ]
+  },
+  {
+    "episode": 106392884,
+    "seat": 1,
+    "team": "自己找差距",
+    "team_id": 16660726,
+    "submission_id": 56068263,
+    "rank": 10,
+    "leaderboard_score": 2772.5,
+    "episode_create_time": "2026-09-07T08:16:23.779000",
+    "replay_sha256": "9e7d4dfe7cf86d357898188a442432f0fae6914d640a5bbd1268b4b0b72ee561",
+    "replay_file": "replays/episode-106392884-replay.json",
+    "cohorts": [
+      "refresh_0914"
+    ],
+    "step": 217,
+    "day": 9,
+    "hour": 1,
+    "shops": [
+      "SMOOTHIE_SHOP",
+      "PIZZA_SHOP",
+      "ICE_CREAM_SHOP"
+    ],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 3,
+      "WOOL": 0
+    },
+    "own_money": 499.0,
+    "opponent_money": 1544.0,
+    "prices": {
+      "EGG": 51,
+      "MILK": 217,
+      "WOOL": 189
+    },
+    "herd": {
+      "COW": 9,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": []
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "eb9025c00d9895e36e3e93fc5d4adc88140916b9d1cc85dc8f4341e7ab8a9832",
+    "action_sha256": "20b22bb8e34a42764c724281039288fe977d79953e4bf527846bf563fddce1fd",
+    "turns_since_last_shop": 1,
+    "order_index": 2,
+    "animal": "SHEEP",
+    "requested": 0,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "nonpositive_ignored",
+    "cash_before_order": 546.0,
+    "immediately_affordable": {
+      "GOOSE": true,
+      "COW": true,
+      "SHEEP": true
+    },
+    "market_action": [
+      [
+        "SELL",
+        "FERTILIZER",
+        1
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "BUY_ANIMAL",
+        "SHEEP",
+        0
+      ],
+      [
+        "PASS"
+      ]
+    ]
+  },
+  {
+    "episode": 106394480,
+    "seat": 0,
+    "team": "自己找差距",
+    "team_id": 16660726,
+    "submission_id": 56068263,
+    "rank": 10,
+    "leaderboard_score": 2772.5,
+    "episode_create_time": "2026-09-07T08:24:24.063000",
+    "replay_sha256": "0b4caa204997b08da693de2d651ebe87d392aba44170b5dffcd761d0e0563098",
+    "replay_file": "replays/episode-106394480-replay.json",
+    "cohorts": [
+      "refresh_0914"
+    ],
+    "step": 217,
+    "day": 9,
+    "hour": 1,
+    "shops": [
+      "BRUNCH_SPOT",
+      "PIZZA_SHOP",
+      "BRUNCH_SPOT"
+    ],
+    "demand_per_cycle": {
+      "EGG": 2,
+      "MILK": 1,
+      "WOOL": 0
+    },
+    "own_money": 176.0,
+    "opponent_money": 195.0,
+    "prices": {
+      "EGG": 53,
+      "MILK": 179,
+      "WOOL": 189
+    },
+    "herd": {
+      "COW": 9,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": []
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "0c5d63a349a7a149c40db69fe9e3f8c3e29ba6faebee61b88e542a1f64ec50bf",
+    "action_sha256": "20b22bb8e34a42764c724281039288fe977d79953e4bf527846bf563fddce1fd",
+    "turns_since_last_shop": 1,
+    "order_index": 2,
+    "animal": "SHEEP",
+    "requested": 0,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "nonpositive_ignored",
+    "cash_before_order": 224.0,
+    "immediately_affordable": {
+      "GOOSE": false,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "SELL",
+        "FERTILIZER",
+        1
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "BUY_ANIMAL",
+        "SHEEP",
+        0
+      ],
+      [
+        "PASS"
+      ]
+    ]
+  },
+  {
+    "episode": 106395259,
+    "seat": 0,
+    "team": "自己找差距",
+    "team_id": 16660726,
+    "submission_id": 56068263,
+    "rank": 10,
+    "leaderboard_score": 2772.5,
+    "episode_create_time": "2026-09-07T08:28:20.703000",
+    "replay_sha256": "12448b96dc6feece062405a3da723f32f4801fd481fd872a66a44ba3bca1ad02",
+    "replay_file": "replays/episode-106395259-replay.json",
+    "cohorts": [
+      "refresh_0914"
+    ],
+    "step": 217,
+    "day": 9,
+    "hour": 1,
+    "shops": [
+      "PIZZA_SHOP",
+      "BAKERY",
+      "PIZZA_SHOP"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 2,
+      "WOOL": 0
+    },
+    "own_money": 283.0,
+    "opponent_money": 496.0,
+    "prices": {
+      "EGG": 52,
+      "MILK": 203,
+      "WOOL": 189
+    },
+    "herd": {
+      "COW": 9,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": []
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "0c5d63a349a7a149c40db69fe9e3f8c3e29ba6faebee61b88e542a1f64ec50bf",
+    "action_sha256": "20b22bb8e34a42764c724281039288fe977d79953e4bf527846bf563fddce1fd",
+    "turns_since_last_shop": 1,
+    "order_index": 2,
+    "animal": "SHEEP",
+    "requested": 0,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "nonpositive_ignored",
+    "cash_before_order": 330.0,
+    "immediately_affordable": {
+      "GOOSE": true,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "SELL",
+        "FERTILIZER",
+        1
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "BUY_ANIMAL",
+        "SHEEP",
+        0
+      ],
+      [
+        "PASS"
+      ]
+    ]
+  },
+  {
+    "episode": 106400169,
+    "seat": 0,
+    "team": "自己找差距",
+    "team_id": 16660726,
+    "submission_id": 56068263,
+    "rank": 10,
+    "leaderboard_score": 2772.5,
+    "episode_create_time": "2026-09-07T08:48:21.384000",
+    "replay_sha256": "30a637bb4dbb2932a891c58c30a0f1854adadd6f97ea35ce64774d20cb00e9d9",
+    "replay_file": "replays/episode-106400169-replay.json",
+    "cohorts": [
+      "refresh_0914"
+    ],
+    "step": 217,
+    "day": 9,
+    "hour": 1,
+    "shops": [
+      "BAKERY",
+      "FARMERS_MARKET",
+      "FARMERS_MARKET"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 0,
+      "WOOL": 0
+    },
+    "own_money": 188.0,
+    "opponent_money": 1021.0,
+    "prices": {
+      "EGG": 53,
+      "MILK": 131,
+      "WOOL": 189
+    },
+    "herd": {
+      "COW": 9,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": []
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "0c5d63a349a7a149c40db69fe9e3f8c3e29ba6faebee61b88e542a1f64ec50bf",
+    "action_sha256": "20b22bb8e34a42764c724281039288fe977d79953e4bf527846bf563fddce1fd",
+    "turns_since_last_shop": 1,
+    "order_index": 2,
+    "animal": "SHEEP",
+    "requested": 0,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "nonpositive_ignored",
+    "cash_before_order": 235.0,
+    "immediately_affordable": {
+      "GOOSE": false,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "SELL",
+        "FERTILIZER",
+        1
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "BUY_ANIMAL",
+        "SHEEP",
+        0
+      ],
+      [
+        "PASS"
+      ]
+    ]
+  },
+  {
+    "episode": 106401177,
+    "seat": 0,
+    "team": "自己找差距",
+    "team_id": 16660726,
+    "submission_id": 56068263,
+    "rank": 10,
+    "leaderboard_score": 2772.5,
+    "episode_create_time": "2026-09-07T08:52:29.184000",
+    "replay_sha256": "548d9f2d74cdef8c652a5fae8cda731e9b841448cb2319906276b0a0659a8b90",
+    "replay_file": "replays/episode-106401177-replay.json",
+    "cohorts": [
+      "refresh_0914"
+    ],
+    "step": 217,
+    "day": 9,
+    "hour": 1,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "FARMERS_MARKET",
+      "FARMERS_MARKET"
+    ],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 1,
+      "WOOL": 0
+    },
+    "own_money": 276.0,
+    "opponent_money": 1622.0,
+    "prices": {
+      "EGG": 51,
+      "MILK": 202,
+      "WOOL": 189
+    },
+    "herd": {
+      "COW": 9,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": []
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "4581501cb065a7bfc2542f58b4f5e47e2d012288e3e5b01bef9774fa51a4dce9",
+    "action_sha256": "20b22bb8e34a42764c724281039288fe977d79953e4bf527846bf563fddce1fd",
+    "turns_since_last_shop": 1,
+    "order_index": 2,
+    "animal": "SHEEP",
+    "requested": 0,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "nonpositive_ignored",
+    "cash_before_order": 323.0,
+    "immediately_affordable": {
+      "GOOSE": true,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "SELL",
+        "FERTILIZER",
+        1
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "BUY_ANIMAL",
+        "SHEEP",
+        0
+      ],
+      [
+        "PASS"
+      ]
+    ]
+  },
+  {
+    "episode": 106419058,
+    "seat": 0,
+    "team": "JustinLee",
+    "team_id": 16686918,
+    "submission_id": 56065461,
+    "rank": 8,
+    "leaderboard_score": 2774.8,
+    "episode_create_time": "2026-09-07T10:12:20.505000",
+    "replay_sha256": "48bd0b8fcb16f3df89d66e0a92750c864f452d4e37463d88845a54a47329ace0",
+    "replay_file": "replays/episode-106419058-replay.json",
+    "cohorts": [
+      "refresh_1010"
+    ],
+    "step": 65,
+    "day": 2,
+    "hour": 17,
+    "shops": [],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 0,
+      "WOOL": 0
+    },
+    "own_money": 15.0,
+    "opponent_money": 241.0,
+    "prices": {
+      "EGG": 50,
+      "MILK": 175,
+      "WOOL": 212
+    },
+    "herd": {
+      "SHEEP": 2
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "b430f998e9a0e6d36130c658fc0b9b60d68c37a3e1ca329191eb9f6e1384f079",
+    "action_sha256": "6b5ffa7a9d64d81139b42b32d98176c71b58477c70b177df6c6e16895f7cc354",
+    "turns_since_last_shop": null,
+    "order_index": 1,
+    "animal": "COW",
+    "requested": 1,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "positive_request",
+    "cash_before_order": 213.0,
+    "immediately_affordable": {
+      "GOOSE": false,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "SELL",
+        "FERTILIZER",
+        4
+      ],
+      [
+        "BUY_ANIMAL",
+        "COW",
+        1
+      ],
+      [
+        "BUY_SEED",
+        "WHEAT",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106419058,
+    "seat": 0,
+    "team": "JustinLee",
+    "team_id": 16686918,
+    "submission_id": 56065461,
+    "rank": 8,
+    "leaderboard_score": 2774.8,
+    "episode_create_time": "2026-09-07T10:12:20.505000",
+    "replay_sha256": "48bd0b8fcb16f3df89d66e0a92750c864f452d4e37463d88845a54a47329ace0",
+    "replay_file": "replays/episode-106419058-replay.json",
+    "cohorts": [
+      "refresh_1010"
+    ],
+    "step": 173,
+    "day": 7,
+    "hour": 5,
+    "shops": [
+      "SMOOTHIE_SHOP",
+      "YARN_STORE"
+    ],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 1,
+      "WOOL": 2
+    },
+    "own_money": 32.0,
+    "opponent_money": 1211.0,
+    "prices": {
+      "EGG": 50,
+      "MILK": 211,
+      "WOOL": 206
+    },
+    "herd": {
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          7,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 1,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "6777ed4c7695749b1d985a3598b227f77e673cd89cfa1bc8fa0755444564199c",
+    "action_sha256": "4da31a2713da1bfa62e3cbe69fe0c232d03ba1dd758e03e756b82cf068fa1be5",
+    "turns_since_last_shop": 29,
+    "order_index": 0,
+    "animal": "COW",
+    "requested": 1,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "positive_request",
+    "cash_before_order": 32.0,
+    "immediately_affordable": {
+      "GOOSE": false,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "BUY_ANIMAL",
+        "COW",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106419058,
+    "seat": 0,
+    "team": "JustinLee",
+    "team_id": 16686918,
+    "submission_id": 56065461,
+    "rank": 8,
+    "leaderboard_score": 2774.8,
+    "episode_create_time": "2026-09-07T10:12:20.505000",
+    "replay_sha256": "48bd0b8fcb16f3df89d66e0a92750c864f452d4e37463d88845a54a47329ace0",
+    "replay_file": "replays/episode-106419058-replay.json",
+    "cohorts": [
+      "refresh_1010"
+    ],
+    "step": 178,
+    "day": 7,
+    "hour": 10,
+    "shops": [
+      "SMOOTHIE_SHOP",
+      "YARN_STORE"
+    ],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 1,
+      "WOOL": 2
+    },
+    "own_money": 206.0,
+    "opponent_money": 1166.0,
+    "prices": {
+      "EGG": 50,
+      "MILK": 211,
+      "WOOL": 212
+    },
+    "herd": {
+      "SHEEP": 4,
+      "COW": 1
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          7,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "696792e2658e94938804b7b58d269995884f45b425809392506ff91aaa27a931",
+    "action_sha256": "9002cedeaf6207e521c6bd4bbd3586bf45559ee5f9f79301b6bda49583cbd883",
+    "turns_since_last_shop": 34,
+    "order_index": 1,
+    "animal": "COW",
+    "requested": 1,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "positive_request",
+    "cash_before_order": 206.0,
+    "immediately_affordable": {
+      "GOOSE": false,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "SELL",
+        "FERTILIZER",
+        1
+      ],
+      [
+        "BUY_ANIMAL",
+        "COW",
+        1
+      ]
+    ]
+  },
+  {
+    "episode": 106419058,
+    "seat": 0,
+    "team": "JustinLee",
+    "team_id": 16686918,
+    "submission_id": 56065461,
+    "rank": 8,
+    "leaderboard_score": 2774.8,
+    "episode_create_time": "2026-09-07T10:12:20.505000",
+    "replay_sha256": "48bd0b8fcb16f3df89d66e0a92750c864f452d4e37463d88845a54a47329ace0",
+    "replay_file": "replays/episode-106419058-replay.json",
+    "cohorts": [
+      "refresh_1010"
+    ],
+    "step": 196,
+    "day": 8,
+    "hour": 4,
+    "shops": [
+      "SMOOTHIE_SHOP",
+      "YARN_STORE"
+    ],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 1,
+      "WOOL": 2
+    },
+    "own_money": 18.0,
+    "opponent_money": 2828.0,
+    "prices": {
+      "EGG": 51,
+      "MILK": 206,
+      "WOOL": 222
+    },
+    "herd": {
+      "SHEEP": 4,
+      "COW": 1
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          7,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "c2990ff9843a54987d12408131f14882ac98a0e9e4095d6711c9298d8a153036",
+    "action_sha256": "fa639f73fbb3b4c16990edc6fff170bd202b4175d0accb60a089c3d392062268",
+    "turns_since_last_shop": 52,
+    "order_index": 0,
+    "animal": "SHEEP",
+    "requested": 2,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "positive_request",
+    "cash_before_order": 18.0,
+    "immediately_affordable": {
+      "GOOSE": false,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "BUY_ANIMAL",
+        "SHEEP",
+        2
+      ]
+    ]
+  },
+  {
+    "episode": 106419058,
+    "seat": 0,
+    "team": "JustinLee",
+    "team_id": 16686918,
+    "submission_id": 56065461,
+    "rank": 8,
+    "leaderboard_score": 2774.8,
+    "episode_create_time": "2026-09-07T10:12:20.505000",
+    "replay_sha256": "48bd0b8fcb16f3df89d66e0a92750c864f452d4e37463d88845a54a47329ace0",
+    "replay_file": "replays/episode-106419058-replay.json",
+    "cohorts": [
+      "refresh_1010"
+    ],
+    "step": 216,
+    "day": 9,
+    "hour": 0,
+    "shops": [
+      "SMOOTHIE_SHOP",
+      "YARN_STORE",
+      "BAKERY"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 1,
+      "WOOL": 2
+    },
+    "own_money": 6.0,
+    "opponent_money": 1793.0,
+    "prices": {
+      "EGG": 51,
+      "MILK": 210,
+      "WOOL": 227
+    },
+    "herd": {
+      "SHEEP": 4,
+      "COW": 1
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          7,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "977894a3fac9515924143f854be38dad539471ffe33c944e87c004fc9c530697",
+    "action_sha256": "2953a5754ce25aff9af3ec49710796f96575e7b1b03f065c8aa3fddbea8c074d",
+    "turns_since_last_shop": 0,
+    "order_index": 9,
+    "animal": "SHEEP",
+    "requested": 1,
+    "actual": 0,
+    "value": 0.0,
+    "request_status": "positive_request",
+    "cash_before_order": 164.0,
+    "immediately_affordable": {
+      "GOOSE": false,
+      "COW": false,
+      "SHEEP": false
+    },
+    "market_action": [
+      [
+        "SELL",
+        "WHEAT",
+        7
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "HIRE"
+      ],
+      [
+        "BUY_ANIMAL",
+        "SHEEP",
+        1
+      ]
+    ]
+  }
+]

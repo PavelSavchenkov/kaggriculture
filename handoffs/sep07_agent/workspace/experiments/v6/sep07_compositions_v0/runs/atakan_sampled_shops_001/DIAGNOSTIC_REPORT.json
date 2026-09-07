@@ -1,0 +1,358 @@
+{
+  "scope": "Observation-only forecast choices evaluated against saved exact fixed-branch outcomes; full new-policy realization is separate.",
+  "metrics": [
+    {
+      "scope": "discovery",
+      "name": "atakan_integrated_s0_own",
+      "games": 320,
+      "wins": 211,
+      "mean_margin": 3347.059375,
+      "mean_regret": 3348.046875,
+      "best_branch_choices": 200,
+      "pairwise_correct": 730,
+      "pairwise_total": 960,
+      "branch_counts": {
+        "2": 232,
+        "1": 86,
+        "0": 2
+      }
+    },
+    {
+      "scope": "discovery",
+      "name": "atakan_integrated_s0_margin",
+      "games": 320,
+      "wins": 211,
+      "mean_margin": 3445.9625,
+      "mean_regret": 3249.14375,
+      "best_branch_choices": 202,
+      "pairwise_correct": 736,
+      "pairwise_total": 960,
+      "branch_counts": {
+        "2": 234,
+        "0": 12,
+        "1": 74
+      }
+    },
+    {
+      "scope": "discovery",
+      "name": "atakan_integrated_s1_own",
+      "games": 320,
+      "wins": 213,
+      "mean_margin": 3366.2875,
+      "mean_regret": 3328.81875,
+      "best_branch_choices": 186,
+      "pairwise_correct": 672,
+      "pairwise_total": 960,
+      "branch_counts": {
+        "2": 204,
+        "1": 108,
+        "0": 8
+      }
+    },
+    {
+      "scope": "discovery",
+      "name": "atakan_integrated_s1_margin",
+      "games": 320,
+      "wins": 226,
+      "mean_margin": 4909.684375,
+      "mean_regret": 1785.421875,
+      "best_branch_choices": 230,
+      "pairwise_correct": 710,
+      "pairwise_total": 960,
+      "branch_counts": {
+        "0": 56,
+        "2": 176,
+        "1": 88
+      }
+    },
+    {
+      "scope": "discovery",
+      "name": "atakan_integrated_s8_own",
+      "games": 320,
+      "wins": 213,
+      "mean_margin": 3408.246875,
+      "mean_regret": 3286.859375,
+      "best_branch_choices": 200,
+      "pairwise_correct": 700,
+      "pairwise_total": 960,
+      "branch_counts": {
+        "2": 240,
+        "0": 14,
+        "1": 66
+      }
+    },
+    {
+      "scope": "discovery",
+      "name": "atakan_integrated_s8_margin",
+      "games": 320,
+      "wins": 222,
+      "mean_margin": 4530.809375,
+      "mean_regret": 2164.296875,
+      "best_branch_choices": 228,
+      "pairwise_correct": 720,
+      "pairwise_total": 960,
+      "branch_counts": {
+        "0": 62,
+        "2": 200,
+        "1": 58
+      }
+    },
+    {
+      "scope": "discovery",
+      "name": "atakan_integrated_s32_own",
+      "games": 320,
+      "wins": 213,
+      "mean_margin": 3408.246875,
+      "mean_regret": 3286.859375,
+      "best_branch_choices": 200,
+      "pairwise_correct": 700,
+      "pairwise_total": 960,
+      "branch_counts": {
+        "2": 240,
+        "0": 14,
+        "1": 66
+      }
+    },
+    {
+      "scope": "discovery",
+      "name": "atakan_integrated_s32_margin",
+      "games": 320,
+      "wins": 222,
+      "mean_margin": 4577.528125,
+      "mean_regret": 2117.578125,
+      "best_branch_choices": 230,
+      "pairwise_correct": 716,
+      "pairwise_total": 960,
+      "branch_counts": {
+        "0": 64,
+        "2": 198,
+        "1": 58
+      }
+    },
+    {
+      "scope": "discovery",
+      "name": "atakan_integrated_s64_own",
+      "games": 320,
+      "wins": 213,
+      "mean_margin": 3408.246875,
+      "mean_regret": 3286.859375,
+      "best_branch_choices": 200,
+      "pairwise_correct": 702,
+      "pairwise_total": 960,
+      "branch_counts": {
+        "2": 240,
+        "0": 14,
+        "1": 66
+      }
+    },
+    {
+      "scope": "discovery",
+      "name": "atakan_integrated_s64_margin",
+      "games": 320,
+      "wins": 222,
+      "mean_margin": 4608.003125,
+      "mean_regret": 2087.103125,
+      "best_branch_choices": 232,
+      "pairwise_correct": 724,
+      "pairwise_total": 960,
+      "branch_counts": {
+        "0": 66,
+        "2": 196,
+        "1": 58
+      }
+    },
+    {
+      "scope": "reference",
+      "name": "atakan_integrated_s0_own",
+      "games": 64,
+      "wins": 25,
+      "mean_margin": -3129.859375,
+      "mean_regret": 2799.46875,
+      "best_branch_choices": 40,
+      "pairwise_correct": 144,
+      "pairwise_total": 192,
+      "branch_counts": {
+        "2": 46,
+        "1": 18
+      }
+    },
+    {
+      "scope": "reference",
+      "name": "atakan_integrated_s0_margin",
+      "games": 64,
+      "wins": 25,
+      "mean_margin": -2934.921875,
+      "mean_regret": 2604.53125,
+      "best_branch_choices": 40,
+      "pairwise_correct": 146,
+      "pairwise_total": 192,
+      "branch_counts": {
+        "2": 48,
+        "0": 2,
+        "1": 14
+      }
+    },
+    {
+      "scope": "reference",
+      "name": "atakan_integrated_s1_own",
+      "games": 64,
+      "wins": 25,
+      "mean_margin": -2473.546875,
+      "mean_regret": 2143.15625,
+      "best_branch_choices": 42,
+      "pairwise_correct": 136,
+      "pairwise_total": 192,
+      "branch_counts": {
+        "2": 40,
+        "1": 20,
+        "0": 4
+      }
+    },
+    {
+      "scope": "reference",
+      "name": "atakan_integrated_s1_margin",
+      "games": 64,
+      "wins": 28,
+      "mean_margin": -2035.875,
+      "mean_regret": 1705.484375,
+      "best_branch_choices": 46,
+      "pairwise_correct": 138,
+      "pairwise_total": 192,
+      "branch_counts": {
+        "0": 10,
+        "2": 40,
+        "1": 14
+      }
+    },
+    {
+      "scope": "reference",
+      "name": "atakan_integrated_s8_own",
+      "games": 64,
+      "wins": 25,
+      "mean_margin": -2619.984375,
+      "mean_regret": 2289.59375,
+      "best_branch_choices": 42,
+      "pairwise_correct": 140,
+      "pairwise_total": 192,
+      "branch_counts": {
+        "2": 48,
+        "0": 4,
+        "1": 12
+      }
+    },
+    {
+      "scope": "reference",
+      "name": "atakan_integrated_s8_margin",
+      "games": 64,
+      "wins": 26,
+      "mean_margin": -2357,
+      "mean_regret": 2026.609375,
+      "best_branch_choices": 44,
+      "pairwise_correct": 138,
+      "pairwise_total": 192,
+      "branch_counts": {
+        "0": 10,
+        "2": 42,
+        "1": 12
+      }
+    },
+    {
+      "scope": "reference",
+      "name": "atakan_integrated_s32_own",
+      "games": 64,
+      "wins": 25,
+      "mean_margin": -2619.984375,
+      "mean_regret": 2289.59375,
+      "best_branch_choices": 42,
+      "pairwise_correct": 138,
+      "pairwise_total": 192,
+      "branch_counts": {
+        "2": 48,
+        "0": 4,
+        "1": 12
+      }
+    },
+    {
+      "scope": "reference",
+      "name": "atakan_integrated_s32_margin",
+      "games": 64,
+      "wins": 26,
+      "mean_margin": -2123.40625,
+      "mean_regret": 1793.015625,
+      "best_branch_choices": 46,
+      "pairwise_correct": 140,
+      "pairwise_total": 192,
+      "branch_counts": {
+        "0": 12,
+        "2": 40,
+        "1": 12
+      }
+    },
+    {
+      "scope": "reference",
+      "name": "atakan_integrated_s64_own",
+      "games": 64,
+      "wins": 25,
+      "mean_margin": -2619.984375,
+      "mean_regret": 2289.59375,
+      "best_branch_choices": 42,
+      "pairwise_correct": 138,
+      "pairwise_total": 192,
+      "branch_counts": {
+        "2": 48,
+        "0": 4,
+        "1": 12
+      }
+    },
+    {
+      "scope": "reference",
+      "name": "atakan_integrated_s64_margin",
+      "games": 64,
+      "wins": 26,
+      "mean_margin": -1971.03125,
+      "mean_regret": 1640.640625,
+      "best_branch_choices": 48,
+      "pairwise_correct": 142,
+      "pairwise_total": 192,
+      "branch_counts": {
+        "0": 14,
+        "2": 38,
+        "1": 12
+      }
+    }
+  ],
+  "timing": {
+    "0": {
+      "mean_us": 4.0844384765625,
+      "median_us": 3.8910625,
+      "p95_us": 4.401,
+      "max_us": 8.7245
+    },
+    "1": {
+      "mean_us": 3.992225260416667,
+      "median_us": 3.8003125,
+      "p95_us": 4.267125,
+      "max_us": 8.40375
+    },
+    "8": {
+      "mean_us": 35.17688053385417,
+      "median_us": 34.048125,
+      "p95_us": 37.082,
+      "max_us": 73.86075
+    },
+    "32": {
+      "mean_us": 142.37716438802084,
+      "median_us": 138.2438125,
+      "p95_us": 148.932375,
+      "max_us": 290.53925
+    },
+    "64": {
+      "mean_us": 291.9714378255208,
+      "median_us": 286.59524999999996,
+      "p95_us": 310.504375,
+      "max_us": 581.957875
+    }
+  },
+  "baseline_source_forecast_comparisons": 1152,
+  "timing_scope": "Eight repeated complete three-branch evaluations per context, one C++ thread, all sample generation included. Concurrent system work may affect wall times."
+}

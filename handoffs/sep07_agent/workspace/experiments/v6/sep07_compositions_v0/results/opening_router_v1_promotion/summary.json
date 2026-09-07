@@ -1,0 +1,53 @@
+[
+  {
+    "agent": "opening_router_v1",
+    "opponent": "opening_router_v0",
+    "summary": {
+      "agent_a": "opening_router_v1",
+      "agent_b": "opening_router_v0",
+      "seconds": 1.18345,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.96582,
+      "mean_cash": 93613.3,
+      "mean_margin": 227.433,
+      "cash_cvar10": 61569.5,
+      "margin_cvar10": -1130.12,
+      "pass_J": 87204.6
+    }
+  },
+  {
+    "agent": "opening_router_v1",
+    "opponent": "public_router",
+    "summary": {
+      "agent_a": "opening_router_v1",
+      "agent_b": "public_router",
+      "seconds": 1.19653,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 100631,
+      "mean_margin": 12931.8,
+      "cash_cvar10": 67085.9,
+      "margin_cvar10": 6673.34,
+      "pass_J": 93922
+    }
+  },
+  {
+    "agent": "opening_router_v1",
+    "opponent": "skomuro",
+    "summary": {
+      "agent_a": "opening_router_v1",
+      "agent_b": "skomuro",
+      "seconds": 1.16813,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 98544.3,
+      "mean_margin": 18758.8,
+      "cash_cvar10": 63810.8,
+      "margin_cvar10": 8449.53,
+      "pass_J": 91597.6
+    }
+  }
+]

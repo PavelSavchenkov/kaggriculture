@@ -1,0 +1,2577 @@
+{
+  "id": "jeonghun_cow_goose",
+  "step": 150,
+  "day": 6,
+  "hour": 6,
+  "source_a": {
+    "episode": 106385432,
+    "seat": 1,
+    "team": "3정훈",
+    "team_id": 16723620,
+    "submission_id": 56063995,
+    "rank": 2,
+    "leaderboard_score": 2850.2,
+    "episode_create_time": "2026-09-07T07:43:52.975000",
+    "replay_sha256": "f344d8cb64a57de7e51aa2b8a8ff1b84f4cd866247af351bba1f9aaa224d4704",
+    "replay_file": "replays/episode-106385432-replay.json",
+    "cohorts": [
+      "refresh_0914"
+    ],
+    "final_cash": 103385.0,
+    "final_margin": 7212.0,
+    "all_shops": [
+      "ICE_CREAM_SHOP",
+      "FARMERS_MARKET",
+      "PET_CAFE",
+      "FARMERS_MARKET",
+      "BAKERY",
+      "FARMERS_MARKET",
+      "SMOOTHIE_SHOP",
+      "BRUNCH_SPOT"
+    ],
+    "purchase_sequence": [
+      {
+        "step": 1,
+        "animal": "COW",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 8
+      },
+      {
+        "step": 1,
+        "animal": "SHEEP",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 9
+      },
+      {
+        "step": 65,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 1
+      },
+      {
+        "step": 88,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 1
+      },
+      {
+        "step": 150,
+        "animal": "COW",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 5
+      },
+      {
+        "step": 169,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 2
+      },
+      {
+        "step": 176,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 1
+      },
+      {
+        "step": 195,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 4
+      },
+      {
+        "step": 195,
+        "animal": "SHEEP",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 5
+      },
+      {
+        "step": 266,
+        "animal": "GOOSE",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 1
+      }
+    ],
+    "placement_sequence": [
+      {
+        "step": 4,
+        "animal": "COW",
+        "x": 4,
+        "y": 4
+      },
+      {
+        "step": 5,
+        "animal": "COW",
+        "x": 4,
+        "y": 3
+      },
+      {
+        "step": 7,
+        "animal": "SHEEP",
+        "x": 3,
+        "y": 4
+      },
+      {
+        "step": 9,
+        "animal": "SHEEP",
+        "x": 3,
+        "y": 3
+      },
+      {
+        "step": 69,
+        "animal": "COW",
+        "x": 4,
+        "y": 2
+      },
+      {
+        "step": 95,
+        "animal": "COW",
+        "x": 2,
+        "y": 4
+      },
+      {
+        "step": 156,
+        "animal": "COW",
+        "x": 5,
+        "y": 3
+      },
+      {
+        "step": 156,
+        "animal": "COW",
+        "x": 5,
+        "y": 4
+      },
+      {
+        "step": 177,
+        "animal": "COW",
+        "x": 6,
+        "y": 4
+      },
+      {
+        "step": 183,
+        "animal": "COW",
+        "x": 5,
+        "y": 2
+      },
+      {
+        "step": 199,
+        "animal": "COW",
+        "x": 6,
+        "y": 3
+      },
+      {
+        "step": 200,
+        "animal": "SHEEP",
+        "x": 7,
+        "y": 4
+      },
+      {
+        "step": 205,
+        "animal": "SHEEP",
+        "x": 6,
+        "y": 2
+      },
+      {
+        "step": 295,
+        "animal": "GOOSE",
+        "x": 4,
+        "y": 1
+      }
+    ],
+    "total_actual_purchases": {
+      "GOOSE": 1,
+      "COW": 9,
+      "SHEEP": 4
+    }
+  },
+  "source_b": {
+    "episode": 106398132,
+    "seat": 0,
+    "team": "3정훈",
+    "team_id": 16723620,
+    "submission_id": 56063995,
+    "rank": 2,
+    "leaderboard_score": 2850.2,
+    "episode_create_time": "2026-09-07T08:40:22.731000",
+    "replay_sha256": "0871bffd5dc7a252363539e4aeae54e628228719ace33a63d88e86e0c2d857ac",
+    "replay_file": "replays/episode-106398132-replay.json",
+    "cohorts": [
+      "refresh_0914"
+    ],
+    "final_cash": 82867.0,
+    "final_margin": 5185.0,
+    "all_shops": [
+      "PET_CAFE",
+      "BRUNCH_SPOT",
+      "PIZZA_SHOP",
+      "ICE_CREAM_SHOP",
+      "YARN_STORE",
+      "BRUNCH_SPOT",
+      "PET_CAFE",
+      "YARN_STORE"
+    ],
+    "purchase_sequence": [
+      {
+        "step": 1,
+        "animal": "COW",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 8
+      },
+      {
+        "step": 1,
+        "animal": "SHEEP",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 9
+      },
+      {
+        "step": 65,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 1
+      },
+      {
+        "step": 88,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 1
+      },
+      {
+        "step": 150,
+        "animal": "GOOSE",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 5
+      },
+      {
+        "step": 169,
+        "animal": "GOOSE",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 2
+      },
+      {
+        "step": 176,
+        "animal": "GOOSE",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 1
+      },
+      {
+        "step": 195,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 4
+      },
+      {
+        "step": 195,
+        "animal": "SHEEP",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 5
+      },
+      {
+        "step": 288,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 1
+      }
+    ],
+    "placement_sequence": [
+      {
+        "step": 4,
+        "animal": "COW",
+        "x": 4,
+        "y": 4
+      },
+      {
+        "step": 5,
+        "animal": "COW",
+        "x": 4,
+        "y": 3
+      },
+      {
+        "step": 7,
+        "animal": "SHEEP",
+        "x": 3,
+        "y": 4
+      },
+      {
+        "step": 9,
+        "animal": "SHEEP",
+        "x": 3,
+        "y": 3
+      },
+      {
+        "step": 69,
+        "animal": "COW",
+        "x": 4,
+        "y": 2
+      },
+      {
+        "step": 95,
+        "animal": "COW",
+        "x": 2,
+        "y": 4
+      },
+      {
+        "step": 156,
+        "animal": "GOOSE",
+        "x": 5,
+        "y": 3
+      },
+      {
+        "step": 156,
+        "animal": "GOOSE",
+        "x": 5,
+        "y": 4
+      },
+      {
+        "step": 177,
+        "animal": "GOOSE",
+        "x": 6,
+        "y": 4
+      },
+      {
+        "step": 183,
+        "animal": "GOOSE",
+        "x": 5,
+        "y": 2
+      },
+      {
+        "step": 199,
+        "animal": "COW",
+        "x": 6,
+        "y": 3
+      },
+      {
+        "step": 200,
+        "animal": "SHEEP",
+        "x": 7,
+        "y": 4
+      },
+      {
+        "step": 205,
+        "animal": "SHEEP",
+        "x": 6,
+        "y": 2
+      },
+      {
+        "step": 318,
+        "animal": "COW",
+        "x": 3,
+        "y": 2
+      }
+    ],
+    "total_actual_purchases": {
+      "GOOSE": 4,
+      "COW": 6,
+      "SHEEP": 4
+    }
+  },
+  "same_submission": true,
+  "identical_raw_action_prefix_length": 24,
+  "own_farm_differences": [
+    {
+      "path": "/money",
+      "a": 11.0,
+      "b": 10.0
+    }
+  ],
+  "own_private_differences": [],
+  "own_private_ordered_equal": true,
+  "own_physical_equal_except_money": true,
+  "state_a": {
+    "own_farm": {
+      "farmer": [
+        4,
+        4
+      ],
+      "hands": [
+        [
+          4,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "hires_today": 8,
+      "money": 11.0,
+      "tiles": [
+        [
+          {
+            "consecutive_unwatered": 0,
+            "crop": "WHEAT",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 216,
+            "planted_day": 4,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "WHEAT",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 216,
+            "planted_day": 4,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          {
+            "consecutive_unwatered": 0,
+            "crop": "WHEAT",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 216,
+            "planted_day": 4,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "animal": "COW",
+            "cared_today": false,
+            "consecutive_unfed": 0,
+            "fed_today": false,
+            "fertilizer_available": true,
+            "kind": "PASTURE",
+            "pending_care_bonus": 2,
+            "placed_day": 2,
+            "yield_units": 0
+          },
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "animal": "SHEEP",
+            "cared_today": false,
+            "consecutive_unfed": 0,
+            "fed_today": false,
+            "fertilizer_available": true,
+            "kind": "PASTURE",
+            "pending_care_bonus": 1,
+            "placed_day": 0,
+            "yield_units": 0
+          },
+          {
+            "animal": "COW",
+            "cared_today": false,
+            "consecutive_unfed": 0,
+            "fed_today": false,
+            "fertilizer_available": true,
+            "kind": "PASTURE",
+            "pending_care_bonus": 4,
+            "placed_day": 0,
+            "yield_units": 0
+          },
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "animal": "COW",
+            "cared_today": false,
+            "consecutive_unfed": 0,
+            "fed_today": false,
+            "fertilizer_available": true,
+            "kind": "PASTURE",
+            "pending_care_bonus": 2,
+            "placed_day": 3,
+            "yield_units": 0
+          },
+          {
+            "animal": "SHEEP",
+            "cared_today": true,
+            "consecutive_unfed": 0,
+            "fed_today": true,
+            "fertilizer_available": false,
+            "kind": "PASTURE",
+            "pending_care_bonus": 1,
+            "placed_day": 0,
+            "yield_units": 0
+          },
+          {
+            "animal": "COW",
+            "cared_today": true,
+            "consecutive_unfed": 0,
+            "fed_today": true,
+            "fertilizer_available": false,
+            "kind": "PASTURE",
+            "pending_care_bonus": 4,
+            "placed_day": 0,
+            "yield_units": 0
+          },
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ]
+      ],
+      "unlocked_quadrants": [
+        "NW"
+      ]
+    },
+    "own_private": {
+      "inventories": [
+        {
+          "WOOL": 12
+        },
+        {
+          "FERTILIZER": 1,
+          "WHEAT": 3
+        },
+        {},
+        {},
+        {},
+        {
+          "FERTILIZER": 1,
+          "WHEAT": 4
+        },
+        {},
+        {},
+        {}
+      ],
+      "seeds": {
+        "CARROT": 4,
+        "MELON": 0,
+        "STRAWBERRY": 6,
+        "TOMATO": 0,
+        "WHEAT": 11
+      },
+      "shed": {
+        "CARROT": 0,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 0,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 11,
+        "WOOL": 0
+      }
+    },
+    "own_private_ordered": [
+      [
+        "inventories",
+        [
+          [
+            [
+              "WOOL",
+              12
+            ]
+          ],
+          [
+            [
+              "FERTILIZER",
+              1
+            ],
+            [
+              "WHEAT",
+              3
+            ]
+          ],
+          [],
+          [],
+          [],
+          [
+            [
+              "FERTILIZER",
+              1
+            ],
+            [
+              "WHEAT",
+              4
+            ]
+          ],
+          [],
+          [],
+          []
+        ]
+      ],
+      [
+        "seeds",
+        [
+          [
+            "CARROT",
+            4
+          ],
+          [
+            "MELON",
+            0
+          ],
+          [
+            "STRAWBERRY",
+            6
+          ],
+          [
+            "TOMATO",
+            0
+          ],
+          [
+            "WHEAT",
+            11
+          ]
+        ]
+      ],
+      [
+        "shed",
+        [
+          [
+            "CARROT",
+            0
+          ],
+          [
+            "COW",
+            0
+          ],
+          [
+            "EGG",
+            0
+          ],
+          [
+            "FERTILIZER",
+            0
+          ],
+          [
+            "GOOSE",
+            0
+          ],
+          [
+            "MELON",
+            0
+          ],
+          [
+            "MILK",
+            0
+          ],
+          [
+            "SHEEP",
+            0
+          ],
+          [
+            "STRAWBERRY",
+            0
+          ],
+          [
+            "TOMATO",
+            0
+          ],
+          [
+            "WHEAT",
+            11
+          ],
+          [
+            "WOOL",
+            0
+          ]
+        ]
+      ]
+    ],
+    "own_physical_sha256_excluding_money": "1f8f54c271e4f17c0ae616bc2d9982399da58eebaf9a8ce43eb86cfc1f59e1dd",
+    "own_farm_sha256_excluding_money": "5e895341defb90886dae52f3786aa75f3437d2f1af5c5d72c3e113cd0a4fc7b0",
+    "public_market": {
+      "inventory": {
+        "CARROT": 9991,
+        "EGG": 9993,
+        "FERTILIZER": 10050,
+        "MELON": 9993,
+        "MILK": 9973,
+        "STRAWBERRY": 9971,
+        "TOMATO": 9991,
+        "WHEAT": 9967,
+        "WOOL": 9993
+      },
+      "prices": {
+        "CARROT": 36,
+        "EGG": 50,
+        "FERTILIZER": 90,
+        "MELON": 268,
+        "MILK": 205,
+        "STRAWBERRY": 165,
+        "TOMATO": 61,
+        "WHEAT": 31,
+        "WOOL": 218
+      }
+    },
+    "town": {
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET"
+      ]
+    },
+    "opponent_farm": {
+      "farmer": [
+        3,
+        3
+      ],
+      "hands": [
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "hires_today": 8,
+      "money": 15.0,
+      "tiles": [
+        [
+          {
+            "consecutive_unwatered": 1,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 1,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 1,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 1,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 1,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "WHEAT",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 240,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 1
+          }
+        ],
+        [
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 4,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 4,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 4,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 4,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 4,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "WHEAT",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 240,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "WHEAT",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 240,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "WHEAT",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 240,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          null,
+          null
+        ],
+        [
+          {
+            "consecutive_unwatered": 1,
+            "crop": "WHEAT",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 216,
+            "planted_day": 4,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 1,
+            "crop": "WHEAT",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 216,
+            "planted_day": 4,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          null,
+          {
+            "consecutive_unwatered": 1,
+            "crop": "WHEAT",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 216,
+            "planted_day": 4,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "animal": "SHEEP",
+            "cared_today": false,
+            "consecutive_unfed": 0,
+            "fed_today": false,
+            "fertilizer_available": false,
+            "kind": "PASTURE",
+            "pending_care_bonus": 1,
+            "placed_day": 0,
+            "yield_units": 0
+          },
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 2,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "animal": "SHEEP",
+            "cared_today": false,
+            "consecutive_unfed": 0,
+            "fed_today": false,
+            "fertilizer_available": false,
+            "kind": "PASTURE",
+            "pending_care_bonus": 1,
+            "placed_day": 0,
+            "yield_units": 0
+          },
+          {
+            "animal": "COW",
+            "cared_today": false,
+            "consecutive_unfed": 0,
+            "fed_today": false,
+            "fertilizer_available": false,
+            "kind": "PASTURE",
+            "pending_care_bonus": 6,
+            "placed_day": 0,
+            "yield_units": 0
+          },
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 2,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "WHEAT",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 168,
+            "planted_day": 2,
+            "watered_today": false,
+            "yield_units": 3
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "WHEAT",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 168,
+            "planted_day": 2,
+            "watered_today": false,
+            "yield_units": 3
+          },
+          {
+            "animal": "COW",
+            "cared_today": false,
+            "consecutive_unfed": 0,
+            "fed_today": true,
+            "fertilizer_available": true,
+            "kind": "PASTURE",
+            "pending_care_bonus": 6,
+            "placed_day": 0,
+            "yield_units": 0
+          },
+          {
+            "animal": "COW",
+            "cared_today": true,
+            "consecutive_unfed": 0,
+            "fed_today": true,
+            "fertilizer_available": false,
+            "kind": "PASTURE",
+            "pending_care_bonus": 6,
+            "placed_day": 0,
+            "yield_units": 0
+          },
+          {
+            "animal": "COW",
+            "cared_today": false,
+            "consecutive_unfed": 0,
+            "fed_today": false,
+            "fertilizer_available": false,
+            "kind": "PASTURE",
+            "pending_care_bonus": 0,
+            "placed_day": 6,
+            "yield_units": 0
+          },
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ]
+      ],
+      "unlocked_quadrants": [
+        "NW",
+        "NE"
+      ]
+    },
+    "day": 6,
+    "hour": 6
+  },
+  "state_b": {
+    "own_farm": {
+      "farmer": [
+        4,
+        4
+      ],
+      "hands": [
+        [
+          4,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "hires_today": 8,
+      "money": 10.0,
+      "tiles": [
+        [
+          {
+            "consecutive_unwatered": 0,
+            "crop": "WHEAT",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 216,
+            "planted_day": 4,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "WHEAT",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 216,
+            "planted_day": 4,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          {
+            "consecutive_unwatered": 0,
+            "crop": "WHEAT",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 216,
+            "planted_day": 4,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "animal": "COW",
+            "cared_today": false,
+            "consecutive_unfed": 0,
+            "fed_today": false,
+            "fertilizer_available": true,
+            "kind": "PASTURE",
+            "pending_care_bonus": 2,
+            "placed_day": 2,
+            "yield_units": 0
+          },
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "animal": "SHEEP",
+            "cared_today": false,
+            "consecutive_unfed": 0,
+            "fed_today": false,
+            "fertilizer_available": true,
+            "kind": "PASTURE",
+            "pending_care_bonus": 1,
+            "placed_day": 0,
+            "yield_units": 0
+          },
+          {
+            "animal": "COW",
+            "cared_today": false,
+            "consecutive_unfed": 0,
+            "fed_today": false,
+            "fertilizer_available": true,
+            "kind": "PASTURE",
+            "pending_care_bonus": 4,
+            "placed_day": 0,
+            "yield_units": 0
+          },
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "animal": "COW",
+            "cared_today": false,
+            "consecutive_unfed": 0,
+            "fed_today": false,
+            "fertilizer_available": true,
+            "kind": "PASTURE",
+            "pending_care_bonus": 2,
+            "placed_day": 3,
+            "yield_units": 0
+          },
+          {
+            "animal": "SHEEP",
+            "cared_today": true,
+            "consecutive_unfed": 0,
+            "fed_today": true,
+            "fertilizer_available": false,
+            "kind": "PASTURE",
+            "pending_care_bonus": 1,
+            "placed_day": 0,
+            "yield_units": 0
+          },
+          {
+            "animal": "COW",
+            "cared_today": true,
+            "consecutive_unfed": 0,
+            "fed_today": true,
+            "fertilizer_available": false,
+            "kind": "PASTURE",
+            "pending_care_bonus": 4,
+            "placed_day": 0,
+            "yield_units": 0
+          },
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ]
+      ],
+      "unlocked_quadrants": [
+        "NW"
+      ]
+    },
+    "own_private": {
+      "inventories": [
+        {
+          "WOOL": 12
+        },
+        {
+          "FERTILIZER": 1,
+          "WHEAT": 3
+        },
+        {},
+        {},
+        {},
+        {
+          "FERTILIZER": 1,
+          "WHEAT": 4
+        },
+        {},
+        {},
+        {}
+      ],
+      "seeds": {
+        "CARROT": 4,
+        "MELON": 0,
+        "STRAWBERRY": 6,
+        "TOMATO": 0,
+        "WHEAT": 11
+      },
+      "shed": {
+        "CARROT": 0,
+        "COW": 0,
+        "EGG": 0,
+        "FERTILIZER": 0,
+        "GOOSE": 0,
+        "MELON": 0,
+        "MILK": 0,
+        "SHEEP": 0,
+        "STRAWBERRY": 0,
+        "TOMATO": 0,
+        "WHEAT": 11,
+        "WOOL": 0
+      }
+    },
+    "own_private_ordered": [
+      [
+        "inventories",
+        [
+          [
+            [
+              "WOOL",
+              12
+            ]
+          ],
+          [
+            [
+              "FERTILIZER",
+              1
+            ],
+            [
+              "WHEAT",
+              3
+            ]
+          ],
+          [],
+          [],
+          [],
+          [
+            [
+              "FERTILIZER",
+              1
+            ],
+            [
+              "WHEAT",
+              4
+            ]
+          ],
+          [],
+          [],
+          []
+        ]
+      ],
+      [
+        "seeds",
+        [
+          [
+            "CARROT",
+            4
+          ],
+          [
+            "MELON",
+            0
+          ],
+          [
+            "STRAWBERRY",
+            6
+          ],
+          [
+            "TOMATO",
+            0
+          ],
+          [
+            "WHEAT",
+            11
+          ]
+        ]
+      ],
+      [
+        "shed",
+        [
+          [
+            "CARROT",
+            0
+          ],
+          [
+            "COW",
+            0
+          ],
+          [
+            "EGG",
+            0
+          ],
+          [
+            "FERTILIZER",
+            0
+          ],
+          [
+            "GOOSE",
+            0
+          ],
+          [
+            "MELON",
+            0
+          ],
+          [
+            "MILK",
+            0
+          ],
+          [
+            "SHEEP",
+            0
+          ],
+          [
+            "STRAWBERRY",
+            0
+          ],
+          [
+            "TOMATO",
+            0
+          ],
+          [
+            "WHEAT",
+            11
+          ],
+          [
+            "WOOL",
+            0
+          ]
+        ]
+      ]
+    ],
+    "own_physical_sha256_excluding_money": "1f8f54c271e4f17c0ae616bc2d9982399da58eebaf9a8ce43eb86cfc1f59e1dd",
+    "own_farm_sha256_excluding_money": "5e895341defb90886dae52f3786aa75f3437d2f1af5c5d72c3e113cd0a4fc7b0",
+    "public_market": {
+      "inventory": {
+        "CARROT": 9953,
+        "EGG": 9991,
+        "FERTILIZER": 10050,
+        "MELON": 9993,
+        "MILK": 9993,
+        "STRAWBERRY": 9991,
+        "TOMATO": 9993,
+        "WHEAT": 9967,
+        "WOOL": 9993
+      },
+      "prices": {
+        "CARROT": 39,
+        "EGG": 51,
+        "FERTILIZER": 90,
+        "MELON": 268,
+        "MILK": 183,
+        "STRAWBERRY": 145,
+        "TOMATO": 61,
+        "WHEAT": 31,
+        "WOOL": 218
+      }
+    },
+    "town": {
+      "unlocked_shops": [
+        "PET_CAFE",
+        "BRUNCH_SPOT"
+      ]
+    },
+    "opponent_farm": {
+      "farmer": [
+        4,
+        4
+      ],
+      "hands": [
+        [
+          4,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "hires_today": 8,
+      "money": 11.0,
+      "tiles": [
+        [
+          {
+            "consecutive_unwatered": 0,
+            "crop": "WHEAT",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 216,
+            "planted_day": 4,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "WHEAT",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 216,
+            "planted_day": 4,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          {
+            "consecutive_unwatered": 0,
+            "crop": "WHEAT",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 216,
+            "planted_day": 4,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "animal": "COW",
+            "cared_today": false,
+            "consecutive_unfed": 0,
+            "fed_today": false,
+            "fertilizer_available": true,
+            "kind": "PASTURE",
+            "pending_care_bonus": 2,
+            "placed_day": 2,
+            "yield_units": 0
+          },
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          {
+            "consecutive_unwatered": 0,
+            "crop": "STRAWBERRY",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": -1,
+            "planted_day": 5,
+            "watered_today": false,
+            "yield_units": 0
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "animal": "SHEEP",
+            "cared_today": false,
+            "consecutive_unfed": 0,
+            "fed_today": false,
+            "fertilizer_available": true,
+            "kind": "PASTURE",
+            "pending_care_bonus": 1,
+            "placed_day": 0,
+            "yield_units": 0
+          },
+          {
+            "animal": "COW",
+            "cared_today": false,
+            "consecutive_unfed": 0,
+            "fed_today": false,
+            "fertilizer_available": true,
+            "kind": "PASTURE",
+            "pending_care_bonus": 4,
+            "placed_day": 0,
+            "yield_units": 0
+          },
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "consecutive_unwatered": 0,
+            "crop": "MELON",
+            "fertilized_until_day": -1,
+            "kind": "PLANT",
+            "max_lifespan_step": 312,
+            "planted_day": 0,
+            "watered_today": false,
+            "yield_units": 1
+          },
+          {
+            "animal": "COW",
+            "cared_today": false,
+            "consecutive_unfed": 0,
+            "fed_today": false,
+            "fertilizer_available": true,
+            "kind": "PASTURE",
+            "pending_care_bonus": 2,
+            "placed_day": 3,
+            "yield_units": 0
+          },
+          {
+            "animal": "SHEEP",
+            "cared_today": true,
+            "consecutive_unfed": 0,
+            "fed_today": true,
+            "fertilizer_available": false,
+            "kind": "PASTURE",
+            "pending_care_bonus": 1,
+            "placed_day": 0,
+            "yield_units": 0
+          },
+          {
+            "animal": "COW",
+            "cared_today": true,
+            "consecutive_unfed": 0,
+            "fed_today": true,
+            "fertilizer_available": false,
+            "kind": "PASTURE",
+            "pending_care_bonus": 4,
+            "placed_day": 0,
+            "yield_units": 0
+          },
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ],
+        [
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED",
+          "LOCKED"
+        ]
+      ],
+      "unlocked_quadrants": [
+        "NW"
+      ]
+    },
+    "day": 6,
+    "hour": 6
+  },
+  "action_a": {
+    "farmer": [
+      "PLACE",
+      "WOOL",
+      10
+    ],
+    "hands": [
+      [
+        "PLACE",
+        "FERTILIZER",
+        1
+      ],
+      [
+        "NORTH"
+      ],
+      [
+        "PASS"
+      ],
+      [
+        "WATER"
+      ],
+      [
+        "WEST"
+      ],
+      [
+        "WATER"
+      ],
+      [
+        "PASS"
+      ],
+      [
+        "NORTH"
+      ]
+    ],
+    "market": [
+      [
+        "SELL",
+        "WOOL",
+        10,
+        75
+      ],
+      [
+        "SELL",
+        "FERTILIZER",
+        1
+      ],
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        2
+      ],
+      [
+        "BUY_SEED",
+        "STRAWBERRY",
+        2
+      ],
+      [
+        "BUY_LAND"
+      ],
+      [
+        "BUY_ANIMAL",
+        "COW",
+        2
+      ],
+      [
+        "BUY_PRODUCT",
+        "FERTILIZER",
+        1
+      ]
+    ]
+  },
+  "action_b": {
+    "farmer": [
+      "PLACE",
+      "WOOL",
+      10
+    ],
+    "hands": [
+      [
+        "PLACE",
+        "FERTILIZER",
+        1
+      ],
+      [
+        "NORTH"
+      ],
+      [
+        "PASS"
+      ],
+      [
+        "WATER"
+      ],
+      [
+        "WEST"
+      ],
+      [
+        "WATER"
+      ],
+      [
+        "PASS"
+      ],
+      [
+        "NORTH"
+      ]
+    ],
+    "market": [
+      [
+        "SELL",
+        "WOOL",
+        10,
+        95
+      ],
+      [
+        "SELL",
+        "FERTILIZER",
+        1
+      ],
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        2
+      ],
+      [
+        "BUY_SEED",
+        "STRAWBERRY",
+        2
+      ],
+      [
+        "BUY_LAND"
+      ],
+      [
+        "BUY_ANIMAL",
+        "GOOSE",
+        2
+      ],
+      [
+        "BUY_PRODUCT",
+        "FERTILIZER",
+        1
+      ]
+    ]
+  }
+}

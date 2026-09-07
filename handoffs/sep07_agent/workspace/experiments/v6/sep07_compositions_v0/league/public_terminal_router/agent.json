@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "public_terminal_router",
+  "header": "source/agent.hpp",
+  "type": "compositions::public_terminal_router::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../public_capacity_router/source/agent.cpp"
+  ]
+}

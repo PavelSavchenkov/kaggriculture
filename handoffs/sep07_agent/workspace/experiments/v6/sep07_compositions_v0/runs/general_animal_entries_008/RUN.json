@@ -1,0 +1,41 @@
+{
+  "status": "Complete:12 exact entry plans accepted",
+  "parent": "candidates/investment_context_guarded_001_best",
+  "source_lineage": "candidates/investment_context_guarded_001_best/IMPORT.json",
+  "source_sha256": {
+    "src/compile_animal_entries.cpp": "bc304217268ae0249378bc2afa1d8e131250038616208a8ad94fea338f6c785c",
+    "include/deferred_animal.hpp": "23397bdf1ddd7a25183d97cdfea9e2b9faff26efbc293e7123c6ba834d96f9e4",
+    "include/animal_investment_value.hpp": "45e759185a6d4c2488fe34a5eb5d2b1b40c8fd5f46ffadfc1f94a7a3cb074b51",
+    "include/guarded_day.hpp": "32717cadf1a924cf08bbc170581a70aef520a9d2282568ca4433a8da89b78f94",
+    "include/market_tape.hpp": "f223dafef369e33013b2e5a55460aff8358652ded520a16128e5b26d17faf72c",
+    "scheduler/CMakeLists.txt": "5224d30e19921cb2191d8dcba35b297a8089747bb9a3c232b81c558e4035d342"
+  },
+  "seed": 1005,
+  "rival": "king_rc4",
+  "opportunity": {
+    "step": 88,
+    "order": 1,
+    "cell": 42,
+    "original": 10
+  },
+  "entry_days": [
+    3,
+    6,
+    9,
+    15
+  ],
+  "seconds_per_attempt": 6,
+  "changes": "Exact accepted-market insertion funding checks; placement-day feed/care follow source service mask; all3species and waiting/later-entry compilation",
+  "summary": {
+    "seed": 1005,
+    "compiled_entries": 12,
+    "wait_cash": 133190,
+    "source": "investment_context_guarded_001_best",
+    "purchase_step": 88,
+    "purchase_order": 1,
+    "cell": 42,
+    "original": 10,
+    "force_entry_service": 0,
+    "rival": "king_rc4"
+  }
+}

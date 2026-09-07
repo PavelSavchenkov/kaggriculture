@@ -1,0 +1,36 @@
+[
+  {
+    "agent": "king_rc4",
+    "opponent": "pass",
+    "summary": {
+      "agent_a": "king_rc4",
+      "agent_b": "pass",
+      "seconds": 0.0182409,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 143043,
+      "mean_margin": 140043,
+      "cash_cvar10": 117577,
+      "margin_cvar10": 114577,
+      "pass_J": 137950
+    }
+  },
+  {
+    "agent": "king_rc4",
+    "opponent": "king_rc4",
+    "summary": {
+      "agent_a": "king_rc4",
+      "agent_b": "king_rc4",
+      "seconds": 0.0423336,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 79025.6,
+      "mean_margin": 0,
+      "cash_cvar10": 47595,
+      "margin_cvar10": 0,
+      "pass_J": 72739.5
+    }
+  }
+]

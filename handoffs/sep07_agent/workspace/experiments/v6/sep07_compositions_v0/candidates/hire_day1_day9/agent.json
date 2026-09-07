@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "name": "hire_day1_day9",
+  "header": "source/agent.hpp",
+  "type": "compositions::hire_day1_day9::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../league/public_router/source/agent.cpp",
+    "../../league/top_replay_library/source/agent.cpp"
+  ]
+}

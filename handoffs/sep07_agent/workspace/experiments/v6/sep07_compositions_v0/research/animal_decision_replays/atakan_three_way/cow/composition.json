@@ -1,0 +1,3023 @@
+{
+  "items": [
+    "WHEAT",
+    "CARROT",
+    "TOMATO",
+    "STRAWBERRY",
+    "MELON",
+    "EGG",
+    "MILK",
+    "WOOL",
+    "FERTILIZER",
+    "GOOSE",
+    "COW",
+    "SHEEP"
+  ],
+  "day_convention": "zero-based start inclusive, end exclusive; include intraday exit day",
+  "proposal": {
+    "id": "episode_106371597_seat_1",
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "rank": 11,
+    "submission": 56058092,
+    "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T08:02:02.csv",
+    "cash": 107976.0,
+    "opponent_cash": 102930.0,
+    "cohorts": [
+      {
+        "item": 0,
+        "count": 3,
+        "start_day": 0,
+        "end_day_exclusive": 3
+      },
+      {
+        "item": 0,
+        "count": 4,
+        "start_day": 0,
+        "end_day_exclusive": 4
+      },
+      {
+        "item": 0,
+        "count": 3,
+        "start_day": 2,
+        "end_day_exclusive": 5
+      },
+      {
+        "item": 0,
+        "count": 4,
+        "start_day": 3,
+        "end_day_exclusive": 6
+      },
+      {
+        "item": 0,
+        "count": 3,
+        "start_day": 4,
+        "end_day_exclusive": 7
+      },
+      {
+        "item": 0,
+        "count": 5,
+        "start_day": 6,
+        "end_day_exclusive": 9
+      },
+      {
+        "item": 0,
+        "count": 4,
+        "start_day": 7,
+        "end_day_exclusive": 10
+      },
+      {
+        "item": 0,
+        "count": 1,
+        "start_day": 8,
+        "end_day_exclusive": 12
+      },
+      {
+        "item": 0,
+        "count": 2,
+        "start_day": 9,
+        "end_day_exclusive": 12
+      },
+      {
+        "item": 0,
+        "count": 2,
+        "start_day": 9,
+        "end_day_exclusive": 14
+      },
+      {
+        "item": 0,
+        "count": 7,
+        "start_day": 10,
+        "end_day_exclusive": 15
+      },
+      {
+        "item": 0,
+        "count": 11,
+        "start_day": 11,
+        "end_day_exclusive": 16
+      },
+      {
+        "item": 0,
+        "count": 5,
+        "start_day": 12,
+        "end_day_exclusive": 17
+      },
+      {
+        "item": 0,
+        "count": 7,
+        "start_day": 14,
+        "end_day_exclusive": 19
+      },
+      {
+        "item": 0,
+        "count": 10,
+        "start_day": 15,
+        "end_day_exclusive": 20
+      },
+      {
+        "item": 0,
+        "count": 3,
+        "start_day": 16,
+        "end_day_exclusive": 21
+      },
+      {
+        "item": 0,
+        "count": 3,
+        "start_day": 16,
+        "end_day_exclusive": 22
+      },
+      {
+        "item": 0,
+        "count": 8,
+        "start_day": 18,
+        "end_day_exclusive": 23
+      },
+      {
+        "item": 0,
+        "count": 6,
+        "start_day": 19,
+        "end_day_exclusive": 24
+      },
+      {
+        "item": 0,
+        "count": 3,
+        "start_day": 20,
+        "end_day_exclusive": 25
+      },
+      {
+        "item": 0,
+        "count": 7,
+        "start_day": 22,
+        "end_day_exclusive": 27
+      },
+      {
+        "item": 0,
+        "count": 7,
+        "start_day": 23,
+        "end_day_exclusive": 28
+      },
+      {
+        "item": 0,
+        "count": 3,
+        "start_day": 24,
+        "end_day_exclusive": 29
+      },
+      {
+        "item": 0,
+        "count": 3,
+        "start_day": 25,
+        "end_day_exclusive": 30
+      },
+      {
+        "item": 0,
+        "count": 12,
+        "start_day": 26,
+        "end_day_exclusive": 30
+      },
+      {
+        "item": 1,
+        "count": 1,
+        "start_day": 13,
+        "end_day_exclusive": 17
+      },
+      {
+        "item": 1,
+        "count": 1,
+        "start_day": 15,
+        "end_day_exclusive": 19
+      },
+      {
+        "item": 1,
+        "count": 4,
+        "start_day": 19,
+        "end_day_exclusive": 23
+      },
+      {
+        "item": 1,
+        "count": 1,
+        "start_day": 21,
+        "end_day_exclusive": 26
+      },
+      {
+        "item": 1,
+        "count": 11,
+        "start_day": 22,
+        "end_day_exclusive": 26
+      },
+      {
+        "item": 1,
+        "count": 1,
+        "start_day": 22,
+        "end_day_exclusive": 27
+      },
+      {
+        "item": 1,
+        "count": 7,
+        "start_day": 23,
+        "end_day_exclusive": 27
+      },
+      {
+        "item": 1,
+        "count": 12,
+        "start_day": 25,
+        "end_day_exclusive": 29
+      },
+      {
+        "item": 1,
+        "count": 8,
+        "start_day": 26,
+        "end_day_exclusive": 30
+      },
+      {
+        "item": 1,
+        "count": 8,
+        "start_day": 27,
+        "end_day_exclusive": 30
+      },
+      {
+        "item": 2,
+        "count": 1,
+        "start_day": 13,
+        "end_day_exclusive": 26
+      },
+      {
+        "item": 3,
+        "count": 4,
+        "start_day": 5,
+        "end_day_exclusive": 23
+      },
+      {
+        "item": 3,
+        "count": 8,
+        "start_day": 6,
+        "end_day_exclusive": 24
+      },
+      {
+        "item": 3,
+        "count": 4,
+        "start_day": 7,
+        "end_day_exclusive": 25
+      },
+      {
+        "item": 3,
+        "count": 4,
+        "start_day": 8,
+        "end_day_exclusive": 26
+      },
+      {
+        "item": 3,
+        "count": 13,
+        "start_day": 11,
+        "end_day_exclusive": 29
+      },
+      {
+        "item": 4,
+        "count": 12,
+        "start_day": 0,
+        "end_day_exclusive": 11
+      },
+      {
+        "item": 10,
+        "count": 2,
+        "start_day": 0,
+        "end_day_exclusive": 30
+      },
+      {
+        "item": 10,
+        "count": 1,
+        "start_day": 2,
+        "end_day_exclusive": 30
+      },
+      {
+        "item": 10,
+        "count": 1,
+        "start_day": 3,
+        "end_day_exclusive": 30
+      },
+      {
+        "item": 10,
+        "count": 2,
+        "start_day": 6,
+        "end_day_exclusive": 30
+      },
+      {
+        "item": 10,
+        "count": 1,
+        "start_day": 7,
+        "end_day_exclusive": 21
+      },
+      {
+        "item": 10,
+        "count": 1,
+        "start_day": 7,
+        "end_day_exclusive": 30
+      },
+      {
+        "item": 10,
+        "count": 1,
+        "start_day": 8,
+        "end_day_exclusive": 30
+      },
+      {
+        "item": 10,
+        "count": 3,
+        "start_day": 10,
+        "end_day_exclusive": 30
+      },
+      {
+        "item": 11,
+        "count": 2,
+        "start_day": 0,
+        "end_day_exclusive": 29
+      },
+      {
+        "item": 11,
+        "count": 2,
+        "start_day": 8,
+        "end_day_exclusive": 30
+      },
+      {
+        "item": 11,
+        "count": 1,
+        "start_day": 11,
+        "end_day_exclusive": 30
+      }
+    ],
+    "instances": [
+      {
+        "item": 0,
+        "x": 0,
+        "y": 1,
+        "start_day": 0,
+        "end_day_exclusive": 3,
+        "start_state": 13,
+        "end_state": 61,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 0,
+        "start_day": 0,
+        "end_day_exclusive": 3,
+        "start_state": 19,
+        "end_state": 63,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 0,
+        "start_day": 0,
+        "end_day_exclusive": 3,
+        "start_state": 16,
+        "end_state": 66,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 3,
+        "start_day": 0,
+        "end_day_exclusive": 4,
+        "start_state": 16,
+        "end_state": 80,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 2,
+        "y": 0,
+        "start_day": 0,
+        "end_day_exclusive": 4,
+        "start_state": 22,
+        "end_state": 82,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 1,
+        "start_day": 0,
+        "end_day_exclusive": 4,
+        "start_state": 19,
+        "end_state": 82,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 2,
+        "start_day": 0,
+        "end_day_exclusive": 4,
+        "start_state": 19,
+        "end_state": 85,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 1,
+        "start_day": 2,
+        "end_day_exclusive": 5,
+        "start_state": 62,
+        "end_state": 106,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 0,
+        "start_day": 2,
+        "end_day_exclusive": 5,
+        "start_state": 64,
+        "end_state": 107,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 0,
+        "start_day": 2,
+        "end_day_exclusive": 5,
+        "start_state": 67,
+        "end_state": 111,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 1,
+        "start_day": 3,
+        "end_day_exclusive": 6,
+        "start_state": 83,
+        "end_state": 132,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 2,
+        "start_day": 3,
+        "end_day_exclusive": 6,
+        "start_state": 86,
+        "end_state": 132,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 2,
+        "y": 0,
+        "start_day": 3,
+        "end_day_exclusive": 6,
+        "start_state": 83,
+        "end_state": 133,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 3,
+        "start_day": 3,
+        "end_day_exclusive": 6,
+        "start_state": 81,
+        "end_state": 137,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 0,
+        "start_day": 4,
+        "end_day_exclusive": 7,
+        "start_state": 108,
+        "end_state": 165,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 0,
+        "start_day": 4,
+        "end_day_exclusive": 7,
+        "start_state": 112,
+        "end_state": 168,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 1,
+        "start_day": 4,
+        "end_day_exclusive": 7,
+        "start_state": 107,
+        "end_state": 168,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 5,
+        "y": 0,
+        "start_day": 6,
+        "end_day_exclusive": 9,
+        "start_state": 156,
+        "end_state": 202,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 6,
+        "y": 0,
+        "start_day": 6,
+        "end_day_exclusive": 9,
+        "start_state": 161,
+        "end_state": 202,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 7,
+        "y": 1,
+        "start_day": 6,
+        "end_day_exclusive": 9,
+        "start_state": 161,
+        "end_state": 203,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 7,
+        "y": 0,
+        "start_day": 6,
+        "end_day_exclusive": 9,
+        "start_state": 164,
+        "end_state": 208,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 8,
+        "y": 0,
+        "start_day": 6,
+        "end_day_exclusive": 9,
+        "start_state": 167,
+        "end_state": 213,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 9,
+        "y": 1,
+        "start_day": 7,
+        "end_day_exclusive": 10,
+        "start_state": 188,
+        "end_state": 228,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 1,
+        "start_day": 7,
+        "end_day_exclusive": 10,
+        "start_state": 182,
+        "end_state": 229,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 9,
+        "y": 0,
+        "start_day": 7,
+        "end_day_exclusive": 10,
+        "start_state": 191,
+        "end_state": 233,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 0,
+        "start_day": 7,
+        "end_day_exclusive": 10,
+        "start_state": 185,
+        "end_state": 234,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 4,
+        "x": 1,
+        "y": 3,
+        "start_day": 0,
+        "end_day_exclusive": 11,
+        "start_state": 8,
+        "end_state": 246,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 4,
+        "x": 1,
+        "y": 4,
+        "start_day": 0,
+        "end_day_exclusive": 11,
+        "start_state": 10,
+        "end_state": 246,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 4,
+        "x": 4,
+        "y": 0,
+        "start_day": 0,
+        "end_day_exclusive": 11,
+        "start_state": 20,
+        "end_state": 247,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 4,
+        "x": 4,
+        "y": 1,
+        "start_day": 0,
+        "end_day_exclusive": 11,
+        "start_state": 7,
+        "end_state": 247,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 4,
+        "x": 3,
+        "y": 2,
+        "start_day": 0,
+        "end_day_exclusive": 11,
+        "start_state": 10,
+        "end_state": 247,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 4,
+        "x": 2,
+        "y": 3,
+        "start_day": 0,
+        "end_day_exclusive": 11,
+        "start_state": 5,
+        "end_state": 247,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 4,
+        "x": 0,
+        "y": 4,
+        "start_day": 0,
+        "end_day_exclusive": 11,
+        "start_state": 13,
+        "end_state": 247,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 4,
+        "x": 2,
+        "y": 2,
+        "start_day": 0,
+        "end_day_exclusive": 11,
+        "start_state": 13,
+        "end_state": 248,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 4,
+        "x": 3,
+        "y": 1,
+        "start_day": 0,
+        "end_day_exclusive": 11,
+        "start_state": 14,
+        "end_state": 249,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 4,
+        "x": 3,
+        "y": 0,
+        "start_day": 0,
+        "end_day_exclusive": 11,
+        "start_state": 17,
+        "end_state": 250,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 4,
+        "x": 2,
+        "y": 1,
+        "start_day": 0,
+        "end_day_exclusive": 11,
+        "start_state": 16,
+        "end_state": 260,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 4,
+        "x": 1,
+        "y": 2,
+        "start_day": 0,
+        "end_day_exclusive": 11,
+        "start_state": 16,
+        "end_state": 261,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 0,
+        "start_day": 9,
+        "end_day_exclusive": 12,
+        "start_state": 235,
+        "end_state": 281,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 9,
+        "y": 0,
+        "start_day": 9,
+        "end_day_exclusive": 12,
+        "start_state": 234,
+        "end_state": 281,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 8,
+        "y": 0,
+        "start_day": 8,
+        "end_day_exclusive": 12,
+        "start_state": 214,
+        "end_state": 284,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 1,
+        "start_day": 9,
+        "end_day_exclusive": 14,
+        "start_state": 230,
+        "end_state": 325,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 9,
+        "y": 1,
+        "start_day": 9,
+        "end_day_exclusive": 14,
+        "start_state": 229,
+        "end_state": 333,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 3,
+        "y": 1,
+        "start_day": 10,
+        "end_day_exclusive": 15,
+        "start_state": 257,
+        "end_state": 346,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 4,
+        "start_day": 10,
+        "end_day_exclusive": 15,
+        "start_state": 263,
+        "end_state": 346,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 3,
+        "y": 0,
+        "start_day": 10,
+        "end_day_exclusive": 15,
+        "start_state": 260,
+        "end_state": 348,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 2,
+        "y": 1,
+        "start_day": 10,
+        "end_day_exclusive": 15,
+        "start_state": 261,
+        "end_state": 351,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 3,
+        "start_day": 10,
+        "end_day_exclusive": 15,
+        "start_state": 257,
+        "end_state": 352,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 2,
+        "start_day": 10,
+        "end_day_exclusive": 15,
+        "start_state": 262,
+        "end_state": 357,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 2,
+        "y": 2,
+        "start_day": 10,
+        "end_day_exclusive": 15,
+        "start_state": 256,
+        "end_state": 358,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 4,
+        "y": 9,
+        "start_day": 11,
+        "end_day_exclusive": 16,
+        "start_state": 276,
+        "end_state": 369,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 2,
+        "y": 8,
+        "start_day": 11,
+        "end_day_exclusive": 16,
+        "start_state": 278,
+        "end_state": 370,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 5,
+        "start_day": 11,
+        "end_day_exclusive": 16,
+        "start_state": 282,
+        "end_state": 374,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 7,
+        "start_day": 11,
+        "end_day_exclusive": 16,
+        "start_state": 281,
+        "end_state": 374,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 3,
+        "y": 9,
+        "start_day": 11,
+        "end_day_exclusive": 16,
+        "start_state": 279,
+        "end_state": 374,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 8,
+        "start_day": 11,
+        "end_day_exclusive": 16,
+        "start_state": 284,
+        "end_state": 375,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 8,
+        "start_day": 11,
+        "end_day_exclusive": 16,
+        "start_state": 287,
+        "end_state": 375,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 6,
+        "start_day": 11,
+        "end_day_exclusive": 16,
+        "start_state": 279,
+        "end_state": 379,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 2,
+        "y": 9,
+        "start_day": 11,
+        "end_day_exclusive": 16,
+        "start_state": 282,
+        "end_state": 379,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 9,
+        "start_day": 11,
+        "end_day_exclusive": 16,
+        "start_state": 285,
+        "end_state": 380,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 7,
+        "start_day": 11,
+        "end_day_exclusive": 16,
+        "start_state": 278,
+        "end_state": 381,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 4,
+        "y": 0,
+        "start_day": 12,
+        "end_day_exclusive": 17,
+        "start_state": 298,
+        "end_state": 396,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 9,
+        "start_day": 12,
+        "end_day_exclusive": 17,
+        "start_state": 299,
+        "end_state": 396,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 8,
+        "y": 0,
+        "start_day": 12,
+        "end_day_exclusive": 17,
+        "start_state": 308,
+        "end_state": 399,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 9,
+        "y": 0,
+        "start_day": 12,
+        "end_day_exclusive": 17,
+        "start_state": 301,
+        "end_state": 404,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 0,
+        "start_day": 12,
+        "end_day_exclusive": 17,
+        "start_state": 310,
+        "end_state": 406,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 9,
+        "y": 1,
+        "start_day": 13,
+        "end_day_exclusive": 17,
+        "start_state": 334,
+        "end_state": 406,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 3,
+        "start_day": 14,
+        "end_day_exclusive": 19,
+        "start_state": 353,
+        "end_state": 440,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 0,
+        "y": 5,
+        "start_day": 15,
+        "end_day_exclusive": 19,
+        "start_state": 375,
+        "end_state": 441,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 4,
+        "start_day": 14,
+        "end_day_exclusive": 19,
+        "start_state": 347,
+        "end_state": 443,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 2,
+        "y": 2,
+        "start_day": 14,
+        "end_day_exclusive": 19,
+        "start_state": 359,
+        "end_state": 446,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 3,
+        "y": 1,
+        "start_day": 14,
+        "end_day_exclusive": 19,
+        "start_state": 347,
+        "end_state": 449,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 3,
+        "y": 0,
+        "start_day": 14,
+        "end_day_exclusive": 19,
+        "start_state": 349,
+        "end_state": 453,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 2,
+        "y": 1,
+        "start_day": 14,
+        "end_day_exclusive": 19,
+        "start_state": 352,
+        "end_state": 454,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 2,
+        "start_day": 14,
+        "end_day_exclusive": 19,
+        "start_state": 358,
+        "end_state": 454,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 4,
+        "y": 9,
+        "start_day": 15,
+        "end_day_exclusive": 20,
+        "start_state": 370,
+        "end_state": 465,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 7,
+        "start_day": 15,
+        "end_day_exclusive": 20,
+        "start_state": 382,
+        "end_state": 466,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 2,
+        "y": 9,
+        "start_day": 15,
+        "end_day_exclusive": 20,
+        "start_state": 380,
+        "end_state": 467,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 3,
+        "y": 9,
+        "start_day": 15,
+        "end_day_exclusive": 20,
+        "start_state": 375,
+        "end_state": 468,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 6,
+        "start_day": 15,
+        "end_day_exclusive": 20,
+        "start_state": 380,
+        "end_state": 472,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 2,
+        "y": 8,
+        "start_day": 15,
+        "end_day_exclusive": 20,
+        "start_state": 371,
+        "end_state": 472,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 8,
+        "start_day": 15,
+        "end_day_exclusive": 20,
+        "start_state": 376,
+        "end_state": 473,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 7,
+        "start_day": 15,
+        "end_day_exclusive": 20,
+        "start_state": 375,
+        "end_state": 478,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 8,
+        "start_day": 15,
+        "end_day_exclusive": 20,
+        "start_state": 376,
+        "end_state": 478,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 9,
+        "start_day": 15,
+        "end_day_exclusive": 20,
+        "start_state": 381,
+        "end_state": 478,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 9,
+        "y": 1,
+        "start_day": 16,
+        "end_day_exclusive": 21,
+        "start_state": 407,
+        "end_state": 497,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 0,
+        "start_day": 16,
+        "end_day_exclusive": 21,
+        "start_state": 407,
+        "end_state": 501,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 9,
+        "y": 0,
+        "start_day": 16,
+        "end_day_exclusive": 21,
+        "start_state": 405,
+        "end_state": 502,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 4,
+        "y": 0,
+        "start_day": 16,
+        "end_day_exclusive": 22,
+        "start_state": 397,
+        "end_state": 513,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 0,
+        "x": 8,
+        "y": 0,
+        "start_day": 16,
+        "end_day_exclusive": 22,
+        "start_state": 400,
+        "end_state": 513,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 9,
+        "start_day": 16,
+        "end_day_exclusive": 22,
+        "start_state": 397,
+        "end_state": 513,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 2,
+        "y": 0,
+        "start_day": 5,
+        "end_day_exclusive": 23,
+        "start_state": 134,
+        "end_state": 529,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 1,
+        "y": 1,
+        "start_day": 5,
+        "end_day_exclusive": 23,
+        "start_state": 133,
+        "end_state": 529,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 0,
+        "y": 2,
+        "start_day": 5,
+        "end_day_exclusive": 23,
+        "start_state": 133,
+        "end_state": 529,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 0,
+        "y": 3,
+        "start_day": 5,
+        "end_day_exclusive": 23,
+        "start_state": 138,
+        "end_state": 529,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 0,
+        "x": 2,
+        "y": 2,
+        "start_day": 18,
+        "end_day_exclusive": 23,
+        "start_state": 447,
+        "end_state": 538,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 5,
+        "start_day": 18,
+        "end_day_exclusive": 23,
+        "start_state": 442,
+        "end_state": 538,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 4,
+        "y": 9,
+        "start_day": 19,
+        "end_day_exclusive": 23,
+        "start_state": 466,
+        "end_state": 538,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 1,
+        "y": 7,
+        "start_day": 19,
+        "end_day_exclusive": 23,
+        "start_state": 467,
+        "end_state": 539,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 3,
+        "y": 0,
+        "start_day": 18,
+        "end_day_exclusive": 23,
+        "start_state": 454,
+        "end_state": 543,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 2,
+        "start_day": 18,
+        "end_day_exclusive": 23,
+        "start_state": 455,
+        "end_state": 543,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 4,
+        "start_day": 18,
+        "end_day_exclusive": 23,
+        "start_state": 444,
+        "end_state": 543,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 3,
+        "y": 1,
+        "start_day": 18,
+        "end_day_exclusive": 23,
+        "start_state": 450,
+        "end_state": 545,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 0,
+        "y": 6,
+        "start_day": 19,
+        "end_day_exclusive": 23,
+        "start_state": 473,
+        "end_state": 545,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 2,
+        "y": 8,
+        "start_day": 19,
+        "end_day_exclusive": 23,
+        "start_state": 473,
+        "end_state": 545,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 3,
+        "start_day": 18,
+        "end_day_exclusive": 23,
+        "start_state": 441,
+        "end_state": 549,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 2,
+        "y": 1,
+        "start_day": 18,
+        "end_day_exclusive": 23,
+        "start_state": 455,
+        "end_state": 550,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 3,
+        "x": 5,
+        "y": 1,
+        "start_day": 6,
+        "end_day_exclusive": 24,
+        "start_state": 158,
+        "end_state": 553,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 6,
+        "y": 1,
+        "start_day": 6,
+        "end_day_exclusive": 24,
+        "start_state": 158,
+        "end_state": 553,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 7,
+        "y": 2,
+        "start_day": 6,
+        "end_day_exclusive": 24,
+        "start_state": 164,
+        "end_state": 553,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 8,
+        "y": 2,
+        "start_day": 6,
+        "end_day_exclusive": 24,
+        "start_state": 167,
+        "end_state": 553,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 7,
+        "y": 3,
+        "start_day": 6,
+        "end_day_exclusive": 24,
+        "start_state": 164,
+        "end_state": 553,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 8,
+        "y": 3,
+        "start_day": 6,
+        "end_day_exclusive": 24,
+        "start_state": 167,
+        "end_state": 553,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 8,
+        "y": 4,
+        "start_day": 6,
+        "end_day_exclusive": 24,
+        "start_state": 161,
+        "end_state": 553,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 9,
+        "y": 4,
+        "start_day": 6,
+        "end_day_exclusive": 24,
+        "start_state": 164,
+        "end_state": 553,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 7,
+        "start_day": 19,
+        "end_day_exclusive": 24,
+        "start_state": 479,
+        "end_state": 563,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 8,
+        "start_day": 19,
+        "end_day_exclusive": 24,
+        "start_state": 474,
+        "end_state": 569,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 3,
+        "y": 9,
+        "start_day": 19,
+        "end_day_exclusive": 24,
+        "start_state": 469,
+        "end_state": 569,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 8,
+        "start_day": 19,
+        "end_day_exclusive": 24,
+        "start_state": 479,
+        "end_state": 573,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 9,
+        "start_day": 19,
+        "end_day_exclusive": 24,
+        "start_state": 479,
+        "end_state": 574,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 2,
+        "y": 9,
+        "start_day": 19,
+        "end_day_exclusive": 24,
+        "start_state": 468,
+        "end_state": 574,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 3,
+        "x": 1,
+        "y": 0,
+        "start_day": 7,
+        "end_day_exclusive": 25,
+        "start_state": 180,
+        "end_state": 577,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 8,
+        "y": 1,
+        "start_day": 7,
+        "end_day_exclusive": 25,
+        "start_state": 186,
+        "end_state": 577,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 9,
+        "y": 2,
+        "start_day": 7,
+        "end_day_exclusive": 25,
+        "start_state": 185,
+        "end_state": 577,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 9,
+        "y": 3,
+        "start_day": 7,
+        "end_day_exclusive": 25,
+        "start_state": 182,
+        "end_state": 577,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 0,
+        "x": 9,
+        "y": 0,
+        "start_day": 20,
+        "end_day_exclusive": 25,
+        "start_state": 503,
+        "end_state": 591,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 9,
+        "y": 1,
+        "start_day": 20,
+        "end_day_exclusive": 25,
+        "start_state": 498,
+        "end_state": 596,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 0,
+        "start_day": 20,
+        "end_day_exclusive": 25,
+        "start_state": 502,
+        "end_state": 598,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 3,
+        "x": 5,
+        "y": 0,
+        "start_day": 8,
+        "end_day_exclusive": 26,
+        "start_state": 203,
+        "end_state": 601,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 6,
+        "y": 0,
+        "start_day": 8,
+        "end_day_exclusive": 26,
+        "start_state": 203,
+        "end_state": 601,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 7,
+        "y": 0,
+        "start_day": 8,
+        "end_day_exclusive": 26,
+        "start_state": 209,
+        "end_state": 601,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 2,
+        "x": 0,
+        "y": 1,
+        "start_day": 13,
+        "end_day_exclusive": 26,
+        "start_state": 326,
+        "end_state": 601,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 7,
+        "y": 1,
+        "start_day": 8,
+        "end_day_exclusive": 26,
+        "start_state": 204,
+        "end_state": 601,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 1,
+        "x": 6,
+        "y": 4,
+        "start_day": 21,
+        "end_day_exclusive": 26,
+        "start_state": 510,
+        "end_state": 605,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 1,
+        "x": 4,
+        "y": 0,
+        "start_day": 22,
+        "end_day_exclusive": 26,
+        "start_state": 539,
+        "end_state": 610,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 3,
+        "y": 1,
+        "start_day": 22,
+        "end_day_exclusive": 26,
+        "start_state": 546,
+        "end_state": 610,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 2,
+        "y": 8,
+        "start_day": 22,
+        "end_day_exclusive": 26,
+        "start_state": 546,
+        "end_state": 610,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 0,
+        "y": 4,
+        "start_day": 22,
+        "end_day_exclusive": 26,
+        "start_state": 544,
+        "end_state": 612,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 2,
+        "y": 2,
+        "start_day": 22,
+        "end_day_exclusive": 26,
+        "start_state": 539,
+        "end_state": 616,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 1,
+        "y": 7,
+        "start_day": 22,
+        "end_day_exclusive": 26,
+        "start_state": 540,
+        "end_state": 616,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 0,
+        "y": 5,
+        "start_day": 22,
+        "end_day_exclusive": 26,
+        "start_state": 539,
+        "end_state": 617,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 8,
+        "y": 0,
+        "start_day": 22,
+        "end_day_exclusive": 26,
+        "start_state": 551,
+        "end_state": 622,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 1,
+        "y": 3,
+        "start_day": 22,
+        "end_day_exclusive": 26,
+        "start_state": 550,
+        "end_state": 622,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 0,
+        "y": 6,
+        "start_day": 22,
+        "end_day_exclusive": 26,
+        "start_state": 546,
+        "end_state": 622,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 4,
+        "y": 9,
+        "start_day": 22,
+        "end_day_exclusive": 26,
+        "start_state": 539,
+        "end_state": 622,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 0,
+        "y": 9,
+        "start_day": 22,
+        "end_day_exclusive": 27,
+        "start_state": 550,
+        "end_state": 629,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 1,
+        "x": 5,
+        "y": 1,
+        "start_day": 23,
+        "end_day_exclusive": 27,
+        "start_state": 566,
+        "end_state": 632,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 8,
+        "y": 4,
+        "start_day": 23,
+        "end_day_exclusive": 27,
+        "start_state": 560,
+        "end_state": 632,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 8,
+        "y": 3,
+        "start_day": 23,
+        "end_day_exclusive": 27,
+        "start_state": 570,
+        "end_state": 634,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 2,
+        "y": 1,
+        "start_day": 22,
+        "end_day_exclusive": 27,
+        "start_state": 551,
+        "end_state": 635,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 3,
+        "start_day": 22,
+        "end_day_exclusive": 27,
+        "start_state": 538,
+        "end_state": 635,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 7,
+        "y": 2,
+        "start_day": 23,
+        "end_day_exclusive": 27,
+        "start_state": 571,
+        "end_state": 637,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 9,
+        "y": 4,
+        "start_day": 23,
+        "end_day_exclusive": 27,
+        "start_state": 564,
+        "end_state": 637,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 7,
+        "y": 3,
+        "start_day": 23,
+        "end_day_exclusive": 27,
+        "start_state": 567,
+        "end_state": 639,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 3,
+        "y": 0,
+        "start_day": 22,
+        "end_day_exclusive": 27,
+        "start_state": 544,
+        "end_state": 640,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 1,
+        "start_day": 22,
+        "end_day_exclusive": 27,
+        "start_state": 548,
+        "end_state": 640,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 2,
+        "y": 0,
+        "start_day": 22,
+        "end_day_exclusive": 27,
+        "start_state": 548,
+        "end_state": 645,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 6,
+        "y": 1,
+        "start_day": 23,
+        "end_day_exclusive": 27,
+        "start_state": 570,
+        "end_state": 646,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 2,
+        "start_day": 22,
+        "end_day_exclusive": 27,
+        "start_state": 542,
+        "end_state": 646,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 2,
+        "start_day": 22,
+        "end_day_exclusive": 27,
+        "start_state": 544,
+        "end_state": 646,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 2,
+        "y": 9,
+        "start_day": 23,
+        "end_day_exclusive": 28,
+        "start_state": 575,
+        "end_state": 659,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 3,
+        "y": 9,
+        "start_day": 23,
+        "end_day_exclusive": 28,
+        "start_state": 570,
+        "end_state": 662,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 9,
+        "start_day": 23,
+        "end_day_exclusive": 28,
+        "start_state": 575,
+        "end_state": 664,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 7,
+        "start_day": 23,
+        "end_day_exclusive": 28,
+        "start_state": 564,
+        "end_state": 665,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 8,
+        "y": 2,
+        "start_day": 23,
+        "end_day_exclusive": 28,
+        "start_state": 574,
+        "end_state": 668,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 8,
+        "start_day": 23,
+        "end_day_exclusive": 28,
+        "start_state": 570,
+        "end_state": 669,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 8,
+        "start_day": 23,
+        "end_day_exclusive": 28,
+        "start_state": 574,
+        "end_state": 670,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 3,
+        "x": 1,
+        "y": 5,
+        "start_day": 11,
+        "end_day_exclusive": 29,
+        "start_state": 273,
+        "end_state": 673,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 2,
+        "y": 5,
+        "start_day": 11,
+        "end_day_exclusive": 29,
+        "start_state": 270,
+        "end_state": 673,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 3,
+        "y": 5,
+        "start_day": 11,
+        "end_day_exclusive": 29,
+        "start_state": 267,
+        "end_state": 673,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 4,
+        "y": 5,
+        "start_day": 11,
+        "end_day_exclusive": 29,
+        "start_state": 267,
+        "end_state": 673,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 1,
+        "y": 6,
+        "start_day": 11,
+        "end_day_exclusive": 29,
+        "start_state": 276,
+        "end_state": 673,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 2,
+        "y": 6,
+        "start_day": 11,
+        "end_day_exclusive": 29,
+        "start_state": 274,
+        "end_state": 673,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 3,
+        "y": 6,
+        "start_day": 11,
+        "end_day_exclusive": 29,
+        "start_state": 271,
+        "end_state": 673,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 4,
+        "y": 6,
+        "start_day": 11,
+        "end_day_exclusive": 29,
+        "start_state": 268,
+        "end_state": 673,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 2,
+        "y": 7,
+        "start_day": 11,
+        "end_day_exclusive": 29,
+        "start_state": 275,
+        "end_state": 673,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 3,
+        "y": 7,
+        "start_day": 11,
+        "end_day_exclusive": 29,
+        "start_state": 272,
+        "end_state": 673,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 4,
+        "y": 7,
+        "start_day": 11,
+        "end_day_exclusive": 29,
+        "start_state": 270,
+        "end_state": 673,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 3,
+        "y": 8,
+        "start_day": 11,
+        "end_day_exclusive": 29,
+        "start_state": 281,
+        "end_state": 673,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 3,
+        "x": 4,
+        "y": 8,
+        "start_day": 11,
+        "end_day_exclusive": 29,
+        "start_state": 273,
+        "end_state": 673,
+        "censored": false,
+        "outcome": "weed"
+      },
+      {
+        "item": 1,
+        "x": 0,
+        "y": 4,
+        "start_day": 25,
+        "end_day_exclusive": 29,
+        "start_state": 613,
+        "end_state": 681,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 4,
+        "y": 0,
+        "start_day": 25,
+        "end_day_exclusive": 29,
+        "start_state": 611,
+        "end_state": 682,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 0,
+        "y": 5,
+        "start_day": 25,
+        "end_day_exclusive": 29,
+        "start_state": 618,
+        "end_state": 685,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 3,
+        "y": 1,
+        "start_day": 25,
+        "end_day_exclusive": 29,
+        "start_state": 611,
+        "end_state": 687,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 1,
+        "y": 3,
+        "start_day": 25,
+        "end_day_exclusive": 29,
+        "start_state": 623,
+        "end_state": 687,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 8,
+        "y": 0,
+        "start_day": 25,
+        "end_day_exclusive": 29,
+        "start_state": 623,
+        "end_state": 688,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 0,
+        "y": 6,
+        "start_day": 25,
+        "end_day_exclusive": 29,
+        "start_state": 623,
+        "end_state": 688,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 8,
+        "y": 1,
+        "start_day": 25,
+        "end_day_exclusive": 29,
+        "start_state": 614,
+        "end_state": 691,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 4,
+        "y": 9,
+        "start_day": 25,
+        "end_day_exclusive": 29,
+        "start_state": 623,
+        "end_state": 691,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 1,
+        "y": 7,
+        "start_day": 25,
+        "end_day_exclusive": 29,
+        "start_state": 617,
+        "end_state": 692,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 2,
+        "y": 2,
+        "start_day": 25,
+        "end_day_exclusive": 29,
+        "start_state": 617,
+        "end_state": 693,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 0,
+        "start_day": 24,
+        "end_day_exclusive": 29,
+        "start_state": 599,
+        "end_state": 695,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 9,
+        "y": 0,
+        "start_day": 24,
+        "end_day_exclusive": 29,
+        "start_state": 592,
+        "end_state": 695,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 9,
+        "y": 1,
+        "start_day": 24,
+        "end_day_exclusive": 29,
+        "start_state": 597,
+        "end_state": 696,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 2,
+        "y": 8,
+        "start_day": 25,
+        "end_day_exclusive": 29,
+        "start_state": 611,
+        "end_state": 696,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 5,
+        "y": 1,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 633,
+        "end_state": 703,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 6,
+        "y": 1,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 647,
+        "end_state": 704,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 7,
+        "y": 1,
+        "start_day": 25,
+        "end_day_exclusive": 30,
+        "start_state": 610,
+        "end_state": 705,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 2,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 647,
+        "end_state": 705,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 3,
+        "y": 0,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 641,
+        "end_state": 706,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 1,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 641,
+        "end_state": 706,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 9,
+        "y": 2,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 646,
+        "end_state": 707,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 1,
+        "y": 8,
+        "start_day": 27,
+        "end_day_exclusive": 30,
+        "start_state": 670,
+        "end_state": 707,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 7,
+        "y": 0,
+        "start_day": 25,
+        "end_day_exclusive": 30,
+        "start_state": 620,
+        "end_state": 708,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 7,
+        "y": 2,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 638,
+        "end_state": 708,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 8,
+        "y": 2,
+        "start_day": 27,
+        "end_day_exclusive": 30,
+        "start_state": 669,
+        "end_state": 708,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 1,
+        "y": 0,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 644,
+        "end_state": 709,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 2,
+        "y": 0,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 646,
+        "end_state": 709,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 1,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 641,
+        "end_state": 709,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 7,
+        "y": 3,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 640,
+        "end_state": 709,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 9,
+        "y": 3,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 642,
+        "end_state": 710,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 6,
+        "y": 0,
+        "start_day": 25,
+        "end_day_exclusive": 30,
+        "start_state": 616,
+        "end_state": 711,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 2,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 647,
+        "end_state": 712,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 8,
+        "y": 3,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 635,
+        "end_state": 712,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 2,
+        "y": 1,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 636,
+        "end_state": 713,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 0,
+        "y": 3,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 636,
+        "end_state": 713,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 9,
+        "y": 4,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 638,
+        "end_state": 713,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 3,
+        "y": 9,
+        "start_day": 27,
+        "end_day_exclusive": 30,
+        "start_state": 663,
+        "end_state": 713,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 5,
+        "y": 0,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 641,
+        "end_state": 714,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 0,
+        "x": 6,
+        "y": 4,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 634,
+        "end_state": 715,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 8,
+        "y": 4,
+        "start_day": 26,
+        "end_day_exclusive": 30,
+        "start_state": 633,
+        "end_state": 715,
+        "censored": false,
+        "outcome": "harvest"
+      },
+      {
+        "item": 1,
+        "x": 2,
+        "y": 9,
+        "start_day": 27,
+        "end_day_exclusive": 30,
+        "start_state": 660,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      },
+      {
+        "item": 1,
+        "x": 1,
+        "y": 9,
+        "start_day": 27,
+        "end_day_exclusive": 30,
+        "start_state": 665,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      },
+      {
+        "item": 1,
+        "x": 0,
+        "y": 7,
+        "start_day": 27,
+        "end_day_exclusive": 30,
+        "start_state": 666,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      },
+      {
+        "item": 1,
+        "x": 0,
+        "y": 9,
+        "start_day": 27,
+        "end_day_exclusive": 30,
+        "start_state": 669,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      },
+      {
+        "item": 1,
+        "x": 0,
+        "y": 8,
+        "start_day": 27,
+        "end_day_exclusive": 30,
+        "start_state": 671,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      },
+      {
+        "item": 10,
+        "x": 6,
+        "y": 4,
+        "start_day": 7,
+        "end_day_exclusive": 21,
+        "start_state": 178,
+        "end_state": 504,
+        "censored": false,
+        "outcome": "escape"
+      },
+      {
+        "item": 11,
+        "x": 3,
+        "y": 3,
+        "start_day": 0,
+        "end_day_exclusive": 29,
+        "start_state": 10,
+        "end_state": 696,
+        "censored": false,
+        "outcome": "escape"
+      },
+      {
+        "item": 11,
+        "x": 3,
+        "y": 4,
+        "start_day": 0,
+        "end_day_exclusive": 29,
+        "start_state": 8,
+        "end_state": 696,
+        "censored": false,
+        "outcome": "escape"
+      },
+      {
+        "item": 10,
+        "x": 4,
+        "y": 4,
+        "start_day": 0,
+        "end_day_exclusive": 30,
+        "start_state": 5,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      },
+      {
+        "item": 10,
+        "x": 4,
+        "y": 3,
+        "start_day": 0,
+        "end_day_exclusive": 30,
+        "start_state": 6,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      },
+      {
+        "item": 10,
+        "x": 4,
+        "y": 2,
+        "start_day": 2,
+        "end_day_exclusive": 30,
+        "start_state": 70,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      },
+      {
+        "item": 10,
+        "x": 2,
+        "y": 4,
+        "start_day": 3,
+        "end_day_exclusive": 30,
+        "start_state": 96,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      },
+      {
+        "item": 10,
+        "x": 5,
+        "y": 3,
+        "start_day": 6,
+        "end_day_exclusive": 30,
+        "start_state": 157,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      },
+      {
+        "item": 10,
+        "x": 5,
+        "y": 4,
+        "start_day": 6,
+        "end_day_exclusive": 30,
+        "start_state": 157,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      },
+      {
+        "item": 10,
+        "x": 5,
+        "y": 2,
+        "start_day": 7,
+        "end_day_exclusive": 30,
+        "start_state": 184,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      },
+      {
+        "item": 10,
+        "x": 6,
+        "y": 3,
+        "start_day": 8,
+        "end_day_exclusive": 30,
+        "start_state": 200,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      },
+      {
+        "item": 11,
+        "x": 7,
+        "y": 4,
+        "start_day": 8,
+        "end_day_exclusive": 30,
+        "start_state": 201,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      },
+      {
+        "item": 11,
+        "x": 6,
+        "y": 2,
+        "start_day": 8,
+        "end_day_exclusive": 30,
+        "start_state": 206,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      },
+      {
+        "item": 10,
+        "x": 1,
+        "y": 4,
+        "start_day": 10,
+        "end_day_exclusive": 30,
+        "start_state": 259,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      },
+      {
+        "item": 10,
+        "x": 3,
+        "y": 2,
+        "start_day": 10,
+        "end_day_exclusive": 30,
+        "start_state": 260,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      },
+      {
+        "item": 10,
+        "x": 4,
+        "y": 1,
+        "start_day": 10,
+        "end_day_exclusive": 30,
+        "start_state": 261,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      },
+      {
+        "item": 11,
+        "x": 2,
+        "y": 3,
+        "start_day": 11,
+        "end_day_exclusive": 30,
+        "start_state": 271,
+        "end_state": 719,
+        "censored": true,
+        "outcome": "terminal"
+      }
+    ]
+  }
+}

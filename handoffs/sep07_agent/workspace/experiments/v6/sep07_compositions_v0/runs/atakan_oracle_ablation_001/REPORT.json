@@ -1,0 +1,1300 @@
+{
+  "scope": "Offline oracle ablation, 320 existing discovery contexts \u00d7 three fixed branches. These are diagnostics, not deployable agent scores.",
+  "baseline_source_exact_comparisons": 960,
+  "prefix_state_parity": 320,
+  "metrics": {
+    "0": {
+      "name": "baseline",
+      "contexts": 320,
+      "pairwise_correct": 736,
+      "pairwise_total": 960,
+      "pairwise_accuracy": 0.7666666666666666,
+      "hindsight_best_choices": 202,
+      "mean_regret": 3249.14375,
+      "chosen_actual_wins": 211,
+      "chosen_actual_mean_margin": 3445.9625,
+      "pair_delta_mae": 8546.116666666667,
+      "mean_margin_gain_vs_baseline": 0,
+      "better_than_baseline": 0,
+      "worse_than_baseline": 0,
+      "branch_counts": {
+        "2": 234,
+        "0": 12,
+        "1": 74
+      }
+    },
+    "1": {
+      "name": "rival_flows",
+      "contexts": 320,
+      "pairwise_correct": 745,
+      "pairwise_total": 960,
+      "pairwise_accuracy": 0.7760416666666666,
+      "hindsight_best_choices": 215,
+      "mean_regret": 2859.96875,
+      "chosen_actual_wins": 222,
+      "chosen_actual_mean_margin": 3835.1375,
+      "pair_delta_mae": 7627.760416666667,
+      "mean_margin_gain_vs_baseline": 389.175,
+      "better_than_baseline": 25,
+      "worse_than_baseline": 12,
+      "branch_counts": {
+        "0": 37,
+        "2": 203,
+        "1": 80
+      }
+    },
+    "2": {
+      "name": "own_flows",
+      "contexts": 320,
+      "pairwise_correct": 752,
+      "pairwise_total": 960,
+      "pairwise_accuracy": 0.7833333333333333,
+      "hindsight_best_choices": 200,
+      "mean_regret": 3299.65625,
+      "chosen_actual_wins": 211,
+      "chosen_actual_mean_margin": 3395.45,
+      "pair_delta_mae": 8491.0875,
+      "mean_margin_gain_vs_baseline": -50.5125,
+      "better_than_baseline": 0,
+      "worse_than_baseline": 2,
+      "branch_counts": {
+        "2": 236,
+        "0": 12,
+        "1": 72
+      }
+    },
+    "3": {
+      "name": "both_flows",
+      "contexts": 320,
+      "pairwise_correct": 752,
+      "pairwise_total": 960,
+      "pairwise_accuracy": 0.7833333333333333,
+      "hindsight_best_choices": 198,
+      "mean_regret": 2989.809375,
+      "chosen_actual_wins": 222,
+      "chosen_actual_mean_margin": 3705.296875,
+      "pair_delta_mae": 6904.772916666667,
+      "mean_margin_gain_vs_baseline": 259.334375,
+      "better_than_baseline": 20,
+      "worse_than_baseline": 24,
+      "branch_counts": {
+        "0": 34,
+        "2": 196,
+        "1": 90
+      }
+    },
+    "4": {
+      "name": "future_shops",
+      "contexts": 320,
+      "pairwise_correct": 806,
+      "pairwise_total": 960,
+      "pairwise_accuracy": 0.8395833333333333,
+      "hindsight_best_choices": 288,
+      "mean_regret": 475.159375,
+      "chosen_actual_wins": 243,
+      "chosen_actual_mean_margin": 6219.946875,
+      "pair_delta_mae": 5946.120833333333,
+      "mean_margin_gain_vs_baseline": 2773.984375,
+      "better_than_baseline": 96,
+      "worse_than_baseline": 6,
+      "branch_counts": {
+        "2": 154,
+        "0": 72,
+        "1": 94
+      }
+    },
+    "5": {
+      "name": "rival_flows_and_shops",
+      "contexts": 320,
+      "pairwise_correct": 856,
+      "pairwise_total": 960,
+      "pairwise_accuracy": 0.8916666666666666,
+      "hindsight_best_choices": 300,
+      "mean_regret": 225.471875,
+      "chosen_actual_wins": 247,
+      "chosen_actual_mean_margin": 6469.634375,
+      "pair_delta_mae": 3130.39375,
+      "mean_margin_gain_vs_baseline": 3023.671875,
+      "better_than_baseline": 114,
+      "worse_than_baseline": 14,
+      "branch_counts": {
+        "0": 90,
+        "2": 124,
+        "1": 106
+      }
+    },
+    "6": {
+      "name": "own_flows_and_shops",
+      "contexts": 320,
+      "pairwise_correct": 848,
+      "pairwise_total": 960,
+      "pairwise_accuracy": 0.8833333333333333,
+      "hindsight_best_choices": 282,
+      "mean_regret": 712.084375,
+      "chosen_actual_wins": 237,
+      "chosen_actual_mean_margin": 5983.021875,
+      "pair_delta_mae": 5582.985416666666,
+      "mean_margin_gain_vs_baseline": 2537.059375,
+      "better_than_baseline": 92,
+      "worse_than_baseline": 12,
+      "branch_counts": {
+        "0": 66,
+        "2": 166,
+        "1": 88
+      }
+    },
+    "7": {
+      "name": "all_three",
+      "contexts": 320,
+      "pairwise_correct": 907,
+      "pairwise_total": 960,
+      "pairwise_accuracy": 0.9447916666666667,
+      "hindsight_best_choices": 313,
+      "mean_regret": 15.4375,
+      "chosen_actual_wins": 251,
+      "chosen_actual_mean_margin": 6679.66875,
+      "pair_delta_mae": 1532.6979166666667,
+      "mean_margin_gain_vs_baseline": 3233.70625,
+      "better_than_baseline": 112,
+      "worse_than_baseline": 1,
+      "branch_counts": {
+        "0": 78,
+        "2": 135,
+        "1": 107
+      }
+    },
+    "15": {
+      "name": "all_three_and_rival_fixed_cost",
+      "contexts": 320,
+      "pairwise_correct": 909,
+      "pairwise_total": 960,
+      "pairwise_accuracy": 0.946875,
+      "hindsight_best_choices": 313,
+      "mean_regret": 15.4375,
+      "chosen_actual_wins": 251,
+      "chosen_actual_mean_margin": 6679.66875,
+      "pair_delta_mae": 1508.75625,
+      "mean_margin_gain_vs_baseline": 3233.70625,
+      "better_than_baseline": 112,
+      "worse_than_baseline": 1,
+      "branch_counts": {
+        "0": 78,
+        "2": 135,
+        "1": 107
+      }
+    },
+    "31": {
+      "name": "all_three_fixed_and_exact_consumption_calendar",
+      "contexts": 320,
+      "pairwise_correct": 912,
+      "pairwise_total": 960,
+      "pairwise_accuracy": 0.95,
+      "hindsight_best_choices": 314,
+      "mean_regret": 11.4625,
+      "chosen_actual_wins": 251,
+      "chosen_actual_mean_margin": 6683.64375,
+      "pair_delta_mae": 1492.3104166666667,
+      "mean_margin_gain_vs_baseline": 3237.68125,
+      "better_than_baseline": 112,
+      "worse_than_baseline": 0,
+      "branch_counts": {
+        "0": 78,
+        "2": 136,
+        "1": 106
+      }
+    }
+  },
+  "by_opponent": {
+    "animal_adaptive_r1_c0_b0": {
+      "0": {
+        "contexts": 64,
+        "pairwise_correct": 146,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.7604166666666666,
+        "hindsight_best_choices": 40,
+        "mean_regret": 2604.53125,
+        "chosen_actual_wins": 25,
+        "chosen_actual_mean_margin": -2663.140625,
+        "pair_delta_mae": 7596.78125,
+        "mean_margin_gain_vs_baseline": 0,
+        "better_than_baseline": 0,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "2": 48,
+          "0": 2,
+          "1": 14
+        }
+      },
+      "1": {
+        "contexts": 64,
+        "pairwise_correct": 152,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.7916666666666666,
+        "hindsight_best_choices": 40,
+        "mean_regret": 2761.015625,
+        "chosen_actual_wins": 26,
+        "chosen_actual_mean_margin": -2819.625,
+        "pair_delta_mae": 6436.083333333333,
+        "mean_margin_gain_vs_baseline": -156.484375,
+        "better_than_baseline": 4,
+        "worse_than_baseline": 4,
+        "branch_counts": {
+          "0": 6,
+          "2": 42,
+          "1": 16
+        }
+      },
+      "2": {
+        "contexts": 64,
+        "pairwise_correct": 148,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.7708333333333333,
+        "hindsight_best_choices": 40,
+        "mean_regret": 2604.53125,
+        "chosen_actual_wins": 25,
+        "chosen_actual_mean_margin": -2663.140625,
+        "pair_delta_mae": 7765.885416666667,
+        "mean_margin_gain_vs_baseline": 0,
+        "better_than_baseline": 0,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "2": 48,
+          "0": 2,
+          "1": 14
+        }
+      },
+      "3": {
+        "contexts": 64,
+        "pairwise_correct": 154,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.8020833333333334,
+        "hindsight_best_choices": 40,
+        "mean_regret": 2761.015625,
+        "chosen_actual_wins": 26,
+        "chosen_actual_mean_margin": -2819.625,
+        "pair_delta_mae": 6171.802083333333,
+        "mean_margin_gain_vs_baseline": -156.484375,
+        "better_than_baseline": 4,
+        "worse_than_baseline": 4,
+        "branch_counts": {
+          "0": 6,
+          "2": 42,
+          "1": 16
+        }
+      },
+      "4": {
+        "contexts": 64,
+        "pairwise_correct": 156,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.8125,
+        "hindsight_best_choices": 58,
+        "mean_regret": 589.875,
+        "chosen_actual_wins": 33,
+        "chosen_actual_mean_margin": -648.484375,
+        "pair_delta_mae": 6092.052083333333,
+        "mean_margin_gain_vs_baseline": 2014.65625,
+        "better_than_baseline": 20,
+        "worse_than_baseline": 2,
+        "branch_counts": {
+          "2": 30,
+          "0": 16,
+          "1": 18
+        }
+      },
+      "5": {
+        "contexts": 64,
+        "pairwise_correct": 168,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.875,
+        "hindsight_best_choices": 60,
+        "mean_regret": 145.09375,
+        "chosen_actual_wins": 33,
+        "chosen_actual_mean_margin": -203.703125,
+        "pair_delta_mae": 2763.9791666666665,
+        "mean_margin_gain_vs_baseline": 2459.4375,
+        "better_than_baseline": 22,
+        "worse_than_baseline": 2,
+        "branch_counts": {
+          "0": 18,
+          "2": 26,
+          "1": 20
+        }
+      },
+      "6": {
+        "contexts": 64,
+        "pairwise_correct": 164,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.8541666666666666,
+        "hindsight_best_choices": 58,
+        "mean_regret": 596.8125,
+        "chosen_actual_wins": 33,
+        "chosen_actual_mean_margin": -655.421875,
+        "pair_delta_mae": 5790.114583333333,
+        "mean_margin_gain_vs_baseline": 2007.71875,
+        "better_than_baseline": 20,
+        "worse_than_baseline": 2,
+        "branch_counts": {
+          "0": 16,
+          "2": 30,
+          "1": 18
+        }
+      },
+      "7": {
+        "contexts": 64,
+        "pairwise_correct": 178,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.9270833333333334,
+        "hindsight_best_choices": 62,
+        "mean_regret": 38.6875,
+        "chosen_actual_wins": 33,
+        "chosen_actual_mean_margin": -97.296875,
+        "pair_delta_mae": 1950.65625,
+        "mean_margin_gain_vs_baseline": 2565.84375,
+        "better_than_baseline": 22,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "0": 16,
+          "2": 28,
+          "1": 20
+        }
+      },
+      "15": {
+        "contexts": 64,
+        "pairwise_correct": 178,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.9270833333333334,
+        "hindsight_best_choices": 62,
+        "mean_regret": 38.6875,
+        "chosen_actual_wins": 33,
+        "chosen_actual_mean_margin": -97.296875,
+        "pair_delta_mae": 1880.1770833333333,
+        "mean_margin_gain_vs_baseline": 2565.84375,
+        "better_than_baseline": 22,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "0": 16,
+          "2": 28,
+          "1": 20
+        }
+      },
+      "31": {
+        "contexts": 64,
+        "pairwise_correct": 178,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.9270833333333334,
+        "hindsight_best_choices": 62,
+        "mean_regret": 38.6875,
+        "chosen_actual_wins": 33,
+        "chosen_actual_mean_margin": -97.296875,
+        "pair_delta_mae": 1731.7291666666667,
+        "mean_margin_gain_vs_baseline": 2565.84375,
+        "better_than_baseline": 22,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "0": 16,
+          "2": 28,
+          "1": 20
+        }
+      }
+    },
+    "king_rc4": {
+      "0": {
+        "contexts": 64,
+        "pairwise_correct": 154,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.8020833333333334,
+        "hindsight_best_choices": 44,
+        "mean_regret": 2679.1875,
+        "chosen_actual_wins": 62,
+        "chosen_actual_mean_margin": 14917.6875,
+        "pair_delta_mae": 8129.15625,
+        "mean_margin_gain_vs_baseline": 0,
+        "better_than_baseline": 0,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "0": 8,
+          "2": 42,
+          "1": 14
+        }
+      },
+      "1": {
+        "contexts": 64,
+        "pairwise_correct": 157,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.8177083333333334,
+        "hindsight_best_choices": 53,
+        "mean_regret": 1466.453125,
+        "chosen_actual_wins": 64,
+        "chosen_actual_mean_margin": 16130.421875,
+        "pair_delta_mae": 7738.364583333333,
+        "mean_margin_gain_vs_baseline": 1212.734375,
+        "better_than_baseline": 9,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "0": 17,
+          "2": 35,
+          "1": 12
+        }
+      },
+      "2": {
+        "contexts": 64,
+        "pairwise_correct": 158,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.8229166666666666,
+        "hindsight_best_choices": 44,
+        "mean_regret": 2679.1875,
+        "chosen_actual_wins": 62,
+        "chosen_actual_mean_margin": 14917.6875,
+        "pair_delta_mae": 8080.395833333333,
+        "mean_margin_gain_vs_baseline": 0,
+        "better_than_baseline": 0,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "0": 8,
+          "2": 42,
+          "1": 14
+        }
+      },
+      "3": {
+        "contexts": 64,
+        "pairwise_correct": 154,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.8020833333333334,
+        "hindsight_best_choices": 46,
+        "mean_regret": 2129.875,
+        "chosen_actual_wins": 64,
+        "chosen_actual_mean_margin": 15467,
+        "pair_delta_mae": 7238.770833333333,
+        "mean_margin_gain_vs_baseline": 549.3125,
+        "better_than_baseline": 2,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "0": 10,
+          "2": 42,
+          "1": 12
+        }
+      },
+      "4": {
+        "contexts": 64,
+        "pairwise_correct": 168,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.875,
+        "hindsight_best_choices": 58,
+        "mean_regret": 219.453125,
+        "chosen_actual_wins": 64,
+        "chosen_actual_mean_margin": 17377.421875,
+        "pair_delta_mae": 5567.583333333333,
+        "mean_margin_gain_vs_baseline": 2459.734375,
+        "better_than_baseline": 16,
+        "worse_than_baseline": 2,
+        "branch_counts": {
+          "0": 16,
+          "2": 30,
+          "1": 18
+        }
+      },
+      "5": {
+        "contexts": 64,
+        "pairwise_correct": 178,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.9270833333333334,
+        "hindsight_best_choices": 60,
+        "mean_regret": 67.984375,
+        "chosen_actual_wins": 64,
+        "chosen_actual_mean_margin": 17528.890625,
+        "pair_delta_mae": 2894.3229166666665,
+        "mean_margin_gain_vs_baseline": 2611.203125,
+        "better_than_baseline": 20,
+        "worse_than_baseline": 4,
+        "branch_counts": {
+          "0": 20,
+          "2": 24,
+          "1": 20
+        }
+      },
+      "6": {
+        "contexts": 64,
+        "pairwise_correct": 170,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.8854166666666666,
+        "hindsight_best_choices": 54,
+        "mean_regret": 859.953125,
+        "chosen_actual_wins": 62,
+        "chosen_actual_mean_margin": 16736.921875,
+        "pair_delta_mae": 5159.052083333333,
+        "mean_margin_gain_vs_baseline": 1819.234375,
+        "better_than_baseline": 14,
+        "worse_than_baseline": 4,
+        "branch_counts": {
+          "0": 14,
+          "2": 34,
+          "1": 16
+        }
+      },
+      "7": {
+        "contexts": 64,
+        "pairwise_correct": 185,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.9635416666666666,
+        "hindsight_best_choices": 61,
+        "mean_regret": 32.4375,
+        "chosen_actual_wins": 64,
+        "chosen_actual_mean_margin": 17564.4375,
+        "pair_delta_mae": 1325.6458333333333,
+        "mean_margin_gain_vs_baseline": 2646.75,
+        "better_than_baseline": 18,
+        "worse_than_baseline": 1,
+        "branch_counts": {
+          "0": 18,
+          "2": 25,
+          "1": 21
+        }
+      },
+      "15": {
+        "contexts": 64,
+        "pairwise_correct": 185,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.9635416666666666,
+        "hindsight_best_choices": 61,
+        "mean_regret": 32.4375,
+        "chosen_actual_wins": 64,
+        "chosen_actual_mean_margin": 17564.4375,
+        "pair_delta_mae": 1327.5,
+        "mean_margin_gain_vs_baseline": 2646.75,
+        "better_than_baseline": 18,
+        "worse_than_baseline": 1,
+        "branch_counts": {
+          "0": 18,
+          "2": 25,
+          "1": 21
+        }
+      },
+      "31": {
+        "contexts": 64,
+        "pairwise_correct": 186,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.96875,
+        "hindsight_best_choices": 62,
+        "mean_regret": 12.5625,
+        "chosen_actual_wins": 64,
+        "chosen_actual_mean_margin": 17584.3125,
+        "pair_delta_mae": 1316.1666666666667,
+        "mean_margin_gain_vs_baseline": 2666.625,
+        "better_than_baseline": 18,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "0": 18,
+          "2": 26,
+          "1": 20
+        }
+      }
+    },
+    "public_router": {
+      "0": {
+        "contexts": 64,
+        "pairwise_correct": 144,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.75,
+        "hindsight_best_choices": 40,
+        "mean_regret": 3881.03125,
+        "chosen_actual_wins": 46,
+        "chosen_actual_mean_margin": 1208.640625,
+        "pair_delta_mae": 9131.385416666666,
+        "mean_margin_gain_vs_baseline": 0,
+        "better_than_baseline": 0,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "2": 48,
+          "1": 16
+        }
+      },
+      "1": {
+        "contexts": 64,
+        "pairwise_correct": 144,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.75,
+        "hindsight_best_choices": 42,
+        "mean_regret": 3265.015625,
+        "chosen_actual_wins": 50,
+        "chosen_actual_mean_margin": 1824.65625,
+        "pair_delta_mae": 8261.416666666666,
+        "mean_margin_gain_vs_baseline": 616.015625,
+        "better_than_baseline": 4,
+        "worse_than_baseline": 2,
+        "branch_counts": {
+          "0": 6,
+          "2": 42,
+          "1": 16
+        }
+      },
+      "2": {
+        "contexts": 64,
+        "pairwise_correct": 148,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.7708333333333334,
+        "hindsight_best_choices": 40,
+        "mean_regret": 3881.03125,
+        "chosen_actual_wins": 46,
+        "chosen_actual_mean_margin": 1208.640625,
+        "pair_delta_mae": 9077.072916666666,
+        "mean_margin_gain_vs_baseline": 0,
+        "better_than_baseline": 0,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "2": 48,
+          "1": 16
+        }
+      },
+      "3": {
+        "contexts": 64,
+        "pairwise_correct": 142,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.7395833333333334,
+        "hindsight_best_choices": 36,
+        "mean_regret": 3416.828125,
+        "chosen_actual_wins": 48,
+        "chosen_actual_mean_margin": 1672.84375,
+        "pair_delta_mae": 7329.125,
+        "mean_margin_gain_vs_baseline": 464.203125,
+        "better_than_baseline": 4,
+        "worse_than_baseline": 8,
+        "branch_counts": {
+          "0": 6,
+          "2": 36,
+          "1": 22
+        }
+      },
+      "4": {
+        "contexts": 64,
+        "pairwise_correct": 162,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.84375,
+        "hindsight_best_choices": 58,
+        "mean_regret": 518.6875,
+        "chosen_actual_wins": 50,
+        "chosen_actual_mean_margin": 4570.984375,
+        "pair_delta_mae": 6056.677083333333,
+        "mean_margin_gain_vs_baseline": 3362.34375,
+        "better_than_baseline": 20,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "2": 32,
+          "0": 12,
+          "1": 20
+        }
+      },
+      "5": {
+        "contexts": 64,
+        "pairwise_correct": 172,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.8958333333333334,
+        "hindsight_best_choices": 62,
+        "mean_regret": 241.03125,
+        "chosen_actual_wins": 54,
+        "chosen_actual_mean_margin": 4848.640625,
+        "pair_delta_mae": 3309.40625,
+        "mean_margin_gain_vs_baseline": 3640,
+        "better_than_baseline": 24,
+        "worse_than_baseline": 2,
+        "branch_counts": {
+          "0": 16,
+          "2": 26,
+          "1": 22
+        }
+      },
+      "6": {
+        "contexts": 64,
+        "pairwise_correct": 172,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.8958333333333334,
+        "hindsight_best_choices": 58,
+        "mean_regret": 803.65625,
+        "chosen_actual_wins": 48,
+        "chosen_actual_mean_margin": 4286.015625,
+        "pair_delta_mae": 5739.385416666667,
+        "mean_margin_gain_vs_baseline": 3077.375,
+        "better_than_baseline": 20,
+        "worse_than_baseline": 2,
+        "branch_counts": {
+          "2": 34,
+          "0": 12,
+          "1": 18
+        }
+      },
+      "7": {
+        "contexts": 64,
+        "pairwise_correct": 178,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.9270833333333334,
+        "hindsight_best_choices": 64,
+        "mean_regret": 0,
+        "chosen_actual_wins": 54,
+        "chosen_actual_mean_margin": 5089.671875,
+        "pair_delta_mae": 1782.78125,
+        "mean_margin_gain_vs_baseline": 3881.03125,
+        "better_than_baseline": 24,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "0": 14,
+          "2": 28,
+          "1": 22
+        }
+      },
+      "15": {
+        "contexts": 64,
+        "pairwise_correct": 178,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.9270833333333334,
+        "hindsight_best_choices": 64,
+        "mean_regret": 0,
+        "chosen_actual_wins": 54,
+        "chosen_actual_mean_margin": 5089.671875,
+        "pair_delta_mae": 1782.78125,
+        "mean_margin_gain_vs_baseline": 3881.03125,
+        "better_than_baseline": 24,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "0": 14,
+          "2": 28,
+          "1": 22
+        }
+      },
+      "31": {
+        "contexts": 64,
+        "pairwise_correct": 180,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.9375,
+        "hindsight_best_choices": 64,
+        "mean_regret": 0,
+        "chosen_actual_wins": 54,
+        "chosen_actual_mean_margin": 5089.671875,
+        "pair_delta_mae": 1817.1354166666667,
+        "mean_margin_gain_vs_baseline": 3881.03125,
+        "better_than_baseline": 24,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "0": 14,
+          "2": 28,
+          "1": 22
+        }
+      }
+    },
+    "public_router_v5": {
+      "0": {
+        "contexts": 64,
+        "pairwise_correct": 148,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.7708333333333334,
+        "hindsight_best_choices": 40,
+        "mean_regret": 3581.9375,
+        "chosen_actual_wins": 30,
+        "chosen_actual_mean_margin": -1198.484375,
+        "pair_delta_mae": 8928.927083333334,
+        "mean_margin_gain_vs_baseline": 0,
+        "better_than_baseline": 0,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "2": 48,
+          "0": 2,
+          "1": 14
+        }
+      },
+      "1": {
+        "contexts": 64,
+        "pairwise_correct": 146,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.7604166666666666,
+        "hindsight_best_choices": 40,
+        "mean_regret": 3403.734375,
+        "chosen_actual_wins": 34,
+        "chosen_actual_mean_margin": -1020.28125,
+        "pair_delta_mae": 7733.03125,
+        "mean_margin_gain_vs_baseline": 178.203125,
+        "better_than_baseline": 6,
+        "worse_than_baseline": 6,
+        "branch_counts": {
+          "0": 6,
+          "2": 38,
+          "1": 20
+        }
+      },
+      "2": {
+        "contexts": 64,
+        "pairwise_correct": 150,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.78125,
+        "hindsight_best_choices": 38,
+        "mean_regret": 3834.5,
+        "chosen_actual_wins": 30,
+        "chosen_actual_mean_margin": -1451.046875,
+        "pair_delta_mae": 8957.78125,
+        "mean_margin_gain_vs_baseline": -252.5625,
+        "better_than_baseline": 0,
+        "worse_than_baseline": 2,
+        "branch_counts": {
+          "2": 50,
+          "0": 2,
+          "1": 12
+        }
+      },
+      "3": {
+        "contexts": 64,
+        "pairwise_correct": 148,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.7708333333333334,
+        "hindsight_best_choices": 38,
+        "mean_regret": 3507.015625,
+        "chosen_actual_wins": 34,
+        "chosen_actual_mean_margin": -1123.5625,
+        "pair_delta_mae": 7058.020833333333,
+        "mean_margin_gain_vs_baseline": 74.921875,
+        "better_than_baseline": 6,
+        "worse_than_baseline": 8,
+        "branch_counts": {
+          "0": 6,
+          "2": 36,
+          "1": 22
+        }
+      },
+      "4": {
+        "contexts": 64,
+        "pairwise_correct": 162,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.84375,
+        "hindsight_best_choices": 56,
+        "mean_regret": 748.1875,
+        "chosen_actual_wins": 40,
+        "chosen_actual_mean_margin": 1635.265625,
+        "pair_delta_mae": 6405.21875,
+        "mean_margin_gain_vs_baseline": 2833.75,
+        "better_than_baseline": 20,
+        "worse_than_baseline": 2,
+        "branch_counts": {
+          "2": 30,
+          "0": 16,
+          "1": 18
+        }
+      },
+      "5": {
+        "contexts": 64,
+        "pairwise_correct": 166,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.8645833333333334,
+        "hindsight_best_choices": 58,
+        "mean_regret": 345.625,
+        "chosen_actual_wins": 42,
+        "chosen_actual_mean_margin": 2037.828125,
+        "pair_delta_mae": 3216.5520833333335,
+        "mean_margin_gain_vs_baseline": 3236.3125,
+        "better_than_baseline": 24,
+        "worse_than_baseline": 4,
+        "branch_counts": {
+          "0": 18,
+          "2": 22,
+          "1": 24
+        }
+      },
+      "6": {
+        "contexts": 64,
+        "pairwise_correct": 170,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.8854166666666666,
+        "hindsight_best_choices": 56,
+        "mean_regret": 728.125,
+        "chosen_actual_wins": 40,
+        "chosen_actual_mean_margin": 1655.328125,
+        "pair_delta_mae": 6410.135416666667,
+        "mean_margin_gain_vs_baseline": 2853.8125,
+        "better_than_baseline": 18,
+        "worse_than_baseline": 2,
+        "branch_counts": {
+          "2": 34,
+          "0": 12,
+          "1": 18
+        }
+      },
+      "7": {
+        "contexts": 64,
+        "pairwise_correct": 182,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.9479166666666666,
+        "hindsight_best_choices": 64,
+        "mean_regret": 0,
+        "chosen_actual_wins": 44,
+        "chosen_actual_mean_margin": 2383.453125,
+        "pair_delta_mae": 1626.2604166666667,
+        "mean_margin_gain_vs_baseline": 3581.9375,
+        "better_than_baseline": 24,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "0": 14,
+          "2": 26,
+          "1": 24
+        }
+      },
+      "15": {
+        "contexts": 64,
+        "pairwise_correct": 184,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.9583333333333334,
+        "hindsight_best_choices": 64,
+        "mean_regret": 0,
+        "chosen_actual_wins": 44,
+        "chosen_actual_mean_margin": 2383.453125,
+        "pair_delta_mae": 1568.96875,
+        "mean_margin_gain_vs_baseline": 3581.9375,
+        "better_than_baseline": 24,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "0": 14,
+          "2": 26,
+          "1": 24
+        }
+      },
+      "31": {
+        "contexts": 64,
+        "pairwise_correct": 184,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.9583333333333334,
+        "hindsight_best_choices": 64,
+        "mean_regret": 0,
+        "chosen_actual_wins": 44,
+        "chosen_actual_mean_margin": 2383.453125,
+        "pair_delta_mae": 1543.7291666666667,
+        "mean_margin_gain_vs_baseline": 3581.9375,
+        "better_than_baseline": 24,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "0": 14,
+          "2": 26,
+          "1": 24
+        }
+      }
+    },
+    "teammate_shoprouter": {
+      "0": {
+        "contexts": 64,
+        "pairwise_correct": 144,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.75,
+        "hindsight_best_choices": 38,
+        "mean_regret": 3499.03125,
+        "chosen_actual_wins": 48,
+        "chosen_actual_mean_margin": 4965.109375,
+        "pair_delta_mae": 8944.333333333334,
+        "mean_margin_gain_vs_baseline": 0,
+        "better_than_baseline": 0,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "2": 48,
+          "1": 16
+        }
+      },
+      "1": {
+        "contexts": 64,
+        "pairwise_correct": 146,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.7604166666666666,
+        "hindsight_best_choices": 40,
+        "mean_regret": 3403.625,
+        "chosen_actual_wins": 48,
+        "chosen_actual_mean_margin": 5060.515625,
+        "pair_delta_mae": 7969.90625,
+        "mean_margin_gain_vs_baseline": 95.40625,
+        "better_than_baseline": 2,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "0": 2,
+          "2": 46,
+          "1": 16
+        }
+      },
+      "2": {
+        "contexts": 64,
+        "pairwise_correct": 148,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.7708333333333334,
+        "hindsight_best_choices": 38,
+        "mean_regret": 3499.03125,
+        "chosen_actual_wins": 48,
+        "chosen_actual_mean_margin": 4965.109375,
+        "pair_delta_mae": 8574.302083333334,
+        "mean_margin_gain_vs_baseline": 0,
+        "better_than_baseline": 0,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "2": 48,
+          "1": 16
+        }
+      },
+      "3": {
+        "contexts": 64,
+        "pairwise_correct": 154,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.8020833333333334,
+        "hindsight_best_choices": 38,
+        "mean_regret": 3134.3125,
+        "chosen_actual_wins": 50,
+        "chosen_actual_mean_margin": 5329.828125,
+        "pair_delta_mae": 6726.145833333333,
+        "mean_margin_gain_vs_baseline": 364.71875,
+        "better_than_baseline": 4,
+        "worse_than_baseline": 4,
+        "branch_counts": {
+          "0": 6,
+          "2": 40,
+          "1": 18
+        }
+      },
+      "4": {
+        "contexts": 64,
+        "pairwise_correct": 158,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.8229166666666666,
+        "hindsight_best_choices": 58,
+        "mean_regret": 299.59375,
+        "chosen_actual_wins": 56,
+        "chosen_actual_mean_margin": 8164.546875,
+        "pair_delta_mae": 5609.072916666667,
+        "mean_margin_gain_vs_baseline": 3199.4375,
+        "better_than_baseline": 20,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "2": 32,
+          "0": 12,
+          "1": 20
+        }
+      },
+      "5": {
+        "contexts": 64,
+        "pairwise_correct": 172,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.8958333333333334,
+        "hindsight_best_choices": 60,
+        "mean_regret": 327.625,
+        "chosen_actual_wins": 54,
+        "chosen_actual_mean_margin": 8136.515625,
+        "pair_delta_mae": 3467.7083333333335,
+        "mean_margin_gain_vs_baseline": 3171.40625,
+        "better_than_baseline": 24,
+        "worse_than_baseline": 2,
+        "branch_counts": {
+          "0": 18,
+          "2": 26,
+          "1": 20
+        }
+      },
+      "6": {
+        "contexts": 64,
+        "pairwise_correct": 172,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.8958333333333334,
+        "hindsight_best_choices": 56,
+        "mean_regret": 571.875,
+        "chosen_actual_wins": 54,
+        "chosen_actual_mean_margin": 7892.265625,
+        "pair_delta_mae": 4816.239583333333,
+        "mean_margin_gain_vs_baseline": 2927.15625,
+        "better_than_baseline": 20,
+        "worse_than_baseline": 2,
+        "branch_counts": {
+          "2": 34,
+          "0": 12,
+          "1": 18
+        }
+      },
+      "7": {
+        "contexts": 64,
+        "pairwise_correct": 184,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.9583333333333334,
+        "hindsight_best_choices": 62,
+        "mean_regret": 6.0625,
+        "chosen_actual_wins": 56,
+        "chosen_actual_mean_margin": 8458.078125,
+        "pair_delta_mae": 978.1458333333334,
+        "mean_margin_gain_vs_baseline": 3492.96875,
+        "better_than_baseline": 24,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "0": 16,
+          "2": 28,
+          "1": 20
+        }
+      },
+      "15": {
+        "contexts": 64,
+        "pairwise_correct": 184,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.9583333333333334,
+        "hindsight_best_choices": 62,
+        "mean_regret": 6.0625,
+        "chosen_actual_wins": 56,
+        "chosen_actual_mean_margin": 8458.078125,
+        "pair_delta_mae": 984.3541666666666,
+        "mean_margin_gain_vs_baseline": 3492.96875,
+        "better_than_baseline": 24,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "0": 16,
+          "2": 28,
+          "1": 20
+        }
+      },
+      "31": {
+        "contexts": 64,
+        "pairwise_correct": 184,
+        "pairwise_total": 192,
+        "pairwise_accuracy": 0.9583333333333334,
+        "hindsight_best_choices": 62,
+        "mean_regret": 6.0625,
+        "chosen_actual_wins": 56,
+        "chosen_actual_mean_margin": 8458.078125,
+        "pair_delta_mae": 1052.7916666666667,
+        "mean_margin_gain_vs_baseline": 3492.96875,
+        "better_than_baseline": 24,
+        "worse_than_baseline": 0,
+        "branch_counts": {
+          "0": 16,
+          "2": 28,
+          "1": 20
+        }
+      }
+    }
+  },
+  "shapley_all_three_oracle_improvements": {
+    "rival_flows": {
+      "mean_regret_reduction": 455.1963541666667,
+      "pairwise_accuracy_gain": 0.03229166666666668
+    },
+    "own_flows": {
+      "mean_regret_reduction": -7.9536458333332405,
+      "pairwise_accuracy_gain": 0.03177083333333337
+    },
+    "future_shops": {
+      "mean_regret_reduction": 2786.4635416666665,
+      "pairwise_accuracy_gain": 0.11406250000000002
+    }
+  },
+  "rival_revenue_pair_delta_mae_by_product": {
+    "0": {
+      "WHEAT": 842.7375,
+      "CARROT": 495.35,
+      "TOMATO": 0,
+      "STRAWBERRY": 1932.1125,
+      "MELON": 0,
+      "EGG": 136.425,
+      "MILK": 2788.8729166666667,
+      "WOOL": 2506.275,
+      "FERTILIZER": 881.35625
+    },
+    "1": {
+      "WHEAT": 285.05833333333334,
+      "CARROT": 173.81041666666667,
+      "TOMATO": 0,
+      "STRAWBERRY": 1650.79375,
+      "MELON": 0,
+      "EGG": 24.404166666666665,
+      "MILK": 2569.8166666666666,
+      "WOOL": 2242.991666666667,
+      "FERTILIZER": 195.71458333333334
+    },
+    "2": {
+      "WHEAT": 842.7375,
+      "CARROT": 495.35,
+      "TOMATO": 0,
+      "STRAWBERRY": 1932.1125,
+      "MELON": 0,
+      "EGG": 136.425,
+      "MILK": 2598.429166666667,
+      "WOOL": 2555.4875,
+      "FERTILIZER": 881.35625
+    },
+    "3": {
+      "WHEAT": 284.84583333333336,
+      "CARROT": 164.21041666666667,
+      "TOMATO": 0,
+      "STRAWBERRY": 1357.0020833333333,
+      "MELON": 0,
+      "EGG": 24.404166666666665,
+      "MILK": 2595.1145833333335,
+      "WOOL": 2304.1895833333333,
+      "FERTILIZER": 222.71041666666667
+    },
+    "4": {
+      "WHEAT": 842.7375,
+      "CARROT": 495.35,
+      "TOMATO": 0,
+      "STRAWBERRY": 1932.1125,
+      "MELON": 0,
+      "EGG": 135.175,
+      "MILK": 1418.8729166666667,
+      "WOOL": 1821.2166666666667,
+      "FERTILIZER": 881.35625
+    },
+    "5": {
+      "WHEAT": 88.63541666666667,
+      "CARROT": 69.66875,
+      "TOMATO": 0,
+      "STRAWBERRY": 1292.9604166666666,
+      "MELON": 0,
+      "EGG": 7.54375,
+      "MILK": 803.66875,
+      "WOOL": 900.4604166666667,
+      "FERTILIZER": 195.71458333333334
+    },
+    "6": {
+      "WHEAT": 842.7375,
+      "CARROT": 495.35,
+      "TOMATO": 0,
+      "STRAWBERRY": 1932.1125,
+      "MELON": 0,
+      "EGG": 135.175,
+      "MILK": 1336.0875,
+      "WOOL": 1946.6375,
+      "FERTILIZER": 881.35625
+    },
+    "7": {
+      "WHEAT": 88.44791666666667,
+      "CARROT": 51.40625,
+      "TOMATO": 0,
+      "STRAWBERRY": 726.6854166666667,
+      "MELON": 0,
+      "EGG": 7.54375,
+      "MILK": 711.7916666666666,
+      "WOOL": 708.8520833333333,
+      "FERTILIZER": 222.71041666666667
+    },
+    "15": {
+      "WHEAT": 88.44791666666667,
+      "CARROT": 51.40625,
+      "TOMATO": 0,
+      "STRAWBERRY": 726.6854166666667,
+      "MELON": 0,
+      "EGG": 7.54375,
+      "MILK": 711.7916666666666,
+      "WOOL": 708.8520833333333,
+      "FERTILIZER": 222.71041666666667
+    },
+    "31": {
+      "WHEAT": 90.12916666666666,
+      "CARROT": 53.989583333333336,
+      "TOMATO": 0,
+      "STRAWBERRY": 722.2270833333333,
+      "MELON": 0,
+      "EGG": 6.697916666666667,
+      "MILK": 715.4458333333333,
+      "WOOL": 698.7958333333333,
+      "FERTILIZER": 219.50833333333333
+    }
+  },
+  "limits": [
+    "Rival flows oracle includes future product purchase costs. Baseline predicts animal sales only and no purchases.",
+    "All masks retain original daily midpoint pricing, internal netting and price-floor approximation.",
+    "Rival fixed costs are omitted in masks0..7; masks15 and31 add their realized values to isolate this omitted term.",
+    "Mask31 additionally fixes the exact consumption calendar, including no town-center fertilizer demand and the partial first day.",
+    "Future shop identities are unavailable at the original decision. Their oracle gain is not directly achievable by an observation-only predictor.",
+    "Exact quantities are conditioned on each branch and rival continuation, so oracle tests cannot be deployed as policies.",
+    "The same discovery contexts support all numbers; no holdout or statistical generalization claim is made."
+  ]
+}

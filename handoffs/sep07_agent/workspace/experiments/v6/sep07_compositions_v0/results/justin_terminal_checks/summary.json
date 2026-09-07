@@ -1,0 +1,104 @@
+[
+  {
+    "agent": "justin_liquidate_v0",
+    "opponent": "pass",
+    "summary": {
+      "agent_a": "justin_liquidate_v0",
+      "agent_b": "pass",
+      "seconds": 0.0206183,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 163886,
+      "mean_margin": 160886,
+      "cash_cvar10": 124776,
+      "margin_cvar10": 121776,
+      "pass_J": 156064
+    }
+  },
+  {
+    "agent": "justin_liquidate_v0",
+    "opponent": "justin_liquidate_v0",
+    "summary": {
+      "agent_a": "justin_liquidate_v0",
+      "agent_b": "justin_liquidate_v0",
+      "seconds": 0.0274552,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 83738.6,
+      "mean_margin": 0,
+      "cash_cvar10": 52713,
+      "margin_cvar10": 0,
+      "pass_J": 77533.5
+    }
+  },
+  {
+    "agent": "justin_liquidate_v0",
+    "opponent": "justin_recall_v0",
+    "summary": {
+      "agent_a": "justin_liquidate_v0",
+      "agent_b": "justin_recall_v0",
+      "seconds": 0.0298366,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0,
+      "mean_cash": 83738.6,
+      "mean_margin": -88.625,
+      "cash_cvar10": 52713,
+      "margin_cvar10": -596,
+      "pass_J": 77533.5
+    }
+  },
+  {
+    "agent": "justin_recall_v0",
+    "opponent": "pass",
+    "summary": {
+      "agent_a": "justin_recall_v0",
+      "agent_b": "pass",
+      "seconds": 0.0204685,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 164662,
+      "mean_margin": 161662,
+      "cash_cvar10": 125259,
+      "margin_cvar10": 122259,
+      "pass_J": 156782
+    }
+  },
+  {
+    "agent": "justin_recall_v0",
+    "opponent": "justin_liquidate_v0",
+    "summary": {
+      "agent_a": "justin_recall_v0",
+      "agent_b": "justin_liquidate_v0",
+      "seconds": 0.0295997,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 83827.2,
+      "mean_margin": 88.625,
+      "cash_cvar10": 52724,
+      "margin_cvar10": 11,
+      "pass_J": 77606.6
+    }
+  },
+  {
+    "agent": "justin_recall_v0",
+    "opponent": "justin_recall_v0",
+    "summary": {
+      "agent_a": "justin_recall_v0",
+      "agent_b": "justin_recall_v0",
+      "seconds": 0.0234451,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 83823.6,
+      "mean_margin": 0,
+      "cash_cvar10": 52722,
+      "margin_cvar10": 0,
+      "pass_J": 77603.3
+    }
+  }
+]

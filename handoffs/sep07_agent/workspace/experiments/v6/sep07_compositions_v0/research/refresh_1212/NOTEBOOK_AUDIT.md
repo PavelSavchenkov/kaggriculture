@@ -1,0 +1,1 @@
+No newer public notebook appears in the latest100by-date records than the already converted Thomas v5 controller (last run10:22). Extra rows beyond the previous query page are older, not newly published. Metadata is archived; no additional port selected this round.

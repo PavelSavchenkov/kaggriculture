@@ -1,0 +1,499 @@
+"""ScoreBand-top20-Rank4 for Kaggriculture."""
+import base64
+import copy
+import json
+import zlib
+
+
+_ACTIONS = <encoded value omitted>
+_FR_ITEMS = ()
+_FR_STATE = {
+    0: {"last_step": -1, "due_step": -1, "due": {}},
+    1: {"last_step": -1, "due_step": -1, "due": {}},
+}
+_WEED_STATE = {0: {}, 1: {}}
+_WEED_REPLAY_STEPS = 8
+_SHOP_PRODUCTS = {
+    "BAKERY": ("EGG", "WHEAT"),
+    "PIZZA_SHOP": ("MILK", "TOMATO", "WHEAT"),
+    "BRUNCH_SPOT": ("EGG", "WHEAT", "STRAWBERRY"),
+    "YARN_STORE": ("WOOL",),
+    "ICE_CREAM_SHOP": ("STRAWBERRY", "MILK", "WHEAT"),
+    "PET_CAFE": ("CARROT",),
+    "SMOOTHIE_SHOP": ("STRAWBERRY", "MILK"),
+    "FARMERS_MARKET": ("WHEAT", "CARROT", "TOMATO", "STRAWBERRY"),
+}
+
+
+def _get(value, key, default=None):
+    if isinstance(value, dict):
+        return value.get(key, default)
+    getter = getattr(value, "get", None)
+    if callable(getter):
+        return getter(key, default)
+    return getattr(value, key, default)
+
+
+def _copy_action(action):
+    action = copy.deepcopy(action or {})
+    return {
+        "farmer": list(action.get("farmer") or ["PASS"]),
+        "hands": [list(order or ["PASS"]) for order in (action.get("hands") or [])],
+        "market": [list(order) for order in (action.get("market") or [])],
+    }
+
+
+def _seat(obs):
+    return 1 if int(_get(obs, "player", 0) or 0) == 1 else 0
+
+
+def _farm(obs, seat):
+    farms = list(_get(obs, "farms", []) or [])
+    return farms[seat] if seat < len(farms) else {}
+
+
+def _align_hands(action, obs):
+    action = _copy_action(action)
+    expected = len(_get(_farm(obs, _seat(obs)), "hands", []) or [])
+    hands = list(action.get("hands") or [])
+    if len(hands) < expected:
+        hands.extend([["PASS"] for _ in range(expected - len(hands))])
+    action["hands"] = [list(order or ["PASS"]) for order in hands[:expected]]
+    return action
+
+
+def _tile_at(farm, position):
+    try:
+        x, y = int(position[0]), int(position[1])
+        return (_get(farm, "tiles", []) or [])[y][x]
+    except (IndexError, TypeError, ValueError):
+        return "LOCKED"
+
+
+def _trace_actor_action(step, actor):
+    trace = _ACTIONS[min(max(int(step), 0), len(_ACTIONS) - 1)] or {}
+    if actor == "farmer":
+        return list(trace.get("farmer") or ["PASS"])
+    hands = trace.get("hands", []) or []
+    return list(hands[actor] if actor < len(hands) else ["PASS"])
+
+
+def _weed_repair_action(obs, action, step):
+    action = _align_hands(action, obs)
+    seat = _seat(obs)
+    game = _WEED_STATE[seat]
+    if step == 0 or step < int(game.get("last_step", -1)):
+        game = {"last_step": step, "active": {}}
+        _WEED_STATE[seat] = game
+    game["last_step"] = step
+    farm = _farm(obs, seat)
+    positions = [_get(farm, "farmer"), *list(_get(farm, "hands", []) or [])]
+    unit_actions = [action.get("farmer", ["PASS"]), *list(action.get("hands") or [])]
+    active = game.setdefault("active", {})
+
+    for actor, transaction in list(active.items()):
+        index = 0 if actor == "farmer" else int(actor) + 1
+        if index >= len(unit_actions):
+            active.pop(actor, None)
+            continue
+        age = step - int(transaction["start"])
+        if age == 1:
+            unit_actions[index] = list(transaction["intended"])
+        elif 2 <= age <= 1 + _WEED_REPLAY_STEPS:
+            unit_actions[index] = _trace_actor_action(step - 1, actor)
+        else:
+            active.pop(actor, None)
+
+    for index, (position, intended) in enumerate(zip(positions, unit_actions)):
+        actor = "farmer" if index == 0 else index - 1
+        if actor in active or not isinstance(intended, list) or not intended:
+            continue
+        if intended[0] not in ("BUILD_PASTURE", "PLANT"):
+            continue
+        tile = _tile_at(farm, position)
+        if not isinstance(tile, dict) or tile.get("kind") != "WEED":
+            continue
+        active[actor] = {"start": step, "intended": list(intended)}
+        unit_actions[index] = ["DIG"]
+
+    action["farmer"] = unit_actions[0] if unit_actions else ["PASS"]
+    action["hands"] = unit_actions[1:]
+    return _align_hands(action, obs)
+
+
+def _fr_state(obs, step):
+    seat = _seat(obs)
+    state = _FR_STATE[seat]
+    if step == 0 or step < int(state.get("last_step", -1)):
+        state = {"last_step": step, "due_step": -1, "due": {}}
+        _FR_STATE[seat] = state
+    state["last_step"] = step
+    if 0 <= int(state.get("due_step", -1)) < step:
+        state["due_step"], state["due"] = -1, {}
+    return state
+
+
+def _town_demand_now(obs, item, step):
+    demand = 1 if item != "FERTILIZER" and step % 24 == 0 else 0
+    if step % 4 != 0:
+        return demand
+    town = _get(obs, "town", {}) or {}
+    for shop in list(_get(town, "unlocked_shops", []) or []):
+        products = _SHOP_PRODUCTS.get(shop, ())
+        if item in products:
+            demand += 2 if len(products) == 1 else 1
+    return demand
+
+
+def _future_quantity(step, item):
+    future = step + 1
+    if not 0 <= future < len(_ACTIONS):
+        return 0
+    return sum(
+        max(0, int(order[2]))
+        for order in (_ACTIONS[future].get("market") or [])
+        if len(order) >= 3 and order[0] == "SELL" and order[1] == item
+    )
+
+
+def _pickup_reserve(action, item):
+    reserve = 0
+    for order in [action.get("farmer", ["PASS"]), *list(action.get("hands") or [])]:
+        if isinstance(order, (list, tuple)) and len(order) >= 2 and order[0] == "PICKUP" and order[1] == item:
+            try:
+                reserve += max(0, int(order[2])) if len(order) >= 3 else 1
+            except (TypeError, ValueError):
+                reserve += 1
+    return reserve
+
+
+def _existing_sell(action, item):
+    return sum(
+        max(0, int(order[2]))
+        for order in (action.get("market") or [])
+        if len(order) >= 3 and order[0] == "SELL" and order[1] == item
+    )
+
+
+def _repay(action, state, step):
+    if int(state.get("due_step", -1)) != step:
+        return action
+    due = {str(item): max(0, int(quantity)) for item, quantity in dict(state.get("due", {})).items()}
+    action = _copy_action(action)
+    market = []
+    for raw in action.get("market") or []:
+        order = list(raw)
+        if len(order) >= 3 and order[0] == "SELL" and order[1] in due and due[order[1]] > 0:
+            requested = max(0, int(order[2]))
+            reduction = min(requested, due[order[1]])
+            requested -= reduction
+            due[order[1]] -= reduction
+            if requested <= 0:
+                continue
+            order[2] = requested
+        market.append(order)
+    action["market"] = market[:10]
+    state["due_step"], state["due"] = -1, {}
+    return action
+
+
+def _front_run(action, obs, state, step):
+    if not _FR_ITEMS:
+        return action
+    private = _get(obs, "private", {}) or {}
+    shed = _get(private, "shed", {}) or {}
+    moved = {}
+    action = _copy_action(action)
+    for item in _FR_ITEMS:
+        target = _future_quantity(step, item)
+        if target <= 0 or _town_demand_now(obs, item, step) > 0:
+            continue
+        stock = max(0, int(_get(shed, item, 0) or 0))
+        reserve = _pickup_reserve(action, item) + _existing_sell(action, item)
+        quantity = min(target, max(0, stock - reserve))
+        if quantity <= 0:
+            continue
+        market = [list(order) for order in (action.get("market") or [])]
+        existing = next((order for order in market if len(order) >= 3 and order[0] == "SELL" and order[1] == item), None)
+        if existing is not None:
+            existing[2] = max(0, int(existing[2])) + quantity
+        elif len(market) < 10:
+            market.append(["SELL", item, quantity])
+        else:
+            continue
+        action["market"] = market[:10]
+        moved[item] = moved.get(item, 0) + quantity
+    if moved:
+        state["due_step"] = step + 1
+        state["due"] = moved
+    return action
+
+
+
+_AM_ITEMS = ("STRAWBERRY", "MILK", "WOOL")
+_AM_BASE_PRICE = {"STRAWBERRY": 120.0, "MILK": 160.0, "WOOL": 200.0}
+_AM_CONFIG = <encoded value omitted>
+_AM_STATE = {
+    0: {"last_step": -1, "last_inventory": {}, "last_sold": {}, "last_shops": (), "pressure": {}, "added": {}, "near_mirror": None},
+    1: {"last_step": -1, "last_inventory": {}, "last_sold": {}, "last_shops": (), "pressure": {}, "added": {}, "near_mirror": None},
+}
+
+
+def _am_town_demand(shops, item, step):
+    demand = 1 if item != "FERTILIZER" and step % 24 == 0 else 0
+    if step % 4 != 0:
+        return demand
+    for shop in shops:
+        products = _SHOP_PRODUCTS.get(shop, ())
+        if item in products:
+            demand += 2 if len(products) == 1 else 1
+    return demand
+
+
+def _am_shop_demand_units(shops, item):
+    demand = 0
+    for shop in shops:
+        products = _SHOP_PRODUCTS.get(shop, ())
+        if item in products:
+            demand += 2 if len(products) == 1 else 1
+    return demand
+
+
+def _am_count(farm, kind):
+    total = 0
+    for row in (_get(farm, "tiles", []) or []):
+        for tile in row or []:
+            if not isinstance(tile, dict):
+                continue
+            if kind == "STRAWBERRY" and tile.get("kind") == "PLANT" and tile.get("crop") == kind:
+                total += 1
+            elif kind in {"COW", "SHEEP"} and tile.get("animal") == kind:
+                total += 1
+    return total
+
+
+def _am_public_capacity(obs, item):
+    farms = list(_get(obs, "farms", []) or [])
+    seat = _seat(obs)
+    if len(farms) < 2:
+        return 0
+    own = farms[seat]
+    opponent = farms[1 - seat]
+    kind = {"STRAWBERRY": "STRAWBERRY", "MILK": "COW", "WOOL": "SHEEP"}[item]
+    return _am_count(opponent, kind) - _am_count(own, kind)
+
+
+def _am_macro_signature(farm):
+    return {
+        "COW": _am_count(farm, "COW"),
+        "SHEEP": _am_count(farm, "SHEEP"),
+        "STRAWBERRY": _am_count(farm, "STRAWBERRY"),
+        "hands": len(_get(farm, "hands", []) or []),
+        "quadrants": len(_get(farm, "unlocked_quadrants", []) or []),
+        "money": float(_get(farm, "money", 0) or 0),
+    }
+
+
+def _am_near_mirror(obs):
+    farms = list(_get(obs, "farms", []) or [])
+    seat = _seat(obs)
+    if len(farms) < 2:
+        return False
+    own = _am_macro_signature(farms[seat])
+    opponent = _am_macro_signature(farms[1 - seat])
+    composition_distance = sum(
+        abs(int(own[item]) - int(opponent[item]))
+        for item in ("COW", "SHEEP", "STRAWBERRY")
+    )
+    return (
+        composition_distance <= int(_AM_CONFIG["mirror_composition_distance"])
+        and own["hands"] == opponent["hands"]
+        and own["quadrants"] == opponent["quadrants"]
+        and abs(own["money"] - opponent["money"]) <= float(_AM_CONFIG["mirror_money_distance"])
+    )
+
+
+def _am_reset(step):
+    return {
+        "last_step": step,
+        "last_inventory": {},
+        "last_sold": {},
+        "last_shops": (),
+        "pressure": {},
+        "added": {},
+        "near_mirror": None,
+    }
+
+
+def _am_observe(obs, step):
+    seat = _seat(obs)
+    state = _AM_STATE[seat]
+    if step == 0 or step <= int(state.get("last_step", -1)):
+        state = _am_reset(step)
+        _AM_STATE[seat] = state
+
+    market = _get(obs, "market", {}) or {}
+    inventory = _get(market, "inventory", {}) or {}
+    if int(state.get("last_step", -1)) == step - 1:
+        previous_inventory = dict(state.get("last_inventory", {}))
+        previous_sold = dict(state.get("last_sold", {}))
+        previous_shops = tuple(state.get("last_shops", ()))
+        for item in _AM_ITEMS:
+            delta = int(_get(inventory, item, 0) or 0) - int(previous_inventory.get(item, 0) or 0)
+            external = (
+                delta
+                + _am_town_demand(previous_shops, item, step - 1)
+                - int(previous_sold.get(item, 0) or 0)
+            )
+            old = float(dict(state.get("pressure", {})).get(item, 0.0) or 0.0)
+            # A decaying public-market signal.  Negative inferred flow does not
+            # become a buy fingerprint; it simply lets old pressure decay.
+            state.setdefault("pressure", {})[item] = max(0.0, old * 0.72 + min(24.0, max(0.0, float(external))))
+    state["last_step"] = step
+    if state.get("near_mirror") is None and step >= int(_AM_CONFIG["mirror_latch_step"]):
+        state["near_mirror"] = bool(_am_near_mirror(obs))
+    return state
+
+
+def _am_reserve(step, item, total_shed):
+    if step < 528:
+        reserve = _AM_CONFIG["reserve_early"]
+    elif step < 600:
+        reserve = _AM_CONFIG["reserve_mid"]
+    elif step < 648:
+        reserve = _AM_CONFIG["reserve_late"]
+    elif step < 684:
+        reserve = _AM_CONFIG["reserve_tail"]
+    elif step < 704:
+        reserve = 2
+    else:
+        reserve = 0
+    if total_shed >= _AM_CONFIG["shed_hard"]:
+        reserve = 0
+    elif total_shed >= _AM_CONFIG["shed_soft"]:
+        reserve = max(0, reserve - _AM_CONFIG["shed_reserve_cut"])
+    return reserve
+
+
+def _am_add_sell(action, item, quantity):
+    if quantity <= 0:
+        return action
+    action = _copy_action(action)
+    market = [list(order) for order in (action.get("market") or [])]
+    existing = next(
+        (
+            order
+            for order in market
+            if len(order) >= 3 and order[0] == "SELL" and order[1] == item
+        ),
+        None,
+    )
+    if existing is not None:
+        existing[2] = max(0, int(existing[2])) + quantity
+    elif len(market) < 10:
+        # Premium cash is made available before hires and purchases, while the
+        # relative order among existing scheduled orders is untouched.
+        market.insert(0, ["SELL", item, quantity])
+    action["market"] = market[:10]
+    return action
+
+
+def _adaptive_market(action, obs, step):
+    state = _am_observe(obs, step)
+    private = _get(obs, "private", {}) or {}
+    shed = _get(private, "shed", {}) or {}
+    market = _get(obs, "market", {}) or {}
+    prices = _get(market, "prices", {}) or {}
+    inventory = _get(market, "inventory", {}) or {}
+    town = _get(obs, "town", {}) or {}
+    shops = tuple(_get(town, "unlocked_shops", []) or [])
+    total_shed = sum(max(0, int(value or 0)) for value in dict(shed).values())
+
+    if step >= _AM_CONFIG["start_step"]:
+        for item in _AM_ITEMS:
+            stock = max(0, int(_get(shed, item, 0) or 0))
+            pickup = _pickup_reserve(action, item)
+            scheduled = min(max(0, stock - pickup), _existing_sell(action, item))
+            unscheduled = max(0, stock - pickup - scheduled)
+            reserve = _am_reserve(step, item, total_shed)
+            shop_demand = _am_shop_demand_units(shops, item)
+            if step < 684:
+                reserve += min(
+                    int(_AM_CONFIG["demand_reserve_cap"]),
+                    shop_demand * int(_AM_CONFIG["demand_reserve"]),
+                )
+            excess = max(0, unscheduled - reserve)
+            if excess <= 0:
+                continue
+
+            already_added = int(dict(state.get("added", {})).get(item, 0) or 0)
+            maximum_extra = (
+                int(_AM_CONFIG["mirror_max_extra_per_item"])
+                if bool(state.get("near_mirror", False))
+                else int(_AM_CONFIG["max_extra_per_item"])
+            )
+            budget = max(0, maximum_extra - already_added)
+            if budget <= 0:
+                continue
+
+            ratio = float(_get(prices, item, 0) or 0) / _AM_BASE_PRICE[item]
+            pressure = float(dict(state.get("pressure", {})).get(item, 0.0) or 0.0)
+            capacity_delta = _am_public_capacity(obs, item)
+            gate = float(_AM_CONFIG["price_gate"])
+            if step < 684:
+                gate += min(
+                    float(_AM_CONFIG["demand_gate_cap"]),
+                    shop_demand * float(_AM_CONFIG["demand_gate"]),
+                )
+            if step >= 648:
+                gate -= 0.12
+            if step >= 684:
+                gate -= 0.18
+            if pressure >= _AM_CONFIG["pressure_trigger"]:
+                gate -= _AM_CONFIG["pressure_gate_cut"]
+            if capacity_delta >= _AM_CONFIG["capacity_trigger"]:
+                gate -= _AM_CONFIG["capacity_gate_cut"]
+
+            urgent = total_shed >= _AM_CONFIG["shed_hard"] or step >= 704
+            if not urgent and ratio < max(0.20, gate):
+                continue
+
+            tranche = int(_AM_CONFIG["tranche"])
+            if pressure >= _AM_CONFIG["pressure_trigger"]:
+                tranche += int(_AM_CONFIG["pressure_tranche"])
+            if total_shed >= _AM_CONFIG["shed_soft"]:
+                tranche += int(_AM_CONFIG["shed_tranche"])
+            if step >= 684:
+                tranche += int(_AM_CONFIG["tail_tranche"])
+            quantity = min(excess, max(1, tranche), budget)
+            action = _am_add_sell(action, item, quantity)
+            state.setdefault("added", {})[item] = int(state.setdefault("added", {}).get(item, 0) or 0) + quantity
+
+    # Save the observable transition ingredients only after the final action is
+    # known, so next turn's external-flow estimate does not peek at the rival.
+    actual = {}
+    for item in _AM_ITEMS:
+        stock = max(0, int(_get(shed, item, 0) or 0))
+        actual[item] = min(stock, _existing_sell(action, item))
+    state["last_inventory"] = {item: int(_get(inventory, item, 0) or 0) for item in _AM_ITEMS}
+    state["last_sold"] = actual
+    state["last_shops"] = shops
+    return action
+
+def agent(obs):
+    try:
+        fallback = int(_get(obs, "day", 0) or 0) * 24 + int(_get(obs, "hour", 0) or 0)
+        step = min(max(0, int(_get(obs, "step", fallback) if _get(obs, "step", None) is not None else fallback)), len(_ACTIONS) - 1)
+        action = _weed_repair_action(obs, _copy_action(_ACTIONS[step]), step)
+        state = _fr_state(obs, step)
+        action = _repay(action, state, step)
+        action = _front_run(action, obs, state, step)
+        action = _adaptive_market(action, obs, step)
+        return _align_hands(action, obs)
+    except Exception:
+        farm = _farm(obs, _seat(obs))
+        return {
+            "farmer": ["PASS"],
+            "hands": [["PASS"] for _ in (_get(farm, "hands", []) or [])],
+            "market": [],
+        }

@@ -1,0 +1,401 @@
+{
+  "games": 8,
+  "means": {
+    "seed": 1001.5,
+    "seat": 0.5,
+    "cash": 80315.0,
+    "margin": -7693.125,
+    "discards": 0.0,
+    "hires": 319.0,
+    "hire_cost": 8358.0,
+    "land_buys": 2.0,
+    "land_cost": 3000.0,
+    "weed_digs": 7.125,
+    "faults": 26.125,
+    "shed_max": 94.875,
+    "shed_turns_ge90": 3.75,
+    "produced_WHEAT": 555.0,
+    "buy_WHEAT": 66.0,
+    "sell_WHEAT": 397.625,
+    "net_WHEAT": 331.625,
+    "buy_hour_WHEAT": 1.4242424242424243,
+    "sell_hour_WHEAT": 11.26379092060047,
+    "produced_CARROT": 111.625,
+    "buy_CARROT": 0.0,
+    "sell_CARROT": 111.625,
+    "net_CARROT": 111.625,
+    "sell_hour_CARROT": 12.366685779816514,
+    "produced_TOMATO": 85.875,
+    "buy_TOMATO": 0.0,
+    "sell_TOMATO": 85.875,
+    "net_TOMATO": 85.875,
+    "sell_hour_TOMATO": 10.007113543091656,
+    "produced_STRAWBERRY": 310.0,
+    "buy_STRAWBERRY": 0.0,
+    "sell_STRAWBERRY": 310.0,
+    "net_STRAWBERRY": 310.0,
+    "sell_hour_STRAWBERRY": 10.36425995495026,
+    "produced_MELON": 72.0,
+    "buy_MELON": 0.0,
+    "sell_MELON": 72.0,
+    "net_MELON": 72.0,
+    "sell_hour_MELON": 9.666666666666666,
+    "produced_EGG": 82.625,
+    "buy_EGG": 0.0,
+    "sell_EGG": 82.625,
+    "net_EGG": 82.625,
+    "sell_hour_EGG": 6.825778478517934,
+    "produced_MILK": 139.5,
+    "buy_MILK": 0.0,
+    "sell_MILK": 139.5,
+    "net_MILK": 139.5,
+    "sell_hour_MILK": 15.15816357555488,
+    "produced_WOOL": 98.0,
+    "buy_WOOL": 0.0,
+    "sell_WOOL": 98.0,
+    "net_WOOL": 98.0,
+    "sell_hour_WOOL": 8.479591836734693,
+    "produced_FERTILIZER": 314.0,
+    "buy_FERTILIZER": 48.0,
+    "sell_FERTILIZER": 192.625,
+    "net_FERTILIZER": 144.625,
+    "buy_hour_FERTILIZER": 0.0,
+    "sell_hour_FERTILIZER": 12.98876384032634,
+    "crop_days": 1656.375,
+    "crop_water_rate": 0.6509679530949299,
+    "crop_yield_day_maximized": 0.5307478209609926,
+    "animal_days_GOOSE": 58.25,
+    "fed_GOOSE": 0.7577898550724638,
+    "cared_GOOSE": 0.7140398550724638,
+    "collected_fertilizer_GOOSE": 0.9335144927536232,
+    "fed_cared_GOOSE": 0.708605072463768,
+    "GOOSE_d0": 0.0,
+    "GOOSE_d2": 0.0,
+    "GOOSE_d5": 0.0,
+    "GOOSE_d8": 0.0,
+    "GOOSE_d11": 3.0,
+    "GOOSE_d17": 2.875,
+    "GOOSE_d23": 2.875,
+    "GOOSE_d29": 2.875,
+    "animal_days_COW": 146.625,
+    "fed_COW": 0.6423170731707317,
+    "cared_COW": 0.5926016260162601,
+    "collected_fertilizer_COW": 0.9657520325203253,
+    "fed_cared_COW": 0.5905691056910569,
+    "COW_d0": 5.0,
+    "COW_d2": 5.0,
+    "COW_d5": 5.0,
+    "COW_d8": 5.0,
+    "COW_d11": 5.0,
+    "COW_d17": 4.75,
+    "COW_d23": 4.75,
+    "COW_d29": 4.75,
+    "animal_days_SHEEP": 124.0,
+    "fed_SHEEP": 0.6854838709677419,
+    "cared_SHEEP": 0.5887096774193549,
+    "collected_fertilizer_SHEEP": 0.9516129032258065,
+    "fed_cared_SHEEP": 0.5887096774193549,
+    "SHEEP_d0": 1.0,
+    "SHEEP_d2": 1.0,
+    "SHEEP_d5": 2.0,
+    "SHEEP_d8": 5.0,
+    "SHEEP_d11": 5.0,
+    "SHEEP_d17": 5.0,
+    "SHEEP_d23": 5.0,
+    "SHEEP_d29": 5.0
+  },
+  "comparison": {
+    "cash": {
+      "local": 80315.0,
+      "global": 99463.38888888889
+    },
+    "margin": {
+      "local": -7693.125,
+      "global": 2100.0833333333335
+    },
+    "discards": {
+      "local": 0.0,
+      "global": 7.805555555555555
+    },
+    "hires": {
+      "local": 319.0,
+      "global": 286.25
+    },
+    "hire_cost": {
+      "local": 8358.0,
+      "global": 6122.833333333333
+    },
+    "land_buys": {
+      "local": 2.0,
+      "global": 2.013888888888889
+    },
+    "land_cost": {
+      "local": 3000.0,
+      "global": 3055.5555555555557
+    },
+    "buy_WHEAT": {
+      "local": 66.0,
+      "global": 326.2916666666667
+    },
+    "sell_WHEAT": {
+      "local": 397.625,
+      "global": 510.59722222222223
+    },
+    "net_WHEAT": {
+      "local": 331.625,
+      "global": 184.30555555555554
+    },
+    "buy_CARROT": {
+      "local": 0.0,
+      "global": 0.0
+    },
+    "sell_CARROT": {
+      "local": 111.625,
+      "global": 97.98611111111111
+    },
+    "net_CARROT": {
+      "local": 111.625,
+      "global": 97.98611111111111
+    },
+    "buy_TOMATO": {
+      "local": 0.0,
+      "global": 0.0
+    },
+    "sell_TOMATO": {
+      "local": 85.875,
+      "global": 31.041666666666668
+    },
+    "net_TOMATO": {
+      "local": 85.875,
+      "global": 31.041666666666668
+    },
+    "buy_STRAWBERRY": {
+      "local": 0.0,
+      "global": 0.0
+    },
+    "sell_STRAWBERRY": {
+      "local": 310.0,
+      "global": 236.47222222222223
+    },
+    "net_STRAWBERRY": {
+      "local": 310.0,
+      "global": 236.47222222222223
+    },
+    "buy_MELON": {
+      "local": 0.0,
+      "global": 0.0
+    },
+    "sell_MELON": {
+      "local": 72.0,
+      "global": 76.0
+    },
+    "net_MELON": {
+      "local": 72.0,
+      "global": 76.0
+    },
+    "buy_EGG": {
+      "local": 0.0,
+      "global": 0.0
+    },
+    "sell_EGG": {
+      "local": 82.625,
+      "global": 51.638888888888886
+    },
+    "net_EGG": {
+      "local": 82.625,
+      "global": 51.638888888888886
+    },
+    "buy_MILK": {
+      "local": 0.0,
+      "global": 0.0
+    },
+    "sell_MILK": {
+      "local": 139.5,
+      "global": 198.41666666666666
+    },
+    "net_MILK": {
+      "local": 139.5,
+      "global": 198.41666666666666
+    },
+    "buy_WOOL": {
+      "local": 0.0,
+      "global": 0.0
+    },
+    "sell_WOOL": {
+      "local": 98.0,
+      "global": 158.09722222222223
+    },
+    "net_WOOL": {
+      "local": 98.0,
+      "global": 158.09722222222223
+    },
+    "buy_FERTILIZER": {
+      "local": 48.0,
+      "global": 57.388888888888886
+    },
+    "sell_FERTILIZER": {
+      "local": 192.625,
+      "global": 296.8333333333333
+    },
+    "net_FERTILIZER": {
+      "local": 144.625,
+      "global": 239.44444444444446
+    },
+    "crop_days": {
+      "local": 1656.375,
+      "global": 1517.6944444444443
+    },
+    "crop_water_rate": {
+      "local": 0.6509679530949299,
+      "global": 0.7222360836984643
+    },
+    "crop_yield_day_maximized": {
+      "local": 0.5307478209609926,
+      "global": 0.34905186012349365
+    },
+    "animal_days_GOOSE": {
+      "local": 58.25,
+      "global": 35.763888888888886
+    },
+    "fed_GOOSE": {
+      "local": 0.7577898550724638,
+      "global": 0.859662825821737
+    },
+    "cared_GOOSE": {
+      "local": 0.7140398550724638,
+      "global": 0.8308898568647314
+    },
+    "collected_fertilizer_GOOSE": {
+      "local": 0.9335144927536232,
+      "global": 0.8498423425580192
+    },
+    "GOOSE_d0": {
+      "local": 0.0,
+      "global": 0.0
+    },
+    "GOOSE_d2": {
+      "local": 0.0,
+      "global": 0.0
+    },
+    "GOOSE_d5": {
+      "local": 0.0,
+      "global": 0.027777777777777776
+    },
+    "GOOSE_d8": {
+      "local": 0.0,
+      "global": 0.5138888888888888
+    },
+    "GOOSE_d11": {
+      "local": 3.0,
+      "global": 1.6527777777777777
+    },
+    "GOOSE_d17": {
+      "local": 2.875,
+      "global": 1.7222222222222223
+    },
+    "GOOSE_d23": {
+      "local": 2.875,
+      "global": 1.7222222222222223
+    },
+    "GOOSE_d29": {
+      "local": 2.875,
+      "global": 1.7083333333333333
+    },
+    "animal_days_COW": {
+      "local": 146.625,
+      "global": 186.06944444444446
+    },
+    "fed_COW": {
+      "local": 0.6423170731707317,
+      "global": 0.8048234356844596
+    },
+    "cared_COW": {
+      "local": 0.5926016260162601,
+      "global": 0.8409712138061834
+    },
+    "collected_fertilizer_COW": {
+      "local": 0.9657520325203253,
+      "global": 0.928931527356317
+    },
+    "COW_d0": {
+      "local": 5.0,
+      "global": 2.4166666666666665
+    },
+    "COW_d2": {
+      "local": 5.0,
+      "global": 3.0555555555555554
+    },
+    "COW_d5": {
+      "local": 5.0,
+      "global": 3.888888888888889
+    },
+    "COW_d8": {
+      "local": 5.0,
+      "global": 6.736111111111111
+    },
+    "COW_d11": {
+      "local": 5.0,
+      "global": 7.236111111111111
+    },
+    "COW_d17": {
+      "local": 4.75,
+      "global": 7.402777777777778
+    },
+    "COW_d23": {
+      "local": 4.75,
+      "global": 6.916666666666667
+    },
+    "COW_d29": {
+      "local": 4.75,
+      "global": 6.722222222222222
+    },
+    "animal_days_SHEEP": {
+      "local": 124.0,
+      "global": 159.81944444444446
+    },
+    "fed_SHEEP": {
+      "local": 0.6854838709677419,
+      "global": 0.8205624956655313
+    },
+    "cared_SHEEP": {
+      "local": 0.5887096774193549,
+      "global": 0.8117585295795366
+    },
+    "collected_fertilizer_SHEEP": {
+      "local": 0.9516129032258065,
+      "global": 0.9064116983492259
+    },
+    "SHEEP_d0": {
+      "local": 1.0,
+      "global": 2.0
+    },
+    "SHEEP_d2": {
+      "local": 1.0,
+      "global": 2.0
+    },
+    "SHEEP_d5": {
+      "local": 2.0,
+      "global": 2.1527777777777777
+    },
+    "SHEEP_d8": {
+      "local": 5.0,
+      "global": 4.625
+    },
+    "SHEEP_d11": {
+      "local": 5.0,
+      "global": 6.666666666666667
+    },
+    "SHEEP_d17": {
+      "local": 5.0,
+      "global": 7.0
+    },
+    "SHEEP_d23": {
+      "local": 5.0,
+      "global": 6.75
+    },
+    "SHEEP_d29": {
+      "local": 5.0,
+      "global": 5.0
+    }
+  }
+}

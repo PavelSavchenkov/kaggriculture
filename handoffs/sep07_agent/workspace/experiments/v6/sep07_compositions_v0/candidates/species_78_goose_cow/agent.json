@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "species_78_goose_cow",
+  "header": "source/agent.hpp",
+  "type": "compositions::species_78_goose_cow::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../league/top_replay_library/source/agent.cpp"
+  ]
+}

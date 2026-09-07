@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "justin_liquidate_v0",
+  "header": "source/agent.hpp",
+  "type": "compositions::justin_liquidate_v0::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../league/top_replay_library/source/agent.cpp"
+  ]
+}

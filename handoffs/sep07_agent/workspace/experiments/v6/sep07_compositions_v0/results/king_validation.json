@@ -1,0 +1,11 @@
+{
+  "generic4thread_debug_pair1thread_equal_games": 16,
+  "pair": [
+    "king_rc4",
+    "opening_router_v4"
+  ],
+  "pass_self": "results/king_checks",
+  "broad_league": "results/king_league",
+  "source_parity": "results/king_parity.json",
+  "scope": "Immutable shared tables, per-instance episode state; legal observation only; same seed/budget hashes and rewards agree"
+}

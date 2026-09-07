@@ -1,0 +1,29 @@
+{
+  "cohorts": [
+    "refresh_0804",
+    "refresh_0914",
+    "refresh_1010"
+  ],
+  "input_sha256": {
+    "research/refresh_0804/top_replay_manifest.csv": "73c74d0b66fade04696d6e00b8d06ed849905400027ed13b490110fbb91d43a8",
+    "research/refresh_0804/transactions.csv": "261450200d722d878216672aa17fa09702769e116694683ee9d6dfb5b93f82cc",
+    "research/refresh_0804/unit_events.csv": "9df1dad07fe3fb70eedb2f8dd0a51f4e290983d15e53bfaaafcca09fc977b11b",
+    "research/refresh_0804/animal_instances.csv": "95e5d7ac1689de265706f7710f91289b9fbacfec5313a91243a30ea4856549ce",
+    "research/refresh_0914/top_replay_manifest.csv": "08cbf81269ec56f96784b087f84f84169f341ab5c8d76e735814cfde37671aec",
+    "research/refresh_0914/transactions.csv": "0ed1ef22c6b8dccbfd8e00896a4875fed7a97a31cab216ccb00868806ddbc03f",
+    "research/refresh_0914/unit_events.csv": "3e62a97e752cb0d7a3fe890811283fcff066fa90c3dc234caa9ee03fbe1ba2b8",
+    "research/refresh_0914/animal_instances.csv": "07defba6ea091b264e9eabb1bcff98e3402cc4180b02c25c69f67b832fe04b83",
+    "research/refresh_1010/top_replay_manifest.csv": "5a95367dd73c46bd5f1c76e6405195f3d7014ae73cedbc3cf583e631ec7d57e5",
+    "research/refresh_1010/transactions.csv": "8ea2dd84bc70340b7d163681dc31ad98a0d12bb08c28cf429c8bbce5349f4065",
+    "research/refresh_1010/unit_events.csv": "c2398d4b785c276bbae67dcea82cfd464e87d5e84d4a9ad48eb25abaa23275ea",
+    "research/refresh_1010/animal_instances.csv": "95e68861ec6b84e751bf6de10e9a8b6ba28be38885a30118de285d8ce54a3302"
+  },
+  "games": 51,
+  "selection": "Globally strong players from each frozen public leaderboard cohort; deduplicated episode/team, no local strength selection",
+  "caveats": [
+    "Different observed shops are not proof of the private branch condition",
+    "Immediate affordability ignores future commitments",
+    "Missing or failed purchase is not labeled intentional waiting",
+    "Recorded successful placements are from the existing audited action/transaction reconstruction"
+  ]
+}

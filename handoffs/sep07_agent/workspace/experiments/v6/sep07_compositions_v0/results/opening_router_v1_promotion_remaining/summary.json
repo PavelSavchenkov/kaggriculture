@@ -1,0 +1,70 @@
+[
+  {
+    "agent": "opening_router_v1",
+    "opponent": "deniz",
+    "summary": {
+      "agent_a": "opening_router_v1",
+      "agent_b": "deniz",
+      "seconds": 3.24737,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 99657.7,
+      "mean_margin": 19979.1,
+      "cash_cvar10": 64790.8,
+      "margin_cvar10": 10930.3,
+      "pass_J": 92684.3
+    }
+  },
+  {
+    "agent": "opening_router_v1",
+    "opponent": "arman_3000",
+    "summary": {
+      "agent_a": "opening_router_v1",
+      "agent_b": "arman_3000",
+      "seconds": 1.22163,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 94571.8,
+      "mean_margin": 23372.5,
+      "cash_cvar10": 61679.7,
+      "margin_cvar10": 10200,
+      "pass_J": 87993.4
+    }
+  },
+  {
+    "agent": "opening_router_v1",
+    "opponent": "teammate_shoprouter",
+    "summary": {
+      "agent_a": "opening_router_v1",
+      "agent_b": "teammate_shoprouter",
+      "seconds": 1.24997,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 101652,
+      "mean_margin": 20490.6,
+      "cash_cvar10": 67139.4,
+      "margin_cvar10": 11306.5,
+      "pass_J": 94749.4
+    }
+  },
+  {
+    "agent": "opening_router_v1",
+    "opponent": "teammate_sixday_robust",
+    "summary": {
+      "agent_a": "opening_router_v1",
+      "agent_b": "teammate_sixday_robust",
+      "seconds": 1.24497,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 124427,
+      "mean_margin": 62391.6,
+      "cash_cvar10": 83491.6,
+      "margin_cvar10": 31064.6,
+      "pass_J": 116240
+    }
+  }
+]

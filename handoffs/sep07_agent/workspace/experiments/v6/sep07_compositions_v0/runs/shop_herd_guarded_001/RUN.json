@@ -1,0 +1,17 @@
+{
+  "command": "conda run --no-capture-output -n kaggriculture experiments/v6/sep07_compositions_v0/build/combine_shop_days experiments/v6/sep07_compositions_v0/runs/shop_herd_guarded_001 experiments/v6/sep07_compositions_v0/runs/shop_herd_day_library_001",
+  "build_define": "SHOP_HERD_DAYS",
+  "binary_sha256": "09448d60203268fd46398166b603d5400f1c8c2d0f485b25908fc84db3d6af35",
+  "source_sha256": {
+    "src/combine_guarded_days.cpp": "d2b6df7a1829c3106aff4f095d22e33d89c93f0b906e3502e49f618e93e1c7c9",
+    "include/guarded_day.hpp": "ee708a53ecf18edb4c0efc1b983a16458ebd57d4d973928f00fda0cc08b2b9ec",
+    "include/shop_herd.hpp": "0490942269738a4a2523dcc06930765d7e01345f4f78e15c7ea5530b4a21fa2f",
+    "runs/shop_herd_day_library_001/days.hpp": "8668ce1ec6b2ab9d5c94dec4a315530d3a0f8f84c7802ed698a1a43ca69b1566"
+  },
+  "parent": "shop_herd_s6_m3_g1",
+  "source_day_library": "runs/shop_herd_day_library_001/LINEAGE.json",
+  "seed_start": 1000,
+  "seeds": 16,
+  "seat_mode": "both",
+  "acceptance": "Add a day only if all six matchup mean margins and win utilities do not decrease, with strictly positive aggregate margin gain."
+}

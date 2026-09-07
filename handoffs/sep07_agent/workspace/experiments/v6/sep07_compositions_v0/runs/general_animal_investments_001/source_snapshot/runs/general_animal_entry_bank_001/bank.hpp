@@ -1,0 +1,57 @@
+#pragma once
+#include "../../include/deferred_animal.hpp"
+#include "../general_animal_entries_003/model.hpp"
+#include "../general_animal_entries_003/general_animal_entries_003_d3_i9/entry.hpp"
+#include "../general_animal_entries_003/general_animal_entries_003_d3_i10/entry.hpp"
+#include "../general_animal_entries_003/general_animal_entries_003_d3_i11/entry.hpp"
+#include "../general_animal_entries_003/general_animal_entries_003_d6_i9/entry.hpp"
+#include "../general_animal_entries_003/general_animal_entries_003_d6_i10/entry.hpp"
+#include "../general_animal_entries_003/general_animal_entries_003_d6_i11/entry.hpp"
+#include "../general_animal_entries_003/general_animal_entries_003_d9_i9/entry.hpp"
+#include "../general_animal_entries_003/general_animal_entries_003_d9_i10/entry.hpp"
+#include "../general_animal_entries_003/general_animal_entries_003_d9_i11/entry.hpp"
+#include "../general_animal_entries_003/general_animal_entries_003_d15_i9/entry.hpp"
+#include "../general_animal_entries_003/general_animal_entries_003_d15_i10/entry.hpp"
+#include "../general_animal_entries_003/general_animal_entries_003_d15_i11/entry.hpp"
+#include "../general_animal_entries_004/model.hpp"
+#include "../general_animal_entries_004/general_animal_entries_004_d3_i9/entry.hpp"
+#include "../general_animal_entries_004/general_animal_entries_004_d3_i10/entry.hpp"
+#include "../general_animal_entries_004/general_animal_entries_004_d3_i11/entry.hpp"
+#include "../general_animal_entries_004/general_animal_entries_004_d6_i9/entry.hpp"
+#include "../general_animal_entries_004/general_animal_entries_004_d6_i10/entry.hpp"
+#include "../general_animal_entries_004/general_animal_entries_004_d6_i11/entry.hpp"
+#include "../general_animal_entries_004/general_animal_entries_004_d9_i9/entry.hpp"
+#include "../general_animal_entries_004/general_animal_entries_004_d9_i10/entry.hpp"
+#include "../general_animal_entries_004/general_animal_entries_004_d9_i11/entry.hpp"
+#include "../general_animal_entries_004/general_animal_entries_004_d15_i9/entry.hpp"
+#include "../general_animal_entries_004/general_animal_entries_004_d15_i10/entry.hpp"
+#include "../general_animal_entries_004/general_animal_entries_004_d15_i11/entry.hpp"
+namespace compositions::general_animal_entry_bank_001 {
+inline std::vector<AnimalInvestmentModel> models(){return {{general_animal_entries_003::flows(),general_animal_entries_003::service()},{general_animal_entries_004::flows(),general_animal_entries_004::service()}};}
+inline std::vector<AnimalEntry> entries(){std::vector<AnimalEntry> result;
+{auto entry=general_animal_entries_003_d3_i9::entry();entry.model=0;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_003_d3_i10::entry();entry.model=0;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_003_d3_i11::entry();entry.model=0;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_003_d6_i9::entry();entry.model=0;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_003_d6_i10::entry();entry.model=0;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_003_d6_i11::entry();entry.model=0;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_003_d9_i9::entry();entry.model=0;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_003_d9_i10::entry();entry.model=0;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_003_d9_i11::entry();entry.model=0;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_003_d15_i9::entry();entry.model=0;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_003_d15_i10::entry();entry.model=0;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_003_d15_i11::entry();entry.model=0;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_004_d3_i9::entry();entry.model=1;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_004_d3_i10::entry();entry.model=1;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_004_d3_i11::entry();entry.model=1;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_004_d6_i9::entry();entry.model=1;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_004_d6_i10::entry();entry.model=1;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_004_d6_i11::entry();entry.model=1;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_004_d9_i9::entry();entry.model=1;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_004_d9_i10::entry();entry.model=1;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_004_d9_i11::entry();entry.model=1;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_004_d15_i9::entry();entry.model=1;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_004_d15_i10::entry();entry.model=1;result.push_back(std::move(entry));}
+{auto entry=general_animal_entries_004_d15_i11::entry();entry.model=1;result.push_back(std::move(entry));}
+return result;}
+}

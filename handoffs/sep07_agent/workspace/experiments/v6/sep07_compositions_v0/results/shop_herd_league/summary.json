@@ -1,0 +1,36 @@
+[
+  {
+    "agent": "shop_herd_s6_m2_g1",
+    "opponent": "public_capacity_router",
+    "summary": {
+      "agent_a": "shop_herd_s6_m2_g1",
+      "agent_b": "public_capacity_router",
+      "seconds": 0.311194,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.867188,
+      "mean_cash": 92115.5,
+      "mean_margin": 4626.34,
+      "cash_cvar10": 55182.1,
+      "margin_cvar10": -1997.58,
+      "pass_J": 84728.8
+    }
+  },
+  {
+    "agent": "shop_herd_s6_m2_g1",
+    "opponent": "ticket_p116_t9_i9",
+    "summary": {
+      "agent_a": "shop_herd_s6_m2_g1",
+      "agent_b": "ticket_p116_t9_i9",
+      "seconds": 0.365669,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.839844,
+      "mean_cash": 93850.2,
+      "mean_margin": 5119.82,
+      "cash_cvar10": 54799.9,
+      "margin_cvar10": -3894.5,
+      "pass_J": 86040.1
+    }
+  }
+]

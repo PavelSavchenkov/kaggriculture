@@ -1,0 +1,157 @@
+{
+  "name": "market_impact_v4",
+  "scenario": "Fully enabled official rules with independent shop stream; discovery seeds1000..1063, both seats; no fresh promotion claim",
+  "source_parity": {
+    "result": "matched_actions=14380",
+    "scope": "Sixteen recorded streams plus four forced shop/stock/price streams, including positive-ranking cases; no Python local gameplay",
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/refresh_1010/market_v4_parity",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/tests/market_impact_v4_cases.txt"
+    ]
+  },
+  "generic_debug_thread_full_record_matches": 16,
+  "self_play_games": 8,
+  "pass": {
+    "games": 256,
+    "wins": 256,
+    "ties": 0,
+    "mean_cash": 156725.55859375,
+    "mean_margin": 153725.55859375,
+    "margin_cvar10": 104153,
+    "pass_J": 146811
+  },
+  "head_to_head_parent": {
+    "games": 128,
+    "wins": 5,
+    "ties": 28,
+    "mean_cash": 89600.296875,
+    "mean_margin": -524.078125,
+    "margin_cvar10": -1391.77,
+    "pass_J": 81957.4
+  },
+  "common_opponents": {
+    "shop_herd_s6_m3_g1": {
+      "new": {
+        "games": 128,
+        "wins": 19,
+        "ties": 0,
+        "mean_cash": 89658.7421875,
+        "mean_margin": -5099.7734375,
+        "margin_cvar10": -13276,
+        "pass_J": 81632.8
+      },
+      "parent": {
+        "games": 128,
+        "wins": 19,
+        "ties": 0,
+        "mean_cash": 89819.0625,
+        "mean_margin": -4793.6015625,
+        "margin_cvar10": -12889.3,
+        "pass_J": 81770.3
+      },
+      "changed_complete_game_records": 98,
+      "paired_mean_margin_delta": -306.171875
+    },
+    "teammate_shoprouter": {
+      "new": {
+        "games": 128,
+        "wins": 124,
+        "ties": 0,
+        "mean_cash": 89667.3203125,
+        "mean_margin": 7051.3203125,
+        "margin_cvar10": -20.6923,
+        "pass_J": 82027.1
+      },
+      "parent": {
+        "games": 128,
+        "wins": 124,
+        "ties": 0,
+        "mean_cash": 89669.15625,
+        "mean_margin": 7053.859375,
+        "margin_cvar10": -14.6923,
+        "pass_J": 82028.8
+      },
+      "changed_complete_game_records": 98,
+      "paired_mean_margin_delta": -2.5390625
+    },
+    "king_rc4": {
+      "new": {
+        "games": 128,
+        "wins": 7,
+        "ties": 0,
+        "mean_cash": 89434.34375,
+        "mean_margin": -1182.59375,
+        "margin_cvar10": -8695.08,
+        "pass_J": 81812.1
+      },
+      "parent": {
+        "games": 128,
+        "wins": 14,
+        "ties": 0,
+        "mean_cash": 89680.15625,
+        "mean_margin": -725.65625,
+        "margin_cvar10": -8297.69,
+        "pass_J": 82070.8
+      },
+      "changed_complete_game_records": 98,
+      "paired_mean_margin_delta": -456.9375
+    },
+    "binghua_116": {
+      "new": {
+        "games": 128,
+        "wins": 78,
+        "ties": 0,
+        "mean_cash": 90541.84375,
+        "mean_margin": 665.0859375,
+        "margin_cvar10": -10414.3,
+        "pass_J": 82519.4
+      },
+      "parent": {
+        "games": 128,
+        "wins": 78,
+        "ties": 0,
+        "mean_cash": 90553.4375,
+        "mean_margin": 688.1015625,
+        "margin_cvar10": -10388,
+        "pass_J": 82534.8
+      },
+      "changed_complete_game_records": 98,
+      "paired_mean_margin_delta": -23.015625
+    },
+    "public_terminal_router": {
+      "new": {
+        "games": 128,
+        "wins": 5,
+        "ties": 22,
+        "mean_cash": 89575.765625,
+        "mean_margin": -608.125,
+        "margin_cvar10": -1489.15,
+        "pass_J": 81937
+      },
+      "parent": {
+        "games": 128,
+        "wins": 7,
+        "ties": 50,
+        "mean_cash": 89856.6953125,
+        "mean_margin": -83.6875,
+        "margin_cvar10": -694,
+        "pass_J": 82223.5
+      },
+      "changed_complete_game_records": 98,
+      "paired_mean_margin_delta": -524.4375
+    }
+  },
+  "source_files": {
+    "league/market_impact_v4/source/agent.cpp": "b58d36d1bf7d559e1c91ddca685a31e68550903c6b9d2d2f50f1be29c61d57ee",
+    "league/market_impact_v4/source/agent.hpp": "ea6c94326820c46b549333c53d307af41ee05bb2bf071c9a4453b5119e15bd47"
+  },
+  "build": "build/refresh_1010/generic/build.json",
+  "debug_build": "build/refresh_1010/debug_pair/build.json",
+  "build_dependency_snapshot": "build/refresh_1010/source_snapshot.json",
+  "status": "Retained as a faithful audited external reference; no incumbent promotion",
+  "learning": "Literal projected-own-shed ranking under older price curves changes reachable actions, but worsens average margin versus every tested common opponent and loses to its Thomas parent."
+}

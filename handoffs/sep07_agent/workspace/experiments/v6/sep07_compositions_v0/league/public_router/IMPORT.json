@@ -1,0 +1,42 @@
+{
+  "source": "https://www.kaggle.com/code/thomastschinkel/kaggriculture-public-state-router-74-5-win-rate",
+  "source_sha256": "197b1ceef97d2ee20b833457ecbf06c0969832086c086ee6596bd0752e57a3c1",
+  "route_labels": [
+    "7015cc00acfa4922",
+    "dc76e4003029ac51",
+    "ab9669b9abfbea4e",
+    "a84d06f1d12add7c"
+  ],
+  "route_prefix": [
+    [
+      720,
+      226,
+      226,
+      577
+    ],
+    [
+      226,
+      720,
+      360,
+      226
+    ],
+    [
+      226,
+      360,
+      720,
+      226
+    ],
+    [
+      577,
+      226,
+      226,
+      720
+    ]
+  ],
+  "changes": [
+    "Python policy ported to typed C++",
+    "Immutable routes and future sell totals decoded once",
+    "Normalize emitted worker action count to active workers as required by local API"
+  ],
+  "route_original_episode_ids": "Not supplied in notebook; retain route hashes, do not invent player attribution"
+}

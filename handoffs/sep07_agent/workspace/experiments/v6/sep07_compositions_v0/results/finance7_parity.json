@@ -1,0 +1,102 @@
+[
+  {
+    "mode": 0,
+    "result": "matched_actions=8628",
+    "source_layer_firings": {
+      "mirror": 0,
+      "finance": 0
+    },
+    "scope": "8 recorded sequences plus4 forced mirror/route/funding sequences,719turns each; active-unit/unused-argument normalization",
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "g++",
+      "-std=c++20",
+      "-O2",
+      "-DVERIFY_FINANCE7=0",
+      "-I",
+      "/home/pavel/Programming/kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/tests/public_router_parity.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/destbreso_finance7/source/agent.cpp",
+      "-o",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/finance7_0_parity"
+    ]
+  },
+  {
+    "mode": 1,
+    "result": "matched_actions=8628",
+    "source_layer_firings": {
+      "mirror": 491,
+      "finance": 0
+    },
+    "scope": "8 recorded sequences plus4 forced mirror/route/funding sequences,719turns each; active-unit/unused-argument normalization",
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "g++",
+      "-std=c++20",
+      "-O2",
+      "-DVERIFY_FINANCE7=1",
+      "-I",
+      "/home/pavel/Programming/kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/tests/public_router_parity.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/destbreso_finance7/source/agent.cpp",
+      "-o",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/finance7_1_parity"
+    ]
+  },
+  {
+    "mode": 2,
+    "result": "matched_actions=8628",
+    "source_layer_firings": {
+      "mirror": 0,
+      "finance": 12
+    },
+    "scope": "8 recorded sequences plus4 forced mirror/route/funding sequences,719turns each; active-unit/unused-argument normalization",
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "g++",
+      "-std=c++20",
+      "-O2",
+      "-DVERIFY_FINANCE7=2",
+      "-I",
+      "/home/pavel/Programming/kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/tests/public_router_parity.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/destbreso_finance7/source/agent.cpp",
+      "-o",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/finance7_2_parity"
+    ]
+  },
+  {
+    "mode": 3,
+    "result": "matched_actions=8628",
+    "source_layer_firings": {
+      "mirror": 491,
+      "finance": 12
+    },
+    "scope": "8 recorded sequences plus4 forced mirror/route/funding sequences,719turns each; active-unit/unused-argument normalization",
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "g++",
+      "-std=c++20",
+      "-O2",
+      "-DVERIFY_FINANCE7=3",
+      "-I",
+      "/home/pavel/Programming/kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/tests/public_router_parity.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/destbreso_finance7/source/agent.cpp",
+      "-o",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/finance7_3_parity"
+    ]
+  }
+]

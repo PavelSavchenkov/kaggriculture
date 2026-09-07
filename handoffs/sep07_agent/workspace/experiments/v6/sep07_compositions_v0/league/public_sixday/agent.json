@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "public_sixday",
+  "header": "source/agent.hpp",
+  "type": "compositions::public_sixday::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../teammate_sixday/source/agent.cpp"
+  ]
+}

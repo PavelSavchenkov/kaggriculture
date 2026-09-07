@@ -1,0 +1,15 @@
+{
+  "status": "completed compiler diagnostic",
+  "source": "candidates/shop_herd_guarded_001_best",
+  "seed": 1000,
+  "seconds_per_attempt": 3,
+  "purpose": "Compile goose/cow/sheep placement after actual wait prefix on days11/12/15/18/21. Exact crop harvest, structure, feed, care, endpoint and finance checks. No strategy promotion yet.",
+  "model": "Own intended baseline daily trades; public rival herds, observed market/shops, explicit candidate service; heuristic missing rival crop flows/cash/storage and route uncertainty.",
+  "result": {
+    "seed": 1000,
+    "compiled_entries": 9,
+    "wait_cash": 85513,
+    "source": "shop_herd_guarded_001_best"
+  },
+  "day11_endpoint_rejection": "False check compared final quadrant count to day-start instead of required day-end; source buys land duringday11. Corrected and rerun006/007."
+}

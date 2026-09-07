@@ -1,0 +1,154 @@
+{
+  "verified_utc": "2026-09-07T13:31:44.804236+00:00",
+  "status": "PASS",
+  "source_scope": "Isolated handoff copies; no live experiment runtime dependency. Existing tracked V30 scheduler is a declared checked repository dependency.",
+  "submitted_source_files": 58,
+  "deployment_artifacts_byte_identical": true,
+  "submitted_artifacts": {
+    "main.py": {
+      "bytes": 29850,
+      "sha256": "f5f58e14b0cafd0f150a505d81e63feb9426c8415771d23bde054b839f6b8d97"
+    },
+    "submission.tar.gz": {
+      "bytes": 21578,
+      "sha256": "53acf9d1d5e3206e28ea6f365af39786a9e74c4b3bfe6851b5bd21e8740901f4"
+    },
+    "policy_data.json": {
+      "bytes": 164245,
+      "sha256": "7c8289788ca70ca941fc783ed36c49f45827518d1358a118971225b382e67107"
+    }
+  },
+  "evaluation": {
+    "independent4096": {
+      "agent_a": "shop_herd_s6_m3_g1",
+      "agent_b": "teammate_shoprouter",
+      "seconds": 3.74705,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.97168,
+      "mean_cash": 92269.5,
+      "mean_margin": 9426.5,
+      "cash_cvar10": 57392.7,
+      "margin_cvar10": 377.432,
+      "pass_J": 85294.1,
+      "games": 4096,
+      "wins": 3980,
+      "ties": 0
+    },
+    "native4096": {
+      "agent_a": "shop_herd_s6_m3_g1",
+      "agent_b": "teammate_shoprouter",
+      "seconds": 3.42546,
+      "scenario": "official_native_rng",
+      "validated": true,
+      "win_utility": 0.962891,
+      "mean_cash": 92855.6,
+      "mean_margin": 9307.88,
+      "cash_cvar10": 57565.3,
+      "margin_cvar10": 49.5098,
+      "pass_J": 85797.5,
+      "games": 4096,
+      "wins": 3944,
+      "ties": 0
+    },
+    "debug16": {
+      "agent_a": "shop_herd_s6_m3_g1",
+      "agent_b": "teammate_shoprouter",
+      "seconds": 0.0275617,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 90758.9,
+      "mean_margin": 8565.5,
+      "cash_cvar10": 59857,
+      "margin_cvar10": 1488,
+      "pass_J": 84578.5,
+      "games": 16,
+      "wins": 16,
+      "ties": 0
+    },
+    "latest_local64": {
+      "agent_a": "investment_context_guarded_001_best",
+      "agent_b": "teammate_shoprouter",
+      "seconds": 0.0610474,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.9375,
+      "mean_cash": 90870.5,
+      "mean_margin": 10570.8,
+      "cash_cvar10": 52374.3,
+      "margin_cvar10": 1062.86,
+      "pass_J": 83171.2,
+      "games": 64,
+      "wins": 60,
+      "ties": 0
+    },
+    "crop_wip64": {
+      "agent_a": "fertilization_004_0_closure",
+      "agent_b": "public_router",
+      "seconds": 0.0578952,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.890625,
+      "mean_cash": 92592.1,
+      "mean_margin": 6390.5,
+      "cash_cvar10": 54807.9,
+      "margin_cvar10": -1768.14,
+      "pass_J": 85035.3,
+      "games": 64,
+      "wins": 57,
+      "ties": 0
+    }
+  },
+  "packed": {
+    "teammate_games": 64,
+    "wins": 62,
+    "mean_margin": 9102.875,
+    "parity": "matched_actions=48892",
+    "fixture_sha256": "733b6e9148091942051aa4fdb8a3b73b1f374032f31e4d2b046a41cac5e9cf95",
+    "max_agent_seconds": 0.03529017395339906,
+    "max_full_game_agent_seconds": 0.0409446902340278
+  },
+  "generic_league_agents": 98,
+  "local_format_packages": 533,
+  "crop_wip_generic_matches_source64": true,
+  "day_solver_smoke": "program150,day16,one fewer hire; complete physical endpoint and cash checks pass,8live-opponent full games. Problem,schedule and outputs included.",
+  "historical_path_preparation": "47compressed source inputs restored; historical absolute paths rebased only in disposable _work/session; repeat preparation rebases0files.",
+  "historical_diagnostics_note": "Original4096game reports omitted unit-fault diagnostics. Reruns additionally collect them; only these formerly-placeholder fields are excluded from per-game equality. Cash,action hashes,production,trades,discards and all other comparable fields match.",
+  "handoff_additions": [
+    "Seven package README files added for old Atakan variants; original C++ and manifests unchanged.",
+    "Original teammate_reference/agent.so retained as a required comparison fixture.",
+    "Complete source/data snapshot with lossless gzip restoration and explicit binary/cache omission records.",
+    "Newly reproduced V30day16agent stored at its valid mirrored runs/handoff_day_smoke path."
+  ],
+  "evidence_files_sha256": {
+    "evidence/reproduction/debug16.json": "d7ca2975a2a5b5d5c5fdb12a0de06380085069b3ed4f2f5408649f4e1dba71c5",
+    "evidence/reproduction/commands.jsonl": "3c0ad419c6667739b4614265933f06b06ac25f792210d16692d2b1cb8305d1f1",
+    "evidence/reproduction/latest_local64.json": "269af1ad5bcdbe01024b94d5ec60bea120bef42cc23401f5b5996529b4874f9e",
+    "evidence/reproduction/native4096.json": "c7fc2a1fa7c55d34ddaff1e6a94e66241703f11cf6248b9849bb41eaafbfa7f8",
+    "evidence/reproduction/crop_wip64.json": "ad3cb48e6e3dcfe08f36e018199f282d3a638c323be1037bc55d06d9488f9150",
+    "evidence/reproduction/independent4096.json": "6f1691ba07aef62b6a151aeee6ef0f903f58165245d8362980a6ecf11da7db28",
+    "evidence/reproduction/packed_validation.json": "482a46c4deaf7dda32a7d657b81093c1062cd7dd7b2ad484e5cd33d5d107593a",
+    "evidence/reproduction/day_solver_smoke/timing.json": "856bb9b4ed75fe1af499c2d4b122f6eff08123669d41614d3122d28c9b412ef1",
+    "evidence/reproduction/day_solver_smoke/estimates.csv": "5ab45569aa24de5958dfff08eb41eb9aaa0e61d7445c791ccaba803757da22cd",
+    "evidence/reproduction/day_solver_smoke/compiled.csv": "cedebbf41e2f9a050b0d67763e1619773bfa80c3aff1c9c751a37f6f556b53b9",
+    "evidence/reproduction/day_solver_smoke/exact/handoff_day_smoke_0.json": "062a7336127861e19e513a06ffcc107b72450edb313f5cda46d556e06480e1d8",
+    "evidence/reproduction/day_solver_smoke/proposals/handoff_day_smoke_0/problem.json": "6da8c19fd6a35c9d70ea74b9969ed2d622d59531bd53ccef5c715a6e0eef66bb",
+    "evidence/reproduction/day_solver_smoke/proposals/handoff_day_smoke_0/combined_schedule.txt": "c2cbcfa4d765c86182f0e0d8db6c4a2193f0bb5eebc82fffd9cb764b9bd57ce9",
+    "evidence/reproduction/day_solver_smoke/proposals/handoff_day_smoke_0/README.md": "8d34a6665255ac039df7d1643b084d598633a9f079fc2aa265aedafbdfa33138"
+  },
+  "historical_relocation_checks": {
+    "snapshots": {
+      "atakan_portfolio_001/generic": {
+        "source_hashes_verified": 131
+      },
+      "atakan_portfolio_001/debug": {
+        "source_hashes_verified": 17
+      },
+      "atakan_portfolio_001/masked": {
+        "source_hashes_verified": 27
+      }
+    },
+    "source_argument_paths_verified": 39
+  }
+}

@@ -1,0 +1,444 @@
+[
+  {
+    "agent": "hire_day1_day9",
+    "opponent": "opening_router_v2",
+    "summary": {
+      "agent_a": "hire_day1_day9",
+      "agent_b": "opening_router_v2",
+      "seconds": 1.19564,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.9375,
+      "mean_cash": 93153.8,
+      "mean_margin": 507.354,
+      "cash_cvar10": 59607.4,
+      "margin_cvar10": -930.282,
+      "pass_J": 86444.5
+    }
+  },
+  {
+    "agent": "hire_day1_day9",
+    "opponent": "combine_hires_001_best",
+    "summary": {
+      "agent_a": "hire_day1_day9",
+      "agent_b": "combine_hires_001_best",
+      "seconds": 1.16935,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.876953,
+      "mean_cash": 93154.3,
+      "mean_margin": 20.6904,
+      "cash_cvar10": 59607.4,
+      "margin_cvar10": -1417.28,
+      "pass_J": 86444.9
+    }
+  },
+  {
+    "agent": "hire_day1_day9",
+    "opponent": "hire_day1_counter",
+    "summary": {
+      "agent_a": "hire_day1_day9",
+      "agent_b": "hire_day1_counter",
+      "seconds": 1.16717,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.87793,
+      "mean_cash": 93154.2,
+      "mean_margin": 24.4189,
+      "cash_cvar10": 59608.2,
+      "margin_cvar10": -1410.35,
+      "pass_J": 86445
+    }
+  },
+  {
+    "agent": "hire_day1_day9",
+    "opponent": "hire_day9_counter",
+    "summary": {
+      "agent_a": "hire_day1_day9",
+      "agent_b": "hire_day9_counter",
+      "seconds": 1.16908,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.929688,
+      "mean_cash": 93153.8,
+      "mean_margin": 2.93457,
+      "cash_cvar10": 59608.2,
+      "margin_cvar10": -1367.29,
+      "pass_J": 86444.7
+    }
+  },
+  {
+    "agent": "hire_day1_day9",
+    "opponent": "public_router",
+    "summary": {
+      "agent_a": "hire_day1_day9",
+      "agent_b": "public_router",
+      "seconds": 1.20563,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 102185,
+      "mean_margin": 13768.1,
+      "cash_cvar10": 67347.3,
+      "margin_cvar10": 7006.82,
+      "pass_J": 95217.4
+    }
+  },
+  {
+    "agent": "hire_day1_day9",
+    "opponent": "teammate_shoprouter",
+    "summary": {
+      "agent_a": "hire_day1_day9",
+      "agent_b": "teammate_shoprouter",
+      "seconds": 1.24987,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 103031,
+      "mean_margin": 21323.2,
+      "cash_cvar10": 67711.2,
+      "margin_cvar10": 11748.7,
+      "pass_J": 95967.2
+    }
+  },
+  {
+    "agent": "hire_day1_day9",
+    "opponent": "teammate_sixday_robust",
+    "summary": {
+      "agent_a": "hire_day1_day9",
+      "agent_b": "teammate_sixday_robust",
+      "seconds": 1.24093,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 126020,
+      "mean_margin": 63696.8,
+      "cash_cvar10": 82780.2,
+      "margin_cvar10": 32107.5,
+      "pass_J": 117372
+    }
+  },
+  {
+    "agent": "hire_day1_day9",
+    "opponent": "skomuro",
+    "summary": {
+      "agent_a": "hire_day1_day9",
+      "agent_b": "skomuro",
+      "seconds": 1.17085,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 99766.4,
+      "mean_margin": 19308.5,
+      "cash_cvar10": 64623.7,
+      "margin_cvar10": 8409.96,
+      "pass_J": 92737.9
+    }
+  },
+  {
+    "agent": "hire_day1_day9",
+    "opponent": "deniz",
+    "summary": {
+      "agent_a": "hire_day1_day9",
+      "agent_b": "deniz",
+      "seconds": 3.18725,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 101085,
+      "mean_margin": 20702.3,
+      "cash_cvar10": 65582.9,
+      "margin_cvar10": 11747.6,
+      "pass_J": 93984.5
+    }
+  },
+  {
+    "agent": "hire_day1_day9",
+    "opponent": "arman_3000",
+    "summary": {
+      "agent_a": "hire_day1_day9",
+      "agent_b": "arman_3000",
+      "seconds": 1.22325,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.999023,
+      "mean_cash": 95865.8,
+      "mean_margin": 23638.4,
+      "cash_cvar10": 62493.4,
+      "margin_cvar10": 9780.48,
+      "pass_J": 89191.3
+    }
+  },
+  {
+    "agent": "hire_day1_day9",
+    "opponent": "junghoon_78",
+    "summary": {
+      "agent_a": "hire_day1_day9",
+      "agent_b": "junghoon_78",
+      "seconds": 1.15116,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.0166016,
+      "mean_cash": 88083.6,
+      "mean_margin": -14435.5,
+      "cash_cvar10": 58322.3,
+      "margin_cvar10": -30151.7,
+      "pass_J": 82131.4
+    }
+  },
+  {
+    "agent": "hire_day1_day9",
+    "opponent": "mao_85",
+    "summary": {
+      "agent_a": "hire_day1_day9",
+      "agent_b": "mao_85",
+      "seconds": 1.18053,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.9375,
+      "mean_cash": 94682.1,
+      "mean_margin": 3590.07,
+      "cash_cvar10": 61010.5,
+      "margin_cvar10": -714.398,
+      "pass_J": 87947.8
+    }
+  },
+  {
+    "agent": "hire_day1_day9",
+    "opponent": "mao_89",
+    "summary": {
+      "agent_a": "hire_day1_day9",
+      "agent_b": "mao_89",
+      "seconds": 1.19294,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.654297,
+      "mean_cash": 92511.3,
+      "mean_margin": 2664.94,
+      "cash_cvar10": 59082.8,
+      "margin_cvar10": -7536.89,
+      "pass_J": 85825.6
+    }
+  },
+  {
+    "agent": "combine_hires_001_best",
+    "opponent": "opening_router_v2",
+    "summary": {
+      "agent_a": "combine_hires_001_best",
+      "agent_b": "opening_router_v2",
+      "seconds": 1.17401,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.936523,
+      "mean_cash": 93133.4,
+      "mean_margin": 486.663,
+      "cash_cvar10": 59577.9,
+      "margin_cvar10": -882.971,
+      "pass_J": 86422.3
+    }
+  },
+  {
+    "agent": "combine_hires_001_best",
+    "opponent": "combine_hires_001_best",
+    "summary": {
+      "agent_a": "combine_hires_001_best",
+      "agent_b": "combine_hires_001_best",
+      "seconds": 1.16759,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 93133.9,
+      "mean_margin": 0,
+      "cash_cvar10": 59577.9,
+      "margin_cvar10": -1370.37,
+      "pass_J": 86422.7
+    }
+  },
+  {
+    "agent": "combine_hires_001_best",
+    "opponent": "hire_day1_counter",
+    "summary": {
+      "agent_a": "combine_hires_001_best",
+      "agent_b": "hire_day1_counter",
+      "seconds": 1.17534,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.132812,
+      "mean_cash": 93133.8,
+      "mean_margin": 3.7041,
+      "cash_cvar10": 59578.8,
+      "margin_cvar10": -1368.73,
+      "pass_J": 86422.8
+    }
+  },
+  {
+    "agent": "combine_hires_001_best",
+    "opponent": "hire_day9_counter",
+    "summary": {
+      "agent_a": "combine_hires_001_best",
+      "agent_b": "hire_day9_counter",
+      "seconds": 1.16986,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.174805,
+      "mean_cash": 93133.6,
+      "mean_margin": -17.7559,
+      "cash_cvar10": 59578.8,
+      "margin_cvar10": -1397.47,
+      "pass_J": 86422.6
+    }
+  },
+  {
+    "agent": "combine_hires_001_best",
+    "opponent": "public_router",
+    "summary": {
+      "agent_a": "combine_hires_001_best",
+      "agent_b": "public_router",
+      "seconds": 1.20083,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 102182,
+      "mean_margin": 13764.4,
+      "cash_cvar10": 67322.2,
+      "margin_cvar10": 7015.73,
+      "pass_J": 95210.2
+    }
+  },
+  {
+    "agent": "combine_hires_001_best",
+    "opponent": "teammate_shoprouter",
+    "summary": {
+      "agent_a": "combine_hires_001_best",
+      "agent_b": "teammate_shoprouter",
+      "seconds": 1.25201,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 103022,
+      "mean_margin": 21315.8,
+      "cash_cvar10": 67693.2,
+      "margin_cvar10": 11743.5,
+      "pass_J": 95956.2
+    }
+  },
+  {
+    "agent": "combine_hires_001_best",
+    "opponent": "teammate_sixday_robust",
+    "summary": {
+      "agent_a": "combine_hires_001_best",
+      "agent_b": "teammate_sixday_robust",
+      "seconds": 1.23528,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 125995,
+      "mean_margin": 63671.1,
+      "cash_cvar10": 82756.4,
+      "margin_cvar10": 32076.9,
+      "pass_J": 117347
+    }
+  },
+  {
+    "agent": "combine_hires_001_best",
+    "opponent": "skomuro",
+    "summary": {
+      "agent_a": "combine_hires_001_best",
+      "agent_b": "skomuro",
+      "seconds": 1.17938,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 99766.4,
+      "mean_margin": 19308.5,
+      "cash_cvar10": 64623.7,
+      "margin_cvar10": 8409.96,
+      "pass_J": 92737.9
+    }
+  },
+  {
+    "agent": "combine_hires_001_best",
+    "opponent": "deniz",
+    "summary": {
+      "agent_a": "combine_hires_001_best",
+      "agent_b": "deniz",
+      "seconds": 3.19435,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 101085,
+      "mean_margin": 20702.3,
+      "cash_cvar10": 65582.9,
+      "margin_cvar10": 11747.6,
+      "pass_J": 93984.5
+    }
+  },
+  {
+    "agent": "combine_hires_001_best",
+    "opponent": "arman_3000",
+    "summary": {
+      "agent_a": "combine_hires_001_best",
+      "agent_b": "arman_3000",
+      "seconds": 1.23422,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.999023,
+      "mean_cash": 95865.8,
+      "mean_margin": 23638.4,
+      "cash_cvar10": 62493.4,
+      "margin_cvar10": 9780.48,
+      "pass_J": 89191.3
+    }
+  },
+  {
+    "agent": "combine_hires_001_best",
+    "opponent": "junghoon_78",
+    "summary": {
+      "agent_a": "combine_hires_001_best",
+      "agent_b": "junghoon_78",
+      "seconds": 1.13988,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0,
+      "mean_cash": 57158.7,
+      "mean_margin": -57962.2,
+      "cash_cvar10": 27157.7,
+      "margin_cvar10": -105344,
+      "pass_J": 51158.5
+    }
+  },
+  {
+    "agent": "combine_hires_001_best",
+    "opponent": "mao_85",
+    "summary": {
+      "agent_a": "combine_hires_001_best",
+      "agent_b": "mao_85",
+      "seconds": 1.18053,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.93457,
+      "mean_cash": 94661.8,
+      "mean_margin": 3569.27,
+      "cash_cvar10": 60981.6,
+      "margin_cvar10": -738.854,
+      "pass_J": 87925.7
+    }
+  },
+  {
+    "agent": "combine_hires_001_best",
+    "opponent": "mao_89",
+    "summary": {
+      "agent_a": "combine_hires_001_best",
+      "agent_b": "mao_89",
+      "seconds": 1.18596,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.652344,
+      "mean_cash": 92494.5,
+      "mean_margin": 2647.75,
+      "cash_cvar10": 59056.8,
+      "margin_cvar10": -7515.38,
+      "pass_J": 85807
+    }
+  }
+]

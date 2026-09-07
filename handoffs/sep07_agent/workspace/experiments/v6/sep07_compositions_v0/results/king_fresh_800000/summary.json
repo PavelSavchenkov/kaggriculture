@@ -1,0 +1,87 @@
+[
+  {
+    "agent": "king_rc4",
+    "opponent": "opening_router_v4",
+    "summary": {
+      "agent_a": "king_rc4",
+      "agent_b": "opening_router_v4",
+      "seconds": 1.30013,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.413086,
+      "mean_cash": 94932.4,
+      "mean_margin": 729.086,
+      "cash_cvar10": 51626.6,
+      "margin_cvar10": -15671.5,
+      "pass_J": 86271.3
+    }
+  },
+  {
+    "agent": "king_rc4",
+    "opponent": "junghoon_78",
+    "summary": {
+      "agent_a": "king_rc4",
+      "agent_b": "junghoon_78",
+      "seconds": 1.20812,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.810547,
+      "mean_cash": 102089,
+      "mean_margin": 10606.6,
+      "cash_cvar10": 59638.9,
+      "margin_cvar10": -8160.03,
+      "pass_J": 93599.3
+    }
+  },
+  {
+    "agent": "king_rc4",
+    "opponent": "public_router",
+    "summary": {
+      "agent_a": "king_rc4",
+      "agent_b": "public_router",
+      "seconds": 1.2208,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.939453,
+      "mean_cash": 91730.5,
+      "mean_margin": 1625.83,
+      "cash_cvar10": 56054.3,
+      "margin_cvar10": -256.029,
+      "pass_J": 84595.3
+    }
+  },
+  {
+    "agent": "king_rc4",
+    "opponent": "teammate_shoprouter",
+    "summary": {
+      "agent_a": "king_rc4",
+      "agent_b": "teammate_shoprouter",
+      "seconds": 1.28348,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.966797,
+      "mean_cash": 91646.6,
+      "mean_margin": 9114.46,
+      "cash_cvar10": 55645.1,
+      "margin_cvar10": -105.175,
+      "pass_J": 84446.3
+    }
+  },
+  {
+    "agent": "king_rc4",
+    "opponent": "binghua_116",
+    "summary": {
+      "agent_a": "king_rc4",
+      "agent_b": "binghua_116",
+      "seconds": 1.32058,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.114258,
+      "mean_cash": 89956.3,
+      "mean_margin": -9277.67,
+      "cash_cvar10": 53400.5,
+      "margin_cvar10": -23193.6,
+      "pass_J": 82645.1
+    }
+  }
+]

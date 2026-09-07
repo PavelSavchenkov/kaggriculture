@@ -1,0 +1,49 @@
+{
+  "source": "https://www.kaggle.com/code/boatlee/v29-r1-adaptive-market-hysteresis",
+  "source_sha256": "c4a6964cec3c1c99207c32bb1fd91e53c3ec01e6890da5734331cbeab1cc1267",
+  "actions_sha256": "681f8c27fb126af13da9a6758f29434a7f2defe08e253ad563961154ae38d8f7",
+  "data_sha256": "4c00fc651ce22c6de71736eb7ae47d8238c48d77e35854d97d48f72e4085b2e2",
+  "config": {
+    "start_step": 456,
+    "reserve_early": 12,
+    "reserve_mid": 8,
+    "reserve_late": 6,
+    "reserve_tail": 3,
+    "shed_soft": 72,
+    "shed_hard": 88,
+    "shed_reserve_cut": 7,
+    "price_gate": 0.66,
+    "pressure_trigger": 2.0,
+    "pressure_gate_cut": 0.18,
+    "capacity_trigger": 0,
+    "capacity_gate_cut": 0.08,
+    "tranche": 4,
+    "pressure_tranche": 4,
+    "shed_tranche": 4,
+    "tail_tranche": 5,
+    "demand_reserve": 2,
+    "demand_reserve_cap": 14,
+    "demand_gate": 0.045,
+    "demand_gate_cap": 0.24,
+    "max_extra_per_item": 18,
+    "mirror_latch_step": 289,
+    "mirror_composition_distance": 2,
+    "mirror_money_distance": 250,
+    "mirror_max_extra_per_item": 0
+  },
+  "production_origin": {
+    "team": "RngRng",
+    "submission": 55948382,
+    "episodes_credited_by_author": [
+      104679155,
+      104689164,
+      104691666
+    ]
+  },
+  "changes": "Typed C++ implementation of fixed course, eight-step weed recovery and adaptive market controller; empty front-run item list makes legacy front-run/debt code inactive.",
+  "rating": "Not independently established. Notebook reports strong local top20/regression panels, not verified by us yet.",
+  "reuse": "User explicitly authorized borrowing public agents. Separate source license not supplied in downloaded metadata; source attribution retained.",
+  "status": "Complete source/deployment checks and broad256game league.255wins vs archivedBoatlee,141Jun,35v4,1King/public,0Justin/Binghua/teammate. Retained reference, no promotion.",
+  "parity": "results/boatlee_v29_parity.json",
+  "validation": "results/boatlee_v29_validation.json"
+}

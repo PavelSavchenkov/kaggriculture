@@ -1,0 +1,140 @@
+{
+  "candidate": "shop_herd_s6_m3_g1",
+  "source_program": 150,
+  "artifacts": {
+    "main.py": {
+      "bytes": 29850,
+      "sha256": "f5f58e14b0cafd0f150a505d81e63feb9426c8415771d23bde054b839f6b8d97"
+    },
+    "submission.tar.gz": {
+      "bytes": 21578,
+      "sha256": "53acf9d1d5e3206e28ea6f365af39786a9e74c4b3bfe6851b5bd21e8740901f4"
+    },
+    "policy_data.json": {
+      "bytes": 164245,
+      "sha256": "7c8289788ca70ca941fc783ed36c49f45827518d1358a118971225b382e67107"
+    }
+  },
+  "frozen_source_files": 58,
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n\n",
+  "build_commands": [
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "g++",
+      "-std=c++20",
+      "-march=native",
+      "-mtune=native",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-math-errno",
+      "-fno-semantic-interposition",
+      "-fno-plt",
+      "-pthread",
+      "-O3",
+      "-DNDEBUG",
+      "-flto",
+      "-I",
+      "/home/pavel/Programming/kaggriculture/submissions/sep7-shop-herd-adaptive-v1/source_tree",
+      "/home/pavel/Programming/kaggriculture/submissions/sep7-shop-herd-adaptive-v1/arena.cpp",
+      "/home/pavel/Programming/kaggriculture/submissions/sep7-shop-herd-adaptive-v1/source_tree/experiments/v6/sep07_compositions_v0/league/teammate_shoprouter/source/agent.cpp",
+      "/home/pavel/Programming/kaggriculture/submissions/sep7-shop-herd-adaptive-v1/source_tree/experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.cpp",
+      "-o",
+      "/home/pavel/Programming/kaggriculture/submissions/sep7-shop-herd-adaptive-v1/arena"
+    ],
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "g++",
+      "-std=c++20",
+      "-march=native",
+      "-mtune=native",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-math-errno",
+      "-fno-semantic-interposition",
+      "-fno-plt",
+      "-pthread",
+      "-O1",
+      "-g",
+      "-DKAG_VERIFY_MASKS",
+      "-I",
+      "/home/pavel/Programming/kaggriculture/submissions/sep7-shop-herd-adaptive-v1/source_tree",
+      "/home/pavel/Programming/kaggriculture/submissions/sep7-shop-herd-adaptive-v1/arena.cpp",
+      "/home/pavel/Programming/kaggriculture/submissions/sep7-shop-herd-adaptive-v1/source_tree/experiments/v6/sep07_compositions_v0/league/teammate_shoprouter/source/agent.cpp",
+      "/home/pavel/Programming/kaggriculture/submissions/sep7-shop-herd-adaptive-v1/source_tree/experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.cpp",
+      "-o",
+      "/home/pavel/Programming/kaggriculture/submissions/sep7-shop-herd-adaptive-v1/arena_debug"
+    ]
+  ],
+  "extra_build_commands": [
+    "conda run -n kaggriculture g++ -std=c++20 -O2 -I source_tree export_policy.cpp -o export_policy",
+    "conda run -n kaggriculture g++ -std=c++20 -O2 -I source_tree verify_cpp.cpp source_tree/experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.cpp -o verify_cpp"
+  ],
+  "test_commands": [
+    "conda run -n kaggriculture ./arena --a shop_herd_s6_m3_g1 --b teammate_shoprouter --games 2048 --seed-start 1150000 --seat-mode both --threads 4 --output frozen_cpp_4096.json",
+    "conda run -n kaggriculture python verify_submission.py --games 32"
+  ],
+  "binary_sha256": {
+    "arena": "490716ef7c7a7638f234f2e642ce352945e42f0b40c344654373c87ead220332",
+    "arena_debug": "619e7958e54e22088cb5fb225f79a2386b226347e62c15014e0a528071752745",
+    "export_policy": "8f6d6c81fa87f6f9e2787904bc2cfb7568c349be4ceb3a809ba821ad8a0435ee",
+    "verify_cpp": "d227c9654ab1f5fe08289e1158e174893a92d5a66bdad1d33417f6b8dff8accd"
+  },
+  "checks": {
+    "deterministic_archive_rebuild": true,
+    "frozen_dependency_hashes": true,
+    "full_action_generic_release_debug_thread_parity_games": 16,
+    "cpp_fresh_games": 4096,
+    "cpp_wins": 3980,
+    "cpp_ties": 0,
+    "cpp_mean_margin": 9426.5,
+    "packed_official_teammate_games": 64,
+    "packed_official_wins": 62,
+    "packed_native_both_cash_equal_games": 64,
+    "packed_cpp_action_matches": 48892,
+    "packed_all_statuses": "DONE",
+    "runtime_max_seconds": 0.04138747998513281
+  },
+  "additional_post_upload_native_cpp_check": {
+    "games": 4096,
+    "wins": 3944,
+    "ties": 0,
+    "mean_margin": 9307.875732421875,
+    "scenario": "official_native_rng"
+  },
+  "server_validation": {
+    "episode": 106421415,
+    "rewards": [
+      66800.0,
+      69098.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "submitted_actions": 1438,
+    "action_mismatches": 0,
+    "logs": [
+      {
+        "seat": 0,
+        "calls": 719,
+        "total_seconds": 0.151812,
+        "max_seconds": 0.120083
+      },
+      {
+        "seat": 1,
+        "calls": 719,
+        "total_seconds": 0.162214,
+        "max_seconds": 0.122497
+      }
+    ],
+    "replay_sha256": "efb6e0afe78d0425f2860a7e96701af70ceff4ab13bca8953e19631ad9c7d63b"
+  },
+  "submission_id": 56074695,
+  "status": "COMPLETE"
+}

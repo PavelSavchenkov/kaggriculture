@@ -1,0 +1,1372 @@
+[
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 4,
+    "day": 0,
+    "hour": 4,
+    "shops": [],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 0,
+      "WOOL": 0
+    },
+    "own_money": 1052.0,
+    "opponent_money": 306.0,
+    "prices": {
+      "EGG": 50,
+      "MILK": 169,
+      "WOOL": 206
+    },
+    "herd": {},
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          4,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 2,
+      "SHEEP": 2
+    },
+    "prefix_actions_sha256": "57baad4917c6e30a5f594968faa8d324e45028a97ad6d0bf49269765e3721dc4",
+    "action_sha256": "90cea9d20d4996a8a952d63ca0dbe86a35e0b30c944bf81a13c866cef8e5ca41",
+    "turns_since_last_shop": null,
+    "animal": "COW",
+    "x": 4,
+    "y": 4,
+    "worker_index_candidates": [
+      5
+    ],
+    "center_distance": 0,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 3,
+    "prior_tile_occupants": [
+      {
+        "step": 4,
+        "value": "PASTURE"
+      }
+    ]
+  },
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 5,
+    "day": 0,
+    "hour": 5,
+    "shops": [],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 0,
+      "WOOL": 0
+    },
+    "own_money": 972.0,
+    "opponent_money": 26.0,
+    "prices": {
+      "EGG": 50,
+      "MILK": 169,
+      "WOOL": 206
+    },
+    "herd": {
+      "COW": 1
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          4,
+          3
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 1,
+      "SHEEP": 2
+    },
+    "prefix_actions_sha256": "b6e210b39eabc22362bb8545d8fb13a75c508400bb2842a641dbff49529d4652",
+    "action_sha256": "5903894e39739555b5590d5796c2260cfe1570561b8834b9514f54e02e28e988",
+    "turns_since_last_shop": null,
+    "animal": "COW",
+    "x": 4,
+    "y": 3,
+    "worker_index_candidates": [
+      1
+    ],
+    "center_distance": 1,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 4,
+    "prior_tile_occupants": [
+      {
+        "step": 5,
+        "value": "PASTURE"
+      }
+    ]
+  },
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 7,
+    "day": 0,
+    "hour": 7,
+    "shops": [],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 0,
+      "WOOL": 0
+    },
+    "own_money": 892.0,
+    "opponent_money": 26.0,
+    "prices": {
+      "EGG": 50,
+      "MILK": 169,
+      "WOOL": 206
+    },
+    "herd": {
+      "COW": 2
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 2
+    },
+    "prefix_actions_sha256": "1b9f142696245ec982e5583e4a685bb31c88666106af8f6f327b390f7c491b5d",
+    "action_sha256": "cbfacbd6db1bf1d1f17785ef8709618fb3b3fd04cd57424fe389f772dcb804ff",
+    "turns_since_last_shop": null,
+    "animal": "SHEEP",
+    "x": 3,
+    "y": 4,
+    "worker_index_candidates": [
+      2
+    ],
+    "center_distance": 1,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 6,
+    "prior_tile_occupants": [
+      {
+        "step": 7,
+        "value": "PASTURE"
+      }
+    ]
+  },
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 9,
+    "day": 0,
+    "hour": 9,
+    "shops": [],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 0,
+      "WOOL": 0
+    },
+    "own_money": 732.0,
+    "opponent_money": 26.0,
+    "prices": {
+      "EGG": 50,
+      "MILK": 169,
+      "WOOL": 206
+    },
+    "herd": {
+      "COW": 2,
+      "SHEEP": 1
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          3,
+          3
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 1
+    },
+    "prefix_actions_sha256": "94c8672a17a5a1f4684d597c53cb5537fb11f07e09a8688e32a658e6add40980",
+    "action_sha256": "2f066003677a2fc6be8aa52b7b9fa4aa90f48533e8704a492487309cde522cb0",
+    "turns_since_last_shop": null,
+    "animal": "SHEEP",
+    "x": 3,
+    "y": 3,
+    "worker_index_candidates": [
+      4
+    ],
+    "center_distance": 2,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 8,
+    "prior_tile_occupants": [
+      {
+        "step": 9,
+        "value": "PASTURE"
+      }
+    ]
+  },
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 69,
+    "day": 2,
+    "hour": 21,
+    "shops": [],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 0,
+      "WOOL": 0
+    },
+    "own_money": 214.0,
+    "opponent_money": 148.0,
+    "prices": {
+      "EGG": 50,
+      "MILK": 175,
+      "WOOL": 212
+    },
+    "herd": {
+      "SHEEP": 2,
+      "COW": 2
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          4,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 1,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "9b6d22f457faebbe33658edddfa993561716c2ab9983fe6a73ee3904e0be3e8e",
+    "action_sha256": "dc7ad85b9e39b3d5fba12685bab91b31dcdd6e5120cb2af3b96caa8fb4fde50c",
+    "turns_since_last_shop": null,
+    "animal": "COW",
+    "x": 4,
+    "y": 2,
+    "worker_index_candidates": [
+      0
+    ],
+    "center_distance": 2,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 29,
+    "prior_tile_occupants": [
+      {
+        "step": 30,
+        "value": "PASTURE"
+      }
+    ]
+  },
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 95,
+    "day": 3,
+    "hour": 23,
+    "shops": [
+      "ICE_CREAM_SHOP"
+    ],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 1,
+      "WOOL": 0
+    },
+    "own_money": 88.0,
+    "opponent_money": 131.0,
+    "prices": {
+      "EGG": 50,
+      "MILK": 187,
+      "WOOL": 214
+    },
+    "herd": {
+      "COW": 3,
+      "SHEEP": 2
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          2,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 1,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "1e2221e7ce3870fc84a7c37d71b750bbd0dc309dc33a5207d965ce6966bf8262",
+    "action_sha256": "fd7df620ecd9559c1033e60cc0d3ae575d4483d8ec25a997e5d0336ee917fcd5",
+    "turns_since_last_shop": 23,
+    "animal": "COW",
+    "x": 2,
+    "y": 4,
+    "worker_index_candidates": [
+      3
+    ],
+    "center_distance": 2,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 28,
+    "prior_tile_occupants": [
+      {
+        "step": 29,
+        "value": "PASTURE"
+      }
+    ]
+  },
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 156,
+    "day": 6,
+    "hour": 12,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "BAKERY"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 1,
+      "WOOL": 0
+    },
+    "own_money": 601.0,
+    "opponent_money": 8.0,
+    "prices": {
+      "EGG": 51,
+      "MILK": 206,
+      "WOOL": 190
+    },
+    "herd": {
+      "COW": 4,
+      "SHEEP": 2
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 2,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "d1521944f8dbf56aa652a3f1f2c515e96e685563908af0606c06dc653a55f8d5",
+    "action_sha256": "c93f93472e7e6148c0a99c88ec2ca9b7862b0ab4c5fbab3a66fe0d2d37caa744",
+    "turns_since_last_shop": 12,
+    "animal": "COW",
+    "x": 5,
+    "y": 3,
+    "worker_index_candidates": [
+      0
+    ],
+    "center_distance": 1,
+    "closer_ready_structures": 1,
+    "closer_buildable_sites": 1,
+    "last_structure_step": 155,
+    "prior_tile_occupants": [
+      {
+        "step": 0,
+        "value": "LOCKED"
+      },
+      {
+        "step": 151,
+        "value": null
+      },
+      {
+        "step": 156,
+        "value": "PASTURE"
+      }
+    ]
+  },
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 156,
+    "day": 6,
+    "hour": 12,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "BAKERY"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 1,
+      "WOOL": 0
+    },
+    "own_money": 601.0,
+    "opponent_money": 8.0,
+    "prices": {
+      "EGG": 51,
+      "MILK": 206,
+      "WOOL": 190
+    },
+    "herd": {
+      "COW": 4,
+      "SHEEP": 2
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 2,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "d1521944f8dbf56aa652a3f1f2c515e96e685563908af0606c06dc653a55f8d5",
+    "action_sha256": "c93f93472e7e6148c0a99c88ec2ca9b7862b0ab4c5fbab3a66fe0d2d37caa744",
+    "turns_since_last_shop": 12,
+    "animal": "COW",
+    "x": 5,
+    "y": 4,
+    "worker_index_candidates": [
+      3
+    ],
+    "center_distance": 0,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 155,
+    "prior_tile_occupants": [
+      {
+        "step": 0,
+        "value": "LOCKED"
+      },
+      {
+        "step": 151,
+        "value": null
+      },
+      {
+        "step": 156,
+        "value": "PASTURE"
+      }
+    ]
+  },
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 177,
+    "day": 7,
+    "hour": 9,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "BAKERY"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 1,
+      "WOOL": 0
+    },
+    "own_money": 266.0,
+    "opponent_money": 134.0,
+    "prices": {
+      "EGG": 51,
+      "MILK": 211,
+      "WOOL": 185
+    },
+    "herd": {
+      "COW": 6,
+      "SHEEP": 2
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          7,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 2,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "8e3e9045ed151dd7cb99c018f5f3904454ad3d736d61a5c984e7ea112aea6d25",
+    "action_sha256": "d61ac3bc7d613c897eebb9be0aaca4849dfd64057ecbac37b93e41ed9b268fd3",
+    "turns_since_last_shop": 33,
+    "animal": "COW",
+    "x": 6,
+    "y": 4,
+    "worker_index_candidates": [
+      3
+    ],
+    "center_distance": 1,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 156,
+    "prior_tile_occupants": [
+      {
+        "step": 0,
+        "value": "LOCKED"
+      },
+      {
+        "step": 151,
+        "value": null
+      },
+      {
+        "step": 157,
+        "value": "PASTURE"
+      }
+    ]
+  },
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 183,
+    "day": 7,
+    "hour": 15,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "BAKERY"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 1,
+      "WOOL": 0
+    },
+    "own_money": 352.0,
+    "opponent_money": 220.0,
+    "prices": {
+      "EGG": 51,
+      "MILK": 212,
+      "WOOL": 185
+    },
+    "herd": {
+      "COW": 7,
+      "SHEEP": 2
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 1,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "bd17411d447aa2a5909af3484dfd3ca5ce5bd94359a87307ae95ff670b896f9e",
+    "action_sha256": "72b262faecf1801684080e6ca1de96384b006606bd42b194b5b26790001b67af",
+    "turns_since_last_shop": 39,
+    "animal": "COW",
+    "x": 5,
+    "y": 2,
+    "worker_index_candidates": [
+      3
+    ],
+    "center_distance": 2,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 155,
+    "prior_tile_occupants": [
+      {
+        "step": 0,
+        "value": "LOCKED"
+      },
+      {
+        "step": 151,
+        "value": null
+      },
+      {
+        "step": 156,
+        "value": "PASTURE"
+      }
+    ]
+  },
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 199,
+    "day": 8,
+    "hour": 7,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "BAKERY"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 1,
+      "WOOL": 0
+    },
+    "own_money": 676.0,
+    "opponent_money": 578.0,
+    "prices": {
+      "EGG": 51,
+      "MILK": 196,
+      "WOOL": 187
+    },
+    "herd": {
+      "COW": 8,
+      "SHEEP": 2
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 1,
+      "SHEEP": 2
+    },
+    "prefix_actions_sha256": "174620a99e7e5c20bb3bc07f52237ce3fa7d5e27893dc593a3ac7edc59441671",
+    "action_sha256": "a06615759ee852d745730c00157699bf8d85770ab8bb3a5b05f61d2bf675f3d1",
+    "turns_since_last_shop": 55,
+    "animal": "COW",
+    "x": 6,
+    "y": 3,
+    "worker_index_candidates": [
+      2
+    ],
+    "center_distance": 2,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 161,
+    "prior_tile_occupants": [
+      {
+        "step": 0,
+        "value": "LOCKED"
+      },
+      {
+        "step": 151,
+        "value": null
+      },
+      {
+        "step": 162,
+        "value": "PASTURE"
+      }
+    ]
+  },
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 200,
+    "day": 8,
+    "hour": 8,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "BAKERY"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 1,
+      "WOOL": 0
+    },
+    "own_money": 676.0,
+    "opponent_money": 578.0,
+    "prices": {
+      "EGG": 51,
+      "MILK": 196,
+      "WOOL": 187
+    },
+    "herd": {
+      "COW": 9,
+      "SHEEP": 2
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 2
+    },
+    "prefix_actions_sha256": "4c67a81aa708f87c714785cce6c75b861ef4324732ed8f0f3240d2303fba0ff2",
+    "action_sha256": "1b005dc8036f7787a00e6933ce7fd461f1a9e5367b9b542f8216b47d07490044",
+    "turns_since_last_shop": 56,
+    "animal": "SHEEP",
+    "x": 7,
+    "y": 4,
+    "worker_index_candidates": [
+      3
+    ],
+    "center_distance": 2,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 158,
+    "prior_tile_occupants": [
+      {
+        "step": 0,
+        "value": "LOCKED"
+      },
+      {
+        "step": 151,
+        "value": null
+      },
+      {
+        "step": 159,
+        "value": "PASTURE"
+      }
+    ]
+  },
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 205,
+    "day": 8,
+    "hour": 13,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "BAKERY"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 1,
+      "WOOL": 0
+    },
+    "own_money": 359.0,
+    "opponent_money": 261.0,
+    "prices": {
+      "EGG": 52,
+      "MILK": 198,
+      "WOOL": 187
+    },
+    "herd": {
+      "COW": 9,
+      "SHEEP": 3
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          6,
+          2
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 1
+    },
+    "prefix_actions_sha256": "5578428a6f07aad127012d9a86e55d9a9a5fc58cc23e40136cd81bf8381590c5",
+    "action_sha256": "d3b89226d6ac9555cdadead798b66ebedd19cf295d0298c92d2c1f9b86ca4630",
+    "turns_since_last_shop": 61,
+    "animal": "SHEEP",
+    "x": 6,
+    "y": 2,
+    "worker_index_candidates": [
+      3
+    ],
+    "center_distance": 3,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 157,
+    "prior_tile_occupants": [
+      {
+        "step": 0,
+        "value": "LOCKED"
+      },
+      {
+        "step": 151,
+        "value": null
+      },
+      {
+        "step": 158,
+        "value": "PASTURE"
+      }
+    ]
+  },
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 258,
+    "day": 10,
+    "hour": 18,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "BAKERY",
+      "SMOOTHIE_SHOP"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 2,
+      "WOOL": 0
+    },
+    "own_money": 12036.0,
+    "opponent_money": 13652.0,
+    "prices": {
+      "EGG": 52,
+      "MILK": 218,
+      "WOOL": 151
+    },
+    "herd": {
+      "COW": 9,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [
+        [
+          4,
+          0
+        ]
+      ],
+      "PASTURE": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 3,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "5604b79f81ed0e1d51dea2cab2ce8fa4df685d9393f340da578dd068ac93e9e3",
+    "action_sha256": "fb6da1d45fd4c3d7e4c1cc109b6283d6b98c7edd5f718e544de8a7b6b26a89a8",
+    "turns_since_last_shop": 42,
+    "animal": "COW",
+    "x": 1,
+    "y": 4,
+    "worker_index_candidates": [
+      1
+    ],
+    "center_distance": 3,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 257,
+    "prior_tile_occupants": [
+      {
+        "step": 10,
+        "value": "MELON"
+      },
+      {
+        "step": 246,
+        "value": null
+      },
+      {
+        "step": 258,
+        "value": "PASTURE"
+      }
+    ]
+  },
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 259,
+    "day": 10,
+    "hour": 19,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "BAKERY",
+      "SMOOTHIE_SHOP"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 2,
+      "WOOL": 0
+    },
+    "own_money": 14611.0,
+    "opponent_money": 13652.0,
+    "prices": {
+      "EGG": 52,
+      "MILK": 210,
+      "WOOL": 151
+    },
+    "herd": {
+      "COW": 10,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [
+        [
+          4,
+          0
+        ]
+      ],
+      "PASTURE": [
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 2,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "50aac8ac062dcdd78e6139e78b2320502b757696c1db74813a884df9c52a4efc",
+    "action_sha256": "edaa515e9d5e4cbdb34b6eea40d1160024ff7f04ad63a9ab3347f42fe20fc41a",
+    "turns_since_last_shop": 43,
+    "animal": "COW",
+    "x": 3,
+    "y": 2,
+    "worker_index_candidates": [
+      3
+    ],
+    "center_distance": 3,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 258,
+    "prior_tile_occupants": [
+      {
+        "step": 10,
+        "value": "MELON"
+      },
+      {
+        "step": 247,
+        "value": null
+      },
+      {
+        "step": 259,
+        "value": "PASTURE"
+      }
+    ]
+  },
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 260,
+    "day": 10,
+    "hour": 20,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "BAKERY",
+      "SMOOTHIE_SHOP"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 2,
+      "WOOL": 0
+    },
+    "own_money": 14611.0,
+    "opponent_money": 16118.0,
+    "prices": {
+      "EGG": 52,
+      "MILK": 200,
+      "WOOL": 151
+    },
+    "herd": {
+      "COW": 11,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [
+        [
+          4,
+          0
+        ]
+      ],
+      "PASTURE": [
+        [
+          4,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 1,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "85d896698f4c6c65e9573aa92af74c2ff8f16654b4c2ddf73f13ff54aafd9b61",
+    "action_sha256": "9a6debaed0d6948b29c87e4771a5256917f08a9112e60c68cbca53d06c78ff1a",
+    "turns_since_last_shop": 44,
+    "animal": "COW",
+    "x": 4,
+    "y": 1,
+    "worker_index_candidates": [
+      11
+    ],
+    "center_distance": 3,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 259,
+    "prior_tile_occupants": [
+      {
+        "step": 7,
+        "value": "MELON"
+      },
+      {
+        "step": 247,
+        "value": null
+      },
+      {
+        "step": 260,
+        "value": "PASTURE"
+      }
+    ]
+  },
+  {
+    "episode": 106371597,
+    "seat": 1,
+    "team": "Atakan Aldemir",
+    "team_id": 16711752,
+    "submission_id": 56058092,
+    "rank": 11,
+    "leaderboard_score": 2768.0,
+    "episode_create_time": "2026-09-07T06:43:55.189000",
+    "replay_sha256": "a64bfb303f61c7b4851e24b604a8f066959219cba10d7a36b344e9cefc53b183",
+    "replay_file": "replays/episode-106371597-replay.json",
+    "cohorts": [
+      "refresh_0804"
+    ],
+    "step": 270,
+    "day": 11,
+    "hour": 6,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "BAKERY",
+      "SMOOTHIE_SHOP"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 2,
+      "WOOL": 0
+    },
+    "own_money": 14178.0,
+    "opponent_money": 16045.0,
+    "prices": {
+      "EGG": 53,
+      "MILK": 201,
+      "WOOL": 154
+    },
+    "herd": {
+      "COW": 12,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [
+        [
+          4,
+          0
+        ]
+      ],
+      "PASTURE": [
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 1
+    },
+    "prefix_actions_sha256": "942e84e9b50e7d5e478e2ca24697a59c7595a7a95392a03512711460144ff162",
+    "action_sha256": "7fde67629fcea3d694313f253444c636ec1998b5117c579615285ea65ec3d267",
+    "turns_since_last_shop": 54,
+    "animal": "SHEEP",
+    "x": 2,
+    "y": 3,
+    "worker_index_candidates": [
+      10
+    ],
+    "center_distance": 3,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 254,
+    "prior_tile_occupants": [
+      {
+        "step": 5,
+        "value": "MELON"
+      },
+      {
+        "step": 247,
+        "value": null
+      },
+      {
+        "step": 255,
+        "value": "PASTURE"
+      }
+    ]
+  }
+]

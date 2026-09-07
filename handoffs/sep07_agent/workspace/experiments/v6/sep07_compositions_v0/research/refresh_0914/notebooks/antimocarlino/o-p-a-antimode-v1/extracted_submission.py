@@ -1,0 +1,310 @@
+##############################################################
+# BLOCK 1: Imports and Constants
+##############################################################
+
+from kaggle_environments import make
+
+CROPS_DATA = {
+    "CARROT":     {"seed_cost": 20,  "first_yield_day": 2,  "max_yield_day": 3,  "max_yield": 4, "ongoing": False},
+    "WHEAT":      {"seed_cost": 10,  "first_yield_day": 2,  "max_yield_day": 4,  "max_yield": 6, "ongoing": False},
+    "STRAWBERRY": {"seed_cost": 100, "first_yield_day": 10, "max_yield_day": 10, "max_yield": 4, "ongoing": True},
+    "MELON":      {"seed_cost": 80,  "first_yield_day": 10, "max_yield_day": 10, "max_yield": 6, "ongoing": False},
+}
+
+SAFE_CASH = 250
+STRAWBERRY_UNLOCK_CASH = 600
+STRAWBERRY_MAX_TILES = 2
+MELON_UNLOCK_CASH = 700
+MELON_MAX_TILES = 5
+
+PRICE_TARGET_MULTIPLIER = 1.15
+VOLATILITY_THRESHOLD = 0.20
+MARKET_STABILITY_WINDOW = 6
+
+MAX_HANDS = 3
+LAND_BUY_CASH_BUFFER = 600
+HIRE_CASH_BUFFER = 300
+
+ANIMAL_SPECIES = "COW"
+ANIMAL_STRUCTURE = "PASTURE"
+ANIMAL_COST = 600
+ANIMAL_UNLOCK_CASH = 1500
+ANIMAL_TILE = (0, 0)
+ANIMAL_KEEPER_IDX = MAX_HANDS
+
+player_states = {}
+last_episode_step = -1
+
+WORK_TILES = [(x, y) for x in range(0, 5) for y in range(0, 5)]
+MIN_DAY_FOR_LAND = 5
+
+##############################################################
+# BLOCK 2: State Reader
+##############################################################
+
+def get_farm(obs):
+    return obs["farms"][obs["player"]]
+
+def get_tile(farm, x, y):
+    return farm["tiles"][y][x]
+
+##############################################################
+# BLOCK 3: Market and Mental State
+##############################################################
+
+def market_is_stable(history):
+    if len(history) < MARKET_STABILITY_WINDOW:
+        return False
+    window = history[-MARKET_STABILITY_WINDOW:]
+    avg = sum(window) / len(window)
+    return all(abs(p - avg) / avg < 0.08 for p in window)
+
+def good_window(current_price, history):
+    if len(history) < 10:
+        return False
+    avg = sum(history[-10:]) / 10
+    return current_price >= avg * PRICE_TARGET_MULTIPLIER
+
+def high_volatility(current_price, history):
+    if len(history) < 10:
+        return False
+    avg = sum(history[-10:]) / 10
+    return abs(current_price - avg) / avg > VOLATILITY_THRESHOLD
+
+def update_state(obs):
+    global player_states, last_episode_step
+
+    current_step = obs.get("step", 0)
+    if current_step == 0 or current_step < last_episode_step:
+        player_states = {}
+    last_episode_step = current_step
+
+    player = obs["player"]
+    if player not in player_states:
+        player_states[player] = {"state": "CALMA", "price_history": []}
+
+    player_data = player_states[player]
+    state = player_data["state"]
+    price_history = player_data["price_history"]
+
+    farm = get_farm(obs)
+    current_price = obs["market"]["prices"]["WHEAT"]
+    price_history.append(current_price)
+
+    if state == "CALMA":
+        if market_is_stable(price_history) and farm["money"] >= SAFE_CASH:
+            state = "FOCUS"
+    elif state == "FOCUS":
+        if good_window(current_price, price_history):
+            state = "ADVANCE"
+    elif state == "ADVANCE":
+        if high_volatility(current_price, price_history) or farm["money"] < SAFE_CASH:
+            state = "CALMA"
+
+    player_data["state"] = state
+    player_data["price_history"] = price_history
+
+##############################################################
+# BLOCK 4: Core Agent Logic
+##############################################################
+
+def choose_crop_for_tile(idx_in_grid, money):
+    total = len(WORK_TILES)
+    is_melon_slot = idx_in_grid < MELON_MAX_TILES
+    is_strawberry_slot = idx_in_grid >= total - STRAWBERRY_MAX_TILES
+    if is_melon_slot and money >= MELON_UNLOCK_CASH:
+        return "MELON"
+    if is_strawberry_slot and money >= STRAWBERRY_UNLOCK_CASH:
+        return "STRAWBERRY"
+    return "CARROT"
+
+def decide_tile_action(tile, day, seeds, crop_choice):
+    if isinstance(tile, dict) and tile.get("kind") == "PLANT":
+        crop = tile["crop"]
+        cd = CROPS_DATA[crop]
+        age = day - tile["planted_day"]
+        if cd["ongoing"]:
+            if tile.get("yield_units", 0) > 0 and age >= cd["first_yield_day"]:
+                return ["HARVEST"]
+            elif not tile["watered_today"]:
+                return ["WATER"]
+            else:
+                return None
+        else:
+            if tile.get("yield_units", 0) > 0 and age >= cd["max_yield_day"]:
+                return ["HARVEST"]
+            elif not tile["watered_today"]:
+                return ["WATER"]
+            else:
+                return None
+    elif tile is None and seeds.get(crop_choice, 0) > 0:
+        return ["PLANT", crop_choice]
+    return None
+
+def move_toward(pos, target_x, target_y):
+    fx, fy = pos
+    if fx == target_x and fy == target_y:
+        return None
+    if fy > target_y:
+        return ["NORTH"]
+    if fy < target_y:
+        return ["SOUTH"]
+    if fx < target_x:
+        return ["EAST"]
+    if fx > target_x:
+        return ["WEST"]
+    return None
+
+def is_shed_adjacent(pos):
+    return pos in [(4, 4), (5, 4), (4, 5), (5, 5)]
+
+def get_unit_inventory(obs, unit_idx):
+    invs = obs["private"].get("inventories", [])
+    return invs[unit_idx] if unit_idx < len(invs) else {}
+
+def animal_step(pos, obs, unit_idx):
+    farm = get_farm(obs)
+    shed = obs["private"]["shed"]
+    inv = get_unit_inventory(obs, unit_idx)
+    ax, ay = ANIMAL_TILE
+    tile = get_tile(farm, ax, ay)
+    carrying_cow = inv.get(ANIMAL_SPECIES, 0) > 0
+    carrying_wheat = inv.get("WHEAT", 0) > 0
+    pasture_exists = isinstance(tile, dict) and tile.get("kind") == ANIMAL_STRUCTURE
+    animal_on_tile = pasture_exists and "animal" in tile
+
+    if carrying_cow and pasture_exists and not animal_on_tile:
+        if pos == (ax, ay):
+            return ["PLACE", ANIMAL_SPECIES, 1]
+        return move_toward(pos, ax, ay) or ["PASS"]
+
+    if animal_on_tile:
+        if pos == (ax, ay):
+            if tile.get("yield_units", 0) > 0:
+                return ["HARVEST"]
+            if not tile.get("fed_today") and carrying_wheat:
+                return ["FEED"]
+            if tile.get("fed_today") and not tile.get("cared_today"):
+                return ["CARE"]
+            return None
+        if not tile.get("fed_today") and not carrying_wheat and shed.get("WHEAT", 0) > 0:
+            if is_shed_adjacent(pos):
+                return ["PICKUP", "WHEAT", 2]
+            return move_toward(pos, 4, 4) or ["PASS"]
+        return None
+
+    if not pasture_exists:
+        if pos == (ax, ay):
+            return ["BUILD_PASTURE"]
+        return move_toward(pos, ax, ay) or ["PASS"]
+
+    if shed.get(ANIMAL_SPECIES, 0) > 0 and not carrying_cow:
+        if is_shed_adjacent(pos):
+            return ["PICKUP", ANIMAL_SPECIES, 1]
+        return move_toward(pos, 4, 4) or ["PASS"]
+
+    return None
+
+def find_nearest_actionable(pos, farm, day, seeds, money, exclude=None):
+    fx, fy = pos
+    best, best_dist = None, None
+    for idx, (tx, ty) in enumerate(WORK_TILES):
+        if (tx, ty) == ANIMAL_TILE or (exclude and (tx, ty) == exclude):
+            continue
+        t = get_tile(farm, tx, ty)
+        crop_choice = choose_crop_for_tile(idx, money)
+        if decide_tile_action(t, day, seeds, crop_choice) is not None:
+            dist = abs(fx - tx) + abs(fy - ty)
+            if best_dist is None or dist < best_dist:
+                best_dist, best = dist, (tx, ty)
+    return best
+
+def unit_action(pos, farm, day, seeds, money, obs, unit_idx, avoid_target=None):
+    if unit_idx == ANIMAL_KEEPER_IDX:
+        a_action = animal_step(pos, obs, unit_idx)
+        if a_action is not None:
+            return a_action, None
+
+    fx, fy = pos
+    tile_here = get_tile(farm, fx, fy)
+    idx_here = WORK_TILES.index((fx, fy)) if (fx, fy) in WORK_TILES else 0
+    crop_here = choose_crop_for_tile(idx_here, money)
+    action_here = decide_tile_action(tile_here, day, seeds, crop_here)
+    if action_here is not None:
+        return action_here, None
+
+    target = find_nearest_actionable(pos, farm, day, seeds, money, exclude=avoid_target)
+    if target is not None:
+        return (move_toward(pos, target[0], target[1]) or ["PASS"]), target
+    return ["PASS"], None
+
+def agent(obs):
+    update_state(obs)
+
+    player = obs["player"]
+    player_data = player_states[player]
+    state = player_data["state"]  # usato ora SOLO per decisioni di mercato/vendita
+
+    farm = get_farm(obs)
+    private = obs["private"]
+    day = obs["day"]
+    seeds = private["seeds"]
+    money = farm["money"]
+    n_hands = len(farm["hands"])
+    n_quadrants = len(farm["unlocked_quadrants"])
+
+    farmer_pos = tuple(farm["farmer"])
+    farmer_action, farmer_target = unit_action(farmer_pos, farm, day, seeds, money, obs, 0)
+
+    hands_actions = []
+    for idx in range(n_hands):
+        hand_pos = tuple(farm["hands"][idx])
+        h_action, _ = unit_action(hand_pos, farm, day, seeds, money, obs, idx + 1, avoid_target=farmer_target)
+        hands_actions.append(h_action)
+
+    shed = private["shed"]
+
+    priority_actions = []
+    for crop in ("CARROT", "WHEAT", "STRAWBERRY", "MELON", "MILK"):
+        qty = shed.get(crop, 0)
+        if qty > 0:
+            priority_actions.append(["SELL", crop, qty])
+
+    animal_tile = get_tile(farm, ANIMAL_TILE[0], ANIMAL_TILE[1])
+    has_animal = isinstance(animal_tile, dict) and "animal" in animal_tile
+    cow_in_transit = shed.get(ANIMAL_SPECIES, 0) > 0
+
+    # --- CRESCITA: dipende solo da cassa disponibile e giorno, MAI dallo stato di mercato ---
+    if n_quadrants < 2 and day >= MIN_DAY_FOR_LAND and money - LAND_BUY_CASH_BUFFER >= 1000:
+        priority_actions.append(["BUY_LAND"])
+        money -= 1000
+    elif n_quadrants >= 2 and n_hands < MAX_HANDS and money - HIRE_CASH_BUFFER >= 0:
+        priority_actions.append(["HIRE"])
+    elif money >= ANIMAL_UNLOCK_CASH and not has_animal and not cow_in_transit:
+        priority_actions.append(["BUY_ANIMAL", ANIMAL_SPECIES, 1])
+        money -= ANIMAL_COST
+
+    seed_actions = []
+    needed_by_crop = {}
+    for idx, (tx, ty) in enumerate(WORK_TILES):
+        if (tx, ty) == ANIMAL_TILE:
+            continue
+        t = get_tile(farm, tx, ty)
+        if t is None:
+            crop_choice = choose_crop_for_tile(idx, money)
+            needed_by_crop[crop_choice] = needed_by_crop.get(crop_choice, 0) + 1
+
+    for crop, needed in needed_by_crop.items():
+        have = seeds.get(crop, 0)
+        to_buy = max(0, needed - have)
+        cost = CROPS_DATA[crop]["seed_cost"]
+        for _ in range(to_buy):
+            if money - cost < SAFE_CASH:
+                break
+            seed_actions.append(["BUY_SEED", crop, 1])
+            money -= cost
+
+    MAX_ORDERS_PER_TURN = 10
+    market_actions = (priority_actions + seed_actions)[:MAX_ORDERS_PER_TURN]
+
+    return {"farmer": farmer_action, "hands": hands_actions, "market": market_actions}    return {"farmer": farmer_action, "hands": hands_actions, "market": market_actions}

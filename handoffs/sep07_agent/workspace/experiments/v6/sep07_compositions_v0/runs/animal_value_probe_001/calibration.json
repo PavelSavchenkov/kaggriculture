@@ -1,0 +1,47 @@
+{
+  "timing": {
+    "estimates": 3780,
+    "seconds": 0.00773195,
+    "microseconds_per_estimate": 2.04549,
+    "scope": "Candidate biology plus complete daily whole-farm market forecast, one CPU thread; excludes prefix generation"
+  },
+  "matched_realizations": 3735,
+  "full9product_delta_exact": 930,
+  "opponents": {
+    "king_rc4": {
+      "rows": 747,
+      "own_rank": 0.5022355747723657,
+      "margin_rank": 0.6046693079219005,
+      "mean_own_error": -605.4524765729585,
+      "mean_margin_error": -824.376171352075
+    },
+    "opening_router_v4": {
+      "rows": 747,
+      "own_rank": 0.5740314683879482,
+      "margin_rank": 0.6324451886891981,
+      "mean_own_error": -380.0669344042838,
+      "mean_margin_error": -392.2182061579652
+    },
+    "public_router": {
+      "rows": 747,
+      "own_rank": 0.531760338231816,
+      "margin_rank": 0.62778024523628,
+      "mean_own_error": -430.85140562248995,
+      "mean_margin_error": -471.9491298527443
+    },
+    "shop_herd_guarded_001_best": {
+      "rows": 747,
+      "own_rank": 0.5538025074562646,
+      "margin_rank": 0.6240957645531958,
+      "mean_own_error": -455.6787148594378,
+      "mean_margin_error": -829.3052208835342
+    },
+    "teammate_shoprouter": {
+      "rows": 747,
+      "own_rank": 0.5802273693044853,
+      "margin_rank": 0.6405296910120281,
+      "mean_own_error": -397.09906291834005,
+      "mean_margin_error": -551.7456492637216
+    }
+  }
+}

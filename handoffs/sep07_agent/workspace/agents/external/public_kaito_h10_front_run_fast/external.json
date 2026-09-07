@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "lineage": "kaito_177_180",
+  "source_kind": "public_notebook_port_with_local_front_run_and_safety_wrapper",
+  "source": "https://www.kaggle.com/code/kaitofukami/177-180-fresh-top-30-v21-1-conditional-memory",
+  "approx_kaggle_rating": null,
+  "rating_note": "The public title claims top 30, but no numeric leaderboard rating was recorded locally.",
+  "cpp_status": "optimized",
+  "optimization_note": "One reconstructed simulator per decision, exact sanitizer fast path, and fixed terminal storage; exhaustive four-shop action parity in both seats.",
+  "candidate_reuse": "opponent_and_mechanism_study_only"
+}

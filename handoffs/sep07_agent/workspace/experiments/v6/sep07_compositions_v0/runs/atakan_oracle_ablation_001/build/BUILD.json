@@ -1,0 +1,61 @@
+{
+  "commands": [
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "g++",
+      "-std=c++20",
+      "-march=native",
+      "-mtune=native",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-pthread",
+      "-O3",
+      "-DNDEBUG",
+      "-flto",
+      "-I",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot",
+      "-I",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/experiments/v6/sep07_compositions_v0/include",
+      "-I",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_oracle_ablation_001/source/driver.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/experiments/v6/sep07_compositions_v0/league/king_rc4/source/agent.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/experiments/v6/sep07_compositions_v0/league/public_router/source/agent.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/experiments/v6/sep07_compositions_v0/league/public_router_v5/source/agent.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/experiments/v6/sep07_compositions_v0/league/teammate_shoprouter/source/agent.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_adaptive_r1_c0_b0/source/agent.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_cow/source/agent.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_demand/source/agent.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_goose/source/agent.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_quotes/source/agent.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_sheep/source/agent.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_value_margin/source/agent.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_value_own/source/agent.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/source/agent.cpp",
+      "-o",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_oracle_ablation_001/build/oracle_diagnostic"
+    ],
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_oracle_ablation_001/build/oracle_diagnostic",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_oracle_ablation_001/inputs/oracles.txt",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_oracle_ablation_001/forecasts.json"
+    ]
+  ],
+  "artifact_sha256": {
+    "source/driver.cpp": "bee950d2bfe6f6ca6233112cfe11ba0307c9eda0aaf3a8d65df2f7823edebe8a",
+    "build/oracle_diagnostic": "01754e38e49b71c5dfa5e7de93fb50693c6f392dc5fceeba948852d5dcbd1753",
+    "inputs/oracles.txt": "75f21b54da4621560a5af9477054401b211568a388cfe16c27f0e2e3e0d6a8b0",
+    "forecasts.json": "3f393ee35779cc194fd021286389e77914a8b029fe9c44a9e14676750658643b"
+  },
+  "frozen_dependencies": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/BUILD.json",
+  "frozen_manifest_sha256": "39350bbb6ed650c1840796dc87d743c40cddbd969ff48513bcfb5c169cabeda7",
+  "scope": "Offline diagnostic executable only, no agent manifest or deployable oracle policy."
+}

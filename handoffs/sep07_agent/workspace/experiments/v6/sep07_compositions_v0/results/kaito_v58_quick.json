@@ -1,0 +1,228 @@
+{
+  "result": "matched_actions=719",
+  "cases": 719,
+  "forced_modes": {},
+  "controllers": {
+    "base_backbone": {
+      "games": 1,
+      "calls": 719,
+      "near_turns": 368,
+      "near_latches": 1,
+      "flow_updates": 718,
+      "mirror_evidence_turns": 146,
+      "mirror_confidence_sum": 7.856555706151143,
+      "mirror_confidence_peak": 0.6055644603642452,
+      "front_turns": 9,
+      "preempt_turns": 3,
+      "preempt_units": 8,
+      "preempt_value": 72.0,
+      "repaid_units": 8,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 719
+      }
+    },
+    "base_yarn": {
+      "games": 1,
+      "calls": 719,
+      "near_turns": 368,
+      "near_latches": 1,
+      "flow_updates": 718,
+      "mirror_evidence_turns": 141,
+      "mirror_confidence_sum": 15.97678593968947,
+      "mirror_confidence_peak": 0.7767825118605043,
+      "front_turns": 8,
+      "preempt_turns": 0,
+      "preempt_units": 0,
+      "preempt_value": 0.0,
+      "repaid_units": 0,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 719
+      }
+    },
+    "base_pet": {
+      "games": 1,
+      "calls": 719,
+      "near_turns": 368,
+      "near_latches": 1,
+      "flow_updates": 718,
+      "mirror_evidence_turns": 141,
+      "mirror_confidence_sum": 15.97678593968947,
+      "mirror_confidence_peak": 0.7767825118605043,
+      "front_turns": 8,
+      "preempt_turns": 0,
+      "preempt_units": 0,
+      "preempt_value": 0.0,
+      "repaid_units": 0,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 719
+      }
+    },
+    "recovery": {
+      "games": 1,
+      "calls": 719,
+      "near_turns": 368,
+      "near_latches": 1,
+      "flow_updates": 718,
+      "mirror_evidence_turns": 144,
+      "mirror_confidence_sum": 7.2579088721544185,
+      "mirror_confidence_peak": 0.6565884797853913,
+      "front_turns": 2,
+      "preempt_turns": 0,
+      "preempt_units": 0,
+      "preempt_value": 0.0,
+      "repaid_units": 0,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 719
+      }
+    },
+    "smoothie": {
+      "games": 1,
+      "calls": 719,
+      "near_turns": 368,
+      "near_latches": 1,
+      "flow_updates": 718,
+      "mirror_evidence_turns": 146,
+      "mirror_confidence_sum": 5.924613660841415,
+      "mirror_confidence_peak": 0.6055644603642452,
+      "front_turns": 2,
+      "preempt_turns": 6,
+      "preempt_units": 35,
+      "preempt_value": 196.0,
+      "repaid_units": 35,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 719
+      }
+    },
+    "clone": {
+      "games": 1,
+      "calls": 719,
+      "near_turns": 368,
+      "near_latches": 1,
+      "flow_updates": 718,
+      "mirror_evidence_turns": 143,
+      "mirror_confidence_sum": 22.807291495691867,
+      "mirror_confidence_peak": 0.7767825118605043,
+      "front_turns": 16,
+      "preempt_turns": 2,
+      "preempt_units": 5,
+      "preempt_value": 29.0,
+      "repaid_units": 5,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 719
+      }
+    },
+    "known_yarn": {
+      "games": 1,
+      "calls": 719,
+      "near_turns": 368,
+      "near_latches": 1,
+      "flow_updates": 718,
+      "mirror_evidence_turns": 143,
+      "mirror_confidence_sum": 16.66046231270642,
+      "mirror_confidence_peak": 0.7772913497261604,
+      "front_turns": 6,
+      "preempt_turns": 2,
+      "preempt_units": 16,
+      "preempt_value": 159.0,
+      "repaid_units": 16,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 719
+      }
+    },
+    "ice_minimax": {
+      "games": 1,
+      "calls": 719,
+      "near_turns": 368,
+      "near_latches": 1,
+      "flow_updates": 718,
+      "mirror_evidence_turns": 148,
+      "mirror_confidence_sum": 5.93023316463876,
+      "mirror_confidence_peak": 0.6055644603642452,
+      "front_turns": 11,
+      "preempt_turns": 6,
+      "preempt_units": 30,
+      "preempt_value": 164.0,
+      "repaid_units": 30,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 719
+      }
+    },
+    "bakery_yarn": {
+      "games": 1,
+      "calls": 719,
+      "near_turns": 368,
+      "near_latches": 1,
+      "flow_updates": 718,
+      "mirror_evidence_turns": 141,
+      "mirror_confidence_sum": 15.97678593968947,
+      "mirror_confidence_peak": 0.7767825118605043,
+      "front_turns": 8,
+      "preempt_turns": 0,
+      "preempt_units": 0,
+      "preempt_value": 0.0,
+      "repaid_units": 0,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 719
+      }
+    },
+    "pizza_recovery": {
+      "games": 1,
+      "calls": 719,
+      "near_turns": 368,
+      "near_latches": 1,
+      "flow_updates": 718,
+      "mirror_evidence_turns": 144,
+      "mirror_confidence_sum": 7.2579088721544185,
+      "mirror_confidence_peak": 0.6565884797853913,
+      "front_turns": 2,
+      "preempt_turns": 0,
+      "preempt_units": 0,
+      "preempt_value": 0.0,
+      "repaid_units": 0,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 719
+      }
+    }
+  },
+  "scope": "Full tile fields, legal public/private boundary, active units and semantic opcode arguments; exogenous observations, no Python game simulation"
+}

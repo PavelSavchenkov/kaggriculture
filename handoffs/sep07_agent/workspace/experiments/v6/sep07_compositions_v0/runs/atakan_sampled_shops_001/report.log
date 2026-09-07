@@ -1,0 +1,490 @@
+{
+  "aggregate": {
+    "atakan_integrated_s1_margin": {
+      "games": 3072,
+      "wins": 1974,
+      "mean_margin": 4115.188802083333
+    },
+    "atakan_integrated_s64_margin": {
+      "games": 3072,
+      "wins": 2028,
+      "mean_margin": 4407.271484375
+    },
+    "atakan_value_margin": {
+      "games": 3072,
+      "wins": 1981,
+      "mean_margin": 3749.185546875
+    },
+    "atakan_demand": {
+      "games": 3072,
+      "wins": 2058,
+      "mean_margin": 4303.7978515625
+    }
+  },
+  "gains": {
+    "atakan_integrated_s1_margin": {
+      "atakan_value_margin": {
+        "mean_margin_gain": 366.0032552083333,
+        "better_games": 202,
+        "worse_games": 109,
+        "equal_games": 2761,
+        "wins_gain": -7,
+        "seed_cluster_bootstrap95_margin_gain": [
+          23.804361979166675,
+          730.1510742187498
+        ],
+        "seed_cluster_bootstrap95_winrate_gain": [
+          -0.017578124999999997,
+          0.012369791666666664
+        ],
+        "bootstrap_scope": "20000 paired seed-cluster resamples; both seats and six opponents stay together. Descriptive percentile interval."
+      },
+      "atakan_demand": {
+        "mean_margin_gain": -188.60904947916666,
+        "better_games": 174,
+        "worse_games": 333,
+        "equal_games": 2565,
+        "wins_gain": -84,
+        "seed_cluster_bootstrap95_margin_gain": [
+          -585.6388346354167,
+          234.52348632812397
+        ],
+        "seed_cluster_bootstrap95_winrate_gain": [
+          -0.04752604166666665,
+          -0.008463541666666668
+        ],
+        "bootstrap_scope": "20000 paired seed-cluster resamples; both seats and six opponents stay together. Descriptive percentile interval."
+      }
+    },
+    "atakan_integrated_s64_margin": {
+      "atakan_value_margin": {
+        "mean_margin_gain": 658.0859375,
+        "better_games": 297,
+        "worse_games": 113,
+        "equal_games": 2662,
+        "wins_gain": 47,
+        "seed_cluster_bootstrap95_margin_gain": [
+          269.7855550130208,
+          1080.3741129557288
+        ],
+        "seed_cluster_bootstrap95_winrate_gain": [
+          0.0006510416666666671,
+          0.030598958333333332
+        ],
+        "bootstrap_scope": "20000 paired seed-cluster resamples; both seats and six opponents stay together. Descriptive percentile interval."
+      },
+      "atakan_demand": {
+        "mean_margin_gain": 103.4736328125,
+        "better_games": 174,
+        "worse_games": 242,
+        "equal_games": 2656,
+        "wins_gain": -30,
+        "seed_cluster_bootstrap95_margin_gain": [
+          -277.7402832031251,
+          528.843237304687
+        ],
+        "seed_cluster_bootstrap95_winrate_gain": [
+          -0.025390625,
+          0.005208333333333331
+        ],
+        "bootstrap_scope": "20000 paired seed-cluster resamples; both seats and six opponents stay together. Descriptive percentile interval."
+      }
+    }
+  },
+  "direct": {
+    "atakan_integrated_s1_margin": {
+      "atakan_value_margin": {
+        "games": 512,
+        "wins": 56,
+        "ties": 406,
+        "mean_margin": 160.177734375,
+        "mean_cash": 96681.240234375,
+        "pass_J": 90386.8,
+        "mean_unit_faults": 32.5234375
+      },
+      "atakan_demand": {
+        "games": 512,
+        "wins": 70,
+        "ties": 352,
+        "mean_margin": -105.884765625,
+        "mean_cash": 96023.11328125,
+        "pass_J": 89823.1,
+        "mean_unit_faults": 32.5234375
+      }
+    },
+    "atakan_integrated_s64_margin": {
+      "atakan_value_margin": {
+        "games": 512,
+        "wins": 68,
+        "ties": 400,
+        "mean_margin": 499.529296875,
+        "mean_cash": 96817.958984375,
+        "pass_J": 90559.3,
+        "mean_unit_faults": 30.75390625
+      },
+      "atakan_demand": {
+        "games": 512,
+        "wins": 67,
+        "ties": 374,
+        "mean_margin": 233.7890625,
+        "mean_cash": 96024.384765625,
+        "pass_J": 89845,
+        "mean_unit_faults": 30.75390625
+      }
+    },
+    "mean_vs_sample64": {
+      "games": 512,
+      "wins": 40,
+      "ties": 416,
+      "mean_margin": -339.673828125,
+      "mean_cash": 95931.4609375,
+      "pass_J": 89749.8,
+      "mean_unit_faults": 32.5234375
+    }
+  },
+  "fresh": {
+    "atakan_integrated_s1_margin": {
+      "animal_adaptive_r1_c0_b0": {
+        "games": 512,
+        "wins": 230,
+        "ties": 0,
+        "mean_margin": -845.662109375,
+        "mean_cash": 95539.25390625,
+        "pass_J": 88795,
+        "mean_unit_faults": 22.8046875
+      },
+      "teammate_shoprouter": {
+        "games": 512,
+        "wins": 404,
+        "ties": 0,
+        "mean_margin": 7532.275390625,
+        "mean_cash": 94368.068359375,
+        "pass_J": 87826.9,
+        "mean_unit_faults": 32.9296875
+      },
+      "public_router_v5": {
+        "games": 512,
+        "wins": 276,
+        "ties": 0,
+        "mean_margin": 661.037109375,
+        "mean_cash": 95408.67578125,
+        "pass_J": 89017.1,
+        "mean_unit_faults": 32.921875
+      },
+      "king_rc4": {
+        "games": 512,
+        "wins": 478,
+        "ties": 0,
+        "mean_margin": 15242.650390625,
+        "mean_cash": 103804.248046875,
+        "pass_J": 97140.9,
+        "mean_unit_faults": 30.357421875
+      },
+      "public_router": {
+        "games": 512,
+        "wins": 366,
+        "ties": 0,
+        "mean_margin": 3322.611328125,
+        "mean_cash": 94973.251953125,
+        "pass_J": 88755.2,
+        "mean_unit_faults": 32.9375
+      },
+      "investment_context_guarded_001_best": {
+        "games": 512,
+        "wins": 220,
+        "ties": 0,
+        "mean_margin": -1221.779296875,
+        "mean_cash": 95539.25390625,
+        "pass_J": 88795,
+        "mean_unit_faults": 22.8046875
+      }
+    },
+    "atakan_integrated_s64_margin": {
+      "animal_adaptive_r1_c0_b0": {
+        "games": 512,
+        "wins": 231,
+        "ties": 0,
+        "mean_margin": -701.591796875,
+        "mean_cash": 95357.349609375,
+        "pass_J": 88706.7,
+        "mean_unit_faults": 22.22265625
+      },
+      "teammate_shoprouter": {
+        "games": 512,
+        "wins": 414,
+        "ties": 0,
+        "mean_margin": 7897.4296875,
+        "mean_cash": 94327.32421875,
+        "pass_J": 87888.5,
+        "mean_unit_faults": 31.16015625
+      },
+      "public_router_v5": {
+        "games": 512,
+        "wins": 295,
+        "ties": 0,
+        "mean_margin": 1155.697265625,
+        "mean_cash": 95328.3125,
+        "pass_J": 89021.3,
+        "mean_unit_faults": 31.15234375
+      },
+      "king_rc4": {
+        "games": 512,
+        "wins": 480,
+        "ties": 0,
+        "mean_margin": 15390.408203125,
+        "mean_cash": 103636.62109375,
+        "pass_J": 97058.2,
+        "mean_unit_faults": 31.64453125
+      },
+      "public_router": {
+        "games": 512,
+        "wins": 387,
+        "ties": 0,
+        "mean_margin": 3779.39453125,
+        "mean_cash": 94998.228515625,
+        "pass_J": 88856.9,
+        "mean_unit_faults": 31.16796875
+      },
+      "investment_context_guarded_001_best": {
+        "games": 512,
+        "wins": 221,
+        "ties": 0,
+        "mean_margin": -1077.708984375,
+        "mean_cash": 95357.349609375,
+        "pass_J": 88706.7,
+        "mean_unit_faults": 22.22265625
+      }
+    },
+    "atakan_value_margin": {
+      "animal_adaptive_r1_c0_b0": {
+        "games": 512,
+        "wins": 236,
+        "ties": 0,
+        "mean_margin": -961.060546875,
+        "mean_cash": 95708.10546875,
+        "pass_J": 88959.8,
+        "mean_unit_faults": 23.18359375
+      },
+      "teammate_shoprouter": {
+        "games": 512,
+        "wins": 410,
+        "ties": 0,
+        "mean_margin": 7226.458984375,
+        "mean_cash": 94538.91796875,
+        "pass_J": 87933.4,
+        "mean_unit_faults": 34.224609375
+      },
+      "public_router_v5": {
+        "games": 512,
+        "wins": 263,
+        "ties": 0,
+        "mean_margin": 256.837890625,
+        "mean_cash": 95554.41015625,
+        "pass_J": 89162.8,
+        "mean_unit_faults": 33.95703125
+      },
+      "king_rc4": {
+        "games": 512,
+        "wins": 478,
+        "ties": 0,
+        "mean_margin": 14325.904296875,
+        "mean_cash": 104085.263671875,
+        "pass_J": 97417.1,
+        "mean_unit_faults": 28.318359375
+      },
+      "public_router": {
+        "games": 512,
+        "wins": 368,
+        "ties": 0,
+        "mean_margin": 2984.150390625,
+        "mean_cash": 95114.115234375,
+        "pass_J": 88852.8,
+        "mean_unit_faults": 34.236328125
+      },
+      "investment_context_guarded_001_best": {
+        "games": 512,
+        "wins": 226,
+        "ties": 0,
+        "mean_margin": -1337.177734375,
+        "mean_cash": 95708.10546875,
+        "pass_J": 88959.8,
+        "mean_unit_faults": 23.18359375
+      }
+    },
+    "atakan_demand": {
+      "animal_adaptive_r1_c0_b0": {
+        "games": 512,
+        "wins": 229,
+        "ties": 0,
+        "mean_margin": -686.595703125,
+        "mean_cash": 94663.705078125,
+        "pass_J": 88088.3,
+        "mean_unit_faults": 26.1953125
+      },
+      "teammate_shoprouter": {
+        "games": 512,
+        "wins": 434,
+        "ties": 0,
+        "mean_margin": 7674.9296875,
+        "mean_cash": 93556.359375,
+        "pass_J": 87187.6,
+        "mean_unit_faults": 36.34765625
+      },
+      "public_router_v5": {
+        "games": 512,
+        "wins": 301,
+        "ties": 0,
+        "mean_margin": 1148.787109375,
+        "mean_cash": 94835.890625,
+        "pass_J": 88581.3,
+        "mean_unit_faults": 36.33984375
+      },
+      "king_rc4": {
+        "games": 512,
+        "wins": 472,
+        "ties": 0,
+        "mean_margin": 14983.41015625,
+        "mean_cash": 103501.263671875,
+        "pass_J": 96949.9,
+        "mean_unit_faults": 33.234375
+      },
+      "public_router": {
+        "games": 512,
+        "wins": 403,
+        "ties": 0,
+        "mean_margin": 3764.96875,
+        "mean_cash": 94483.083984375,
+        "pass_J": 88389.4,
+        "mean_unit_faults": 36.35546875
+      },
+      "investment_context_guarded_001_best": {
+        "games": 512,
+        "wins": 219,
+        "ties": 0,
+        "mean_margin": -1062.712890625,
+        "mean_cash": 94663.705078125,
+        "pass_J": 88088.3,
+        "mean_unit_faults": 26.1953125
+      }
+    }
+  },
+  "native": {
+    "atakan_integrated_s1_margin": {
+      "investment_context_guarded_001_best": {
+        "games": 256,
+        "wins": 98,
+        "ties": 0,
+        "mean_margin": -2227.75,
+        "mean_cash": 97480.421875,
+        "pass_J": 91267.7,
+        "mean_unit_faults": 21.4140625
+      },
+      "public_router_v5": {
+        "games": 256,
+        "wins": 133,
+        "ties": 0,
+        "mean_margin": 509.01171875,
+        "mean_cash": 96578.3203125,
+        "pass_J": 90948.9,
+        "mean_unit_faults": 31.46484375
+      },
+      "teammate_shoprouter": {
+        "games": 256,
+        "wins": 187,
+        "ties": 0,
+        "mean_margin": 6689.08984375,
+        "mean_cash": 95861.30078125,
+        "pass_J": 89894.2,
+        "mean_unit_faults": 31.48828125
+      }
+    },
+    "atakan_integrated_s64_margin": {
+      "investment_context_guarded_001_best": {
+        "games": 256,
+        "wins": 97,
+        "ties": 0,
+        "mean_margin": -2285.19140625,
+        "mean_cash": 97025.734375,
+        "pass_J": 90903.9,
+        "mean_unit_faults": 22.5703125
+      },
+      "public_router_v5": {
+        "games": 256,
+        "wins": 140,
+        "ties": 0,
+        "mean_margin": 899.26953125,
+        "mean_cash": 96238.9296875,
+        "pass_J": 90677.4,
+        "mean_unit_faults": 31.9765625
+      },
+      "teammate_shoprouter": {
+        "games": 256,
+        "wins": 193,
+        "ties": 0,
+        "mean_margin": 6960.82421875,
+        "mean_cash": 95685.953125,
+        "pass_J": 89753.9,
+        "mean_unit_faults": 31.80078125
+      }
+    },
+    "atakan_value_margin": {
+      "investment_context_guarded_001_best": {
+        "games": 256,
+        "wins": 100,
+        "ties": 0,
+        "mean_margin": -2352.078125,
+        "mean_cash": 97898.6484375,
+        "pass_J": 91675,
+        "mean_unit_faults": 21.7578125
+      },
+      "public_router_v5": {
+        "games": 256,
+        "wins": 122,
+        "ties": 0,
+        "mean_margin": 8.78125,
+        "mean_cash": 96730.7421875,
+        "pass_J": 91123.1,
+        "mean_unit_faults": 32.58203125
+      },
+      "teammate_shoprouter": {
+        "games": 256,
+        "wins": 188,
+        "ties": 0,
+        "mean_margin": 6002.3203125,
+        "mean_cash": 96036.8828125,
+        "pass_J": 90016,
+        "mean_unit_faults": 32.59765625
+      }
+    },
+    "atakan_demand": {
+      "investment_context_guarded_001_best": {
+        "games": 256,
+        "wins": 90,
+        "ties": 0,
+        "mean_margin": -2609.26953125,
+        "mean_cash": 95984.82421875,
+        "pass_J": 89851.6,
+        "mean_unit_faults": 22.51171875
+      },
+      "public_router_v5": {
+        "games": 256,
+        "wins": 146,
+        "ties": 0,
+        "mean_margin": 767.421875,
+        "mean_cash": 95995.46484375,
+        "pass_J": 90280.5,
+        "mean_unit_faults": 37.13671875
+      },
+      "teammate_shoprouter": {
+        "games": 256,
+        "wins": 198,
+        "ties": 0,
+        "mean_margin": 6211.74609375,
+        "mean_cash": 94727.796875,
+        "pass_J": 88848,
+        "mean_unit_faults": 37.16015625
+      }
+    }
+  }
+}
+

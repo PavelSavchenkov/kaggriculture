@@ -1,0 +1,9 @@
+{
+  "format_version": 1,
+  "name": "composition_greedy_v1",
+  "header": "source/agent.hpp",
+  "type": "compositions::greedy_v1::Agent<4,true,true,true,1,true,1>",
+  "sources": [
+    "source/agent.cpp"
+  ]
+}

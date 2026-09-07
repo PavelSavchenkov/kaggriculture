@@ -1,0 +1,27 @@
+from pathlib import Path
+import hashlib
+import tarfile
+import urllib.request
+
+COMMIT = "2dc9d9f955adb2f8ddbf238e6e5a334004178a9a"
+BASE = f"https://raw.githubusercontent.com/woahwhattheheck/commons/{COMMIT}/revenue/kaggriculture/20260907-offline-agent/"
+EXPECTED = "acf541d46ceb2002caf0a3bba834109a92b755fb36afa4bda9e3d966665550ac"
+NAMES = ("main.py", "LICENSE", "LICENSE-MIT.txt", "LICENSE-CC-BY-4.0.txt")
+
+payloads = {}
+for name in NAMES:
+    with urllib.request.urlopen(BASE + name, timeout=30) as response:
+        payloads[name] = response.read()
+if hashlib.sha256(payloads["main.py"]).hexdigest() != EXPECTED:
+    raise RuntimeError("Agent bytes differ from the selected release.")
+
+output = Path("/kaggle/working")
+for name, content in payloads.items():
+    (output / name).write_bytes(content)
+archive_path = output / "submission.tar.gz"
+with tarfile.open(archive_path, "w:gz") as archive:
+    for name in NAMES:
+        archive.add(output / name, arcname=name)
+print(f"Ready: {archive_path.name} ({archive_path.stat().st_size:,} bytes)")
+print("Agent SHA256:", hashlib.sha256(payloads["main.py"]).hexdigest())
+print("Select submission.tar.gz under Output -> Submit to Competition.")

@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "atakan_quotes",
+  "header": "source/agent.hpp",
+  "type": "compositions::atakan_quotes::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../source/agent.cpp"
+  ]
+}

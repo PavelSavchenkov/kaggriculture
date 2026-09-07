@@ -1,0 +1,32 @@
+{
+  "url": "https://www.kaggle.com/code/destbreso/v7-38-finance7-a-full-agent-layer-by-layer",
+  "python_sha256": "196b1aa2476b939787acc45b2435c4dbe61f9c5a0d1b85f1b736a50754386e05",
+  "native_source_sha256": {
+    "policy_plugin_abi.hpp": "4eb7647da3660688685a8ff032bd1ada6558605a27ae6b86fc338a91f8b45476",
+    "runtime_types.hpp": "0010c15079e2114e36b5de8b281375db83f202e769e30b27cc437fc0e3ad11f1",
+    "six_day_budget_guard.hpp": "2e55caa0d637a3cc246c194a64ba02d35817f787a01a08784a0a8fdd91734cd0",
+    "policy.cpp": "abdb6b13cb91504409de0cf53679c5443f309f1fe937f676e68707830744392b",
+    "submission_bridge.cpp": "a92ca5b78cae850987a7262122eb83ec9f9a313430e906e1ac08bfe1fd887ff1",
+    "tape.inc": "30b724c3c905d0c03e4ef38d36f96fb7acbd6abef5371abbedee36ea3717e09f"
+  },
+  "native_parent": "yhay81/three-day-shop-router version7, identical policy/tape hashes to teammate backbone",
+  "layers": "destbreso mirror detector/route identification/next-sale append and chained hire financing",
+  "changes": "Literal typed C++ layers; immutable shared native courses; per-instance episode state; active-worker normalization; no teammate RL selling head",
+  "license": "Native chassis Apache-2.0. Layer file has attribution but no separate license declaration; user authorized public-source reuse.",
+  "parity": {
+    "actions_per_mode": 8628,
+    "modes": 4,
+    "total_actions": 34512,
+    "report": "results/finance7_parity.json",
+    "scope": "Exogenous recorded plus forced mirror, route and finance observations; normalized active workers and unused arguments"
+  },
+  "strength": "256games/opponent:151wins Junghoon78,7public,2teammate,0v4/Mao85/Mao89,101Binghua116,65John131; distinct league member, no promotion",
+  "validation": {
+    "source_parity": "results/finance7_parity.json",
+    "generic4thread_debug_pair1thread_equal_games": 16,
+    "pass_self": "results/finance7_checks",
+    "broad_league": "results/finance7_league",
+    "observation": "Copied observation-only native bridge; no seed or opponent private inventory",
+    "state": "Independent per-instance native context and layer state; immutable shared course data"
+  }
+}

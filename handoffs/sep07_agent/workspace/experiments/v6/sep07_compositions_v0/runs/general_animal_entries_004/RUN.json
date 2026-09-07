@@ -1,0 +1,38 @@
+{
+  "parent": "candidates/investment_context_guarded_001_best",
+  "source_lineage": "candidates/investment_context_guarded_001_best/IMPORT.json",
+  "seed": 1005,
+  "original_purchase": {
+    "step": 88,
+    "order": 1,
+    "cell": 42,
+    "item": "COW"
+  },
+  "seconds_per_solver_attempt": 6,
+  "entry_days": [
+    3,
+    6,
+    9,
+    15
+  ],
+  "status": "Complete:12 exact entry plans accepted",
+  "scope": "Single earlier animal opportunity with original species parameter; complete V30 entry days and inherited service suffix; downstream branch and execution realization must be audited.",
+  "source_sha256": {
+    "src/compile_animal_entries.cpp": "e8d02575f64e77f7ee4399e4f734b0d4065b1a7021934fb3ec525afe2ff551a9",
+    "include/deferred_animal.hpp": "22e6af0e52b464096a26d5982f91b69dc9f09e0e6bef31e17da646ba35fa4395",
+    "include/animal_investment_value.hpp": "e6a0838b930f6ecf9677acb432923fb1579e77b7a8672764e28ba4c9cb25312a",
+    "include/guarded_day.hpp": "32717cadf1a924cf08bbc170581a70aef520a9d2282568ca4433a8da89b78f94",
+    "include/market_tape.hpp": "f223dafef369e33013b2e5a55460aff8358652ded520a16128e5b26d17faf72c",
+    "scheduler/CMakeLists.txt": "d3a771e192922655e2372becfbea4d792ef82194a058eb1003109e0f7ec583ab"
+  },
+  "summary": {
+    "seed": 1005,
+    "compiled_entries": 12,
+    "wait_cash": 142191,
+    "source": "investment_context_guarded_001_best",
+    "purchase_step": 88,
+    "purchase_order": 1,
+    "cell": 42,
+    "original": 10
+  }
+}

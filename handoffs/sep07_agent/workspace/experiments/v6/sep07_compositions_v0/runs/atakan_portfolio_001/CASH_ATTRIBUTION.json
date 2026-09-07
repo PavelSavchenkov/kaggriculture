@@ -1,0 +1,113 @@
+{
+  "exact_game_parity": 960,
+  "products": [
+    "WHEAT",
+    "CARROT",
+    "TOMATO",
+    "STRAWBERRY",
+    "MELON",
+    "EGG",
+    "MILK",
+    "WOOL",
+    "FERTILIZER"
+  ],
+  "disagreements": 90,
+  "same_rival_actions": 43,
+  "same_rival_dated_trade_flows": 55,
+  "same_rival_lives": 61,
+  "same_rival_fixed_cost": 77,
+  "mean_own_delta_overestimate": 2433.733333333333,
+  "mean_missed_rival_profit_delta": 4205.655555555555,
+  "mean_margin_delta_overestimate": 6639.388888888889,
+  "mean_absolute_own_delta_error": 6432.422222222222,
+  "mean_absolute_rival_profit_delta_error": 4600.811111111111,
+  "per_product_mean": [
+    {
+      "product": "WHEAT",
+      "predicted_rival_revenue_delta": 0,
+      "exact_rival_revenue_delta": 949.4888888888889,
+      "missed_revenue_delta": 949.4888888888889,
+      "exact_rival_spend_delta": 7.766666666666667,
+      "quantity_term_symmetric": 264.85136004187086,
+      "average_price_term_symmetric": 684.6375288470183
+    },
+    {
+      "product": "CARROT",
+      "predicted_rival_revenue_delta": 0,
+      "exact_rival_revenue_delta": -733.7222222222222,
+      "missed_revenue_delta": -733.7222222222222,
+      "exact_rival_spend_delta": 0,
+      "quantity_term_symmetric": -244.99905935920927,
+      "average_price_term_symmetric": -488.72316286301304
+    },
+    {
+      "product": "TOMATO",
+      "predicted_rival_revenue_delta": 0,
+      "exact_rival_revenue_delta": 0,
+      "missed_revenue_delta": 0,
+      "exact_rival_spend_delta": 0,
+      "quantity_term_symmetric": 0.0,
+      "average_price_term_symmetric": 0.0
+    },
+    {
+      "product": "STRAWBERRY",
+      "predicted_rival_revenue_delta": 0,
+      "exact_rival_revenue_delta": -514.1666666666666,
+      "missed_revenue_delta": -514.1666666666666,
+      "exact_rival_spend_delta": 0,
+      "quantity_term_symmetric": -30.09736531113166,
+      "average_price_term_symmetric": -484.0693013555358
+    },
+    {
+      "product": "MELON",
+      "predicted_rival_revenue_delta": 0,
+      "exact_rival_revenue_delta": 0,
+      "missed_revenue_delta": 0,
+      "exact_rival_spend_delta": 0,
+      "quantity_term_symmetric": 0.0,
+      "average_price_term_symmetric": 0.0
+    },
+    {
+      "product": "EGG",
+      "predicted_rival_revenue_delta": 0,
+      "exact_rival_revenue_delta": -132.32222222222222,
+      "missed_revenue_delta": -132.32222222222222,
+      "exact_rival_spend_delta": 0,
+      "quantity_term_symmetric": 97.67282347282347,
+      "average_price_term_symmetric": -229.9950456950457
+    },
+    {
+      "product": "MILK",
+      "predicted_rival_revenue_delta": 635.0666666666667,
+      "exact_rival_revenue_delta": 2893.822222222222,
+      "missed_revenue_delta": 2258.7555555555555,
+      "exact_rival_spend_delta": 0,
+      "quantity_term_symmetric": -149.7694815425243,
+      "average_price_term_symmetric": 3043.5917037647464
+    },
+    {
+      "product": "WOOL",
+      "predicted_rival_revenue_delta": 105.57777777777778,
+      "exact_rival_revenue_delta": 2402.511111111111,
+      "missed_revenue_delta": 2296.9333333333334,
+      "exact_rival_spend_delta": 0,
+      "quantity_term_symmetric": -51.662220933337025,
+      "average_price_term_symmetric": 2454.173332044448
+    },
+    {
+      "product": "FERTILIZER",
+      "predicted_rival_revenue_delta": 0,
+      "exact_rival_revenue_delta": -106.33333333333333,
+      "missed_revenue_delta": -106.33333333333333,
+      "exact_rival_spend_delta": -33.833333333333336,
+      "quantity_term_symmetric": 22.038177271243605,
+      "average_price_term_symmetric": -128.37151060457697
+    }
+  ],
+  "limits": [
+    "All quantities, cash and private inventories after the decision are offline diagnostic truth only.",
+    "Average price differences combine market prediction error, timing, stock feedback and future shops; this is not yet a causal ablation.",
+    "The estimator predicts rival gross animal revenue; exact profit comparisons additionally include product spend and fixed costs.",
+    "All results are the common discovery panel, not a new holdout."
+  ]
+}

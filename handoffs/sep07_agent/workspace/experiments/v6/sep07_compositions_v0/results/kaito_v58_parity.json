@@ -1,0 +1,238 @@
+{
+  "result": "matched_actions=17256",
+  "cases": 17256,
+  "forced_modes": {
+    "(None, False, False)": 1152,
+    "('base', False, False)": 2924,
+    "('farmers-recovery', False, False)": 1294,
+    "('recovery', False, False)": 2588,
+    "('ice-minimax', False, False)": 647,
+    "('bakery-second-shop', False, False)": 647,
+    "('pizza-second-shop', False, False)": 647,
+    "('base', True, False)": 1246,
+    "('base', False, True)": 359
+  },
+  "controllers": {
+    "base_backbone": {
+      "games": 24,
+      "calls": 17256,
+      "near_turns": 7729,
+      "near_latches": 24,
+      "flow_updates": 17232,
+      "mirror_evidence_turns": 4675,
+      "mirror_confidence_sum": 168.48654973587813,
+      "mirror_confidence_peak": 0.657371307271016,
+      "front_turns": 266,
+      "preempt_turns": 201,
+      "preempt_units": 948,
+      "preempt_value": 46488.16666666667,
+      "repaid_units": 948,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 17256
+      }
+    },
+    "base_yarn": {
+      "games": 24,
+      "calls": 17256,
+      "near_turns": 7729,
+      "near_latches": 24,
+      "flow_updates": 17232,
+      "mirror_evidence_turns": 4585,
+      "mirror_confidence_sum": 285.83122952946525,
+      "mirror_confidence_peak": 0.7767825118605043,
+      "front_turns": 209,
+      "preempt_turns": 119,
+      "preempt_units": 717,
+      "preempt_value": 47256.0,
+      "repaid_units": 717,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 17256
+      }
+    },
+    "base_pet": {
+      "games": 24,
+      "calls": 17256,
+      "near_turns": 7729,
+      "near_latches": 24,
+      "flow_updates": 17232,
+      "mirror_evidence_turns": 4585,
+      "mirror_confidence_sum": 285.83122952946525,
+      "mirror_confidence_peak": 0.7767825118605043,
+      "front_turns": 209,
+      "preempt_turns": 119,
+      "preempt_units": 717,
+      "preempt_value": 47256.0,
+      "repaid_units": 717,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 17256
+      }
+    },
+    "recovery": {
+      "games": 24,
+      "calls": 17256,
+      "near_turns": 7729,
+      "near_latches": 24,
+      "flow_updates": 17232,
+      "mirror_evidence_turns": 4620,
+      "mirror_confidence_sum": 154.48465596449967,
+      "mirror_confidence_peak": 0.7767825118605043,
+      "front_turns": 107,
+      "preempt_turns": 113,
+      "preempt_units": 616,
+      "preempt_value": 35794.0,
+      "repaid_units": 616,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 17256
+      }
+    },
+    "smoothie": {
+      "games": 24,
+      "calls": 17256,
+      "near_turns": 7729,
+      "near_latches": 24,
+      "flow_updates": 17232,
+      "mirror_evidence_turns": 4659,
+      "mirror_confidence_sum": 132.095153064291,
+      "mirror_confidence_peak": 0.657371307271016,
+      "front_turns": 95,
+      "preempt_turns": 257,
+      "preempt_units": 1435,
+      "preempt_value": 54630.666666666664,
+      "repaid_units": 1435,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 17256
+      }
+    },
+    "clone": {
+      "games": 24,
+      "calls": 17256,
+      "near_turns": 7729,
+      "near_latches": 24,
+      "flow_updates": 17232,
+      "mirror_evidence_turns": 4644,
+      "mirror_confidence_sum": 388.9867480131915,
+      "mirror_confidence_peak": 0.7767825118605043,
+      "front_turns": 445,
+      "preempt_turns": 186,
+      "preempt_units": 899,
+      "preempt_value": 54946.42857142857,
+      "repaid_units": 899,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 17256
+      }
+    },
+    "known_yarn": {
+      "games": 24,
+      "calls": 17256,
+      "near_turns": 7729,
+      "near_latches": 24,
+      "flow_updates": 17232,
+      "mirror_evidence_turns": 4648,
+      "mirror_confidence_sum": 292.59578531230426,
+      "mirror_confidence_peak": 0.7772913497261604,
+      "front_turns": 159,
+      "preempt_turns": 203,
+      "preempt_units": 1219,
+      "preempt_value": 54212.6,
+      "repaid_units": 1219,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 17256
+      }
+    },
+    "ice_minimax": {
+      "games": 24,
+      "calls": 17256,
+      "near_turns": 7729,
+      "near_latches": 24,
+      "flow_updates": 17232,
+      "mirror_evidence_turns": 4694,
+      "mirror_confidence_sum": 130.92655159184324,
+      "mirror_confidence_peak": 0.657371307271016,
+      "front_turns": 284,
+      "preempt_turns": 243,
+      "preempt_units": 1307,
+      "preempt_value": 54537.0,
+      "repaid_units": 1307,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 17256
+      }
+    },
+    "bakery_yarn": {
+      "games": 24,
+      "calls": 17256,
+      "near_turns": 7729,
+      "near_latches": 24,
+      "flow_updates": 17232,
+      "mirror_evidence_turns": 4585,
+      "mirror_confidence_sum": 285.83122952946525,
+      "mirror_confidence_peak": 0.7767825118605043,
+      "front_turns": 209,
+      "preempt_turns": 119,
+      "preempt_units": 717,
+      "preempt_value": 47256.0,
+      "repaid_units": 717,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 17256
+      }
+    },
+    "pizza_recovery": {
+      "games": 24,
+      "calls": 17256,
+      "near_turns": 7729,
+      "near_latches": 24,
+      "flow_updates": 17232,
+      "mirror_evidence_turns": 4620,
+      "mirror_confidence_sum": 154.48465596449967,
+      "mirror_confidence_peak": 0.7767825118605043,
+      "front_turns": 107,
+      "preempt_turns": 113,
+      "preempt_units": 616,
+      "preempt_value": 35794.0,
+      "repaid_units": 616,
+      "defer_turns": 0,
+      "defer_units": 0,
+      "release_turns": 0,
+      "release_units": 0,
+      "routes": {
+        "default": 17256
+      }
+    }
+  },
+  "scope": "Full tile fields, legal public/private boundary, active units and semantic opcode arguments; exogenous observations, no Python game simulation"
+}

@@ -1,0 +1,53 @@
+[
+  {
+    "agent": "destbreso_finance7",
+    "opponent": "pass",
+    "summary": {
+      "agent_a": "destbreso_finance7",
+      "agent_b": "pass",
+      "seconds": 0.0193379,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 162627,
+      "mean_margin": 159627,
+      "cash_cvar10": 111890,
+      "margin_cvar10": 108890,
+      "pass_J": 152480
+    }
+  },
+  {
+    "agent": "destbreso_finance7",
+    "opponent": "destbreso_finance7",
+    "summary": {
+      "agent_a": "destbreso_finance7",
+      "agent_b": "destbreso_finance7",
+      "seconds": 0.0413723,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 73757,
+      "mean_margin": 0,
+      "cash_cvar10": 46422,
+      "margin_cvar10": 0,
+      "pass_J": 68290
+    }
+  },
+  {
+    "agent": "destbreso_finance7",
+    "opponent": "teammate_shoprouter",
+    "summary": {
+      "agent_a": "destbreso_finance7",
+      "agent_b": "teammate_shoprouter",
+      "seconds": 0.0301527,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0,
+      "mean_cash": 71827.1,
+      "mean_margin": -2135.88,
+      "cash_cvar10": 45495,
+      "margin_cvar10": -2995,
+      "pass_J": 66560.7
+    }
+  }
+]

@@ -1,0 +1,123 @@
+{
+  "generic_debug_thread_games": 16,
+  "discovery": {
+    "public_capacity_router_vs_arman_3000": {
+      "agent_a": "public_capacity_router",
+      "agent_b": "arman_3000",
+      "seconds": 0.318377,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 94308.2,
+      "mean_margin": 23917.7,
+      "cash_cvar10": 59132.4,
+      "margin_cvar10": 10823.2,
+      "pass_J": 87273.1
+    },
+    "public_capacity_router_vs_deniz": {
+      "agent_a": "public_capacity_router",
+      "agent_b": "deniz",
+      "seconds": 0.812512,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 99325.7,
+      "mean_margin": 20389.3,
+      "cash_cvar10": 62447.8,
+      "margin_cvar10": 10989.7,
+      "pass_J": 91950.1
+    },
+    "public_capacity_router_vs_junghoon_78": {
+      "agent_a": "public_capacity_router",
+      "agent_b": "junghoon_78",
+      "seconds": 0.313472,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.738281,
+      "mean_cash": 97920.7,
+      "mean_margin": 9885.85,
+      "cash_cvar10": 55808,
+      "margin_cvar10": -8953.58,
+      "pass_J": 89498.2
+    },
+    "public_capacity_router_vs_mao_85": {
+      "agent_a": "public_capacity_router",
+      "agent_b": "mao_85",
+      "seconds": 0.307493,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.0429688,
+      "mean_cash": 91217.1,
+      "mean_margin": -6804.07,
+      "cash_cvar10": 55736.7,
+      "margin_cvar10": -14150.8,
+      "pass_J": 84121
+    },
+    "public_capacity_router_vs_mao_89": {
+      "agent_a": "public_capacity_router",
+      "agent_b": "mao_89",
+      "seconds": 0.307667,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.0820312,
+      "mean_cash": 88803.4,
+      "mean_margin": -7234.75,
+      "cash_cvar10": 54062.5,
+      "margin_cvar10": -16179.6,
+      "pass_J": 81855.2
+    },
+    "public_capacity_router_vs_opening_router_v2": {
+      "agent_a": "public_capacity_router",
+      "agent_b": "opening_router_v2",
+      "seconds": 0.313343,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.00390625,
+      "mean_cash": 90307,
+      "mean_margin": -9782.34,
+      "cash_cvar10": 54775.5,
+      "margin_cvar10": -17175.3,
+      "pass_J": 83200.7
+    },
+    "public_capacity_router_vs_public_router": {
+      "agent_a": "public_capacity_router",
+      "agent_b": "public_router",
+      "seconds": 0.308746,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.726562,
+      "mean_cash": 87747.6,
+      "mean_margin": 76.1953,
+      "cash_cvar10": 53182.8,
+      "margin_cvar10": -520.462,
+      "pass_J": 80834.6
+    },
+    "public_capacity_router_vs_skomuro": {
+      "agent_a": "public_capacity_router",
+      "agent_b": "skomuro",
+      "seconds": 0.307607,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 97779.7,
+      "mean_margin": 19555.9,
+      "cash_cvar10": 61312.5,
+      "margin_cvar10": 9225.35,
+      "pass_J": 90486.2
+    },
+    "public_capacity_router_vs_teammate_shoprouter": {
+      "agent_a": "public_capacity_router",
+      "agent_b": "teammate_shoprouter",
+      "seconds": 0.32684,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.980469,
+      "mean_cash": 87594.9,
+      "mean_margin": 7502.07,
+      "cash_cvar10": 53044.8,
+      "margin_cvar10": 567.962,
+      "pass_J": 80684.9
+    }
+  },
+  "terminal_scope": "No action or reward difference from capacity-only in all 2304 common discovery games; forced parity fixtures exercise the terminal difference."
+}

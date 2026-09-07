@@ -1,0 +1,39 @@
+{
+  "result": "matched_actions=14380",
+  "error": "",
+  "source_branches": {
+    "BASE": 7263,
+    "YARN_SECOND": 1725,
+    "recovery_queued": 218,
+    "LOW": 10052,
+    "MID": 1436,
+    "HIGH": 2872,
+    "S1_BAL_override": 1941,
+    "FERT385": 5,
+    "HIGHCAP": 7117,
+    "tail_route_7015cc00acfa4922": 5352,
+    "tail_route_dc76e4003029ac51": 1120,
+    "tail_route_ab9669b9abfbea4e": 359,
+    "tail_route_a84d06f1d12add7c": 286,
+    "SHEEP241": 5,
+    "SF_HIRE_LAST": 12
+  },
+  "scope": "8 recorded sequences and12 forced branch sequences,719actions each; active-unit/unused-argument normalization",
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "g++",
+    "-std=c++20",
+    "-O2",
+    "-DVERIFY_KING",
+    "-I",
+    "/home/pavel/Programming/kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/tests/public_router_parity.cpp",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/king_rc4/source/agent.cpp",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/public_router/source/agent.cpp",
+    "-o",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/king_parity"
+  ]
+}

@@ -1,0 +1,75 @@
+def _e157_herd(farm):
+    return [dict(tile) for row in _get(farm, 'tiles', []) for tile in row
+            if isinstance(tile, dict) and tile.get('animal') in _E157_ANIMALS]
+
+def _e157_production(herd, day, end):
+    production = {p: [0.] * end for p in ('MILK', 'WOOL', 'EGG')}
+    for tile in herd:
+        product, first, period, _ = _E157_ANIMALS[tile['animal']]
+        placed = int(tile.get('placed_day', day))
+        pending = float(tile.get('pending_care_bonus', 0))
+        for future in range(day + 1, end):
+            if future >= placed + first and (future - placed - first) % period == 0:
+                production[product][future] += min(4. if tile['animal'] == 'GOOSE' else 6., 1. + pending)
+                pending = 0.
+            pending += 1.  # Production consumes OLD care before today's care.
+    return production
+
+def _e157_projection(obs, step, extra=None, quantity=0):
+    """Finite-horizon own revenue INCLUDING cannibalization of the current herd.
+
+    This is an approximate allocation model, not an exact engine simulator.
+    Future shop identities and opponent private stock are never inspected.
+    """
+    day, end = step // 24, 30
+    own = _e157_herd(_farm(obs, _seat(obs)))
+    enemy = _e157_herd(_farm(obs, 1 - _seat(obs)))
+    private = _get(obs, 'private', {}) or {}
+    stored = [private.get('shed', {}), *(private.get('inventories', []) or [])]
+    for animal in _E157_ANIMALS:
+        own.extend({'animal': animal, 'placed_day': day + 1} for _ in
+                   range(sum(int(v.get(animal, 0)) for v in stored)))
+    additions = (extra if isinstance(extra, dict) else {extra: quantity}) if extra else {}
+    for animal, count in additions.items():
+        own.extend({'animal': animal, 'placed_day': day + 1} for _ in range(count))
+    ours, theirs = _e157_production(own, day, end), _e157_production(enemy, day, end)
+    market = _get(obs, 'market', {}) or {}
+    inventory = _get(market, 'inventory', {}) or {}
+    shops = list(_get(_get(obs, 'town', {}), 'unlocked_shops', []) or [])
+    value = 0.
+    for product in ('MILK', 'WOOL', 'EGG'):
+        stock = float(inventory.get(product, 10000))
+        daily = 1. + 6. * sum(2 if len(_SHOP_PRODUCTS.get(s, ())) == 1 else 1
+                             for s in shops if product in _SHOP_PRODUCTS.get(s, ()))
+        mean_shop = 6. * sum((2 if len(v) == 1 else 1) for v in _SHOP_PRODUCTS.values()
+                             if product in v) / len(_SHOP_PRODUCTS)
+        for future in range(day + 1, end):
+            unseen = max(0, min(8, future // 3) - len(shops))
+            demand = daily + _E157_CONFIG['future_weight'] * unseen * mean_shop
+            q, rival = ours[product][future], theirs[product][future]
+            # A public-production scenario, not a prediction of exact sell times.
+            quote = _e155_price(product, stock + .5 * (q + rival) - .5 * demand, market)
+            value += q * quote
+            stock -= demand
+            if quote > 1:
+                stock += q + rival
+    if additions:
+        feed = _e155_price('WHEAT', inventory.get('WHEAT', 10000), market)
+        # Existing labour route is preserved; service opportunity cost is charged.
+        value -= sum(count * (_E157_ANIMALS[animal][3] + (end - day - 1) * (feed + 8.))
+                     for animal, count in additions.items())
+    return value
+
+def _e158_portfolio_score(obs, step, geese, future_weights):
+    original_weight = float(_E157_CONFIG.get("future_weight", .35))
+    values = []
+    try:
+        for weight in future_weights:
+            _E157_CONFIG["future_weight"] = float(weight)
+            additions = {"COW": 2 - geese}
+            if geese:
+                additions["GOOSE"] = geese
+            values.append(_e157_projection(obs, step, additions))
+    finally:
+        _E157_CONFIG["future_weight"] = original_weight
+    return min(values) if _E158_PORTFOLIO_CONFIG["robust"] else values[0]

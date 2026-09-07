@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "justin_154",
+  "header": "source/agent.hpp",
+  "type": "compositions::justin_154::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../top_replay_library/source/agent.cpp"
+  ]
+}

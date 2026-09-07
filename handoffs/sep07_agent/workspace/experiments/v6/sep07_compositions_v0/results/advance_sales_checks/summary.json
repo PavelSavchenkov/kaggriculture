@@ -1,0 +1,104 @@
+[
+  {
+    "agent": "advance_sales_001_7",
+    "opponent": "pass",
+    "summary": {
+      "agent_a": "advance_sales_001_7",
+      "agent_b": "pass",
+      "seconds": 0.0206167,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 159102,
+      "mean_margin": 156102,
+      "cash_cvar10": 123163,
+      "margin_cvar10": 120163,
+      "pass_J": 151914
+    }
+  },
+  {
+    "agent": "advance_sales_001_7",
+    "opponent": "advance_sales_001_7",
+    "summary": {
+      "agent_a": "advance_sales_001_7",
+      "agent_b": "advance_sales_001_7",
+      "seconds": 0.0372052,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 94467.1,
+      "mean_margin": 0,
+      "cash_cvar10": 58685,
+      "margin_cvar10": 0,
+      "pass_J": 87310.7
+    }
+  },
+  {
+    "agent": "advance_sales_001_7",
+    "opponent": "advance_sales_001_9",
+    "summary": {
+      "agent_a": "advance_sales_001_7",
+      "agent_b": "advance_sales_001_9",
+      "seconds": 0.0373067,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 94724,
+      "mean_margin": 288.125,
+      "cash_cvar10": 58929,
+      "margin_cvar10": 50,
+      "pass_J": 87565
+    }
+  },
+  {
+    "agent": "advance_sales_001_9",
+    "opponent": "pass",
+    "summary": {
+      "agent_a": "advance_sales_001_9",
+      "agent_b": "pass",
+      "seconds": 0.0207327,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 1,
+      "mean_cash": 159108,
+      "mean_margin": 156108,
+      "cash_cvar10": 123173,
+      "margin_cvar10": 120173,
+      "pass_J": 151921
+    }
+  },
+  {
+    "agent": "advance_sales_001_9",
+    "opponent": "advance_sales_001_7",
+    "summary": {
+      "agent_a": "advance_sales_001_9",
+      "agent_b": "advance_sales_001_7",
+      "seconds": 0.0280824,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0,
+      "mean_cash": 94435.9,
+      "mean_margin": -288.125,
+      "cash_cvar10": 58425,
+      "margin_cvar10": -504,
+      "pass_J": 87233.7
+    }
+  },
+  {
+    "agent": "advance_sales_001_9",
+    "opponent": "advance_sales_001_9",
+    "summary": {
+      "agent_a": "advance_sales_001_9",
+      "agent_b": "advance_sales_001_9",
+      "seconds": 0.0282648,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.5,
+      "mean_cash": 94665.4,
+      "mean_margin": 0,
+      "cash_cvar10": 58707,
+      "margin_cvar10": 0,
+      "pass_J": 87473.7
+    }
+  }
+]

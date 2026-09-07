@@ -1,0 +1,26 @@
+{
+  "result": "matched_actions=7190",
+  "scope": "8 recorded sequences plus 2 forced-route sequences; 719 turns each",
+  "normalization": "Hydrate shared step omitted by seat-1 replay JSON; active workers only; ignore unused opcode arguments and quantities",
+  "source_sha256": {
+    "main.py": "6b812bb8e53b97b363fda69bdfbb2571425d068dde95427e0e08c6c88fb55c3c",
+    "_shop_bridge.py": "23b0d0c93bcf3dfecaabfecd950ec4ab3b4c46000c0c481bddcf0a63ce019f02",
+    "agent.so": "d3b4e19dfd20f1d9b229d1d15cab9ee20068d100fb99fcf4c44051d59fb174ea"
+  },
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "g++",
+    "-std=c++20",
+    "-O2",
+    "-DVERIFY_TEAMMATE",
+    "-I",
+    "/home/pavel/Programming/kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/tests/public_router_parity.cpp",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/teammate_shoprouter/source/agent.cpp",
+    "-o",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/teammate_parity"
+  ]
+}

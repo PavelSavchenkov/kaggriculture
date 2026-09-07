@@ -1,0 +1,2670 @@
+{
+  "description": "Preserved intermediate, reference, specialist and WIP C++ packages outside historical build snapshots. Exact submitted C++ additionally has its separate frozen source_tree. Catalog aliases may differ from manifest names. Seven missing package README files were added for old Atakan controls; source code is unchanged. Includes one newly reproduced V30day16smoke agent in runs/handoff_day_smoke.",
+  "agents": [
+    {
+      "name": "boatlee_h7_fast_sanitize",
+      "package": "workspace/agents/external/boatlee_h7_fast_sanitize",
+      "type": "four_shop_foundry::throughput::boatlee_h7_fast_sanitize::Agent"
+    },
+    {
+      "name": "c68_h18_fast_sanitize",
+      "package": "workspace/agents/external/c68_h18_fast_sanitize",
+      "type": "four_shop_foundry::throughput::c68_h18_fast_sanitize::Agent"
+    },
+    {
+      "name": "external_replay_band_adamjonesjohnson_89413383_safe",
+      "package": "workspace/agents/external/external_replay_band_adamjonesjohnson_89413383_safe",
+      "type": "four_shop_search::external_replay_band_adamjonesjohnson_89413383_safe::Agent"
+    },
+    {
+      "name": "external_replay_band_jeff_horon_89417087_safe",
+      "package": "workspace/agents/external/external_replay_band_jeff_horon_89417087_safe",
+      "type": "four_shop_search::external_replay_band_jeff_horon_89417087_safe::Agent"
+    },
+    {
+      "name": "external_replay_band_md_mehedi_hasan_89415485_safe",
+      "package": "workspace/agents/external/external_replay_band_md_mehedi_hasan_89415485_safe",
+      "type": "four_shop_search::external_replay_band_md_mehedi_hasan_89415485_safe::Agent"
+    },
+    {
+      "name": "external_replay_band_xdang13_89917554_safe",
+      "package": "workspace/agents/external/external_replay_band_xdang13_89917554_safe",
+      "type": "four_shop_search::external_replay_band_xdang13_89917554_safe::Agent"
+    },
+    {
+      "name": "external_replay_band_yaroslav_tanko_89416002_safe",
+      "package": "workspace/agents/external/external_replay_band_yaroslav_tanko_89416002_safe",
+      "type": "four_shop_search::external_replay_band_yaroslav_tanko_89416002_safe::Agent"
+    },
+    {
+      "name": "public_indar_e279_unchanged",
+      "package": "workspace/agents/external/public_indar_e279_unchanged",
+      "type": "league::public_unchanged::indar::Policy"
+    },
+    {
+      "name": "public_kaito_h10_front_run_fast",
+      "package": "workspace/agents/external/public_kaito_h10_front_run_fast",
+      "type": "league::public_optimized::kaito_h10_front_run_fast::Policy"
+    },
+    {
+      "name": "public_roman_hamburger_anchor_unchanged",
+      "package": "workspace/agents/external/public_roman_hamburger_anchor_unchanged",
+      "type": "league::public_unchanged::roman_hamburger::Policy"
+    },
+    {
+      "name": "public_skomuro_2000_cpp",
+      "package": "workspace/agents/external/public_skomuro_2000_cpp",
+      "type": "four_shop_search::public_skomuro_2000_cpp::Agent"
+    },
+    {
+      "name": "combine_hires_001_best",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/combine_hires_001_best",
+      "type": "compositions::combine_hires_001_best::Agent"
+    },
+    {
+      "name": "composition_default_finance",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/composition_default_finance",
+      "type": "compositions::greedy::Agent<0,true,true,false,1,true>"
+    },
+    {
+      "name": "composition_greedy_v0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/composition_greedy_v0",
+      "type": "compositions::greedy::Agent<0>"
+    },
+    {
+      "name": "composition_greedy_v1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/composition_greedy_v1",
+      "type": "compositions::greedy_v1::Agent<4,true,true,true,1,true,1>"
+    },
+    {
+      "name": "composition_input_guard",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/composition_input_guard",
+      "type": "compositions::greedy::Agent<0,true,true,false,1>"
+    },
+    {
+      "name": "composition_reserve3",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/composition_reserve3",
+      "type": "compositions::greedy::Agent<0,true,true,false,3>"
+    },
+    {
+      "name": "composition_source_finance",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/composition_source_finance",
+      "type": "compositions::greedy::Agent<0,true,true,true,1,true>"
+    },
+    {
+      "name": "composition_source_guard",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/composition_source_guard",
+      "type": "compositions::greedy::Agent<0,true,true,true,1>"
+    },
+    {
+      "name": "composition_source_service",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/composition_source_service",
+      "type": "compositions::greedy::Agent<0,true,true,true>"
+    },
+    {
+      "name": "firstday_m85_sale7",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/firstday_m85_sale7",
+      "type": "compositions::firstday_m85_sale7::Agent"
+    },
+    {
+      "name": "firstday_m85_v0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/firstday_m85_v0",
+      "type": "compositions::firstday_m85_v0::Agent"
+    },
+    {
+      "name": "guarded_hires_v2",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/guarded_hires_v2",
+      "type": "compositions::guarded_hires_v2::Agent"
+    },
+    {
+      "name": "guarded_hires_v3",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/guarded_hires_v3",
+      "type": "compositions::guarded_hires_v3::Agent"
+    },
+    {
+      "name": "hire_day1_counter",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/hire_day1_counter",
+      "type": "compositions::hire_day1_counter::Agent"
+    },
+    {
+      "name": "hire_day1_day4",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/hire_day1_day4",
+      "type": "compositions::hire_day1_day4::Agent"
+    },
+    {
+      "name": "hire_day1_day9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/hire_day1_day9",
+      "type": "compositions::hire_day1_day9::Agent"
+    },
+    {
+      "name": "hire_day4_counter",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/hire_day4_counter",
+      "type": "compositions::hire_day4_counter::Agent"
+    },
+    {
+      "name": "hire_day9_counter",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/hire_day9_counter",
+      "type": "compositions::hire_day9_counter::Agent"
+    },
+    {
+      "name": "investment_context_guarded_001_best",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/investment_context_guarded_001_best",
+      "type": "compositions::investment_context_guarded_001_best::Agent"
+    },
+    {
+      "name": "investment_guarded_001_best",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/investment_guarded_001_best",
+      "type": "compositions::investment_guarded_001_best::Agent"
+    },
+    {
+      "name": "junghoon_wool_sales",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/junghoon_wool_sales",
+      "type": "compositions::junghoon_wool_sales::Agent"
+    },
+    {
+      "name": "justin_guarded_hires_001_best",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/justin_guarded_hires_001_best",
+      "type": "compositions::justin_guarded_hires_001_best::Agent"
+    },
+    {
+      "name": "justin_liquidate_v0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/justin_liquidate_v0",
+      "type": "compositions::justin_liquidate_v0::Agent"
+    },
+    {
+      "name": "justin_recall_v0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/justin_recall_v0",
+      "type": "compositions::justin_recall_v0::Agent"
+    },
+    {
+      "name": "opening_router_v0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/opening_router_v0",
+      "type": "compositions::opening_router_v0::Agent"
+    },
+    {
+      "name": "opening_router_v1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/opening_router_v1",
+      "type": "compositions::opening_router_v1::Agent"
+    },
+    {
+      "name": "opening_router_v2",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/opening_router_v2",
+      "type": "compositions::opening_router_v2::Agent"
+    },
+    {
+      "name": "opening_router_v3",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/opening_router_v3",
+      "type": "compositions::opening_router_v3::Agent"
+    },
+    {
+      "name": "opening_router_v4",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/opening_router_v4",
+      "type": "compositions::opening_router_v4::Agent"
+    },
+    {
+      "name": "search_v0_4",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/search_v0_4",
+      "type": "compositions::search_v0_4::Agent"
+    },
+    {
+      "name": "search_v0_package_check_p67",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/search_v0_package_check_p67",
+      "type": "compositions::search_v0_package_check_p67::Agent"
+    },
+    {
+      "name": "shop_herd_guarded_001_best",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/shop_herd_guarded_001_best",
+      "type": "compositions::shop_herd_guarded_001_best::Agent"
+    },
+    {
+      "name": "species_78_goose_cow",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/species_78_goose_cow",
+      "type": "compositions::species_78_goose_cow::Agent"
+    },
+    {
+      "name": "species_89_goose_cow_sell",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/candidates/species_89_goose_cow_sell",
+      "type": "compositions::species_89_goose_cow_sell::Agent"
+    },
+    {
+      "name": "composition_greedy_v0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/checkpoints/composition_greedy_v0_initial",
+      "type": "compositions::greedy::Agent<0>"
+    },
+    {
+      "name": "replay_arman_ge3000_94541153",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/arman_3000",
+      "type": "four_shop_foundry::replay::replay_arman_ge3000_94541153::Agent"
+    },
+    {
+      "name": "atakan_161",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/atakan_161",
+      "type": "compositions::atakan_161::Agent"
+    },
+    {
+      "name": "binghua_116",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/binghua_116",
+      "type": "compositions::binghua_116::Agent"
+    },
+    {
+      "name": "boatlee_v29",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/boatlee_v29",
+      "type": "compositions::boatlee_v29::Agent"
+    },
+    {
+      "name": "replay_crop_dusta_ge3000_100223989",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/crop_dusta_3000",
+      "type": "four_shop_foundry::replay::replay_crop_dusta_ge3000_100223989::Agent"
+    },
+    {
+      "name": "public_deniz_v111_safe",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/deniz",
+      "type": "four_shop_foundry::public_adapted::deniz_v111_safe::Agent"
+    },
+    {
+      "name": "destbreso_finance7",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/destbreso_finance7",
+      "type": "compositions::destbreso_finance7::Agent<3>"
+    },
+    {
+      "name": "feeltheagi_55",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/feeltheagi_55",
+      "type": "compositions::feeltheagi_55::Agent"
+    },
+    {
+      "name": "john_128",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/john_128",
+      "type": "compositions::john_128::Agent"
+    },
+    {
+      "name": "john_131",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/john_131",
+      "type": "compositions::john_131::Agent"
+    },
+    {
+      "name": "junghoon_78",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/junghoon_78",
+      "type": "compositions::junghoon_78::Agent"
+    },
+    {
+      "name": "justin_150",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/justin_150",
+      "type": "compositions::justin_150::Agent"
+    },
+    {
+      "name": "justin_154",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/justin_154",
+      "type": "compositions::justin_154::Agent"
+    },
+    {
+      "name": "kaito_v43",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/kaito_v43",
+      "type": "compositions::kaito_v43::Agent"
+    },
+    {
+      "name": "kaito_v58",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/kaito_v58",
+      "type": "compositions::kaito_v58::Agent"
+    },
+    {
+      "name": "king_rc4",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/king_rc4",
+      "type": "compositions::king_rc4::Agent"
+    },
+    {
+      "name": "leader_program0_tape",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/leader_program0_tape",
+      "type": "compositions::leader_program0_tape::Agent"
+    },
+    {
+      "name": "mao_85",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/mao_85",
+      "type": "compositions::mao_85::Agent"
+    },
+    {
+      "name": "mao_89",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/mao_89",
+      "type": "compositions::mao_89::Agent"
+    },
+    {
+      "name": "market_impact_v4",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/market_impact_v4",
+      "type": "compositions::market_impact_v4::Agent"
+    },
+    {
+      "name": "test_replay_mrkiwi_ge3000_93167917",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/mrkiwi_3000",
+      "type": "four_shop_foundry::replay::test_replay_mrkiwi_ge3000_93167917::Agent"
+    },
+    {
+      "name": "public_capacity_router",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/public_capacity_router",
+      "type": "compositions::public_capacity_router::Agent"
+    },
+    {
+      "name": "public_router",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/public_router",
+      "type": "compositions::public_router::Agent"
+    },
+    {
+      "name": "public_router_v5",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/public_router_v5",
+      "type": "compositions::public_router_v5::Agent"
+    },
+    {
+      "name": "public_sixday",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/public_sixday",
+      "type": "compositions::public_sixday::Agent"
+    },
+    {
+      "name": "public_terminal_router",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/public_terminal_router",
+      "type": "compositions::public_terminal_router::Agent"
+    },
+    {
+      "name": "replay_ryo_ge3000_95029942",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/ryo_3000",
+      "type": "four_shop_foundry::replay::replay_ryo_ge3000_95029942::Agent"
+    },
+    {
+      "name": "test_structured_economic_policy",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/structured",
+      "type": "league::test::structured_economic_policy::Policy"
+    },
+    {
+      "name": "replay_subramanya_ge3000_96594837",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/subramanya_3000",
+      "type": "four_shop_foundry::replay::replay_subramanya_ge3000_96594837::Agent"
+    },
+    {
+      "name": "teammate_shoprouter",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/teammate_shoprouter",
+      "type": "compositions::teammate_shoprouter::Agent"
+    },
+    {
+      "name": "teammate_sixday",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/teammate_sixday",
+      "type": "compositions::teammate_sixday::Agent"
+    },
+    {
+      "name": "teammate_sixday_robust",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/teammate_sixday_robust",
+      "type": "compositions::teammate_sixday_robust::Agent"
+    },
+    {
+      "name": "titan_frontier",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/titan_frontier",
+      "type": "compositions::titan_frontier::Agent"
+    },
+    {
+      "name": "top_replay_library",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/league/top_replay_library",
+      "type": "compositions::top_replay_library::Agent"
+    },
+    {
+      "name": "advance_sales_001_7",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/advance_sales_001/proposals/advance_sales_001_7",
+      "type": "compositions::advance_sales_001_7::Agent"
+    },
+    {
+      "name": "advance_sales_001_9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/advance_sales_001/proposals/advance_sales_001_9",
+      "type": "compositions::advance_sales_001_9::Agent"
+    },
+    {
+      "name": "animal_adaptive_r0_c0_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_adaptive_r0_c0_b0",
+      "type": "compositions::animal_adaptive_r0_c0_b0::Agent"
+    },
+    {
+      "name": "animal_adaptive_r0_c0_b500",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_adaptive_r0_c0_b500",
+      "type": "compositions::animal_adaptive_r0_c0_b500::Agent"
+    },
+    {
+      "name": "animal_adaptive_r0_c3_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_adaptive_r0_c3_b0",
+      "type": "compositions::animal_adaptive_r0_c3_b0::Agent"
+    },
+    {
+      "name": "animal_adaptive_r0_c3_b500",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_adaptive_r0_c3_b500",
+      "type": "compositions::animal_adaptive_r0_c3_b500::Agent"
+    },
+    {
+      "name": "animal_adaptive_r0_c8_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_adaptive_r0_c8_b0",
+      "type": "compositions::animal_adaptive_r0_c8_b0::Agent"
+    },
+    {
+      "name": "animal_adaptive_r0_c8_b500",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_adaptive_r0_c8_b500",
+      "type": "compositions::animal_adaptive_r0_c8_b500::Agent"
+    },
+    {
+      "name": "animal_adaptive_r1_c0_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_adaptive_r1_c0_b0",
+      "type": "compositions::animal_adaptive_r1_c0_b0::Agent"
+    },
+    {
+      "name": "animal_adaptive_r1_c0_b500",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_adaptive_r1_c0_b500",
+      "type": "compositions::animal_adaptive_r1_c0_b500::Agent"
+    },
+    {
+      "name": "animal_adaptive_r1_c3_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_adaptive_r1_c3_b0",
+      "type": "compositions::animal_adaptive_r1_c3_b0::Agent"
+    },
+    {
+      "name": "animal_adaptive_r1_c3_b500",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_adaptive_r1_c3_b500",
+      "type": "compositions::animal_adaptive_r1_c3_b500::Agent"
+    },
+    {
+      "name": "animal_adaptive_r1_c8_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_adaptive_r1_c8_b0",
+      "type": "compositions::animal_adaptive_r1_c8_b0::Agent"
+    },
+    {
+      "name": "animal_adaptive_r1_c8_b500",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_adaptive_r1_c8_b500",
+      "type": "compositions::animal_adaptive_r1_c8_b500::Agent"
+    },
+    {
+      "name": "animal_d11_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_d11_i10",
+      "type": "compositions::animal_d11_i10::Agent"
+    },
+    {
+      "name": "animal_d11_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_d11_i11",
+      "type": "compositions::animal_d11_i11::Agent"
+    },
+    {
+      "name": "animal_d11_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_d11_i9",
+      "type": "compositions::animal_d11_i9::Agent"
+    },
+    {
+      "name": "animal_d15_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_d15_i10",
+      "type": "compositions::animal_d15_i10::Agent"
+    },
+    {
+      "name": "animal_d15_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_d15_i11",
+      "type": "compositions::animal_d15_i11::Agent"
+    },
+    {
+      "name": "animal_d15_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_d15_i9",
+      "type": "compositions::animal_d15_i9::Agent"
+    },
+    {
+      "name": "animal_d18_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_d18_i10",
+      "type": "compositions::animal_d18_i10::Agent"
+    },
+    {
+      "name": "animal_d18_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_d18_i11",
+      "type": "compositions::animal_d18_i11::Agent"
+    },
+    {
+      "name": "animal_d18_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_d18_i9",
+      "type": "compositions::animal_d18_i9::Agent"
+    },
+    {
+      "name": "animal_d21_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_d21_i10",
+      "type": "compositions::animal_d21_i10::Agent"
+    },
+    {
+      "name": "animal_d21_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_d21_i11",
+      "type": "compositions::animal_d21_i11::Agent"
+    },
+    {
+      "name": "animal_d21_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_d21_i9",
+      "type": "compositions::animal_d21_i9::Agent"
+    },
+    {
+      "name": "animal_parent",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_parent",
+      "type": "compositions::animal_parent::Agent"
+    },
+    {
+      "name": "animal_wait",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_wait",
+      "type": "compositions::animal_wait::Agent"
+    },
+    {
+      "name": "ticket_p116_t10_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p116_v4_001/proposals/ticket_p116_t10_i9",
+      "type": "compositions::ticket_p116_t10_i9::Agent"
+    },
+    {
+      "name": "ticket_p116_t14_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p116_v4_001/proposals/ticket_p116_t14_i10",
+      "type": "compositions::ticket_p116_t14_i10::Agent"
+    },
+    {
+      "name": "ticket_p116_t14_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p116_v4_001/proposals/ticket_p116_t14_i9",
+      "type": "compositions::ticket_p116_t14_i9::Agent"
+    },
+    {
+      "name": "ticket_p116_t15_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p116_v4_001/proposals/ticket_p116_t15_i10",
+      "type": "compositions::ticket_p116_t15_i10::Agent"
+    },
+    {
+      "name": "ticket_p116_t15_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p116_v4_001/proposals/ticket_p116_t15_i9",
+      "type": "compositions::ticket_p116_t15_i9::Agent"
+    },
+    {
+      "name": "ticket_p116_t16_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p116_v4_001/proposals/ticket_p116_t16_i10",
+      "type": "compositions::ticket_p116_t16_i10::Agent"
+    },
+    {
+      "name": "ticket_p116_t16_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p116_v4_001/proposals/ticket_p116_t16_i9",
+      "type": "compositions::ticket_p116_t16_i9::Agent"
+    },
+    {
+      "name": "ticket_p116_t4_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p116_v4_001/proposals/ticket_p116_t4_i11",
+      "type": "compositions::ticket_p116_t4_i11::Agent"
+    },
+    {
+      "name": "ticket_p116_t5_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p116_v4_001/proposals/ticket_p116_t5_i11",
+      "type": "compositions::ticket_p116_t5_i11::Agent"
+    },
+    {
+      "name": "ticket_p116_t9_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p116_v4_001/proposals/ticket_p116_t9_i9",
+      "type": "compositions::ticket_p116_t9_i9::Agent"
+    },
+    {
+      "name": "ticket_p55_t10_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p55_public_001/proposals/ticket_p55_t10_i9",
+      "type": "compositions::ticket_p55_t10_i9::Agent"
+    },
+    {
+      "name": "ticket_p55_t13_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p55_public_001/proposals/ticket_p55_t13_i10",
+      "type": "compositions::ticket_p55_t13_i10::Agent"
+    },
+    {
+      "name": "ticket_p55_t13_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p55_public_001/proposals/ticket_p55_t13_i11",
+      "type": "compositions::ticket_p55_t13_i11::Agent"
+    },
+    {
+      "name": "ticket_p55_t14_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p55_public_001/proposals/ticket_p55_t14_i10",
+      "type": "compositions::ticket_p55_t14_i10::Agent"
+    },
+    {
+      "name": "ticket_p55_t14_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p55_public_001/proposals/ticket_p55_t14_i11",
+      "type": "compositions::ticket_p55_t14_i11::Agent"
+    },
+    {
+      "name": "ticket_p55_t17_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p55_public_001/proposals/ticket_p55_t17_i10",
+      "type": "compositions::ticket_p55_t17_i10::Agent"
+    },
+    {
+      "name": "ticket_p55_t17_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p55_public_001/proposals/ticket_p55_t17_i9",
+      "type": "compositions::ticket_p55_t17_i9::Agent"
+    },
+    {
+      "name": "ticket_p55_t4_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p55_public_001/proposals/ticket_p55_t4_i11",
+      "type": "compositions::ticket_p55_t4_i11::Agent"
+    },
+    {
+      "name": "ticket_p55_t5_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p55_public_001/proposals/ticket_p55_t5_i11",
+      "type": "compositions::ticket_p55_t5_i11::Agent"
+    },
+    {
+      "name": "ticket_p55_t9_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p55_public_001/proposals/ticket_p55_t9_i9",
+      "type": "compositions::ticket_p55_t9_i9::Agent"
+    },
+    {
+      "name": "ticket_p78_t16_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p78_junghoon_001/proposals/ticket_p78_t16_i10",
+      "type": "compositions::ticket_p78_t16_i10::Agent"
+    },
+    {
+      "name": "ticket_p78_t16_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p78_junghoon_001/proposals/ticket_p78_t16_i9",
+      "type": "compositions::ticket_p78_t16_i9::Agent"
+    },
+    {
+      "name": "ticket_p78_t18_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p78_junghoon_001/proposals/ticket_p78_t18_i10",
+      "type": "compositions::ticket_p78_t18_i10::Agent"
+    },
+    {
+      "name": "ticket_p78_t18_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p78_junghoon_001/proposals/ticket_p78_t18_i11",
+      "type": "compositions::ticket_p78_t18_i11::Agent"
+    },
+    {
+      "name": "ticket_p78_t5_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p78_junghoon_001/proposals/ticket_p78_t5_i11",
+      "type": "compositions::ticket_p78_t5_i11::Agent"
+    },
+    {
+      "name": "ticket_p78_t5_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p78_junghoon_001/proposals/ticket_p78_t5_i9",
+      "type": "compositions::ticket_p78_t5_i9::Agent"
+    },
+    {
+      "name": "ticket_p78_t8_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p78_junghoon_001/proposals/ticket_p78_t8_i11",
+      "type": "compositions::ticket_p78_t8_i11::Agent"
+    },
+    {
+      "name": "ticket_p78_t8_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p78_junghoon_001/proposals/ticket_p78_t8_i9",
+      "type": "compositions::ticket_p78_t8_i9::Agent"
+    },
+    {
+      "name": "ticket_p78_t9_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p78_junghoon_001/proposals/ticket_p78_t9_i11",
+      "type": "compositions::ticket_p78_t9_i11::Agent"
+    },
+    {
+      "name": "ticket_p78_t9_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p78_junghoon_001/proposals/ticket_p78_t9_i9",
+      "type": "compositions::ticket_p78_t9_i9::Agent"
+    },
+    {
+      "name": "ticket_p116_t10_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p116_v4_001/proposals/ticket_p116_t10_i11",
+      "type": "compositions::ticket_p116_t10_i11::Agent"
+    },
+    {
+      "name": "ticket_p116_t10_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p116_v4_001/proposals/ticket_p116_t10_i9",
+      "type": "compositions::ticket_p116_t10_i9::Agent"
+    },
+    {
+      "name": "ticket_p116_t16_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p116_v4_001/proposals/ticket_p116_t16_i9",
+      "type": "compositions::ticket_p116_t16_i9::Agent"
+    },
+    {
+      "name": "ticket_p116_t2_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p116_v4_001/proposals/ticket_p116_t2_i10",
+      "type": "compositions::ticket_p116_t2_i10::Agent"
+    },
+    {
+      "name": "ticket_p116_t3_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p116_v4_001/proposals/ticket_p116_t3_i10",
+      "type": "compositions::ticket_p116_t3_i10::Agent"
+    },
+    {
+      "name": "ticket_p116_t5_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p116_v4_001/proposals/ticket_p116_t5_i9",
+      "type": "compositions::ticket_p116_t5_i9::Agent"
+    },
+    {
+      "name": "ticket_p116_t6_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p116_v4_001/proposals/ticket_p116_t6_i9",
+      "type": "compositions::ticket_p116_t6_i9::Agent"
+    },
+    {
+      "name": "ticket_p116_t7_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p116_v4_001/proposals/ticket_p116_t7_i9",
+      "type": "compositions::ticket_p116_t7_i9::Agent"
+    },
+    {
+      "name": "ticket_p116_t8_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p116_v4_001/proposals/ticket_p116_t8_i9",
+      "type": "compositions::ticket_p116_t8_i9::Agent"
+    },
+    {
+      "name": "ticket_p116_t9_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p116_v4_001/proposals/ticket_p116_t9_i9",
+      "type": "compositions::ticket_p116_t9_i9::Agent"
+    },
+    {
+      "name": "ticket_p55_t10_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p55_public_001/proposals/ticket_p55_t10_i11",
+      "type": "compositions::ticket_p55_t10_i11::Agent"
+    },
+    {
+      "name": "ticket_p55_t10_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p55_public_001/proposals/ticket_p55_t10_i9",
+      "type": "compositions::ticket_p55_t10_i9::Agent"
+    },
+    {
+      "name": "ticket_p55_t13_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p55_public_001/proposals/ticket_p55_t13_i10",
+      "type": "compositions::ticket_p55_t13_i10::Agent"
+    },
+    {
+      "name": "ticket_p55_t13_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p55_public_001/proposals/ticket_p55_t13_i11",
+      "type": "compositions::ticket_p55_t13_i11::Agent"
+    },
+    {
+      "name": "ticket_p55_t14_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p55_public_001/proposals/ticket_p55_t14_i10",
+      "type": "compositions::ticket_p55_t14_i10::Agent"
+    },
+    {
+      "name": "ticket_p55_t14_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p55_public_001/proposals/ticket_p55_t14_i11",
+      "type": "compositions::ticket_p55_t14_i11::Agent"
+    },
+    {
+      "name": "ticket_p55_t17_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p55_public_001/proposals/ticket_p55_t17_i10",
+      "type": "compositions::ticket_p55_t17_i10::Agent"
+    },
+    {
+      "name": "ticket_p55_t17_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p55_public_001/proposals/ticket_p55_t17_i9",
+      "type": "compositions::ticket_p55_t17_i9::Agent"
+    },
+    {
+      "name": "ticket_p55_t4_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p55_public_001/proposals/ticket_p55_t4_i9",
+      "type": "compositions::ticket_p55_t4_i9::Agent"
+    },
+    {
+      "name": "ticket_p55_t5_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p55_public_001/proposals/ticket_p55_t5_i11",
+      "type": "compositions::ticket_p55_t5_i11::Agent"
+    },
+    {
+      "name": "ticket_p78_t16_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p78_junghoon_001/proposals/ticket_p78_t16_i10",
+      "type": "compositions::ticket_p78_t16_i10::Agent"
+    },
+    {
+      "name": "ticket_p78_t16_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p78_junghoon_001/proposals/ticket_p78_t16_i9",
+      "type": "compositions::ticket_p78_t16_i9::Agent"
+    },
+    {
+      "name": "ticket_p78_t18_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p78_junghoon_001/proposals/ticket_p78_t18_i10",
+      "type": "compositions::ticket_p78_t18_i10::Agent"
+    },
+    {
+      "name": "ticket_p78_t18_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p78_junghoon_001/proposals/ticket_p78_t18_i11",
+      "type": "compositions::ticket_p78_t18_i11::Agent"
+    },
+    {
+      "name": "ticket_p78_t5_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p78_junghoon_001/proposals/ticket_p78_t5_i11",
+      "type": "compositions::ticket_p78_t5_i11::Agent"
+    },
+    {
+      "name": "ticket_p78_t5_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p78_junghoon_001/proposals/ticket_p78_t5_i9",
+      "type": "compositions::ticket_p78_t5_i9::Agent"
+    },
+    {
+      "name": "ticket_p78_t8_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p78_junghoon_001/proposals/ticket_p78_t8_i11",
+      "type": "compositions::ticket_p78_t8_i11::Agent"
+    },
+    {
+      "name": "ticket_p78_t8_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p78_junghoon_001/proposals/ticket_p78_t8_i9",
+      "type": "compositions::ticket_p78_t8_i9::Agent"
+    },
+    {
+      "name": "ticket_p78_t9_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p78_junghoon_001/proposals/ticket_p78_t9_i11",
+      "type": "compositions::ticket_p78_t9_i11::Agent"
+    },
+    {
+      "name": "ticket_p78_t9_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_multi_p78_junghoon_001/proposals/ticket_p78_t9_i9",
+      "type": "compositions::ticket_p78_t9_i9::Agent"
+    },
+    {
+      "name": "ticket_p116_t14_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p116_v4_002/proposals/ticket_p116_t14_i10",
+      "type": "compositions::ticket_p116_t14_i10::Agent"
+    },
+    {
+      "name": "ticket_p116_t14_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p116_v4_002/proposals/ticket_p116_t14_i9",
+      "type": "compositions::ticket_p116_t14_i9::Agent"
+    },
+    {
+      "name": "ticket_p116_t15_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p116_v4_002/proposals/ticket_p116_t15_i10",
+      "type": "compositions::ticket_p116_t15_i10::Agent"
+    },
+    {
+      "name": "ticket_p116_t15_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p116_v4_002/proposals/ticket_p116_t15_i9",
+      "type": "compositions::ticket_p116_t15_i9::Agent"
+    },
+    {
+      "name": "ticket_p116_t16_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p116_v4_002/proposals/ticket_p116_t16_i10",
+      "type": "compositions::ticket_p116_t16_i10::Agent"
+    },
+    {
+      "name": "ticket_p116_t16_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p116_v4_002/proposals/ticket_p116_t16_i9",
+      "type": "compositions::ticket_p116_t16_i9::Agent"
+    },
+    {
+      "name": "ticket_p116_t2_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p116_v4_002/proposals/ticket_p116_t2_i10",
+      "type": "compositions::ticket_p116_t2_i10::Agent"
+    },
+    {
+      "name": "ticket_p116_t3_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p116_v4_002/proposals/ticket_p116_t3_i10",
+      "type": "compositions::ticket_p116_t3_i10::Agent"
+    },
+    {
+      "name": "ticket_p116_t4_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p116_v4_002/proposals/ticket_p116_t4_i11",
+      "type": "compositions::ticket_p116_t4_i11::Agent"
+    },
+    {
+      "name": "ticket_p116_t4_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p116_v4_002/proposals/ticket_p116_t4_i9",
+      "type": "compositions::ticket_p116_t4_i9::Agent"
+    },
+    {
+      "name": "ticket_p55_t10_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p55_public_001/proposals/ticket_p55_t10_i11",
+      "type": "compositions::ticket_p55_t10_i11::Agent"
+    },
+    {
+      "name": "ticket_p55_t13_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p55_public_001/proposals/ticket_p55_t13_i10",
+      "type": "compositions::ticket_p55_t13_i10::Agent"
+    },
+    {
+      "name": "ticket_p55_t13_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p55_public_001/proposals/ticket_p55_t13_i11",
+      "type": "compositions::ticket_p55_t13_i11::Agent"
+    },
+    {
+      "name": "ticket_p55_t14_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p55_public_001/proposals/ticket_p55_t14_i10",
+      "type": "compositions::ticket_p55_t14_i10::Agent"
+    },
+    {
+      "name": "ticket_p55_t14_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p55_public_001/proposals/ticket_p55_t14_i11",
+      "type": "compositions::ticket_p55_t14_i11::Agent"
+    },
+    {
+      "name": "ticket_p55_t17_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p55_public_001/proposals/ticket_p55_t17_i10",
+      "type": "compositions::ticket_p55_t17_i10::Agent"
+    },
+    {
+      "name": "ticket_p55_t17_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p55_public_001/proposals/ticket_p55_t17_i9",
+      "type": "compositions::ticket_p55_t17_i9::Agent"
+    },
+    {
+      "name": "ticket_p55_t4_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p55_public_001/proposals/ticket_p55_t4_i9",
+      "type": "compositions::ticket_p55_t4_i9::Agent"
+    },
+    {
+      "name": "ticket_p55_t5_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p55_public_001/proposals/ticket_p55_t5_i9",
+      "type": "compositions::ticket_p55_t5_i9::Agent"
+    },
+    {
+      "name": "ticket_p55_t9_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p55_public_001/proposals/ticket_p55_t9_i11",
+      "type": "compositions::ticket_p55_t9_i11::Agent"
+    },
+    {
+      "name": "ticket_p55_t11_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p55_v4_001/proposals/ticket_p55_t11_i10",
+      "type": "compositions::ticket_p55_t11_i10::Agent"
+    },
+    {
+      "name": "ticket_p55_t11_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p55_v4_001/proposals/ticket_p55_t11_i9",
+      "type": "compositions::ticket_p55_t11_i9::Agent"
+    },
+    {
+      "name": "ticket_p55_t4_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p55_v4_001/proposals/ticket_p55_t4_i11",
+      "type": "compositions::ticket_p55_t4_i11::Agent"
+    },
+    {
+      "name": "ticket_p55_t4_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p55_v4_001/proposals/ticket_p55_t4_i9",
+      "type": "compositions::ticket_p55_t4_i9::Agent"
+    },
+    {
+      "name": "ticket_p55_t7_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p55_v4_001/proposals/ticket_p55_t7_i11",
+      "type": "compositions::ticket_p55_t7_i11::Agent"
+    },
+    {
+      "name": "ticket_p55_t7_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p55_v4_001/proposals/ticket_p55_t7_i9",
+      "type": "compositions::ticket_p55_t7_i9::Agent"
+    },
+    {
+      "name": "ticket_p55_t8_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p55_v4_001/proposals/ticket_p55_t8_i11",
+      "type": "compositions::ticket_p55_t8_i11::Agent"
+    },
+    {
+      "name": "ticket_p55_t8_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p55_v4_001/proposals/ticket_p55_t8_i9",
+      "type": "compositions::ticket_p55_t8_i9::Agent"
+    },
+    {
+      "name": "ticket_p78_t16_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p78_junghoon_002/proposals/ticket_p78_t16_i10",
+      "type": "compositions::ticket_p78_t16_i10::Agent"
+    },
+    {
+      "name": "ticket_p78_t16_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p78_junghoon_002/proposals/ticket_p78_t16_i9",
+      "type": "compositions::ticket_p78_t16_i9::Agent"
+    },
+    {
+      "name": "ticket_p78_t18_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p78_junghoon_002/proposals/ticket_p78_t18_i10",
+      "type": "compositions::ticket_p78_t18_i10::Agent"
+    },
+    {
+      "name": "ticket_p78_t18_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p78_junghoon_002/proposals/ticket_p78_t18_i11",
+      "type": "compositions::ticket_p78_t18_i11::Agent"
+    },
+    {
+      "name": "ticket_p78_t5_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p78_junghoon_002/proposals/ticket_p78_t5_i11",
+      "type": "compositions::ticket_p78_t5_i11::Agent"
+    },
+    {
+      "name": "ticket_p78_t5_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p78_junghoon_002/proposals/ticket_p78_t5_i9",
+      "type": "compositions::ticket_p78_t5_i9::Agent"
+    },
+    {
+      "name": "ticket_p78_t8_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p78_junghoon_002/proposals/ticket_p78_t8_i11",
+      "type": "compositions::ticket_p78_t8_i11::Agent"
+    },
+    {
+      "name": "ticket_p78_t8_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p78_junghoon_002/proposals/ticket_p78_t8_i9",
+      "type": "compositions::ticket_p78_t8_i9::Agent"
+    },
+    {
+      "name": "ticket_p78_t9_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p78_junghoon_002/proposals/ticket_p78_t9_i11",
+      "type": "compositions::ticket_p78_t9_i11::Agent"
+    },
+    {
+      "name": "ticket_p78_t9_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/animal_tickets_p78_junghoon_002/proposals/ticket_p78_t9_i9",
+      "type": "compositions::ticket_p78_t9_i9::Agent"
+    },
+    {
+      "name": "atakan_cow",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_cow",
+      "type": "compositions::atakan_cow::Agent"
+    },
+    {
+      "name": "atakan_demand",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_demand",
+      "type": "compositions::atakan_demand::Agent"
+    },
+    {
+      "name": "atakan_goose",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_goose",
+      "type": "compositions::atakan_goose::Agent"
+    },
+    {
+      "name": "atakan_quotes",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_quotes",
+      "type": "compositions::atakan_quotes::Agent"
+    },
+    {
+      "name": "atakan_sheep",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_sheep",
+      "type": "compositions::atakan_sheep::Agent"
+    },
+    {
+      "name": "atakan_value_margin",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_value_margin",
+      "type": "compositions::atakan_value_margin::Agent"
+    },
+    {
+      "name": "atakan_value_own",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_value_own",
+      "type": "compositions::atakan_value_own::Agent"
+    },
+    {
+      "name": "atakan_integrated_s0_margin",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/proposals/atakan_integrated_s0_margin",
+      "type": "compositions::atakan_integrated_s0_margin::Agent"
+    },
+    {
+      "name": "atakan_integrated_s0_own",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/proposals/atakan_integrated_s0_own",
+      "type": "compositions::atakan_integrated_s0_own::Agent"
+    },
+    {
+      "name": "atakan_integrated_s1_margin",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/proposals/atakan_integrated_s1_margin",
+      "type": "compositions::atakan_integrated_s1_margin::Agent"
+    },
+    {
+      "name": "atakan_integrated_s1_own",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/proposals/atakan_integrated_s1_own",
+      "type": "compositions::atakan_integrated_s1_own::Agent"
+    },
+    {
+      "name": "atakan_integrated_s32_margin",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/proposals/atakan_integrated_s32_margin",
+      "type": "compositions::atakan_integrated_s32_margin::Agent"
+    },
+    {
+      "name": "atakan_integrated_s32_own",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/proposals/atakan_integrated_s32_own",
+      "type": "compositions::atakan_integrated_s32_own::Agent"
+    },
+    {
+      "name": "atakan_integrated_s64_margin",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/proposals/atakan_integrated_s64_margin",
+      "type": "compositions::atakan_integrated_s64_margin::Agent"
+    },
+    {
+      "name": "atakan_integrated_s64_own",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/proposals/atakan_integrated_s64_own",
+      "type": "compositions::atakan_integrated_s64_own::Agent"
+    },
+    {
+      "name": "atakan_integrated_s8_margin",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/proposals/atakan_integrated_s8_margin",
+      "type": "compositions::atakan_integrated_s8_margin::Agent"
+    },
+    {
+      "name": "atakan_integrated_s8_own",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/proposals/atakan_integrated_s8_own",
+      "type": "compositions::atakan_integrated_s8_own::Agent"
+    },
+    {
+      "name": "fertilization_004_0_closure",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_packages_001/proposals/fertilization_004_0_closure",
+      "type": "compositions::fertilization_004_0_closure::Agent"
+    },
+    {
+      "name": "fertilization_004_10_closure",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_packages_001/proposals/fertilization_004_10_closure",
+      "type": "compositions::fertilization_004_10_closure::Agent"
+    },
+    {
+      "name": "fertilization_004_4_closure",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_packages_001/proposals/fertilization_004_4_closure",
+      "type": "compositions::fertilization_004_4_closure::Agent"
+    },
+    {
+      "name": "early_animal_adaptive_r0_c0_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_adaptive_r0_c0_b0",
+      "type": "compositions::early_animal_adaptive_r0_c0_b0::Agent"
+    },
+    {
+      "name": "early_animal_adaptive_r0_c0_b500",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_adaptive_r0_c0_b500",
+      "type": "compositions::early_animal_adaptive_r0_c0_b500::Agent"
+    },
+    {
+      "name": "early_animal_adaptive_r0_c3_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_adaptive_r0_c3_b0",
+      "type": "compositions::early_animal_adaptive_r0_c3_b0::Agent"
+    },
+    {
+      "name": "early_animal_adaptive_r0_c3_b500",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_adaptive_r0_c3_b500",
+      "type": "compositions::early_animal_adaptive_r0_c3_b500::Agent"
+    },
+    {
+      "name": "early_animal_adaptive_r0_c8_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_adaptive_r0_c8_b0",
+      "type": "compositions::early_animal_adaptive_r0_c8_b0::Agent"
+    },
+    {
+      "name": "early_animal_adaptive_r0_c8_b500",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_adaptive_r0_c8_b500",
+      "type": "compositions::early_animal_adaptive_r0_c8_b500::Agent"
+    },
+    {
+      "name": "early_animal_adaptive_r1_c0_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_adaptive_r1_c0_b0",
+      "type": "compositions::early_animal_adaptive_r1_c0_b0::Agent"
+    },
+    {
+      "name": "early_animal_adaptive_r1_c0_b500",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_adaptive_r1_c0_b500",
+      "type": "compositions::early_animal_adaptive_r1_c0_b500::Agent"
+    },
+    {
+      "name": "early_animal_adaptive_r1_c3_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_adaptive_r1_c3_b0",
+      "type": "compositions::early_animal_adaptive_r1_c3_b0::Agent"
+    },
+    {
+      "name": "early_animal_adaptive_r1_c3_b500",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_adaptive_r1_c3_b500",
+      "type": "compositions::early_animal_adaptive_r1_c3_b500::Agent"
+    },
+    {
+      "name": "early_animal_adaptive_r1_c8_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_adaptive_r1_c8_b0",
+      "type": "compositions::early_animal_adaptive_r1_c8_b0::Agent"
+    },
+    {
+      "name": "early_animal_adaptive_r1_c8_b500",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_adaptive_r1_c8_b500",
+      "type": "compositions::early_animal_adaptive_r1_c8_b500::Agent"
+    },
+    {
+      "name": "early_animal_d15_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_d15_i10",
+      "type": "compositions::early_animal_d15_i10::Agent"
+    },
+    {
+      "name": "early_animal_d15_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_d15_i11",
+      "type": "compositions::early_animal_d15_i11::Agent"
+    },
+    {
+      "name": "early_animal_d15_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_d15_i9",
+      "type": "compositions::early_animal_d15_i9::Agent"
+    },
+    {
+      "name": "early_animal_d3_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_d3_i10",
+      "type": "compositions::early_animal_d3_i10::Agent"
+    },
+    {
+      "name": "early_animal_d3_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_d3_i11",
+      "type": "compositions::early_animal_d3_i11::Agent"
+    },
+    {
+      "name": "early_animal_d3_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_d3_i9",
+      "type": "compositions::early_animal_d3_i9::Agent"
+    },
+    {
+      "name": "early_animal_d6_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_d6_i10",
+      "type": "compositions::early_animal_d6_i10::Agent"
+    },
+    {
+      "name": "early_animal_d6_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_d6_i11",
+      "type": "compositions::early_animal_d6_i11::Agent"
+    },
+    {
+      "name": "early_animal_d6_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_d6_i9",
+      "type": "compositions::early_animal_d6_i9::Agent"
+    },
+    {
+      "name": "early_animal_d9_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_d9_i10",
+      "type": "compositions::early_animal_d9_i10::Agent"
+    },
+    {
+      "name": "early_animal_d9_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_d9_i11",
+      "type": "compositions::early_animal_d9_i11::Agent"
+    },
+    {
+      "name": "early_animal_d9_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_d9_i9",
+      "type": "compositions::early_animal_d9_i9::Agent"
+    },
+    {
+      "name": "early_animal_parent",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_parent",
+      "type": "compositions::early_animal_parent::Agent"
+    },
+    {
+      "name": "early_animal_wait",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_001/proposals/early_animal_wait",
+      "type": "compositions::early_animal_wait::Agent"
+    },
+    {
+      "name": "early2_animal_adaptive_r0_c0_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_adaptive_r0_c0_b0",
+      "type": "compositions::early2_animal_adaptive_r0_c0_b0::Agent"
+    },
+    {
+      "name": "early2_animal_adaptive_r0_c0_b500",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_adaptive_r0_c0_b500",
+      "type": "compositions::early2_animal_adaptive_r0_c0_b500::Agent"
+    },
+    {
+      "name": "early2_animal_adaptive_r0_c3_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_adaptive_r0_c3_b0",
+      "type": "compositions::early2_animal_adaptive_r0_c3_b0::Agent"
+    },
+    {
+      "name": "early2_animal_adaptive_r0_c3_b500",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_adaptive_r0_c3_b500",
+      "type": "compositions::early2_animal_adaptive_r0_c3_b500::Agent"
+    },
+    {
+      "name": "early2_animal_adaptive_r0_c8_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_adaptive_r0_c8_b0",
+      "type": "compositions::early2_animal_adaptive_r0_c8_b0::Agent"
+    },
+    {
+      "name": "early2_animal_adaptive_r0_c8_b500",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_adaptive_r0_c8_b500",
+      "type": "compositions::early2_animal_adaptive_r0_c8_b500::Agent"
+    },
+    {
+      "name": "early2_animal_adaptive_r1_c0_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_adaptive_r1_c0_b0",
+      "type": "compositions::early2_animal_adaptive_r1_c0_b0::Agent"
+    },
+    {
+      "name": "early2_animal_adaptive_r1_c0_b500",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_adaptive_r1_c0_b500",
+      "type": "compositions::early2_animal_adaptive_r1_c0_b500::Agent"
+    },
+    {
+      "name": "early2_animal_adaptive_r1_c3_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_adaptive_r1_c3_b0",
+      "type": "compositions::early2_animal_adaptive_r1_c3_b0::Agent"
+    },
+    {
+      "name": "early2_animal_adaptive_r1_c3_b500",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_adaptive_r1_c3_b500",
+      "type": "compositions::early2_animal_adaptive_r1_c3_b500::Agent"
+    },
+    {
+      "name": "early2_animal_adaptive_r1_c8_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_adaptive_r1_c8_b0",
+      "type": "compositions::early2_animal_adaptive_r1_c8_b0::Agent"
+    },
+    {
+      "name": "early2_animal_adaptive_r1_c8_b500",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_adaptive_r1_c8_b500",
+      "type": "compositions::early2_animal_adaptive_r1_c8_b500::Agent"
+    },
+    {
+      "name": "early2_animal_d15_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_d15_i10",
+      "type": "compositions::early2_animal_d15_i10::Agent"
+    },
+    {
+      "name": "early2_animal_d15_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_d15_i11",
+      "type": "compositions::early2_animal_d15_i11::Agent"
+    },
+    {
+      "name": "early2_animal_d15_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_d15_i9",
+      "type": "compositions::early2_animal_d15_i9::Agent"
+    },
+    {
+      "name": "early2_animal_d3_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_d3_i10",
+      "type": "compositions::early2_animal_d3_i10::Agent"
+    },
+    {
+      "name": "early2_animal_d3_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_d3_i11",
+      "type": "compositions::early2_animal_d3_i11::Agent"
+    },
+    {
+      "name": "early2_animal_d3_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_d3_i9",
+      "type": "compositions::early2_animal_d3_i9::Agent"
+    },
+    {
+      "name": "early2_animal_d6_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_d6_i10",
+      "type": "compositions::early2_animal_d6_i10::Agent"
+    },
+    {
+      "name": "early2_animal_d6_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_d6_i11",
+      "type": "compositions::early2_animal_d6_i11::Agent"
+    },
+    {
+      "name": "early2_animal_d6_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_d6_i9",
+      "type": "compositions::early2_animal_d6_i9::Agent"
+    },
+    {
+      "name": "early2_animal_d9_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_d9_i10",
+      "type": "compositions::early2_animal_d9_i10::Agent"
+    },
+    {
+      "name": "early2_animal_d9_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_d9_i11",
+      "type": "compositions::early2_animal_d9_i11::Agent"
+    },
+    {
+      "name": "early2_animal_d9_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_d9_i9",
+      "type": "compositions::early2_animal_d9_i9::Agent"
+    },
+    {
+      "name": "early2_animal_parent",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_parent",
+      "type": "compositions::early2_animal_parent::Agent"
+    },
+    {
+      "name": "early2_animal_wait",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/general_animal_investments_002/proposals/early2_animal_wait",
+      "type": "compositions::early2_animal_wait::Agent"
+    },
+    {
+      "name": "handoff_day_smoke_0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/handoff_day_smoke/proposals/handoff_day_smoke_0",
+      "type": "compositions::handoff_day_smoke_0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t12_m0_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t12_m0_b0",
+      "type": "compositions::adaptive_p150_t12_m0_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t12_m0_b1000",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t12_m0_b1000",
+      "type": "compositions::adaptive_p150_t12_m0_b1000::Agent"
+    },
+    {
+      "name": "adaptive_p150_t12_m0_b300",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t12_m0_b300",
+      "type": "compositions::adaptive_p150_t12_m0_b300::Agent"
+    },
+    {
+      "name": "adaptive_p150_t12_m1_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t12_m1_b0",
+      "type": "compositions::adaptive_p150_t12_m1_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t12_m1_b1000",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t12_m1_b1000",
+      "type": "compositions::adaptive_p150_t12_m1_b1000::Agent"
+    },
+    {
+      "name": "adaptive_p150_t12_m1_b300",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t12_m1_b300",
+      "type": "compositions::adaptive_p150_t12_m1_b300::Agent"
+    },
+    {
+      "name": "adaptive_p150_t12_m2_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t12_m2_b0",
+      "type": "compositions::adaptive_p150_t12_m2_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t12_m3_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t12_m3_b0",
+      "type": "compositions::adaptive_p150_t12_m3_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t13_m0_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t13_m0_b0",
+      "type": "compositions::adaptive_p150_t13_m0_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t13_m0_b1000",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t13_m0_b1000",
+      "type": "compositions::adaptive_p150_t13_m0_b1000::Agent"
+    },
+    {
+      "name": "adaptive_p150_t13_m0_b300",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t13_m0_b300",
+      "type": "compositions::adaptive_p150_t13_m0_b300::Agent"
+    },
+    {
+      "name": "adaptive_p150_t13_m1_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t13_m1_b0",
+      "type": "compositions::adaptive_p150_t13_m1_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t13_m1_b1000",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t13_m1_b1000",
+      "type": "compositions::adaptive_p150_t13_m1_b1000::Agent"
+    },
+    {
+      "name": "adaptive_p150_t13_m1_b300",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t13_m1_b300",
+      "type": "compositions::adaptive_p150_t13_m1_b300::Agent"
+    },
+    {
+      "name": "adaptive_p150_t13_m2_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t13_m2_b0",
+      "type": "compositions::adaptive_p150_t13_m2_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t13_m3_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t13_m3_b0",
+      "type": "compositions::adaptive_p150_t13_m3_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t16_m0_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t16_m0_b0",
+      "type": "compositions::adaptive_p150_t16_m0_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t16_m0_b1000",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t16_m0_b1000",
+      "type": "compositions::adaptive_p150_t16_m0_b1000::Agent"
+    },
+    {
+      "name": "adaptive_p150_t16_m0_b300",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t16_m0_b300",
+      "type": "compositions::adaptive_p150_t16_m0_b300::Agent"
+    },
+    {
+      "name": "adaptive_p150_t16_m1_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t16_m1_b0",
+      "type": "compositions::adaptive_p150_t16_m1_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t16_m1_b1000",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t16_m1_b1000",
+      "type": "compositions::adaptive_p150_t16_m1_b1000::Agent"
+    },
+    {
+      "name": "adaptive_p150_t16_m1_b300",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t16_m1_b300",
+      "type": "compositions::adaptive_p150_t16_m1_b300::Agent"
+    },
+    {
+      "name": "adaptive_p150_t4_m0_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t4_m0_b0",
+      "type": "compositions::adaptive_p150_t4_m0_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t4_m0_b1000",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t4_m0_b1000",
+      "type": "compositions::adaptive_p150_t4_m0_b1000::Agent"
+    },
+    {
+      "name": "adaptive_p150_t4_m0_b300",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t4_m0_b300",
+      "type": "compositions::adaptive_p150_t4_m0_b300::Agent"
+    },
+    {
+      "name": "adaptive_p150_t4_m1_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t4_m1_b0",
+      "type": "compositions::adaptive_p150_t4_m1_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t4_m1_b1000",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t4_m1_b1000",
+      "type": "compositions::adaptive_p150_t4_m1_b1000::Agent"
+    },
+    {
+      "name": "adaptive_p150_t4_m1_b300",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t4_m1_b300",
+      "type": "compositions::adaptive_p150_t4_m1_b300::Agent"
+    },
+    {
+      "name": "adaptive_p150_t4_m2_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t4_m2_b0",
+      "type": "compositions::adaptive_p150_t4_m2_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t4_m3_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t4_m3_b0",
+      "type": "compositions::adaptive_p150_t4_m3_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t5_m0_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t5_m0_b0",
+      "type": "compositions::adaptive_p150_t5_m0_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t5_m0_b1000",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t5_m0_b1000",
+      "type": "compositions::adaptive_p150_t5_m0_b1000::Agent"
+    },
+    {
+      "name": "adaptive_p150_t5_m0_b300",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t5_m0_b300",
+      "type": "compositions::adaptive_p150_t5_m0_b300::Agent"
+    },
+    {
+      "name": "adaptive_p150_t5_m1_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t5_m1_b0",
+      "type": "compositions::adaptive_p150_t5_m1_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t5_m1_b1000",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t5_m1_b1000",
+      "type": "compositions::adaptive_p150_t5_m1_b1000::Agent"
+    },
+    {
+      "name": "adaptive_p150_t5_m1_b300",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t5_m1_b300",
+      "type": "compositions::adaptive_p150_t5_m1_b300::Agent"
+    },
+    {
+      "name": "adaptive_p150_t5_m2_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t5_m2_b0",
+      "type": "compositions::adaptive_p150_t5_m2_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t5_m3_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t5_m3_b0",
+      "type": "compositions::adaptive_p150_t5_m3_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t8_m0_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t8_m0_b0",
+      "type": "compositions::adaptive_p150_t8_m0_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t8_m0_b1000",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t8_m0_b1000",
+      "type": "compositions::adaptive_p150_t8_m0_b1000::Agent"
+    },
+    {
+      "name": "adaptive_p150_t8_m0_b300",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t8_m0_b300",
+      "type": "compositions::adaptive_p150_t8_m0_b300::Agent"
+    },
+    {
+      "name": "adaptive_p150_t8_m1_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t8_m1_b0",
+      "type": "compositions::adaptive_p150_t8_m1_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t8_m1_b1000",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t8_m1_b1000",
+      "type": "compositions::adaptive_p150_t8_m1_b1000::Agent"
+    },
+    {
+      "name": "adaptive_p150_t8_m1_b300",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t8_m1_b300",
+      "type": "compositions::adaptive_p150_t8_m1_b300::Agent"
+    },
+    {
+      "name": "adaptive_p150_t8_m2_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t8_m2_b0",
+      "type": "compositions::adaptive_p150_t8_m2_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t8_m3_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t8_m3_b0",
+      "type": "compositions::adaptive_p150_t8_m3_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t9_m0_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t9_m0_b0",
+      "type": "compositions::adaptive_p150_t9_m0_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t9_m0_b1000",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t9_m0_b1000",
+      "type": "compositions::adaptive_p150_t9_m0_b1000::Agent"
+    },
+    {
+      "name": "adaptive_p150_t9_m0_b300",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t9_m0_b300",
+      "type": "compositions::adaptive_p150_t9_m0_b300::Agent"
+    },
+    {
+      "name": "adaptive_p150_t9_m1_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t9_m1_b0",
+      "type": "compositions::adaptive_p150_t9_m1_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t9_m1_b1000",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t9_m1_b1000",
+      "type": "compositions::adaptive_p150_t9_m1_b1000::Agent"
+    },
+    {
+      "name": "adaptive_p150_t9_m1_b300",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t9_m1_b300",
+      "type": "compositions::adaptive_p150_t9_m1_b300::Agent"
+    },
+    {
+      "name": "adaptive_p150_t9_m2_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t9_m2_b0",
+      "type": "compositions::adaptive_p150_t9_m2_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t9_m3_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/herd_projection_adaptation_001/proposals/adaptive_p150_t9_m3_b0",
+      "type": "compositions::adaptive_p150_t9_m3_b0::Agent"
+    },
+    {
+      "name": "ticket_p150_t12_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_king_tickets_001/proposals/ticket_p150_t12_i9",
+      "type": "compositions::ticket_p150_t12_i9::Agent"
+    },
+    {
+      "name": "ticket_p150_t13_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_king_tickets_001/proposals/ticket_p150_t13_i9",
+      "type": "compositions::ticket_p150_t13_i9::Agent"
+    },
+    {
+      "name": "ticket_p150_t16_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_king_tickets_001/proposals/ticket_p150_t16_i10",
+      "type": "compositions::ticket_p150_t16_i10::Agent"
+    },
+    {
+      "name": "ticket_p150_t16_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_king_tickets_001/proposals/ticket_p150_t16_i11",
+      "type": "compositions::ticket_p150_t16_i11::Agent"
+    },
+    {
+      "name": "ticket_p150_t4_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_king_tickets_001/proposals/ticket_p150_t4_i11",
+      "type": "compositions::ticket_p150_t4_i11::Agent"
+    },
+    {
+      "name": "ticket_p150_t5_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_king_tickets_001/proposals/ticket_p150_t5_i11",
+      "type": "compositions::ticket_p150_t5_i11::Agent"
+    },
+    {
+      "name": "ticket_p150_t8_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_king_tickets_001/proposals/ticket_p150_t8_i11",
+      "type": "compositions::ticket_p150_t8_i11::Agent"
+    },
+    {
+      "name": "ticket_p150_t8_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_king_tickets_001/proposals/ticket_p150_t8_i9",
+      "type": "compositions::ticket_p150_t8_i9::Agent"
+    },
+    {
+      "name": "ticket_p150_t9_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_king_tickets_001/proposals/ticket_p150_t9_i11",
+      "type": "compositions::ticket_p150_t9_i11::Agent"
+    },
+    {
+      "name": "ticket_p150_t9_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_king_tickets_001/proposals/ticket_p150_t9_i9",
+      "type": "compositions::ticket_p150_t9_i9::Agent"
+    },
+    {
+      "name": "ticket_p150_t12_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_self_tickets_001/proposals/ticket_p150_t12_i9",
+      "type": "compositions::ticket_p150_t12_i9::Agent"
+    },
+    {
+      "name": "ticket_p150_t13_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_self_tickets_001/proposals/ticket_p150_t13_i9",
+      "type": "compositions::ticket_p150_t13_i9::Agent"
+    },
+    {
+      "name": "ticket_p150_t16_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_self_tickets_001/proposals/ticket_p150_t16_i10",
+      "type": "compositions::ticket_p150_t16_i10::Agent"
+    },
+    {
+      "name": "ticket_p150_t16_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_self_tickets_001/proposals/ticket_p150_t16_i11",
+      "type": "compositions::ticket_p150_t16_i11::Agent"
+    },
+    {
+      "name": "ticket_p150_t4_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_self_tickets_001/proposals/ticket_p150_t4_i9",
+      "type": "compositions::ticket_p150_t4_i9::Agent"
+    },
+    {
+      "name": "ticket_p150_t5_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_self_tickets_001/proposals/ticket_p150_t5_i11",
+      "type": "compositions::ticket_p150_t5_i11::Agent"
+    },
+    {
+      "name": "ticket_p150_t8_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_self_tickets_001/proposals/ticket_p150_t8_i11",
+      "type": "compositions::ticket_p150_t8_i11::Agent"
+    },
+    {
+      "name": "ticket_p150_t8_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_self_tickets_001/proposals/ticket_p150_t8_i9",
+      "type": "compositions::ticket_p150_t8_i9::Agent"
+    },
+    {
+      "name": "ticket_p150_t9_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_self_tickets_001/proposals/ticket_p150_t9_i11",
+      "type": "compositions::ticket_p150_t9_i11::Agent"
+    },
+    {
+      "name": "ticket_p150_t9_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin150_self_tickets_001/proposals/ticket_p150_t9_i9",
+      "type": "compositions::ticket_p150_t9_i9::Agent"
+    },
+    {
+      "name": "justin_reduce_care_001_0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_care_001/proposals/justin_reduce_care_001_0",
+      "type": "compositions::justin_reduce_care_001_0::Agent"
+    },
+    {
+      "name": "justin_reduce_care_001_1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_care_001/proposals/justin_reduce_care_001_1",
+      "type": "compositions::justin_reduce_care_001_1::Agent"
+    },
+    {
+      "name": "justin_reduce_care_001_10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_care_001/proposals/justin_reduce_care_001_10",
+      "type": "compositions::justin_reduce_care_001_10::Agent"
+    },
+    {
+      "name": "justin_reduce_care_001_11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_care_001/proposals/justin_reduce_care_001_11",
+      "type": "compositions::justin_reduce_care_001_11::Agent"
+    },
+    {
+      "name": "justin_reduce_care_001_12",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_care_001/proposals/justin_reduce_care_001_12",
+      "type": "compositions::justin_reduce_care_001_12::Agent"
+    },
+    {
+      "name": "justin_reduce_care_001_13",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_care_001/proposals/justin_reduce_care_001_13",
+      "type": "compositions::justin_reduce_care_001_13::Agent"
+    },
+    {
+      "name": "justin_reduce_care_001_14",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_care_001/proposals/justin_reduce_care_001_14",
+      "type": "compositions::justin_reduce_care_001_14::Agent"
+    },
+    {
+      "name": "justin_reduce_care_001_15",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_care_001/proposals/justin_reduce_care_001_15",
+      "type": "compositions::justin_reduce_care_001_15::Agent"
+    },
+    {
+      "name": "justin_reduce_care_001_3",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_care_001/proposals/justin_reduce_care_001_3",
+      "type": "compositions::justin_reduce_care_001_3::Agent"
+    },
+    {
+      "name": "justin_reduce_care_001_4",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_care_001/proposals/justin_reduce_care_001_4",
+      "type": "compositions::justin_reduce_care_001_4::Agent"
+    },
+    {
+      "name": "justin_reduce_care_001_5",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_care_001/proposals/justin_reduce_care_001_5",
+      "type": "compositions::justin_reduce_care_001_5::Agent"
+    },
+    {
+      "name": "justin_reduce_care_001_8",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_care_001/proposals/justin_reduce_care_001_8",
+      "type": "compositions::justin_reduce_care_001_8::Agent"
+    },
+    {
+      "name": "justin_reduce_care_001_9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_care_001/proposals/justin_reduce_care_001_9",
+      "type": "compositions::justin_reduce_care_001_9::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_0",
+      "type": "compositions::justin_reduce_hires_001_0::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_1",
+      "type": "compositions::justin_reduce_hires_001_1::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_10",
+      "type": "compositions::justin_reduce_hires_001_10::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_11",
+      "type": "compositions::justin_reduce_hires_001_11::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_12",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_12",
+      "type": "compositions::justin_reduce_hires_001_12::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_13",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_13",
+      "type": "compositions::justin_reduce_hires_001_13::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_14",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_14",
+      "type": "compositions::justin_reduce_hires_001_14::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_15",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_15",
+      "type": "compositions::justin_reduce_hires_001_15::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_16",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_16",
+      "type": "compositions::justin_reduce_hires_001_16::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_17",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_17",
+      "type": "compositions::justin_reduce_hires_001_17::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_18",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_18",
+      "type": "compositions::justin_reduce_hires_001_18::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_2",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_2",
+      "type": "compositions::justin_reduce_hires_001_2::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_20",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_20",
+      "type": "compositions::justin_reduce_hires_001_20::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_21",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_21",
+      "type": "compositions::justin_reduce_hires_001_21::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_22",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_22",
+      "type": "compositions::justin_reduce_hires_001_22::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_23",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_23",
+      "type": "compositions::justin_reduce_hires_001_23::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_24",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_24",
+      "type": "compositions::justin_reduce_hires_001_24::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_25",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_25",
+      "type": "compositions::justin_reduce_hires_001_25::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_4",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_4",
+      "type": "compositions::justin_reduce_hires_001_4::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_5",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_5",
+      "type": "compositions::justin_reduce_hires_001_5::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_7",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_7",
+      "type": "compositions::justin_reduce_hires_001_7::Agent"
+    },
+    {
+      "name": "justin_reduce_hires_001_9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_9",
+      "type": "compositions::justin_reduce_hires_001_9::Agent"
+    },
+    {
+      "name": "ticket_p150_t12_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_king_tickets_001/proposals/ticket_p150_t12_i9",
+      "type": "compositions::ticket_p150_t12_i9::Agent"
+    },
+    {
+      "name": "ticket_p150_t13_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_king_tickets_001/proposals/ticket_p150_t13_i9",
+      "type": "compositions::ticket_p150_t13_i9::Agent"
+    },
+    {
+      "name": "ticket_p150_t16_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_king_tickets_001/proposals/ticket_p150_t16_i10",
+      "type": "compositions::ticket_p150_t16_i10::Agent"
+    },
+    {
+      "name": "ticket_p150_t16_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_king_tickets_001/proposals/ticket_p150_t16_i11",
+      "type": "compositions::ticket_p150_t16_i11::Agent"
+    },
+    {
+      "name": "ticket_p150_t4_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_king_tickets_001/proposals/ticket_p150_t4_i11",
+      "type": "compositions::ticket_p150_t4_i11::Agent"
+    },
+    {
+      "name": "ticket_p150_t5_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_king_tickets_001/proposals/ticket_p150_t5_i11",
+      "type": "compositions::ticket_p150_t5_i11::Agent"
+    },
+    {
+      "name": "ticket_p150_t8_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_king_tickets_001/proposals/ticket_p150_t8_i11",
+      "type": "compositions::ticket_p150_t8_i11::Agent"
+    },
+    {
+      "name": "ticket_p150_t8_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_king_tickets_001/proposals/ticket_p150_t8_i9",
+      "type": "compositions::ticket_p150_t8_i9::Agent"
+    },
+    {
+      "name": "ticket_p150_t9_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_king_tickets_001/proposals/ticket_p150_t9_i11",
+      "type": "compositions::ticket_p150_t9_i11::Agent"
+    },
+    {
+      "name": "ticket_p150_t9_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_king_tickets_001/proposals/ticket_p150_t9_i9",
+      "type": "compositions::ticket_p150_t9_i9::Agent"
+    },
+    {
+      "name": "ticket_terminal_p150_t12_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_self_tickets_001/proposals/ticket_terminal_p150_t12_i9",
+      "type": "compositions::ticket_terminal_p150_t12_i9::Agent"
+    },
+    {
+      "name": "ticket_terminal_p150_t13_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_self_tickets_001/proposals/ticket_terminal_p150_t13_i9",
+      "type": "compositions::ticket_terminal_p150_t13_i9::Agent"
+    },
+    {
+      "name": "ticket_terminal_p150_t16_i10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_self_tickets_001/proposals/ticket_terminal_p150_t16_i10",
+      "type": "compositions::ticket_terminal_p150_t16_i10::Agent"
+    },
+    {
+      "name": "ticket_terminal_p150_t16_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_self_tickets_001/proposals/ticket_terminal_p150_t16_i11",
+      "type": "compositions::ticket_terminal_p150_t16_i11::Agent"
+    },
+    {
+      "name": "ticket_terminal_p150_t4_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_self_tickets_001/proposals/ticket_terminal_p150_t4_i9",
+      "type": "compositions::ticket_terminal_p150_t4_i9::Agent"
+    },
+    {
+      "name": "ticket_terminal_p150_t5_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_self_tickets_001/proposals/ticket_terminal_p150_t5_i11",
+      "type": "compositions::ticket_terminal_p150_t5_i11::Agent"
+    },
+    {
+      "name": "ticket_terminal_p150_t8_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_self_tickets_001/proposals/ticket_terminal_p150_t8_i11",
+      "type": "compositions::ticket_terminal_p150_t8_i11::Agent"
+    },
+    {
+      "name": "ticket_terminal_p150_t8_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_self_tickets_001/proposals/ticket_terminal_p150_t8_i9",
+      "type": "compositions::ticket_terminal_p150_t8_i9::Agent"
+    },
+    {
+      "name": "ticket_terminal_p150_t9_i11",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_self_tickets_001/proposals/ticket_terminal_p150_t9_i11",
+      "type": "compositions::ticket_terminal_p150_t9_i11::Agent"
+    },
+    {
+      "name": "ticket_terminal_p150_t9_i9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/justin_terminal_self_tickets_001/proposals/ticket_terminal_p150_t9_i9",
+      "type": "compositions::ticket_terminal_p150_t9_i9::Agent"
+    },
+    {
+      "name": "reduce_hires_001_13",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_13",
+      "type": "compositions::reduce_hires_001_13::Agent"
+    },
+    {
+      "name": "reduce_hires_001_14",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_14",
+      "type": "compositions::reduce_hires_001_14::Agent"
+    },
+    {
+      "name": "reduce_hires_001_15",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_15",
+      "type": "compositions::reduce_hires_001_15::Agent"
+    },
+    {
+      "name": "reduce_hires_001_2",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_2",
+      "type": "compositions::reduce_hires_001_2::Agent"
+    },
+    {
+      "name": "reduce_hires_001_20",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_20",
+      "type": "compositions::reduce_hires_001_20::Agent"
+    },
+    {
+      "name": "reduce_hires_001_21",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_21",
+      "type": "compositions::reduce_hires_001_21::Agent"
+    },
+    {
+      "name": "reduce_hires_001_22",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_22",
+      "type": "compositions::reduce_hires_001_22::Agent"
+    },
+    {
+      "name": "reduce_hires_001_23",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_23",
+      "type": "compositions::reduce_hires_001_23::Agent"
+    },
+    {
+      "name": "reduce_hires_001_24",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_24",
+      "type": "compositions::reduce_hires_001_24::Agent"
+    },
+    {
+      "name": "reduce_hires_001_25",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_25",
+      "type": "compositions::reduce_hires_001_25::Agent"
+    },
+    {
+      "name": "reduce_hires_001_3",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_3",
+      "type": "compositions::reduce_hires_001_3::Agent"
+    },
+    {
+      "name": "reduce_hires_001_4",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_4",
+      "type": "compositions::reduce_hires_001_4::Agent"
+    },
+    {
+      "name": "reduce_hires_001_5",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_5",
+      "type": "compositions::reduce_hires_001_5::Agent"
+    },
+    {
+      "name": "reduce_hires_001_7",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_7",
+      "type": "compositions::reduce_hires_001_7::Agent"
+    },
+    {
+      "name": "reduce_hires_001_8",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_8",
+      "type": "compositions::reduce_hires_001_8::Agent"
+    },
+    {
+      "name": "remove_care_001_0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/remove_care_001/proposals/remove_care_001_0",
+      "type": "compositions::remove_care_001_0::Agent"
+    },
+    {
+      "name": "remove_care_001_10",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/remove_care_001/proposals/remove_care_001_10",
+      "type": "compositions::remove_care_001_10::Agent"
+    },
+    {
+      "name": "remove_care_001_2",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/remove_care_001/proposals/remove_care_001_2",
+      "type": "compositions::remove_care_001_2::Agent"
+    },
+    {
+      "name": "remove_care_001_3",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/remove_care_001/proposals/remove_care_001_3",
+      "type": "compositions::remove_care_001_3::Agent"
+    },
+    {
+      "name": "remove_care_001_4",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/remove_care_001/proposals/remove_care_001_4",
+      "type": "compositions::remove_care_001_4::Agent"
+    },
+    {
+      "name": "remove_care_001_5",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/remove_care_001/proposals/remove_care_001_5",
+      "type": "compositions::remove_care_001_5::Agent"
+    },
+    {
+      "name": "remove_care_001_6",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/remove_care_001/proposals/remove_care_001_6",
+      "type": "compositions::remove_care_001_6::Agent"
+    },
+    {
+      "name": "remove_care_001_7",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/remove_care_001/proposals/remove_care_001_7",
+      "type": "compositions::remove_care_001_7::Agent"
+    },
+    {
+      "name": "remove_care_001_8",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/remove_care_001/proposals/remove_care_001_8",
+      "type": "compositions::remove_care_001_8::Agent"
+    },
+    {
+      "name": "remove_care_001_9",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/remove_care_001/proposals/remove_care_001_9",
+      "type": "compositions::remove_care_001_9::Agent"
+    },
+    {
+      "name": "sample_early_m0_r0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_early_m0_r0",
+      "type": "compositions::sample_early_m0_r0::Agent"
+    },
+    {
+      "name": "sample_early_m0_r1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_early_m0_r1",
+      "type": "compositions::sample_early_m0_r1::Agent"
+    },
+    {
+      "name": "sample_early_m1_r0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_early_m1_r0",
+      "type": "compositions::sample_early_m1_r0::Agent"
+    },
+    {
+      "name": "sample_early_m1_r1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_early_m1_r1",
+      "type": "compositions::sample_early_m1_r1::Agent"
+    },
+    {
+      "name": "sample_early_m32_r0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_early_m32_r0",
+      "type": "compositions::sample_early_m32_r0::Agent"
+    },
+    {
+      "name": "sample_early_m32_r1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_early_m32_r1",
+      "type": "compositions::sample_early_m32_r1::Agent"
+    },
+    {
+      "name": "sample_early_m64_r0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_early_m64_r0",
+      "type": "compositions::sample_early_m64_r0::Agent"
+    },
+    {
+      "name": "sample_early_m64_r1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_early_m64_r1",
+      "type": "compositions::sample_early_m64_r1::Agent"
+    },
+    {
+      "name": "sample_early_m8_r0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_early_m8_r0",
+      "type": "compositions::sample_early_m8_r0::Agent"
+    },
+    {
+      "name": "sample_early_m8_r1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_early_m8_r1",
+      "type": "compositions::sample_early_m8_r1::Agent"
+    },
+    {
+      "name": "sample_late_m0_r0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_late_m0_r0",
+      "type": "compositions::sample_late_m0_r0::Agent"
+    },
+    {
+      "name": "sample_late_m0_r1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_late_m0_r1",
+      "type": "compositions::sample_late_m0_r1::Agent"
+    },
+    {
+      "name": "sample_late_m1_r0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_late_m1_r0",
+      "type": "compositions::sample_late_m1_r0::Agent"
+    },
+    {
+      "name": "sample_late_m1_r1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_late_m1_r1",
+      "type": "compositions::sample_late_m1_r1::Agent"
+    },
+    {
+      "name": "sample_late_m32_r0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_late_m32_r0",
+      "type": "compositions::sample_late_m32_r0::Agent"
+    },
+    {
+      "name": "sample_late_m32_r1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_late_m32_r1",
+      "type": "compositions::sample_late_m32_r1::Agent"
+    },
+    {
+      "name": "sample_late_m64_r0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_late_m64_r0",
+      "type": "compositions::sample_late_m64_r0::Agent"
+    },
+    {
+      "name": "sample_late_m64_r1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_late_m64_r1",
+      "type": "compositions::sample_late_m64_r1::Agent"
+    },
+    {
+      "name": "sample_late_m8_r0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_late_m8_r0",
+      "type": "compositions::sample_late_m8_r0::Agent"
+    },
+    {
+      "name": "sample_late_m8_r1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/sampled_investments_001/proposals/sample_late_m8_r1",
+      "type": "compositions::sample_late_m8_r1::Agent"
+    },
+    {
+      "name": "search_v0_120",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_120",
+      "type": "compositions::search_v0_120::Agent"
+    },
+    {
+      "name": "search_v0_165",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_165",
+      "type": "compositions::search_v0_165::Agent"
+    },
+    {
+      "name": "search_v0_177",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_177",
+      "type": "compositions::search_v0_177::Agent"
+    },
+    {
+      "name": "search_v0_198",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_198",
+      "type": "compositions::search_v0_198::Agent"
+    },
+    {
+      "name": "search_v0_217",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_217",
+      "type": "compositions::search_v0_217::Agent"
+    },
+    {
+      "name": "search_v0_218",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_218",
+      "type": "compositions::search_v0_218::Agent"
+    },
+    {
+      "name": "search_v0_224",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_224",
+      "type": "compositions::search_v0_224::Agent"
+    },
+    {
+      "name": "search_v0_234",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_234",
+      "type": "compositions::search_v0_234::Agent"
+    },
+    {
+      "name": "search_v0_240",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_240",
+      "type": "compositions::search_v0_240::Agent"
+    },
+    {
+      "name": "search_v0_262",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_262",
+      "type": "compositions::search_v0_262::Agent"
+    },
+    {
+      "name": "search_v0_287",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_287",
+      "type": "compositions::search_v0_287::Agent"
+    },
+    {
+      "name": "search_v0_310",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_310",
+      "type": "compositions::search_v0_310::Agent"
+    },
+    {
+      "name": "search_v0_318",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_318",
+      "type": "compositions::search_v0_318::Agent"
+    },
+    {
+      "name": "search_v0_33",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_33",
+      "type": "compositions::search_v0_33::Agent"
+    },
+    {
+      "name": "search_v0_333",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_333",
+      "type": "compositions::search_v0_333::Agent"
+    },
+    {
+      "name": "search_v0_372",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_372",
+      "type": "compositions::search_v0_372::Agent"
+    },
+    {
+      "name": "search_v0_383",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_383",
+      "type": "compositions::search_v0_383::Agent"
+    },
+    {
+      "name": "search_v0_390",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_390",
+      "type": "compositions::search_v0_390::Agent"
+    },
+    {
+      "name": "search_v0_4",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_4",
+      "type": "compositions::search_v0_4::Agent"
+    },
+    {
+      "name": "search_v0_402",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_402",
+      "type": "compositions::search_v0_402::Agent"
+    },
+    {
+      "name": "search_v0_404",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_404",
+      "type": "compositions::search_v0_404::Agent"
+    },
+    {
+      "name": "search_v0_418",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_418",
+      "type": "compositions::search_v0_418::Agent"
+    },
+    {
+      "name": "search_v0_426",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_426",
+      "type": "compositions::search_v0_426::Agent"
+    },
+    {
+      "name": "search_v0_434",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_434",
+      "type": "compositions::search_v0_434::Agent"
+    },
+    {
+      "name": "search_v0_458",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_458",
+      "type": "compositions::search_v0_458::Agent"
+    },
+    {
+      "name": "search_v0_465",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_465",
+      "type": "compositions::search_v0_465::Agent"
+    },
+    {
+      "name": "search_v0_479",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_479",
+      "type": "compositions::search_v0_479::Agent"
+    },
+    {
+      "name": "search_v0_488",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_488",
+      "type": "compositions::search_v0_488::Agent"
+    },
+    {
+      "name": "search_v0_502",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_502",
+      "type": "compositions::search_v0_502::Agent"
+    },
+    {
+      "name": "search_v0_525",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_525",
+      "type": "compositions::search_v0_525::Agent"
+    },
+    {
+      "name": "search_v0_530",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_530",
+      "type": "compositions::search_v0_530::Agent"
+    },
+    {
+      "name": "search_v0_540",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_540",
+      "type": "compositions::search_v0_540::Agent"
+    },
+    {
+      "name": "search_v0_55",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_55",
+      "type": "compositions::search_v0_55::Agent"
+    },
+    {
+      "name": "search_v0_570",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_570",
+      "type": "compositions::search_v0_570::Agent"
+    },
+    {
+      "name": "search_v0_59",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_59",
+      "type": "compositions::search_v0_59::Agent"
+    },
+    {
+      "name": "search_v0_67",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_001/proposals/search_v0_67",
+      "type": "compositions::search_v0_67::Agent"
+    },
+    {
+      "name": "search_v0_package_check_p67",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_package_check/proposals/search_v0_package_check_p67",
+      "type": "compositions::search_v0_package_check_p67::Agent"
+    },
+    {
+      "name": "search_v0_package_check_p72",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/search_v0_package_check/proposals/search_v0_package_check_p72",
+      "type": "compositions::search_v0_package_check_p72::Agent"
+    },
+    {
+      "name": "adaptive_p150_t12_m2_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_count_adaptation_001/proposals/adaptive_p150_t12_m2_b0",
+      "type": "compositions::adaptive_p150_t12_m2_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t12_m3_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_count_adaptation_001/proposals/adaptive_p150_t12_m3_b0",
+      "type": "compositions::adaptive_p150_t12_m3_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t13_m2_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_count_adaptation_001/proposals/adaptive_p150_t13_m2_b0",
+      "type": "compositions::adaptive_p150_t13_m2_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t13_m3_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_count_adaptation_001/proposals/adaptive_p150_t13_m3_b0",
+      "type": "compositions::adaptive_p150_t13_m3_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t4_m2_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_count_adaptation_001/proposals/adaptive_p150_t4_m2_b0",
+      "type": "compositions::adaptive_p150_t4_m2_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t4_m3_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_count_adaptation_001/proposals/adaptive_p150_t4_m3_b0",
+      "type": "compositions::adaptive_p150_t4_m3_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t5_m2_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_count_adaptation_001/proposals/adaptive_p150_t5_m2_b0",
+      "type": "compositions::adaptive_p150_t5_m2_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t5_m3_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_count_adaptation_001/proposals/adaptive_p150_t5_m3_b0",
+      "type": "compositions::adaptive_p150_t5_m3_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t8_m2_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_count_adaptation_001/proposals/adaptive_p150_t8_m2_b0",
+      "type": "compositions::adaptive_p150_t8_m2_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t8_m3_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_count_adaptation_001/proposals/adaptive_p150_t8_m3_b0",
+      "type": "compositions::adaptive_p150_t8_m3_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t9_m2_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_count_adaptation_001/proposals/adaptive_p150_t9_m2_b0",
+      "type": "compositions::adaptive_p150_t9_m2_b0::Agent"
+    },
+    {
+      "name": "adaptive_p150_t9_m3_b0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_count_adaptation_001/proposals/adaptive_p150_t9_m3_b0",
+      "type": "compositions::adaptive_p150_t9_m3_b0::Agent"
+    },
+    {
+      "name": "shop_herd_s0_m3_g0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s0_m3_g0",
+      "type": "compositions::shop_herd_s0_m3_g0::Agent"
+    },
+    {
+      "name": "shop_herd_s0_m3_g1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s0_m3_g1",
+      "type": "compositions::shop_herd_s0_m3_g1::Agent"
+    },
+    {
+      "name": "shop_herd_s1_m2_g0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s1_m2_g0",
+      "type": "compositions::shop_herd_s1_m2_g0::Agent"
+    },
+    {
+      "name": "shop_herd_s1_m2_g1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s1_m2_g1",
+      "type": "compositions::shop_herd_s1_m2_g1::Agent"
+    },
+    {
+      "name": "shop_herd_s1_m3_g0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s1_m3_g0",
+      "type": "compositions::shop_herd_s1_m3_g0::Agent"
+    },
+    {
+      "name": "shop_herd_s1_m3_g1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s1_m3_g1",
+      "type": "compositions::shop_herd_s1_m3_g1::Agent"
+    },
+    {
+      "name": "shop_herd_s2_m2_g0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s2_m2_g0",
+      "type": "compositions::shop_herd_s2_m2_g0::Agent"
+    },
+    {
+      "name": "shop_herd_s2_m2_g1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s2_m2_g1",
+      "type": "compositions::shop_herd_s2_m2_g1::Agent"
+    },
+    {
+      "name": "shop_herd_s2_m3_g0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s2_m3_g0",
+      "type": "compositions::shop_herd_s2_m3_g0::Agent"
+    },
+    {
+      "name": "shop_herd_s2_m3_g1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s2_m3_g1",
+      "type": "compositions::shop_herd_s2_m3_g1::Agent"
+    },
+    {
+      "name": "shop_herd_s3_m2_g0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s3_m2_g0",
+      "type": "compositions::shop_herd_s3_m2_g0::Agent"
+    },
+    {
+      "name": "shop_herd_s3_m2_g1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s3_m2_g1",
+      "type": "compositions::shop_herd_s3_m2_g1::Agent"
+    },
+    {
+      "name": "shop_herd_s3_m3_g0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s3_m3_g0",
+      "type": "compositions::shop_herd_s3_m3_g0::Agent"
+    },
+    {
+      "name": "shop_herd_s3_m3_g1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s3_m3_g1",
+      "type": "compositions::shop_herd_s3_m3_g1::Agent"
+    },
+    {
+      "name": "shop_herd_s4_m2_g0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s4_m2_g0",
+      "type": "compositions::shop_herd_s4_m2_g0::Agent"
+    },
+    {
+      "name": "shop_herd_s4_m2_g1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s4_m2_g1",
+      "type": "compositions::shop_herd_s4_m2_g1::Agent"
+    },
+    {
+      "name": "shop_herd_s4_m3_g0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s4_m3_g0",
+      "type": "compositions::shop_herd_s4_m3_g0::Agent"
+    },
+    {
+      "name": "shop_herd_s4_m3_g1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s4_m3_g1",
+      "type": "compositions::shop_herd_s4_m3_g1::Agent"
+    },
+    {
+      "name": "shop_herd_s5_m2_g0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s5_m2_g0",
+      "type": "compositions::shop_herd_s5_m2_g0::Agent"
+    },
+    {
+      "name": "shop_herd_s5_m2_g1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s5_m2_g1",
+      "type": "compositions::shop_herd_s5_m2_g1::Agent"
+    },
+    {
+      "name": "shop_herd_s5_m3_g0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s5_m3_g0",
+      "type": "compositions::shop_herd_s5_m3_g0::Agent"
+    },
+    {
+      "name": "shop_herd_s5_m3_g1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s5_m3_g1",
+      "type": "compositions::shop_herd_s5_m3_g1::Agent"
+    },
+    {
+      "name": "shop_herd_s6_m2_g0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s6_m2_g0",
+      "type": "compositions::shop_herd_s6_m2_g0::Agent"
+    },
+    {
+      "name": "shop_herd_s6_m2_g1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s6_m2_g1",
+      "type": "compositions::shop_herd_s6_m2_g1::Agent"
+    },
+    {
+      "name": "shop_herd_s6_m3_g0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s6_m3_g0",
+      "type": "compositions::shop_herd_s6_m3_g0::Agent"
+    },
+    {
+      "name": "shop_herd_s6_m3_g1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s6_m3_g1",
+      "type": "compositions::shop_herd_s6_m3_g1::Agent"
+    },
+    {
+      "name": "shop_herd_s7_m2_g0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s7_m2_g0",
+      "type": "compositions::shop_herd_s7_m2_g0::Agent"
+    },
+    {
+      "name": "shop_herd_s7_m2_g1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s7_m2_g1",
+      "type": "compositions::shop_herd_s7_m2_g1::Agent"
+    },
+    {
+      "name": "shop_herd_s7_m3_g0",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s7_m3_g0",
+      "type": "compositions::shop_herd_s7_m3_g0::Agent"
+    },
+    {
+      "name": "shop_herd_s7_m3_g1",
+      "package": "workspace/experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s7_m3_g1",
+      "type": "compositions::shop_herd_s7_m3_g1::Agent"
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+import os, glob, json, math, statistics, collections, importlib.util
+import numpy as np, pandas as pd
+import matplotlib.pyplot as plt
+
+plt.rcParams.update({"figure.dpi": 120, "font.size": 11, "axes.grid": True, "grid.alpha": 0.25,
+                     "axes.spines.top": False, "axes.spines.right": False})
+INK, ACC, MUT, GD = "#1b2a4a", "#c1440e", "#8a94a6", "#c29a22"
+
+def find(name):
+    hits = glob.glob(f"/kaggle/input/**/{name}", recursive=True)
+    assert hits, (name, os.listdir("/kaggle/input"))
+    return hits[0]
+
+results = pd.read_csv(find("results.csv"))
+table1 = json.load(open(find("table.json")))["pairs"]
+table2 = json.load(open(find("table2.json")))["pairs"]
+valid = json.load(open(find("validate2.json")))
+diverge = pd.read_csv(find("tape_divergence.csv"))
+profiles = pd.read_csv(find("tape_profiles.csv"))
+gaps = pd.read_csv(find("gap_breakdown.csv"))
+spec = importlib.util.spec_from_file_location("yh", find("yhay81_main.py"))
+yh = importlib.util.module_from_spec(spec); spec.loader.exec_module(yh)
+print(f"games in results.csv: {len(results)}, agents: {dict(results['agent'].value_counts().sort_index())}")
+print(f"opponents: {sorted(results['opponent'].unique())}, seeds {results['seed'].min()}..{results['seed'].max()}")
+print(f"tapes in the router: {len(yh._ROUTES)}, branch steps {yh.FIRST_BRANCH_STEP} and {yh.SECOND_BRANCH_STEP}, "
+      f"second-branch keys: {len(yh.SECOND_ROUTES)}")
+
+# ---- cell ----
+
+n = len(yh._ROUTES)
+M = np.full((n, n), 0, dtype=int)
+for _, r in diverge.iterrows():
+    M[int(r.tape_a), int(r.tape_b)] = M[int(r.tape_b), int(r.tape_a)] = int(r.first_divergence_step)
+print("step at which each pair of tapes first differs")
+print("     " + "".join(f"{j:>5}" for j in range(n)))
+for i in range(n):
+    print(f"{i:>4} " + "".join(f"{M[i, j]:>5}" if i != j else "    ." for j in range(n)))
+late = int((diverge["first_divergence_step"] >= 216).sum())
+print(f"\npairs still identical at step 216: {late} of {len(diverge)}; latest divergence: step {diverge['first_divergence_step'].max()}")
+print(f"first shop routes: {collections.Counter(yh.FIRST_ROUTES.values())}")
+print(f"second shop routes: {collections.Counter(yh.SECOND_ROUTES.values())}")
+print("\nunits each tape sells over the season, and the animals it buys")
+print(profiles.to_string(index=False))
+
+# ---- cell ----
+
+V = pd.DataFrame(valid["rows"])
+print(f"validation set: {valid.get('label')}; field schedule built from {valid.get('n_field_games')} games")
+print("columns:", list(V.columns))
+cols = [c for c in ("solo", "shared_exact", "shared_field", "shared_field_posterior") if c in V.columns]
+print(f"\nvalidation games: {len(V)} (forced tape as farm 0 against a real opponent, revenue actually earned versus each model)")
+print(f"{'model':24}{'MAE, coins':>12}{'mean error':>12}")
+for c in cols:
+    e = V[c] - V["actual"]
+    print(f"{c:24}{e.abs().mean():>12.0f}{e.mean():>+12.0f}")
+
+# ---- cell ----
+
+fig, ax = plt.subplots(1, 2, figsize=(11, 4.6), sharey=True)
+for a, c, col, lab in ((ax[0], "solo", MUT, "solo seller model"), (ax[1], "shared_exact", INK, "shared market, opponent's real schedule")):
+    a.scatter(V["actual"] / 1000, V[c] / 1000, s=18, color=col)
+    lo, hi = min(V["actual"].min(), V[c].min()) / 1000, max(V["actual"].max(), V[c].max()) / 1000
+    a.plot([lo, hi], [lo, hi], color=ACC, lw=1, ls="--")
+    a.set_title(lab); a.set_xlabel("revenue actually earned, k coins")
+ax[0].set_ylabel("revenue the model expected, k coins")
+plt.tight_layout(); plt.savefig("fig1_model_validation.png", metadata={"Software": None}); plt.show()
+
+# ---- cell ----
+
+YH = yh.SECOND_ROUTES
+def summary(tab, name):
+    dis = [k for k in tab if tab[k]["posterior"] != YH.get(k, 0)]
+    print(f"{name}: disagrees with yhay81 on {len(dis)} of {len(tab)} ordered shop pairs "
+          f"({100 * len(dis) / len(tab):.1f} per cent of the draw mass)")
+    print(f"   tapes the model picks: {dict(collections.Counter(v['posterior'] for v in tab.values()))}")
+    return dis
+print(f"tapes yhay81 picks: {dict(collections.Counter(YH.values()))}")
+dis1 = summary(table1, "table from executed sales (variant B)")
+dis2 = summary(table2, "table from the shared-market model (variant C)")
+print("\nwhere the expected gain over yhay81's tape comes from, by product (ten largest gaps, executed-sales table)")
+print(gaps.to_string(index=False))
+
+# ---- cell ----
+
+key = lambda r: (int(r["seed"]), int(r["seat"]), r["opponent"])
+A = {key(r): r for _, r in results[results["agent"] == "A"].iterrows()}
+def chosen(v, pair):
+    return {"B": table1[pair]["posterior"], "C": table2[pair]["posterior"], "D": 1}[v]
+def ci(xs):
+    mu = sum(xs) / len(xs); h = 1.96 * (statistics.stdev(xs) if len(xs) > 1 else 0) / math.sqrt(len(xs))
+    return mu, mu - h, mu + h
+LABEL = {"B": "B, table from executed sales", "C": "C, shared-market table", "D": "D, wool tape always"}
+paired = {}
+for v in ("B", "C", "D"):
+    Vr = {key(r): r for _, r in results[results["agent"] == v].iterrows()}
+    common = [k for k in Vr if k in A]
+    U = collections.defaultdict(lambda: {"dw": [], "db": []}); UD = collections.defaultdict(lambda: {"dw": [], "db": []})
+    n_dis = 0
+    for k in common:
+        a, b = A[k], Vr[k]; pair = f"{a['shop1']}__{a['shop2']}"
+        dw, db = int(b["win"]) - int(a["win"]), float(b["bank"]) - float(a["bank"])
+        U[(k[0], k[2])]["dw"].append(dw); U[(k[0], k[2])]["db"].append(db)
+        if chosen(v, pair) != YH.get(pair, 0):
+            n_dis += 1; UD[(k[0], k[2])]["dw"].append(dw); UD[(k[0], k[2])]["db"].append(db)
+    wa = np.mean([int(A[k]["win"]) for k in common]); wv = np.mean([int(Vr[k]["win"]) for k in common])
+    out = {}
+    for lab, S in (("all", U), ("disagreeing", UD)):
+        dw = [np.mean(x["dw"]) for x in S.values()]; db = [np.mean(x["db"]) for x in S.values()]
+        out[lab] = {"units": len(dw), "win": ci(dw), "bank": ci(db)}
+    paired[v] = {"games": len(common), "n_dis": n_dis, "winA": wa, "winV": wv, **out}
+    print(f"{LABEL[v]}: {len(common)} games, {n_dis} on pairs where it differs from yhay81; win rate A {wa:.3f}, {v} {wv:.3f}")
+    for lab in ("all", "disagreeing"):
+        w, b = out[lab]["win"], out[lab]["bank"]
+        print(f"   {lab:12} units {out[lab]['units']:>3}  win diff {100*w[0]:+5.1f} pp [{100*w[1]:+5.1f}, {100*w[2]:+5.1f}]"
+              f"   bank diff {b[0]:+6.0f} [{b[1]:+6.0f}, {b[2]:+6.0f}]")
+    byo = collections.defaultdict(lambda: {"dw": [], "db": []})
+    for k in common:
+        byo[k[2]]["dw"].append(int(Vr[k]["win"]) - int(A[k]["win"])); byo[k[2]]["db"].append(float(Vr[k]["bank"]) - float(A[k]["bank"]))
+    for o, x in sorted(byo.items()):
+        print(f"      {o:12} n {len(x['dw']):>3}  win diff {100*np.mean(x['dw']):+5.1f} pp  bank diff {np.mean(x['db']):+7.0f}")
+
+# ---- cell ----
+
+fig, ax = plt.subplots(1, 2, figsize=(11, 4.4))
+xs = np.arange(3); labs = ["B executed", "C shared", "D wool"]
+for a, what, scale, yl in ((ax[0], "win", 100, "win rate, variant minus yhay81, points"), (ax[1], "bank", 1, "bank, variant minus yhay81, coins")):
+    for i, v in enumerate(("B", "C", "D")):
+        for j, (lab, col) in enumerate((("all", MUT), ("disagreeing", INK))):
+            mu, lo, hi = paired[v][lab][what]
+            a.errorbar(i + (j - 0.5) * 0.18, scale * mu, yerr=[[scale * (mu - lo)], [scale * (hi - mu)]], fmt="o", color=col, capsize=4,
+                       label=(lab + " games") if i == 0 else None)
+    a.axhline(0, color=ACC, lw=1, ls="--"); a.set_xticks(xs); a.set_xticklabels(labs); a.set_ylabel(yl)
+ax[0].legend(loc="lower left", frameon=False)
+plt.tight_layout(); plt.savefig("fig2_paired_differences.png", metadata={"Software": None}); plt.show()
+
+# ---- cell ----
+
+Cr = {key(r): r for _, r in results[results["agent"] == "C"].iterrows()}
+per = collections.defaultdict(list)
+for k, b in Cr.items():
+    a = A.get(k)
+    if a is None: continue
+    pair = f"{a['shop1']}__{a['shop2']}"
+    if table2[pair]["posterior"] != YH.get(pair, 0):
+        per[pair].append(float(b["bank"]) - float(a["bank"]))
+P = pd.DataFrame([{"pair": p, "n": len(v), "realised": np.mean(v),
+                   "expected": table2[p]["revenue"][table2[p]["posterior"]] - table2[p]["revenue"][YH.get(p, 0)]} for p, v in per.items()])
+P = P.sort_values("expected", ascending=False)
+print(f"disagreeing pairs with games: {len(P)}; games behind them: {int(P['n'].sum())}")
+print(f"{'pair':32}{'n':>4}{'model expected gain':>21}{'realised bank diff':>20}")
+for _, r in P.iterrows():
+    print(f"{r['pair']:32}{int(r['n']):>4}{r['expected']:>+21.0f}{r['realised']:>+20.0f}")
+from scipy.stats import spearmanr, pearsonr
+rs, ps = spearmanr(P["expected"], P["realised"]); rp, pp = pearsonr(P["expected"], P["realised"])
+print(f"\nSpearman between expected gain and realised bank difference: {rs:+.3f} (p = {ps:.3f}); Pearson {rp:+.3f} (p = {pp:.3f})")
+print(f"pairs where the model expected a gain and the bank fell: {int((P['realised'] < 0).sum())} of {len(P)}")
+
+# ---- cell ----
+
+fig, ax = plt.subplots(figsize=(7.2, 4.8))
+ax.scatter(P["expected"] / 1000, P["realised"] / 1000, s=14 + 4 * P["n"], color=INK)
+ax.axhline(0, color=ACC, lw=1, ls="--")
+ax.set_xlabel("gain the shared-market model expected from its tape, k coins")
+ax.set_ylabel("bank difference actually realised, k coins")
+ax.set_title("one point per disagreeing shop pair, size by games played")
+plt.tight_layout(); plt.savefig("fig3_expected_vs_realised.png", metadata={"Software": None}); plt.show()

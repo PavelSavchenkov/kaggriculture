@@ -1,0 +1,92 @@
+{
+  "id": "tomato_rotation_after_day9",
+  "episode": 106429645,
+  "team": "Mengfei Li",
+  "x": 0,
+  "y": 1,
+  "start_day": 9,
+  "end_day": 29,
+  "crop": null,
+  "rank": 3,
+  "status": "Uncompiled replay-derived proposal; profitability not proven",
+  "donor_seat": 0,
+  "submission": 56047440,
+  "leaderboard_rank_at_selection": 1,
+  "replay_sha256": "320ecc1a7a4ae621cf99a53cb0ba5d443ffe744b7c30f93e40ea8db994c99b50",
+  "local_match": {
+    "agent": "investment_context_guarded_001_best",
+    "seed": 1000,
+    "seat": 0,
+    "opponent": "public_router"
+  },
+  "donor_totals": {
+    "harvested": {
+      "WHEAT": 4,
+      "TOMATO": 8,
+      "CARROT": 3
+    },
+    "seed_cost": 80,
+    "fertilizer_units": 2,
+    "unit_operations": {
+      "PLANT": 3,
+      "WATER": 15,
+      "HARVEST": 6,
+      "FERTILIZE": 2
+    },
+    "harvest_quote_value_on_donor_price_path": 790,
+    "fertilizer_quote_opportunity_cost_on_donor_path": 91,
+    "shadow_contribution_before_labor_land_and_market_feedback": 619
+  },
+  "local_totals": {
+    "harvested": {
+      "WHEAT": 17,
+      "CARROT": 2
+    },
+    "seed_cost": 70,
+    "fertilizer_units": 0,
+    "unit_operations": {
+      "PLANT": 6,
+      "WATER": 20,
+      "HARVEST": 6
+    },
+    "harvest_quote_value_on_donor_price_path": 742,
+    "fertilizer_quote_opportunity_cost_on_donor_path": 0,
+    "shadow_contribution_before_labor_land_and_market_feedback": 672
+  },
+  "harvest_delta": {
+    "WHEAT": -13,
+    "CARROT": 1,
+    "TOMATO": 8,
+    "STRAWBERRY": 0,
+    "MELON": 0
+  },
+  "seed_cost_delta": 10,
+  "fertilizer_units_delta": 2,
+  "unit_operation_delta": {
+    "PLANT": -3,
+    "WATER": -5,
+    "HARVEST": 0,
+    "FERTILIZE": 2,
+    "DIG": 0
+  },
+  "shadow_contribution_delta": -53,
+  "valuation_limit": "Diagnostic values both schedules at donor contemporaneous harvest quotes and fertilizer opportunity quotes. This is not realized crop-specific cash, marginal market pricing, or a profit claim.",
+  "matching_species_output_service_examples": 73,
+  "distinct_donor_episodes": 6,
+  "implementation_dependencies": [
+    "Rebuild fertilizer purchase/reserve/pickup and carried inventory constraints; animal-supplied fertilizer still has sale opportunity cost.",
+    "Compile complete affected worker days with seed, water, fertilizer, harvest, drop and sale jobs; rebind downstream physical-state guards.",
+    "Revalue all own product sales and rival revenue under changed market supply; enforce sale capacity and terminal liquidation.",
+    "Check every retained day until the affected crop leaves the bed, not just the edited fertilizer day.",
+    "Replace the whole cell suffix from day9: crop occupancy, four wheat replants, tomato seed purchase, two fertilizer services, four tomato harvests, weed clearing and final carrot.",
+    "Replace lost dated wheat delivery with purchases or other production before animal feed is due; verify cash and shed/carry capacity.",
+    "Add tomato-family market orders and timed output; preserve land ownership and animal structures on other cells.",
+    "Donor full-day actions are evidence, not directly transferable schedules: its other crops, animals, workers and inventories differ."
+  ],
+  "artifact_sha256": {
+    "donor_tile_events.json": "94b40a2e595e0aea799151da83ea2e32f86a627f8fe7809bb1943e07beae3082",
+    "donor_lifecycles.json": "e67a66f1051aae883b923f5543cccd84f085bb193685b183bb3ff03354e4058b",
+    "local_lifecycles.json": "553a526bedcd57b8797bef9a04bae2511c12f7599b5bd788fd5e89e6bd3a4dbd",
+    "donor_complete_day_actions.json": "4595ac5cfe3170491e86d93ee7b0494755eacf721a3c51a8a09600612348f0ef"
+  }
+}

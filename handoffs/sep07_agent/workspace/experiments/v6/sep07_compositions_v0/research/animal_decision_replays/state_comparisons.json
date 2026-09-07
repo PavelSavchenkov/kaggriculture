@@ -1,0 +1,943 @@
+[
+  {
+    "id": "atakan_cow_sheep",
+    "step": 226,
+    "day": 9,
+    "hour": 10,
+    "same_submission": true,
+    "identical_raw_action_prefix_length": 226,
+    "own_farm_differences": [
+      {
+        "path": "/money",
+        "a": 99.0,
+        "b": 123.0
+      }
+    ],
+    "own_private_differences": [],
+    "own_private_ordered_equal": true,
+    "own_physical_equal_except_money": true,
+    "action_a": {
+      "farmer": [
+        "WATER"
+      ],
+      "hands": [
+        [
+          "WEST"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "FEED"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "PLACE",
+          "WOOL",
+          8
+        ]
+      ],
+      "market": [
+        [
+          "SELL",
+          "WOOL",
+          8
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          3
+        ],
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ]
+      ]
+    },
+    "action_b": {
+      "farmer": [
+        "WATER"
+      ],
+      "hands": [
+        [
+          "WEST"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "FEED"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "PLACE",
+          "WOOL",
+          8
+        ]
+      ],
+      "market": [
+        [
+          "SELL",
+          "WOOL",
+          8
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          3
+        ],
+        [
+          "BUY_ANIMAL",
+          "SHEEP",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "atakan_cow_goose",
+    "step": 226,
+    "day": 9,
+    "hour": 10,
+    "same_submission": true,
+    "identical_raw_action_prefix_length": 226,
+    "own_farm_differences": [
+      {
+        "path": "/money",
+        "a": 99.0,
+        "b": 17.0
+      }
+    ],
+    "own_private_differences": [
+      {
+        "path": "/shed/WHEAT",
+        "a": 28,
+        "b": 20
+      }
+    ],
+    "own_private_ordered_equal": false,
+    "own_physical_equal_except_money": false,
+    "action_a": {
+      "farmer": [
+        "WATER"
+      ],
+      "hands": [
+        [
+          "WEST"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "FEED"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "PLACE",
+          "WOOL",
+          8
+        ]
+      ],
+      "market": [
+        [
+          "SELL",
+          "WOOL",
+          8
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          3
+        ],
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ]
+      ]
+    },
+    "action_b": {
+      "farmer": [
+        "WATER"
+      ],
+      "hands": [
+        [
+          "WEST"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "FEED"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "PLACE",
+          "WOOL",
+          8
+        ]
+      ],
+      "market": [
+        [
+          "SELL",
+          "WOOL",
+          8
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          3
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "jeonghun_cow_goose",
+    "step": 150,
+    "day": 6,
+    "hour": 6,
+    "same_submission": true,
+    "identical_raw_action_prefix_length": 24,
+    "own_farm_differences": [
+      {
+        "path": "/money",
+        "a": 11.0,
+        "b": 10.0
+      }
+    ],
+    "own_private_differences": [],
+    "own_private_ordered_equal": true,
+    "own_physical_equal_except_money": true,
+    "action_a": {
+      "farmer": [
+        "PLACE",
+        "WOOL",
+        10
+      ],
+      "hands": [
+        [
+          "PLACE",
+          "FERTILIZER",
+          1
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "PASS"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "WEST"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "PASS"
+        ],
+        [
+          "NORTH"
+        ]
+      ],
+      "market": [
+        [
+          "SELL",
+          "WOOL",
+          10,
+          75
+        ],
+        [
+          "SELL",
+          "FERTILIZER",
+          1
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_SEED",
+          "STRAWBERRY",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "COW",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ]
+    },
+    "action_b": {
+      "farmer": [
+        "PLACE",
+        "WOOL",
+        10
+      ],
+      "hands": [
+        [
+          "PLACE",
+          "FERTILIZER",
+          1
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "PASS"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "WEST"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "PASS"
+        ],
+        [
+          "NORTH"
+        ]
+      ],
+      "market": [
+        [
+          "SELL",
+          "WOOL",
+          10,
+          95
+        ],
+        [
+          "SELL",
+          "FERTILIZER",
+          1
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_SEED",
+          "STRAWBERRY",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "jeonghun_sheep_goose",
+    "step": 150,
+    "day": 6,
+    "hour": 6,
+    "same_submission": true,
+    "identical_raw_action_prefix_length": 24,
+    "own_farm_differences": [
+      {
+        "path": "/hands/1/0",
+        "a": 5,
+        "b": 1
+      },
+      {
+        "path": "/hands/1/1",
+        "a": 4,
+        "b": 3
+      },
+      {
+        "path": "/hands/2/0",
+        "a": 3,
+        "b": 4
+      },
+      {
+        "path": "/hands/2/1",
+        "a": 4,
+        "b": 5
+      },
+      {
+        "path": "/hands/3/0",
+        "a": 0,
+        "b": 1
+      },
+      {
+        "path": "/hands/3/1",
+        "a": 5,
+        "b": 4
+      },
+      {
+        "path": "/hands/4/0",
+        "a": 1,
+        "b": 3
+      },
+      {
+        "path": "/hands/4/1",
+        "a": 2,
+        "b": 4
+      },
+      {
+        "path": "/hands/5/0",
+        "a": 4,
+        "b": 3
+      },
+      {
+        "path": "/hands/5/1",
+        "a": 4,
+        "b": 2
+      },
+      {
+        "path": "/hands/6/0",
+        "a": 2,
+        "b": 3
+      },
+      {
+        "path": "/hands/6/1",
+        "a": 4,
+        "b": 5
+      },
+      {
+        "path": "/hands/7/0",
+        "a": 4,
+        "b": 2
+      },
+      {
+        "path": "/hands/7/1",
+        "a": 1,
+        "b": 4
+      },
+      {
+        "path": "/money",
+        "a": 56.0,
+        "b": 10.0
+      },
+      {
+        "path": "/tiles/0/0/max_lifespan_step",
+        "a": 168,
+        "b": 216
+      },
+      {
+        "path": "/tiles/0/0/planted_day",
+        "a": 2,
+        "b": 4
+      },
+      {
+        "path": "/tiles/0/0/yield_units",
+        "a": 3,
+        "b": 1
+      },
+      {
+        "path": "/tiles/1/0/max_lifespan_step",
+        "a": 168,
+        "b": 216
+      },
+      {
+        "path": "/tiles/1/0/planted_day",
+        "a": 2,
+        "b": 4
+      },
+      {
+        "path": "/tiles/1/0/yield_units",
+        "a": 3,
+        "b": 1
+      },
+      {
+        "path": "/tiles/4/3/fertilizer_available",
+        "a": true,
+        "b": false
+      }
+    ],
+    "own_private_differences": [
+      {
+        "path": "/inventories/1/FERTILIZER",
+        "a": null,
+        "b": 1
+      },
+      {
+        "path": "/inventories/1/WHEAT",
+        "a": 4,
+        "b": 3
+      },
+      {
+        "path": "/inventories/5/FERTILIZER",
+        "a": null,
+        "b": 1
+      },
+      {
+        "path": "/inventories/5/WHEAT",
+        "a": null,
+        "b": 4
+      },
+      {
+        "path": "/seeds/STRAWBERRY",
+        "a": 7,
+        "b": 6
+      },
+      {
+        "path": "/seeds/WHEAT",
+        "a": 13,
+        "b": 11
+      },
+      {
+        "path": "/shed/WHEAT",
+        "a": 8,
+        "b": 11
+      }
+    ],
+    "own_private_ordered_equal": false,
+    "own_physical_equal_except_money": false,
+    "action_a": {
+      "farmer": [
+        "PLACE",
+        "WOOL",
+        12
+      ],
+      "hands": [
+        [
+          "NORTH"
+        ],
+        [
+          "PASS"
+        ],
+        [
+          "COLLECT_FERTILIZER"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "PASS"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "WATER"
+        ]
+      ],
+      "market": [
+        [
+          "SELL",
+          "WOOL",
+          12,
+          52
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          1
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "SHEEP",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          2
+        ]
+      ]
+    },
+    "action_b": {
+      "farmer": [
+        "PLACE",
+        "WOOL",
+        10
+      ],
+      "hands": [
+        [
+          "PLACE",
+          "FERTILIZER",
+          1
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "PASS"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "WEST"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "PASS"
+        ],
+        [
+          "NORTH"
+        ]
+      ],
+      "market": [
+        [
+          "SELL",
+          "WOOL",
+          10,
+          95
+        ],
+        [
+          "SELL",
+          "FERTILIZER",
+          1
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_SEED",
+          "STRAWBERRY",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "mengfei_sheep_cow",
+    "step": 169,
+    "day": 7,
+    "hour": 1,
+    "same_submission": true,
+    "identical_raw_action_prefix_length": 168,
+    "own_farm_differences": [
+      {
+        "path": "/money",
+        "a": 841.0,
+        "b": 530.0
+      }
+    ],
+    "own_private_differences": [
+      {
+        "path": "/shed/WHEAT",
+        "a": 18,
+        "b": 16
+      }
+    ],
+    "own_private_ordered_equal": false,
+    "own_physical_equal_except_money": false,
+    "action_a": {
+      "farmer": [
+        "WEST"
+      ],
+      "hands": [
+        [
+          "WEST"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        [
+          "WEST"
+        ],
+        [
+          "NORTH"
+        ]
+      ],
+      "market": [
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "BUY_ANIMAL",
+          "SHEEP",
+          1
+        ]
+      ]
+    },
+    "action_b": {
+      "farmer": [
+        "WEST"
+      ],
+      "hands": [
+        [
+          "WEST"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "PICKUP",
+          "WHEAT",
+          1
+        ],
+        [
+          "WEST"
+        ],
+        [
+          "NORTH"
+        ]
+      ],
+      "market": [
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "BUY_ANIMAL",
+          "COW",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "justin_late_species",
+    "step": 196,
+    "day": 8,
+    "hour": 4,
+    "same_submission": true,
+    "identical_raw_action_prefix_length": 196,
+    "own_farm_differences": [
+      {
+        "path": "/money",
+        "a": 432.0,
+        "b": 426.0
+      }
+    ],
+    "own_private_differences": [],
+    "own_private_ordered_equal": true,
+    "own_physical_equal_except_money": true,
+    "action_a": {
+      "farmer": [
+        "PLACE",
+        "MILK",
+        12
+      ],
+      "hands": [
+        [
+          "COLLECT_FERTILIZER"
+        ],
+        [
+          "COLLECT_FERTILIZER"
+        ],
+        [
+          "EAST"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "WEST"
+        ],
+        [
+          "EAST"
+        ],
+        [
+          "EAST"
+        ]
+      ],
+      "market": [
+        [
+          "SELL",
+          "MILK",
+          12
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          6
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "BUY_ANIMAL",
+          "SHEEP",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ]
+    },
+    "action_b": {
+      "farmer": [
+        "PLACE",
+        "MILK",
+        12
+      ],
+      "hands": [
+        [
+          "COLLECT_FERTILIZER"
+        ],
+        [
+          "COLLECT_FERTILIZER"
+        ],
+        [
+          "EAST"
+        ],
+        [
+          "NORTH"
+        ],
+        [
+          "WATER"
+        ],
+        [
+          "WEST"
+        ],
+        [
+          "EAST"
+        ],
+        [
+          "EAST"
+        ]
+      ],
+      "market": [
+        [
+          "SELL",
+          "MILK",
+          40
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          6
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "BUY_ANIMAL",
+          "SHEEP",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ]
+    }
+  }
+]

@@ -1,0 +1,3 @@
+# external_replay_band_yaroslav_tanko_89416002_safe
+
+Safety-normalized opponent-only derivative of `external_replay_band_yaroslav_tanko_89416002`.

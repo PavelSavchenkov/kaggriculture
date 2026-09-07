@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "junghoon_wool_sales",
+  "header": "source/agent.hpp",
+  "type": "compositions::junghoon_wool_sales::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../league/top_replay_library/source/agent.cpp"
+  ]
+}

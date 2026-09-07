@@ -1,0 +1,276 @@
+[
+  {
+    "episode": 106392679,
+    "seat": 0,
+    "team": "自己找差距",
+    "team_id": 16660726,
+    "submission_id": 56068263,
+    "rank": 10,
+    "leaderboard_score": 2772.5,
+    "episode_create_time": "2026-09-07T08:16:23.101000",
+    "replay_sha256": "ab08712a7d4acd976001190f316f56b7661f5c0873c62c198159703274b29e7e",
+    "replay_file": "replays/episode-106392679-replay.json",
+    "cohorts": [
+      "refresh_0914"
+    ],
+    "step": 306,
+    "day": 12,
+    "hour": 18,
+    "shops": [
+      "BRUNCH_SPOT",
+      "ICE_CREAM_SHOP",
+      "SMOOTHIE_SHOP",
+      "YARN_STORE"
+    ],
+    "demand_per_cycle": {
+      "EGG": 1,
+      "MILK": 2,
+      "WOOL": 2
+    },
+    "own_money": 15555.0,
+    "opponent_money": 17124.0,
+    "prices": {
+      "EGG": 54,
+      "MILK": 189,
+      "WOOL": 164
+    },
+    "herd": {
+      "GOOSE": 3,
+      "COW": 9,
+      "SHEEP": 5
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 0,
+      "SHEEP": 1
+    },
+    "prefix_actions_sha256": "c422651337d9fcbc590075f36f0adcce17c53613fe82fd1fc6ad91dc1d8a4464",
+    "action_sha256": "796b893d77e7c2477bdc86090ef148a7810fc665e4c6e760be60244c81b4c7d5",
+    "turns_since_last_shop": 18,
+    "animal": "SHEEP",
+    "x": 4,
+    "y": 0,
+    "worker_index_candidates": [
+      6
+    ],
+    "center_distance": 4,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 305,
+    "prior_tile_occupants": [
+      {
+        "step": 20,
+        "value": "MELON"
+      },
+      {
+        "step": 247,
+        "value": null
+      },
+      {
+        "step": 256,
+        "value": "COOP"
+      },
+      {
+        "step": 305,
+        "value": null
+      },
+      {
+        "step": 306,
+        "value": "PASTURE"
+      }
+    ]
+  },
+  {
+    "episode": 106392884,
+    "seat": 1,
+    "team": "自己找差距",
+    "team_id": 16660726,
+    "submission_id": 56068263,
+    "rank": 10,
+    "leaderboard_score": 2772.5,
+    "episode_create_time": "2026-09-07T08:16:23.779000",
+    "replay_sha256": "9e7d4dfe7cf86d357898188a442432f0fae6914d640a5bbd1268b4b0b72ee561",
+    "replay_file": "replays/episode-106392884-replay.json",
+    "cohorts": [
+      "refresh_0914"
+    ],
+    "step": 300,
+    "day": 12,
+    "hour": 12,
+    "shops": [
+      "SMOOTHIE_SHOP",
+      "PIZZA_SHOP",
+      "ICE_CREAM_SHOP",
+      "FARMERS_MARKET"
+    ],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 3,
+      "WOOL": 0
+    },
+    "own_money": 16865.0,
+    "opponent_money": 18387.0,
+    "prices": {
+      "EGG": 51,
+      "MILK": 230,
+      "WOOL": 129
+    },
+    "herd": {
+      "GOOSE": 3,
+      "COW": 9,
+      "SHEEP": 5
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 1,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "0f2636bfa292c1648b511f83d9c28934f1202eb9c1d0cf5ad18f6191cb7a2a3f",
+    "action_sha256": "a47426df78f5f2e8fc8acd161d7e419707b79d5c784872f130232f8ed3745b8d",
+    "turns_since_last_shop": 12,
+    "animal": "COW",
+    "x": 4,
+    "y": 0,
+    "worker_index_candidates": [
+      7
+    ],
+    "center_distance": 4,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 299,
+    "prior_tile_occupants": [
+      {
+        "step": 20,
+        "value": "MELON"
+      },
+      {
+        "step": 247,
+        "value": null
+      },
+      {
+        "step": 256,
+        "value": "COOP"
+      },
+      {
+        "step": 299,
+        "value": null
+      },
+      {
+        "step": 300,
+        "value": "PASTURE"
+      }
+    ]
+  },
+  {
+    "episode": 106396570,
+    "seat": 1,
+    "team": "3정훈",
+    "team_id": 16723620,
+    "submission_id": 56063995,
+    "rank": 2,
+    "leaderboard_score": 2850.2,
+    "episode_create_time": "2026-09-07T08:32:23.611000",
+    "replay_sha256": "1eb34d73d2b8ea62fbb1266d772c7aa97c37600a92f7d0670a8742ea8698243c",
+    "replay_file": "replays/episode-106396570-replay.json",
+    "cohorts": [
+      "refresh_0914"
+    ],
+    "step": 310,
+    "day": 12,
+    "hour": 22,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "SMOOTHIE_SHOP",
+      "PET_CAFE",
+      "PET_CAFE"
+    ],
+    "demand_per_cycle": {
+      "EGG": 0,
+      "MILK": 2,
+      "WOOL": 0
+    },
+    "own_money": 20226.0,
+    "opponent_money": 14263.0,
+    "prices": {
+      "EGG": 51,
+      "MILK": 224,
+      "WOOL": 129
+    },
+    "herd": {
+      "GOOSE": 1,
+      "COW": 8,
+      "SHEEP": 4
+    },
+    "empty_structures": {
+      "COOP": [],
+      "PASTURE": [
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ]
+    },
+    "held_animals": {
+      "GOOSE": 0,
+      "COW": 1,
+      "SHEEP": 0
+    },
+    "prefix_actions_sha256": "f8a3b547ef1d6f73950cce511da479d4e060e279102b2b311922b415303496ee",
+    "action_sha256": "372239c52bc003c413bbb8a0cce6f5a11af2c44768d8b3f78162cbac99283b7b",
+    "turns_since_last_shop": 22,
+    "animal": "COW",
+    "x": 5,
+    "y": 3,
+    "worker_index_candidates": [
+      1
+    ],
+    "center_distance": 1,
+    "closer_ready_structures": 0,
+    "closer_buildable_sites": 0,
+    "last_structure_step": 155,
+    "prior_tile_occupants": [
+      {
+        "step": 0,
+        "value": "LOCKED"
+      },
+      {
+        "step": 151,
+        "value": null
+      },
+      {
+        "step": 156,
+        "value": "PASTURE"
+      },
+      {
+        "step": 157,
+        "value": "COW"
+      },
+      {
+        "step": 216,
+        "value": "PASTURE"
+      }
+    ]
+  }
+]

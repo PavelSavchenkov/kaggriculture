@@ -1,0 +1,46 @@
+--- tetsutani
+
++++ lynn_0504
+
+@@ -1,3 +1,27 @@
+
++def _terminal_settlement(projected_shed, prices, market):
++    """Sell every projected final product while preserving inherited order slots."""
++    result = []
++    covered = set()
++    for raw in market[:MAX_ORDERS]:
++        order = list(raw)
++        if order and order[0] == 'SELL' and (len(order) >= 3) and (order[1] in PRODUCTS):
++            item = order[1]
++            if item in covered:
++                continue
++            quantity = max(0, int(projected_shed.get(item, 0) or 0))
++            if quantity <= 0:
++                continue
++            order[2] = quantity
++            covered.add(item)
++        result.append(order)
++    missing = [(max(0, int(projected_shed.get(item, 0) or 0)) * max(1, int(prices.get(item, 1) or 1)), item) for item in PRODUCTS if item not in covered and int(projected_shed.get(item, 0) or 0) > 0]
++    missing.sort(key=lambda row: (-row[0], row[1]))
++    for _value, item in missing:
++        if len(result) >= MAX_ORDERS:
++            break
++        result.append(['SELL', item, max(0, int(projected_shed[item]))])
++        covered.add(item)
++    return result
+ def routes():
+     """Decode lazily: only MAIN is stored whole, the rest as (parent, turn, suffix)."""
+     global _ROUTES
+@@ -231,7 +255,10 @@
+
+             if surplus > 0 and prices.get(it, 0) > 1:
+                 extra.append(['SELL', it, surplus])
+         extra.sort(key=lambda o: -prices.get(o[1], 0) * int(o[2]))
+-        return {'farmer': acts[0], 'hands': acts[1:], 'market': (market + extra)[:MAX_ORDERS]}
++        market = (market + extra)[:MAX_ORDERS]
++        if step == FINAL_EXECUTABLE_STEP:
++            market = _terminal_settlement(proj, prices, market)
++        return {'farmer': acts[0], 'hands': acts[1:], 'market': market}
+ def agent(obs):
+     """A crash here forfeits the game, so any failure degrades to a legal PASS."""
+     global _A

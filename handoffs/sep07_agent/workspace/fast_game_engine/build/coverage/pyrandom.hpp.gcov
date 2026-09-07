@@ -1,0 +1,172 @@
+        -:    0:Source:../../pyrandom.hpp
+        -:    0:Graph:validate_cov-validate.gcno
+        -:    0:Data:validate_cov-validate.gcda
+        -:    0:Runs:1
+        -:    1:// CPython-compatible Mersenne Twister.
+        -:    2://
+        -:    3:// The environment seeds `random.Random((seed * 1_000_003) ^ day)` and calls
+        -:    4:// .random() (weed spawns) and .choice() (shop unlocks). To reproduce episodes
+        -:    5:// bit-for-bit we must match CPython's _randommodule.c exactly: init_by_array
+        -:    6:// seeding from the integer's 32-bit little-endian words, the 53-bit
+        -:    7:// random() construction, and getrandbits/_randbelow rejection sampling.
+        -:    8:#pragma once
+        -:    9:#include <cstdint>
+        -:   10:
+        -:   11:namespace kag {
+        -:   12:
+        -:   13:class PyRandom {
+        -:   14:public:
+function _ZN3kag8PyRandomC2Em called 1576 returned 100% blocks executed 100%
+     1576:   15:    explicit PyRandom(uint64_t key) { seed(key); }
+call    0 returned 1576
+        -:   16:
+function _ZN3kag8PyRandom4seedEm called 1576 returned 100% blocks executed 86%
+     1576:   17:    void seed(uint64_t key) {
+        -:   18:        // CPython: abs(n) -> array of 32-bit words, little endian. A zero key
+        -:   19:        // still yields a one-word array [0].
+        -:   20:        uint32_t words[3];
+     1576:   21:        int n = 0;
+     1576:   22:        if (key == 0) {
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1576
+    #####:   23:            words[0] = 0;
+    #####:   24:            n = 1;
+        -:   25:        } else {
+     4496:   26:            while (key) {
+branch  0 taken 2920
+branch  1 taken 1576 (fallthrough)
+     2920:   27:                words[n++] = static_cast<uint32_t>(key & 0xffffffffu);
+     2920:   28:                key >>= 32;
+        -:   29:            }
+        -:   30:        }
+     1576:   31:        init_by_array(words, n);
+call    0 returned 1576
+     1576:   32:    }
+        -:   33:
+function _ZN3kag8PyRandom14genrand_uint32Ev called 174366 returned 100% blocks executed 100%
+   174366:   34:    uint32_t genrand_uint32() {
+        -:   35:        uint32_t y;
+   174366:   36:        if (index_ >= N) {
+branch  0 taken 1527 (fallthrough)
+branch  1 taken 172839
+   348156:   37:            for (int k = 0; k < N - M; ++k) {
+branch  0 taken 346629
+branch  1 taken 1527 (fallthrough)
+   346629:   38:                y = (mt_[k] & UPPER) | (mt_[k + 1] & LOWER);
+   346629:   39:                mt_[k] = mt_[k + M] ^ (y >> 1) ^ ((y & 1u) ? MATRIX_A : 0u);
+branch  0 taken 173458 (fallthrough)
+branch  1 taken 173171
+        -:   40:            }
+   606219:   41:            for (int k = N - M; k < N - 1; ++k) {
+branch  0 taken 604692
+branch  1 taken 1527 (fallthrough)
+   604692:   42:                y = (mt_[k] & UPPER) | (mt_[k + 1] & LOWER);
+   604692:   43:                mt_[k] = mt_[k + (M - N)] ^ (y >> 1) ^ ((y & 1u) ? MATRIX_A : 0u);
+branch  0 taken 302565 (fallthrough)
+branch  1 taken 302127
+        -:   44:            }
+     1527:   45:            y = (mt_[N - 1] & UPPER) | (mt_[0] & LOWER);
+     1527:   46:            mt_[N - 1] = mt_[M - 1] ^ (y >> 1) ^ ((y & 1u) ? MATRIX_A : 0u);
+branch  0 taken 760 (fallthrough)
+branch  1 taken 767
+     1527:   47:            index_ = 0;
+        -:   48:        }
+   174366:   49:        y = mt_[index_++];
+   174366:   50:        y ^= (y >> 11);
+   174366:   51:        y ^= (y << 7) & 0x9d2c5680u;
+   174366:   52:        y ^= (y << 15) & 0xefc60000u;
+   174366:   53:        y ^= (y >> 18);
+   174366:   54:        return y;
+        -:   55:    }
+        -:   56:
+        -:   57:    // random.random(): 53 bits of precision from two 32-bit draws.
+function _ZN3kag8PyRandom6randomEv called 86788 returned 100% blocks executed 100%
+    86788:   58:    double random() {
+    86788:   59:        uint32_t a = genrand_uint32() >> 5;
+call    0 returned 86788
+    86788:   60:        uint32_t b = genrand_uint32() >> 6;
+call    0 returned 86788
+    86788:   61:        return (a * 67108864.0 + b) * (1.0 / 9007199254740992.0);
+        -:   62:    }
+        -:   63:
+        -:   64:    // random.getrandbits(k) for 0 < k <= 32.
+function _ZN3kag8PyRandom11getrandbitsEi called 790 returned 100% blocks executed 100%
+      790:   65:    uint32_t getrandbits(int k) { return genrand_uint32() >> (32 - k); }
+call    0 returned 790
+        -:   66:
+        -:   67:    // Random._randbelow_with_getrandbits(n), n > 0.
+function _ZN3kag8PyRandom9randbelowEj called 400 returned 100% blocks executed 100%
+      400:   68:    uint32_t randbelow(uint32_t n) {
+      400:   69:        int k = 0;
+     2000:   70:        for (uint32_t v = n; v; v >>= 1) ++k;   // n.bit_length()
+branch  0 taken 1600
+branch  1 taken 400 (fallthrough)
+      400:   71:        uint32_t r = getrandbits(k);
+call    0 returned 400
+      790:   72:        while (r >= n) r = getrandbits(k);
+call    0 returned 390
+branch  1 taken 390
+branch  2 taken 400 (fallthrough)
+      400:   73:        return r;
+        -:   74:    }
+        -:   75:
+        -:   76:    // random.choice(seq) -> index
+function _ZN3kag8PyRandom12choice_indexEj called 400 returned 100% blocks executed 100%
+      400:   77:    uint32_t choice_index(uint32_t len) { return randbelow(len); }
+call    0 returned 400
+        -:   78:
+        -:   79:private:
+        -:   80:    static constexpr int N = 624;
+        -:   81:    static constexpr int M = 397;
+        -:   82:    static constexpr uint32_t MATRIX_A = 0x9908b0dfu;
+        -:   83:    static constexpr uint32_t UPPER = 0x80000000u;
+        -:   84:    static constexpr uint32_t LOWER = 0x7fffffffu;
+        -:   85:
+        -:   86:    uint32_t mt_[N];
+        -:   87:    int index_ = N;
+        -:   88:
+function _ZN3kag8PyRandom12init_genrandEj called 1576 returned 100% blocks executed 100%
+     1576:   89:    void init_genrand(uint32_t s) {
+     1576:   90:        mt_[0] = s;
+   983424:   91:        for (int i = 1; i < N; ++i)
+branch  0 taken 981848
+branch  1 taken 1576 (fallthrough)
+   981848:   92:            mt_[i] = 1812433253u * (mt_[i - 1] ^ (mt_[i - 1] >> 30)) + static_cast<uint32_t>(i);
+     1576:   93:        index_ = N;
+     1576:   94:    }
+        -:   95:
+function _ZN3kag8PyRandom13init_by_arrayEPKji called 1576 returned 100% blocks executed 94%
+     1576:   96:    void init_by_array(const uint32_t* key, int keylen) {
+     1576:   97:        init_genrand(19650218u);
+call    0 returned 1576
+     1576:   98:        int i = 1, j = 0;
+    1576*:   99:        int k = (N > keylen) ? N : keylen;
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1576
+   985000:  100:        for (; k; --k) {
+branch  0 taken 983424
+branch  1 taken 1576 (fallthrough)
+   983424:  101:            mt_[i] = (mt_[i] ^ ((mt_[i - 1] ^ (mt_[i - 1] >> 30)) * 1664525u)) + key[j] + static_cast<uint32_t>(j);
+   983424:  102:            ++i; ++j;
+   983424:  103:            if (i >= N) { mt_[0] = mt_[N - 1]; i = 1; }
+branch  0 taken 1576 (fallthrough)
+branch  1 taken 981848
+   983424:  104:            if (j >= keylen) j = 0;
+branch  0 taken 564096 (fallthrough)
+branch  1 taken 419328
+        -:  105:        }
+   983424:  106:        for (k = N - 1; k; --k) {
+branch  0 taken 981848
+branch  1 taken 1576 (fallthrough)
+   981848:  107:            mt_[i] = (mt_[i] ^ ((mt_[i - 1] ^ (mt_[i - 1] >> 30)) * 1566083941u)) - static_cast<uint32_t>(i);
+   981848:  108:            ++i;
+   981848:  109:            if (i >= N) { mt_[0] = mt_[N - 1]; i = 1; }
+branch  0 taken 1576 (fallthrough)
+branch  1 taken 980272
+        -:  110:        }
+     1576:  111:        mt_[0] = 0x80000000u;
+     1576:  112:        index_ = N;
+     1576:  113:    }
+        -:  114:};
+        -:  115:
+        -:  116:}  // namespace kag

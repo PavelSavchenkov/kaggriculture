@@ -1,0 +1,14 @@
+{
+  "source_actions_per_mode": 9347,
+  "modes": 3,
+  "original_reference_sequences": 8,
+  "forced_branch_and_cash_sequences": 5,
+  "robust_pass_debug_generic_games": 16,
+  "public_teammate_debug_generic_games": 16,
+  "search_package_debug_direct_games": 8,
+  "no_shared_mutable_episode_state": "Route choices are five per-instance integers; only immutable decoded action tables are shared",
+  "observation_scope": "Public farms, market and shops plus own shed, seeds and carried goods; no seed or rival inventory",
+  "self_pass_checks": "results/sixday_checks/",
+  "league": "results/sixday_league/",
+  "source_parity": "results/sixday_parity.json"
+}

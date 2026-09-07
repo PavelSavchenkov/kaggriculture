@@ -1,0 +1,65 @@
+{
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "g++",
+    "-std=c++20",
+    "-O2",
+    "-I",
+    "/home/pavel/Programming/kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/tests/parity.cpp",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/source/agent.cpp",
+    "-o",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/parity"
+  ],
+  "results": [
+    {
+      "branch": 0,
+      "mode": 0,
+      "result": "matched_actions=719"
+    },
+    {
+      "branch": 0,
+      "mode": 3,
+      "result": "matched_actions=719"
+    },
+    {
+      "branch": 0,
+      "mode": 4,
+      "result": "matched_actions=719"
+    },
+    {
+      "branch": 1,
+      "mode": 1,
+      "result": "matched_actions=719"
+    },
+    {
+      "branch": 1,
+      "mode": 3,
+      "result": "matched_actions=719"
+    },
+    {
+      "branch": 1,
+      "mode": 4,
+      "result": "matched_actions=719"
+    },
+    {
+      "branch": 2,
+      "mode": 2,
+      "result": "matched_actions=719"
+    },
+    {
+      "branch": 2,
+      "mode": 3,
+      "result": "matched_actions=719"
+    },
+    {
+      "branch": 2,
+      "mode": 4,
+      "result": "matched_actions=719"
+    }
+  ],
+  "scope": "Three719-action source courses plus each forced demand/quote route on the same exogenous source observations; routing formulas are local, not original-source claims"
+}

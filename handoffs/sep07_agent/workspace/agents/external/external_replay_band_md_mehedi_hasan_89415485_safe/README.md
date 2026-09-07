@@ -1,0 +1,3 @@
+# external_replay_band_md_mehedi_hasan_89415485_safe
+
+Safety-normalized opponent-only derivative of `external_replay_band_md_mehedi_hasan_89415485`.

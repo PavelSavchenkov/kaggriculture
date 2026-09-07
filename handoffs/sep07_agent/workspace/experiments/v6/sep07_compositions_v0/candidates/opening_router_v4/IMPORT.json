@@ -1,0 +1,34 @@
+{
+  "parent": "guarded_hires_v3",
+  "change": "Behavior-identical named wrapper; no policy change",
+  "sources": [
+    {
+      "path": "candidates/guarded_hires_v3/IMPORT.json",
+      "sha256": "eda8b908024b29dc3f55029ecdc7b3ce5f560735da14582553d0b0591c4eadcd"
+    },
+    {
+      "path": "candidates/guarded_hires_v3/source/agent.hpp",
+      "sha256": "813ef13198f5f2a21903f67dd1567b64b4dac87bd7f195907cb700fb7e33f7e9"
+    },
+    {
+      "path": "include/guarded_day.hpp",
+      "sha256": "95392c8287758f419825b20b830c54388ad9c71cb2d5fe4790ea1b9e57bdcaa4"
+    },
+    {
+      "path": "candidates/opening_router_v3/source/agent.hpp",
+      "sha256": "9db9ac254afbbca8ef2c52dd6a8aaa04b47a588ca47f441cf3ab41471b5e8587"
+    }
+  ],
+  "evidence": [
+    "results/guarded_hires_causal_validation.json",
+    "results/guarded_hires_validation.json",
+    "results/guarded_hires_promotion",
+    "results/guard_new_counter_gate"
+  ],
+  "wrapper_checks": {
+    "wrapper_underlying_equal_games": 1024,
+    "generic4thread_debug_pair1thread_equal_games": 16,
+    "pass_self": "opening_v4_checks",
+    "causal": "guarded_hires_causal_validation.json"
+  }
+}
