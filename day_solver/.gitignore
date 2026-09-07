@@ -1,0 +1,12 @@
+/build*/
+/work/
+__pycache__/
+*.pyc
+# These are intentional, pinned runtime and link dependencies.
+!/lib/
+!/lib/**
+!/runtime/lib/
+!/runtime/lib/**
+!*.so
+!/src/components/native_exact_domains/solver/build/
+!/src/components/native_exact_domains/solver/build/replay_tile_adapter.cpp

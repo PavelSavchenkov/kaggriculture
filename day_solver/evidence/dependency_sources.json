@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-09-06T01:47:08.879550+00:00",
+  "sources": [
+    {
+      "dependency": "ortools",
+      "url": "https://github.com/google/or-tools/releases/download/v9.15/or-tools_amd64_ubuntu-24.04_cpp_v9.15.6755.tar.gz",
+      "archive": "or-tools_amd64_ubuntu-24.04_cpp_v9.15.6755.tar.gz",
+      "sha256": "6f389320672cee00b78aacefb2bde33fef0bb988c3b2735573b9fffd1047fbda",
+      "official_digest": "sha256:6f389320672cee00b78aacefb2bde33fef0bb988c3b2735573b9fffd1047fbda"
+    },
+    {
+      "dependency": "pyvrp",
+      "url": "https://codeload.github.com/PyVRP/PyVRP/tar.gz/refs/tags/v0.14.0",
+      "archive": "pyvrp_v0.14.0.tar.gz",
+      "sha256": "a11cd49debe3d20a44fe111228f57990f1f891be7fdf77d09fba8232200fa592",
+      "official_digest": null
+    }
+  ],
+  "installed_python_versions": {
+    "ortools": "9.15.6755",
+    "pyvrp": "0.14.0"
+  },
+  "scope": "Isolated C++ port dependencies; no shared environment or frozen solver changes"
+}

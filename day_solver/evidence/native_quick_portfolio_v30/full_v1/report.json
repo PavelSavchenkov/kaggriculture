@@ -1,0 +1,5563 @@
+{
+  "planned": 81,
+  "completed": 81,
+  "elapsed_seconds": 15.416359292925335,
+  "summary": {
+    "64": {
+      "completed": 81,
+      "strict": 81,
+      "median_seconds": 0.1760160579578951,
+      "mean_seconds": 0.3728444159180386,
+      "max_seconds": 5.672222982975654,
+      "strict_under_500ms": 68,
+      "strict_under_1s": 73
+    }
+  },
+  "rows": [
+    {
+      "case": "105520710_p1_d06",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.37754077301360667,
+      "solver_seconds": 0.3610627419548109,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v1/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.051677190931513906,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.026786911068484187,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.026450228,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.16927629290148616,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.11285368294920772,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "UNKNOWN",
+              "seconds": 2.9765e-05,
+              "count": 0,
+              "backend_error": "pickup stock not ready"
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.027352195,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.084073441,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105440809_p1_d24",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.9913032439071685,
+      "solver_seconds": 0.9737857669824734,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v5/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.030667913029901683,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.026293391012586653,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v2/construct",
+          "kind": "constructor",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.029882569913752377,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v3/construct",
+          "kind": "constructor",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.030426627956330776,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v4/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1875431330408901,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v4/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.1829045140184462,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.179970471,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v5/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18026747391559184,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v5/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.3057350510498509,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000260158,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.303099618,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105544480_p0_d15",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 1.4311861669411883,
+      "solver_seconds": 1.4188681039959192,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v4/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1889741999329999,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.1005143920192495,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.099147331,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1825057310052216,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.23652353195939213,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "UNKNOWN",
+              "seconds": 2.9137e-05,
+              "count": 0,
+              "backend_error": "availability not reached"
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.178940423,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.054898821,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v2/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18645104998722672,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v2/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.09985224797856063,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.098435829,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v3/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18306934495922178,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v3/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.011448481935076416,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.010184627,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v4/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.11608919000718743,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v4/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.11329449503682554,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000240644,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.112015904,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105433860_p1_d10",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.18626354506704956,
+      "solver_seconds": 0.16785987000912428,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.035465956083498895,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.13226111500989646,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000181519,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.13127928,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105568519_p0_d23",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.32800815894734114,
+      "solver_seconds": 0.3099787610117346,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.16206916701048613,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.14788741909433156,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.00023387,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.146721705,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105426891_p0_d27",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.25400469498708844,
+      "solver_seconds": 0.23601358302403241,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.14522144803777337,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.09076008992269635,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000191327,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.09009096,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105568515_p0_d10",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.2707761919591576,
+      "solver_seconds": 0.25560615700669587,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.08026581106241792,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1750417259754613,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000216214,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.173464509,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105568515_p0_d18",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.3989246339770034,
+      "solver_seconds": 0.38031787797808647,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18734042602591217,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.19294112699571997,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000239584,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.191032906,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105568519_p0_d24",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.5069614460226148,
+      "solver_seconds": 0.48875667701940984,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v1/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18947046995162964,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.025313953054137528,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.023308924,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1800512430490926,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.09386583103332669,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000238421,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.092295593,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105412589_p0_d05",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.059629969066008925,
+      "solver_seconds": 0.04629853996448219,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.014269232982769608,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.03189641400240362,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000114417,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.031605761,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105412589_p0_d08",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.08775763597805053,
+      "solver_seconds": 0.07038122497033328,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.04566383792553097,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.024587415042333305,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000171618,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.024106856,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105416492_p0_d05",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.06348071503452957,
+      "solver_seconds": 0.04616578808054328,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.014435642980970442,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.031684612040407956,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.00011504,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.031380422,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105416492_p0_d08",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.31778699392452836,
+      "solver_seconds": 0.30191654001828283,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v1/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.050748494104482234,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.03954186488408595,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.0390509,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.17078255396336317,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.040654696989804506,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000168452,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.040139774,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105419993_p1_d05",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.06971265305764973,
+      "solver_seconds": 0.05116434604860842,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.017895887955091894,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.03311373107135296,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000121169,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.032812492,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105419993_p1_d08",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.1760160579578951,
+      "solver_seconds": 0.1598962499992922,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.10761913890019059,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.052035456988960505,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000176707,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.051436631,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105423458_p0_d05",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.059383351006545126,
+      "solver_seconds": 0.043315976043231785,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.010909592965617776,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.032358249998651445,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000114691,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.032056047,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105423458_p0_d09",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.15130940405651927,
+      "solver_seconds": 0.13252053502947092,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.049978559953160584,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.08238999405875802,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000198731,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.081699766,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105426891_p0_d05",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.06412361306138337,
+      "solver_seconds": 0.04810575896408409,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.011448745965026319,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.036605075001716614,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.00013477,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.03624743,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105426891_p0_d08",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.07575181499123573,
+      "solver_seconds": 0.05860271805431694,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.03241590294055641,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.02617272303905338,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.00017052,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.025665429,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105426896_p0_d06",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.055986827006563544,
+      "solver_seconds": 0.03887935308739543,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.021973724011331797,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.016814946080558002,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000115681,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.016554037,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105426896_p0_d09",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.07331901497673243,
+      "solver_seconds": 0.05591240699868649,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.02362620399799198,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.03216383303515613,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000150951,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.031724332,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105430345_p1_d06",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.16572244302369654,
+      "solver_seconds": 0.147141368011944,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v1/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.03945982293225825,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.012823867029510438,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.012615415,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.08376564702484757,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.010553983971476555,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.00012088,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.010315683,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105430345_p1_d08",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.0741338919615373,
+      "solver_seconds": 0.06138048798311502,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.02506773406639695,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.03606152907013893,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000155613,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.03546863,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105433860_p1_d06",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.2384627660503611,
+      "solver_seconds": 0.22350890189409256,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v1/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.08595896302722394,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.021112816990353167,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.020801569,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.09536423499230295,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.021018850966356695,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000113866,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.020681049,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105437336_p1_d05",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.06497414293698967,
+      "solver_seconds": 0.04631919995881617,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.013766248943284154,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.0325029690284282,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000117219,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.032200248,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105437336_p1_d08",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.11227115895599127,
+      "solver_seconds": 0.09585396503098309,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.04252625408116728,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.0532688619568944,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000174272,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.052653014,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105440809_p1_d05",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.06189431494567543,
+      "solver_seconds": 0.049701243988238275,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.016359896981157362,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.033192081027664244,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000116613,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.03288948,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105440809_p1_d08",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.13361687096767128,
+      "solver_seconds": 0.11583845294080675,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.08005981403402984,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.035449674003757536,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000167559,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.034966579,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105568515_p0_d05",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.0657444300595671,
+      "solver_seconds": 0.05204204993788153,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.010978490929119289,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.0410139849409461,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000117854,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.04067713,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105568515_p0_d08",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.25942851696163416,
+      "solver_seconds": 0.24129920301493257,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.09545637504197657,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1456475640879944,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "UNKNOWN",
+              "seconds": 1.9289e-05,
+              "count": 0,
+              "backend_error": "pickup stock not ready"
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.062821944,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.08136491700000001,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105568519_p0_d06",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.09502805292140692,
+      "solver_seconds": 0.08159608696587384,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.030771378078497946,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.05047919601202011,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000132757,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.05002759,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105568519_p0_d09",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.13621662696823478,
+      "solver_seconds": 0.12072423507925123,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.03501664102077484,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.08569164399523288,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000188221,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.085035256,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105433860_p1_d23",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.3997752040158957,
+      "solver_seconds": 0.38119589001871645,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v1/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.043888679007068276,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1867243730230257,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.15055517596192658,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.00023683,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.149443894,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105337896_p0_d25",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 5.672222982975654,
+      "solver_seconds": 5.653335603070445,
+      "independent_hours": 24,
+      "winning_stage": "fixed_work/quick/r0/v2/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18848683999385685,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.007382501964457333,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.006747459,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18059528502635658,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.0784711119486019,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.077611736,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v2/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1826528589008376,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v2/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.0067308100406080484,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.00618302,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v3/construct",
+          "kind": "constructor",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.02844048000406474,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v4/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.15538472309708595,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v4/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.015420036972500384,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.014756868,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v5/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.17754644807428122,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v5/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.0192149420036003,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.018397994,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v6/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18138245202135295,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v6/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.015252852928824723,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.01460946,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v7/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1829731249017641,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v7/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.013878197991289198,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.01332186,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r1/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.2381977989571169,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r1/v0/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.007225810084491968,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.00655063,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r1/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.2261132380226627,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r1/v1/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.0751976000610739,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.074307532,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r1/v2/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.2376506149303168,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r1/v2/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.006830335943959653,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.006204227,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r1/v3/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.2613124259514734,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r1/v3/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.005464877933263779,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.004990379,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r1/v4/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1556388420285657,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r1/v4/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.01513274700846523,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.014482507,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r1/v5/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.21428289904724807,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r1/v5/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.019221651018597186,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.01837523,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r1/v6/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.218842261005193,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r1/v6/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.015006884932518005,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.014415192,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r1/v7/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.22856935299932957,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r1/v7/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.006565246032550931,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.006058345,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "fixed_work/quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.35445590503513813,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "fixed_work/quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.14768722094595432,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.146766039,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "fixed_work/quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.6359894790221006,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "fixed_work/quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.12815089395735413,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.098335845,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.028160126,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "fixed_work/quick/r0/v2/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.8792873139027506,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "fixed_work/quick/r0/v2/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1415890200296417,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.112822322,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.026579776,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105541022_p1_d22",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.9398943890118971,
+      "solver_seconds": 0.9211644199676812,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v3/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18011687602847815,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.013587087043561041,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.012925086,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.17761156894266605,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.08828788995742798,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.087209396,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v2/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.178391857072711,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v2/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.007689616992138326,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.00704543,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v3/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18303013604599983,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v3/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.0923560819355771,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000230602,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.091506164,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105568519_p0_d22",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 1.634414187981747,
+      "solver_seconds": 1.6148021559929475,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v2/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1941900789970532,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.29927022103220224,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.294989543,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1778722769813612,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.44899033394176513,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "UNKNOWN",
+              "seconds": 2.726e-05,
+              "count": 0,
+              "backend_error": "pickup stock not ready"
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.395220862,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.048429577,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v2/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.19461776805110276,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v2/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.29975068604107946,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000244056,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.295837487,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105544480_p0_d25",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.19183166499715298,
+      "solver_seconds": 0.17342923302203417,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.11964019399601966,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.05376413790509105,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000240449,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.052858174,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105517911_p1_d07",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.084001250914298,
+      "solver_seconds": 0.06909208500292152,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.032427849946543574,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.036567479954101145,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.00014605,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.036154421,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105517911_p1_d12",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.20708757103420794,
+      "solver_seconds": 0.18693329102825373,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.041969843092374504,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.14494167198427022,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000222201,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.143658082,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105520710_p1_d19",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.5525889440905303,
+      "solver_seconds": 0.5333709699334577,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v1/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18164082302246243,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.08035191299859434,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.079257276,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.17358065792359412,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.09772776404861361,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000231128,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.096652741,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105556989_p0_d24",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.3044107799651101,
+      "solver_seconds": 0.286038113059476,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18171234603505582,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.10428092896472663,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000218697,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.103381032,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105524174_p0_d07",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.053962402045726776,
+      "solver_seconds": 0.03811758302617818,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.024571468005888164,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.013479563989676535,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000140693,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.013206498,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105553680_p1_d21",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 1.1328260690206662,
+      "solver_seconds": 1.1205359670566395,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v3/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18835324293468148,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.013745496980845928,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.012310353,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.17872689093928784,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.2311178669333458,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "UNKNOWN",
+              "seconds": 2.2094e-05,
+              "count": 0,
+              "backend_error": "availability not reached"
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.186563262,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.042286083,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v2/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.185783983906731,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v2/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.017786484910175204,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.016140361,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v3/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1947104400023818,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v3/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.11017827002797276,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000245283,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.109113028,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105524174_p0_d12",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.22964738798327744,
+      "solver_seconds": 0.21190207300242037,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.0982767230598256,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.11360524001065642,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000218694,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.112727545,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105524176_p0_d07",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.05512664502020925,
+      "solver_seconds": 0.035306223086081445,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.02001742599532008,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.015143665950745344,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000139263,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.014835992,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105520710_p1_d22",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 1.2514533320209011,
+      "solver_seconds": 1.2370635290862992,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v3/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1838725550333038,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.01648627792019397,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.01424007,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.17743954702746123,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.222926162998192,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "UNKNOWN",
+              "seconds": 2.6139e-05,
+              "count": 0,
+              "backend_error": "pickup stock not ready"
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.180228897,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.039974362,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v2/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18430300091858953,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v2/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.12322363792918622,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.121316696,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v3/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1817186769330874,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v3/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.14697586908005178,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000243539,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.14565659,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105517911_p1_d26",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.2837927209911868,
+      "solver_seconds": 0.2626665129791945,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.10091646108776331,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1617155009880662,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000237067,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.16050485,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105541022_p1_d07",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.06763758009765297,
+      "solver_seconds": 0.049972463049925864,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.024577239993959665,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.025354026001878083,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000140359,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.02495116,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105524176_p0_d24",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 1.5168921470176429,
+      "solver_seconds": 1.496148971025832,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v4/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18438836699351668,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.03800560801755637,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.032497915,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1762772889342159,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.381557404063642,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "UNKNOWN",
+              "seconds": 2.6495e-05,
+              "count": 0,
+              "backend_error": "availability not reached"
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.318943439,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.058248227,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v2/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18440480902791023,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v2/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.04723471205215901,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.044904511,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v3/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1803187009645626,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v3/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.02019415597897023,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.018081067,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v4/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.07564157503657043,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v4/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.20799768308643252,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000231233,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.20588806,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105544480_p0_d01",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.0226465460145846,
+      "solver_seconds": 0.011056629940867424,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.003671599901281297,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.00738177599851042,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 8.2185e-05,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.007213927,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105544480_p0_d17",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.23684447398409247,
+      "solver_seconds": 0.221013356000185,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.11381285404786468,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.10717492899857461,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0002232,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.10632352,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105547294_p1_d05",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.04359663091599941,
+      "solver_seconds": 0.02500613301526755,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.013637596042826772,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.011345981969498098,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 9.8841e-05,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.011120632,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105547294_p1_d10",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.2618672379758209,
+      "solver_seconds": 0.24186857300810516,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.06629427801817656,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1754557219101116,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000213793,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.173964297,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105524176_p0_d22",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.45260803506243974,
+      "solver_seconds": 0.433934987988323,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v1/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.051941597019322217,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18699142301920801,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1949718229006976,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000254753,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.193641085,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105550812_p0_d07",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.08297759003471583,
+      "solver_seconds": 0.06519513600505888,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.024056928930804133,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.04095484095159918,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.00014328,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.040533356,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105550812_p0_d20",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.2689548369962722,
+      "solver_seconds": 0.25083543197251856,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.13567704905290157,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1151261810446158,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000223228,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.114188617,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105517911_p1_d25",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.14725716598331928,
+      "solver_seconds": 0.12830375297926366,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.07277013699058443,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.05549657205119729,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000216242,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.054880433,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105550817_p1_d07",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.06701939203776419,
+      "solver_seconds": 0.04653121705632657,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.01998486090451479,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.026368107995949686,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.00013218,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.025961658,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105550817_p1_d25",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.37885780609212816,
+      "solver_seconds": 0.36019210307858884,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.19387180800549686,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.16627800406422466,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000256359,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.164353686,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105547294_p1_d27",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.19202910107560456,
+      "solver_seconds": 0.17487386404536664,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.035783029976300895,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.13907462800852954,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000207665,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.137936076,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105553680_p1_d07",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.05402009701356292,
+      "solver_seconds": 0.03646820003632456,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.019444620003923774,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.016971482895314693,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000136434,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.016649602,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105520710_p1_d23",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 2.080210800981149,
+      "solver_seconds": 2.061038878047839,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v7/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18673035700339824,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.013435891945846379,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.01222126,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.17963706993032247,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.21097496105358005,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "UNKNOWN",
+              "seconds": 2.469e-05,
+              "count": 0,
+              "backend_error": "pickup stock not ready"
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.168859091,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.039387935,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v2/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18385884701274335,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v2/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.012940593995153904,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.011346071,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v3/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18334089708514512,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v3/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.012536359019577503,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.011029148,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v4/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1920228210510686,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v4/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.015307571971789002,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.013423002,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v5/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1805244580609724,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v5/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.036909839953295887,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.034993446,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v6/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18809248390607536,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v6/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.030901212012395263,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.029258084,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v7/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18631813710089773,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v7/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.24725728097837418,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "UNKNOWN",
+              "seconds": 1.9622e-05,
+              "count": 0,
+              "backend_error": "pickup stock not ready"
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.184112986,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.060140239000000005,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105553680_p1_d20",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 1.023269557976164,
+      "solver_seconds": 1.0017106879968196,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v1/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.19220929103903472,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.3095013729762286,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "INFEASIBLE",
+              "seconds": 0.304581183,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1835146649973467,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.31641920597758144,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000255889,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.313257302,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105556989_p0_d10",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.17496481502894312,
+      "solver_seconds": 0.1570475340122357,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.04209354904014617,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.11481318902224302,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000208828,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.113323547,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105571271_p1_d10",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.5634293520124629,
+      "solver_seconds": 0.5447958480799571,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.04143895301967859,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.5033305959077552,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000210206,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.50163785,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105556989_p0_d22",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.2724252979969606,
+      "solver_seconds": 0.2516372479731217,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.09489332605153322,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1567256050184369,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000229797,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.155134399,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105524176_p0_d10",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.2318199360743165,
+      "solver_seconds": 0.21473206498194486,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.031397963990457356,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.1831359179923311,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.00020824,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.181648033,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105571271_p1_d08",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.07816632301546633,
+      "solver_seconds": 0.061617175000719726,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.029650615993887186,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.03188514802604914,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000161976,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.031355714,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105571271_p1_d21",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.2802510740002617,
+      "solver_seconds": 0.267258970066905,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.17451201402582228,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.09271546802483499,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000228879,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.091790967,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105341441_p1_d23",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.3952770240139216,
+      "solver_seconds": 0.376658423920162,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v1/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "UNKNOWN",
+          "seconds": 0.03248089493717998,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.18077471398282796,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v1/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.16337753599509597,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.00043851,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.161961842,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "105224416_p0_d20",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.24361603194847703,
+      "solver_seconds": 0.22465857095085084,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.13585088297259063,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.08877434104215354,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.000213218,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.087816543,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "synthetic_minimal_day_problem",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.017576457001268864,
+      "solver_seconds": 0.005511475028470159,
+      "independent_hours": 24,
+      "winning_stage": "quick/initial_exact",
+      "attempts": [
+        {
+          "stage": "quick/initial_exact",
+          "kind": "exact",
+          "solver_status": "OPTIMAL",
+          "seconds": 0.005491522955708206,
+          "error": "",
+          "semantic_events": []
+        }
+      ]
+    },
+    {
+      "case": "synthetic_plant_tomato_day",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.03048237902112305,
+      "solver_seconds": 0.013503908994607627,
+      "independent_hours": 24,
+      "winning_stage": "quick/initial_exact",
+      "attempts": [
+        {
+          "stage": "quick/initial_exact",
+          "kind": "exact",
+          "solver_status": "OPTIMAL",
+          "seconds": 0.013482177979312837,
+          "error": "",
+          "semantic_events": []
+        }
+      ]
+    },
+    {
+      "case": "105296909_p1_d10",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.23254284111317247,
+      "solver_seconds": 0.2117340579861775,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.04095854295883328,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.17075153498444706,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.00021769,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.168646907,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "synthetic_harvest_tomato_day",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.08411285502370447,
+      "solver_seconds": 0.06822779297363013,
+      "independent_hours": 24,
+      "winning_stage": "quick/initial_exact",
+      "attempts": [
+        {
+          "stage": "quick/initial_exact",
+          "kind": "exact",
+          "solver_status": "OPTIMAL",
+          "seconds": 0.06820269802119583,
+          "error": "",
+          "semantic_events": []
+        }
+      ]
+    },
+    {
+      "case": "synthetic_goose_egg_day",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.08678615104872733,
+      "solver_seconds": 0.06638875906355679,
+      "independent_hours": 24,
+      "winning_stage": "quick/initial_exact",
+      "attempts": [
+        {
+          "stage": "quick/initial_exact",
+          "kind": "exact",
+          "solver_status": "OPTIMAL",
+          "seconds": 0.06635725707747042,
+          "error": "",
+          "semantic_events": []
+        }
+      ]
+    },
+    {
+      "case": "synthetic_build_coop_day",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.0793201649794355,
+      "solver_seconds": 0.06465444504283369,
+      "independent_hours": 24,
+      "winning_stage": "quick/initial_exact",
+      "attempts": [
+        {
+          "stage": "quick/initial_exact",
+          "kind": "exact",
+          "solver_status": "OPTIMAL",
+          "seconds": 0.06462862703483552,
+          "error": "",
+          "semantic_events": []
+        }
+      ]
+    },
+    {
+      "case": "synthetic_last_hour_hires",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.022751106997020543,
+      "solver_seconds": 0.006458205985836685,
+      "independent_hours": 24,
+      "winning_stage": "quick/r0/v0/complete",
+      "attempts": [
+        {
+          "stage": "quick/r0/v0/construct",
+          "kind": "constructor",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.00015032198280096054,
+          "error": "",
+          "semantic_events": []
+        },
+        {
+          "stage": "quick/r0/v0/complete",
+          "kind": "semantic",
+          "solver_status": "FEASIBLE",
+          "seconds": 0.00630294403526932,
+          "error": "",
+          "semantic_events": [
+            {
+              "name": "direct_schedule",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0001223,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "screen",
+              "kind": "screen",
+              "solver_status": "OPTIMAL",
+              "seconds": 0.006229803,
+              "count": 0,
+              "backend_error": ""
+            },
+            {
+              "name": "exact",
+              "kind": "exact",
+              "solver_status": "FEASIBLE",
+              "seconds": 0.0,
+              "count": 0,
+              "backend_error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "synthetic_late_land_22",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.026671697036363184,
+      "solver_seconds": 0.006954340031370521,
+      "independent_hours": 24,
+      "winning_stage": "quick/initial_exact",
+      "attempts": [
+        {
+          "stage": "quick/initial_exact",
+          "kind": "exact",
+          "solver_status": "OPTIMAL",
+          "seconds": 0.006934239994734526,
+          "error": "",
+          "semantic_events": []
+        }
+      ]
+    },
+    {
+      "case": "numeric_seed_above_int32",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.031240381067618728,
+      "solver_seconds": 0.015878145000897348,
+      "independent_hours": 24,
+      "winning_stage": "quick/initial_exact",
+      "attempts": [
+        {
+          "stage": "quick/initial_exact",
+          "kind": "exact",
+          "solver_status": "OPTIMAL",
+          "seconds": 0.015856262994930148,
+          "error": "",
+          "semantic_events": []
+        }
+      ]
+    },
+    {
+      "case": "numeric_large_feed_stock",
+      "iterations": 64,
+      "strict": true,
+      "status": "SCHEDULE",
+      "returncode": 0,
+      "wall_seconds": 0.05251914996188134,
+      "solver_seconds": 0.0358929350040853,
+      "independent_hours": 24,
+      "winning_stage": "quick/initial_exact",
+      "attempts": [
+        {
+          "stage": "quick/initial_exact",
+          "kind": "exact",
+          "solver_status": "OPTIMAL",
+          "seconds": 0.03586805204395205,
+          "error": "",
+          "semantic_events": []
+        }
+      ]
+    }
+  ]
+}

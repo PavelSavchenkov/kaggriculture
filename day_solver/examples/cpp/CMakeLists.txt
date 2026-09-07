@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.18)
+project(day_solver_consumer LANGUAGES CXX)
+add_subdirectory(../.. day_solver)
+add_executable(example main.cpp)
+target_link_libraries(example PRIVATE DaySolver::scheduler)

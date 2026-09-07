@@ -1,0 +1,342 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:kaggriculture:day-problem:v3",
+  "title": "Public Kaggriculture day problem v3",
+  "description": "Structural checks only. Native validation and strict replay enforce item/operation combinations, predecessor/state consistency, and all timed resource constraints.",
+  "type": "object",
+  "properties": {
+    "format_version": {
+      "const": 3
+    },
+    "worker_count": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 40
+    },
+    "start": {
+      "type": "object",
+      "properties": {
+        "managed_tiles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9
+              },
+              "y": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9
+              },
+              "state": {
+                "$ref": "#/$defs/state"
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "state"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 100
+        },
+        "shed": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "minItems": 12,
+          "maxItems": 12
+        },
+        "seeds": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "minItems": 5,
+          "maxItems": 5
+        }
+      },
+      "required": [
+        "managed_tiles",
+        "shed",
+        "seeds"
+      ],
+      "additionalProperties": false
+    },
+    "end_tiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tile": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 99
+          },
+          "state": {
+            "$ref": "#/$defs/state"
+          }
+        },
+        "required": [
+          "tile",
+          "state"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 100
+    },
+    "tile_work": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tile": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 99
+          },
+          "actions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "op": {
+                  "enum": [
+                    "plant",
+                    "place",
+                    "harvest",
+                    "collect_fertilizer",
+                    "water",
+                    "fertilize",
+                    "dig",
+                    "build_pasture",
+                    "build_coop",
+                    "feed",
+                    "care"
+                  ]
+                },
+                "arg": {
+                  "type": "integer",
+                  "minimum": -1,
+                  "maximum": 11
+                },
+                "quantity": {
+                  "const": 1
+                },
+                "output_item": {
+                  "type": "integer",
+                  "minimum": -1,
+                  "maximum": 8
+                },
+                "output_quantity": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 2147483647
+                }
+              },
+              "required": [
+                "op",
+                "arg",
+                "quantity",
+                "output_item",
+                "output_quantity"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "tile",
+          "actions"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 100
+    },
+    "buy_schedule": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "hour": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 23
+          },
+          "order_index": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9
+          },
+          "op": {
+            "enum": [
+              "hire",
+              "buy_land",
+              "buy_seed",
+              "buy_product",
+              "buy_animal"
+            ]
+          },
+          "item": {
+            "type": "integer",
+            "minimum": -1,
+            "maximum": 11
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 2147483647
+          }
+        },
+        "required": [
+          "hour",
+          "order_index",
+          "op",
+          "item",
+          "quantity"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 240
+    },
+    "shed_availability": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "minItems": 12,
+        "maxItems": 12
+      },
+      "minItems": 24,
+      "maxItems": 24
+    },
+    "end_shed": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 2147483647
+      },
+      "minItems": 12,
+      "maxItems": 12
+    },
+    "end_seeds": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 2147483647
+      },
+      "minItems": 5,
+      "maxItems": 5
+    }
+  },
+  "required": [
+    "format_version",
+    "worker_count",
+    "start",
+    "end_tiles",
+    "tile_work",
+    "buy_schedule",
+    "shed_availability",
+    "end_shed",
+    "end_seeds"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "state": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "empty",
+            "weed",
+            "locked",
+            "crop",
+            "pasture",
+            "coop"
+          ]
+        },
+        "crop": {
+          "type": "integer",
+          "minimum": -1,
+          "maximum": 4
+        },
+        "animal": {
+          "enum": [
+            -1,
+            9,
+            10,
+            11
+          ]
+        },
+        "age_days": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "stored_units": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 6
+        },
+        "consecutive_dry_days": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "pending_care_bonus": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "fertilizer_days_remaining": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "watered_today": {
+          "type": "boolean"
+        },
+        "fed_today": {
+          "type": "boolean"
+        },
+        "cared_today": {
+          "type": "boolean"
+        },
+        "fertilizer_available": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "kind",
+        "crop",
+        "animal",
+        "age_days",
+        "stored_units",
+        "consecutive_dry_days",
+        "pending_care_bonus",
+        "fertilizer_days_remaining",
+        "watered_today",
+        "fed_today",
+        "cared_today",
+        "fertilizer_available"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

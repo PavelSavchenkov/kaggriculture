@@ -1,0 +1,27 @@
+{
+  "scope": "Standalone packaging checks; no new unseen evaluation",
+  "unchanged_v30_binary": true,
+  "cpp_api_fixtures": 12,
+  "cpp_builder_edit_fixtures": 12,
+  "cpp_prebuilt_tests_pass": true,
+  "cpp_rebuilt_core_tests_pass": true,
+  "cli_smoke_strict": 12,
+  "cli_independent_inventory_hours": 288,
+  "standalone_ledger_matches_saved_fixtures": 12,
+  "schema_validated_inputs": 574,
+  "frozen_benchmark_hashes_matched": 574,
+  "clean_checkout_cmake_consumer_pass": true,
+  "clean_checkout_cli_strict": 12,
+  "clean_checkout_independent_hours": 288,
+  "clean_environment_example_pass": true,
+  "no_experiment_conda_or_sibling_engine_file_access": true,
+  "native_runtime_libraries_within_package_and_system": true,
+  "engine_trace_passes": 56,
+  "engine_unfinalized_trace_passes": 56,
+  "clean_checkout_engine_trace_passes": 56,
+  "engine_headers_match_sibling_engine": true,
+  "notes": [
+    "The C++ core source rebuild links bundled numeric kernels and third-party libraries.",
+    "All schedule checks here use exposed fixtures; broad historical coverage remains version-specific."
+  ]
+}

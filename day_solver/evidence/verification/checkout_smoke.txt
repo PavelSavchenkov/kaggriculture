@@ -1,0 +1,13 @@
+1/12 105437336_p1_d08: SCHEDULE
+2/12 105524174_p0_d12: SCHEDULE
+3/12 105433860_p1_d23: SCHEDULE
+4/12 numeric_large_feed_stock: SCHEDULE
+5/12 numeric_seed_above_int32: SCHEDULE
+6/12 synthetic_build_coop_day: SCHEDULE
+7/12 synthetic_goose_egg_day: SCHEDULE
+8/12 synthetic_last_hour_hires: SCHEDULE
+9/12 synthetic_late_land_22: SCHEDULE
+10/12 synthetic_harvest_tomato_day: SCHEDULE
+11/12 synthetic_minimal_day_problem: SCHEDULE
+12/12 synthetic_plant_tomato_day: SCHEDULE
+{"scope": "Exposed regression; not unseen validation", "cases": 12, "strict": 12, "independent_hours": 288, "elapsed_seconds": 0.6337375220609829, "median_solver_seconds": 0.04905060795135796, "mean_solver_seconds": 0.07861152099212632, "max_solver_seconds": 0.3739138200180605, "timing_scope": "All completed reports, including UNKNOWN; excludes process startup and independent audit"}
