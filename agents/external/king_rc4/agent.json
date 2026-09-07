@@ -1,0 +1,7 @@
+{
+  "format_version": 1,
+  "name": "king_rc4",
+  "header": "source/agent.hpp",
+  "type": "compositions::king_rc4::Agent",
+  "sources": ["source/agent.cpp", "source/upstream/public_router/agent.cpp"]
+}

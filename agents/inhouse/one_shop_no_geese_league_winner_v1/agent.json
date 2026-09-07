@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "one_shop_no_geese_league_winner_v1",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::one_shop_no_geese_league_winner_v1::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "source/core.cpp"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "format_version": 1,
+  "name": "fixed_weed_105492_robust",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::fixed_weed_105492_robust::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "source/core.cpp",
+    "source/donor_overlay.cpp",
+    "source/reassignment_overlay.cpp",
+    "source/residual_overlay.cpp"
+  ]
+}

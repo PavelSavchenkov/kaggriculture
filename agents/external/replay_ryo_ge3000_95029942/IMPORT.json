@@ -1,0 +1,15 @@
+{
+  "origin": "experiments/v2/aug31_four_random_shops_league_foundry/candidates/replay/replay_ryo_ge3000_95029942",
+  "source_sha256": {
+    "README.md": "17912cea99d4c5028c13b985f663a37102029cffba639a51de1fb1ba9562c015",
+    "agent.json": "6eed72896f326c000b34edc8d45af442fb57bb3a6534c683414eb043bf7c1cf9",
+    "source/agent.cpp": "43c7e2f1a31c8f7d6d7403b8657f79cd14cb00887ec2847beab542db456b23f2",
+    "source/agent.hpp": "438a1d469fa0aa5289689e417f15772586d19780c9b1660e9d8de3c1b467232d",
+    "source/tape.inc": "5169cafe17134f41beadc4320548e8a14658129f5d02abc135b994fd1cd073de"
+  },
+  "changes": [
+    "Copy into this experiment",
+    "Repair moved includes; policy unchanged"
+  ],
+  "rating_scope": "Historical source selection band, not a rating measured in this experiment"
+}

@@ -1,0 +1,12 @@
+{
+  "format_version": 1,
+  "lineage": "Three complete Atakan Mamedov replay continuations with a locally inferred observed-shop demand selector",
+  "source_kind": "replay_derived_portfolio",
+  "source": "experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_demand",
+  "approx_kaggle_rating": null,
+  "rating_note": "Validated as a strong league specialist, not assigned a public rating.",
+  "cpp_status": "optimized",
+  "optimization_note": "Compact immutable three-course C++ portfolio; all state is per instance.",
+  "parity_scope": "6,471 source-action comparisons and full continuation-realization checks passed; the later fresh six-opponent audit recorded 2,058/3,072 wins.",
+  "candidate_reuse": "External replay lineage. Reuse only as an external opponent or with the nested donor provenance preserved."
+}

@@ -1,0 +1,3 @@
+# external_replay_band_jeff_horon_89417087_safe
+
+Safety-normalized opponent-only derivative of `external_replay_band_jeff_horon_89417087`.

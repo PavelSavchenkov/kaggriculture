@@ -1,0 +1,12 @@
+{
+  "format_version": 1,
+  "lineage": "Teammate shoprouter-rl-v2: yhay81 Three-Day Shop Router production backbone plus the teammate's learned additive market-denial head and price-floor guard",
+  "source_kind": "teammate_cpp_port",
+  "source": "external/kaggriculture/agents/shoprouter-rl-v2",
+  "approx_kaggle_rating": null,
+  "rating_note": "This was the teammate's strongest retained reference. Its reported local/live results are not converted into a Kaggle rating.",
+  "cpp_status": "optimized",
+  "optimization_note": "The existing C++ backbone is wrapped directly and the Python selling head is translated to allocation-free C++.",
+  "parity_scope": "7,190 actions matched the original Python/native package across eight recorded and two forced-route sequences.",
+  "candidate_reuse": "External-only opponent and mechanism-study source. Preserve NOTICE and source hashes; do not copy its opaque strategic behavior into an in-house policy."
+}

@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "investment_context_guarded_001_best",
+  "header": "source/agent.hpp",
+  "type": "compositions::investment_context_guarded_001_best::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "source/deps/experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.cpp"
+  ]
+}

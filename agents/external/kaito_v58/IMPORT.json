@@ -1,0 +1,65 @@
+{
+  "source": "external/kaggriculture/agents/champion-v58/v58_agent.py",
+  "url": "https://www.kaggle.com/code/kaitofukami/238-238-known-streams-v58-minimax-closed-loop",
+  "authors": [
+    "Kaito Fukami",
+    "Pilkwang Kim (loader-only fork)"
+  ],
+  "license": "Apache-2.0",
+  "source_sha256": "7343e706350d9f75964761b4d064c2d1292ad5a379e0a7c5c76da015ac2b6407",
+  "routes": [
+    {
+      "route": "_V55_LIVE_ROUTE",
+      "source_sha256": "0fce5e3f1c02196aeb6496b03f13e6489413b89e3bea91ad8abfcce49a23db23"
+    },
+    {
+      "route": "_V56_YARN_ROUTE",
+      "source_sha256": "4049c2b99e5dee87ec21e01748dba720d31b6f8d182b6d1601f1ebfa526e78bd"
+    },
+    {
+      "route": "_V57_PET_ROUTE",
+      "source_sha256": "042988978d40dd8048d0aa548e8300dfb3a814398a939291d299a3a5f738e89d"
+    },
+    {
+      "route": "_V58_RECOVERY_ROUTE",
+      "source_sha256": "f4791a374077ffe78bdeb8dcb43d378e94013f3abc67c27feea42df9a28e66ac"
+    },
+    {
+      "route": "_V58_SMOOTHIE_ROUTE",
+      "source_sha256": "67f6e29b328d6b314a328f9b919ada9a5eb7194f65b1303f210508648452864b"
+    },
+    {
+      "route": "_V58_CLONE_ROUTE",
+      "source_sha256": "af85543deb4e7b7b698af7039d2a03d66b22f05ead33b2c29b5910775390f8af"
+    },
+    {
+      "route": "_V58_KNOWN_YARN_ROUTE",
+      "source_sha256": "faf3f9a049b4d30d3f5d5b5bbc092157eda8d927b4afbc0d845489257c07b397"
+    },
+    {
+      "route": "_V58_ICE_MINIMAX_ROUTE",
+      "source_sha256": "e941d0caa9b8280d33f95bac1fae8086a5d856f97d62ea5ccc6b096f458b7eaf"
+    },
+    {
+      "route": "_V58_BAKERY_YARN_ROUTE",
+      "source_sha256": "042988978d40dd8048d0aa548e8300dfb3a814398a939291d299a3a5f738e89d"
+    },
+    {
+      "route": "_V58_PIZZA_RECOVERY_ROUTE",
+      "source_sha256": "e3e39da21969ea5a313273ea61636bf4c39a65d547ffad4bbf211a9643b35cf9"
+    }
+  ],
+  "changes": [
+    "C++ local API and immutable integer tables",
+    "all ten independent controllers update from turn zero, equivalent to replayed warm prefixes",
+    "literal active v58 residual configuration; disabled market-maker and defer logic omitted"
+  ],
+  "rating": "Not established from this notebook headline; fresh full-game evaluation pending",
+  "status": "17,256 source actions match; generic/debug/thread, PASS/self and 13-opponent discovery completed",
+  "port_sha256": {
+    "agent.cpp": "afe0cc0457f77110e27671f6876935232fb66e0ad1aaa41a5f74989f540162c9",
+    "agent.hpp": "5949af061225ddf686d8dff113521d23e7a9917763017d896f9031dfc226a2d2",
+    "routes.inc": "a7a57aa91610f456974283fe29d664f81fce862348026dde21466f4e8b7a6b9d"
+  },
+  "validation": "results/kaito_v58_parity.json and results/audited_ports_validation.json"
+}

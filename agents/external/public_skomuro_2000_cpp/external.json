@@ -1,0 +1,13 @@
+{
+  "format_version": 1,
+  "lineage": "skomuro_2000_baseline_v2",
+  "source_kind": "public_notebook_port",
+  "source": "https://www.kaggle.com/code/skomuro/2000-baseline-silver-medal-route",
+  "source_run": 345934372,
+  "approx_kaggle_rating": 2000,
+  "rating_note": "Approximate source-author claim in the public notebook title; not a captured leaderboard snapshot.",
+  "cpp_status": "optimized",
+  "optimization_note": "Allocation-free fixed-array port with exact original-Python parity on five complete PASS games and strict/release/sanitizer result parity on the full local grid.",
+  "license": "not_exposed_by_source_metadata",
+  "candidate_reuse": "local_evaluation_opponent_only; do not submit or copy behavior"
+}

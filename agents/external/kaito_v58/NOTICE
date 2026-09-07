@@ -1,0 +1,10 @@
+Derived from Kaito Fukami's public Kaggriculture v58 notebook, Version 11,
+https://www.kaggle.com/code/kaitofukami/238-238-known-streams-v58-minimax-closed-loop
+Repository copy: champion-v58/v58_agent.py, including Pilkwang Kim's
+2026-09-02 loader-only shim. Source header declares Apache License 2.0.
+
+Modified in this experiment on 2026-09-07: translated active policy to the C++
+local-agent API, stored immutable route data, initialized independent route
+controllers at game start, and omitted disabled policy branches. Source and
+route hashes, parity scope and measured strength are recorded in IMPORT.json
+and the experiment research/evaluation files. No original author endorsement.

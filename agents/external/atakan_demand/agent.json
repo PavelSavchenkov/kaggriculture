@@ -1,0 +1,7 @@
+{
+  "format_version": 1,
+  "name": "atakan_demand",
+  "header": "source/agent.hpp",
+  "type": "compositions::atakan_demand::Agent",
+  "sources": ["source/agent.cpp", "source/base/agent.cpp"]
+}

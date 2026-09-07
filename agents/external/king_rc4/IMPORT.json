@@ -1,0 +1,93 @@
+{
+  "source": "https://www.kaggle.com/code/yamakawanin/king-v4e-rc4",
+  "retrieved_utc": "2026-09-07 08:04",
+  "source_sha256": "26ffba5273e4432dbc4ec822d5a65b09d3e9f1473c3ce813c528812eeb45779d",
+  "frozen_source": "research/refresh_0804/notebooks/yamakawanin/king-v4e-rc4",
+  "approximate_kaggle_rating": "unknown; author reports local wins, not independently verified",
+  "reuse_license": "not stated in downloaded metadata or extracted source; unknown",
+  "optimization_status": "faithful active-controller C++ port; no local optimization",
+  "parity": {
+    "result": "matched_actions=14380",
+    "error": "",
+    "source_branches": {
+      "BASE": 7263,
+      "YARN_SECOND": 1725,
+      "recovery_queued": 218,
+      "LOW": 10052,
+      "MID": 1436,
+      "HIGH": 2872,
+      "S1_BAL_override": 1941,
+      "FERT385": 5,
+      "HIGHCAP": 7117,
+      "tail_route_7015cc00acfa4922": 5352,
+      "tail_route_dc76e4003029ac51": 1120,
+      "tail_route_ab9669b9abfbea4e": 359,
+      "tail_route_a84d06f1d12add7c": 286,
+      "SHEEP241": 5,
+      "SF_HIRE_LAST": 12
+    },
+    "scope": "8 recorded sequences and12 forced branch sequences,719actions each; active-unit/unused-argument normalization",
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "g++",
+      "-std=c++20",
+      "-O2",
+      "-DVERIFY_KING",
+      "-I",
+      "/home/pavel/Programming/kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/tests/public_router_parity.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/king_rc4/source/agent.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/public_router/source/agent.cpp",
+      "-o",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/king_parity"
+    ]
+  },
+  "active_components": [
+    "52 fixed program blocks and22,289 nearest-market examples",
+    "hybrid structural opening, with q30 opening replacement",
+    "Dusta v2 terminal recall and uncovered liquidation",
+    "weed BUILD/PLANT debt recovery, daily reset",
+    "q30 LOW mirror wheat cap, stable sale merging and terminal order",
+    "v2a aggressive or v3t throttled supply/price sales selected by public herd distance",
+    "v3m day3 low-capital opponent continuation and one-turn presales",
+    "v4b next-day bootstrap-hire cash reserve",
+    "v4e second-YARN continuation",
+    "RC3 step241 spare sheep andstep385 fertilizer reduction",
+    "RC4 public smartfarm fingerprint andlate hire-last order"
+  ],
+  "inactive_legacy_components": [
+    "super-classifier and its special S2 routes: current-player context never set on final entry path",
+    "capital-adaptive key overrides: context never set",
+    "anti-router synchronized mirror and embedded three-day router: bypassed by q30_v1 baseline"
+  ],
+  "tail_component": {
+    "package": "league/public_router",
+    "nested_source_sha256": "197b1ceef97d2ee20b833457ecbf06c0969832086c086ee6596bd0752e57a3c1",
+    "identity": "byte-identical to archived Thomas source",
+    "local_change": "read-only planned_action accessor exposes immutable next route order, needed by donor presale rule"
+  },
+  "attribution_limits": "Notebook comments credit OceanMix/Tetsuya program behavior and Dusta terminal logic; underlying replay episode IDs are not supplied. Preserve claims as donor attribution, not independently established original authorship.",
+  "deployment_validation": {
+    "generic4thread_debug_pair1thread_equal_games": 16,
+    "pair": [
+      "king_rc4",
+      "opening_router_v4"
+    ],
+    "pass_self": "results/king_checks",
+    "broad_league": "results/king_league",
+    "source_parity": "results/king_parity.json",
+    "scope": "Immutable shared tables, per-instance episode state; legal observation only; same seed/budget hashes and rewards agree"
+  },
+  "fresh_comparisons": {
+    "directory": "results/king_fresh_800000",
+    "seeds": "800000..800511, both seats",
+    "games_per_opponent": 1024
+  },
+  "native_audits": [
+    "results/king_native_junghoon.json",
+    "results/king_native_v4.json"
+  ]
+}

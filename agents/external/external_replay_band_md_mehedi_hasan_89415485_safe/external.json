@@ -1,0 +1,13 @@
+{
+  "format_version": 1,
+  "lineage": "replay_md_mehedi_hasan_89415485",
+  "source_kind": "public_replay_schedule_with_generic_safety_wrapper",
+  "source": "replays/2026-08-01/89415485.json",
+  "episode": 89415485,
+  "player": "Md. Mehedi Hasan",
+  "approx_kaggle_rating": 819.6,
+  "rating_note": "Discovery leaderboard snapshot at 2026-09-01T15:07:35; it does not prove that this episode used the same submission version.",
+  "cpp_status": "optimized",
+  "optimization_note": "Compile-time tape, fixed arrays, optimized exact safety path, and strict/release/sanitizer full-grid parity.",
+  "candidate_reuse": "frozen_evaluation_opponent_only"
+}

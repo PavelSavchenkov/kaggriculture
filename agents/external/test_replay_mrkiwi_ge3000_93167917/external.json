@@ -1,0 +1,12 @@
+{
+  "format_version": 1,
+  "lineage": "Exact public replay course from MrKiwi, episode 93167917, engine 1.32.7",
+  "source_kind": "public_replay_reconstruction",
+  "source": "Public episode 93167917",
+  "approx_kaggle_rating": 3000,
+  "rating_note": "The source player was selected from the historical >=3000 band; this is not a rating measured for the fixed reconstructed course.",
+  "cpp_status": "optimized",
+  "optimization_note": "Compact immutable C++ action tape with structurally safe worker-count adaptation.",
+  "parity_scope": "Exact recorded action prefix; extra workers emit PASS when the live trajectory has more units.",
+  "candidate_reuse": "Public replay opponent only. It has no inferred original branching logic or separate source-code license."
+}

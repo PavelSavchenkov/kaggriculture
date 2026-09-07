@@ -1,0 +1,12 @@
+{
+  "format_version": 1,
+  "lineage": "Faithful C++ port of yamakawanin/king-v4e-rc4 with its Thomas public-router continuation vendored locally",
+  "source_kind": "public_notebook_port",
+  "source": "https://www.kaggle.com/code/yamakawanin/king-v4e-rc4",
+  "approx_kaggle_rating": null,
+  "rating_note": "No defensible rating was recorded for the exact frozen notebook policy.",
+  "cpp_status": "not_fully_optimized",
+  "optimization_note": "Faithful typed C++ port; no source-policy optimization was claimed.",
+  "parity_scope": "14,380 source actions matched, including forced routes and recovery cases; generic, debug, thread, PASS, and self-play checks passed.",
+  "candidate_reuse": "External public-policy lineage. No separate reuse license was established; keep provenance and do not move behavior blocks into in-house agents."
+}

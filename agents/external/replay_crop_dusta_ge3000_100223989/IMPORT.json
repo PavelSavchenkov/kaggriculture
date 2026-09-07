@@ -1,0 +1,15 @@
+{
+  "origin": "experiments/v2/aug31_four_random_shops_league_foundry/candidates/replay/replay_crop_dusta_ge3000_100223989",
+  "source_sha256": {
+    "README.md": "a9d10bd01b7e5aa83428f764bf9de36739cec1f0a51c5918f51aeaaa2af22be1",
+    "agent.json": "fbf838e86d95842d27433858ae65c07740287c4065761e8e498175b3294579a5",
+    "source/agent.cpp": "aa7039fbe717faa24b8389e5cc2f95f846c5da8956308b4e37c389a0a047ce48",
+    "source/agent.hpp": "860691841726273508f73e304bcdf5968236f04b4e43ed2e9fc5481c54f06546",
+    "source/tape.inc": "5bace3b88e03d2f150276f1b542900aacd82e0da99daf776f101e7e7af017569"
+  },
+  "changes": [
+    "Copy into this experiment",
+    "Repair moved includes; policy unchanged"
+  ],
+  "rating_scope": "Historical source selection band, not a rating measured in this experiment"
+}

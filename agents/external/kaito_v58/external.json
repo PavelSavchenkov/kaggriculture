@@ -1,0 +1,12 @@
+{
+  "format_version": 1,
+  "lineage": "Faithful C++ port of Kaito Fukami v58 with Pilkwang Kim's loader shim",
+  "source_kind": "public_notebook_port",
+  "source": "Kaito Fukami champion-v58 public notebook; exact identifiers and hashes are in IMPORT.json",
+  "approx_kaggle_rating": null,
+  "rating_note": "No exact policy rating was recorded; local discovery results are reported separately.",
+  "cpp_status": "not_fully_optimized",
+  "optimization_note": "Allocation-free C++ port with immutable route tables; policy logic was preserved rather than retuned.",
+  "parity_scope": "17,256 source actions matched across recorded and forced full sequences; generic, debug, thread, PASS, and self checks passed.",
+  "candidate_reuse": "Apache-2.0 source; preserve LICENSE, NOTICE, attribution, and IMPORT.json."
+}

@@ -1,0 +1,36 @@
+shoprouter-rl
+=============
+
+A COMPOSITE agent: a public production backbone + an original RL-trained selling head.
+
+PRODUCTION BACKBONE (third-party, Apache-2.0)
+  Author  : yhay81 (Yusuke Hayashi)
+  Source  : Kaggle kernel `yhay81/three-day-shop-router`  (agent hybrid_shopforge_3day_frontier_state_router_r5)
+  Files   : _shop_bridge.py (its ctypes bridge, renamed), agent.so (compiled in Kaggle's runtime,
+            GLIBC <= 2.14), source/ (its C++ sources, SPDX Apache-2.0 headers).
+  Used unchanged, under the Apache License 2.0 (https://www.apache.org/licenses/LICENSE-2.0).
+
+MARKET-DENIAL HEAD (our original work)
+  An additive selling policy (main.py `_head_sells`) that appends extra non-wheat SELLs in leftover
+  market slots. Parameters (_W, _BIAS) were trained by Evolution Strategies against a mixed opponent
+  panel (shoprouter/tfuku/starter), optimizing the terminal-margin DELTA over the raw backbone.
+  Training harness: scratchpad rl_markethead/ (env.py, train_panel.py). This is NOT part of the
+  upstream agent; it is our contribution and the reason this agent beats the raw backbone.
+
+WHY IT'S A COMPOSITE, NOT A CLONE: the backbone's production/selling is a tightly-coupled whole
+(replacing its selling collapses it), so the head is strictly ADDITIVE -- it never removes or alters
+the backbone's own orders, only adds denial sells in spare slots. Measured vs the raw backbone:
++$3.2k head-to-head (8/8, two seed blocks); within +-$300 (noise) vs tfuku/top10/starter.
+
+OUR CHANGE IN v2 -- PRICE-FLOOR SKIP
+  The head no longer sells an item quoted below $3. A sale at the $1 floor yields $1 AND
+  does not add market supply (`if (price > 1) inventory += 1` in the engine), so it
+  neither earns nor denies -- the unit is strictly wasted, and the town drain re-prices
+  it if held. Measured on 182 REAL ladder games (replay counterfactual, which reproduces
+  official margins exactly for additive changes to the agent that played them):
+      shipped shoprouter-rl : 130/182
+      v2 (floor $3)         : 131/182   -- converts one loss, gives up zero wins
+  Searched and rejected: floors at $10/$25 (no gain), $50 (-9 games), and per-item
+  fertilizer/wool floors (no gain; a fertilizer floor CANCELS the $3 gain). Also
+  ablated the head's item set -- no item should be dropped (strawberry is worth 11
+  games, milk/wool/fertilizer 2 each).

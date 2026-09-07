@@ -1,0 +1,7 @@
+{
+  "format_version": 1,
+  "name": "boatlee_h7_fast_sanitize",
+  "header": "source/agent.hpp",
+  "type": "four_shop_foundry::throughput::boatlee_h7_fast_sanitize::Agent",
+  "sources": ["source/agent.cpp", "source/base/agent.cpp"]
+}

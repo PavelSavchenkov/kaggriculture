@@ -1,0 +1,820 @@
+{
+  "source_sha256": "b87a27ed614a33329be85f1b662e51cf4078a019fee937afcebbbbf2f51f8522",
+  "source": "https://www.kaggle.com/code/thomastschinkel/kaggriculture-93-8-win-rate-public-state-router",
+  "tapes": 5,
+  "turns_per_tape": 719,
+  "trees": [
+    [
+      [
+        -1,
+        0,
+        0,
+        0,
+        0.0
+      ]
+    ],
+    [
+      [
+        28,
+        1,
+        4,
+        -1,
+        0.0
+      ],
+      [
+        35,
+        2,
+        3,
+        -1,
+        0.0
+      ],
+      [
+        -1,
+        0,
+        0,
+        1,
+        0.0
+      ],
+      [
+        -1,
+        0,
+        0,
+        2,
+        0.0
+      ],
+      [
+        -1,
+        0,
+        0,
+        4,
+        0.0
+      ]
+    ],
+    [
+      [
+        -1,
+        0,
+        0,
+        0,
+        0.0
+      ]
+    ],
+    [
+      [
+        -1,
+        0,
+        0,
+        0,
+        0.0
+      ]
+    ],
+    [
+      [
+        4,
+        1,
+        2,
+        -1,
+        54.0
+      ],
+      [
+        -1,
+        0,
+        0,
+        3,
+        0.0
+      ],
+      [
+        -1,
+        0,
+        0,
+        0,
+        0.0
+      ]
+    ]
+  ],
+  "tape_prefix_lengths": [
+    [
+      719,
+      3,
+      3,
+      4,
+      1
+    ],
+    [
+      3,
+      719,
+      12,
+      3,
+      1
+    ],
+    [
+      3,
+      12,
+      719,
+      3,
+      1
+    ],
+    [
+      4,
+      3,
+      3,
+      719,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      719
+    ]
+  ],
+  "typed_tape_sha256": [
+    "147a576b9360b6cef73736ddb5d4e518cb9fa2f17731210e91727e4a13138001",
+    "e0a137de856281c470f3885886e5b0cc0ad320d0f2b5736b74f914a52c990378",
+    "6313337c7ef181fdab321b07530d1f310d1528d61fa0c0dfe980e84b82acd4d3",
+    "29ccf43f6e88f29ee2853471a97515a0701267d12235b95f0f9bc0e775c332b2",
+    "aa6f24c1303ca89e7d9de09d32b055b257f65ccb114aa83beaa76b2008255d12"
+  ],
+  "nearest_existing_library_courses": [
+    [
+      {
+        "program": 55,
+        "different_actions": 74,
+        "different_unit_command_rows": 52,
+        "source": {
+          "program": 55,
+          "id": "episode_106284179_seat_1",
+          "episode": 106284179,
+          "seat": 1,
+          "team": "feel the agi",
+          "rank": 10,
+          "submission": 56058325,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T00:48:32.csv",
+          "replay_sha256": "96684b21978a3c8ac48fc2db2182914926d4fcaa01d90015e5328ac0a1731bb3"
+        }
+      },
+      {
+        "program": 85,
+        "different_actions": 113,
+        "different_unit_command_rows": 87,
+        "source": {
+          "program": 85,
+          "id": "episode_106318475_seat_0",
+          "episode": 106318475,
+          "seat": 0,
+          "team": "Mao Nishino (mao1756)",
+          "rank": 12,
+          "submission": 56064507,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T03:14:45.csv",
+          "replay_sha256": "56d285762ccd6e5b4c5dbac093db34fe02530ea6e1acfd9124ef3d50b8bbf13c"
+        }
+      },
+      {
+        "program": 87,
+        "different_actions": 172,
+        "different_unit_command_rows": 131,
+        "source": {
+          "program": 87,
+          "id": "episode_106320304_seat_0",
+          "episode": 106320304,
+          "seat": 0,
+          "team": "Mao Nishino (mao1756)",
+          "rank": 12,
+          "submission": 56064507,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T03:14:45.csv",
+          "replay_sha256": "f19cb1570735be5d111f5649a754a11ea36bf425df1afbcc0b41110bcf3298da"
+        }
+      }
+    ],
+    [
+      {
+        "program": 59,
+        "different_actions": 47,
+        "different_unit_command_rows": 45,
+        "source": {
+          "program": 59,
+          "id": "episode_106288601_seat_0",
+          "episode": 106288601,
+          "seat": 0,
+          "team": "feel the agi",
+          "rank": 10,
+          "submission": 56058325,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T00:48:32.csv",
+          "replay_sha256": "74a680e23e696fb8ba60a7d17ccb6932b58730de94b2b900a5693d80f35441ae"
+        }
+      },
+      {
+        "program": 58,
+        "different_actions": 90,
+        "different_unit_command_rows": 62,
+        "source": {
+          "program": 58,
+          "id": "episode_106287962_seat_0",
+          "episode": 106287962,
+          "seat": 0,
+          "team": "feel the agi",
+          "rank": 10,
+          "submission": 56058325,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T00:48:32.csv",
+          "replay_sha256": "dd419361036419d40b827c1f40f66c8c671a24694463bd97ea133fcc27a254ac"
+        }
+      },
+      {
+        "program": 89,
+        "different_actions": 97,
+        "different_unit_command_rows": 65,
+        "source": {
+          "program": 89,
+          "id": "episode_106322139_seat_0",
+          "episode": 106322139,
+          "seat": 0,
+          "team": "Mao Nishino (mao1756)",
+          "rank": 12,
+          "submission": 56064507,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T03:14:45.csv",
+          "replay_sha256": "54b3e3fdc6ef3a822b2c1e25bbce427fab2c833e54c104808bedb91d0e793e41"
+        }
+      }
+    ],
+    [
+      {
+        "program": 56,
+        "different_actions": 54,
+        "different_unit_command_rows": 46,
+        "source": {
+          "program": 56,
+          "id": "episode_106284732_seat_0",
+          "episode": 106284732,
+          "seat": 0,
+          "team": "feel the agi",
+          "rank": 10,
+          "submission": 56058325,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T00:48:32.csv",
+          "replay_sha256": "792e7e75f4c8a0125e3781a82f7ae086300817cdf83b1674f5395be7232232a9"
+        }
+      },
+      {
+        "program": 84,
+        "different_actions": 96,
+        "different_unit_command_rows": 52,
+        "source": {
+          "program": 84,
+          "id": "episode_106318337_seat_1",
+          "episode": 106318337,
+          "seat": 1,
+          "team": "Mao Nishino (mao1756)",
+          "rank": 12,
+          "submission": 56064507,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T03:14:45.csv",
+          "replay_sha256": "5692516c0ac732ce9b8f6a439c0c851126d127ef0ffc3db3cbc76aae5a384be9"
+        }
+      },
+      {
+        "program": 58,
+        "different_actions": 101,
+        "different_unit_command_rows": 52,
+        "source": {
+          "program": 58,
+          "id": "episode_106287962_seat_0",
+          "episode": 106287962,
+          "seat": 0,
+          "team": "feel the agi",
+          "rank": 10,
+          "submission": 56058325,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T00:48:32.csv",
+          "replay_sha256": "dd419361036419d40b827c1f40f66c8c671a24694463bd97ea133fcc27a254ac"
+        }
+      }
+    ],
+    [
+      {
+        "program": 85,
+        "different_actions": 50,
+        "different_unit_command_rows": 46,
+        "source": {
+          "program": 85,
+          "id": "episode_106318475_seat_0",
+          "episode": 106318475,
+          "seat": 0,
+          "team": "Mao Nishino (mao1756)",
+          "rank": 12,
+          "submission": 56064507,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T03:14:45.csv",
+          "replay_sha256": "56d285762ccd6e5b4c5dbac093db34fe02530ea6e1acfd9124ef3d50b8bbf13c"
+        }
+      },
+      {
+        "program": 55,
+        "different_actions": 97,
+        "different_unit_command_rows": 82,
+        "source": {
+          "program": 55,
+          "id": "episode_106284179_seat_1",
+          "episode": 106284179,
+          "seat": 1,
+          "team": "feel the agi",
+          "rank": 10,
+          "submission": 56058325,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T00:48:32.csv",
+          "replay_sha256": "96684b21978a3c8ac48fc2db2182914926d4fcaa01d90015e5328ac0a1731bb3"
+        }
+      },
+      {
+        "program": 59,
+        "different_actions": 150,
+        "different_unit_command_rows": 122,
+        "source": {
+          "program": 59,
+          "id": "episode_106288601_seat_0",
+          "episode": 106288601,
+          "seat": 0,
+          "team": "feel the agi",
+          "rank": 10,
+          "submission": 56058325,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T00:48:32.csv",
+          "replay_sha256": "74a680e23e696fb8ba60a7d17ccb6932b58730de94b2b900a5693d80f35441ae"
+        }
+      }
+    ],
+    [
+      {
+        "program": 135,
+        "different_actions": 482,
+        "different_unit_command_rows": 247,
+        "source": {
+          "program": 135,
+          "id": "episode_106374189_seat_0",
+          "episode": 106374189,
+          "seat": 0,
+          "team": "fog flower",
+          "rank": 11,
+          "submission": 56067704,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T07:05:03.csv",
+          "replay_sha256": "1d6112c020928bb7d8919c065f27465ab13c6f6debffb246bffea97dc076e020"
+        }
+      },
+      {
+        "program": 39,
+        "different_actions": 485,
+        "different_unit_command_rows": 246,
+        "source": {
+          "program": 39,
+          "id": "episode_106281631_seat_0",
+          "episode": 106281631,
+          "seat": 0,
+          "team": "mandgeee",
+          "rank": 7,
+          "submission": 56058215,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T00:48:32.csv",
+          "replay_sha256": "0472906f9e2597d2f16d3cf53dad2c417338ef159664c70dabd51c9709fcc2b6"
+        }
+      },
+      {
+        "program": 132,
+        "different_actions": 503,
+        "different_unit_command_rows": 297,
+        "source": {
+          "program": 132,
+          "id": "episode_106372339_seat_1",
+          "episode": 106372339,
+          "seat": 1,
+          "team": "fog flower",
+          "rank": 11,
+          "submission": 56067704,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T07:05:03.csv",
+          "replay_sha256": "51a6462f749db32d447bc40e404c3e829250ed47d5bbfcdc99937dcb422dde9c"
+        }
+      }
+    ]
+  ],
+  "nearest_existing_library_unit_courses": [
+    [
+      {
+        "program": 55,
+        "different_actions": 74,
+        "different_unit_command_rows": 52,
+        "source": {
+          "program": 55,
+          "id": "episode_106284179_seat_1",
+          "episode": 106284179,
+          "seat": 1,
+          "team": "feel the agi",
+          "rank": 10,
+          "submission": 56058325,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T00:48:32.csv",
+          "replay_sha256": "96684b21978a3c8ac48fc2db2182914926d4fcaa01d90015e5328ac0a1731bb3"
+        }
+      },
+      {
+        "program": 134,
+        "different_actions": 283,
+        "different_unit_command_rows": 85,
+        "source": {
+          "program": 134,
+          "id": "episode_106373261_seat_1",
+          "episode": 106373261,
+          "seat": 1,
+          "team": "fog flower",
+          "rank": 11,
+          "submission": 56067704,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T07:05:03.csv",
+          "replay_sha256": "ce115763d1140f6bcb5cc844ccd902e383a6c4f89d5137f71e51d9947dcfac28"
+        }
+      },
+      {
+        "program": 85,
+        "different_actions": 113,
+        "different_unit_command_rows": 87,
+        "source": {
+          "program": 85,
+          "id": "episode_106318475_seat_0",
+          "episode": 106318475,
+          "seat": 0,
+          "team": "Mao Nishino (mao1756)",
+          "rank": 12,
+          "submission": 56064507,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T03:14:45.csv",
+          "replay_sha256": "56d285762ccd6e5b4c5dbac093db34fe02530ea6e1acfd9124ef3d50b8bbf13c"
+        }
+      }
+    ],
+    [
+      {
+        "program": 59,
+        "different_actions": 47,
+        "different_unit_command_rows": 45,
+        "source": {
+          "program": 59,
+          "id": "episode_106288601_seat_0",
+          "episode": 106288601,
+          "seat": 0,
+          "team": "feel the agi",
+          "rank": 10,
+          "submission": 56058325,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T00:48:32.csv",
+          "replay_sha256": "74a680e23e696fb8ba60a7d17ccb6932b58730de94b2b900a5693d80f35441ae"
+        }
+      },
+      {
+        "program": 56,
+        "different_actions": 104,
+        "different_unit_command_rows": 58,
+        "source": {
+          "program": 56,
+          "id": "episode_106284732_seat_0",
+          "episode": 106284732,
+          "seat": 0,
+          "team": "feel the agi",
+          "rank": 10,
+          "submission": 56058325,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T00:48:32.csv",
+          "replay_sha256": "792e7e75f4c8a0125e3781a82f7ae086300817cdf83b1674f5395be7232232a9"
+        }
+      },
+      {
+        "program": 58,
+        "different_actions": 90,
+        "different_unit_command_rows": 62,
+        "source": {
+          "program": 58,
+          "id": "episode_106287962_seat_0",
+          "episode": 106287962,
+          "seat": 0,
+          "team": "feel the agi",
+          "rank": 10,
+          "submission": 56058325,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T00:48:32.csv",
+          "replay_sha256": "dd419361036419d40b827c1f40f66c8c671a24694463bd97ea133fcc27a254ac"
+        }
+      }
+    ],
+    [
+      {
+        "program": 56,
+        "different_actions": 54,
+        "different_unit_command_rows": 46,
+        "source": {
+          "program": 56,
+          "id": "episode_106284732_seat_0",
+          "episode": 106284732,
+          "seat": 0,
+          "team": "feel the agi",
+          "rank": 10,
+          "submission": 56058325,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T00:48:32.csv",
+          "replay_sha256": "792e7e75f4c8a0125e3781a82f7ae086300817cdf83b1674f5395be7232232a9"
+        }
+      },
+      {
+        "program": 84,
+        "different_actions": 96,
+        "different_unit_command_rows": 52,
+        "source": {
+          "program": 84,
+          "id": "episode_106318337_seat_1",
+          "episode": 106318337,
+          "seat": 1,
+          "team": "Mao Nishino (mao1756)",
+          "rank": 12,
+          "submission": 56064507,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T03:14:45.csv",
+          "replay_sha256": "5692516c0ac732ce9b8f6a439c0c851126d127ef0ffc3db3cbc76aae5a384be9"
+        }
+      },
+      {
+        "program": 58,
+        "different_actions": 101,
+        "different_unit_command_rows": 52,
+        "source": {
+          "program": 58,
+          "id": "episode_106287962_seat_0",
+          "episode": 106287962,
+          "seat": 0,
+          "team": "feel the agi",
+          "rank": 10,
+          "submission": 56058325,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T00:48:32.csv",
+          "replay_sha256": "dd419361036419d40b827c1f40f66c8c671a24694463bd97ea133fcc27a254ac"
+        }
+      }
+    ],
+    [
+      {
+        "program": 85,
+        "different_actions": 50,
+        "different_unit_command_rows": 46,
+        "source": {
+          "program": 85,
+          "id": "episode_106318475_seat_0",
+          "episode": 106318475,
+          "seat": 0,
+          "team": "Mao Nishino (mao1756)",
+          "rank": 12,
+          "submission": 56064507,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T03:14:45.csv",
+          "replay_sha256": "56d285762ccd6e5b4c5dbac093db34fe02530ea6e1acfd9124ef3d50b8bbf13c"
+        }
+      },
+      {
+        "program": 55,
+        "different_actions": 97,
+        "different_unit_command_rows": 82,
+        "source": {
+          "program": 55,
+          "id": "episode_106284179_seat_1",
+          "episode": 106284179,
+          "seat": 1,
+          "team": "feel the agi",
+          "rank": 10,
+          "submission": 56058325,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T00:48:32.csv",
+          "replay_sha256": "96684b21978a3c8ac48fc2db2182914926d4fcaa01d90015e5328ac0a1731bb3"
+        }
+      },
+      {
+        "program": 134,
+        "different_actions": 284,
+        "different_unit_command_rows": 83,
+        "source": {
+          "program": 134,
+          "id": "episode_106373261_seat_1",
+          "episode": 106373261,
+          "seat": 1,
+          "team": "fog flower",
+          "rank": 11,
+          "submission": 56067704,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T07:05:03.csv",
+          "replay_sha256": "ce115763d1140f6bcb5cc844ccd902e383a6c4f89d5137f71e51d9947dcfac28"
+        }
+      }
+    ],
+    [
+      {
+        "program": 116,
+        "different_actions": 557,
+        "different_unit_command_rows": 138,
+        "source": {
+          "program": 116,
+          "id": "episode_106354321_seat_1",
+          "episode": 106354321,
+          "seat": 1,
+          "team": "binghua",
+          "rank": 9,
+          "submission": 56057841,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T06:04:50.csv",
+          "replay_sha256": "2624e0e648e49419b2d9a2475ecee14ed0de241cd94f1e33c575396dbb8fe3c4"
+        }
+      },
+      {
+        "program": 115,
+        "different_actions": 578,
+        "different_unit_command_rows": 194,
+        "source": {
+          "program": 115,
+          "id": "episode_106353451_seat_0",
+          "episode": 106353451,
+          "seat": 0,
+          "team": "binghua",
+          "rank": 9,
+          "submission": 56057841,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T06:04:50.csv",
+          "replay_sha256": "0f0102bf4756558b362e48e1ffd1ba04a325c525789c0dc3047b52e3414b7969"
+        }
+      },
+      {
+        "program": 142,
+        "different_actions": 510,
+        "different_unit_command_rows": 220,
+        "source": {
+          "program": 142,
+          "id": "episode_106371729_seat_1",
+          "episode": 106371729,
+          "seat": 1,
+          "team": "OceanMix",
+          "rank": 12,
+          "submission": 56066979,
+          "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T07:05:03.csv",
+          "replay_sha256": "74098a4a81f02e3564f145f3308ea1575aca0a21ba1d372d5bf7bcb20a27864a"
+        }
+      }
+    ]
+  ],
+  "older_public_sixday_segments": [
+    {
+      "old_block": 0,
+      "old_route": 0,
+      "turns": 144,
+      "different_actions_by_new_tape": [
+        132,
+        132,
+        132,
+        132,
+        143
+      ]
+    },
+    {
+      "old_block": 1,
+      "old_route": 0,
+      "turns": 144,
+      "different_actions_by_new_tape": [
+        88,
+        88,
+        86,
+        88,
+        80
+      ]
+    },
+    {
+      "old_block": 1,
+      "old_route": 1,
+      "turns": 144,
+      "different_actions_by_new_tape": [
+        99,
+        99,
+        98,
+        99,
+        90
+      ]
+    },
+    {
+      "old_block": 2,
+      "old_route": 0,
+      "turns": 144,
+      "different_actions_by_new_tape": [
+        78,
+        20,
+        19,
+        78,
+        87
+      ]
+    },
+    {
+      "old_block": 3,
+      "old_route": 0,
+      "turns": 144,
+      "different_actions_by_new_tape": [
+        37,
+        40,
+        41,
+        40,
+        141
+      ]
+    },
+    {
+      "old_block": 3,
+      "old_route": 1,
+      "turns": 144,
+      "different_actions_by_new_tape": [
+        54,
+        58,
+        57,
+        55,
+        141
+      ]
+    },
+    {
+      "old_block": 3,
+      "old_route": 2,
+      "turns": 144,
+      "different_actions_by_new_tape": [
+        141,
+        141,
+        141,
+        141,
+        21
+      ]
+    },
+    {
+      "old_block": 4,
+      "old_route": 0,
+      "turns": 143,
+      "different_actions_by_new_tape": [
+        106,
+        83,
+        85,
+        81,
+        143
+      ]
+    },
+    {
+      "old_block": 4,
+      "old_route": 1,
+      "turns": 143,
+      "different_actions_by_new_tape": [
+        143,
+        143,
+        143,
+        143,
+        142
+      ]
+    },
+    {
+      "old_block": 4,
+      "old_route": 2,
+      "turns": 143,
+      "different_actions_by_new_tape": [
+        113,
+        95,
+        97,
+        93,
+        143
+      ]
+    },
+    {
+      "old_block": 4,
+      "old_route": 3,
+      "turns": 143,
+      "different_actions_by_new_tape": [
+        143,
+        143,
+        143,
+        143,
+        142
+      ]
+    },
+    {
+      "old_block": 4,
+      "old_route": 4,
+      "turns": 143,
+      "different_actions_by_new_tape": [
+        143,
+        143,
+        143,
+        143,
+        24
+      ]
+    }
+  ],
+  "max_source_units": 13,
+  "max_source_orders": 10,
+  "effective_features": {
+    "144": "Yarn count>0 selects4; otherwise milk demand>0 selects2, else1",
+    "576": "Carrot quote<=54 selects3, otherwise0",
+    "0,288,432": "Select0"
+  },
+  "distinct_from_public_sixday": "Different trees, five complete tapes instead of twelve independent segments; no six-day budget guard, no market logistic wrapper, no opponent input used by a decision node",
+  "reported_strength": "Notebook reports41344/44096=93.76% against689 frozen tapes and3844/4096 stress wins; these are unverified source claims, not our league measurements",
+  "lineage_limit": "Supplied notebook claims original source and public replay tapes but omits provenance.json and original episode mapping; nearest recorded matches are measured above and do not establish authorship",
+  "changes": [
+    "Typed C++ translation, immutable decoded action data",
+    "Only the three referenced feature entries are computed; generation asserts the tree feature set",
+    "Per-instance state and active-worker normalization required by local API"
+  ],
+  "reuse_permission": "Public notebook; user explicitly authorizes borrowing controllers and schedules; no separate code license supplied in downloaded metadata",
+  "validation": "results/public_router_v5_validation.json",
+  "status": "Faithful distinct strong external opponent ready for catalog registration; still below our guarded adaptive incumbent on this panel; no submission or promotion",
+  "policy_source_sha256": {
+    "experiments/v6/sep07_compositions_v0/league/public_router_v5/source/agent.cpp": "e4fe1bbafe32350f2693e3cddc0e3d2a3a8bf2f141afbeb0711fa3736be6cdc6",
+    "experiments/v6/sep07_compositions_v0/league/public_router_v5/source/agent.hpp": "c8d4e76b9f7876a7bf2ee72ad447fadfe8a4d2f9ae6cf6eea5d816a4e8f60caa",
+    "experiments/v6/sep07_compositions_v0/league/public_router_v5/source/data.inc": "5e21dfaef1eeccfc9c59776dac144eac6c5c0928305a83a8df775cb47855d361"
+  },
+  "operational_and_source_claim_differences": [
+    "Source-author93.76% against689 frozen tapes is not an independently verified current-league win rate; supplied notebook omits the full evaluation outcomes and provenance.json",
+    "All five full tapes have short differing prefixes (first divergence1\u201312), rather than literally identical full opening actions; safe physical compatibility at every splice is not proven by the notebook text",
+    "The actual callable unconditionally selects tape0 again at288 and432; it does not retain the previously selected tape across those boundaries",
+    "Only Yarn count, observed milk demand, and carrot quote are read by decision nodes; opponent/cash/tile features computed by Python do not influence this particular controller",
+    "Current local matches have roughly45\u201346 failed unit actions per game. This does not establish tile desynchronization; it also does not support a blanket claim that every scheduled action succeeds",
+    "Local C++ normalizes active worker count and semantically ignored action arguments; reset, backwards step, and719-or-later PASS behavior match the supplied callable"
+  ]
+}

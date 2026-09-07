@@ -1,0 +1,12 @@
+{
+  "format_version": 1,
+  "lineage": "Faithful C++ port of Thomas Tschinkel's five-tape public router v5",
+  "source_kind": "public_notebook_port",
+  "source": "Thomas93.8 public notebook; exact notebook metadata and hashes are in IMPORT.json",
+  "approx_kaggle_rating": null,
+  "rating_note": "The notebook's reported frozen-ladder percentage is not treated as a rating for this exact local port.",
+  "cpp_status": "not_fully_optimized",
+  "optimization_note": "Compact C++ route controller; source behavior was preserved rather than optimized.",
+  "parity_scope": "10,073 source actions matched across every route plus reset, rewind, and terminal cases; generic, debug, thread, PASS, and self checks passed.",
+  "candidate_reuse": "External public-policy lineage. No separate code license was supplied; keep provenance and do not relabel as in-house."
+}

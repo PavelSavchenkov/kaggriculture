@@ -1,0 +1,12 @@
+{
+  "format_version": 1,
+  "lineage": "Three complete Atakan Mamedov replay continuations with a local 64-scenario unknown-shop margin evaluator",
+  "source_kind": "replay_derived_portfolio",
+  "source": "experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/proposals/atakan_integrated_s64_margin",
+  "approx_kaggle_rating": null,
+  "rating_note": "Validated as a complementary margin specialist, not assigned a public rating.",
+  "cpp_status": "optimized",
+  "optimization_note": "Framework-free C++ evaluation averages 64 deterministic stratified shop scenarios; measured median decision time was 286.6 microseconds.",
+  "parity_scope": "All 3,840 discovery games selected the expected complete continuation; fresh audit recorded 2,028/3,072 wins and a +$658 mean-margin gain over the old margin selector.",
+  "candidate_reuse": "External replay lineage. Reuse only as an external opponent or with the nested donor provenance preserved."
+}
