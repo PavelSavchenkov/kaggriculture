@@ -22,10 +22,13 @@ under `work/agent_storage_archive_20260901/`. They are not separate catalog
 agents because they do not add a material phenotype or reliable strength
 signal.
 
-The two primary competitive references are:
+The primary competitive references are:
 
-- `external/investment_context_guarded_001_best`: strongest broadly validated
-  local policy retained on September 7, 2026.
+- `external/bohann_opening_v1`: strongest validated local policy retained on
+  September 7, 2026 at 17:20 UTC; adaptive crop/herd strategy with a borrowed
+  opening. Its package includes reproducible C++ matchup checks.
+- `external/investment_context_guarded_001_best`: previous local reference and
+  last submitted policy from the session.
 - `external/teammate_shoprouter`: C++ port of the teammate's strongest retained
   `shoprouter-rl-v2` agent.
 

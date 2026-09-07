@@ -1,0 +1,1856 @@
+{
+  "created_utc": "2026-09-07T17:18:55.170489+00:00",
+  "candidate": "bohann_opening_v1",
+  "parent": "crop_mix_t2_wheat",
+  "status": "Promoted as local search reference after preregistered fresh, native, causal and operational checks",
+  "preregistered": {
+    "registered_utc": "2026-09-07T17:06:14.910799+00:00",
+    "candidate": "bohann_opening_v1",
+    "baseline": "crop_mix_t2_wheat",
+    "seed_start": 1750000,
+    "seeds": 512,
+    "seat_mode": "both",
+    "opponents": [
+      "crop_value_m2_t4",
+      "investment_context_guarded_001_best",
+      "teammate_shoprouter",
+      "public_router",
+      "king_rc4",
+      "public_router_v5",
+      "binghua_116",
+      "junghoon_wool_sales",
+      "john_131",
+      "ticket_p116_t9_i9",
+      "public_capacity_router",
+      "public_sixday",
+      "opening_router_v4",
+      "animal_adaptive_r1_c0_b0",
+      "shop_herd_s6_m3_g1",
+      "shop_herd_guarded_001_best",
+      "crop_rotation_t2_berry",
+      "wheat_one_fert",
+      "crop_mix_t2_wheat"
+    ],
+    "grouping": {
+      "prior_versions": [
+        "shop_herd_guarded_001_best",
+        "shop_herd_s6_m3_g1",
+        "opening_router_v4"
+      ],
+      "teammate": [
+        "teammate_shoprouter"
+      ],
+      "public_controllers": [
+        "king_rc4",
+        "public_router",
+        "public_capacity_router",
+        "public_sixday"
+      ],
+      "top_replays": [
+        "binghua_116",
+        "junghoon_wool_sales",
+        "john_131",
+        "ticket_p116_t9_i9"
+      ]
+    },
+    "native_seed": 1753000,
+    "rule": "Exact first two market sequences from Bohann Wang source106497007seat0 on the current complete adaptive policy; no copied later composition.",
+    "gate": "Complete operational checks; positive direct parent margin and utility above0.5; positive seed-cluster95%lower bound for established equal-group win-utility gain. Report every opponent mean, tail and win change. Any win-utility regression beyond2percentagepoints or native direct regression blocks promotion pending diagnosis.",
+    "gate_change_from_crop_promotions": "Earlier crop edits required every mean margin to improve. Discovery here has a $13.30 mean loss against V5 with unchanged win count, but a $16808.55 mean gain against King and120/128direct wins. Optimize stated league utility while explicitly reporting small tradeoffs; do not claim per-opponent dominance.",
+    "group_scope": "Preserve the established four groups for comparability; separately report all19opponents including newer versions and V5, which are not in that historical grouping.",
+    "fresh_scope": "Seeds unused for candidate selection. Later opening-quantity tuning requires another fresh pool."
+  },
+  "group_objective": {
+    "bohann_opening_v1": 0.9499918619791666,
+    "crop_mix_t2_wheat": 0.9358723958333333
+  },
+  "seed_cluster_bootstrap_gain_95pct": [
+    0.011698404947916668,
+    0.01666259765625
+  ],
+  "fresh": {
+    "bohann_opening_v1": {
+      "crop_value_m2_t4": {
+        "games": 1024,
+        "wins": 969,
+        "ties": 0,
+        "losses": 55,
+        "utility": 0.9462890625,
+        "mean_margin": 348.7333984375,
+        "margin_cvar10": -2055.26213592233,
+        "pass_J": 87983
+      },
+      "investment_context_guarded_001_best": {
+        "games": 1024,
+        "wins": 969,
+        "ties": 0,
+        "losses": 55,
+        "utility": 0.9462890625,
+        "mean_margin": 403.09375,
+        "margin_cvar10": -2030.0291262135922,
+        "pass_J": 87980.5
+      },
+      "teammate_shoprouter": {
+        "games": 1024,
+        "wins": 1001,
+        "ties": 0,
+        "losses": 23,
+        "utility": 0.9775390625,
+        "mean_margin": 10987.6298828125,
+        "margin_cvar10": 1798.2233009708739,
+        "pass_J": 86182.7
+      },
+      "public_router": {
+        "games": 1024,
+        "wins": 948,
+        "ties": 0,
+        "losses": 76,
+        "utility": 0.92578125,
+        "mean_margin": 6388.505859375,
+        "margin_cvar10": -1615.5922330097087,
+        "pass_J": 87758.1
+      },
+      "king_rc4": {
+        "games": 1024,
+        "wins": 1006,
+        "ties": 0,
+        "losses": 18,
+        "utility": 0.982421875,
+        "mean_margin": 21106.0146484375,
+        "margin_cvar10": 3638.9126213592235,
+        "pass_J": 98332.6
+      },
+      "public_router_v5": {
+        "games": 1024,
+        "wins": 842,
+        "ties": 0,
+        "losses": 182,
+        "utility": 0.822265625,
+        "mean_margin": 3657.830078125,
+        "margin_cvar10": -3685.1650485436894,
+        "pass_J": 87218.7
+      },
+      "binghua_116": {
+        "games": 1024,
+        "wins": 955,
+        "ties": 0,
+        "losses": 69,
+        "utility": 0.9326171875,
+        "mean_margin": 7536.376953125,
+        "margin_cvar10": -1787.0194174757282,
+        "pass_J": 88584.3
+      },
+      "junghoon_wool_sales": {
+        "games": 1024,
+        "wins": 975,
+        "ties": 0,
+        "losses": 49,
+        "utility": 0.9521484375,
+        "mean_margin": 16157.56640625,
+        "margin_cvar10": -616.8155339805825,
+        "pass_J": 97810.6
+      },
+      "john_131": {
+        "games": 1024,
+        "wins": 929,
+        "ties": 0,
+        "losses": 95,
+        "utility": 0.9072265625,
+        "mean_margin": 7499.2431640625,
+        "margin_cvar10": -2344.5242718446602,
+        "pass_J": 91215.3
+      },
+      "ticket_p116_t9_i9": {
+        "games": 1024,
+        "wins": 948,
+        "ties": 0,
+        "losses": 76,
+        "utility": 0.92578125,
+        "mean_margin": 7116.6318359375,
+        "margin_cvar10": -1720.7475728155339,
+        "pass_J": 89832.7
+      },
+      "public_capacity_router": {
+        "games": 1024,
+        "wins": 946,
+        "ties": 0,
+        "losses": 78,
+        "utility": 0.923828125,
+        "mean_margin": 6258.6513671875,
+        "margin_cvar10": -1809.2718446601941,
+        "pass_J": 87721.7
+      },
+      "public_sixday": {
+        "games": 1024,
+        "wins": 1015,
+        "ties": 0,
+        "losses": 9,
+        "utility": 0.9912109375,
+        "mean_margin": 13187.099609375,
+        "margin_cvar10": 2979.242718446602,
+        "pass_J": 87239.7
+      },
+      "opening_router_v4": {
+        "games": 1024,
+        "wins": 934,
+        "ties": 0,
+        "losses": 90,
+        "utility": 0.912109375,
+        "mean_margin": 8876.1982421875,
+        "margin_cvar10": -1843.6990291262136,
+        "pass_J": 91233.6
+      },
+      "animal_adaptive_r1_c0_b0": {
+        "games": 1024,
+        "wins": 969,
+        "ties": 0,
+        "losses": 55,
+        "utility": 0.9462890625,
+        "mean_margin": 722.0341796875,
+        "margin_cvar10": -1832.2912621359224,
+        "pass_J": 87980.5
+      },
+      "shop_herd_s6_m3_g1": {
+        "games": 1024,
+        "wins": 976,
+        "ties": 0,
+        "losses": 48,
+        "utility": 0.953125,
+        "mean_margin": 1674.0,
+        "margin_cvar10": -1364.3980582524273,
+        "pass_J": 88620.9
+      },
+      "shop_herd_guarded_001_best": {
+        "games": 1024,
+        "wins": 969,
+        "ties": 0,
+        "losses": 55,
+        "utility": 0.9462890625,
+        "mean_margin": 1376.759765625,
+        "margin_cvar10": -1477.5825242718447,
+        "pass_J": 88620.9
+      },
+      "crop_rotation_t2_berry": {
+        "games": 1024,
+        "wins": 969,
+        "ties": 0,
+        "losses": 55,
+        "utility": 0.9462890625,
+        "mean_margin": 95.490234375,
+        "margin_cvar10": -2191.9126213592235,
+        "pass_J": 87977.8
+      },
+      "wheat_one_fert": {
+        "games": 1024,
+        "wins": 933,
+        "ties": 0,
+        "losses": 91,
+        "utility": 0.9111328125,
+        "mean_margin": 247.9765625,
+        "margin_cvar10": -2143.0873786407765,
+        "pass_J": 87994.7
+      },
+      "crop_mix_t2_wheat": {
+        "games": 1024,
+        "wins": 969,
+        "ties": 0,
+        "losses": 55,
+        "utility": 0.9462890625,
+        "mean_margin": 34.76171875,
+        "margin_cvar10": -2214.4077669902913,
+        "pass_J": 87984.9
+      }
+    },
+    "crop_mix_t2_wheat": {
+      "crop_value_m2_t4": {
+        "games": 1024,
+        "wins": 611,
+        "ties": 354,
+        "losses": 59,
+        "utility": 0.76953125,
+        "mean_margin": 313.9716796875,
+        "margin_cvar10": -2090.669902912621,
+        "pass_J": 87965.9
+      },
+      "investment_context_guarded_001_best": {
+        "games": 1024,
+        "wins": 611,
+        "ties": 354,
+        "losses": 59,
+        "utility": 0.76953125,
+        "mean_margin": 368.33203125,
+        "margin_cvar10": -2065.4368932038833,
+        "pass_J": 87963.4
+      },
+      "teammate_shoprouter": {
+        "games": 1024,
+        "wins": 1001,
+        "ties": 0,
+        "losses": 23,
+        "utility": 0.9775390625,
+        "mean_margin": 10968.34375,
+        "margin_cvar10": 1780.883495145631,
+        "pass_J": 86181.4
+      },
+      "public_router": {
+        "games": 1024,
+        "wins": 948,
+        "ties": 0,
+        "losses": 76,
+        "utility": 0.92578125,
+        "mean_margin": 6387.8798828125,
+        "margin_cvar10": -1595.009708737864,
+        "pass_J": 87760.9
+      },
+      "king_rc4": {
+        "games": 1024,
+        "wins": 820,
+        "ties": 0,
+        "losses": 204,
+        "utility": 0.80078125,
+        "mean_margin": 4398.072265625,
+        "margin_cvar10": -8063.174757281553,
+        "pass_J": 86170.9
+      },
+      "public_router_v5": {
+        "games": 1024,
+        "wins": 844,
+        "ties": 0,
+        "losses": 180,
+        "utility": 0.82421875,
+        "mean_margin": 3667.111328125,
+        "margin_cvar10": -3681.019417475728,
+        "pass_J": 87222.9
+      },
+      "binghua_116": {
+        "games": 1024,
+        "wins": 955,
+        "ties": 0,
+        "losses": 69,
+        "utility": 0.9326171875,
+        "mean_margin": 7542.1591796875,
+        "margin_cvar10": -1789.1844660194174,
+        "pass_J": 88590.8
+      },
+      "junghoon_wool_sales": {
+        "games": 1024,
+        "wins": 948,
+        "ties": 0,
+        "losses": 76,
+        "utility": 0.92578125,
+        "mean_margin": 13963.1083984375,
+        "margin_cvar10": -1925.2621359223301,
+        "pass_J": 96619.4
+      },
+      "john_131": {
+        "games": 1024,
+        "wins": 928,
+        "ties": 0,
+        "losses": 96,
+        "utility": 0.90625,
+        "mean_margin": 7498.3408203125,
+        "margin_cvar10": -2386.8058252427186,
+        "pass_J": 91210
+      },
+      "ticket_p116_t9_i9": {
+        "games": 1024,
+        "wins": 948,
+        "ties": 0,
+        "losses": 76,
+        "utility": 0.92578125,
+        "mean_margin": 7122.4111328125,
+        "margin_cvar10": -1722.9223300970873,
+        "pass_J": 89839.3
+      },
+      "public_capacity_router": {
+        "games": 1024,
+        "wins": 946,
+        "ties": 0,
+        "losses": 78,
+        "utility": 0.923828125,
+        "mean_margin": 6232.2109375,
+        "margin_cvar10": -1832.116504854369,
+        "pass_J": 87718.3
+      },
+      "public_sixday": {
+        "games": 1024,
+        "wins": 1011,
+        "ties": 0,
+        "losses": 13,
+        "utility": 0.9873046875,
+        "mean_margin": 13302.2548828125,
+        "margin_cvar10": 2620.5825242718447,
+        "pass_J": 86883.3
+      },
+      "opening_router_v4": {
+        "games": 1024,
+        "wins": 932,
+        "ties": 0,
+        "losses": 92,
+        "utility": 0.91015625,
+        "mean_margin": 8868.828125,
+        "margin_cvar10": -1846.631067961165,
+        "pass_J": 91234.2
+      },
+      "animal_adaptive_r1_c0_b0": {
+        "games": 1024,
+        "wins": 889,
+        "ties": 76,
+        "losses": 59,
+        "utility": 0.9052734375,
+        "mean_margin": 687.2724609375,
+        "margin_cvar10": -1867.893203883495,
+        "pass_J": 87963.4
+      },
+      "shop_herd_s6_m3_g1": {
+        "games": 1024,
+        "wins": 972,
+        "ties": 0,
+        "losses": 52,
+        "utility": 0.94921875,
+        "mean_margin": 1639.23828125,
+        "margin_cvar10": -1399.9805825242718,
+        "pass_J": 88603.8
+      },
+      "shop_herd_guarded_001_best": {
+        "games": 1024,
+        "wins": 965,
+        "ties": 0,
+        "losses": 59,
+        "utility": 0.9423828125,
+        "mean_margin": 1341.998046875,
+        "margin_cvar10": -1513.2135922330096,
+        "pass_J": 88603.8
+      },
+      "crop_rotation_t2_berry": {
+        "games": 1024,
+        "wins": 411,
+        "ties": 556,
+        "losses": 57,
+        "utility": 0.6728515625,
+        "mean_margin": 60.728515625,
+        "margin_cvar10": -2227.3203883495144,
+        "pass_J": 87960.7
+      },
+      "wheat_one_fert": {
+        "games": 1024,
+        "wins": 225,
+        "ties": 704,
+        "losses": 95,
+        "utility": 0.5634765625,
+        "mean_margin": 213.21484375,
+        "margin_cvar10": -2178.757281553398,
+        "pass_J": 87977.6
+      },
+      "crop_mix_t2_wheat": {
+        "games": 1024,
+        "wins": 59,
+        "ties": 906,
+        "losses": 59,
+        "utility": 0.5,
+        "mean_margin": 0.0,
+        "margin_cvar10": -2249.8252427184466,
+        "pass_J": 87967.8
+      }
+    }
+  },
+  "paired": {
+    "crop_value_m2_t4": {
+      "utility_gain": 0.1767578125,
+      "mean_margin_gain": 34.76171875,
+      "margin_cvar10_gain": 35.40776699029129,
+      "cash_gain": 17.169921875,
+      "opponent_cash_gain": -17.591796875,
+      "unit_faults_gain": 0.0,
+      "worker_days_gain": 1.0,
+      "produced_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        64.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0009765625
+      ],
+      "discarded_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "changed_rival_actions": 1015
+    },
+    "investment_context_guarded_001_best": {
+      "utility_gain": 0.1767578125,
+      "mean_margin_gain": 34.76171875,
+      "margin_cvar10_gain": 35.407766990291066,
+      "cash_gain": 17.169921875,
+      "opponent_cash_gain": -17.591796875,
+      "unit_faults_gain": 0.0,
+      "worker_days_gain": 1.0,
+      "produced_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        64.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0009765625
+      ],
+      "discarded_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "changed_rival_actions": 1015
+    },
+    "teammate_shoprouter": {
+      "utility_gain": 0.0,
+      "mean_margin_gain": 19.2861328125,
+      "margin_cvar10_gain": 17.33980582524282,
+      "cash_gain": 1.71484375,
+      "opponent_cash_gain": -17.5712890625,
+      "unit_faults_gain": -0.005859375,
+      "worker_days_gain": 2.982421875,
+      "produced_gain": [
+        -0.005859375,
+        0.0,
+        0.0,
+        0.005859375,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        64.998046875,
+        0.001953125,
+        0.0,
+        0.009765625,
+        0.0,
+        0.0029296875,
+        0.0009765625,
+        0.0,
+        -0.0009765625
+      ],
+      "discarded_gain": [
+        -0.0048828125,
+        -0.001953125,
+        0.0,
+        -0.00390625,
+        0.0,
+        -0.0029296875,
+        -0.0009765625,
+        0.0,
+        0.0
+      ],
+      "changed_rival_actions": 485
+    },
+    "public_router": {
+      "utility_gain": 0.0,
+      "mean_margin_gain": 0.6259765625,
+      "margin_cvar10_gain": -20.582524271844704,
+      "cash_gain": -3.314453125,
+      "opponent_cash_gain": -3.9404296875,
+      "unit_faults_gain": -0.0107421875,
+      "worker_days_gain": 2.982421875,
+      "produced_gain": [
+        -0.0029296875,
+        0.0,
+        0.0,
+        0.005859375,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        64.998046875,
+        0.001953125,
+        0.0,
+        0.009765625,
+        0.0,
+        0.0029296875,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "discarded_gain": [
+        -0.0009765625,
+        -0.001953125,
+        0.0,
+        -0.00390625,
+        0.0,
+        -0.0029296875,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "changed_rival_actions": 674
+    },
+    "king_rc4": {
+      "utility_gain": 0.181640625,
+      "mean_margin_gain": 16707.9423828125,
+      "margin_cvar10_gain": 11702.087378640776,
+      "cash_gain": 13205.7080078125,
+      "opponent_cash_gain": -3502.234375,
+      "unit_faults_gain": 1.4052734375,
+      "worker_days_gain": 2.12890625,
+      "produced_gain": [
+        0.5439453125,
+        -0.0078125,
+        -0.6328125,
+        -0.1181640625,
+        0.0,
+        -1.796875,
+        1.4072265625,
+        0.2392578125,
+        0.0
+      ],
+      "sold_gain": [
+        64.4033203125,
+        -0.0087890625,
+        -0.6328125,
+        -0.1201171875,
+        0.0,
+        -1.796875,
+        1.4072265625,
+        0.2392578125,
+        -0.07421875
+      ],
+      "discarded_gain": [
+        0.013671875,
+        0.0009765625,
+        0.0,
+        0.001953125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.419921875
+      ],
+      "changed_rival_actions": 1024
+    },
+    "public_router_v5": {
+      "utility_gain": -0.001953125,
+      "mean_margin_gain": -9.28125,
+      "margin_cvar10_gain": -4.1456310679614035,
+      "cash_gain": -4.6650390625,
+      "opponent_cash_gain": 4.6162109375,
+      "unit_faults_gain": -0.005859375,
+      "worker_days_gain": 2.982421875,
+      "produced_gain": [
+        -0.005859375,
+        0.0,
+        0.0,
+        0.005859375,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        64.998046875,
+        0.001953125,
+        0.0,
+        0.009765625,
+        0.0,
+        0.0029296875,
+        0.0009765625,
+        0.0,
+        -0.0009765625
+      ],
+      "discarded_gain": [
+        -0.0029296875,
+        -0.001953125,
+        0.0,
+        -0.00390625,
+        0.0,
+        -0.0029296875,
+        -0.0009765625,
+        0.0,
+        0.0
+      ],
+      "changed_rival_actions": 2
+    },
+    "binghua_116": {
+      "utility_gain": 0.0,
+      "mean_margin_gain": -5.7822265625,
+      "margin_cvar10_gain": 2.1650485436891813,
+      "cash_gain": -6.439453125,
+      "opponent_cash_gain": -0.6572265625,
+      "unit_faults_gain": -0.0107421875,
+      "worker_days_gain": 1.0,
+      "produced_gain": [
+        -0.0029296875,
+        0.0,
+        0.0,
+        0.005859375,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        64.0029296875,
+        0.0,
+        0.0,
+        0.0009765625,
+        0.0,
+        -0.00390625,
+        0.0009765625,
+        0.0,
+        0.0029296875
+      ],
+      "discarded_gain": [
+        0.001953125,
+        0.0,
+        0.0,
+        0.0048828125,
+        0.0,
+        0.00390625,
+        -0.0009765625,
+        0.0,
+        0.0
+      ],
+      "changed_rival_actions": 0
+    },
+    "junghoon_wool_sales": {
+      "utility_gain": 0.0263671875,
+      "mean_margin_gain": 2194.4580078125,
+      "margin_cvar10_gain": 1308.4466019417478,
+      "cash_gain": 1245.6513671875,
+      "opponent_cash_gain": -948.806640625,
+      "unit_faults_gain": 0.404296875,
+      "worker_days_gain": 3.341796875,
+      "produced_gain": [
+        0.310546875,
+        0.0,
+        -0.28125,
+        -0.009765625,
+        0.0,
+        -0.5859375,
+        0.52734375,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        65.255859375,
+        0.001953125,
+        -0.28125,
+        -0.005859375,
+        0.0,
+        -0.5830078125,
+        0.529296875,
+        0.0,
+        -0.0244140625
+      ],
+      "discarded_gain": [
+        -0.005859375,
+        -0.001953125,
+        0.0,
+        -0.00390625,
+        0.0,
+        -0.0029296875,
+        -0.001953125,
+        0.0,
+        0.146484375
+      ],
+      "changed_rival_actions": 2
+    },
+    "john_131": {
+      "utility_gain": 0.0009765625,
+      "mean_margin_gain": 0.90234375,
+      "margin_cvar10_gain": 42.28155339805835,
+      "cash_gain": 4.388671875,
+      "opponent_cash_gain": 3.486328125,
+      "unit_faults_gain": 0.0,
+      "worker_days_gain": 2.982421875,
+      "produced_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        64.99609375,
+        0.0009765625,
+        0.0,
+        0.0078125,
+        0.0,
+        0.00390625,
+        0.0,
+        0.0,
+        -0.0029296875
+      ],
+      "discarded_gain": [
+        -0.0029296875,
+        -0.0009765625,
+        0.0,
+        -0.0078125,
+        0.0,
+        -0.00390625,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "changed_rival_actions": 1
+    },
+    "ticket_p116_t9_i9": {
+      "utility_gain": 0.0,
+      "mean_margin_gain": -5.779296875,
+      "margin_cvar10_gain": 2.1747572815534113,
+      "cash_gain": -6.42578125,
+      "opponent_cash_gain": -0.646484375,
+      "unit_faults_gain": -0.0107421875,
+      "worker_days_gain": 1.0,
+      "produced_gain": [
+        -0.0029296875,
+        0.0,
+        0.0,
+        0.005859375,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        64.0029296875,
+        0.0,
+        0.0,
+        0.0009765625,
+        0.0,
+        -0.00390625,
+        0.0009765625,
+        0.0,
+        0.0029296875
+      ],
+      "discarded_gain": [
+        0.001953125,
+        0.0,
+        0.0,
+        0.0048828125,
+        0.0,
+        0.00390625,
+        -0.0009765625,
+        0.0,
+        0.0
+      ],
+      "changed_rival_actions": 0
+    },
+    "public_capacity_router": {
+      "utility_gain": 0.0,
+      "mean_margin_gain": 26.4404296875,
+      "margin_cvar10_gain": 22.84466019417482,
+      "cash_gain": 3.75390625,
+      "opponent_cash_gain": -22.6865234375,
+      "unit_faults_gain": -0.0107421875,
+      "worker_days_gain": 2.982421875,
+      "produced_gain": [
+        -0.0029296875,
+        0.0,
+        0.0,
+        0.005859375,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        64.998046875,
+        0.001953125,
+        0.0,
+        0.009765625,
+        0.0,
+        0.0029296875,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "discarded_gain": [
+        -0.0009765625,
+        -0.001953125,
+        0.0,
+        -0.00390625,
+        0.0,
+        -0.0029296875,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "changed_rival_actions": 717
+    },
+    "public_sixday": {
+      "utility_gain": 0.00390625,
+      "mean_margin_gain": -115.1552734375,
+      "margin_cvar10_gain": 358.6601941747572,
+      "cash_gain": 406.8251953125,
+      "opponent_cash_gain": 521.98046875,
+      "unit_faults_gain": -0.013671875,
+      "worker_days_gain": 1.0,
+      "produced_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.005859375,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        63.998046875,
+        0.00390625,
+        0.0,
+        0.0029296875,
+        0.0,
+        -0.001953125,
+        0.0,
+        0.0,
+        -0.001953125
+      ],
+      "discarded_gain": [
+        0.0029296875,
+        -0.00390625,
+        0.0,
+        0.0029296875,
+        0.0,
+        0.001953125,
+        0.0,
+        0.0,
+        -0.001953125
+      ],
+      "changed_rival_actions": 241
+    },
+    "opening_router_v4": {
+      "utility_gain": 0.001953125,
+      "mean_margin_gain": 7.3701171875,
+      "margin_cvar10_gain": 2.9320388349512996,
+      "cash_gain": -0.283203125,
+      "opponent_cash_gain": -7.6533203125,
+      "unit_faults_gain": -0.005859375,
+      "worker_days_gain": 2.982421875,
+      "produced_gain": [
+        -0.005859375,
+        0.0,
+        0.0,
+        0.005859375,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        64.998046875,
+        0.001953125,
+        0.0,
+        0.009765625,
+        0.0,
+        0.0029296875,
+        0.0009765625,
+        0.0,
+        -0.0009765625
+      ],
+      "discarded_gain": [
+        -0.0029296875,
+        -0.001953125,
+        0.0,
+        -0.00390625,
+        0.0,
+        -0.0029296875,
+        -0.0009765625,
+        0.0,
+        0.0
+      ],
+      "changed_rival_actions": 0
+    },
+    "animal_adaptive_r1_c0_b0": {
+      "utility_gain": 0.041015625,
+      "mean_margin_gain": 34.76171875,
+      "margin_cvar10_gain": 35.60194174757271,
+      "cash_gain": 17.169921875,
+      "opponent_cash_gain": -17.591796875,
+      "unit_faults_gain": 0.0,
+      "worker_days_gain": 1.0,
+      "produced_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        64.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0009765625
+      ],
+      "discarded_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "changed_rival_actions": 1015
+    },
+    "shop_herd_s6_m3_g1": {
+      "utility_gain": 0.00390625,
+      "mean_margin_gain": 34.76171875,
+      "margin_cvar10_gain": 35.58252427184448,
+      "cash_gain": 17.169921875,
+      "opponent_cash_gain": -17.591796875,
+      "unit_faults_gain": 0.0,
+      "worker_days_gain": 1.0,
+      "produced_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        64.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0009765625
+      ],
+      "discarded_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "changed_rival_actions": 1015
+    },
+    "shop_herd_guarded_001_best": {
+      "utility_gain": 0.00390625,
+      "mean_margin_gain": 34.76171875,
+      "margin_cvar10_gain": 35.631067961164945,
+      "cash_gain": 17.169921875,
+      "opponent_cash_gain": -17.591796875,
+      "unit_faults_gain": 0.0,
+      "worker_days_gain": 1.0,
+      "produced_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        64.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0009765625
+      ],
+      "discarded_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "changed_rival_actions": 1015
+    },
+    "crop_rotation_t2_berry": {
+      "utility_gain": 0.2734375,
+      "mean_margin_gain": 34.76171875,
+      "margin_cvar10_gain": 35.40776699029084,
+      "cash_gain": 17.169921875,
+      "opponent_cash_gain": -17.591796875,
+      "unit_faults_gain": 0.0,
+      "worker_days_gain": 1.0,
+      "produced_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        64.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0009765625
+      ],
+      "discarded_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "changed_rival_actions": 1015
+    },
+    "wheat_one_fert": {
+      "utility_gain": 0.34765625,
+      "mean_margin_gain": 34.76171875,
+      "margin_cvar10_gain": 35.66990291262164,
+      "cash_gain": 17.169921875,
+      "opponent_cash_gain": -17.591796875,
+      "unit_faults_gain": 0.0,
+      "worker_days_gain": 1.0,
+      "produced_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        64.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0009765625
+      ],
+      "discarded_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "changed_rival_actions": 1015
+    },
+    "crop_mix_t2_wheat": {
+      "utility_gain": 0.4462890625,
+      "mean_margin_gain": 34.76171875,
+      "margin_cvar10_gain": 35.417475728155296,
+      "cash_gain": 17.169921875,
+      "opponent_cash_gain": -17.591796875,
+      "unit_faults_gain": 0.0,
+      "worker_days_gain": 1.0,
+      "produced_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        64.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0009765625
+      ],
+      "discarded_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "changed_rival_actions": 1015
+    }
+  },
+  "native": {
+    "crop_mix_t2_wheat": {
+      "bohann_opening_v1": {
+        "games": 256,
+        "wins": 239,
+        "ties": 0,
+        "losses": 17,
+        "utility": 0.93359375,
+        "mean_margin": 35.6875,
+        "margin_cvar10": -1889.1153846153845,
+        "pass_J": 86540.3
+      },
+      "crop_mix_t2_wheat": {
+        "games": 256,
+        "wins": 17,
+        "ties": 222,
+        "losses": 17,
+        "utility": 0.5,
+        "mean_margin": 0.0,
+        "margin_cvar10": -1924.6153846153845,
+        "pass_J": 86523.3
+      }
+    },
+    "teammate_shoprouter": {
+      "bohann_opening_v1": {
+        "games": 256,
+        "wins": 251,
+        "ties": 0,
+        "losses": 5,
+        "utility": 0.98046875,
+        "mean_margin": 10176.44921875,
+        "margin_cvar10": 2450.5,
+        "pass_J": 84809.4
+      },
+      "crop_mix_t2_wheat": {
+        "games": 256,
+        "wins": 251,
+        "ties": 0,
+        "losses": 5,
+        "utility": 0.98046875,
+        "mean_margin": 10162.73828125,
+        "margin_cvar10": 2436.269230769231,
+        "pass_J": 84809.9
+      }
+    },
+    "king_rc4": {
+      "bohann_opening_v1": {
+        "games": 256,
+        "wins": 251,
+        "ties": 0,
+        "losses": 5,
+        "utility": 0.98046875,
+        "mean_margin": 20932.23828125,
+        "margin_cvar10": 5426.7692307692305,
+        "pass_J": 99215.4
+      },
+      "crop_mix_t2_wheat": {
+        "games": 256,
+        "wins": 194,
+        "ties": 0,
+        "losses": 62,
+        "utility": 0.7578125,
+        "mean_margin": 4481.76953125,
+        "margin_cvar10": -6393.346153846154,
+        "pass_J": 84147.7
+      }
+    },
+    "public_router": {
+      "bohann_opening_v1": {
+        "games": 256,
+        "wins": 240,
+        "ties": 0,
+        "losses": 16,
+        "utility": 0.9375,
+        "mean_margin": 5605.421875,
+        "margin_cvar10": -936.3461538461538,
+        "pass_J": 86100.6
+      },
+      "crop_mix_t2_wheat": {
+        "games": 256,
+        "wins": 241,
+        "ties": 0,
+        "losses": 15,
+        "utility": 0.94140625,
+        "mean_margin": 5605.3203125,
+        "margin_cvar10": -925.4230769230769,
+        "pass_J": 86104.8
+      }
+    },
+    "public_router_v5": {
+      "bohann_opening_v1": {
+        "games": 256,
+        "wins": 206,
+        "ties": 0,
+        "losses": 50,
+        "utility": 0.8046875,
+        "mean_margin": 3596.2734375,
+        "margin_cvar10": -3747.846153846154,
+        "pass_J": 86569.1
+      },
+      "crop_mix_t2_wheat": {
+        "games": 256,
+        "wins": 206,
+        "ties": 0,
+        "losses": 50,
+        "utility": 0.8046875,
+        "mean_margin": 3601.66796875,
+        "margin_cvar10": -3730.0384615384614,
+        "pass_J": 86575.9
+      }
+    }
+  },
+  "pass": {
+    "bohann_opening_v1": {
+      "games": 256,
+      "wins": 256,
+      "ties": 0,
+      "losses": 0,
+      "utility": 1.0,
+      "mean_margin": 156141.12109375,
+      "margin_cvar10": 115806.73076923077,
+      "pass_J": 151074
+    },
+    "crop_mix_t2_wheat": {
+      "games": 256,
+      "wins": 256,
+      "ties": 0,
+      "losses": 0,
+      "utility": 1.0,
+      "mean_margin": 156148.12109375,
+      "margin_cvar10": 115813.73076923077,
+      "pass_J": 151081
+    }
+  },
+  "compact_complete_records_exact": 768,
+  "frozen_dependency_count": 276,
+  "causal_profiles": {
+    "crop_mix_t2_wheat": {
+      "hires_gain": 1.0,
+      "hire_cost_gain": 5.0,
+      "land_gain": 0.0,
+      "land_cost_gain": 0.0,
+      "weed_digs_gain": 0.0,
+      "cash_gain": 17.0,
+      "opponent_cash_gain": -18.625,
+      "revenue_gain": 2169.0,
+      "spend_gain": 2152.0,
+      "unit_faults_gain": 0.0,
+      "produced_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        64.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "discarded_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "buy_quantity_gain": [
+        64.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "teammate_shoprouter": {
+      "hires_gain": 3.0,
+      "hire_cost_gain": 13.0,
+      "land_gain": 0.0,
+      "land_cost_gain": 0.0,
+      "weed_digs_gain": 0.0,
+      "cash_gain": -1.4375,
+      "opponent_cash_gain": -16.03125,
+      "revenue_gain": 2117.5625,
+      "spend_gain": 2119.0,
+      "unit_faults_gain": 0.0,
+      "produced_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        65.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "discarded_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "buy_quantity_gain": [
+        65.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "king_rc4": {
+      "hires_gain": 1.28125,
+      "hire_cost_gain": 35.84375,
+      "land_gain": 0.0,
+      "land_cost_gain": 0.0,
+      "weed_digs_gain": -0.109375,
+      "cash_gain": 12052.890625,
+      "opponent_cash_gain": -3639.453125,
+      "revenue_gain": 14436.53125,
+      "spend_gain": 2383.640625,
+      "unit_faults_gain": -0.125,
+      "produced_gain": [
+        1.3125,
+        0.015625,
+        -0.75,
+        0.109375,
+        0.0,
+        -1.25,
+        1.125,
+        0.0625,
+        0.0
+      ],
+      "sold_gain": [
+        65.171875,
+        0.015625,
+        -0.75,
+        0.109375,
+        0.0,
+        -1.25,
+        1.125,
+        0.0625,
+        0.015625
+      ],
+      "discarded_gain": [
+        -0.03125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.15625
+      ],
+      "buy_quantity_gain": [
+        63.84375,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.015625,
+        -0.0625,
+        0.0625,
+        0.0
+      ]
+    },
+    "public_router": {
+      "hires_gain": 3.0,
+      "hire_cost_gain": 13.0,
+      "land_gain": 0.0,
+      "land_cost_gain": 0.0,
+      "weed_digs_gain": 0.0,
+      "cash_gain": -1.234375,
+      "opponent_cash_gain": -0.859375,
+      "revenue_gain": 2116.703125,
+      "spend_gain": 2117.9375,
+      "unit_faults_gain": 0.0,
+      "produced_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        65.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "discarded_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "buy_quantity_gain": [
+        65.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "public_router_v5": {
+      "hires_gain": 3.0,
+      "hire_cost_gain": 13.0,
+      "land_gain": 0.0,
+      "land_cost_gain": 0.0,
+      "weed_digs_gain": 0.0,
+      "cash_gain": -4.6875,
+      "opponent_cash_gain": -2.125,
+      "revenue_gain": 2113.9375,
+      "spend_gain": 2118.625,
+      "unit_faults_gain": 0.0,
+      "produced_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sold_gain": [
+        65.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "discarded_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "buy_quantity_gain": [
+        65.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "trace": {
+    "scope": "One seed1000 seat0, four opponents, complete paired exact trajectories; not a cohort-wide causal decomposition.",
+    "opponents": {
+      "king_rc4": {
+        "0": {
+          "workers_first_changes": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "markets_first_changes": [
+            0,
+            1
+          ]
+        },
+        "1": {
+          "workers_first_changes": [
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32
+          ],
+          "markets_first_changes": [
+            181,
+            182,
+            184,
+            187,
+            456,
+            474,
+            504,
+            505
+          ]
+        }
+      },
+      "public_router_v5": {
+        "0": {
+          "workers_first_changes": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "markets_first_changes": [
+            0,
+            1,
+            48,
+            72,
+            80
+          ]
+        },
+        "1": {
+          "workers_first_changes": [],
+          "markets_first_changes": []
+        }
+      },
+      "teammate_shoprouter": {
+        "0": {
+          "workers_first_changes": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "markets_first_changes": [
+            0,
+            1,
+            48,
+            72,
+            80
+          ]
+        },
+        "1": {
+          "workers_first_changes": [],
+          "markets_first_changes": [
+            253
+          ]
+        }
+      },
+      "crop_mix_t2_wheat": {
+        "0": {
+          "workers_first_changes": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "markets_first_changes": [
+            0,
+            1
+          ]
+        },
+        "1": {
+          "workers_first_changes": [
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55
+          ],
+          "markets_first_changes": [
+            48,
+            72,
+            80
+          ]
+        }
+      }
+    },
+    "king_day1_start_cash": {
+      "crop_mix_t2_wheat": 27,
+      "bohann_opening_v1": 0
+    }
+  },
+  "limitations": [
+    "The opening improves aggregate league utility, not every opponent mean or tail. V5 loses two fresh wins; native public_router loses one.",
+    "Gross wheat buys and sales rise through a round trip; they are not increased crop production.",
+    "Copied hiring orders add workers relative to the optimized parent; preserving parent hires is a useful untested follow-up.",
+    "Large King gains involve changed opponent actions and market flows; a fixed-rival economic forecast would miss this response.",
+    "The historical four-group objective omits some newer audited opponents. All19matchups are reported separately.",
+    "The new component is a fixed opening on an existing adaptive crop/animal policy. It does not solve general composition construction.",
+    "No Kaggle package or additional submission exists for this candidate."
+  ],
+  "promoted_utc": "2026-09-07T17:20:06.595299+00:00",
+  "historical_evidence_note": "This is the pre-catalog promotion report. Exact catalog comparisons and compressed per-game records are shipped in VALIDATION.json and tests/evidence/."
+}

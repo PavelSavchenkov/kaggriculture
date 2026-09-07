@@ -8,7 +8,8 @@ self-contained experiments instead of becoming separate official agents.
 
 | Agent | Role |
 |---|---|
-| `investment_context_guarded_001_best` | Strongest broadly validated local policy on September 7; adaptive herd investment with guarded V30 routes |
+| `bohann_opening_v1` | Strongest validated local policy at September 7 17:20 UTC; adaptive crop/herd strategy plus Bohann opening, with reproducible C++ checks |
+| `investment_context_guarded_001_best` | Previous broad reference and last submitted policy; adaptive herd investment with guarded V30 routes |
 | `teammate_shoprouter` | Teammate's strongest retained `shoprouter-rl-v2`, ported to the local C++ API |
 | `atakan_demand` | Three-course cow/sheep/goose portfolio selected from observed shop demand |
 | `atakan_integrated_s64_margin` | Complementary Atakan portfolio selected by 64-scenario margin integration |
