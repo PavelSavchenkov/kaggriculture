@@ -104,3 +104,11 @@ All paths below are relative to `_work/session/experiments/v6/sep07_compositions
 | Review and next proposals | `research/review_*.md`, `IDEAS_LEDGER.md`, `PROFILING_LEDGER.md`, `OBJECTIVE_COVERAGE.md`, `NEXT.md` | Positive and negative findings, global-player invariants, incomplete work and scope corrections |
 
 The composition hypothesis earned useful fast valuation and compilation tools, but the full autonomous outer loop remains incomplete. Reproduction of a retained package is deterministic; reproducing an entire adaptive research session is not promised. The records preserve what was actually tried, including incorrect early estimates and the later evidence that corrected them.
+
+## Committed engine and day-solver dependencies
+
+Use this handoff inside a checkout of the repository. `evidence/repository_dependencies.json` pins the already committed C++ engine and V30 day solver at revision `ee69cee7cdb20b2b7fe77d4e104dc7138f10d26b`, with per-file SHA256 hashes. Relative directory links replace engine/day-solver copies in the workspace, the submitted C++ tree, and historical source snapshots. The submitted archive and all58 original frozen input hashes are unchanged.
+
+`verify`, submission builds and session preparation check the repository files. A mismatch requires restoring the declared dependency version in an isolated checkout; the script does not silently use a changed engine. `prepare-session` creates correctly relocated links in its disposable workspace, and historical evidence hydration references committed resource bytes instead of storing another copy. Generated dependency coverage/PGO/CMake build files are omitted; the experiment's own agent/evaluation evidence remains.
+
+The cleanup removes132 duplicated dependency files and65 generated dependency artifacts (about6.57MB of stored content, before filesystem/Git compression). The full V30 solver was already referenced in the original handoff. Most remaining space is the requested session replay/evaluation evidence and agent development artifacts, not the engine or day solver. `evidence/dependency_cleanup.json` records every removed or referenced path.

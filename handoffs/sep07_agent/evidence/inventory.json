@@ -1,5 +1,5 @@
 {
-  "description": "Complete session and exact submitted text/data snapshot. Binaries and caches are rebuildable and explicitly listed as omitted. Large evidence and historical build inputs are content-addressed gzip blobs; hydrate restores their original paths and bytes. The externally supplied teammate_reference/agent.so is retained as a required original-opponent runtime fixture.",
+  "description": "Session and submitted-agent snapshot. Existing committed C++ game engine and V30 day solver are repository references, checked by revision and SHA256; no copies are bundled. Rebuildable dependency outputs are omitted. Other historical evidence remains losslessly compressed.",
   "files": [
     {
       "path": "submitted/ARTIFACTS.json",
@@ -578,13 +578,15 @@
       "path": "submitted/source_tree/fast_game_engine/pyrandom.hpp",
       "sha256": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
       "bytes": 3828,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/pyrandom.hpp"
     },
     {
       "path": "submitted/source_tree/fast_game_engine/sim.hpp",
       "sha256": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
       "bytes": 63293,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/sim.hpp"
     },
     {
       "path": "submitted/submission.tar.gz",
@@ -3574,73 +3576,73 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/CMakeDirectoryInformation.cmake",
       "sha256": "bf773e8747b88af40cc74395e2f367ff98af9152e4315036003c5cf13b9c5466",
       "bytes": 718,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/DependInfo.cmake",
       "sha256": "7d99328de4043d71b12d5eebc63a45daa8f2686f459715778e52baa741066c2d",
       "bytes": 1009,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/build.make",
       "sha256": "8aedb8575ab34c541635c5c6357e1d37491335e20916ba91a3331c8038191e24",
       "bytes": 8832,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/cmake_clean.cmake",
       "sha256": "20b6ba21b336cd5e36a7dc65d447222d6468dc59fee4038db8c746c5a9be05b7",
       "bytes": 458,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/cmake_clean_target.cmake",
       "sha256": "1f711cc7596a9f9de1066f8e00b069e9007ac0f2d2167e041aa83a70f73bedbe",
       "bytes": 45,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/compiler_depend.internal",
       "sha256": "cfdb89f08e56e8a722168a96e0197152fdf225c63835f649fe597c10bcfc22b7",
       "bytes": 45092,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/compiler_depend.make",
       "sha256": "f3bb02ccb9fa4fec87502119bfd0ebe68241b7750256851cf2f67f2d27663a34",
       "bytes": 83503,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/compiler_depend.ts",
       "sha256": "e6f66126ad77cfdf9ae123978077a7893fc276324be5c92a60b5650e99bd8b01",
       "bytes": 120,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/depend.make",
       "sha256": "49c56115055f5ef045c203a0cbc51dbc276cc247357dd1569555729238294ca6",
       "bytes": 97,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/flags.make",
       "sha256": "34e262465e4878ea000eaf4a9bd6a1021a1bffb488c8e15ca9b52c658693cd20",
       "bytes": 651,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/link.txt",
       "sha256": "6c6a2054881c9bd17e0499449ea5482f8e12cf80a60cea74f51b4a9a8c36d28e",
       "bytes": 173,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/progress.make",
       "sha256": "ea5cf0d7f864482f1e4e05315ed629d48e2b2d705de9ee7d9c5e0f92ebcb3d23",
       "bytes": 67,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/src/prepare_problem.cpp.o",
@@ -3650,7 +3652,7 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/src/prepare_problem.cpp.o.d",
       "sha256": "db88573628d27b0b480be986afb17ead1a9bfcf56dcf45ebbdefe894102ae116",
       "bytes": 10010,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/src/scheduler.cpp.o",
@@ -3660,79 +3662,79 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/src/scheduler.cpp.o.d",
       "sha256": "989cd0a2c214f8dcf565dd8102bc22c7ea7dffd46c61a6e75ca490fca6f7abdb",
       "bytes": 37056,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_solver_audit.dir/DependInfo.cmake",
       "sha256": "845f31e146d1216c250dc116917747bcf1c9e5fe45573a41e20588cf314d034c",
       "bytes": 938,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_solver_audit.dir/build.make",
       "sha256": "cb87ddc92cf899eb4b60170844166314ceadd302583700994dc8c332743cf741",
       "bytes": 35921,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_solver_audit.dir/cmake_clean.cmake",
       "sha256": "5312cb9b69a8a1713add01a8d5f640b8accfa8401bd4ce110a050b85bd2d2fb3",
       "bytes": 441,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_solver_audit.dir/compiler_depend.make",
       "sha256": "4081f4a4bdedce0e2ed850f39038be127d9ef310dfa786ae3f7b24efb2d55204",
       "bytes": 119,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_solver_audit.dir/compiler_depend.ts",
       "sha256": "4233691e4f8bc3bfba501fa6d949ad7cd2d5f55a57857a5832957abfc43ac716",
       "bytes": 123,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_solver_audit.dir/depend.make",
       "sha256": "8c22f555cd1c06c7c342b345c25b8a4355855e92888ea55ffdb9380bf281bc5d",
       "bytes": 100,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_solver_audit.dir/flags.make",
       "sha256": "34e262465e4878ea000eaf4a9bd6a1021a1bffb488c8e15ca9b52c658693cd20",
       "bytes": 651,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_solver_audit.dir/link.txt",
       "sha256": "29dfc6a379853b301e98e4d4a3fade80467627c463650993d6ecdd599273cc3b",
       "bytes": 21470,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_solver_audit.dir/progress.make",
       "sha256": "beb6a732094889970842879f23617c143c3d121b87551b18e55e2e8877ad2d55",
       "bytes": 45,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/progress.marks",
       "sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2",
       "bytes": 2,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/Makefile",
       "sha256": "56d16669839590d0c0acdacc8e1ec9f9107d7e0a5a3215ceb7ca99271e0c4a15",
       "bytes": 11597,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/cmake_install.cmake",
       "sha256": "d8660db218fc9a614869964667c4df3b538438277ea15d6263423543a1672b58",
       "bytes": 1269,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/libday_scheduler.a",
@@ -4490,13 +4492,15 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/refresh_1010/source_snapshot/fast_game_engine/pyrandom.hpp",
       "sha256": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
       "bytes": 3828,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/pyrandom.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/refresh_1010/source_snapshot/fast_game_engine/sim.hpp",
       "sha256": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
       "bytes": 63293,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/sim.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/refresh_1010/titan_parity",
@@ -4632,13 +4636,15 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/refresh_1112/debug_pair/source_snapshot/fast_game_engine/pyrandom.hpp",
       "sha256": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
       "bytes": 3828,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/pyrandom.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/refresh_1112/debug_pair/source_snapshot/fast_game_engine/sim.hpp",
       "sha256": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
       "bytes": 63293,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/sim.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/arena",
@@ -5229,13 +5235,15 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/source_snapshot/fast_game_engine/pyrandom.hpp",
       "sha256": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
       "bytes": 3828,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/pyrandom.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/source_snapshot/fast_game_engine/sim.hpp",
       "sha256": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
       "bytes": 63293,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/sim.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/build/refresh_1112/router_v5_parity",
@@ -39132,13 +39140,15 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/debug/source_snapshot/fast_game_engine/pyrandom.hpp",
       "sha256": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
       "bytes": 3828,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/pyrandom.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/debug/source_snapshot/fast_game_engine/sim.hpp",
       "sha256": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
       "bytes": 63293,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/sim.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/BUILD.json",
@@ -39947,13 +39957,15 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/fast_game_engine/pyrandom.hpp",
       "sha256": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
       "bytes": 3828,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/pyrandom.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/fast_game_engine/sim.hpp",
       "sha256": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
       "bytes": 63293,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/sim.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/masked/BUILD.json",
@@ -40126,13 +40138,15 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/masked/source_snapshot/fast_game_engine/pyrandom.hpp",
       "sha256": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
       "bytes": 3828,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/pyrandom.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/masked/source_snapshot/fast_game_engine/sim.hpp",
       "sha256": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
       "bytes": 63293,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/sim.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/parity",
@@ -41006,13 +41020,15 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/reference/source_snapshot/fast_game_engine/pyrandom.hpp",
       "sha256": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
       "bytes": 3828,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/pyrandom.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/reference/source_snapshot/fast_game_engine/sim.hpp",
       "sha256": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
       "bytes": 63293,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/sim.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/cash_attribution_cases.json",
@@ -43750,13 +43766,15 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/debug/source_snapshot/fast_game_engine/pyrandom.hpp",
       "sha256": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
       "bytes": 3828,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/pyrandom.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/debug/source_snapshot/fast_game_engine/sim.hpp",
       "sha256": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
       "bytes": 63293,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/sim.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/generic/BUILD.json",
@@ -44892,13 +44910,15 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/generic/source_snapshot/fast_game_engine/pyrandom.hpp",
       "sha256": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
       "bytes": 3828,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/pyrandom.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/generic/source_snapshot/fast_game_engine/sim.hpp",
       "sha256": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
       "bytes": 63293,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/sim.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/masked/BUILD.json",
@@ -46030,13 +46050,15 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/masked/source_snapshot/fast_game_engine/pyrandom.hpp",
       "sha256": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
       "bytes": 3828,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/pyrandom.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/masked/source_snapshot/fast_game_engine/sim.hpp",
       "sha256": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
       "bytes": 63293,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/sim.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/tests/agent.cpp",
@@ -49430,43 +49452,50 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/day_solver/include/day_solver/io.hpp",
       "sha256": "e0397987df86f2f88ed85662e5f604d05c407c4649d9c5af2eee81a3af97209a",
       "bytes": 126,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/include/day_solver/io.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/day_solver/include/day_solver/scheduler.hpp",
       "sha256": "018b9688de75884cf309e6a657cce47209f8d87c3886909880c188cd16a90f3b",
       "bytes": 786,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/include/day_solver/scheduler.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/baseline_json.hpp",
       "sha256": "24807d871d85725e6b4bfdc952ea32cf245f7ca631f04997c093eaef2033184e",
       "bytes": 228,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/baseline_json.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/day_solver_api.hpp",
       "sha256": "eb9ddf63b3daafd36fd527b768a8f703e65c2e00552417c97d129e8a5fe767fc",
       "bytes": 9026,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/day_solver_api.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_json.hpp",
       "sha256": "aecce64fec12e660ecc70719231796eab3bc3f7cee3b9926f63e6975e9cd580e",
       "bytes": 452,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_json.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_validation.hpp",
       "sha256": "ea9bd5f5766767487df1392d44a25f10ca94bef7492e6294d47f7fc26d590940",
       "bytes": 284,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_validation.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/replay.hpp",
       "sha256": "65232aa464f0f20d5397504311d06f983fee50fb55379067b23d76e5b07be5a3",
       "bytes": 435,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/replay.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/experiments/v6/sep07_compositions_v0/candidates/firstday_m85_sale7/source/agent.hpp",
@@ -50230,13 +50259,15 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/fast_game_engine/pyrandom.hpp",
       "sha256": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
       "bytes": 3828,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/pyrandom.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/fast_game_engine/sim.hpp",
       "sha256": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
       "bytes": 63293,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/sim.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/timing.json",
@@ -53309,43 +53340,50 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/day_solver/include/day_solver/io.hpp",
       "sha256": "e0397987df86f2f88ed85662e5f604d05c407c4649d9c5af2eee81a3af97209a",
       "bytes": 126,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/include/day_solver/io.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/day_solver/include/day_solver/scheduler.hpp",
       "sha256": "018b9688de75884cf309e6a657cce47209f8d87c3886909880c188cd16a90f3b",
       "bytes": 786,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/include/day_solver/scheduler.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/baseline_json.hpp",
       "sha256": "24807d871d85725e6b4bfdc952ea32cf245f7ca631f04997c093eaef2033184e",
       "bytes": 228,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/baseline_json.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/day_solver_api.hpp",
       "sha256": "eb9ddf63b3daafd36fd527b768a8f703e65c2e00552417c97d129e8a5fe767fc",
       "bytes": 9026,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/day_solver_api.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_json.hpp",
       "sha256": "aecce64fec12e660ecc70719231796eab3bc3f7cee3b9926f63e6975e9cd580e",
       "bytes": 452,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_json.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_validation.hpp",
       "sha256": "ea9bd5f5766767487df1392d44a25f10ca94bef7492e6294d47f7fc26d590940",
       "bytes": 284,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_validation.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/replay.hpp",
       "sha256": "65232aa464f0f20d5397504311d06f983fee50fb55379067b23d76e5b07be5a3",
       "bytes": 435,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/replay.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/experiments/v6/sep07_compositions_v0/candidates/firstday_m85_sale7/source/agent.hpp",
@@ -54115,13 +54153,15 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/fast_game_engine/pyrandom.hpp",
       "sha256": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
       "bytes": 3828,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/pyrandom.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/fast_game_engine/sim.hpp",
       "sha256": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
       "bytes": 63293,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/sim.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/timing.json",
@@ -57194,43 +57234,50 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/day_solver/include/day_solver/io.hpp",
       "sha256": "e0397987df86f2f88ed85662e5f604d05c407c4649d9c5af2eee81a3af97209a",
       "bytes": 126,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/include/day_solver/io.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/day_solver/include/day_solver/scheduler.hpp",
       "sha256": "018b9688de75884cf309e6a657cce47209f8d87c3886909880c188cd16a90f3b",
       "bytes": 786,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/include/day_solver/scheduler.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/baseline_json.hpp",
       "sha256": "24807d871d85725e6b4bfdc952ea32cf245f7ca631f04997c093eaef2033184e",
       "bytes": 228,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/baseline_json.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/day_solver_api.hpp",
       "sha256": "eb9ddf63b3daafd36fd527b768a8f703e65c2e00552417c97d129e8a5fe767fc",
       "bytes": 9026,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/day_solver_api.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_json.hpp",
       "sha256": "aecce64fec12e660ecc70719231796eab3bc3f7cee3b9926f63e6975e9cd580e",
       "bytes": 452,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_json.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_validation.hpp",
       "sha256": "ea9bd5f5766767487df1392d44a25f10ca94bef7492e6294d47f7fc26d590940",
       "bytes": 284,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_validation.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/replay.hpp",
       "sha256": "65232aa464f0f20d5397504311d06f983fee50fb55379067b23d76e5b07be5a3",
       "bytes": 435,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/replay.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/experiments/v6/sep07_compositions_v0/candidates/firstday_m85_sale7/source/agent.hpp",
@@ -58000,13 +58047,15 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/fast_game_engine/pyrandom.hpp",
       "sha256": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
       "bytes": 3828,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/pyrandom.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/fast_game_engine/sim.hpp",
       "sha256": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
       "bytes": 63293,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/sim.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/timing.json",
@@ -60211,43 +60260,50 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/day_solver/include/day_solver/io.hpp",
       "sha256": "e0397987df86f2f88ed85662e5f604d05c407c4649d9c5af2eee81a3af97209a",
       "bytes": 126,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/include/day_solver/io.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/day_solver/include/day_solver/scheduler.hpp",
       "sha256": "018b9688de75884cf309e6a657cce47209f8d87c3886909880c188cd16a90f3b",
       "bytes": 786,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/include/day_solver/scheduler.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/baseline_json.hpp",
       "sha256": "24807d871d85725e6b4bfdc952ea32cf245f7ca631f04997c093eaef2033184e",
       "bytes": 228,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/baseline_json.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/day_solver_api.hpp",
       "sha256": "eb9ddf63b3daafd36fd527b768a8f703e65c2e00552417c97d129e8a5fe767fc",
       "bytes": 9026,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/day_solver_api.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_json.hpp",
       "sha256": "aecce64fec12e660ecc70719231796eab3bc3f7cee3b9926f63e6975e9cd580e",
       "bytes": 452,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_json.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_validation.hpp",
       "sha256": "ea9bd5f5766767487df1392d44a25f10ca94bef7492e6294d47f7fc26d590940",
       "bytes": 284,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_validation.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/replay.hpp",
       "sha256": "65232aa464f0f20d5397504311d06f983fee50fb55379067b23d76e5b07be5a3",
       "bytes": 435,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/replay.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/experiments/v6/sep07_compositions_v0/candidates/firstday_m85_sale7/source/agent.hpp",
@@ -61017,13 +61073,15 @@
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/fast_game_engine/pyrandom.hpp",
       "sha256": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
       "bytes": 3828,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/pyrandom.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/fast_game_engine/sim.hpp",
       "sha256": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
       "bytes": 63293,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/sim.hpp"
     },
     {
       "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/timing.json",
@@ -88095,25 +88153,29 @@
       "path": "workspace/fast_game_engine/Makefile",
       "sha256": "6a51c45a85d2f5bcf9617fa420eda5c74539d71ae13ca7dfafd6eb4b15389486",
       "bytes": 4806,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/Makefile"
     },
     {
       "path": "workspace/fast_game_engine/PARITY.md",
       "sha256": "066f243f52c0633971fb308d136102f18c0716eacf2f3d7450a5225c462796ea",
       "bytes": 4582,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/PARITY.md"
     },
     {
       "path": "workspace/fast_game_engine/README.md",
       "sha256": "f305da0a0d1ba63f9e87276929111219b2b57d43bc6dce525ab0411e0cead873",
       "bytes": 7935,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/README.md"
     },
     {
       "path": "workspace/fast_game_engine/UPSTREAM.md",
       "sha256": "424e96122d162c89ffaa08b042eceb4625e4810f4e2436985fb831347b755f04",
       "bytes": 867,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/UPSTREAM.md"
     },
     {
       "path": "workspace/fast_game_engine/__pycache__/export_trace.cpython-312.pyc",
@@ -88127,7 +88189,8 @@
       "path": "workspace/fast_game_engine/bench.cpp",
       "sha256": "10aa8a781739320994e8b69fb424d5669f9b7b21c88b916e2da18a3424089bfc",
       "bytes": 4109,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/bench.cpp"
     },
     {
       "path": "workspace/fast_game_engine/build/bench",
@@ -88181,155 +88244,151 @@
       "path": "workspace/fast_game_engine/build/coverage/alloc_traits.h.gcov",
       "sha256": "3c865eafc4b890d6f84914a2c9e75cbe356ccad3c861544d9a57a739e0fc6298",
       "bytes": 46478,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/allocator.h.gcov",
       "sha256": "9ebe9dec52b41c45d6a8839ea67be9496372291474518394578efce41fb2fb9b",
       "bytes": 15473,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/array.gcov",
       "sha256": "e26581b19cae52cc4b9b8753fa1835d809172f2c8ab71d0fade5a15ed6f1180f",
       "bytes": 25640,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/basic_string.h.gcov",
       "sha256": "51572d26d287dd134937fbd5b27fafd4937481acfd334c3cd112bd6796874544",
       "bytes": 237865,
-      "storage": "evidence/blobs/51/51572d26d287dd134937fbd5b27fafd4937481acfd334c3cd112bd6796874544.gz",
-      "stored_bytes": 40356
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/basic_string.tcc.gcov",
       "sha256": "a5aead927c91f7f59949c1a6315fda70390480920216f1b6583280390b46abf7",
       "bytes": 49062,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/bit.gcov",
       "sha256": "14bc3afcd174af32300979f6de3cdb64b234d6512d43450d40c3fe800cdfc9a1",
       "bytes": 26663,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/c++config.h.gcov",
       "sha256": "175315cf1581b688abfc47a184142823771518b3643ab7a4530abda7871923b8",
       "bytes": 106401,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/char_traits.h.gcov",
       "sha256": "4f8008ee092eaa94cc0adbad3aeed2fca28b7a9bce17f6bdfd418600c6c46d17",
       "bytes": 48146,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/gcov-summary.txt",
       "sha256": "dc301c6d8e8732e564698924340449f4601ab546730664a0483b7b4d59abf43c",
       "bytes": 4157,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/limits.gcov",
       "sha256": "6aeea7d144cad8990832d88dbffd691249d1e9c7dfafa352d898ff68f7c3a156",
       "bytes": 111867,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/move.h.gcov",
       "sha256": "fc6c1a20023c4d84dbdf11206af2e6b7192181af2661c7fed28293d01c18b513",
       "bytes": 16497,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/new.gcov",
       "sha256": "6e99a0aeecd6ce83c6052548ccc15eef065c22ea4c1843c8504eb18570a898a9",
       "bytes": 12693,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/new_allocator.h.gcov",
       "sha256": "b2b691ac29a3ea626c42e72f6c6b646d0b8b6284dce2a812204a0ebdd5da5d46",
       "bytes": 24768,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/ptr_traits.h.gcov",
       "sha256": "3b8ecc1417cc8e496b82cd21da709b9e0a3804353a2516375e9017ef16a43975",
       "bytes": 13666,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/pyrandom.hpp.gcov",
       "sha256": "06d644d4bb702a9a9bf7c1ae6fb71de007742e4660ec3beb4eda77d7731b10b7",
       "bytes": 7801,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/sim.hpp.gcov",
       "sha256": "4b6878d4a6105f3e68c2de10661d2e7b1fc46c46de47c438aff3153cfd5f1881",
       "bytes": 89148,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/stl_algobase.h.gcov",
       "sha256": "0d7bd274e9c522dd61d626dbb9ea8f3f1d7677f5f05e49fbc3013b641f52f916",
       "bytes": 118288,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/stl_construct.h.gcov",
       "sha256": "895398cdd75a6e0e3329c8e92893bc4c855b5666aeec00504e1806a56fcc3568",
       "bytes": 25260,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/stl_iterator.h.gcov",
       "sha256": "737ec904a502f886cbbc3ea4f2c303437282ab7492db2745f471c1393ba34a37",
       "bytes": 151269,
-      "storage": "evidence/blobs/73/737ec904a502f886cbbc3ea4f2c303437282ab7492db2745f471c1393ba34a37.gz",
-      "stored_bytes": 26316
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/stl_iterator_base_funcs.h.gcov",
       "sha256": "f6e1554366ba8e0fbb97b027c5927876d592e0fabb05a16dfdfd8918c0b62d8a",
       "bytes": 13293,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/stl_iterator_base_types.h.gcov",
       "sha256": "2cd5397f3ca0c8e7d64146121e2a6f29e9a229c30c8877f92bfccc184128fdf9",
       "bytes": 14257,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/stl_uninitialized.h.gcov",
       "sha256": "fb68a5d468144d787231b0418776a64286061da71df3e16d1755ee5b4c7b3933",
       "bytes": 70073,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/stl_vector.h.gcov",
       "sha256": "5345105229901335d73f65353b000a1dca8d43809d1bc6a249d4c69f4a7ab75e",
       "bytes": 137654,
-      "storage": "evidence/blobs/53/5345105229901335d73f65353b000a1dca8d43809d1bc6a249d4c69f4a7ab75e.gz",
-      "stored_bytes": 23544
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/type_traits.gcov",
       "sha256": "c9158a9d6e871c7905206086db66f36777763aeb7780504c76c9b9b07fcecf4a",
       "bytes": 176730,
-      "storage": "evidence/blobs/c9/c9158a9d6e871c7905206086db66f36777763aeb7780504c76c9b9b07fcecf4a.gz",
-      "stored_bytes": 30849
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/validate.cpp.gcov",
       "sha256": "48424aca7341b17c0778fa8483aec06a458aac0ef28837c94a68fb1cb02224c5",
       "bytes": 19867,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/validate_cov",
@@ -88339,26 +88398,25 @@
       "path": "workspace/fast_game_engine/build/coverage/validate_cov-validate.gcda",
       "sha256": "e9252b971dcf6226ba3193b4ab411bfe0c6d653dd6a709e179219a504e33d27e",
       "bytes": 20156,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/validate_cov-validate.gcno",
       "sha256": "2fe909a81961ff2274a06b559a1ad36af40dd60227c5aeea6fd8066deee5d7d6",
       "bytes": 240381,
-      "storage": "evidence/blobs/2f/2fe909a81961ff2274a06b559a1ad36af40dd60227c5aeea6fd8066deee5d7d6.gz",
-      "stored_bytes": 30209
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/coverage/vector.tcc.gcov",
       "sha256": "3f4b1707a0dbff382edac286d0b868b6ecb1ddf6a355e1bacd39a29d207cb0fe",
       "bytes": 63537,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/extended-check.log",
       "sha256": "d03b94594310190268f3e4f9b795aea45e62286f6fc58fd03bb0fb1bc2cf967b",
       "bytes": 15494,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/layout_bench",
@@ -88380,19 +88438,19 @@
       "path": "workspace/fast_game_engine/build/pgo-data/#home#pavel#Programming#kaggriculture#fast_game_engine#build#bench_pgo-bench.gcda",
       "sha256": "965cce725c587957b7790b10f9915b53536c6acdf0b391f853561718b7c1ea06",
       "bytes": 9896,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/pgo-final/#home#pavel#Programming#kaggriculture#fast_game_engine#build#bench_pgo_final-bench.gcda",
       "sha256": "04c4d3584a8952e416a57e8858e73c163e7e2ddf8cc77314ee1631ce66304ff8",
       "bytes": 9896,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/pgo/#home#pavel#Programming#kaggriculture#fast_game_engine#build#bench_pgo-bench.gcda",
       "sha256": "f425272e678750b5ce5de8291cded7f1a6a72f50d3733d79830476989647eafe",
       "bytes": 9804,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/price_validate",
@@ -88438,7 +88496,7 @@
       "path": "workspace/fast_game_engine/build/vectorization.txt",
       "sha256": "ec0c0869d09e89a4209d7bf8d5c44c7ceebbbab449720e8f159f7155bcba406c",
       "bytes": 20644,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/warn_bench",
@@ -88448,7 +88506,7 @@
       "path": "workspace/fast_game_engine/build/warn_bench.txt",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "bytes": 0,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/warn_layout_bench",
@@ -88458,7 +88516,7 @@
       "path": "workspace/fast_game_engine/build/warn_layout_bench.txt",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "bytes": 0,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/warn_price_validate",
@@ -88468,7 +88526,7 @@
       "path": "workspace/fast_game_engine/build/warn_price_validate.txt",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "bytes": 0,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/warn_rng_validate",
@@ -88478,7 +88536,7 @@
       "path": "workspace/fast_game_engine/build/warn_rng_validate.txt",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "bytes": 0,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/warn_validate",
@@ -88488,436 +88546,496 @@
       "path": "workspace/fast_game_engine/build/warn_validate.txt",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "bytes": 0,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/build/warnings.txt",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "bytes": 0,
-      "storage": "file"
+      "omitted": "Rebuildable engine or scheduler build output; unrelated generated dependency artifacts are not bundled."
     },
     {
       "path": "workspace/fast_game_engine/differential_fuzz.py",
       "sha256": "9febc73f8b3242954191833ec1204cbd7c16a4123962f21cf582ea6b77ec72e9",
       "bytes": 9220,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/differential_fuzz.py"
     },
     {
       "path": "workspace/fast_game_engine/export_trace.py",
       "sha256": "710febbb256caf4e66a88539b8fc0d5865b3780fc83058c58a50dc24671b9798",
       "bytes": 8715,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/export_trace.py"
     },
     {
       "path": "workspace/fast_game_engine/layout_bench.cpp",
       "sha256": "858616442e44ec85a7ce7d0c213e873010acaaffbb8e955302fcbac0ab6f5ca7",
       "bytes": 2906,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/layout_bench.cpp"
     },
     {
       "path": "workspace/fast_game_engine/parity_agent.py",
       "sha256": "3fc64706f31c12d57922c51cb4ef9269abfa53c252ef86fb34d6ba361b236aff",
       "bytes": 1546,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/parity_agent.py"
     },
     {
       "path": "workspace/fast_game_engine/price_truth.py",
       "sha256": "752db94f9f40b06b5ca879556b49eaa1266fb6d04b446739f66d1886a924ddce",
       "bytes": 596,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/price_truth.py"
     },
     {
       "path": "workspace/fast_game_engine/price_validate.cpp",
       "sha256": "1507148ce1bd26f54e26b87b9a0c44b7a7e5275aa8e99daf4675edb19bf53e33",
       "bytes": 664,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/price_validate.cpp"
     },
     {
       "path": "workspace/fast_game_engine/pyrandom.hpp",
       "sha256": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
       "bytes": 3828,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/pyrandom.hpp"
     },
     {
       "path": "workspace/fast_game_engine/python_bench.py",
       "sha256": "f7ca5bb3e68824051d9404d332dc37d037d5252ed1973679e92e62e5868783b3",
       "bytes": 4424,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/python_bench.py"
     },
     {
       "path": "workspace/fast_game_engine/rng_truth.py",
       "sha256": "71b352f31e1d039fb9c87f3c4b2872960d5d0ad5e2d290f5584d46850547abd5",
       "bytes": 591,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/rng_truth.py"
     },
     {
       "path": "workspace/fast_game_engine/rng_validate.cpp",
       "sha256": "55b9cff29797dc7ced9cf28d94b5afe92135cace31c146786a5494f9c95e3b2c",
       "bytes": 1557,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/rng_validate.cpp"
     },
     {
       "path": "workspace/fast_game_engine/sim.hpp",
       "sha256": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
       "bytes": 63293,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/sim.hpp"
     },
     {
       "path": "workspace/fast_game_engine/trace_coverage.py",
       "sha256": "7864eef0e32ce745f2b6b9587b82b8407bee6c79f4cfcdf913b588cd1397aa16",
       "bytes": 1420,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/trace_coverage.py"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_000_10000.txt",
       "sha256": "cb689b55fb90dd9f132c821715d6260a159423a7e4e3652f3fc505041445e728",
       "bytes": 124926,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_000_10000.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_001_10001.txt",
       "sha256": "0b8e5e776645de20adb1d30c03251c161dab34e813e00b131943b3718c287c91",
       "bytes": 124310,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_001_10001.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_002_10002.txt",
       "sha256": "fd1552884843cd3e0213ed28a005d1303ef63c74050e023bc9989849405a4a48",
       "bytes": 123788,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_002_10002.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_003_10003.txt",
       "sha256": "b2803e13f1a6f8474e52e274baac7507d2c1c97fd997da680f15ef52bfb14582",
       "bytes": 123785,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_003_10003.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_004_10004.txt",
       "sha256": "f890354b356cdf4e36d3ce5e5d8d3d0df94a1f40cddf8bc8356dabd9ac9fd238",
       "bytes": 120362,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_004_10004.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_005_10005.txt",
       "sha256": "da1f6d48b944afd66efc3cd53f73860f4606ed1cfa161947e9730c111d4b2cba",
       "bytes": 120861,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_005_10005.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_006_10006.txt",
       "sha256": "5a7d5cf3a1afa495c8c86fa219c3948468df321d7b52f1172367ab0d82f922db",
       "bytes": 121610,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_006_10006.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_007_10007.txt",
       "sha256": "3956512b5d222f3c4cd3374867ae3731ac03aade921851d979ada1e3e0c94f7f",
       "bytes": 123211,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_007_10007.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_008_10008.txt",
       "sha256": "1df9c94b7d2553ac4e031ee3ed611335d3063e2932f13b64ced57966a6f67405",
       "bytes": 121201,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_008_10008.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_009_10009.txt",
       "sha256": "38f5169cbaf805de8220af0f29b8fc38b192a88089ce3c2fdd877d025d166a15",
       "bytes": 122113,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_009_10009.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_010_10010.txt",
       "sha256": "4f9ddce0db279be35a47b84a0475940a4767ba69540bf1089ac70d3a01b0ab7c",
       "bytes": 121818,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_010_10010.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_011_10011.txt",
       "sha256": "1f55d05c611d761832016d9f05bafed9dd80432ae78d08a298c24e85e963586f",
       "bytes": 121280,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_011_10011.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_012_10012.txt",
       "sha256": "6248d1a811f97a120549e3134cc3d2fda60c5b9af8a3f9912337e3bfe7c852bf",
       "bytes": 122577,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_012_10012.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_013_10013.txt",
       "sha256": "89a49a2284ef76ab29f1595025c61901212741ead91836f494c2f970afb2c93a",
       "bytes": 117854,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_013_10013.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_014_10014.txt",
       "sha256": "b555371ef80dfd70a9bd9799eb201f3dd0420c2c7fd9b4c2a1f47ecaf12799c9",
       "bytes": 123202,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_014_10014.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_015_10015.txt",
       "sha256": "38b4ae12ea3271da8f2155899400bc9de7922594ec508cdc9bce6f998991b154",
       "bytes": 119233,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_015_10015.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_016_10016.txt",
       "sha256": "ce4e4435311b8ed919119adece11214d042c5b92b98a3a55e44ea593e3ca0415",
       "bytes": 118213,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_016_10016.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_017_10017.txt",
       "sha256": "492259b104f8bd03505167e26d4d9762ca987d9bc756b3523e2f99b136e22d6e",
       "bytes": 121230,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_017_10017.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_018_10018.txt",
       "sha256": "943a5c51fc594f58c2d7392bdc491cc08880aadfc7e7c946fef812b6ff2c680b",
       "bytes": 123915,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_018_10018.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_019_10019.txt",
       "sha256": "7fe6d4a818d986fb4b2fdfbaf6f59a987cf65be99a9f31d0c8f61209b50f15c2",
       "bytes": 119466,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_019_10019.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_020_10020.txt",
       "sha256": "e56b4f6ab45faf6182d08857be37db1757b6d8fe79b11b846125105273913086",
       "bytes": 118689,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_020_10020.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_021_10021.txt",
       "sha256": "fe93681cc54e536f27399903baa30b0ffe9b4b98448c42cf9636c180f22b1343",
       "bytes": 122806,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_021_10021.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_022_10022.txt",
       "sha256": "dce8a2fb70f21fdaf44bc33284853054e6a2ad53df31cb10cdb83c663d3fa014",
       "bytes": 121793,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_022_10022.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_023_10023.txt",
       "sha256": "2a9ac21fc3d3477507e16be88861a06803b280f927c0cdb6b2afae9b5563a98f",
       "bytes": 121564,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_023_10023.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_024_20000.txt",
       "sha256": "732b73aacd70f4f926906943f51f759e444468c84e73f23e8b67382f7400825d",
       "bytes": 5000,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_024_20000.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_025_20001.txt",
       "sha256": "172ffebea3af2c275343268aa226b83e631b444067763c92946bf6bed845b372",
       "bytes": 12756,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_025_20001.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_026_20002.txt",
       "sha256": "e419a70f41160a62d57edaebe837a2fdd38fd2ac666ba8073656dafaf9a0bd6a",
       "bytes": 40556,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_026_20002.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_027_20003.txt",
       "sha256": "41e50b227e5f6ac143a51e67be199d5f51906a9a18e182c36b46ec74d635da59",
       "bytes": 266598,
-      "storage": "evidence/blobs/41/41e50b227e5f6ac143a51e67be199d5f51906a9a18e182c36b46ec74d635da59.gz",
-      "stored_bytes": 53997
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_027_20003.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_028_20004.txt",
       "sha256": "4b2bc4d6dc8878bed8bc4993073573a5cfa1a7954b4c684a9c8d820a7ed87c31",
       "bytes": 5359,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_028_20004.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_029_20005.txt",
       "sha256": "3b96565b82d02498c9c61c010391d2c146fe3ac02444ed4f0f9b249d5e1b89b0",
       "bytes": 13035,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_029_20005.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_030_20006.txt",
       "sha256": "0fe9f23a02db3d13dff3db6d0c1902dbd3709050f1857980bf3b66418507548f",
       "bytes": 56299,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_030_20006.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_031_20007.txt",
       "sha256": "af317dfd325d5ed00eec903579759419b66efedf4e22a067074368ba96523d4f",
       "bytes": 150546,
-      "storage": "evidence/blobs/af/af317dfd325d5ed00eec903579759419b66efedf4e22a067074368ba96523d4f.gz",
-      "stored_bytes": 33847
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_031_20007.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_032_20008.txt",
       "sha256": "ac7fe5fc48c6ca4b7296860a92d3e80dcc6d244d9828d8a86595ec9a9af6e62b",
       "bytes": 5366,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_032_20008.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_033_20009.txt",
       "sha256": "6eef77215b977d607cc883547bf6af17a986825c2b5b8901b3407521cd97b093",
       "bytes": 12832,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_033_20009.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_034_20010.txt",
       "sha256": "63b91ec9af62b19f55b30c9e7c2641e114a50e1c48cc7664aebd980222060e43",
       "bytes": 39418,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_034_20010.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_035_20011.txt",
       "sha256": "e98228d3f1fed45f70b76546f199c8b5ab00f06872f85fe92cb7813d91881842",
       "bytes": 153938,
-      "storage": "evidence/blobs/e9/e98228d3f1fed45f70b76546f199c8b5ab00f06872f85fe92cb7813d91881842.gz",
-      "stored_bytes": 35081
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_035_20011.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_036_20012.txt",
       "sha256": "174e69f953ea23d75998409f6af064d037b415d060368dde7d1ae17a09df634d",
       "bytes": 5054,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_036_20012.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_037_20013.txt",
       "sha256": "eb097c6183185e1310695cf32bf9bd383fc918bd456d02f245301c6ab8afd572",
       "bytes": 13497,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_037_20013.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_038_20014.txt",
       "sha256": "a910284504c6d56bc4caf8f13af4514a1ca12266376e55fd9814a944002f2b32",
       "bytes": 41809,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_038_20014.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_039_20015.txt",
       "sha256": "bcb8f1ae31a69703bd84cb09d8ae4a2adf3423f351dbd2118a1b13b0ba9029b4",
       "bytes": 261336,
-      "storage": "evidence/blobs/bc/bcb8f1ae31a69703bd84cb09d8ae4a2adf3423f351dbd2118a1b13b0ba9029b4.gz",
-      "stored_bytes": 53711
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_039_20015.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_040_20016.txt",
       "sha256": "31b163251e5c9ba707182f2bba2a8caf870be4556d97cbc06481e57e6cfe8627",
       "bytes": 5369,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_040_20016.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_041_20017.txt",
       "sha256": "1a6a5d3ac84768fde6eaec5f17eb9ac9356bc6bb04734e8dca31ea1d4d972ec7",
       "bytes": 12546,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_041_20017.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_042_20018.txt",
       "sha256": "df9656882115933fb4f593aad47f805b2d24d596ff4b2aefba3dc63566d52e7a",
       "bytes": 56011,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_042_20018.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_043_20019.txt",
       "sha256": "d401a0759462ebc3a5a5bd4d67d51c3f4369fb72bd332623941be6e46f34117a",
       "bytes": 148814,
-      "storage": "evidence/blobs/d4/d401a0759462ebc3a5a5bd4d67d51c3f4369fb72bd332623941be6e46f34117a.gz",
-      "stored_bytes": 33439
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_043_20019.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_044_20020.txt",
       "sha256": "a433a2f34e58ba8c192f29edbd8383f27ffa2f5131960b8c3f61705cd597e1e0",
       "bytes": 5249,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_044_20020.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_045_20021.txt",
       "sha256": "4169f57edbc7310a6c2604b99e671ba3204c7c92f6514ac8a6b62b52c96c79e4",
       "bytes": 12968,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_045_20021.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_046_20022.txt",
       "sha256": "148ad9fa8f71fe5dbe6adf5e6af46dfcae258c4bdbf15669ef77ba6fecf0d969",
       "bytes": 39953,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_046_20022.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/fuzz/fuzz_047_20023.txt",
       "sha256": "9013f85c7a46b0c8e12e756fb94180b449fc7bffe868ec48592404b80d5cf2b7",
       "bytes": 156299,
-      "storage": "evidence/blobs/90/9013f85c7a46b0c8e12e756fb94180b449fc7bffe868ec48592404b80d5cf2b7.gz",
-      "stored_bytes": 35558
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_047_20023.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/replay_kaggriculture-c31-kaito-v22-official-1-32-6_101.txt",
       "sha256": "803f6ec105258488cadb4e896f96aee5e841404d91ed99c52d72237b2e59ae95",
       "bytes": 159975,
-      "storage": "evidence/blobs/80/803f6ec105258488cadb4e896f96aee5e841404d91ed99c52d72237b2e59ae95.gz",
-      "stored_bytes": 23382
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/replay_kaggriculture-c31-kaito-v22-official-1-32-6_101.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/replay_kaggriculture-c31-kaito-v22-official-1-32-6_202.txt",
       "sha256": "0e1c4a0ceff6ce4ac5d472e0bdfe60179c72db0d34c051355a38a08cd8aecd56",
       "bytes": 160068,
-      "storage": "evidence/blobs/0e/0e1c4a0ceff6ce4ac5d472e0bdfe60179c72db0d34c051355a38a08cd8aecd56.gz",
-      "stored_bytes": 23132
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/replay_kaggriculture-c31-kaito-v22-official-1-32-6_202.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/replay_kaggriculture-c31-kaito-v22-official-1-32-6_303.txt",
       "sha256": "0d87270319ab359134898908df5c877d56cad019a50833f2e96bc6af620f3017",
       "bytes": 160158,
-      "storage": "evidence/blobs/0d/0d87270319ab359134898908df5c877d56cad019a50833f2e96bc6af620f3017.gz",
-      "stored_bytes": 23324
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/replay_kaggriculture-c31-kaito-v22-official-1-32-6_303.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/replay_parity_agent_404.txt",
       "sha256": "47ddff735264559e21608edbc4138d3f3a90c933d4dc96c910835821925b4d20",
       "bytes": 70406,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/replay_parity_agent_404.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/replay_parity_agent_505.txt",
       "sha256": "7420f5040c435fdac9559fff0c66407b3836bfc0cff761fb871605bdf799f6ee",
       "bytes": 70389,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/replay_parity_agent_505.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/replay_starter_11.txt",
       "sha256": "2aa8080f6134950a48f6e1d3e55b67e441e049a98b383893fb405b15e894b60d",
       "bytes": 69874,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/replay_starter_11.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/replay_starter_22.txt",
       "sha256": "8a5f0ce277766d661e949c474e4aa1f476b4f3661a302d63726b296c89df45c9",
       "bytes": 69811,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/replay_starter_22.txt"
     },
     {
       "path": "workspace/fast_game_engine/traces/replay_starter_33.txt",
       "sha256": "1824c470ab87d44e362c3086f275983e796846e883b70b5abff2c9c7ab2448b6",
       "bytes": 69796,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/traces/replay_starter_33.txt"
     },
     {
       "path": "workspace/fast_game_engine/validate.cpp",
       "sha256": "57033180b10d272a6006b88cdb1dc3bbca04003497530194832bb92c04caad0a",
       "bytes": 6700,
-      "storage": "file"
+      "storage": "repository",
+      "repository_path": "fast_game_engine/validate.cpp"
     },
     {
       "path": "workspace/prompts/experiments_pipeline.md",

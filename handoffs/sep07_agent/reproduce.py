@@ -26,6 +26,44 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def record_bytes(record):
+    if record["storage"] == "repository":
+        data = (REPO / record["repository_path"]).read_bytes()
+    elif record["storage"] == "file":
+        data = (HERE / record["path"]).read_bytes()
+    else:
+        data = gzip.decompress((HERE / record["storage"]).read_bytes())
+    assert len(data) == record["bytes"] and hashlib.sha256(data).hexdigest() == record["sha256"], record["path"]
+    return data
+
+
+def check_dependencies(components=None):
+    dependency = read(HERE / "evidence/repository_dependencies.json")
+    for path, expected in dependency["files"].items():
+        if components is not None and Path(path).parts[0] not in components:
+            continue
+        assert digest(REPO / path) == expected, "Committed dependency differs; see evidence/repository_dependencies.json: " + path
+    return dependency
+
+
+def link_dependencies(destination, prefix):
+    dependency = check_dependencies()
+    for path, repository_path in dependency["links"].items():
+        if not path.startswith(prefix):
+            continue
+        target = destination / Path(path).relative_to(prefix)
+        expected = REPO / repository_path
+        if target.is_symlink():
+            target.unlink()
+        elif target.exists():
+            # This removes only the previously generated dependency copy in
+            # ignored _work/, never the repository's authoritative resources.
+            assert target.is_relative_to(WORK)
+            shutil.rmtree(target)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.symlink_to(expected, target_is_directory=True)
+
+
 def execute(command, cwd=HERE, capture=False):
     WORK.mkdir(exist_ok=True)
     with (WORK / "commands.jsonl").open("a") as log:
@@ -36,15 +74,12 @@ def execute(command, cwd=HERE, capture=False):
 
 
 def verify():
+    check_dependencies()
     records = read(HERE / "evidence/inventory.json")["files"]
     def check(record):
         if "omitted" in record:
             return
-        if record["storage"] == "file":
-            data = (HERE / record["path"]).read_bytes()
-        else:
-            data = gzip.decompress((HERE / record["storage"]).read_bytes())
-        assert len(data) == record["bytes"] and hashlib.sha256(data).hexdigest() == record["sha256"], record["path"]
+        record_bytes(record)
     with ThreadPoolExecutor(max_workers=4) as pool:
         list(pool.map(check, records))
     frozen = read(HERE / "submitted/FROZEN.json")
@@ -56,6 +91,8 @@ def verify():
     if manifest.exists():
         for path, expected in read(manifest)["files_sha256"].items():
             assert digest(HERE / path) == expected, path
+        for path, expected in read(manifest)["symlinks"].items():
+            assert (HERE / path).is_symlink() and os.readlink(HERE / path) == expected, path
     print("Verified", sum("omitted" not in r for r in records), "snapshot files and", len(frozen["files"]), "frozen submission sources.")
 
 
@@ -67,19 +104,22 @@ def hydrate(prefix, destination):
         if "omitted" in record or not record["path"].startswith(prefix):
             continue
         target = destination / record["path"]
-        data = ((HERE / record["path"]).read_bytes() if record["storage"] == "file" else
-                gzip.decompress((HERE / record["storage"]).read_bytes()))
+        data = record_bytes(record)
         assert hashlib.sha256(data).hexdigest() == record["sha256"]
         if target.exists():
             assert target.read_bytes() == data, target
             continue
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_bytes(data)
+        if record["storage"] == "repository":
+            target.symlink_to(REPO / record["repository_path"])
+        else:
+            target.write_bytes(data)
         count += 1
     print("Restored", count, "files under", destination)
 
 
 def submitted_workspace():
+    check_dependencies({"fast_game_engine"})
     out = WORK / "submitted"
     out.mkdir(parents=True, exist_ok=True)
     for path in (HERE / "submitted").iterdir():
@@ -143,12 +183,11 @@ def prepare_session(all_evidence=False):
     session = WORK / "session"
     if not session.exists():
         shutil.copytree(HERE / "workspace", session, symlinks=True)
-        (session / "day_solver").unlink()
-        (session / "day_solver").symlink_to(REPO / "day_solver", target_is_directory=True)
+    link_dependencies(session, "workspace/")
     source_suffixes = {".hpp", ".cpp", ".inc", ".h", ".py", ".cmake", ".sh"}
     restored = 0
     for record in read(HERE / "evidence/inventory.json")["files"]:
-        if "omitted" in record or record.get("storage") == "file" or not record["path"].startswith("workspace/"):
+        if "omitted" in record or record.get("storage") in {"file", "repository"} or not record["path"].startswith("workspace/"):
             continue
         relative = Path(record["path"]).relative_to("workspace")
         if not all_evidence and relative.suffix not in source_suffixes:
@@ -163,7 +202,7 @@ def prepare_session(all_evidence=False):
     original = b"/home/pavel/Programming/kaggriculture"
     changes = []
     for record in read(HERE / "evidence/inventory.json")["files"]:
-        if "omitted" in record or not record["path"].startswith("workspace/"):
+        if "omitted" in record or record.get("storage") == "repository" or not record["path"].startswith("workspace/"):
             continue
         path = session / Path(record["path"]).relative_to("workspace")
         if not path.is_file() or path.suffix not in source_suffixes | {".json", ".txt", ".log"}:
@@ -205,9 +244,7 @@ def build_agent(args):
 
 
 def compile_days(args):
-    dependency = read(HERE / "evidence/day_solver_dependency.json")
-    for path, expected in dependency["files"].items():
-        assert digest(REPO / path) == expected, "Tracked scheduler dependency differs: " + path
+    check_dependencies()
     session = prepare_session()
     build = session / EXP / "build/handoff_day_scheduler"
     execute(ENV + ["cmake", "-S", session / EXP / "scheduler", "-B", build])

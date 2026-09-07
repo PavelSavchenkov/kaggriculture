@@ -1,7 +1,7 @@
 {
   "verified_utc": "2026-09-07T13:31:44.804236+00:00",
   "status": "PASS",
-  "source_scope": "Isolated handoff copies; no live experiment runtime dependency. Existing tracked V30 scheduler is a declared checked repository dependency.",
+  "source_scope": "Frozen handoff agent/research copies; no live experiment runtime dependency. Already committed C++ engine and V30 scheduler are hash-checked repository dependencies.",
   "submitted_source_files": 58,
   "deployment_artifacts_byte_identical": true,
   "submitted_artifacts": {
@@ -150,5 +150,54 @@
       }
     },
     "source_argument_paths_verified": 39
+  },
+  "dependency_cleanup": {
+    "status": "PASS",
+    "verified_utc": "2026-09-07T14:00:28.381389+00:00",
+    "record": "evidence/dependency_cleanup.json",
+    "repository_dependency": "evidence/repository_dependencies.json",
+    "source_copies_removed": 132,
+    "generated_dependency_artifacts_omitted": 65,
+    "directory_links": 21,
+    "original_58_frozen_input_hashes_unchanged": true,
+    "main_policy_archive_hashes_identical": true,
+    "cpp_repeated": {
+      "independent": {
+        "games": 4096,
+        "wins": 3980,
+        "mean_margin": 9426.5,
+        "full_comparable_outcomes_match_original": true
+      },
+      "native": {
+        "games": 4096,
+        "wins": 3944,
+        "mean_margin": 9307.88,
+        "full_comparable_outcomes_match_original": true
+      }
+    },
+    "packed_action_parity": 48892,
+    "packed_official_teammate_games": 64,
+    "day_solver_smoke": "V30 program150 day16; one fewer hire, exact endpoint and cash;8full public-router games allwin",
+    "later_local_agent": "investment_context_guarded_001_best rebuilt using committed engine;64teammate games,60wins",
+    "logs": {
+      "evidence/reproduction/dependency_cleanup/cleanup_verify.log.gz": "b801bccbcbd3a2dd40b285fb55d8efe924950ecffe4b78d4ac3f79321fa98c68",
+      "evidence/reproduction/dependency_cleanup/cleanup_build_submitted.log.gz": "e52eaad60c81a15964cb1a96574c3b0299ed3a28da55c8238e7a0c682f430702",
+      "evidence/reproduction/dependency_cleanup/cleanup_prepare.log.gz": "79f8d9415ffb2e72975539de0a1695b810a23791e2f2109b0ea17877ca81aa68",
+      "evidence/reproduction/dependency_cleanup/cleanup_build_agent.log.gz": "7263143d53eca679ad3b635e3f2883aff1476a0b9d68b77590b2c218eca7fd7e",
+      "evidence/reproduction/dependency_cleanup/cleanup_evaluate_independent.log.gz": "2250c57e949b8b85e23145775c33fa10c253caf00f642ce69c8dfeff69378c99",
+      "evidence/reproduction/dependency_cleanup/cleanup_evaluate_native.log.gz": "01e743189fe3da8d86ad5a087f74ece959240e3fa3862733ff851452cb757f4b",
+      "evidence/reproduction/dependency_cleanup/cleanup_verify_packed.log.gz": "77252b6cfc74511593142acbd045e94f46db8786269e8f775844b63d6f49de0b",
+      "evidence/reproduction/dependency_cleanup/cleanup_day_solver.log.gz": "43023ee7ebae58a9b50008e3889d5f32d0ebcf6f73f6797811ab39797da9b67f"
+    },
+    "log_uncompressed_sha256": {
+      "evidence/reproduction/dependency_cleanup/cleanup_verify.log.gz": "3e4e69734b6e3cf754bbce35504dce6bcece104f9112ed140feaf7740318b528",
+      "evidence/reproduction/dependency_cleanup/cleanup_build_submitted.log.gz": "13b9849c3178ff4a27d942341e73ce2095ba425b73c3656fab3285fa9c4c33da",
+      "evidence/reproduction/dependency_cleanup/cleanup_prepare.log.gz": "4837220201315ed945b8fdacc971376c364c23d22a81cb2673c287682fe6fb90",
+      "evidence/reproduction/dependency_cleanup/cleanup_build_agent.log.gz": "6659f8bb113741521588aaa52c44d55e53ec0dd2bac12f90f4eb72e94c8be534",
+      "evidence/reproduction/dependency_cleanup/cleanup_evaluate_independent.log.gz": "b62aec4cdd0bcabe8fa71908ae0c687c9f071afc80f29e6c9e96c239890e8708",
+      "evidence/reproduction/dependency_cleanup/cleanup_evaluate_native.log.gz": "1c15096e3b99fe4f00dc717633f0e4c45cce3a10507aab5cc4a3b5e0d4744940",
+      "evidence/reproduction/dependency_cleanup/cleanup_verify_packed.log.gz": "8198990b3487ea4cf70b57325a0776513e732159d3be865f7155f9571ffd83b8",
+      "evidence/reproduction/dependency_cleanup/cleanup_day_solver.log.gz": "f10a5b3800ebddd305a314a75d1e584641ff0a443ca6175ea6d73553e07653df"
+    }
   }
 }

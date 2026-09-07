@@ -1,0 +1,945 @@
+{
+  "base_handoff_commit": "1742ed2d369ab250da5c2bb693bf18f055d97a23",
+  "repository_revision": "ee69cee7cdb20b2b7fe77d4e104dc7138f10d26b",
+  "referenced_files": [
+    {
+      "path": "submitted/source_tree/fast_game_engine/pyrandom.hpp",
+      "repository_path": "fast_game_engine/pyrandom.hpp",
+      "bytes": 3828
+    },
+    {
+      "path": "submitted/source_tree/fast_game_engine/sim.hpp",
+      "repository_path": "fast_game_engine/sim.hpp",
+      "bytes": 63293
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/refresh_1010/source_snapshot/fast_game_engine/pyrandom.hpp",
+      "repository_path": "fast_game_engine/pyrandom.hpp",
+      "bytes": 3828
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/refresh_1010/source_snapshot/fast_game_engine/sim.hpp",
+      "repository_path": "fast_game_engine/sim.hpp",
+      "bytes": 63293
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/refresh_1112/debug_pair/source_snapshot/fast_game_engine/pyrandom.hpp",
+      "repository_path": "fast_game_engine/pyrandom.hpp",
+      "bytes": 3828
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/refresh_1112/debug_pair/source_snapshot/fast_game_engine/sim.hpp",
+      "repository_path": "fast_game_engine/sim.hpp",
+      "bytes": 63293
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/source_snapshot/fast_game_engine/pyrandom.hpp",
+      "repository_path": "fast_game_engine/pyrandom.hpp",
+      "bytes": 3828
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/refresh_1112/generic/source_snapshot/fast_game_engine/sim.hpp",
+      "repository_path": "fast_game_engine/sim.hpp",
+      "bytes": 63293
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/debug/source_snapshot/fast_game_engine/pyrandom.hpp",
+      "repository_path": "fast_game_engine/pyrandom.hpp",
+      "bytes": 3828
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/debug/source_snapshot/fast_game_engine/sim.hpp",
+      "repository_path": "fast_game_engine/sim.hpp",
+      "bytes": 63293
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/fast_game_engine/pyrandom.hpp",
+      "repository_path": "fast_game_engine/pyrandom.hpp",
+      "bytes": 3828
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/generic/source_snapshot/fast_game_engine/sim.hpp",
+      "repository_path": "fast_game_engine/sim.hpp",
+      "bytes": 63293
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/masked/source_snapshot/fast_game_engine/pyrandom.hpp",
+      "repository_path": "fast_game_engine/pyrandom.hpp",
+      "bytes": 3828
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/masked/source_snapshot/fast_game_engine/sim.hpp",
+      "repository_path": "fast_game_engine/sim.hpp",
+      "bytes": 63293
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/reference/source_snapshot/fast_game_engine/pyrandom.hpp",
+      "repository_path": "fast_game_engine/pyrandom.hpp",
+      "bytes": 3828
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/build/reference/source_snapshot/fast_game_engine/sim.hpp",
+      "repository_path": "fast_game_engine/sim.hpp",
+      "bytes": 63293
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/debug/source_snapshot/fast_game_engine/pyrandom.hpp",
+      "repository_path": "fast_game_engine/pyrandom.hpp",
+      "bytes": 3828
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/debug/source_snapshot/fast_game_engine/sim.hpp",
+      "repository_path": "fast_game_engine/sim.hpp",
+      "bytes": 63293
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/generic/source_snapshot/fast_game_engine/pyrandom.hpp",
+      "repository_path": "fast_game_engine/pyrandom.hpp",
+      "bytes": 3828
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/generic/source_snapshot/fast_game_engine/sim.hpp",
+      "repository_path": "fast_game_engine/sim.hpp",
+      "bytes": 63293
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/masked/source_snapshot/fast_game_engine/pyrandom.hpp",
+      "repository_path": "fast_game_engine/pyrandom.hpp",
+      "bytes": 3828
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/atakan_sampled_shops_001/build/masked/source_snapshot/fast_game_engine/sim.hpp",
+      "repository_path": "fast_game_engine/sim.hpp",
+      "bytes": 63293
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/day_solver/include/day_solver/io.hpp",
+      "repository_path": "day_solver/include/day_solver/io.hpp",
+      "bytes": 126
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/day_solver/include/day_solver/scheduler.hpp",
+      "repository_path": "day_solver/include/day_solver/scheduler.hpp",
+      "bytes": 786
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/baseline_json.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/baseline_json.hpp",
+      "bytes": 228
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/day_solver_api.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/day_solver_api.hpp",
+      "bytes": 9026
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_json.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_json.hpp",
+      "bytes": 452
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_validation.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_validation.hpp",
+      "bytes": 284
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/replay.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/replay.hpp",
+      "bytes": 435
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/fast_game_engine/pyrandom.hpp",
+      "repository_path": "fast_game_engine/pyrandom.hpp",
+      "bytes": 3828
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_002/source_snapshot/fast_game_engine/sim.hpp",
+      "repository_path": "fast_game_engine/sim.hpp",
+      "bytes": 63293
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/day_solver/include/day_solver/io.hpp",
+      "repository_path": "day_solver/include/day_solver/io.hpp",
+      "bytes": 126
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/day_solver/include/day_solver/scheduler.hpp",
+      "repository_path": "day_solver/include/day_solver/scheduler.hpp",
+      "bytes": 786
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/baseline_json.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/baseline_json.hpp",
+      "bytes": 228
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/day_solver_api.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/day_solver_api.hpp",
+      "bytes": 9026
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_json.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_json.hpp",
+      "bytes": 452
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_validation.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_validation.hpp",
+      "bytes": 284
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/replay.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/replay.hpp",
+      "bytes": 435
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/fast_game_engine/pyrandom.hpp",
+      "repository_path": "fast_game_engine/pyrandom.hpp",
+      "bytes": 3828
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_003/source_snapshot/fast_game_engine/sim.hpp",
+      "repository_path": "fast_game_engine/sim.hpp",
+      "bytes": 63293
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/day_solver/include/day_solver/io.hpp",
+      "repository_path": "day_solver/include/day_solver/io.hpp",
+      "bytes": 126
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/day_solver/include/day_solver/scheduler.hpp",
+      "repository_path": "day_solver/include/day_solver/scheduler.hpp",
+      "bytes": 786
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/baseline_json.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/baseline_json.hpp",
+      "bytes": 228
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/day_solver_api.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/day_solver_api.hpp",
+      "bytes": 9026
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_json.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_json.hpp",
+      "bytes": 452
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_validation.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_validation.hpp",
+      "bytes": 284
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/replay.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/replay.hpp",
+      "bytes": 435
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/fast_game_engine/pyrandom.hpp",
+      "repository_path": "fast_game_engine/pyrandom.hpp",
+      "bytes": 3828
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_004/source_snapshot/fast_game_engine/sim.hpp",
+      "repository_path": "fast_game_engine/sim.hpp",
+      "bytes": 63293
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/day_solver/include/day_solver/io.hpp",
+      "repository_path": "day_solver/include/day_solver/io.hpp",
+      "bytes": 126
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/day_solver/include/day_solver/scheduler.hpp",
+      "repository_path": "day_solver/include/day_solver/scheduler.hpp",
+      "bytes": 786
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/baseline_json.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/baseline_json.hpp",
+      "bytes": 228
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/day_solver_api.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/day_solver_api.hpp",
+      "bytes": 9026
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_json.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_json.hpp",
+      "bytes": 452
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_validation.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_validation.hpp",
+      "bytes": 284
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/day_solver/src/components/resource_portfolio_order_v2/solver/include/replay.hpp",
+      "repository_path": "day_solver/src/components/resource_portfolio_order_v2/solver/include/replay.hpp",
+      "bytes": 435
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/fast_game_engine/pyrandom.hpp",
+      "repository_path": "fast_game_engine/pyrandom.hpp",
+      "bytes": 3828
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/runs/fertilization_005/source_snapshot/fast_game_engine/sim.hpp",
+      "repository_path": "fast_game_engine/sim.hpp",
+      "bytes": 63293
+    },
+    {
+      "path": "workspace/fast_game_engine/Makefile",
+      "repository_path": "fast_game_engine/Makefile",
+      "bytes": 4806
+    },
+    {
+      "path": "workspace/fast_game_engine/PARITY.md",
+      "repository_path": "fast_game_engine/PARITY.md",
+      "bytes": 4582
+    },
+    {
+      "path": "workspace/fast_game_engine/README.md",
+      "repository_path": "fast_game_engine/README.md",
+      "bytes": 7935
+    },
+    {
+      "path": "workspace/fast_game_engine/UPSTREAM.md",
+      "repository_path": "fast_game_engine/UPSTREAM.md",
+      "bytes": 867
+    },
+    {
+      "path": "workspace/fast_game_engine/bench.cpp",
+      "repository_path": "fast_game_engine/bench.cpp",
+      "bytes": 4109
+    },
+    {
+      "path": "workspace/fast_game_engine/differential_fuzz.py",
+      "repository_path": "fast_game_engine/differential_fuzz.py",
+      "bytes": 9220
+    },
+    {
+      "path": "workspace/fast_game_engine/export_trace.py",
+      "repository_path": "fast_game_engine/export_trace.py",
+      "bytes": 8715
+    },
+    {
+      "path": "workspace/fast_game_engine/layout_bench.cpp",
+      "repository_path": "fast_game_engine/layout_bench.cpp",
+      "bytes": 2906
+    },
+    {
+      "path": "workspace/fast_game_engine/parity_agent.py",
+      "repository_path": "fast_game_engine/parity_agent.py",
+      "bytes": 1546
+    },
+    {
+      "path": "workspace/fast_game_engine/price_truth.py",
+      "repository_path": "fast_game_engine/price_truth.py",
+      "bytes": 596
+    },
+    {
+      "path": "workspace/fast_game_engine/price_validate.cpp",
+      "repository_path": "fast_game_engine/price_validate.cpp",
+      "bytes": 664
+    },
+    {
+      "path": "workspace/fast_game_engine/pyrandom.hpp",
+      "repository_path": "fast_game_engine/pyrandom.hpp",
+      "bytes": 3828
+    },
+    {
+      "path": "workspace/fast_game_engine/python_bench.py",
+      "repository_path": "fast_game_engine/python_bench.py",
+      "bytes": 4424
+    },
+    {
+      "path": "workspace/fast_game_engine/rng_truth.py",
+      "repository_path": "fast_game_engine/rng_truth.py",
+      "bytes": 591
+    },
+    {
+      "path": "workspace/fast_game_engine/rng_validate.cpp",
+      "repository_path": "fast_game_engine/rng_validate.cpp",
+      "bytes": 1557
+    },
+    {
+      "path": "workspace/fast_game_engine/sim.hpp",
+      "repository_path": "fast_game_engine/sim.hpp",
+      "bytes": 63293
+    },
+    {
+      "path": "workspace/fast_game_engine/trace_coverage.py",
+      "repository_path": "fast_game_engine/trace_coverage.py",
+      "bytes": 1420
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_000_10000.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_000_10000.txt",
+      "bytes": 124926
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_001_10001.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_001_10001.txt",
+      "bytes": 124310
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_002_10002.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_002_10002.txt",
+      "bytes": 123788
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_003_10003.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_003_10003.txt",
+      "bytes": 123785
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_004_10004.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_004_10004.txt",
+      "bytes": 120362
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_005_10005.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_005_10005.txt",
+      "bytes": 120861
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_006_10006.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_006_10006.txt",
+      "bytes": 121610
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_007_10007.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_007_10007.txt",
+      "bytes": 123211
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_008_10008.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_008_10008.txt",
+      "bytes": 121201
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_009_10009.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_009_10009.txt",
+      "bytes": 122113
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_010_10010.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_010_10010.txt",
+      "bytes": 121818
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_011_10011.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_011_10011.txt",
+      "bytes": 121280
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_012_10012.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_012_10012.txt",
+      "bytes": 122577
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_013_10013.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_013_10013.txt",
+      "bytes": 117854
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_014_10014.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_014_10014.txt",
+      "bytes": 123202
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_015_10015.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_015_10015.txt",
+      "bytes": 119233
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_016_10016.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_016_10016.txt",
+      "bytes": 118213
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_017_10017.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_017_10017.txt",
+      "bytes": 121230
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_018_10018.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_018_10018.txt",
+      "bytes": 123915
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_019_10019.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_019_10019.txt",
+      "bytes": 119466
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_020_10020.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_020_10020.txt",
+      "bytes": 118689
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_021_10021.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_021_10021.txt",
+      "bytes": 122806
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_022_10022.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_022_10022.txt",
+      "bytes": 121793
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_023_10023.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_023_10023.txt",
+      "bytes": 121564
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_024_20000.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_024_20000.txt",
+      "bytes": 5000
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_025_20001.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_025_20001.txt",
+      "bytes": 12756
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_026_20002.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_026_20002.txt",
+      "bytes": 40556
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_027_20003.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_027_20003.txt",
+      "bytes": 266598
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_028_20004.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_028_20004.txt",
+      "bytes": 5359
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_029_20005.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_029_20005.txt",
+      "bytes": 13035
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_030_20006.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_030_20006.txt",
+      "bytes": 56299
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_031_20007.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_031_20007.txt",
+      "bytes": 150546
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_032_20008.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_032_20008.txt",
+      "bytes": 5366
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_033_20009.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_033_20009.txt",
+      "bytes": 12832
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_034_20010.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_034_20010.txt",
+      "bytes": 39418
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_035_20011.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_035_20011.txt",
+      "bytes": 153938
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_036_20012.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_036_20012.txt",
+      "bytes": 5054
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_037_20013.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_037_20013.txt",
+      "bytes": 13497
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_038_20014.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_038_20014.txt",
+      "bytes": 41809
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_039_20015.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_039_20015.txt",
+      "bytes": 261336
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_040_20016.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_040_20016.txt",
+      "bytes": 5369
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_041_20017.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_041_20017.txt",
+      "bytes": 12546
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_042_20018.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_042_20018.txt",
+      "bytes": 56011
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_043_20019.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_043_20019.txt",
+      "bytes": 148814
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_044_20020.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_044_20020.txt",
+      "bytes": 5249
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_045_20021.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_045_20021.txt",
+      "bytes": 12968
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_046_20022.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_046_20022.txt",
+      "bytes": 39953
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/fuzz/fuzz_047_20023.txt",
+      "repository_path": "fast_game_engine/traces/fuzz/fuzz_047_20023.txt",
+      "bytes": 156299
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/replay_kaggriculture-c31-kaito-v22-official-1-32-6_101.txt",
+      "repository_path": "fast_game_engine/traces/replay_kaggriculture-c31-kaito-v22-official-1-32-6_101.txt",
+      "bytes": 159975
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/replay_kaggriculture-c31-kaito-v22-official-1-32-6_202.txt",
+      "repository_path": "fast_game_engine/traces/replay_kaggriculture-c31-kaito-v22-official-1-32-6_202.txt",
+      "bytes": 160068
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/replay_kaggriculture-c31-kaito-v22-official-1-32-6_303.txt",
+      "repository_path": "fast_game_engine/traces/replay_kaggriculture-c31-kaito-v22-official-1-32-6_303.txt",
+      "bytes": 160158
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/replay_parity_agent_404.txt",
+      "repository_path": "fast_game_engine/traces/replay_parity_agent_404.txt",
+      "bytes": 70406
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/replay_parity_agent_505.txt",
+      "repository_path": "fast_game_engine/traces/replay_parity_agent_505.txt",
+      "bytes": 70389
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/replay_starter_11.txt",
+      "repository_path": "fast_game_engine/traces/replay_starter_11.txt",
+      "bytes": 69874
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/replay_starter_22.txt",
+      "repository_path": "fast_game_engine/traces/replay_starter_22.txt",
+      "bytes": 69811
+    },
+    {
+      "path": "workspace/fast_game_engine/traces/replay_starter_33.txt",
+      "repository_path": "fast_game_engine/traces/replay_starter_33.txt",
+      "bytes": 69796
+    },
+    {
+      "path": "workspace/fast_game_engine/validate.cpp",
+      "repository_path": "fast_game_engine/validate.cpp",
+      "bytes": 6700
+    }
+  ],
+  "omitted_generated_files": [
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/CMakeDirectoryInformation.cmake",
+      "bytes": 718
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/DependInfo.cmake",
+      "bytes": 1009
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/build.make",
+      "bytes": 8832
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/cmake_clean.cmake",
+      "bytes": 458
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/cmake_clean_target.cmake",
+      "bytes": 45
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/compiler_depend.internal",
+      "bytes": 45092
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/compiler_depend.make",
+      "bytes": 83503
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/compiler_depend.ts",
+      "bytes": 120
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/depend.make",
+      "bytes": 97
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/flags.make",
+      "bytes": 651
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/link.txt",
+      "bytes": 173
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/progress.make",
+      "bytes": 67
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/src/prepare_problem.cpp.o.d",
+      "bytes": 10010
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_scheduler.dir/src/scheduler.cpp.o.d",
+      "bytes": 37056
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_solver_audit.dir/DependInfo.cmake",
+      "bytes": 938
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_solver_audit.dir/build.make",
+      "bytes": 35921
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_solver_audit.dir/cmake_clean.cmake",
+      "bytes": 441
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_solver_audit.dir/compiler_depend.make",
+      "bytes": 119
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_solver_audit.dir/compiler_depend.ts",
+      "bytes": 123
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_solver_audit.dir/depend.make",
+      "bytes": 100
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_solver_audit.dir/flags.make",
+      "bytes": 651
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_solver_audit.dir/link.txt",
+      "bytes": 21470
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/day_solver_audit.dir/progress.make",
+      "bytes": 45
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/CMakeFiles/progress.marks",
+      "bytes": 2
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/Makefile",
+      "bytes": 11597
+    },
+    {
+      "path": "workspace/experiments/v6/sep07_compositions_v0/build/day_scheduler/day_solver/cmake_install.cmake",
+      "bytes": 1269
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/alloc_traits.h.gcov",
+      "bytes": 46478
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/allocator.h.gcov",
+      "bytes": 15473
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/array.gcov",
+      "bytes": 25640
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/basic_string.h.gcov",
+      "bytes": 237865
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/basic_string.tcc.gcov",
+      "bytes": 49062
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/bit.gcov",
+      "bytes": 26663
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/c++config.h.gcov",
+      "bytes": 106401
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/char_traits.h.gcov",
+      "bytes": 48146
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/gcov-summary.txt",
+      "bytes": 4157
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/limits.gcov",
+      "bytes": 111867
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/move.h.gcov",
+      "bytes": 16497
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/new.gcov",
+      "bytes": 12693
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/new_allocator.h.gcov",
+      "bytes": 24768
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/ptr_traits.h.gcov",
+      "bytes": 13666
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/pyrandom.hpp.gcov",
+      "bytes": 7801
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/sim.hpp.gcov",
+      "bytes": 89148
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/stl_algobase.h.gcov",
+      "bytes": 118288
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/stl_construct.h.gcov",
+      "bytes": 25260
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/stl_iterator.h.gcov",
+      "bytes": 151269
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/stl_iterator_base_funcs.h.gcov",
+      "bytes": 13293
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/stl_iterator_base_types.h.gcov",
+      "bytes": 14257
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/stl_uninitialized.h.gcov",
+      "bytes": 70073
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/stl_vector.h.gcov",
+      "bytes": 137654
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/type_traits.gcov",
+      "bytes": 176730
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/validate.cpp.gcov",
+      "bytes": 19867
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/validate_cov-validate.gcda",
+      "bytes": 20156
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/validate_cov-validate.gcno",
+      "bytes": 240381
+    },
+    {
+      "path": "workspace/fast_game_engine/build/coverage/vector.tcc.gcov",
+      "bytes": 63537
+    },
+    {
+      "path": "workspace/fast_game_engine/build/extended-check.log",
+      "bytes": 15494
+    },
+    {
+      "path": "workspace/fast_game_engine/build/pgo-data/#home#pavel#Programming#kaggriculture#fast_game_engine#build#bench_pgo-bench.gcda",
+      "bytes": 9896
+    },
+    {
+      "path": "workspace/fast_game_engine/build/pgo-final/#home#pavel#Programming#kaggriculture#fast_game_engine#build#bench_pgo_final-bench.gcda",
+      "bytes": 9896
+    },
+    {
+      "path": "workspace/fast_game_engine/build/pgo/#home#pavel#Programming#kaggriculture#fast_game_engine#build#bench_pgo-bench.gcda",
+      "bytes": 9804
+    },
+    {
+      "path": "workspace/fast_game_engine/build/vectorization.txt",
+      "bytes": 20644
+    },
+    {
+      "path": "workspace/fast_game_engine/build/warn_bench.txt",
+      "bytes": 0
+    },
+    {
+      "path": "workspace/fast_game_engine/build/warn_layout_bench.txt",
+      "bytes": 0
+    },
+    {
+      "path": "workspace/fast_game_engine/build/warn_price_validate.txt",
+      "bytes": 0
+    },
+    {
+      "path": "workspace/fast_game_engine/build/warn_rng_validate.txt",
+      "bytes": 0
+    },
+    {
+      "path": "workspace/fast_game_engine/build/warn_validate.txt",
+      "bytes": 0
+    },
+    {
+      "path": "workspace/fast_game_engine/build/warnings.txt",
+      "bytes": 0
+    }
+  ],
+  "removed_blobs": [
+    "evidence/blobs/d4/d401a0759462ebc3a5a5bd4d67d51c3f4369fb72bd332623941be6e46f34117a.gz",
+    "evidence/blobs/90/9013f85c7a46b0c8e12e756fb94180b449fc7bffe868ec48592404b80d5cf2b7.gz",
+    "evidence/blobs/0d/0d87270319ab359134898908df5c877d56cad019a50833f2e96bc6af620f3017.gz",
+    "evidence/blobs/51/51572d26d287dd134937fbd5b27fafd4937481acfd334c3cd112bd6796874544.gz",
+    "evidence/blobs/bc/bcb8f1ae31a69703bd84cb09d8ae4a2adf3423f351dbd2118a1b13b0ba9029b4.gz",
+    "evidence/blobs/0e/0e1c4a0ceff6ce4ac5d472e0bdfe60179c72db0d34c051355a38a08cd8aecd56.gz",
+    "evidence/blobs/80/803f6ec105258488cadb4e896f96aee5e841404d91ed99c52d72237b2e59ae95.gz",
+    "evidence/blobs/e9/e98228d3f1fed45f70b76546f199c8b5ab00f06872f85fe92cb7813d91881842.gz",
+    "evidence/blobs/2f/2fe909a81961ff2274a06b559a1ad36af40dd60227c5aeea6fd8066deee5d7d6.gz",
+    "evidence/blobs/53/5345105229901335d73f65353b000a1dca8d43809d1bc6a249d4c69f4a7ab75e.gz",
+    "evidence/blobs/c9/c9158a9d6e871c7905206086db66f36777763aeb7780504c76c9b9b07fcecf4a.gz",
+    "evidence/blobs/af/af317dfd325d5ed00eec903579759419b66efedf4e22a067074368ba96523d4f.gz",
+    "evidence/blobs/73/737ec904a502f886cbbc3ea4f2c303437282ab7492db2745f471c1393ba34a37.gz",
+    "evidence/blobs/41/41e50b227e5f6ac143a51e67be199d5f51906a9a18e182c36b46ec74d635da59.gz"
+  ],
+  "removed_stored_bytes": 6569259
+}

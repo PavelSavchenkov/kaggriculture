@@ -2,6 +2,7 @@
 import gzip
 import hashlib
 import json
+import os
 import shutil
 import subprocess
 import time
@@ -14,10 +15,23 @@ ROOT = HANDOFF.parents[1]
 EXP_REL = Path("experiments/v6/sep07_compositions_v0")
 CODE = {".cpp", ".hpp", ".h", ".inc", ".py", ".md", ".sh", ".cmake", ".ipynb"}
 SKIP = {".o", ".a", ".so", ".pyc", ".pyo"}
+REFERENCES = {}
 
 
 def collect(job):
     source, relative = job
+    component = next((c for c in ("fast_game_engine", "day_solver") if c in relative.parts), None)
+    if component:
+        index = relative.parts.index(component)
+        repository_path = str(Path(*relative.parts[index:]))
+        if repository_path in REFERENCES:
+            data = source.read_bytes()
+            digest = hashlib.sha256(data).hexdigest()
+            assert digest == REFERENCES[repository_path], relative
+            return {"path": str(relative), "sha256": digest, "bytes": len(data),
+                    "storage": "repository", "repository_path": repository_path}
+        assert "build" in relative.parts, relative
+        return {"path": str(relative), "omitted": "rebuildable engine or scheduler build output"}
     essential = str(relative) == "submitted/teammate_reference/agent.so"
     if (source.suffix in SKIP and not essential) or "__pycache__" in source.parts:
         return {"path": str(relative), "omitted": "rebuildable object/library or Python cache"}
@@ -54,6 +68,15 @@ def collect(job):
 def main():
     inventory = HANDOFF / "evidence/inventory.json"
     assert not inventory.exists()
+    revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
+    tracked = subprocess.check_output(["git", "ls-tree", "-r", "-z", revision, "--", "day_solver", "fast_game_engine"], cwd=ROOT)
+    for row in tracked.split(b"\0"):
+        if not row:
+            continue
+        metadata, name = row.split(b"\t")
+        blob = metadata.decode().split()[2]
+        data = subprocess.check_output(["git", "cat-file", "blob", blob], cwd=ROOT)
+        REFERENCES[name.decode()] = hashlib.sha256(data).hexdigest()
     jobs = []
     roots = [(ROOT / EXP_REL, Path("workspace") / EXP_REL),
              (ROOT / "submissions/sep7-shop-herd-adaptive-v1", Path("submitted")),
@@ -78,19 +101,20 @@ def main():
     inventory.parent.mkdir(parents=True, exist_ok=True)
     inventory.write_text(json.dumps({"description": "Complete session and exact submitted text/data snapshot. Binaries and caches are rebuildable and explicitly listed as omitted. Large evidence and historical build inputs are content-addressed gzip blobs; hydrate restores their original paths and bytes.",
                                      "files": records}, indent=2) + "\n")
-    tracked = subprocess.check_output(["git", "ls-files", "-z", "day_solver"], cwd=ROOT).split(b"\0")
-    dependencies = {}
-    for name in tracked:
-        if name:
-            path = ROOT / name.decode()
-            dependencies[name.decode()] = hashlib.sha256(path.read_bytes()).hexdigest()
-    dependency = {"repository_head": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
-                  "description": "Existing tracked V30 scheduler, including bundled Linux x86-64 libraries. The reproduction workspace links to this repository dependency; no live experiment or untracked source is required.",
-                  "files": dependencies}
-    (HANDOFF / "evidence/day_solver_dependency.json").write_text(json.dumps(dependency, indent=2) + "\n")
-    link = HANDOFF / "workspace/day_solver"
-    if not link.exists():
-        link.symlink_to("../../../day_solver", target_is_directory=True)
+    links = {"workspace/day_solver": "day_solver"}
+    for record in records:
+        if record.get("storage") != "repository":
+            continue
+        parts = Path(record["path"]).parts
+        component = Path(record["repository_path"]).parts[0]
+        links[str(Path(*parts[:parts.index(component) + 1]))] = component
+    for path, target in links.items():
+        link = HANDOFF / path
+        link.parent.mkdir(parents=True, exist_ok=True)
+        link.symlink_to(os.path.relpath(ROOT / target, link.parent), target_is_directory=True)
+    (HANDOFF / "evidence/repository_dependencies.json").write_text(json.dumps({
+        "repository_head": revision, "description": "Already committed engine and V30 day-solver files; no bundled copies.",
+        "files": REFERENCES, "links": links}, indent=2) + "\n")
     goal = Path("/home/pavel/.codex/attachments/79a4f769-6620-487e-82bd-39bbedd94ffa/goal-objective.md")
     shutil.copy2(goal, HANDOFF / "docs/original_goal.md")
     print("snapshot complete", len(records), Counter(r.get("storage", "omitted") == "file" for r in records), flush=True)
