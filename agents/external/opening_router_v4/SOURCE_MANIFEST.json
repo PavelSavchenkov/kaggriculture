@@ -1,0 +1,204 @@
+{
+  "original_package": "experiments/v6/sep07_compositions_v0/candidates/opening_router_v4",
+  "original_manifest": {
+    "format_version": 1,
+    "name": "opening_router_v4",
+    "header": "source/agent.hpp",
+    "type": "compositions::opening_router_v4::Agent",
+    "sources": [
+      "source/agent.cpp",
+      "../../league/public_router/source/agent.cpp",
+      "../../league/top_replay_library/source/agent.cpp"
+    ]
+  },
+  "snapshot_base_commit": "f07754bb5c86bed6c77a309e4d9b2d5f53d74008",
+  "namespace_replacements": {
+    "compositions": "catalog_opening_router_v4_compositions",
+    "compositions_sale_copy": "catalog_opening_router_v4_sale",
+    "kag::agents": "kag::catalog_opening_router_v4_agents",
+    "kag::agents_sale_copy": "kag::catalog_opening_router_v4_sale_agents",
+    "kag::native": "kag::catalog_opening_router_v4_native",
+    "kag::sixday_native": "kag::catalog_opening_router_v4_sixday"
+  },
+  "transformation": "Copied compiler dependency closure; renamed private namespaces, resolved include paths, and added a forwarding API wrapper with a default constructor. No policy decisions changed.",
+  "lineage_entry": "../../../handoff/sep08_agent/docs/lineage.md",
+  "evidence_entry": "../../../handoff/sep08_agent/readme.md",
+  "rating": "No independently measured Kaggle rating for this catalog package. See dated source leaderboard evidence in the handoff.",
+  "reuse": "Preserve source attribution. No new license is granted for third-party notebook or replay content.",
+  "files": [
+    {
+      "original": "experiments/v6/sep07_compositions_v0/candidates/combine_hires_001_best/source/agent.hpp",
+      "original_sha256": "50db4edb2e7ef032aa76ed96b43b24184beb789943cb17cb166ac31defca91c9",
+      "path": "source/deps/candidates/combine_hires_001_best/source/agent.hpp",
+      "sha256": "afb450de6e7a13fb3defe71242c352a856326e9d62ac6d237f08bc5715169f46"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/candidates/firstday_m85_sale7/source/agent.hpp",
+      "original_sha256": "fabff2c40576b0d3701c9b21d5f8fd02fd4b5a15a0d5ea4d02f349d567b43fdd",
+      "path": "source/deps/candidates/firstday_m85_sale7/source/agent.hpp",
+      "sha256": "e88dc6c2004d71fa62fc6f7a37ec2727e52a4a50dca7393b152315895fc80264"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/candidates/guarded_hires_v3/source/agent.hpp",
+      "original_sha256": "813ef13198f5f2a21903f67dd1567b64b4dac87bd7f195907cb700fb7e33f7e9",
+      "path": "source/deps/candidates/guarded_hires_v3/source/agent.hpp",
+      "sha256": "f04f079dbb05193059ccdf454f490511fa727aef15b643dcc148a060eed16a44"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/candidates/hire_day1_counter/source/agent.hpp",
+      "original_sha256": "4e7c37d2e2e6338150423a3563633e8b4b6a791029350ca79e1a4caf1f20a029",
+      "path": "source/deps/candidates/hire_day1_counter/source/agent.hpp",
+      "sha256": "b59dea7d07e20fd021d6960c4d23dd6fdf7f001e2ea60ac6dc4def3d3c50badc"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/candidates/hire_day1_day9/source/agent.hpp",
+      "original_sha256": "cc594b4f9e451766e18f675b119cf5e4c179c0a4d7294276080169e9984be77a",
+      "path": "source/deps/candidates/hire_day1_day9/source/agent.hpp",
+      "sha256": "1cb8efca46d6fb394081b8675f350eae2664054003773f97135db2da1310cba1"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/candidates/opening_router_v2/source/agent.hpp",
+      "original_sha256": "1c56b882d50dd3da40635bf012d72e4d5578318190345d78bb9b9874cd2bd5ef",
+      "path": "source/deps/candidates/opening_router_v2/source/agent.hpp",
+      "sha256": "fc81e959afc25f38c3ae86fd812e215cdeffe620017714a67550d3caf0307283"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/candidates/opening_router_v3/source/agent.hpp",
+      "original_sha256": "9db9ac254afbbca8ef2c52dd6a8aaa04b47a588ca47f441cf3ab41471b5e8587",
+      "path": "source/deps/candidates/opening_router_v3/source/agent.hpp",
+      "sha256": "f7d50e53d19b53be62cc96d16e1dcceacc48ed6d17fe6926afe0d9aca53645da"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/candidates/opening_router_v4/source/agent.cpp",
+      "original_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "path": "source/deps/candidates/opening_router_v4/source/agent.cpp",
+      "sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/candidates/opening_router_v4/source/agent.hpp",
+      "original_sha256": "bdf7a1290d01a178db4314ae5918bd4efdc1431efbe32fd512473b4125fe4168",
+      "path": "source/deps/candidates/opening_router_v4/source/agent.hpp",
+      "sha256": "d841438903ac7057d56bd2222185291d2faf183df8cdd943e1f1a65e7d1c6487"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/day_override.hpp",
+      "original_sha256": "07d7477302c7f9bc06bd2bf48eef9f0c5fc100b69dcc97c3c4e93272ae480f0d",
+      "path": "source/deps/include/day_override.hpp",
+      "sha256": "6e224dcb2d4a2739d428f323e8a68b8fd874e87a4791849ee5b17cf5be3277e0"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/guarded_day.hpp",
+      "original_sha256": "6375ec72e127709f4770e302a7779ba0c7421b9c8e8696ec8c9170966b085eb9",
+      "path": "source/deps/include/guarded_day.hpp",
+      "sha256": "3b880b8ba1f0647dfb6007ef3bd6cd3c1247e42a3619900708b2826e997c7406"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/market_course.hpp",
+      "original_sha256": "cc56db531ec61322dfc9c86de08bb32da9b1b77809036e031638c342051155b2",
+      "path": "source/deps/include/market_course.hpp",
+      "sha256": "9ab1b37797738381d36d6e31e1ebe5d93ab36f961172d12ed56704b69205043a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/planned_opening.hpp",
+      "original_sha256": "b9a4ae72039849ff33d18a2b6411659a205f3873f66836afa3a47dc9b44197e6",
+      "path": "source/deps/include/planned_opening.hpp",
+      "sha256": "71bd984c50730494d6b46670f2a94a3a6d04f60c2952e9212fe9b32e5fe33387"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/public_router/source/agent.cpp",
+      "original_sha256": "5631ba049bc3fcbe5301337081c3a740d03d0f6be2983b5dc0fbb268625936c2",
+      "path": "source/deps/league/public_router/source/agent.cpp",
+      "sha256": "19a48215183bd41188df702cb492474d6a07dffcea80f77860fa56e66f1e7acb"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/public_router/source/agent.hpp",
+      "original_sha256": "7311b936fc319dec92f1338a1535a045f53ad63c6ca198022f410bd200c589e8",
+      "path": "source/deps/league/public_router/source/agent.hpp",
+      "sha256": "b8cfbed234b94ecfd982f31ead567d1c97fe7333e8cbbece18c302bf08762eed"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/public_router/source/routes.inc",
+      "original_sha256": "c46d6efc86a9407d09715e752f445a8f6042cb62a7aaca68a656e4a1bd067fd0",
+      "path": "source/deps/league/public_router/source/routes.inc",
+      "sha256": "c46d6efc86a9407d09715e752f445a8f6042cb62a7aaca68a656e4a1bd067fd0"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.cpp",
+      "original_sha256": "e01111d8be2aed27711d2ccaabb3a3730398dd022ea767db9c7080140f83be0f",
+      "path": "source/deps/league/top_replay_library/source/agent.cpp",
+      "sha256": "7e51464e50cac34b01a609b9b2f626d60b9ea464952d0ac3af46ebe536ab80be"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.hpp",
+      "original_sha256": "7a34ba395b73d511860dc827e8895e0b7f816203ad4dc968b692f89609dd800d",
+      "path": "source/deps/league/top_replay_library/source/agent.hpp",
+      "sha256": "7733925714926aa5d7484d380c5cab4f6ede5924358af5cbd5aa4e0a0dcd7f05"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/top_replay_library/source/tapes.inc",
+      "original_sha256": "a90688675433a879056e29e50f1795d75edfd27b5fc07781b9e4f0472ca6c94e",
+      "path": "source/deps/league/top_replay_library/source/tapes.inc",
+      "sha256": "a90688675433a879056e29e50f1795d75edfd27b5fc07781b9e4f0472ca6c94e"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/advance_sales_001/proposals/advance_sales_001_7/source/agent.hpp",
+      "original_sha256": "be3b33c643f219a1f2f02930b7189341fe0211e6f7b9ba9057f529965834c34c",
+      "path": "source/deps/runs/advance_sales_001/proposals/advance_sales_001_7/source/agent.hpp",
+      "sha256": "21cc055d1927ade0cd1e85b0f1f05ea61202aec246ae7f4b039881aea666566d"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_15/source/agent.hpp",
+      "original_sha256": "4bdb2df1c089633d0e53e1c2e21895d37351780318bd8a25eb298444788a57db",
+      "path": "source/deps/runs/reduce_hires_001/proposals/reduce_hires_001_15/source/agent.hpp",
+      "sha256": "b9df8eecd578a8747d8d92c9be2061444a2b613b8277d0249d1847192c0c7632"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_21/source/agent.hpp",
+      "original_sha256": "bc78ce9950a102a93757c1ab5f73b2cfe08e979f6bcdbc83191192354f5133fa",
+      "path": "source/deps/runs/reduce_hires_001/proposals/reduce_hires_001_21/source/agent.hpp",
+      "sha256": "21d5c8c3e818919872a34db9c6c845711a1ef97ae1b8dec3ab6ce7bccc0a1566"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_22/source/agent.hpp",
+      "original_sha256": "bda564de880cae612e0ef7ce49e963bbe5fe7b6475cd4d213b0fcf4e5bcf754e",
+      "path": "source/deps/runs/reduce_hires_001/proposals/reduce_hires_001_22/source/agent.hpp",
+      "sha256": "5eee9a0a0a092bf79bd12650f1abf0cb32fb10d27f5023b0fc2ab6af604c4eb0"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_23/source/agent.hpp",
+      "original_sha256": "1abc3ccfd8d9fa40da63a367b681919cc44038dd9519a34e2c39159f1662e77d",
+      "path": "source/deps/runs/reduce_hires_001/proposals/reduce_hires_001_23/source/agent.hpp",
+      "sha256": "2b520599ef4382fddce5c9d4790a23635fd04bb233ee93338d64b9d9e44af6b1"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_24/source/agent.hpp",
+      "original_sha256": "11ee9d24a54c3bed5d906b8ee7ba0f867690ee5ae3b4782a2d295f1c161d4387",
+      "path": "source/deps/runs/reduce_hires_001/proposals/reduce_hires_001_24/source/agent.hpp",
+      "sha256": "0e6e72371fbcd04f96b3d74fe695138a2d7b45507f05642ec8b216eb752c059a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_25/source/agent.hpp",
+      "original_sha256": "4d4428c06d99f54a4a4e9456c8c37f163391c79b1a95a08ced174624a46a03f8",
+      "path": "source/deps/runs/reduce_hires_001/proposals/reduce_hires_001_25/source/agent.hpp",
+      "sha256": "0a3fe0449ee328ecda940c762167f3f0bda06b24fb40d1216dd3a220265800e3"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_3/source/agent.hpp",
+      "original_sha256": "864c97fc826a233de0ed5d19a0c5f26312d16db54af9ae9acfd32933b6ee0b7a",
+      "path": "source/deps/runs/reduce_hires_001/proposals/reduce_hires_001_3/source/agent.hpp",
+      "sha256": "6bbb76b414f60d8ebe2658e1e955e486b343f9fcf391973ba07a6f1066e6cc3b"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_5/source/agent.hpp",
+      "original_sha256": "5d41522c7081c8fcf4c123efcf5200ce7286a21a31d84669c2d61257865fc360",
+      "path": "source/deps/runs/reduce_hires_001/proposals/reduce_hires_001_5/source/agent.hpp",
+      "sha256": "4eb1e96179afe2ac37f4f8ad3339d1b124788f3964ee493b9c3bd0b43b5df3f8"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/reduce_hires_001/proposals/reduce_hires_001_8/source/agent.hpp",
+      "original_sha256": "b5cec69d9f07473b6d504157148a7719a622a5f32f0afe2c71e91d88fd548fa1",
+      "path": "source/deps/runs/reduce_hires_001/proposals/reduce_hires_001_8/source/agent.hpp",
+      "sha256": "b2bed5c9ec192a186e768b81563c7862ffed3c05bb76fb04d2685e4ee1ce66ca"
+    }
+  ]
+}

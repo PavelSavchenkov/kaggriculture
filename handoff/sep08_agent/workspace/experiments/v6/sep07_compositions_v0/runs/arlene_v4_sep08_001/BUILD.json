@@ -1,0 +1,29 @@
+{
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "python",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+    "--agents",
+    "arlene_v4_m0",
+    "arlene_v4_m1",
+    "arlene_v4_m2",
+    "arlene_v4_m4",
+    "arlene_v4_m7",
+    "arlene_v4_m8",
+    "arlene_v4_m16",
+    "arlene_v4_m31",
+    "public_capacity_router",
+    "public_terminal_router",
+    "observed_sale_lead_start_216",
+    "public_router_v52",
+    "ahmed_v23",
+    "junghoon_wool_sales",
+    "john_131",
+    "teammate_shoprouter",
+    "king_rc4"
+  ],
+  "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/64a572f3e7579d0a0214/arena"
+}

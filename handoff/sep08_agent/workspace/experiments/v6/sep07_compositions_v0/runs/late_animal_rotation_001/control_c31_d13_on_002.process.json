@@ -1,0 +1,19 @@
+{
+  "name": "control_c31_d13_on_002",
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/build/compile_on",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/control_c31_d13_on_002",
+    "1000",
+    "31",
+    "13",
+    "-1",
+    "3"
+  ],
+  "returncode": 0,
+  "completed_utc": "2026-09-07T18:48:29.873596+00:00"
+}

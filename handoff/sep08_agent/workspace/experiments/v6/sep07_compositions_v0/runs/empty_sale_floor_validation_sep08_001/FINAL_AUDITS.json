@@ -1,0 +1,32 @@
+{
+  "frozen_full_records_equal": true,
+  "frozen_games": 64,
+  "active_branch_changed_games": 64,
+  "opponent": "public_router_v52",
+  "dependencies": 239,
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/empty_sale_floor_validation_sep08_001/frozen/arena_rebuilt",
+    "--a",
+    "empty_sale_floor_m1",
+    "--b",
+    "public_router_v52",
+    "--games",
+    "32",
+    "--seed-start",
+    "2103000",
+    "--seat-mode",
+    "both",
+    "--threads",
+    "4",
+    "--profile",
+    "--validate",
+    "--native-shops",
+    "--output",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/empty_sale_floor_validation_sep08_001/frozen/rebuilt_vs_public_router_v52.json"
+  ],
+  "scope": "Isolated candidate/opponent pair includes actual compiler-MM dependencies; rebuilt full native records equal generic checks."
+}

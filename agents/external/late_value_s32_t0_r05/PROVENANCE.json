@@ -1,0 +1,18 @@
+{
+  "records": [
+    {
+      "source": "experiments/v6/sep07_compositions_v0/league/top_replay_library/IMPORT.json",
+      "path": "provenance/00_IMPORT.json"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/runs/late_portfolio_001/proposals/late_value_s32_t0_r05/IMPORT.json",
+      "path": "provenance/01_IMPORT.json"
+    }
+  ],
+  "full_component_lineage": "../../../handoff/sep08_agent/docs/lineage.md",
+  "classification": "external",
+  "rating": "Unknown for this package; source snapshot ratings are observations, not package ratings.",
+  "parity": "See handoff evidence/CATALOG_VALIDATION.json for tested action/reward equivalence.",
+  "optimization_status": "See README.md; no promotion is implied by catalog storage.",
+  "reuse": "Keep donor attribution and any retained source license; no license inferred from public availability."
+}

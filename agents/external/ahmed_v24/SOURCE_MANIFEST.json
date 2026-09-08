@@ -1,0 +1,65 @@
+{
+  "original_package": "experiments/v6/sep07_compositions_v0/runs/premium_sales_sep08_001/proposals/ahmed_v24",
+  "original_manifest": {
+    "format_version": 1,
+    "name": "ahmed_v24",
+    "header": "source/agent.hpp",
+    "type": "compositions::ahmed_v24::Agent",
+    "sources": [
+      "source/agent.cpp",
+      "../../../../league/ahmed_v23/source/agent.cpp"
+    ]
+  },
+  "snapshot_base_commit": "f07754bb5c86bed6c77a309e4d9b2d5f53d74008",
+  "namespace_replacements": {
+    "compositions": "catalog_ahmed_v24_compositions",
+    "compositions_sale_copy": "catalog_ahmed_v24_sale",
+    "kag::agents": "kag::catalog_ahmed_v24_agents",
+    "kag::agents_sale_copy": "kag::catalog_ahmed_v24_sale_agents",
+    "kag::native": "kag::catalog_ahmed_v24_native",
+    "kag::sixday_native": "kag::catalog_ahmed_v24_sixday"
+  },
+  "transformation": "Copied compiler dependency closure; renamed private namespaces, resolved include paths, and added a forwarding API wrapper with a default constructor. No policy decisions changed.",
+  "lineage_entry": "../../../handoff/sep08_agent/docs/lineage.md",
+  "evidence_entry": "../../../handoff/sep08_agent/readme.md",
+  "rating": "No independently measured Kaggle rating for this catalog package. See dated source leaderboard evidence in the handoff.",
+  "reuse": "Preserve source attribution. No new license is granted for third-party notebook or replay content.",
+  "files": [
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/ahmed_v23/source/agent.cpp",
+      "original_sha256": "de3097330c9eb1c34140d2809010eac0491536edac02832fecb92e92d4e5f215",
+      "path": "source/deps/league/ahmed_v23/source/agent.cpp",
+      "sha256": "93bc1b7da6a76b9feaa4fd5a5c567268dfda07f0622ee7c50f45a4f2d9aac218"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/ahmed_v23/source/agent.hpp",
+      "original_sha256": "52f1fee947685679bcef42b8fbee48d88063dea47e023d04c9abb97c11a386a3",
+      "path": "source/deps/league/ahmed_v23/source/agent.hpp",
+      "sha256": "d007fe2e0c5c65407b2de28a3ed7d0666d4cd691b2cf7d091f2fb98ff39aa3fd"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/ahmed_v23/source/data.inc",
+      "original_sha256": "8ac3216661057c157370e0c75c59356d97b455225f6d9e86fc77e7ba5055f376",
+      "path": "source/deps/league/ahmed_v23/source/data.inc",
+      "sha256": "8ac3216661057c157370e0c75c59356d97b455225f6d9e86fc77e7ba5055f376"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/premium_sales_sep08_001/proposals/ahmed_v24/source/agent.cpp",
+      "original_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "path": "source/deps/runs/premium_sales_sep08_001/proposals/ahmed_v24/source/agent.cpp",
+      "sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/premium_sales_sep08_001/proposals/ahmed_v24/source/agent.hpp",
+      "original_sha256": "ece7acb59f4aa9214f4a10401b0337ce1af95b7260516dcb45a32c9cdff8b90c",
+      "path": "source/deps/runs/premium_sales_sep08_001/proposals/ahmed_v24/source/agent.hpp",
+      "sha256": "4370ad167d471f242bb94dadd0939d53d6eb97171639b480d625c5c88e3fea2a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/premium_sales_sep08_001/source/policy.hpp",
+      "original_sha256": "3fc954f3e2242a1dfab0647a7daaa9ebe93f9b5be2c5e18f9fc61213ca84617c",
+      "path": "source/deps/runs/premium_sales_sep08_001/source/policy.hpp",
+      "sha256": "7ce1254894c9e673fc5aec8314756f21297e68b448690c9f1f4fc3939effa098"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "packaging": "Private namespace/include rewrite and forwarding API construction; no policy decisions changed.",
+  "operational": {
+    "name": "shop_herd_guarded_001_best",
+    "games": 16,
+    "typed_generic_thread_records_equal": 4,
+    "self_pass_complete": true
+  },
+  "debug": {
+    "name": "shop_herd_guarded_001_best",
+    "debug_self_pass_games": 8,
+    "generic_complete_records_equal": 8
+  },
+  "session_parity_matchups": [
+    {
+      "a": "empty_sale_slots_m2",
+      "b": "shop_herd_guarded_001_best",
+      "games": 8,
+      "reference": "experiments/v6/sep07_compositions_v0/runs/animal_repair_sep08_001/broad_2360000/empty_sale_slots_m2_vs_shop_herd_guarded_001_best.json",
+      "reference_sha256": "80c0e8d2c72859e783f2379dad81c5d590cfc46bdea83f84b02e55370df4119f"
+    }
+  ],
+  "cold_source_parity_games": 0,
+  "complete_direct_results": [],
+  "scope": "Finite full-game witnesses; does not imply equivalence on every possible observation or a research promotion. Full shared reports: handoff/sep08_agent/evidence/."
+}

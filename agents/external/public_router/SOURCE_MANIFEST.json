@@ -1,0 +1,46 @@
+{
+  "original_package": "experiments/v6/sep07_compositions_v0/league/public_router",
+  "original_manifest": {
+    "format_version": 1,
+    "name": "public_router",
+    "header": "source/agent.hpp",
+    "type": "compositions::public_router::Agent",
+    "sources": [
+      "source/agent.cpp"
+    ]
+  },
+  "snapshot_base_commit": "f07754bb5c86bed6c77a309e4d9b2d5f53d74008",
+  "namespace_replacements": {
+    "compositions": "catalog_public_router_compositions",
+    "compositions_sale_copy": "catalog_public_router_sale",
+    "kag::agents": "kag::catalog_public_router_agents",
+    "kag::agents_sale_copy": "kag::catalog_public_router_sale_agents",
+    "kag::native": "kag::catalog_public_router_native",
+    "kag::sixday_native": "kag::catalog_public_router_sixday"
+  },
+  "transformation": "Copied compiler dependency closure; renamed private namespaces, resolved include paths, and added a forwarding API wrapper with a default constructor. No policy decisions changed.",
+  "lineage_entry": "../../../handoff/sep08_agent/docs/lineage.md",
+  "evidence_entry": "../../../handoff/sep08_agent/readme.md",
+  "rating": "No independently measured Kaggle rating for this catalog package. See dated source leaderboard evidence in the handoff.",
+  "reuse": "Preserve source attribution. No new license is granted for third-party notebook or replay content.",
+  "files": [
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/public_router/source/agent.cpp",
+      "original_sha256": "5631ba049bc3fcbe5301337081c3a740d03d0f6be2983b5dc0fbb268625936c2",
+      "path": "source/deps/league/public_router/source/agent.cpp",
+      "sha256": "25c9128c9791cc6ea10a00d1467eaf42e1f1338ea625b50c5e32b58ac78ad23f"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/public_router/source/agent.hpp",
+      "original_sha256": "7311b936fc319dec92f1338a1535a045f53ad63c6ca198022f410bd200c589e8",
+      "path": "source/deps/league/public_router/source/agent.hpp",
+      "sha256": "ef354ed97f3dc2b0f82e5eae8aa317e33ff2d4b9322e06da1b02ca13bb1a44b0"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/public_router/source/routes.inc",
+      "original_sha256": "c46d6efc86a9407d09715e752f445a8f6042cb62a7aaca68a656e4a1bd067fd0",
+      "path": "source/deps/league/public_router/source/routes.inc",
+      "sha256": "c46d6efc86a9407d09715e752f445a8f6042cb62a7aaca68a656e4a1bd067fd0"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "compiler_placement_mixed_m1",
+  "header": "source/agent.hpp",
+  "type": "compositions::compiler_placement_mixed_m1::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../compiler/source/agent.cpp"
+  ]
+}

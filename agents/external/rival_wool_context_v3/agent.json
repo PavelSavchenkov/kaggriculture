@@ -1,0 +1,12 @@
+{
+  "format_version": 1,
+  "name": "rival_wool_context_v3",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::rival_wool_context_v3::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "source/deps/league/public_router/source/agent.cpp",
+    "source/deps/league/top_replay_library/source/agent.cpp",
+    "source/deps/runs/rival_wool_context_003/proposals/rival_wool_context_v3/source/agent.cpp"
+  ]
+}

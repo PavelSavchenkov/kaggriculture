@@ -1,0 +1,25 @@
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/build
+
+[  9%] Building CXX object day_solver/CMakeFiles/day_scheduler.dir/src/prepare_problem.cpp.o
+[ 18%] Building CXX object day_solver/CMakeFiles/day_scheduler.dir/src/scheduler.cpp.o
+[ 27%] Linking CXX static library libday_scheduler.a
+[ 27%] Built target day_scheduler
+[ 45%] Building CXX object CMakeFiles/estimate_on.dir/source/estimate.cpp.o
+[ 45%] Building CXX object CMakeFiles/estimate_off.dir/source/estimate.cpp.o
+[ 54%] Building CXX object CMakeFiles/estimate_off.dir/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.cpp.o
+[ 63%] Building CXX object CMakeFiles/estimate_on.dir/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.cpp.o
+[ 72%] Building CXX object CMakeFiles/estimate_off.dir/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/public_router/source/agent.cpp.o
+[ 81%] Building CXX object CMakeFiles/estimate_on.dir/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/public_router/source/agent.cpp.o
+[ 90%] Linking CXX executable estimate_off
+[100%] Linking CXX executable estimate_on
+[100%] Built target estimate_off
+[100%] Built target estimate_on
+

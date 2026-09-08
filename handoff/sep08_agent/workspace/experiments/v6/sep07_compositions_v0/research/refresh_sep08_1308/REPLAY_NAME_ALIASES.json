@@ -1,0 +1,9 @@
+{
+  "previous_validated_cohort": "research/refresh_sep08_1208",
+  "renamed_rows": [],
+  "previous_manifest_sha256": "1d05b8904572ce607f936750cfde5ff3f00ce3f7f9a1edee6378b1dc50056007",
+  "previous_program_sources_sha256": "4efd4c92a45b2604e72357edd46685bf9a8cfa6d5bfcffd987dc478f30ce7ab9",
+  "original_manifest_sha256": "d6fd0e1ec359febc31d7272398b2d55404467ad249a776b3c8c64b60e1c83d32",
+  "normalized_manifest_sha256": "db322f8296bfebd362dea9f5eafde348c02bf54895215550b4b2f92f682da042",
+  "rule": "Current name if uniquely present; otherwise exactly one historical replay name from the same team ID AND submission ID in the validated previous cohort. Fail if absent or ambiguous. Replay files are unchanged."
+}

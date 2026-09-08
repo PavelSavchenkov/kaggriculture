@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "crop_value_m2_t3",
+  "header": "source/agent.hpp",
+  "type": "compositions::crop_value_m2_t3::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../../../league/top_replay_library/source/agent.cpp"
+  ]
+}

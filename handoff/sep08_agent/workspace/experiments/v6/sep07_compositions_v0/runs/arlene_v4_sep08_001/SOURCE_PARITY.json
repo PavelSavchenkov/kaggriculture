@@ -1,0 +1,43 @@
+{
+  "completed_utc": "2026-09-08T03:28:33.047567+00:00",
+  "counts": {
+    "budget_checks": 120,
+    "budget_changed": 11,
+    "recorded_cases": 5752,
+    "forced_cases": 2876,
+    "zero_sale_slots": 391
+  },
+  "route_actions": {
+    "7015cc00acfa4922": 6370,
+    "dc76e4003029ac51": 895,
+    "ab9669b9abfbea4e": 1077,
+    "a84d06f1d12add7c": 286
+  },
+  "result": "matched_actions=8628",
+  "commands": [
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "g++",
+      "-std=c++20",
+      "-O2",
+      "-I",
+      "/home/pavel/Programming/kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/arlene_v4_sep08_001/parity.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/arlene_v4_sep08_001/source/agent.cpp",
+      "-o",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/arlene_v4_sep08_001/parity"
+    ],
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/arlene_v4_sep08_001/parity",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/arlene_v4_sep08_001/source_cases.txt"
+    ]
+  ],
+  "scope": "Eight full recorded observation sequences and four full forced route/capacity/budget/floor-terminal sequences. Direct reference method, no exception fallback. Source parity, not competitive strength."
+}

@@ -1,0 +1,24 @@
+{
+  "ref": "mansiaggarwal88/kaggriculture-can-specialists-beat-one-agent",
+  "title": "\ud83d\ude9c Kaggriculture: Can Specialists Beat One Agent?",
+  "author": "Mansi Aggarwal",
+  "lastRunTime": "2026-09-07 18:21:12.363000",
+  "totalVotes": "4",
+  "retrieved_utc": "2026-09-07T19:12:53.837591+00:00",
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "kaggle",
+    "kernels",
+    "pull",
+    "mansiaggarwal88/kaggriculture-can-specialists-beat-one-agent",
+    "-p",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/research/refresh_1902/notebooks/mansiaggarwal88/kaggriculture-can-specialists-beat-one-agent",
+    "-m"
+  ],
+  "code_bytes": 6072,
+  "code_sha256": "8097342d7989b4ee39ae02d19559ed209c1f0bf6bfbcb5238f417ae76c7e0c0a",
+  "scope": "Downloaded and extracted as text only. No notebook code executed."
+}

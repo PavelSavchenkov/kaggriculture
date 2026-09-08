@@ -1,0 +1,36 @@
+{
+  "name": "sheep_triple",
+  "seed": 1016,
+  "estimate": {
+    "seed": "1016",
+    "id": "14297",
+    "count": "3",
+    "entry_day": "20",
+    "rotations": "3:20:11;12:20:11;13:20:11",
+    "animal_cost": "1500",
+    "removed_animals": "0",
+    "seeds_saved": "60",
+    "field_operations_delta": "53",
+    "source_visit_deficit": "56",
+    "mean_own_gain": "3893.22",
+    "mean_margin_gain": "3966.72",
+    "margin_sd": "118.224",
+    "risk_score": "3907.61",
+    "estimate_seconds": "4.1102e-05"
+  },
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/build/compile_v4",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/later_groups_30s/sheep_triple",
+    "1016",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/later_groups_30s/sheep_triple.txt",
+    "30"
+  ],
+  "returncode": 4,
+  "seconds": 333.3642491759965
+}

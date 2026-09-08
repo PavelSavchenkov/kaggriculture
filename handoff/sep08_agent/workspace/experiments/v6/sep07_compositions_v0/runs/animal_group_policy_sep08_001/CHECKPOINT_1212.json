@@ -1,0 +1,94 @@
+{
+  "created_utc": "2026-09-08T12:12:40.970988+00:00",
+  "goal_status": "active",
+  "deadline_utc": "2026-09-10 00:47:00",
+  "turn_classification": "progress",
+  "current_reference": {
+    "name": "empty_sale_slots_m2",
+    "path": "runs/empty_sale_slots_sep08_001/proposals/empty_sale_slots_m2",
+    "promoted_utc": "2026-09-08T06:27:53.831028+00:00",
+    "report": "results/empty_sale_slots_m2_population_validation.json",
+    "previous": "observed_sale_lead_start_216",
+    "committed_catalog": "agents/external/bohann_opening_v1",
+    "last_submission": "investment_context_guarded_001_best"
+  },
+  "live_sessions": [],
+  "completed": {
+    "entry_survey_games": 2048,
+    "entry_standard_controls": 64,
+    "new_complete_animal_contexts": 6,
+    "yusuke_source_actions": 2876,
+    "yusuke_threshold_cases": 24,
+    "yusuke_operations": 48,
+    "yusuke_discovery": 3968,
+    "yusuke_fresh": 28672,
+    "opening_operations": 48,
+    "opening_exact_controls": 16,
+    "opening_discovery": 5632
+  },
+  "latest_refresh": {
+    "name": "refresh_sep08_1208",
+    "player_games": 72,
+    "unique_replays": 55,
+    "changed_notebooks_pending_static_audit": [
+      {
+        "ref": "destbreso/x-ray-your-agent",
+        "title": "X-ray your agent",
+        "author": "destbreso",
+        "lastRunTime": "2026-09-08 11:51:02.343000",
+        "totalVotes": "31"
+      },
+      {
+        "ref": "rogerrogerroger3r/test-a-public-agent-before-you-spend-a-slot",
+        "title": "Test a public agent before you spend a slot",
+        "author": "rogerrogerroger3r",
+        "lastRunTime": "2026-09-08 11:29:57.153000",
+        "totalVotes": "0"
+      },
+      {
+        "ref": "rogerrogerroger3r/the-best-player-s-tape-is-not-the-best-tape",
+        "title": "The best player's tape is not the best tape",
+        "author": "rogerrogerroger3r",
+        "lastRunTime": "2026-09-08 11:27:33.623000",
+        "totalVotes": "0"
+      },
+      {
+        "ref": "adilshamim8/kaggriculture-101",
+        "title": "Kaggriculture 101",
+        "author": "Adil Shamim",
+        "lastRunTime": "2026-09-08 11:17:45.483000",
+        "totalVotes": "14"
+      },
+      {
+        "ref": "ahmedberatozer/notebookd5e3d21fa6",
+        "title": "notebookd5e3d21fa6",
+        "author": "Ahmed Berat \u00d6zer",
+        "lastRunTime": "2026-09-08 10:19:04.183000",
+        "totalVotes": "0"
+      },
+      {
+        "ref": "antimocarlino/o-p-a-antimode-v1",
+        "title": "\ud83c\udf96\ufe0f O.P.A. \u2014 ANTIMODE v1",
+        "author": "Antimo Carlino",
+        "lastRunTime": "2026-09-07 08:58:54.817000",
+        "totalVotes": "0"
+      }
+    ]
+  },
+  "next_review_utc": "2026-09-08 12:20:00",
+  "next_refresh_utc": "2026-09-08 13:08:00",
+  "next_actions": [
+    "Inspect six changed1208notebooks; Ahmed and antimode may contain new competitive controllers. Refresh82metric review at12:20.",
+    "Trace the first missed hire/purchase and failed schedule guard in the opening counterexample. Step24paid only2hires for2cash; intended count needs explicit verification.",
+    "Refine first-turn quantities between24and32 or develop an observed-state funding repair. Validate King,Bohann,Yusuke and broad opponents; do not promote a direct counter alone.",
+    "Assemble full observation-driven animal-course policies from both sheepberryleaves and the cowweedcase, using conditional value including actual compiled labor. Keep serving new animals after guard misses.",
+    "Extend other herd contexts, earlier dates, mixed cow/sheep/goose/wait choices and cold farms. These bounded templates do not complete the composition-search objective."
+  ],
+  "limits": [
+    "No new reference promotion. No Git, submissions, officialcatalog copies, subagents or unrelated GPU changes.",
+    "Final900000 unused. No restart of completed experiment jobs.",
+    "Yusuke wins1024/1024direct but neutral87.394%vs current94.189%; it is a strong new league counter.",
+    "Openingq13/q20/q24 each113/128vsYusuke in discovery but regressKing; q13/q20also regressBohann.",
+    "Cow alternate market losses1156/4226 correctly negative under cheap model; after measured labor residuals317/241 remain. No online animal policy yet."
+  ]
+}

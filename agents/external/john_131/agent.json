@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "name": "john_131",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::john_131::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "source/deps/league/john_131/source/agent.cpp",
+    "source/deps/league/top_replay_library/source/agent.cpp"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "name": "opening_q81_b5_specialist",
+  "header": "source/agent.hpp",
+  "type": "compositions::opening_q81_b5_specialist::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../../../league/top_replay_library/source/agent.cpp",
+    "../../../../league/public_router/source/agent.cpp"
+  ]
+}

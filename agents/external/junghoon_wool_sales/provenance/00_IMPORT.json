@@ -1,0 +1,38 @@
+{
+  "source": {
+    "program": 78,
+    "id": "episode_106317597_seat_1",
+    "episode": 106317597,
+    "seat": 1,
+    "team": "3\uc815\ud6c8",
+    "rank": 2,
+    "submission": 56063995,
+    "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T03:14:45.csv",
+    "replay_sha256": "f0b02416ca3f27f1184cc871bedc7cda24505bc7bb6abf30312b78735af9fca4"
+  },
+  "parent": "junghoon_78",
+  "change": "Preserve animals; fromstep266 append available wool sales at source egg-sale slots and use DROP for a source egg deposit if worker also carries wool. Exact unchanged-animal control from ticket18 sheep substitution.",
+  "evidence": "animal_tickets_market_p78_junghoon_001/ticket_18_to_11_output_control.json",
+  "status": "Source behavior and deployment checked; broad counter-specific results retained. Fresh parent gates validate wool-sales and ticket9, not ticket10.",
+  "validation": {
+    "generic4thread_debug_pair1thread_equal_games": 16,
+    "pair": [
+      "junghoon_wool_sales",
+      "ticket_p116_t9_i9"
+    ],
+    "pass_self": "results/ticket_selected_checks",
+    "broad_league": "results/ticket_selected_league",
+    "scope": "All observation-only runtime edits; independent episode state; no trace Sim or seed in policy",
+    "ticket10_pair": {
+      "generic4thread_debug_pair1thread_equal_games": 16
+    },
+    "fresh_gates": [
+      "junghoon_wool_promotion.json",
+      "binghua_ticket9_promotion.json"
+    ],
+    "native_gates": [
+      "junghoon_wool_native.json",
+      "binghua_ticket9_native.json"
+    ]
+  }
+}

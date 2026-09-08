@@ -1,0 +1,17 @@
+{
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/build/retry",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/on_terminal_no_care.json",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/goose_c31_d13_on_002/days/29/actions.txt",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/on_day29_no_care_v3",
+    "30"
+  ],
+  "started_utc": "2026-09-07T19:12:16.449079+00:00",
+  "returncode": 0,
+  "completed_utc": "2026-09-07T19:12:18.109046+00:00"
+}

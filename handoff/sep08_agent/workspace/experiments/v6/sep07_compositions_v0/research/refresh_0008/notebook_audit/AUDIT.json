@@ -1,0 +1,44 @@
+{
+  "created_utc": "2026-09-08T00:28:52.873017+00:00",
+  "source_hashes": {
+    "research/refresh_0008/notebook_audit/ashok205/top10-replay-dataset-archive.source.py": "e94112aa4492cfa5caafe56bc200c77a062868f36b55cd684d13c6442ecd5933",
+    "research/refresh_0008/notebook_audit/nagatakengo/kaggriculture.source.py": "356353c533ce56b3789d0f9f27fe5df447220c28a79c03d1153d0c246fa89371",
+    "research/refresh_0008/notebook_audit/destbreso/x-ray-your-agent.source.py": "bfe8df47165045c7166692cfdb0dbce45ae1bf7fcf4ad7f8304a06c6378556db"
+  },
+  "xray": {
+    "old_notebook": "research/refresh_1446/notebooks/x_ray/x-ray-your-agent.ipynb",
+    "old_functions": 42,
+    "new_functions": 42,
+    "changed_functions": [],
+    "kind": "analysis/profiling tool, not a new controller"
+  },
+  "nagata": {
+    "source": "nagatakengo/kaggriculture",
+    "observed_team": {
+      "\ufeffRank": "4824",
+      "TeamId": "16632118",
+      "TeamName": "nk",
+      "LastSubmissionDate": "2026-09-07 23:19:14",
+      "Score": "622.5",
+      "SubmissionCount": "2",
+      "TeamMemberUserNames": "nagatakengo"
+    },
+    "scope": "Team snapshot is not proof the visible notebook is its exact submission.",
+    "ideas": [
+      "Greedy task assignment with a30point penalty outside a worker region; can reduce travel overlap.",
+      "Next-day workforce adjustment from prior-day PASS rate, with land-dependent minimum.",
+      "Small melon sale-value tree and observed-shop crop targets."
+    ],
+    "static_limits": [
+      "PASS-rate controller counts requested actions, so unsuccessful non-PASS work can look busy.",
+      "Mostly fixed crop/animal caps and greedy priorities; no measured evidence it beats our current controller.",
+      "Visible target four cows and no active sheep/goose acquisition limits livestock variety."
+    ],
+    "decision": "Keep source and ideas for the independent compiler; low observed team score622.5/rank4824 provides no case for prioritizing a full port over the active validated candidate."
+  },
+  "archive": {
+    "kind": "Replay dataset retrieval/analysis, not a new controller",
+    "decision": "Already downloading current top12 ourselves; preserve source as alternate retrieval method."
+  },
+  "execution": "No downloaded notebook code executed."
+}

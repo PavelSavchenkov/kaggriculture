@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "wheat_one_fert_unclosed",
+  "header": "source/agent.hpp",
+  "type": "compositions::wheat_one_fert_unclosed::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../../../league/top_replay_library/source/agent.cpp"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "original_package": "experiments/v6/sep07_compositions_v0/runs/early_melon_sep08_001/proposals/early_melon_b98_m1",
+  "original_manifest": {
+    "format_version": 1,
+    "name": "early_melon_b98_m1",
+    "header": "source/agent.hpp",
+    "type": "compositions::early_melon_b98_m1::Agent",
+    "sources": [
+      "source/agent.cpp",
+      "../../../joint_day_routes_sep08_001/compiler/source/agent.cpp"
+    ]
+  },
+  "snapshot_base_commit": "f07754bb5c86bed6c77a309e4d9b2d5f53d74008",
+  "namespace_replacements": {
+    "compositions": "catalog_early_melon_b98_m1_compositions",
+    "compositions_sale_copy": "catalog_early_melon_b98_m1_sale",
+    "kag::agents": "kag::catalog_early_melon_b98_m1_agents",
+    "kag::agents_sale_copy": "kag::catalog_early_melon_b98_m1_sale_agents",
+    "kag::native": "kag::catalog_early_melon_b98_m1_native",
+    "kag::sixday_native": "kag::catalog_early_melon_b98_m1_sixday"
+  },
+  "transformation": "Copied compiler dependency closure; renamed private namespaces, resolved include paths, and added a forwarding API wrapper with a default constructor. No policy decisions changed.",
+  "lineage_entry": "../../../handoff/sep08_agent/docs/lineage.md",
+  "evidence_entry": "../../../handoff/sep08_agent/readme.md",
+  "rating": "No independently measured Kaggle rating for this catalog package. See dated source leaderboard evidence in the handoff.",
+  "reuse": "Preserve source attribution. No new license is granted for third-party notebook or replay content.",
+  "files": [
+    {
+      "original": "experiments/v6/sep07_compositions_v0/candidates/composition_greedy_v0/source/programs.inc",
+      "original_sha256": "7b4e812573a9c0918b5de16d3a89361cb80b468322ee917515cf7bfd0e965fb9",
+      "path": "source/deps/candidates/composition_greedy_v0/source/programs.inc",
+      "sha256": "7b4e812573a9c0918b5de16d3a89361cb80b468322ee917515cf7bfd0e965fb9"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/biology.hpp",
+      "original_sha256": "82225498387721be96a6fc0da45323086faa9f1057ff3a5607b909b23876bb23",
+      "path": "source/deps/include/biology.hpp",
+      "sha256": "32574e6fcdeeb9acf58029e45e009a20d7feef7d7063a614e02df659f49a653f"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/composition.hpp",
+      "original_sha256": "98aa35afe3b844f651a9b6a4718077a6b3899b6263ef78564d9e778d0b8cfc17",
+      "path": "source/deps/include/composition.hpp",
+      "sha256": "9e9be0c5232f3d614d550969fe25015c928dc38caa3cc789d0a76c5bd418fb17"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/economics.hpp",
+      "original_sha256": "1f21960648c33a05b4ff1328a1a6e2788eece11aa546bd321832cd0ce5f22171",
+      "path": "source/deps/include/economics.hpp",
+      "sha256": "04586a20f317e32c8d938070ae46cf24bf37c6fef626d08becd7ff246b7eaf1a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/estimate.hpp",
+      "original_sha256": "7c5e29d7ecd6779d821e721df011e19f46a028c6737dbe8d9f9910028c89db33",
+      "path": "source/deps/include/estimate.hpp",
+      "sha256": "50c86fc485cb2a73d8245064dc76211e3dc5689121de56578aef8f61cdc36818"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/early_melon_sep08_001/proposals/early_melon_b98_m1/source/agent.cpp",
+      "original_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "path": "source/deps/runs/early_melon_sep08_001/proposals/early_melon_b98_m1/source/agent.cpp",
+      "sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/early_melon_sep08_001/proposals/early_melon_b98_m1/source/agent.hpp",
+      "original_sha256": "4f8f22e27d96685f17b26aebbf1b50b29d8ff81091f3d4f363247c6eb6b84e6f",
+      "path": "source/deps/runs/early_melon_sep08_001/proposals/early_melon_b98_m1/source/agent.hpp",
+      "sha256": "b947fc63c86fe4956335fe3fb6a6e069e554cff61ec221c5fdab4baa4841f97e"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/early_melon_sep08_001/proposals/early_melon_b98_m1/source/plan.inc",
+      "original_sha256": "3d29b79756f6a1daba7e46cf50afee56fcc210c8011101c13b4e4935ab53beb7",
+      "path": "source/deps/runs/early_melon_sep08_001/proposals/early_melon_b98_m1/source/plan.inc",
+      "sha256": "3d29b79756f6a1daba7e46cf50afee56fcc210c8011101c13b4e4935ab53beb7"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/joint_day_routes_sep08_001/compiler/source/agent.cpp",
+      "original_sha256": "097fcb1027623568d6d2f1f1072cadbf40b1309090b5d466ab7b6021ae06c99f",
+      "path": "source/deps/runs/joint_day_routes_sep08_001/compiler/source/agent.cpp",
+      "sha256": "152bfc4385f58bca41e2d954ce33e2c9459d20dbfdc502b6ad78c3b26fbf82c0"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/joint_day_routes_sep08_001/compiler/source/agent.hpp",
+      "original_sha256": "bb3c0cb3bbfbeb23e5d11434825fd816c38cc6609b020f5163edcebe054c81aa",
+      "path": "source/deps/runs/joint_day_routes_sep08_001/compiler/source/agent.hpp",
+      "sha256": "dfa5aae0161ab75707a3e5bab22614dce1491e71e10037c3d65ac19f31c4dd99"
+    }
+  ]
+}

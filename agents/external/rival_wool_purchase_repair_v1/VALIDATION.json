@@ -1,0 +1,26 @@
+{
+  "packaging": "Private namespace/include rewrite and forwarding API construction; no policy decisions changed.",
+  "operational": {
+    "name": "rival_wool_purchase_repair_v1",
+    "games": 16,
+    "typed_generic_thread_records_equal": 4,
+    "self_pass_complete": true
+  },
+  "debug": {
+    "name": "rival_wool_purchase_repair_v1",
+    "debug_self_pass_games": 8,
+    "generic_complete_records_equal": 8
+  },
+  "session_parity_matchups": [
+    {
+      "a": "empty_sale_slots_m2",
+      "b": "rival_wool_purchase_repair_v1",
+      "games": 8,
+      "reference": "experiments/v6/sep07_compositions_v0/runs/animal_repair_sep08_001/broad_2360000/empty_sale_slots_m2_vs_rival_wool_purchase_repair_v1.json",
+      "reference_sha256": "15e479092ce2dd1d7c53fa52d36199a0f800b1c6a2144fb5a93bcf951c294da6"
+    }
+  ],
+  "cold_source_parity_games": 0,
+  "complete_direct_results": [],
+  "scope": "Finite full-game witnesses; does not imply equivalence on every possible observation or a research promotion. Full shared reports: handoff/sep08_agent/evidence/."
+}

@@ -1,0 +1,21 @@
+[
+  "conda",
+  "run",
+  "-n",
+  "kaggriculture",
+  "python",
+  "experiments/v6/sep07_compositions_v0/runs/bohann_opening_validation_001/check_opening.py",
+  "bohann_opening_checks_001",
+  "--agent",
+  "bohann_opening_v1",
+  "--parent",
+  "crop_mix_t2_wheat",
+  "--generic",
+  "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/b76e9b088feb20e2d0cd/arena",
+  "--pair",
+  "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/0f432a8bdb4b5c812b17/arena",
+  "--debug",
+  "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/4d591531df92d778779a/arena",
+  "--native-seed",
+  "1753000"
+]

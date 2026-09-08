@@ -1,0 +1,48 @@
+{
+  "full_records_exact": 64,
+  "rows": [
+    {
+      "name": "herd_routes_goose_m1",
+      "games": 16,
+      "active_games": 16,
+      "days": 64,
+      "hours": 1344,
+      "reversals": 0
+    },
+    {
+      "name": "herd_routes_mixed_m1",
+      "games": 16,
+      "active_games": 16,
+      "days": 64,
+      "hours": 1344,
+      "reversals": 0
+    },
+    {
+      "name": "herd_routes_p355_m1",
+      "games": 16,
+      "active_games": 8,
+      "days": 32,
+      "hours": 672,
+      "reversals": 42
+    },
+    {
+      "name": "herd_routes_p362_m1",
+      "games": 16,
+      "active_games": 0,
+      "days": 0,
+      "hours": 0,
+      "reversals": 0
+    }
+  ],
+  "reversal_fields": [
+    "step",
+    "worker",
+    "x",
+    "y",
+    "wheat",
+    "shed_wheat",
+    "operation",
+    "previous_operation"
+  ],
+  "scope": "Immediate movement reversals with unchanged positive wheat. Exact repeated records establish unchanged instrumented behavior; reversals require individual causal interpretation."
+}

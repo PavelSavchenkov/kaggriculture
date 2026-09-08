@@ -1,0 +1,104 @@
+{
+  "build": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "g++",
+    "-std=c++20",
+    "-O2",
+    "-I",
+    "/home/pavel/Programming/kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/tests/parity.cpp",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/source/agent.cpp",
+    "-o",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/build/parity"
+  ],
+  "reports": [
+    {
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/build/parity",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/tests/source_0.txt",
+        "0",
+        "0",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/tests/source_state_0.json"
+      ],
+      "result": "matched_actions=719"
+    },
+    {
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/build/parity",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/tests/source_0.txt",
+        "2",
+        "0",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/tests/source_state_0.json"
+      ],
+      "result": "matched_actions=719"
+    },
+    {
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/build/parity",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/tests/source_0.txt",
+        "3",
+        "0",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/tests/source_state_0.json"
+      ],
+      "result": "matched_actions=719"
+    },
+    {
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/build/parity",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/tests/source_1.txt",
+        "1",
+        "1",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/tests/source_state_1.json"
+      ],
+      "result": "matched_actions=719"
+    },
+    {
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/build/parity",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/tests/source_1.txt",
+        "2",
+        "1",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/tests/source_state_1.json"
+      ],
+      "result": "matched_actions=719"
+    },
+    {
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/build/parity",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/tests/source_1.txt",
+        "3",
+        "1",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/tests/source_state_1.json"
+      ],
+      "result": "matched_actions=719"
+    }
+  ],
+  "scope": "Two719-action original courses plus each forced Yarn2/Yarn3 branch on the same exogenous original observations. Local selector formulas are not claimed as donor source."
+}

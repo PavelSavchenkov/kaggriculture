@@ -1,0 +1,78 @@
+{
+  "created_utc": "2026-09-07T18:47:33.607751+00:00",
+  "source_sha256": {
+    "compile_v2_sources/sequence.hpp": "378d7fec0a871db1db4e05ed78f6cf45833655a4d215a9ee33b5e66bb34ba930",
+    "compile_v2_sources/season.hpp": "ee5ba253326e1721d27100b609bb8fa6b6d7ccb2e664c5d52297e4b51df0801b",
+    "compile_v2_sources/compile.cpp": "9de2987fd946fab05a3a0411e1c5b44e64ad8ec43c3b92aa06bb35c06ca2b5d9"
+  },
+  "cases": [
+    {
+      "name": "goose_c31_d13_off_002",
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/build/compile_off",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/goose_c31_d13_off_002",
+        "1000",
+        "31",
+        "13",
+        "9",
+        "3"
+      ]
+    },
+    {
+      "name": "goose_c31_d13_on_002",
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/build/compile_on",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/goose_c31_d13_on_002",
+        "1000",
+        "31",
+        "13",
+        "9",
+        "3"
+      ]
+    },
+    {
+      "name": "control_c31_d13_off_002",
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/build/compile_off",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/control_c31_d13_off_002",
+        "1000",
+        "31",
+        "13",
+        "-1",
+        "3"
+      ]
+    },
+    {
+      "name": "control_c31_d13_on_002",
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/build/compile_on",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/control_c31_d13_on_002",
+        "1000",
+        "31",
+        "13",
+        "-1",
+        "3"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "created_utc": "2026-09-08T14:09:10.973826+00:00",
+  "builds": [
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "cmake",
+      "-S",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001",
+      "-B",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/build"
+    ],
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "cmake",
+      "--build",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/build",
+      "--target",
+      "care_only",
+      "care_minimize",
+      "-j",
+      "2"
+    ]
+  ],
+  "jobs": [
+    {
+      "name": "care_only_1014",
+      "command": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/build/care_only",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/compiled_30s/care_only_1014",
+        "1014",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/cow_triple_1014.txt",
+        "30"
+      ],
+      "baseline": "runs/animal_groups_sep08_001/integrated_audit/cow_triple",
+      "mode": "care_only",
+      "seed": 1014
+    },
+    {
+      "name": "care_only_1019",
+      "command": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/build/care_only",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/compiled_30s/care_only_1019",
+        "1019",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/cow_triple_1019.txt",
+        "30"
+      ],
+      "baseline": "runs/animal_group_policy_sep08_001/contexts_audit/cow_triple_alternate",
+      "mode": "care_only",
+      "seed": 1019
+    },
+    {
+      "name": "care_minimize_1014",
+      "command": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/build/care_minimize",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/compiled_30s/care_minimize_1014",
+        "1014",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/cow_triple_1014.txt",
+        "30"
+      ],
+      "baseline": "runs/animal_groups_sep08_001/integrated_audit/cow_triple",
+      "mode": "care_minimize",
+      "seed": 1014
+    },
+    {
+      "name": "care_minimize_1019",
+      "command": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/build/care_minimize",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/compiled_30s/care_minimize_1019",
+        "1019",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/cow_triple_1019.txt",
+        "30"
+      ],
+      "baseline": "runs/animal_group_policy_sep08_001/contexts_audit/cow_triple_alternate",
+      "mode": "care_minimize",
+      "seed": 1019
+    }
+  ],
+  "scope": "Compare full matched seasons and output/labor. A solver timeout is not infeasibility; no runtime promotion from fixed worlds."
+}

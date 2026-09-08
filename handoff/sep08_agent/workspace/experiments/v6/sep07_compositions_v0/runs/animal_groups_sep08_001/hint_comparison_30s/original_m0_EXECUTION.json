@@ -1,0 +1,23 @@
+{
+  "name": "original_m0",
+  "problem": "physical_source_controls_v2/1000_10/problem.json",
+  "problem_sha256": "ea6260f2ca96212296dd469747918b8a3b65fc82de92b51c81a0ec8e190c1fb8",
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/build/hinted_solve",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/physical_source_controls_v2/1000_10/problem.json",
+    "1000",
+    "10",
+    "30",
+    "4",
+    "0",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/hint_comparison_30s/original_m0"
+  ],
+  "returncode": 0,
+  "seconds": 31.224369897972792
+}

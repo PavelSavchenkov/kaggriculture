@@ -1,0 +1,35 @@
+{
+  "name": "cow_7",
+  "seed": 1000,
+  "estimate": {
+    "seed": "1000",
+    "id": "328",
+    "count": "1",
+    "entry_day": "8",
+    "rotations": "7:8:10",
+    "animal_cost": "400",
+    "seeds_saved": "120",
+    "field_operations_delta": "52",
+    "source_visit_deficit": "51",
+    "mean_own_gain": "260.281",
+    "mean_margin_gain": "2784.31",
+    "margin_sd": "1460.57",
+    "risk_score": "2054.03",
+    "estimate_seconds": "6.233e-05"
+  },
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/build/compile",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/fixtures_3s/cow_7",
+    "1000",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/fixtures_3s/cow_7.txt",
+    "3"
+  ],
+  "returncode": 4,
+  "seconds": 13.510627864045091
+}

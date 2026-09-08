@@ -1,0 +1,37 @@
+hour 0: unexpected market order
+hour 1: unexpected market order
+hour 1: unexpected market order
+hour 1: market order does not match fixed plan
+hour 1: unexpected market order
+hour 2: shed availability missing item=8 required=9 present=8
+hour 2: unexpected market order
+hour 9: unexpected market order
+hour 10: unexpected market order
+hour 12: unexpected market order
+hour 13: unexpected market order
+hour 14: unexpected market order
+hour 14: unexpected market order
+hour 14: unexpected market order
+hour 14: unexpected market order
+hour 15: unexpected market order
+hour 15: unexpected market order
+hour 15: unexpected market order
+hour 17: unexpected market order
+hour 17: unexpected market order
+hour 17: unexpected market order
+hour 18: unexpected market order
+hour 18: unexpected market order
+hour 19: unexpected market order
+hour 19: unexpected market order
+hour 20: unexpected market order
+hour 21: unexpected market order
+hour 21: unexpected market order
+hour 22: unexpected market order
+hour 22: unexpected market order
+hour 22: unexpected market order
+hour 22: unexpected market order
+hour 22: unexpected market order
+required_outcomes[8] metric=12 subject=8 tile=-1 through_hour=-1 value=11 bounds=[3,3]
+end_shed was not reached
+
+ERROR conda.cli.main_run:execute(127): `conda run day_solver/with_runtime.sh experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/build/retry experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/goose_c31_d13_off_002/days/29/problem_h0.json experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/goose_c31_d13_off_002/days/29/actions.txt experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/off_day29_diagnostic_v2 30` failed. (See above for error)

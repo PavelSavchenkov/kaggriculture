@@ -1,0 +1,46 @@
+{
+  "original_package": "experiments/v6/sep07_compositions_v0/league/ahmed_v23",
+  "original_manifest": {
+    "format_version": 1,
+    "name": "ahmed_v23",
+    "header": "source/agent.hpp",
+    "type": "kag::agents::ahmed_v23::Agent",
+    "sources": [
+      "source/agent.cpp"
+    ]
+  },
+  "snapshot_base_commit": "f07754bb5c86bed6c77a309e4d9b2d5f53d74008",
+  "namespace_replacements": {
+    "compositions": "catalog_ahmed_v23_compositions",
+    "compositions_sale_copy": "catalog_ahmed_v23_sale",
+    "kag::agents": "kag::catalog_ahmed_v23_agents",
+    "kag::agents_sale_copy": "kag::catalog_ahmed_v23_sale_agents",
+    "kag::native": "kag::catalog_ahmed_v23_native",
+    "kag::sixday_native": "kag::catalog_ahmed_v23_sixday"
+  },
+  "transformation": "Copied compiler dependency closure; renamed private namespaces, resolved include paths, and added a forwarding API wrapper with a default constructor. No policy decisions changed.",
+  "lineage_entry": "../../../handoff/sep08_agent/docs/lineage.md",
+  "evidence_entry": "../../../handoff/sep08_agent/readme.md",
+  "rating": "No independently measured Kaggle rating for this catalog package. See dated source leaderboard evidence in the handoff.",
+  "reuse": "Preserve source attribution. No new license is granted for third-party notebook or replay content.",
+  "files": [
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/ahmed_v23/source/agent.cpp",
+      "original_sha256": "de3097330c9eb1c34140d2809010eac0491536edac02832fecb92e92d4e5f215",
+      "path": "source/deps/league/ahmed_v23/source/agent.cpp",
+      "sha256": "a340f48fc7d0c921e1a78feb108c7a18983676f5569a4bff0a6ef10173489df7"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/ahmed_v23/source/agent.hpp",
+      "original_sha256": "52f1fee947685679bcef42b8fbee48d88063dea47e023d04c9abb97c11a386a3",
+      "path": "source/deps/league/ahmed_v23/source/agent.hpp",
+      "sha256": "4b6063d0e28a11fde4ff36f988df07635b508c16bd2099de82396c453954e6f4"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/ahmed_v23/source/data.inc",
+      "original_sha256": "8ac3216661057c157370e0c75c59356d97b455225f6d9e86fc77e7ba5055f376",
+      "path": "source/deps/league/ahmed_v23/source/data.inc",
+      "sha256": "8ac3216661057c157370e0c75c59356d97b455225f6d9e86fc77e7ba5055f376"
+    }
+  ]
+}

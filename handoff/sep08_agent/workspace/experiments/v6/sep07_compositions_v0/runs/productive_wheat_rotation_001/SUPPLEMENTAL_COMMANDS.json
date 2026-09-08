@@ -1,0 +1,51 @@
+{
+  "reproducible_commands": [
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "g++",
+      "-std=c++20",
+      "-O2",
+      "-I",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/build/policies/source_snapshot",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/source/parity.cpp",
+      "-o",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/build/source_parity"
+    ],
+    [
+      "conda",
+      "run",
+      "--no-capture-output",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/build/source_parity",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001"
+    ],
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/build/policies/arena",
+      "--a",
+      "crop_value_m2_t4",
+      "--b",
+      "pass",
+      "--games",
+      "64",
+      "--seed-start",
+      "1000",
+      "--seat-mode",
+      "both",
+      "--threads",
+      "3",
+      "--validate",
+      "--output",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/results/crop_value_m2_t4_pass128.json"
+    ]
+  ],
+  "source_parity_binary_sha256": "d621c465dff759227034d5d6874820a3054877fb21fe4c4166d255801f605d55",
+  "source_parity_cpp_sha256": "b06dac1f89ee69c94c084c21a24c609d8085b01d25be95bbe1e88be5449e7a21"
+}

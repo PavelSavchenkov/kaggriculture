@@ -1,0 +1,60 @@
+{
+  "atakan": {
+    "source_sha256": {
+      "runs/atakan_portfolio_001/flow_models.json": "f973387dcd064af5825ec283714f5868ddb3223abfa497e4ced9a82ca54945c1",
+      "runs/atakan_portfolio_001/results/atakan_cow_vs_animal_adaptive_r1_c0_b0.json": "fbe98b2c3a7e2ec147ab2e52b27a5e6e9f3edd881b53e74316c408d800a03c87",
+      "runs/atakan_portfolio_001/results/atakan_sheep_vs_animal_adaptive_r1_c0_b0.json": "390f3c7a63993218ef6498cd681eb763ffe10ffe089975a54172fd0d49520ea9",
+      "runs/atakan_portfolio_001/results/atakan_goose_vs_animal_adaptive_r1_c0_b0.json": "982eca64a3f82e47aff9595eb05b8acca3039a0b615a3ec0e38a65161bdf98ad",
+      "runs/atakan_portfolio_001/results/trace_animal_adaptive_r1_c0_b0.json": "f3d8d3a779344dfffd6388b145cd1a6c1ea2c7a192b2bbf33b314ef21dd288c5",
+      "runs/atakan_portfolio_001/results/atakan_cow_vs_teammate_shoprouter.json": "3c36c0b3468aaf671d6d7f7ef7ed940f13c4ab1c44caabd6d9e986027f492896",
+      "runs/atakan_portfolio_001/results/atakan_sheep_vs_teammate_shoprouter.json": "66b11e2babe8a829f41935378099217ba48b7b5e352e05d4dd648a1cfb13d178",
+      "runs/atakan_portfolio_001/results/atakan_goose_vs_teammate_shoprouter.json": "f5ecc880f182be6ea88b56f0b2d5c284353d089ea730fdc64d7313fc343a7071",
+      "runs/atakan_portfolio_001/results/trace_teammate_shoprouter.json": "3179ef76594bf352bc78579b098c79cad185ecfdac9c600136b5f9d457c715bb",
+      "runs/atakan_portfolio_001/results/atakan_cow_vs_public_router_v5.json": "6f672ed82dc1bff9e36707c71d668805b9e2edbef2aadadb80b9dfb9ec8bdb13",
+      "runs/atakan_portfolio_001/results/atakan_sheep_vs_public_router_v5.json": "d1fbbbf55f436bd6b9164226d413e6992b30f4fd9ad93504f93a08dab57f232c",
+      "runs/atakan_portfolio_001/results/atakan_goose_vs_public_router_v5.json": "3322dd428d2574798eee88c5fad3bfddd84651cf63a4414e6486d9648695e0b5",
+      "runs/atakan_portfolio_001/results/trace_public_router_v5.json": "89223dd92e77037928d52038286c647d4a4805ff19d4bd432d02a6962a2c9f64",
+      "runs/atakan_portfolio_001/results/atakan_cow_vs_king_rc4.json": "1fc2e28e8b0eff5559b83c75bd46f9f42965f1492de99b38ec981e0102809bb3",
+      "runs/atakan_portfolio_001/results/atakan_sheep_vs_king_rc4.json": "529f05e5ca1167ddab9c99630cb2bba6357a0b9716b3878cbf0b2a064132535c",
+      "runs/atakan_portfolio_001/results/atakan_goose_vs_king_rc4.json": "3f340a0fc44fb7a21ee6fec873090ac613d19f1315ee11c99bdbe71368c8196a",
+      "runs/atakan_portfolio_001/results/trace_king_rc4.json": "7519e33162a7f0fb67361f0e1145046a0713c5f4557aa7216b89a6d042d1bc28",
+      "runs/atakan_portfolio_001/results/atakan_cow_vs_public_router.json": "7916fcfd6e4ead4c784d7a844f7a1ac208e6da228df67269bc67afc221cb6e44",
+      "runs/atakan_portfolio_001/results/atakan_sheep_vs_public_router.json": "6d85b4e580b550dba83f73153f5930c5511f38bf1b264beca8f6f9e98bc7bf7a",
+      "runs/atakan_portfolio_001/results/atakan_goose_vs_public_router.json": "70aac5df8aaf1c6c3518e59646856ba2c7ac9ec8bec4f7086eb737100e8fe26b",
+      "runs/atakan_portfolio_001/results/trace_public_router.json": "58fe9546eb1615dbfb7e5e69ca76645c00d5cb595f01c53c46b32b611c853f7a"
+    },
+    "contexts": 320,
+    "branches": [
+      "atakan_cow",
+      "atakan_sheep",
+      "atakan_goose"
+    ],
+    "scope": "Only fixed own flow plans plus replay scenario IDs/shops are reconstruction inputs. Driver reveals shops to AgentObservation only on their actual reveal dates. Future actual outcomes are scoring data only."
+  },
+  "sheep": {
+    "source_sha256": {
+      "runs/sheep_expansion_portfolio_001/flow_models.json": "61ea8a0f209147290f6a605119187909f47e452c4281a1000f17a5c3d46788b7",
+      "runs/sheep_expansion_portfolio_001/results/discovery_sheep_fixed_small_vs_investment_context_guarded_001_best.json": "66fc5bd96072a6a2de2f065848bfa3cd4d73f0df1a8cf51e0438d738cbe4295a",
+      "runs/sheep_expansion_portfolio_001/results/discovery_sheep_fixed_expansion_vs_investment_context_guarded_001_best.json": "129a449851addc0460a860fe541144523977dd3212049d8f69fc977813f3c7c8",
+      "runs/sheep_expansion_portfolio_001/results/trace_sheep_fixed_small_vs_investment_context_guarded_001_best.json": "943dd028ef070e90598387b1b1d734fc5cea6f609efa6881e48485e7362834d8",
+      "runs/sheep_expansion_portfolio_001/results/discovery_sheep_fixed_small_vs_teammate_shoprouter.json": "4caebcefb9585c33cfa71c524916cbabe9148bae01f2c187953085a9d53897fd",
+      "runs/sheep_expansion_portfolio_001/results/discovery_sheep_fixed_expansion_vs_teammate_shoprouter.json": "f8a831b3bf47060cde3c6829bfdb56198fc31be98c22d2df2c9a8b18b1c3a76b",
+      "runs/sheep_expansion_portfolio_001/results/trace_sheep_fixed_small_vs_teammate_shoprouter.json": "b937827f09c937227575c3ff2f5027a3b161a262e35371e99550070746f5ff8e",
+      "runs/sheep_expansion_portfolio_001/results/discovery_sheep_fixed_small_vs_public_router_v5.json": "4b3da9d54804a8d55d62194bf21c071fcc2a70f1aca2a25acbbdc5367456e9e5",
+      "runs/sheep_expansion_portfolio_001/results/discovery_sheep_fixed_expansion_vs_public_router_v5.json": "3a64c3f8332d125e0c87f2bc53429e83aee8d14008e08068e31ddd30366472ab",
+      "runs/sheep_expansion_portfolio_001/results/trace_sheep_fixed_small_vs_public_router_v5.json": "2c5776f4775d16ba00ef9e0af0087a95097cef9fd544a7e8e6893c35732424fb",
+      "runs/sheep_expansion_portfolio_001/results/discovery_sheep_fixed_small_vs_king_rc4.json": "a119922a2c4c0a37b5722212740b6ffabaf9a3431bc3e03a32de249373f229f8",
+      "runs/sheep_expansion_portfolio_001/results/discovery_sheep_fixed_expansion_vs_king_rc4.json": "bed595cdab041905dfaf075532f9d36fa065248ca3235d39e12f7cda61b93f41",
+      "runs/sheep_expansion_portfolio_001/results/trace_sheep_fixed_small_vs_king_rc4.json": "70f689178e80b93be466193440cad13dd5bf99a4daa73a4483ebf8308160390f",
+      "runs/sheep_expansion_portfolio_001/results/discovery_sheep_fixed_small_vs_public_router.json": "4b8d0cbadca437e77ce65c7f8fa616a51ae9adb91826bf7aea884261e9d87507",
+      "runs/sheep_expansion_portfolio_001/results/discovery_sheep_fixed_expansion_vs_public_router.json": "dda040f2ecb929d16a0ea0b374cd77508ec908f629c273dca90ad8ab702c4635",
+      "runs/sheep_expansion_portfolio_001/results/trace_sheep_fixed_small_vs_public_router.json": "a139e0fe772fa020469c3f5bbdb493258a42c4e10295daa5c8b6ce192ebf8e79"
+    },
+    "contexts": 320,
+    "branches": [
+      "sheep_fixed_small",
+      "sheep_fixed_expansion"
+    ],
+    "scope": "Only fixed own flow plans plus replay scenario IDs/shops are reconstruction inputs. Driver reveals shops to AgentObservation only on their actual reveal dates. Future actual outcomes are scoring data only."
+  }
+}

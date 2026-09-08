@@ -1,0 +1,22 @@
+[
+  "conda",
+  "run",
+  "-n",
+  "kaggriculture",
+  "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/acf2946ffc33f1b8375f/arena",
+  "--a",
+  "wool_family_context_v2",
+  "--b",
+  "public_router_v52",
+  "--games",
+  "512",
+  "--seed-start",
+  "1000",
+  "--seat-mode",
+  "both",
+  "--threads",
+  "6",
+  "--validate",
+  "--output",
+  "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/family_delay_001/discovery/wool_family_context_v2_vs_public_router_v52.json"
+]

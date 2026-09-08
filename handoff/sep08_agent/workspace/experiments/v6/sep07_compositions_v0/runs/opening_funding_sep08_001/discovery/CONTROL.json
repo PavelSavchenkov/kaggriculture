@@ -1,0 +1,27 @@
+{
+  "games": 16,
+  "complete_records_equal": true,
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/47a6094b6af107f82edd/arena",
+    "--a",
+    "opening_funding_q32",
+    "--b",
+    "public_router",
+    "--games",
+    "8",
+    "--seed-start",
+    "2330000",
+    "--seat-mode",
+    "both",
+    "--threads",
+    "4",
+    "--validate",
+    "--profile",
+    "--output",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/opening_funding_sep08_001/discovery/control.json"
+  ]
+}

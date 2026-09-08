@@ -1,0 +1,35 @@
+{
+  "created_utc": "2026-09-08T04:33:30.389900+00:00",
+  "parent": "observed_sale_lead_start_216",
+  "control": "empty_sale_slots_m2",
+  "variants": [
+    "empty_sale_floor_m0",
+    "empty_sale_floor_m1",
+    "empty_sale_floor_m2",
+    "empty_sale_floor_m3"
+  ],
+  "evidence": "runs/empty_sale_validation_sep08_001/TRACE_ANALYSIS.json",
+  "hypothesis": "A compressed strawberry sale at598 changes floor-price market inventory by one unit and eventually loses6 margin despite no adverse immediate effect. Preserve slots when shifted sales can reach the floor. Compare own-volume, matched-volume and shed-capacity reserves.",
+  "lineage": "New local market-output guard. Motivated by exact full-game native audit failure and official C++ engine floor semantics; no external policy code newly copied. All inherited external replay/notebook lineage remains.",
+  "discovery": {
+    "seeds": 64,
+    "seed_start": 1000,
+    "seat_mode": "both",
+    "opponents": [
+      "observed_sale_lead_start_216",
+      "public_router_v52",
+      "ahmed_v23",
+      "junghoon_wool_sales",
+      "john_131",
+      "teammate_shoprouter",
+      "king_rc4",
+      "bohann_opening_v1"
+    ]
+  },
+  "audit_separation": "All discovery seeds are previously exposed. The failed native seed2004097 is causal diagnosis only. No new fresh audit is claimed or launched; any selected candidate requires an unused preregistered pool. The old frozen candidate remains rejected and unchanged.",
+  "source_hashes": {
+    "runs/empty_sale_floor_sep08_001/prepare.py": "34fa5ba14282e2975436a8bf719d5edc4224dcedcb97a18e36241e25a5b5eaab",
+    "runs/observed_sale_lead_004/proposals/observed_sale_lead_start_216/source/agent.hpp": "618eb49c327d093657c2c8953a49dc86e5041c9fbc23ba6e3fd43961e973ec52",
+    "runs/observed_sale_lead_004/proposals/observed_sale_lead_start_216/agent.json": "3f257057372c4c0e71d26cf4d576094620a2aead4ac97356b01f9882b5e7ce46"
+  }
+}

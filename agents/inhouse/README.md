@@ -15,3 +15,7 @@ Incremental ancestors, standalone copies of specialists already vendored by a
 retained composite, and old league-only variants are archived outside
 `agents/`. Promote a new in-house package only when its behavior differs
 substantially or it supersedes the retained checkpoint.
+
+`early_melon_b98_m1` is the retained independent cold-construction reference from
+the September 8 handoff. It improves weaker cold farms but still loses to the
+strong mainline and teammate. See its package and `handoff/sep08_agent/readme.md`.

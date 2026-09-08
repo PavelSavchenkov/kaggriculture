@@ -1,0 +1,22 @@
+{
+  "variants": [
+    "service_bank_p362_m0",
+    "service_bank_p362_m1",
+    "service_bank_p362_m2",
+    "service_bank_p362_m3"
+  ],
+  "parent": "day_program_p362_m3",
+  "source": "runs/day_service_contract_sep08_001",
+  "source_hashes": {
+    "runs/day_service_contract_sep08_001/compiled/day_program_p362_m3/day16_augment1_remove0/problem.json": "922cd721354f5a19a084a8e31bba3a6435522a0ffca7f93c29673b6fb8126de2",
+    "runs/day_service_contract_sep08_001/compiled/day_program_p362_m3/day16_augment1_remove0/combined_schedule.txt": "48dc96d76c9c5672a5e3e44ece50406087c388e89fe0be917459fd9184c0ae48",
+    "runs/day_service_contract_sep08_001/compiled/day_program_p362_m3/day16_augment1_remove2/problem.json": "3a7602af65d7fcb26b44da5a9fc854665d59b5fd215bc471960dc103e0e895ec",
+    "runs/day_service_contract_sep08_001/compiled/day_program_p362_m3/day16_augment1_remove2/combined_schedule.txt": "5fd08915d93f9ddbf07ac0aaec903cd2793e866573874efb591bc7c0875b09b4"
+  },
+  "hypothesis": "Compile missing current-state service into a reusable next-day program; preserve previous improved days.",
+  "limits": [
+    "Only one new actual day16 state; broader compiler strength is unproven.",
+    "Relaxed entry can alter subsequent service needs.",
+    "Physical forecast assumes rivalPASS and no random weeds."
+  ]
+}

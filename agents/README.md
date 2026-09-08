@@ -15,22 +15,28 @@ Agent packages are recursive:
   replay-derived policies. Each package records provenance, rating evidence,
   parity scope, optimization status, and restrictions.
 
-There are no top-level agent aliases. Generated search parameter clones,
-ablation-only variants, broken candidates, and superseded checkpoints remain in
+There are no top-level agent aliases. The September 8 handoff explicitly retains
+its historical league opponents so teammates can reproduce the comparisons.
+Other generated parameter clones, ablations and broken candidates remain in
 their self-contained experiments. Deprecated duplicates are stored recoverably
 under `work/agent_storage_archive_20260901/`. They are not separate catalog
 agents because they do not add a material phenotype or reliable strength
 signal.
 
-The primary competitive references are:
+The September 8 references are:
 
-- `external/bohann_opening_v1`: strongest validated local policy retained on
-  September 7, 2026 at 17:20 UTC; adaptive crop/herd strategy with a borrowed
-  opening. Its package includes reproducible C++ matchup checks.
-- `external/investment_context_guarded_001_best`: previous local reference and
-  last submitted policy from the session.
-- `external/teammate_shoprouter`: C++ port of the teammate's strongest retained
-  `shoprouter-rl-v2` agent.
+- `external/animal_repair_q24_premium_m2`: latest submitted policy, official
+  IDs 56101451 and identical repeat 56102764. Its frozen native audit beats the
+  teammate in 4,040/4,096 games, but the broad native-margin promotion gate fails.
+- `external/empty_sale_slots_m2`: accepted research reference.
+- `external/cow_service_retained_q24_premium_m2`: discovery successor with cheaper
+  cow schedules; unchanged wins and choices, not broadly promoted.
+- `inhouse/early_melon_b98_m1`: independent cold reference; still weak.
+- `external/teammate_shoprouter`: teammate's strongest retained benchmark.
+
+Read [the complete handoff](../handoff/sep08_agent/readme.md) for the 45-agent
+league, lineage, exact gates, deployment rebuild and continuing optimization loop.
+Earlier Bohann and investment agents remain useful historical references.
 
 Discover official agents with:
 

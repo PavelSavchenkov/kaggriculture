@@ -1,0 +1,51 @@
+{
+  "donor": {
+    "episode": 106497007,
+    "seat": 0,
+    "rank": "9",
+    "team_id": "16730946",
+    "team": "Bohann Wang",
+    "leaderboard_score": "2796.9",
+    "leaderboard_snapshot": "kaggriculture-publicleaderboard-2026-09-07T16:42:52.csv",
+    "submission_id": "56071218",
+    "submission_score_at_query": "2796.9",
+    "submission_date": "2026-09-07T06:55:56.127000",
+    "episode_id": "106497007",
+    "episode_create_time": "2026-09-07T15:48:28.544000",
+    "replay_bytes": "32623742",
+    "replay_sha256": "a148ebebba3233805993ad89626d8463f286faeb0b6adea34dd4094d32c894a8",
+    "source_cash": 77773.0,
+    "source_rival_cash": 75239.0
+  },
+  "components": [
+    {
+      "name": "fresh_bohann25_opening",
+      "opening": true,
+      "entry_day": 30
+    },
+    {
+      "name": "fresh_bohann25_suffix1",
+      "opening": false,
+      "entry_day": 1
+    },
+    {
+      "name": "fresh_bohann25_suffix6",
+      "opening": false,
+      "entry_day": 6
+    },
+    {
+      "name": "fresh_bohann25_opening_suffix6",
+      "opening": true,
+      "entry_day": 6
+    }
+  ],
+  "guard_scope": "All 100 tile keys, shed, seeds, quadrants, empty farmer inventory and dawn unit position; no relaxed cells.",
+  "hypothesis": "The fresh King specialist may owe its advantage to opening trades, later composition or their interaction. Test independently.",
+  "guard_source_sha256": "a148ebebba3233805993ad89626d8463f286faeb0b6adea34dd4094d32c894a8",
+  "local_reuse": [
+    "Current crop_mix_t2_wheat base",
+    "GuardedDay physical matching",
+    "terminal_layer mode3, with Dusta/King recall and Lynn liquidation lineage"
+  ],
+  "selection_scope": "Experimental unconditional component controls; no future-shop or opponent-private input."
+}

@@ -1,0 +1,25 @@
+{
+  "packaging": "Private namespace/include rewrite and forwarding API construction; no policy decisions changed.",
+  "operational": {
+    "name": "animal_repair_premium_m2",
+    "games": 16,
+    "typed_generic_thread_records_equal": 4,
+    "self_pass_complete": true
+  },
+  "debug": {
+    "name": "animal_repair_premium_m2",
+    "debug_self_pass_games": 8,
+    "generic_complete_records_equal": 8
+  },
+  "session_parity_matchups": [
+    {
+      "a": "animal_repair_premium_m2",
+      "b": "king_rc4",
+      "games": 16,
+      "reference": "experiments/v6/sep07_compositions_v0/runs/animal_repair_sep08_001/broad_2360000/animal_repair_premium_m2_vs_king_rc4.json"
+    }
+  ],
+  "cold_source_parity_games": 0,
+  "complete_direct_results": [],
+  "scope": "Finite full-game witnesses; does not imply equivalence on every possible observation or a research promotion. Full shared reports: handoff/sep08_agent/evidence/."
+}

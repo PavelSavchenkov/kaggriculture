@@ -1,0 +1,3 @@
+# day_value_p362_m3
+
+Mode3; horizon30days (30 means remaining season). Mode0 is the unchanged relaxed day-program controller. Other modes compare the current compiler continuation and each feasible day program from observed state. Forecasts assume rival PASS, no new shops and no random weeds; future own actions use a copied compiler. Short forecasts mark remaining products/seeds at common observed prices and omit unfinished biological value. Complete forecasts use final cash. Initial-day program legality is checked, and actual failures return to the base compiler. Per-instance state, deterministic node budget and deadline checks. Experimental; see ../../LINEAGE.json.

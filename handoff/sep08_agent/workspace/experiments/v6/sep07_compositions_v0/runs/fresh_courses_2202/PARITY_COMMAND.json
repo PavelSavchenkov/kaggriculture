@@ -1,0 +1,16 @@
+[
+  "conda",
+  "run",
+  "-n",
+  "kaggriculture",
+  "g++",
+  "-std=c++20",
+  "-O2",
+  "-DVERIFY_LIBRARY",
+  "-I",
+  "/home/pavel/Programming/kaggriculture",
+  "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/fresh_courses_2202/parity.cpp",
+  "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/fresh_courses_2202/library/source/agent.cpp",
+  "-o",
+  "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/fresh_courses_2202/parity"
+]

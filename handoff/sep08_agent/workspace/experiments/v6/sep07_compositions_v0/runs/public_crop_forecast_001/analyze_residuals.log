@@ -1,0 +1,53 @@
+{
+  "runtime": {
+    "0": {
+      "calls": 320,
+      "median_ms": 0.31157100000000004,
+      "p95_ms": 0.340081,
+      "max_ms": 0.752725
+    },
+    "2": {
+      "calls": 320,
+      "median_ms": 0.30404200000000003,
+      "p95_ms": 0.332567,
+      "max_ms": 0.678882
+    },
+    "4": {
+      "calls": 320,
+      "median_ms": 0.3004245,
+      "p95_ms": 0.325791,
+      "max_ms": 0.62696
+    }
+  },
+  "intervals": {
+    "atakan": {
+      "independent_seed_clusters": 64,
+      "resamples": 10000,
+      "win_rate_delta": 0.0031249999999999993,
+      "mean_margin_delta": 105.77812500000002,
+      "win_rate_delta_95_percentile": [
+        -0.018750000000000003,
+        0.028124999999999997
+      ],
+      "margin_delta_95_percentile": [
+        -159.990625,
+        471.51250000000005
+      ]
+    },
+    "sheep": {
+      "independent_seed_clusters": 64,
+      "resamples": 10000,
+      "win_rate_delta": 0,
+      "mean_margin_delta": -9.696875,
+      "win_rate_delta_95_percentile": [
+        0,
+        0
+      ],
+      "margin_delta_95_percentile": [
+        -29.090625000000003,
+        0
+      ]
+    }
+  }
+}
+

@@ -1,0 +1,26 @@
+{
+  "packaging": "Private namespace/include rewrite and forwarding API construction; no policy decisions changed.",
+  "operational": {
+    "name": "wool_family_context_v2",
+    "games": 16,
+    "typed_generic_thread_records_equal": 4,
+    "self_pass_complete": true
+  },
+  "debug": {
+    "name": "wool_family_context_v2",
+    "debug_self_pass_games": 8,
+    "generic_complete_records_equal": 8
+  },
+  "session_parity_matchups": [
+    {
+      "a": "empty_sale_slots_m2",
+      "b": "wool_family_context_v2",
+      "games": 8,
+      "reference": "experiments/v6/sep07_compositions_v0/runs/animal_repair_sep08_001/broad_2360000/empty_sale_slots_m2_vs_wool_family_context_v2.json",
+      "reference_sha256": "d729608ccacc95cdea03ed81c3e1d85ae3d825633d2c6f5e3e28632eae131987"
+    }
+  ],
+  "cold_source_parity_games": 0,
+  "complete_direct_results": [],
+  "scope": "Finite full-game witnesses; does not imply equivalence on every possible observation or a research promotion. Full shared reports: handoff/sep08_agent/evidence/."
+}

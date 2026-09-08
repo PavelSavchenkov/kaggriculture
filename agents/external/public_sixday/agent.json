@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "name": "public_sixday",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::public_sixday::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "source/deps/league/public_sixday/source/agent.cpp",
+    "source/deps/league/teammate_sixday/source/agent.cpp"
+  ]
+}

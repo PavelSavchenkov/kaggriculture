@@ -1,0 +1,74 @@
+{
+  "records": [
+    {
+      "ref": "yhay81/when-do-daily-top-episodes-see-your-agent",
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "kaggle",
+        "kernels",
+        "pull",
+        "yhay81/when-do-daily-top-episodes-see-your-agent",
+        "-p",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/research/refresh_sep08_1308/notebook_audit/yhay81__when-do-daily-top-episodes-see-your-agent",
+        "-m"
+      ],
+      "files": {
+        "CELLS.json": "8885a87388a5746088c172f3466905e74c719c96b42df83fa06e2039bb3e7be8",
+        "reference.txt": "5de6dc6f813185c0756c99ade06d10cf412b9993dfd19936ba37a4bfb0771837",
+        "when-do-daily-top-episodes-see-your-agent.ipynb": "efaf4c8e6f8fd6ba26b4d030eeba6bf6b3e03b8be4be219b011f13d1bf94c83a",
+        "pull.log": "eb0de991f71cb47b542e0bc516b0cd34a19888b196215a36d9e63daf3e1cd9dc",
+        "kernel-metadata.json": "0d20a9499156b727407856f44f7ac34000c3e45e23a11900a45fce7a8c984212"
+      }
+    },
+    {
+      "ref": "yhay81/shop-router-0908",
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "kaggle",
+        "kernels",
+        "pull",
+        "yhay81/shop-router-0908",
+        "-p",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/research/refresh_sep08_1308/notebook_audit/yhay81__shop-router-0908",
+        "-m"
+      ],
+      "files": {
+        "CELLS.json": "2a4684cb8c2ff6ee0ac9df8f4eb72f6240b3022a1f7becba12b053544df4820f",
+        "reference.txt": "de3024e831e0d3a3f7333f72fb4cb70d981e4d1a1866f497fb756a5a33e8d287",
+        "shop-router-0908.ipynb": "b64b16559c441d5ff48891629df6bef519427d4780aa7b97d306449a796aa606",
+        "pull.log": "c7f14dabf99c57a82f5d6d1e0651864e6a275513bdfe7341755aa7348b194d08",
+        "kernel-metadata.json": "0d6bb913a5daace449215af11581f881925e1f997041b607d478777c5e603cf8"
+      }
+    },
+    {
+      "ref": "nagatakengo/kaggriculture",
+      "command": [
+        "conda",
+        "run",
+        "-n",
+        "kaggriculture",
+        "kaggle",
+        "kernels",
+        "pull",
+        "nagatakengo/kaggriculture",
+        "-p",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/research/refresh_sep08_1308/notebook_audit/nagatakengo__kaggriculture",
+        "-m"
+      ],
+      "files": {
+        "CELLS.json": "e23ce3a26d0433c87965ec49d359a51f0351d2b1596fe1db985714d3a104a1d3",
+        "reference.txt": "47caa1ecc478c789f1be98c2e8d030091744d402abc5879f9385a2d4d2c5479b",
+        "kaggriculture.ipynb": "b06f5595014bf5d94fa57a6c59c96565b265f8cd7fe1dc93dc501af97027d91b",
+        "pull.log": "da0ec362b7c330a991d971f8b20056588e82b7c6173290b7738cc340602d4cf0",
+        "kernel-metadata.json": "2be9c736b20faba934ce2c94668f71cd2ae0a2cfaac032c4aef026c7bb9c7346"
+      }
+    }
+  ],
+  "code_executed": false
+}

@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "name": "crop_mix_t2_wheat",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::crop_mix_t2_wheat::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "source/deps/league/top_replay_library/source/agent.cpp",
+    "source/deps/runs/crop_mix_001/proposals/crop_mix_t2_wheat/source/agent.cpp"
+  ]
+}

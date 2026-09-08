@@ -1,0 +1,16 @@
+{
+  "parent": "investment_context_guarded_001_best",
+  "crop_course": "fertilization_004_0_closure",
+  "entry_rule": "Atday20hour0 enablecompletefertilizationcourse only if already observed strawberry shop demand >=4units percycle",
+  "status": "Promoted as local search reference after exact paired and operational checks",
+  "validation": "results/crop_value_validation.json",
+  "lineage": "Justin source150 and all investment_context_guarded_001_best components, one V30 day20fertilization+checked continuation from fertilization004_0, local observed strawberry-demand gate >=4 at day20hour0. No future shops or private rival state.",
+  "source_sha256": {
+    "include/crop_value_gate.hpp": "8a65f8caaddce681b095d0019103d6b8a8f92d2c707ba148ceb8538a91ddb103",
+    "include/guarded_sequence.hpp": "eab2932219805d922dd0fbe9a8827eca682846caad89e9cede288fd5ca837765",
+    "runs/crop_value_001/proposals/crop_value_m2_t4/source/agent.hpp": "406007a214ac04db59ad5a42436fd78eff560495ceed88f775ba73d89db536b6",
+    "scripts/finalize_crop_value.py": "a745fcd83b19c9620cdbaf9e5acb59c8fdca61311b47087efcafd1a8982f0bcb",
+    "scripts/check_crop_value.py": "43added83b8f71373b3caf38f341b99ed78ee9255f36bc9f3caf5252f591a558",
+    "runs/crop_value_001/PARITY.json": "a9faa49d9bf5a2a9f0ca7984350bc3cfdf08a72f7c67bf9f7c376f843471620a"
+  }
+}

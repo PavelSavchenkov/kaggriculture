@@ -1,15 +1,19 @@
 # External agents
 
 This catalog keeps materially different public, teammate, and replay-derived
-C++ policies. Near-duplicate parameter variants and superseded ports remain in
-self-contained experiments instead of becoming separate official agents.
+C++ policies. The September 8 handoff also retains the actual historical league opponents
+explicitly requested for reproduction. Other parameter-only ablations remain
+in self-contained experiments.
 
 ## Primary competitive references
 
 | Agent | Role |
 |---|---|
-| `bohann_opening_v1` | Strongest validated local policy at September 7 17:20 UTC; adaptive crop/herd strategy plus Bohann opening, with reproducible C++ checks |
-| `investment_context_guarded_001_best` | Previous broad reference and last submitted policy; adaptive herd investment with guarded V30 routes |
+| `animal_repair_q24_premium_m2` | Latest submitted policy, IDs 56101451/56102764; strong direct wins, failed native-margin broad gate |
+| `empty_sale_slots_m2` | Accepted research reference |
+| `cow_service_retained_q24_premium_m2` | Cheaper cow-course successor; discovery only |
+| `bohann_opening_v1` | Historical September 7 reference; adaptive crop/herd strategy plus Bohann opening |
+| `investment_context_guarded_001_best` | Earlier broad reference and September 7 submitted policy; adaptive herd investment with guarded V30 routes |
 | `teammate_shoprouter` | Teammate's strongest retained `shoprouter-rl-v2`, ported to the local C++ API |
 | `atakan_demand` | Three-course cow/sheep/goose portfolio selected from observed shop demand |
 | `atakan_integrated_s64_margin` | Complementary Atakan portfolio selected by 64-scenario margin integration |
@@ -53,3 +57,6 @@ submitted policy.
 External source may be studied for common mechanisms and failure modes. It may
 not be linked into, copied into, or used as an opaque behavior block in an
 in-house candidate.
+
+The complete September 8 league, source attribution, parity evidence and continuation
+pipeline are in [the handoff](../../handoff/sep08_agent/readme.md).

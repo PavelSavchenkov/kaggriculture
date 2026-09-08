@@ -1,0 +1,8 @@
+{
+  "parent": "source/compile.cpp",
+  "parent_sha256": "eaeb87ad5216af92a9b64446cbc2f726ec1b72cc4e0f80b1432c21b282ac6610",
+  "finding": "Early cow/goose both reach day11, then market_contract copies rawBUY_LAND item0; DayProblem requires purchased quadrant1..3.",
+  "fix": "Map land orders to consecutive quadrants from actual owned count. Each HIRE/BUY_LAND is one event independent of raw n. Preserve runtime order slots and all product quantities.",
+  "evidence": "broader_courses_30s/* logs and persistent problem_validation.cpp valid_market_item",
+  "scope": "New compiler variant; previous artifacts and runtime policies unchanged."
+}

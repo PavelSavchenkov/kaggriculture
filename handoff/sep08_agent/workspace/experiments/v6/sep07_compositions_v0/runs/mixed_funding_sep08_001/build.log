@@ -1,0 +1,41 @@
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.2s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/mixed_funding_sep08_001/build
+
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/mixed_funding_sep08_001/source/diagnostic.cpp: In function ‘int main(int, char**)’:
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/mixed_funding_sep08_001/source/diagnostic.cpp:80:45: error: ‘const struct kag::Tile’ has no member named ‘animal’; did you mean ‘has_animal’?
+   80 |                     <<','<<+t.kind<<','<<+t.animal<<','<<+end.animal<<','<<end.fed_today<<','<<end.cared_today<<'\n';
+      |                                             ^~~~~~
+      |                                             has_animal
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/mixed_funding_sep08_001/source/diagnostic.cpp:80:63: error: ‘const struct kag::Tile’ has no member named ‘animal’; did you mean ‘has_animal’?
+   80 |                     <<','<<+t.kind<<','<<+t.animal<<','<<+end.animal<<','<<end.fed_today<<','<<end.cared_today<<'\n';
+      |                                                               ^~~~~~
+      |                                                               has_animal
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/mixed_funding_sep08_001/source/diagnostic.cpp:84:66: error: ‘const struct kag::Tile’ has no member named ‘animal’; did you mean ‘has_animal’?
+   84 |         summary<<late<<','<<f.money<<','<<f.shed[WHEAT]<<','<<+t.animal<<','<<t.care_bonus<<','<<exact<<','<<valid<<'\n';
+      |                                                                  ^~~~~~
+      |                                                                  has_animal
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/mixed_funding_sep08_001/source/diagnostic.cpp:84:81: error: ‘const struct kag::Tile’ has no member named ‘care_bonus’
+   84 |         summary<<late<<','<<f.money<<','<<f.shed[WHEAT]<<','<<+t.animal<<','<<t.care_bonus<<','<<exact<<','<<valid<<'\n';
+      |                                                                                 ^~~~~~~~~~
+gmake[3]: *** [CMakeFiles/diagnostic.dir/build.make:76: CMakeFiles/diagnostic.dir/source/diagnostic.cpp.o] Error 1
+gmake[3]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/Makefile2:101: CMakeFiles/diagnostic.dir/all] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:108: CMakeFiles/diagnostic.dir/rule] Error 2
+gmake: *** [Makefile:124: diagnostic] Error 2
+
+ERROR conda.cli.main_run:execute(127): `conda run cmake --build experiments/v6/sep07_compositions_v0/runs/mixed_funding_sep08_001/build --target diagnostic -j2` failed. (See above for error)
+[ 20%] Building CXX object day_solver/CMakeFiles/day_scheduler.dir/src/scheduler.cpp.o
+[ 20%] Building CXX object day_solver/CMakeFiles/day_scheduler.dir/src/prepare_problem.cpp.o
+[ 30%] Linking CXX static library libday_scheduler.a
+[ 30%] Built target day_scheduler
+[ 50%] Building CXX object CMakeFiles/diagnostic.dir/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/public_router/source/agent.cpp.o
+[ 50%] Building CXX object CMakeFiles/diagnostic.dir/source/diagnostic.cpp.o
+[ 60%] Building CXX object CMakeFiles/diagnostic.dir/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/empty_sale_slots_sep08_001/proposals/empty_sale_slots_m2/source/agent.cpp.o
+

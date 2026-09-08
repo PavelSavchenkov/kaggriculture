@@ -1,0 +1,117 @@
+{
+  "created_utc": "2026-09-07T22:39:42.253428+00:00",
+  "candidate": "rival_wool_context_v3",
+  "baseline": "wool_family_context_v2",
+  "seed_start": 1950000,
+  "seeds": 512,
+  "seat_mode": "both",
+  "opponents": [
+    "animal_adaptive_r1_c0_b0",
+    "binghua_116",
+    "bohann_opening_v1",
+    "crop_mix_t2_wheat",
+    "crop_rotation_t2_berry",
+    "crop_value_m2_t4",
+    "investment_context_guarded_001_best",
+    "john_131",
+    "junghoon_wool_sales",
+    "king_rc4",
+    "late_goose_wheat_context",
+    "late_value_s32_t0_r05",
+    "opening_q32_b13_v1",
+    "opening_router_v4",
+    "public_capacity_router",
+    "public_router",
+    "public_router_v5",
+    "public_router_v52",
+    "public_sixday",
+    "rival_wool_context_v1",
+    "rival_wool_context_v2",
+    "shop_herd_guarded_001_best",
+    "shop_herd_s6_m3_g1",
+    "teammate_shoprouter",
+    "ticket_p116_t9_i9",
+    "wheat_one_fert",
+    "wool_family_context_v1",
+    "wool_family_context_v2"
+  ],
+  "grouping": {
+    "prior_versions": [
+      "shop_herd_guarded_001_best",
+      "shop_herd_s6_m3_g1",
+      "opening_router_v4",
+      "animal_adaptive_r1_c0_b0",
+      "investment_context_guarded_001_best",
+      "crop_value_m2_t4",
+      "crop_rotation_t2_berry",
+      "wheat_one_fert",
+      "crop_mix_t2_wheat",
+      "bohann_opening_v1"
+    ],
+    "teammate": [
+      "teammate_shoprouter"
+    ],
+    "public_controllers": [
+      "king_rc4",
+      "public_router",
+      "public_capacity_router",
+      "public_sixday",
+      "public_router_v5",
+      "public_router_v52"
+    ],
+    "top_replays": [
+      "binghua_116",
+      "junghoon_wool_sales",
+      "john_131",
+      "ticket_p116_t9_i9"
+    ]
+  },
+  "historical_grouping": {
+    "prior_versions": [
+      "shop_herd_guarded_001_best",
+      "shop_herd_s6_m3_g1",
+      "opening_router_v4"
+    ],
+    "teammate": [
+      "teammate_shoprouter"
+    ],
+    "public_controllers": [
+      "king_rc4",
+      "public_router",
+      "public_capacity_router",
+      "public_sixday"
+    ],
+    "top_replays": [
+      "binghua_116",
+      "junghoon_wool_sales",
+      "john_131",
+      "ticket_p116_t9_i9"
+    ]
+  },
+  "gates": {
+    "current_group_utility_gain_95_lower": 0,
+    "historical_group_utility_gain_95_lower": -0.0025,
+    "minimum_individual_utility_gain": -0.02,
+    "minimum_paired_mean_margin_gain": 0,
+    "direct_parent_utility": 0.5,
+    "direct_parent_mean_margin": 0
+  },
+  "scope": "514 exposed diagnostic profiles verify the failed John sale and public spending residual. All1930000 outcomes are diagnosis. This new rule is frozen before1950000.",
+  "extra_requirement": "Same targeted response gates as v2. All28 individual utility and mean contrasts nonnegative; positive current-group confidence lower bound; historical noninferiority; every paired parent-control margin nonnegative.",
+  "candidate_files_sha256": {
+    "runs/rival_wool_context_003/source/policy.hpp": "8dca066e144cbd0d78c7f978c14ddc5ade682ee3bba3c61659c5c1a77b0ae94c",
+    "runs/rival_wool_context_003/proposals/rival_wool_context_v3/IMPORT.json": "19d2a8c1daf3682367fdd0edffe0e1f046bc46192ef767712a8866caa0456d87",
+    "runs/rival_wool_context_003/proposals/rival_wool_context_v3/README.md": "ff646518aeb63e63b463aca3b0be563d070c5d53157d92e0f5c33b55c37a6505",
+    "runs/rival_wool_context_003/proposals/rival_wool_context_v3/agent.json": "d13d3fa532a5397bbb45fa0633e79e43d92a0d5a016aef9a303e258d960f2f16",
+    "runs/rival_wool_context_003/proposals/rival_wool_context_v3/source/agent.cpp": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+    "runs/rival_wool_context_003/proposals/rival_wool_context_v3/source/agent.hpp": "a6acc17d295821659fd45b12501a5610f51fff5d5e86af13bee083c1ea54470b"
+  },
+  "targeted_response_gates": {
+    "at_least_one_strict_opponent_gain": true,
+    "individual_utility_regression_limit": 0,
+    "all_paired_mean_margins_nonnegative": true,
+    "current_group_positive_95pct": true,
+    "historical_group_noninferiority": -0.0025,
+    "direct_parent_paired_margin_nonnegative_every_game": true
+  }
+}

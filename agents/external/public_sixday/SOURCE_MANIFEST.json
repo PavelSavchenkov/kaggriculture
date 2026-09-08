@@ -1,0 +1,71 @@
+{
+  "original_package": "experiments/v6/sep07_compositions_v0/league/public_sixday",
+  "original_manifest": {
+    "format_version": 1,
+    "name": "public_sixday",
+    "header": "source/agent.hpp",
+    "type": "compositions::public_sixday::Agent",
+    "sources": [
+      "source/agent.cpp",
+      "../teammate_sixday/source/agent.cpp"
+    ]
+  },
+  "snapshot_base_commit": "f07754bb5c86bed6c77a309e4d9b2d5f53d74008",
+  "namespace_replacements": {
+    "compositions": "catalog_public_sixday_compositions",
+    "compositions_sale_copy": "catalog_public_sixday_sale",
+    "kag::agents": "kag::catalog_public_sixday_agents",
+    "kag::agents_sale_copy": "kag::catalog_public_sixday_sale_agents",
+    "kag::native": "kag::catalog_public_sixday_native",
+    "kag::sixday_native": "kag::catalog_public_sixday_sixday"
+  },
+  "transformation": "Copied compiler dependency closure; renamed private namespaces, resolved include paths, and added a forwarding API wrapper with a default constructor. No policy decisions changed.",
+  "lineage_entry": "../../../handoff/sep08_agent/docs/lineage.md",
+  "evidence_entry": "../../../handoff/sep08_agent/readme.md",
+  "rating": "No independently measured Kaggle rating for this catalog package. See dated source leaderboard evidence in the handoff.",
+  "reuse": "Preserve source attribution. No new license is granted for third-party notebook or replay content.",
+  "files": [
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/public_sixday/source/agent.cpp",
+      "original_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "path": "source/deps/league/public_sixday/source/agent.cpp",
+      "sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/public_sixday/source/agent.hpp",
+      "original_sha256": "2a09e9a5517103a695c43eccb9396280c9c176888b541b93b77a594ddbe1e54f",
+      "path": "source/deps/league/public_sixday/source/agent.hpp",
+      "sha256": "d2c16f0aff5fb2942ef1979b59e3a5969ddb0f7905bdaa42888cf62687ebcb18"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/teammate_sixday/source/agent.cpp",
+      "original_sha256": "dedaca9e814d5eba36bcc97199803567089e5c12210c044b8552f4c05b817213",
+      "path": "source/deps/league/teammate_sixday/source/agent.cpp",
+      "sha256": "a089fb925130bfefddd80ea5358d6c16e6f4b3015243c2c599dbc842bcabd3dc"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/teammate_sixday/source/agent.hpp",
+      "original_sha256": "23ebffb4b1c76b5d684de628f539e3c9e8f2ae0c1af3a710eb2e19120cf9f186",
+      "path": "source/deps/league/teammate_sixday/source/agent.hpp",
+      "sha256": "0589700b5a7103053f493ec022b43fc00e1584f42b97653372c9aa5d821b3758"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/teammate_sixday/source/upstream/policy.hpp",
+      "original_sha256": "97c18dfa936da269a910e374ba3d3dff28c46d374805ad23e5663dd657b6ef60",
+      "path": "source/deps/league/teammate_sixday/source/upstream/policy.hpp",
+      "sha256": "2d8a7739de0bc1e60781af3a9c3b5557c28b4576e98db61d44d83e8707ffb6ad"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/teammate_sixday/source/upstream/runtime_types.hpp",
+      "original_sha256": "1e31d8ac6b555ee36d9ff6f1cf3b21d5a2eccaa47b958a3cd331fafad0cc97f5",
+      "path": "source/deps/league/teammate_sixday/source/upstream/runtime_types.hpp",
+      "sha256": "56d83b47c628cf5b85567d7ef1263c241cf9865f83aec41663168ac8362f42ba"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/teammate_sixday/source/upstream/six_day_budget_guard.hpp",
+      "original_sha256": "afc9a908f1e466079a7f8b9dbb78e513738d4a602efb82c1be084116d9b0a0e4",
+      "path": "source/deps/league/teammate_sixday/source/upstream/six_day_budget_guard.hpp",
+      "sha256": "733f7ad50ae6716d8e2b1dc2a6f5e025191c3d935973c4bfa0561a59e28bd4c0"
+    }
+  ]
+}

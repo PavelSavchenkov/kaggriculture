@@ -1,0 +1,46 @@
+{
+  "original_package": "experiments/v6/sep07_compositions_v0/league/public_router_v52",
+  "original_manifest": {
+    "format_version": 1,
+    "name": "public_router_v52",
+    "header": "source/agent.hpp",
+    "type": "kag::agents::public_router_v52::Agent",
+    "sources": [
+      "source/agent.cpp"
+    ]
+  },
+  "snapshot_base_commit": "f07754bb5c86bed6c77a309e4d9b2d5f53d74008",
+  "namespace_replacements": {
+    "compositions": "catalog_public_router_v52_compositions",
+    "compositions_sale_copy": "catalog_public_router_v52_sale",
+    "kag::agents": "kag::catalog_public_router_v52_agents",
+    "kag::agents_sale_copy": "kag::catalog_public_router_v52_sale_agents",
+    "kag::native": "kag::catalog_public_router_v52_native",
+    "kag::sixday_native": "kag::catalog_public_router_v52_sixday"
+  },
+  "transformation": "Copied compiler dependency closure; renamed private namespaces, resolved include paths, and added a forwarding API wrapper with a default constructor. No policy decisions changed.",
+  "lineage_entry": "../../../handoff/sep08_agent/docs/lineage.md",
+  "evidence_entry": "../../../handoff/sep08_agent/readme.md",
+  "rating": "No independently measured Kaggle rating for this catalog package. See dated source leaderboard evidence in the handoff.",
+  "reuse": "Preserve source attribution. No new license is granted for third-party notebook or replay content.",
+  "files": [
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/public_router_v52/source/agent.cpp",
+      "original_sha256": "9902d129c82e52c0d582542b8d2cb5916e16025344e37edf0a67ebee3843007d",
+      "path": "source/deps/league/public_router_v52/source/agent.cpp",
+      "sha256": "a6e662d97c73c7a71c62cbc02302fe569fec314dcde473b8a5128b3210dba97e"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/public_router_v52/source/agent.hpp",
+      "original_sha256": "67c5401f714a711d7b964e7129945ea6008786b8f7c5240921a16d77d2585b11",
+      "path": "source/deps/league/public_router_v52/source/agent.hpp",
+      "sha256": "91904d5deaddb2e2ccacc76eb16e5e5bdc0e06d1a85f9ec44dfac764d56d379c"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/public_router_v52/source/data.inc",
+      "original_sha256": "4bb154fdbc1d694011aed1bbef8c8f00cd920e545ef25769bd2a57beebe014ae",
+      "path": "source/deps/league/public_router_v52/source/data.inc",
+      "sha256": "4bb154fdbc1d694011aed1bbef8c8f00cd920e545ef25769bd2a57beebe014ae"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "name": "ahmed_v24",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::ahmed_v24::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "source/deps/league/ahmed_v23/source/agent.cpp",
+    "source/deps/runs/premium_sales_sep08_001/proposals/ahmed_v24/source/agent.cpp"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-09-08T01:27:51.159980+00:00",
+  "parent": "runs/compiler_labor_sep08_001",
+  "parent_sha256": {
+    "runs/compiler_labor_sep08_001/compiler/source/agent.hpp": "a4df30e4a5e42c251da24abd2740d3cdaa62d024c933d77d7d50142ead3bdf76",
+    "runs/compiler_labor_sep08_001/compiler/source/agent.cpp": "380a6e29ba901c4628bd09781b8f863fcae9487282c39fd5dac65fad39d25fd7",
+    "runs/compiler_labor_sep08_001/cold_farm.hpp": "b271a2520e2485fca621c5610dd51e0ee50593596dc9d34c31d1b77ffc31f579",
+    "runs/compiler_labor_sep08_001/ANALYSIS.json": "76f6b1d671ad6a30024604bcf7ee01d332ca9f3b6c2112f48cb17cac62de0af9"
+  },
+  "variants": [
+    "compiler_placement_mixed_m0",
+    "compiler_placement_mixed_m1",
+    "compiler_placement_goose_m0",
+    "compiler_placement_goose_m1",
+    "compiler_placement_dairy_m0",
+    "compiler_placement_dairy_m1",
+    "compiler_placement_wool_m0",
+    "compiler_placement_wool_m1"
+  ],
+  "discovery": {
+    "seed_start": 1000,
+    "seeds": 8,
+    "seat_mode": "both",
+    "opponents": [
+      "public_router",
+      "observed_sale_lead_start_216"
+    ]
+  },
+  "hypothesis": "Current distance scoring can expand land before filling owned tiles, delaying otherwise affordable animals. Prefer available already allocated quadrants as a controlled economic placement ablation.",
+  "scope": "Four cold dated farms; unchanged service and hiring choice. Mode3 estimator sees the selected layout, so its distance-driven daily counts may legitimately differ. Not a promotion."
+}

@@ -1,0 +1,57 @@
+{
+  "registered_utc": "2026-09-07T17:06:14.910799+00:00",
+  "candidate": "bohann_opening_v1",
+  "baseline": "crop_mix_t2_wheat",
+  "seed_start": 1750000,
+  "seeds": 512,
+  "seat_mode": "both",
+  "opponents": [
+    "crop_value_m2_t4",
+    "investment_context_guarded_001_best",
+    "teammate_shoprouter",
+    "public_router",
+    "king_rc4",
+    "public_router_v5",
+    "binghua_116",
+    "junghoon_wool_sales",
+    "john_131",
+    "ticket_p116_t9_i9",
+    "public_capacity_router",
+    "public_sixday",
+    "opening_router_v4",
+    "animal_adaptive_r1_c0_b0",
+    "shop_herd_s6_m3_g1",
+    "shop_herd_guarded_001_best",
+    "crop_rotation_t2_berry",
+    "wheat_one_fert",
+    "crop_mix_t2_wheat"
+  ],
+  "grouping": {
+    "prior_versions": [
+      "shop_herd_guarded_001_best",
+      "shop_herd_s6_m3_g1",
+      "opening_router_v4"
+    ],
+    "teammate": [
+      "teammate_shoprouter"
+    ],
+    "public_controllers": [
+      "king_rc4",
+      "public_router",
+      "public_capacity_router",
+      "public_sixday"
+    ],
+    "top_replays": [
+      "binghua_116",
+      "junghoon_wool_sales",
+      "john_131",
+      "ticket_p116_t9_i9"
+    ]
+  },
+  "native_seed": 1753000,
+  "rule": "Exact first two market sequences from Bohann Wang source106497007seat0 on the current complete adaptive policy; no copied later composition.",
+  "gate": "Complete operational checks; positive direct parent margin and utility above0.5; positive seed-cluster95%lower bound for established equal-group win-utility gain. Report every opponent mean, tail and win change. Any win-utility regression beyond2percentagepoints or native direct regression blocks promotion pending diagnosis.",
+  "gate_change_from_crop_promotions": "Earlier crop edits required every mean margin to improve. Discovery here has a $13.30 mean loss against V5 with unchanged win count, but a $16808.55 mean gain against King and120/128direct wins. Optimize stated league utility while explicitly reporting small tradeoffs; do not claim per-opponent dominance.",
+  "group_scope": "Preserve the established four groups for comparability; separately report all19opponents including newer versions and V5, which are not in that historical grouping.",
+  "fresh_scope": "Seeds unused for candidate selection. Later opening-quantity tuning requires another fresh pool."
+}

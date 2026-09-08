@@ -1,0 +1,125 @@
+{
+  "status": "no promotion: fresh external gains but direct-parent utility regression",
+  "records": [
+    {
+      "run": "fertilization_league_001",
+      "opponent": "investment_context_guarded_001_best",
+      "games": 128,
+      "wins": 36,
+      "ties": 42,
+      "utility": 0.445312,
+      "control_utility": 0.5,
+      "margin_delta": 49.828125,
+      "better": 30,
+      "worse": 47
+    },
+    {
+      "run": "fertilization_league_001",
+      "opponent": "king_rc4",
+      "games": 128,
+      "wins": 102,
+      "ties": 0,
+      "utility": 0.796875,
+      "control_utility": 0.765625,
+      "margin_delta": 65.9453125,
+      "better": 30,
+      "worse": 47
+    },
+    {
+      "run": "fertilization_league_001",
+      "opponent": "public_router",
+      "games": 128,
+      "wins": 109,
+      "ties": 0,
+      "utility": 0.851562,
+      "control_utility": 0.851562,
+      "margin_delta": 41.9453125,
+      "better": 28,
+      "worse": 49
+    },
+    {
+      "run": "fertilization_league_001",
+      "opponent": "public_router_v5",
+      "games": 128,
+      "wins": 104,
+      "ties": 0,
+      "utility": 0.8125,
+      "control_utility": 0.796875,
+      "margin_delta": 41.453125,
+      "better": 28,
+      "worse": 49
+    },
+    {
+      "run": "fertilization_league_001",
+      "opponent": "teammate_shoprouter",
+      "games": 128,
+      "wins": 124,
+      "ties": 0,
+      "utility": 0.96875,
+      "control_utility": 0.96875,
+      "margin_delta": 56.25,
+      "better": 32,
+      "worse": 45
+    },
+    {
+      "run": "fertilization_league_002",
+      "opponent": "investment_context_guarded_001_best",
+      "games": 1024,
+      "wins": 268,
+      "ties": 356,
+      "utility": 0.435547,
+      "control_utility": 0.5,
+      "margin_delta": 45.666015625,
+      "better": 217,
+      "worse": 357
+    },
+    {
+      "run": "fertilization_league_002",
+      "opponent": "king_rc4",
+      "games": 1024,
+      "wins": 772,
+      "ties": 0,
+      "utility": 0.753906,
+      "control_utility": 0.750977,
+      "margin_delta": 60.75,
+      "better": 258,
+      "worse": 319
+    },
+    {
+      "run": "fertilization_league_002",
+      "opponent": "public_router",
+      "games": 1024,
+      "wins": 937,
+      "ties": 0,
+      "utility": 0.915039,
+      "control_utility": 0.907227,
+      "margin_delta": 38.1669921875,
+      "better": 206,
+      "worse": 368
+    },
+    {
+      "run": "fertilization_league_002",
+      "opponent": "public_router_v5",
+      "games": 1024,
+      "wins": 814,
+      "ties": 0,
+      "utility": 0.794922,
+      "control_utility": 0.787109,
+      "margin_delta": 38.017578125,
+      "better": 203,
+      "worse": 370
+    },
+    {
+      "run": "fertilization_league_002",
+      "opponent": "teammate_shoprouter",
+      "games": 1024,
+      "wins": 1009,
+      "ties": 0,
+      "utility": 0.985352,
+      "control_utility": 0.985352,
+      "margin_delta": 54.6103515625,
+      "better": 273,
+      "worse": 301
+    }
+  ]
+}

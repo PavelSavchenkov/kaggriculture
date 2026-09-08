@@ -1,0 +1,8 @@
+{
+  "games": 768,
+  "generic_pair_debug_thread_all_records_equal": true,
+  "native_and_custom_shop_modes": true,
+  "deterministic_node_budget": true,
+  "instance_state": "Each wrapper owns its base and course vectors; no mutable episode globals.",
+  "observation": "Agent reads typed own/public state; no seed, opponent-private inventory or live Sim."
+}

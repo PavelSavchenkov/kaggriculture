@@ -1,0 +1,54 @@
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/source/compile_v5.cpp: In function ‘int main(int, char**)’:
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/source/compile_v5.cpp:275:42: error: no matching function for call to ‘min(int, std::array<long int, 12>::value_type&)’
+  275 |                 const int reduce=std::min(-delta,problem.end_shed[i]);
+      |                                  ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/13/algorithm:60,
+                 from /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/include/evaluation.hpp:2,
+                 from /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/include/day_contract.hpp:2,
+                 from /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/include/day_compile_helpers.hpp:2,
+                 from /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/source/season_v2.hpp:3,
+                 from /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/source/compile_v5.cpp:1:
+/usr/include/c++/13/bits/stl_algobase.h:233:5: note: candidate: ‘template<class _Tp> constexpr const _Tp& std::min(const _Tp&, const _Tp&)’
+  233 |     min(const _Tp& __a, const _Tp& __b)
+      |     ^~~
+/usr/include/c++/13/bits/stl_algobase.h:233:5: note:   template argument deduction/substitution failed:
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/source/compile_v5.cpp:275:42: note:   deduced conflicting types for parameter ‘const _Tp’ (‘int’ and ‘std::array<long int, 12>::value_type’ {aka ‘long int’})
+  275 |                 const int reduce=std::min(-delta,problem.end_shed[i]);
+      |                                  ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/stl_algobase.h:281:5: note: candidate: ‘template<class _Tp, class _Compare> constexpr const _Tp& std::min(const _Tp&, const _Tp&, _Compare)’
+  281 |     min(const _Tp& __a, const _Tp& __b, _Compare __comp)
+      |     ^~~
+/usr/include/c++/13/bits/stl_algobase.h:281:5: note:   template argument deduction/substitution failed:
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/source/compile_v5.cpp:275:42: note:   deduced conflicting types for parameter ‘const _Tp’ (‘int’ and ‘std::array<long int, 12>::value_type’ {aka ‘long int’})
+  275 |                 const int reduce=std::min(-delta,problem.end_shed[i]);
+      |                                  ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/13/algorithm:61:
+/usr/include/c++/13/bits/stl_algo.h:5775:5: note: candidate: ‘template<class _Tp> constexpr _Tp std::min(initializer_list<_Tp>)’
+ 5775 |     min(initializer_list<_Tp> __l)
+      |     ^~~
+/usr/include/c++/13/bits/stl_algo.h:5775:5: note:   template argument deduction/substitution failed:
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/source/compile_v5.cpp:275:42: note:   mismatched types ‘std::initializer_list<_Tp>’ and ‘int’
+  275 |                 const int reduce=std::min(-delta,problem.end_shed[i]);
+      |                                  ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/stl_algo.h:5785:5: note: candidate: ‘template<class _Tp, class _Compare> constexpr _Tp std::min(initializer_list<_Tp>, _Compare)’
+ 5785 |     min(initializer_list<_Tp> __l, _Compare __comp)
+      |     ^~~
+/usr/include/c++/13/bits/stl_algo.h:5785:5: note:   template argument deduction/substitution failed:
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/source/compile_v5.cpp:275:42: note:   mismatched types ‘std::initializer_list<_Tp>’ and ‘int’
+  275 |                 const int reduce=std::min(-delta,problem.end_shed[i]);
+      |                                  ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gmake[3]: *** [CMakeFiles/compile_v5.dir/build.make:76: CMakeFiles/compile_v5.dir/source/compile_v5.cpp.o] Error 1
+gmake[3]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/Makefile2:383: CMakeFiles/compile_v5.dir/all] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:390: CMakeFiles/compile_v5.dir/rule] Error 2
+gmake: *** [Makefile:254: compile_v5] Error 2
+
+ERROR conda.cli.main_run:execute(127): `conda run cmake --build experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/build --target compile_v5 -j 4` failed. (See above for error)
+[ 27%] Built target day_scheduler
+[ 36%] Building CXX object CMakeFiles/compile_v5.dir/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_004/proposals/observed_sale_lead_start_216/source/agent.cpp.o
+[ 54%] Building CXX object CMakeFiles/compile_v5.dir/source/compile_v5.cpp.o
+[ 54%] Building CXX object CMakeFiles/compile_v5.dir/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/empty_sale_slots_sep08_001/proposals/empty_sale_slots_m2/source/agent.cpp.o
+[ 63%] Building CXX object CMakeFiles/compile_v5.dir/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/league/top_replay_library/source/agent.cpp.o
+[ 72%] Building CXX object CMakeFiles/compile_v5.dir/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/league/public_router/source/agent.cpp.o
+[ 81%] Building CXX object CMakeFiles/compile_v5.dir/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.cpp.o
+

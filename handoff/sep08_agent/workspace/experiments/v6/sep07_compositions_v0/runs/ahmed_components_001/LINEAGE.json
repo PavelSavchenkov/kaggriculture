@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-09-07T23:32:34.622575+00:00",
+  "parent": "ahmed_v23",
+  "source_lineage": "league/ahmed_v23/IMPORT.json",
+  "scope": "Single-layer ablations of the exact port; mask0 must match all parent records.",
+  "source_sha256": {
+    "league/ahmed_v23/source/agent.hpp": "52f1fee947685679bcef42b8fbee48d88063dea47e023d04c9abb97c11a386a3",
+    "league/ahmed_v23/source/agent.cpp": "de3097330c9eb1c34140d2809010eac0491536edac02832fecb92e92d4e5f215",
+    "league/ahmed_v23/source/data.inc": "8ac3216661057c157370e0c75c59356d97b455225f6d9e86fc77e7ba5055f376"
+  },
+  "variants": {
+    "ahmed_layers_all": 0,
+    "ahmed_no_weed": 1,
+    "ahmed_no_lead": 2,
+    "ahmed_no_budget": 4,
+    "ahmed_no_room": 8,
+    "ahmed_no_clamp": 16,
+    "ahmed_no_dead": 32,
+    "ahmed_no_terminal": 64,
+    "ahmed_tape_only": 127
+  },
+  "local_changes": [
+    "Independent source namespace",
+    "Per-instance immutable disable mask; no changes to enabled layer semantics"
+  ],
+  "limitations": [
+    "Recorded-route compositions remain borrowed from ThomasV5/2.",
+    "No Kaggle score inference from discovery."
+  ]
+}

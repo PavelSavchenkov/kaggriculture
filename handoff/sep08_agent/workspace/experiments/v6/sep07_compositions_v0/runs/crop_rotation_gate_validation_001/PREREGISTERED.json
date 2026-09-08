@@ -1,0 +1,20 @@
+{
+  "registered_utc": "2026-09-07T15:22:41.221693+00:00",
+  "candidate": "crop_rotation_t2_current",
+  "baseline": "crop_value_m2_t4",
+  "rule": "Atday12 select crop_rotation_009 only when at least2observed shops consume tomatoes and exact physical entry matches; otherwise retain current local reference.",
+  "selection": "Fixed before fresh data, from25C++observed-shop gates over discovery1000..1255both\u00d75opponents. Old-parent executable parity2560fullgame records exact.",
+  "fresh_seed_start": 1670000,
+  "fresh_seeds": 512,
+  "seat_mode": "both",
+  "opponents": [
+    "crop_value_m2_t4",
+    "investment_context_guarded_001_best",
+    "teammate_shoprouter",
+    "public_router",
+    "king_rc4",
+    "public_router_v5"
+  ],
+  "gate": "Compare paired win utility/margin/tails and direct parent; no promotion without broader league and operational/causal checks.",
+  "frozen_inputs": "FROZEN.json"
+}

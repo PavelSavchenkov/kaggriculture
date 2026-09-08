@@ -1,0 +1,72 @@
+{
+  "source": "Own offline diagnosis of compile_flexible mixed_d9 seed1008 after the certified day9 repair.",
+  "inputs": {
+    "source/diagnostic.cpp": "a75db4a8f96043b9fa507fdcf9d7065c8a70538a713f886ef0a96ed1510c2581",
+    "day10/SUMMARY.csv": "482aca872eeac5ece82fce3b48e22f8c1b98410f85c07bdec70767382976ff01",
+    "day10/markets.csv": "c51ec8436218e9e43719a1854f2f0bc5c093172dd75f85ec02bc8630809d839d",
+    "day10/units.csv": "e8805aef6d52f4c17d2ffbe8953191d0f81c131265c6cc12ccbbefd2ead230e4"
+  },
+  "cases": [
+    {
+      "late_goose_hour": -1,
+      "cash": 12866,
+      "wheat": 59,
+      "goose14": false,
+      "endpoint": false
+    },
+    {
+      "late_goose_hour": 10,
+      "cash": 12566,
+      "wheat": 58,
+      "goose14": true,
+      "care_bank14": 1,
+      "physical": true,
+      "endpoint": true
+    },
+    {
+      "late_goose_hour": 12,
+      "cash": 12566,
+      "wheat": 58,
+      "goose14": true,
+      "care_bank14": 1,
+      "physical": true,
+      "endpoint": true
+    }
+  ],
+  "diagnosis": "At day10h1, two additional hires consume233. The inherited request for two geese pays300, buying only one. The second pickup/PLACE/feed/care on tile14 fails. Splitting the purchase acrossh1/h10 orh1/h12 funds both before pickups without changing worker actions.",
+  "related_external_idea": "Dmitrii public cow-placement notebook examines actual carried-animal ownership before structure repair; no code or schedules copied from it. Here the structure already exists and the missing purchase is the cause.",
+  "scope": "Completed one fixed-calendar mixed course. All21 changed days compiled,30 endpoints exact and719 transitions independently audited. No general policy or league gain claim.",
+  "full_season_result": {
+    "complete": true,
+    "turns": 719,
+    "days": 21,
+    "all_30_endpoints_exact": true,
+    "cash": 95464,
+    "parent_cash": 100387,
+    "rival_cash": 85488,
+    "parent_rival_cash": 90444,
+    "own_gain": -4923,
+    "margin_gain": 33,
+    "hire_cost": 5387,
+    "parent_hire_cost": 3824,
+    "hires": 277,
+    "produced_gain": [
+      -16,
+      -7,
+      0,
+      -14,
+      0,
+      36,
+      0,
+      44,
+      57,
+      0,
+      0,
+      0
+    ],
+    "independent_matches_compiler": true,
+    "source_unchanged": true,
+    "scope": "One fixed-calendar mixed course. No general policy or league improvement claim."
+  },
+  "results_sha256": "09d3b40302c6adb7d852eed675e86fbe6eb0d6eee421ce84d6e6ed3f28e49235"
+}

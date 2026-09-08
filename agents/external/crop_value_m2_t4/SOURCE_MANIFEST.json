@@ -1,0 +1,809 @@
+{
+  "original_package": "experiments/v6/sep07_compositions_v0/runs/crop_value_001/proposals/crop_value_m2_t4",
+  "original_manifest": {
+    "format_version": 1,
+    "name": "crop_value_m2_t4",
+    "header": "source/agent.hpp",
+    "type": "compositions::crop_value_m2_t4::Agent",
+    "sources": [
+      "source/agent.cpp",
+      "../../../../league/top_replay_library/source/agent.cpp"
+    ]
+  },
+  "snapshot_base_commit": "f07754bb5c86bed6c77a309e4d9b2d5f53d74008",
+  "namespace_replacements": {
+    "compositions": "catalog_crop_value_m2_t4_compositions",
+    "compositions_sale_copy": "catalog_crop_value_m2_t4_sale",
+    "kag::agents": "kag::catalog_crop_value_m2_t4_agents",
+    "kag::agents_sale_copy": "kag::catalog_crop_value_m2_t4_sale_agents",
+    "kag::native": "kag::catalog_crop_value_m2_t4_native",
+    "kag::sixday_native": "kag::catalog_crop_value_m2_t4_sixday"
+  },
+  "transformation": "Copied compiler dependency closure; renamed private namespaces, resolved include paths, and added a forwarding API wrapper with a default constructor. No policy decisions changed.",
+  "lineage_entry": "../../../handoff/sep08_agent/docs/lineage.md",
+  "evidence_entry": "../../../handoff/sep08_agent/readme.md",
+  "rating": "No independently measured Kaggle rating for this catalog package. See dated source leaderboard evidence in the handoff.",
+  "reuse": "Preserve source attribution. No new license is granted for third-party notebook or replay content.",
+  "files": [
+    {
+      "original": "experiments/v6/sep07_compositions_v0/candidates/firstday_m85_sale7/source/agent.hpp",
+      "original_sha256": "fabff2c40576b0d3701c9b21d5f8fd02fd4b5a15a0d5ea4d02f349d567b43fdd",
+      "path": "source/deps/candidates/firstday_m85_sale7/source/agent.hpp",
+      "sha256": "ea0b699a50a06030c943757bdeea1decc6c5ba0b07845ce433580bf712cbabe5"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/candidates/investment_context_guarded_001_best/source/agent.hpp",
+      "original_sha256": "0709a6c028621b0e9869cbfe29f1c2c1f19a502dd0dfab4011ae7ea93cb3b693",
+      "path": "source/deps/candidates/investment_context_guarded_001_best/source/agent.hpp",
+      "sha256": "487a922290a3aebf21293fd4d7b23e7b26fb9a8cac6cd39be894c9331f1dfb6a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/candidates/opening_router_v2/source/agent.hpp",
+      "original_sha256": "1c56b882d50dd3da40635bf012d72e4d5578318190345d78bb9b9874cd2bd5ef",
+      "path": "source/deps/candidates/opening_router_v2/source/agent.hpp",
+      "sha256": "62bf04c1e8d5aa8ea939bce94d615bbf414bab29d7d897d7d3f021c61dd20b8d"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/candidates/shop_herd_guarded_001_best/source/agent.hpp",
+      "original_sha256": "b1203e6b5664e009b59086cfae76180a724cbdae734a21abd4e71992dfe55dfa",
+      "path": "source/deps/candidates/shop_herd_guarded_001_best/source/agent.hpp",
+      "sha256": "8d59ed697799f9a5b25a47551a4305276068c5d7e60e86960ab9f045f8477d21"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/adaptive_ticket.hpp",
+      "original_sha256": "773ae7507ae251165da3fff28ac201b17b91d3f8a6cd7355abdeefc32208f829",
+      "path": "source/deps/include/adaptive_ticket.hpp",
+      "sha256": "37a1068e3018ada808f7cfb93f7c6daafe32a2c7714a42864684a5424ef72bfa"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/animal_investment_value.hpp",
+      "original_sha256": "ffa7385c5fa382efc54297fc4a4653bcdf76fffb7ea75436e58f9ca58f1fb984",
+      "path": "source/deps/include/animal_investment_value.hpp",
+      "sha256": "5ee571c19e602065f7ad71b0fbc0236ff3d05b1180793709fb9fe9cac0faf2c5"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/animal_ticket.hpp",
+      "original_sha256": "48754af8f8d422e36d976f9cf1ca82f108379675e92394809fe25c2331247a2f",
+      "path": "source/deps/include/animal_ticket.hpp",
+      "sha256": "fb250ac6dd4513663b3696ecb02a93ec964650ba7c7c2878dcef0767c74930c9"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/biology.hpp",
+      "original_sha256": "82225498387721be96a6fc0da45323086faa9f1057ff3a5607b909b23876bb23",
+      "path": "source/deps/include/biology.hpp",
+      "sha256": "6132069d95f2ecc5952cf807ee57acc2929ecf2560004dce47165b730f1a2076"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/crop_value_gate.hpp",
+      "original_sha256": "8a65f8caaddce681b095d0019103d6b8a8f92d2c707ba148ceb8538a91ddb103",
+      "path": "source/deps/include/crop_value_gate.hpp",
+      "sha256": "d33b042ddf1dcd27db950b572547f1c0fa3bf7b8f441abb2f7a91f722ad9d83e"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/day_override.hpp",
+      "original_sha256": "07d7477302c7f9bc06bd2bf48eef9f0c5fc100b69dcc97c3c4e93272ae480f0d",
+      "path": "source/deps/include/day_override.hpp",
+      "sha256": "134ab3fb94de966f037e0a064bb6aa26d4d549c9b63ebc636abfbccc2e31bc78"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/deferred_animal.hpp",
+      "original_sha256": "3a0c9e82e1df5044c9632a60bd3575563195cc512a830713a48f6d461421b3d6",
+      "path": "source/deps/include/deferred_animal.hpp",
+      "sha256": "7db761bb8edc1f02bb4192f3282673d4352452c30fc69d79f5df7f97387a9c8a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/guarded_day.hpp",
+      "original_sha256": "6375ec72e127709f4770e302a7779ba0c7421b9c8e8696ec8c9170966b085eb9",
+      "path": "source/deps/include/guarded_day.hpp",
+      "sha256": "ab497fa4b76610b28c31afb67a94006da32a5826abc760b6a1aea7cf73f36ee8"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/guarded_sequence.hpp",
+      "original_sha256": "eab2932219805d922dd0fbe9a8827eca682846caad89e9cede288fd5ca837765",
+      "path": "source/deps/include/guarded_sequence.hpp",
+      "sha256": "58a5dee4e806107ee5ba28287e3093f47284d185c624000ed54e4b8b2b79fc32"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/herd_forecast.hpp",
+      "original_sha256": "d446032580fed7628095cb1e736b57b0a64a44d7982ca26ed550f4dab9ec91dc",
+      "path": "source/deps/include/herd_forecast.hpp",
+      "sha256": "b17f0dbcdd5a69d4aa6f38b80981e1a08fc0f817f3ba4836e5eb5b54572a7090"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/market_course.hpp",
+      "original_sha256": "cc56db531ec61322dfc9c86de08bb32da9b1b77809036e031638c342051155b2",
+      "path": "source/deps/include/market_course.hpp",
+      "sha256": "8c7e49e2b2dc0c219c30cc3b3a67edb1ddbc1a4d94d88431e0c8b0359208e47f"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/planned_opening.hpp",
+      "original_sha256": "b9a4ae72039849ff33d18a2b6411659a205f3873f66836afa3a47dc9b44197e6",
+      "path": "source/deps/include/planned_opening.hpp",
+      "sha256": "b3313e7b8eb00ec9f81d791b6bc085632ed9cfbcc30869b35e72fa36d1a48657"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/sampled_animal_value.hpp",
+      "original_sha256": "186770b11444b1245efd1afc33b800634b6c42b12bc93bd6388414bc3b118dcc",
+      "path": "source/deps/include/sampled_animal_value.hpp",
+      "sha256": "956a9086986835f7ce8fdd0043446fb54bcc7654b4d60b356fe22f66dd015e52"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/shop_herd.hpp",
+      "original_sha256": "0490942269738a4a2523dcc06930765d7e01345f4f78e15c7ea5530b4a21fa2f",
+      "path": "source/deps/include/shop_herd.hpp",
+      "sha256": "959a632013c50fae48d82e074255dfa5d1f38f143b0fae0efcb71cb7525eadda"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/terminal_layer.hpp",
+      "original_sha256": "a7c808873b6643d1b256835a8c21efe6f5ac6680a1fec245a6d87fe0aa22527f",
+      "path": "source/deps/include/terminal_layer.hpp",
+      "sha256": "d1ef9c558d6475a39cdedf0dc92ef96599d4df0747ade284dc8e727fd5bd7b03"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/public_router/source/agent.hpp",
+      "original_sha256": "7311b936fc319dec92f1338a1535a045f53ad63c6ca198022f410bd200c589e8",
+      "path": "source/deps/league/public_router/source/agent.hpp",
+      "sha256": "15dfb69874fa5abecd8079e2055c684ab5a8bf7101ed42afbf757d75303f199c"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.cpp",
+      "original_sha256": "e01111d8be2aed27711d2ccaabb3a3730398dd022ea767db9c7080140f83be0f",
+      "path": "source/deps/league/top_replay_library/source/agent.cpp",
+      "sha256": "6cf47f0c8bc1a2d7ec3d0fc8d62d3804bd0d5496e1ca4493e384a1c9e7021383"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.hpp",
+      "original_sha256": "7a34ba395b73d511860dc827e8895e0b7f816203ad4dc968b692f89609dd800d",
+      "path": "source/deps/league/top_replay_library/source/agent.hpp",
+      "sha256": "e7c62278822894f17025b7c2b1f9a2d180cb1b60d8c7d8bf301d986f2a5dfa0c"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/top_replay_library/source/tapes.inc",
+      "original_sha256": "a90688675433a879056e29e50f1795d75edfd27b5fc07781b9e4f0472ca6c94e",
+      "path": "source/deps/league/top_replay_library/source/tapes.inc",
+      "sha256": "a90688675433a879056e29e50f1795d75edfd27b5fc07781b9e4f0472ca6c94e"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/advance_sales_001/proposals/advance_sales_001_7/source/agent.hpp",
+      "original_sha256": "be3b33c643f219a1f2f02930b7189341fe0211e6f7b9ba9057f529965834c34c",
+      "path": "source/deps/runs/advance_sales_001/proposals/advance_sales_001_7/source/agent.hpp",
+      "sha256": "d1014a85967f129b20bbf5cebac3e53c4b9e01f10792ba8bce78b3a36db8918b"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_006/animal_entries_006_d11_i10/entry.hpp",
+      "original_sha256": "abf03ca13d6a0292702df1972bc2e7417647377345aea49d677f8ede4a4d4779",
+      "path": "source/deps/runs/animal_entries_006/animal_entries_006_d11_i10/entry.hpp",
+      "sha256": "264b2cbd7c1b606cda4aabd4d2360996459ffb0192a3103b7940189e34aceafb"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_006/animal_entries_006_d11_i11/entry.hpp",
+      "original_sha256": "af1d731f8758e1234887a774d9f513a5f8115a86ddbd928cd6a0032d07e6db27",
+      "path": "source/deps/runs/animal_entries_006/animal_entries_006_d11_i11/entry.hpp",
+      "sha256": "9988bbf5e76f73abb5ba8bb70c26a1e51cfb298e11ce39d71b4da2ee9fe8a233"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_006/animal_entries_006_d11_i9/entry.hpp",
+      "original_sha256": "5005f6c7715029d5a8ba05d1bf14e3760280c894ce8e9dacaa8fdd7b323df90b",
+      "path": "source/deps/runs/animal_entries_006/animal_entries_006_d11_i9/entry.hpp",
+      "sha256": "3ca312f4db7318cc01a549a3a2e549d7ccb0f204a2123adf62cdee2c7602aa72"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_006/animal_entries_006_d15_i10/entry.hpp",
+      "original_sha256": "171e459612738ca5e78bb1dfe0f9f98bc51aeb1ff861dfd7ec8e54435b6c0a8d",
+      "path": "source/deps/runs/animal_entries_006/animal_entries_006_d15_i10/entry.hpp",
+      "sha256": "91a23290e609f3d95bd80fd8d6052487fc6951051ac8f3a45d983c91df6c8da8"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_006/animal_entries_006_d15_i11/entry.hpp",
+      "original_sha256": "74e24db7d0b3dfeb123d362ce117e529e277b3ec1d242b1a407ade89f66b8f6b",
+      "path": "source/deps/runs/animal_entries_006/animal_entries_006_d15_i11/entry.hpp",
+      "sha256": "0d9ee890c39846618e6be31f1d1bd3a86a073c07bd80b69edeff8ce5b681e052"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_006/animal_entries_006_d15_i9/entry.hpp",
+      "original_sha256": "97ba4d00b362e3f96e21be3ceb867290c8bc7bcd20c36d7aec89e13d4d4df7d1",
+      "path": "source/deps/runs/animal_entries_006/animal_entries_006_d15_i9/entry.hpp",
+      "sha256": "a05450c5152740a3931e8edc4d65295c44543a7a6b22efd8173d9a396a405c5f"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_006/animal_entries_006_d18_i10/entry.hpp",
+      "original_sha256": "b066185d7dfe9a98e7678b2356ce6275a4aea413ee724901033e30f7006cb1ec",
+      "path": "source/deps/runs/animal_entries_006/animal_entries_006_d18_i10/entry.hpp",
+      "sha256": "97892f5f6f0e9667421cfd6d0ce34e17de8599808ca1e985e4996ffbb4b8e541"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_006/animal_entries_006_d18_i11/entry.hpp",
+      "original_sha256": "ece0181b533df51bc56bd034f666c88a06f2b6c01fbab1db1433254b03c39daf",
+      "path": "source/deps/runs/animal_entries_006/animal_entries_006_d18_i11/entry.hpp",
+      "sha256": "da34ac2d0b83c5badeb6af8dc2f9ea10133094cd5f2baeff870886af4ddee8ca"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_006/animal_entries_006_d18_i9/entry.hpp",
+      "original_sha256": "c6dbff1cc1e9b966619289a1adc57580064388423d03d3b90a3c0e1dfc9d21e0",
+      "path": "source/deps/runs/animal_entries_006/animal_entries_006_d18_i9/entry.hpp",
+      "sha256": "3a00f5765d97f34ffa070ab7d7870b7d2ad6abb963d708aa619499925c3b4160"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_006/animal_entries_006_d21_i10/entry.hpp",
+      "original_sha256": "a801293537d5154f37887781e288989d732ec689fbff336ae16e67403ac9d7bd",
+      "path": "source/deps/runs/animal_entries_006/animal_entries_006_d21_i10/entry.hpp",
+      "sha256": "3684a0701a3ca14563bedf2f777440e167c99d7f635291966bff987fbcb6d0cd"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_006/animal_entries_006_d21_i11/entry.hpp",
+      "original_sha256": "dfbc892fef4dde3fba9c447f7047e86c7a4dce340baa445698b85ed60f334800",
+      "path": "source/deps/runs/animal_entries_006/animal_entries_006_d21_i11/entry.hpp",
+      "sha256": "136a2b6cf209eeca1161a3537656cafcc57d69f5e5a8080761415ea719411c6b"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_006/animal_entries_006_d21_i9/entry.hpp",
+      "original_sha256": "ed912db1f84e205ba289df5f7005272d2e0e3ba4deabf43ae83412a73e247d45",
+      "path": "source/deps/runs/animal_entries_006/animal_entries_006_d21_i9/entry.hpp",
+      "sha256": "1aa9b94b096ac2d0d92be3412bbf5a6c2d6887825429766b789d92b09250abf2"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_006/model.hpp",
+      "original_sha256": "92468eba5204308187fb71b57fedc664b967169e0303d54fcb3386571c4d6878",
+      "path": "source/deps/runs/animal_entries_006/model.hpp",
+      "sha256": "da11c13358dd543ac7802d4dfff9fb89c376718382bb7508490447db6e16924e"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_007/animal_entries_007_d11_i10/entry.hpp",
+      "original_sha256": "7c6f5d51b245e538f21cb00f3c652ce73c0ed7b63cdbcecf365bdc027378706d",
+      "path": "source/deps/runs/animal_entries_007/animal_entries_007_d11_i10/entry.hpp",
+      "sha256": "22e9c630139ac4b1f59f2ac6f383a8b8ce9442ed777c09750e25a3b5033e69a4"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_007/animal_entries_007_d11_i11/entry.hpp",
+      "original_sha256": "3cb7c3d67c4e145d6163dac99d54171a2b3883bbabb75c59f206f44027a738af",
+      "path": "source/deps/runs/animal_entries_007/animal_entries_007_d11_i11/entry.hpp",
+      "sha256": "5bccf5207ceecc1ae211c4813fbe612359fd80f10d99c018186e202884b9f2ad"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_007/animal_entries_007_d11_i9/entry.hpp",
+      "original_sha256": "adae4b78456c4dee907c8cc26c2d7a4ab8711d115e861d29ee34cbae101cf429",
+      "path": "source/deps/runs/animal_entries_007/animal_entries_007_d11_i9/entry.hpp",
+      "sha256": "fcb21abe377063c1648d039462b561a4eaf07dc910f8eabcf021a22352dc1340"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_007/animal_entries_007_d15_i10/entry.hpp",
+      "original_sha256": "dea46e9b96f86960ea709d8fb341f3ae0ccaf4ef96370d2c36d96afde3395c0e",
+      "path": "source/deps/runs/animal_entries_007/animal_entries_007_d15_i10/entry.hpp",
+      "sha256": "f404c69f5d5db25db3160a8ed436b08a90132ba5e8b273b94d7ed63b107c9953"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_007/animal_entries_007_d15_i11/entry.hpp",
+      "original_sha256": "b6c56c6247d8cf5f78b7d5e66a17ab3b279f8eb4c2b7ffe989a6fd89e579180d",
+      "path": "source/deps/runs/animal_entries_007/animal_entries_007_d15_i11/entry.hpp",
+      "sha256": "1160735bacaab38c7add8b2d0663c05c501b59d15acb1d984005f368d990cd32"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_007/animal_entries_007_d15_i9/entry.hpp",
+      "original_sha256": "7565289bb17a5b08565845bfb8f45abeecdad048d2aad23b038dadb53e77ec3d",
+      "path": "source/deps/runs/animal_entries_007/animal_entries_007_d15_i9/entry.hpp",
+      "sha256": "8ed3b9ee9e724ece8f621de378471c8532f74801c218dc5a4cfc6db7d7e2ab3e"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_007/animal_entries_007_d18_i10/entry.hpp",
+      "original_sha256": "ae207603c1fc4d89351d3796d24b24a3cc2861d7a04b19e0c51e408c42301967",
+      "path": "source/deps/runs/animal_entries_007/animal_entries_007_d18_i10/entry.hpp",
+      "sha256": "22e29c70dbd0354f1a31404a599f0ed6cde54e18efe1887c282ab648ac602100"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_007/animal_entries_007_d18_i11/entry.hpp",
+      "original_sha256": "4bef042d556cc50e9bfe12a942e32e9b715043c6064e77d7f58bd4674491b0c9",
+      "path": "source/deps/runs/animal_entries_007/animal_entries_007_d18_i11/entry.hpp",
+      "sha256": "2d4aa648637124725deed064ccf7bb70ce66de16a4c869bdbf91265e60135f9e"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_007/animal_entries_007_d18_i9/entry.hpp",
+      "original_sha256": "c16873f5b9381427d1cb4f6760d606fbba7126c04132e49f8a6be9e25e7638b6",
+      "path": "source/deps/runs/animal_entries_007/animal_entries_007_d18_i9/entry.hpp",
+      "sha256": "bd1a7900d333cbac4da66729f762f50d686d15cc4cffe01d472a7ba0deaec2ca"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_007/animal_entries_007_d21_i10/entry.hpp",
+      "original_sha256": "c7c3406b0cfbf4c61dbf7ae27293067acdbfa3ffaf8c01c75ad4021b2fd21a25",
+      "path": "source/deps/runs/animal_entries_007/animal_entries_007_d21_i10/entry.hpp",
+      "sha256": "7684d5238cfd277172b9bb03d4c73c4adffbdb414efca4aa04b93761d9363a11"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_007/animal_entries_007_d21_i11/entry.hpp",
+      "original_sha256": "87e9efa7196fa3fb9504fd6d80d62763b8154368fb987b76184f5e1fdd97d2f4",
+      "path": "source/deps/runs/animal_entries_007/animal_entries_007_d21_i11/entry.hpp",
+      "sha256": "ba1d9ee421e492c08fe572995be30217f0b73967e4c10f5844905c75c872f99a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_007/animal_entries_007_d21_i9/entry.hpp",
+      "original_sha256": "9fd0bd07b7b149a6855dccd1b288b4701e97bebc1033d8798dbac96eac2b6e03",
+      "path": "source/deps/runs/animal_entries_007/animal_entries_007_d21_i9/entry.hpp",
+      "sha256": "fe65912d0d1e8aaa61b49ab3fe12abda77cf321f975b01aeccde4929709da183"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entries_007/model.hpp",
+      "original_sha256": "6409126ed666cb72e04c314d7f9dbbbb1bacf85e9ee703a504e516ab60f698ba",
+      "path": "source/deps/runs/animal_entries_007/model.hpp",
+      "sha256": "1a6782ee19ccaf8853d24c42ab79c7e650c9e6630a130ccd2f289cffb7da011b"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_entry_bank_001/bank.hpp",
+      "original_sha256": "a65247177ae14858615380609e0355b90d16fcd88f39fa3842aadcec68ad5757",
+      "path": "source/deps/runs/animal_entry_bank_001/bank.hpp",
+      "sha256": "8c32049e9cc265cedf43ba7933402739b9cc09e43d64b227b8a8cd595a6a00f4"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_investments_001/proposals/animal_adaptive_r1_c0_b0/source/agent.hpp",
+      "original_sha256": "7a7bafa7e167e027b66909209817417746ce1ad5e662acc7a918e11219ad20b0",
+      "path": "source/deps/runs/animal_investments_001/proposals/animal_adaptive_r1_c0_b0/source/agent.hpp",
+      "sha256": "c58bc663503ce10895cd6e06648ec67c426fb2137138040aa4c1895f6896d644"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/crop_value_001/proposals/crop_value_m2_t4/source/agent.cpp",
+      "original_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "path": "source/deps/runs/crop_value_001/proposals/crop_value_m2_t4/source/agent.cpp",
+      "sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/crop_value_001/proposals/crop_value_m2_t4/source/agent.hpp",
+      "original_sha256": "406007a214ac04db59ad5a42436fd78eff560495ceed88f775ba73d89db536b6",
+      "path": "source/deps/runs/crop_value_001/proposals/crop_value_m2_t4/source/agent.hpp",
+      "sha256": "0da7147b5a1c68cae276d39532384d28bd90a4d7a378b7d30cdce2fdb4766b7d"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/fertilization_004/proposals/fertilization_004_0/closure/20/schedule.hpp",
+      "original_sha256": "069196f6429986057b1c359dc14b5bdff6517c202e33baa53f92301b1d232c40",
+      "path": "source/deps/runs/fertilization_004/proposals/fertilization_004_0/closure/20/schedule.hpp",
+      "sha256": "177d542fd750fd856da410d3e20244a89b9a7ea0376e18092623030cbfecb1e6"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/fertilization_004/proposals/fertilization_004_0/closure/21/schedule.hpp",
+      "original_sha256": "d66cf7045b32a2e95267d03a86528485fbea32fcf012201adf244722f2522445",
+      "path": "source/deps/runs/fertilization_004/proposals/fertilization_004_0/closure/21/schedule.hpp",
+      "sha256": "c2f95dedb27c62c2c3bf3c75de2da58de263cf2b80f79a8b0547bba04dddbcfb"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/fertilization_004/proposals/fertilization_004_0/closure/22/schedule.hpp",
+      "original_sha256": "6296602a3442c73ad156d6719e13a09ef649c76d3ab9f95361c1c746b5075ca1",
+      "path": "source/deps/runs/fertilization_004/proposals/fertilization_004_0/closure/22/schedule.hpp",
+      "sha256": "4364ed2ce5bc463e3c401d5900d8de54ea7106ec2f9b39695aebfcafcf09d1a9"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/fertilization_004/proposals/fertilization_004_0/closure/23/schedule.hpp",
+      "original_sha256": "f3dc2940a7ca048b1c9ddfc62db3b2152cff7ef8c29825a1e3f96ad3d688207f",
+      "path": "source/deps/runs/fertilization_004/proposals/fertilization_004_0/closure/23/schedule.hpp",
+      "sha256": "1d5d57884faa2399154127ac4f2dac86d61c2ecc19ff3e96dccdf82fec78a415"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/fertilization_004/proposals/fertilization_004_0/closure/24/schedule.hpp",
+      "original_sha256": "23228a35b4f8112c3b94bc2bcfa490f86a03f0389f43d476257ebd9619edf9f5",
+      "path": "source/deps/runs/fertilization_004/proposals/fertilization_004_0/closure/24/schedule.hpp",
+      "sha256": "0bdecbbea2fc7854815988df19fd40cebafa8e4a28bf3b80d33cbe30251e7015"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/fertilization_004/proposals/fertilization_004_0/closure/25/schedule.hpp",
+      "original_sha256": "9cbcbde19f1d3300d151c87db3d273401773d2fea2b801113b577e1e905a47c8",
+      "path": "source/deps/runs/fertilization_004/proposals/fertilization_004_0/closure/25/schedule.hpp",
+      "sha256": "766f65283b6a047ca7beaac58626271142c0175ec9bed751a909664b3e4fd6b4"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/fertilization_004/proposals/fertilization_004_0/closure/26/schedule.hpp",
+      "original_sha256": "639750223db237e4e63675d239173f6b927a7705b7ab628b5e63860318b9ea3b",
+      "path": "source/deps/runs/fertilization_004/proposals/fertilization_004_0/closure/26/schedule.hpp",
+      "sha256": "48b55c3550654ff4d87db23af058b1e9f0b0f23dcafd09d81e19a593821d1735"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/fertilization_004/proposals/fertilization_004_0/closure/27/schedule.hpp",
+      "original_sha256": "a400ce7e1d7d7bc3c78d2dd7865105067943fd632ffab1629a4ffb2b14481db0",
+      "path": "source/deps/runs/fertilization_004/proposals/fertilization_004_0/closure/27/schedule.hpp",
+      "sha256": "cf326c1811778518a54828c1669f8f394fbd6dd3cc771442c7a58dbb22cb1a53"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/fertilization_004/proposals/fertilization_004_0/closure/28/schedule.hpp",
+      "original_sha256": "0767d6fb956e7d5ee4a91de1b6043e36ccaf9e45edabedc07108a6382d8b5c53",
+      "path": "source/deps/runs/fertilization_004/proposals/fertilization_004_0/closure/28/schedule.hpp",
+      "sha256": "648b5be3604d540c2e82b60ddda2e97c7e50993fb2eeeed54417e9fc169c6768"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/fertilization_packages_001/proposals/fertilization_004_0_closure/source/agent.hpp",
+      "original_sha256": "68c3b33326fa032c3d8660ade10f418b4e94ece6882eb745a0cf2766fbf38b48",
+      "path": "source/deps/runs/fertilization_packages_001/proposals/fertilization_004_0_closure/source/agent.hpp",
+      "sha256": "e0bf7d9cf82b5d0511cff2f65f910e799927eccb7f9add09522147b8c4ff5842"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_day_contexts_001/days.hpp",
+      "original_sha256": "e0bafbf38b1b3f1991136d4b08f4e4f3c7d7edf05d489bbe78dabefbb97183eb",
+      "path": "source/deps/runs/investment_day_contexts_001/days.hpp",
+      "sha256": "01bb0e340be8414cc56a37ce21979dedf3cf1a6acca0a5d0a79c249099b84db1"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_day_library_001/days.hpp",
+      "original_sha256": "c1759ecccb3f6ac304e5d8c7418c768e52789a0e0025e5e360be9d7a3a6ef1bc",
+      "path": "source/deps/runs/investment_day_library_001/days.hpp",
+      "sha256": "48bda3242ccf7792c143307a7a9c21f02532a1ae445955c55e6190f6075272c9"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_day_library_002/days.hpp",
+      "original_sha256": "86d153926e3b6677ba015e7fcfd1cda6b06b606bcee5013af720c9b161dd25f6",
+      "path": "source/deps/runs/investment_day_library_002/days.hpp",
+      "sha256": "114938d6924c3d46b363b4c5a38908f1efa21e499547b941a5a202e0251474bd"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_001/proposals/investment_rebuild_001_13/schedule.hpp",
+      "original_sha256": "a7693e92c740bf0dd42c9e31272cb5a7c7ba29634320b63c6d5ebda1d3fdfd4f",
+      "path": "source/deps/runs/investment_rebuild_001/proposals/investment_rebuild_001_13/schedule.hpp",
+      "sha256": "8cf4009011e1bb1883e29883bc5745cf3afde8d3e0f1d622e7b5dcae5727f60c"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_001/proposals/investment_rebuild_001_14/schedule.hpp",
+      "original_sha256": "976b24f27129ab762e0bbd557ba62f7e7079b85ddb2819bc1d2c2961311fd0fd",
+      "path": "source/deps/runs/investment_rebuild_001/proposals/investment_rebuild_001_14/schedule.hpp",
+      "sha256": "e686c59190dea1b51243d8ac8070c0d125c349ea3cfd79e91ef2ddb9f2fa5368"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_001/proposals/investment_rebuild_001_15/schedule.hpp",
+      "original_sha256": "8547ac4ea2c234b9ab30cc8e75327070385d457d2926e7c2ff908b94eba63e09",
+      "path": "source/deps/runs/investment_rebuild_001/proposals/investment_rebuild_001_15/schedule.hpp",
+      "sha256": "ac69ca12862b27f4e4cbaf5ea391b0467be2074eb3cda3bdcb5da116e2d092b2"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_001/proposals/investment_rebuild_001_16/schedule.hpp",
+      "original_sha256": "9fdd1bf7a42029956c342cc6d936b9eb83b41c96547b023ea06296ab3242297a",
+      "path": "source/deps/runs/investment_rebuild_001/proposals/investment_rebuild_001_16/schedule.hpp",
+      "sha256": "f379a191e738b6a1e05d710c1870b893de6bf25f19d6f9e1f3ebe7d3deb5b399"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_001/proposals/investment_rebuild_001_18/schedule.hpp",
+      "original_sha256": "2244904eb6c860c84690502a2f55fd34c3dd38df180098f3d24f5b7ba8d8ad37",
+      "path": "source/deps/runs/investment_rebuild_001/proposals/investment_rebuild_001_18/schedule.hpp",
+      "sha256": "400c5bf4286d73a33c66720ab8082b5b2db60973dc2bf34cb42e17aaa5a89957"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_001/proposals/investment_rebuild_001_19/schedule.hpp",
+      "original_sha256": "1d256091e1a2a1a1761553d4b7097d96c482b51b03bd82d74a289e3d235b3b37",
+      "path": "source/deps/runs/investment_rebuild_001/proposals/investment_rebuild_001_19/schedule.hpp",
+      "sha256": "a91943eb5085f55cbae066599dabbd5f4fb1861c6cb907c288ac9a5df3c74fb4"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_001/proposals/investment_rebuild_001_20/schedule.hpp",
+      "original_sha256": "68ba6b1d95b1a0c9618f24875949eea22229b57715dee9172c42da17893bdb4b",
+      "path": "source/deps/runs/investment_rebuild_001/proposals/investment_rebuild_001_20/schedule.hpp",
+      "sha256": "cf1e85561030c69b031ae4d1f4647ed891495c21e297a8d2ee65134a711db3d3"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_001/proposals/investment_rebuild_001_23/schedule.hpp",
+      "original_sha256": "bafa3198f5f2e2659b022a2746e3e330a861ce87cac6ea70045b8627c4763601",
+      "path": "source/deps/runs/investment_rebuild_001/proposals/investment_rebuild_001_23/schedule.hpp",
+      "sha256": "e597053854fa6395cafbcc1e488b43369eb6e7616dd3b9ae73e3a9ac8e7b7af8"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_001/proposals/investment_rebuild_001_24/schedule.hpp",
+      "original_sha256": "0fcce14926870886bcf51d474422b836ba4bd895023010ad94a0f2e4b004fd12",
+      "path": "source/deps/runs/investment_rebuild_001/proposals/investment_rebuild_001_24/schedule.hpp",
+      "sha256": "fc0aa0debb1bbe8490a066cf229934ce58650fad20866207ff8cb30c9feb03c3"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_001/proposals/investment_rebuild_001_25/schedule.hpp",
+      "original_sha256": "403a312b377fcfbdc32457e143e6fb0e369c766f78046c6dcca17de1af18d6b6",
+      "path": "source/deps/runs/investment_rebuild_001/proposals/investment_rebuild_001_25/schedule.hpp",
+      "sha256": "a5b59e5623d384bfeda8d8b2866e188dbc282700067ca6057537d4fc5b1c8709"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_001/proposals/investment_rebuild_001_27/schedule.hpp",
+      "original_sha256": "3ed6181197cfe06d0fb1d7eed280c82041621244497099ba1b5a441f20cb34bc",
+      "path": "source/deps/runs/investment_rebuild_001/proposals/investment_rebuild_001_27/schedule.hpp",
+      "sha256": "213db7706551641ce9c0934a60b8bf60fd417186e8264f736dc51d99275e70da"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_002/proposals/investment_rebuild_002_13/schedule.hpp",
+      "original_sha256": "94e3f8aa74ab028c713f1ba40a690c0458f19800659a32a765cecdc25de418db",
+      "path": "source/deps/runs/investment_rebuild_002/proposals/investment_rebuild_002_13/schedule.hpp",
+      "sha256": "1ced38283dc21caf23daecdd8b6b36c6c05c07c7b2b9f3a889c51af8d8d678ee"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_002/proposals/investment_rebuild_002_14/schedule.hpp",
+      "original_sha256": "aa9e27831d0b8ed64e643857e69f6aed4ef678d8842a865b46b44ed618726154",
+      "path": "source/deps/runs/investment_rebuild_002/proposals/investment_rebuild_002_14/schedule.hpp",
+      "sha256": "aa8a652cf1e723979e04bd3ae6d9bdc4475caf08c4934b2d253b5347e6a368ca"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_002/proposals/investment_rebuild_002_15/schedule.hpp",
+      "original_sha256": "628e9f62ddd8f034cacca37a385be84b22da7977c2bbacd458506c5dc8259e29",
+      "path": "source/deps/runs/investment_rebuild_002/proposals/investment_rebuild_002_15/schedule.hpp",
+      "sha256": "d273f6d101bc55b185fd3090708cd3292fdb210bd409da9adbb417b64c9cd1ad"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_002/proposals/investment_rebuild_002_16/schedule.hpp",
+      "original_sha256": "6348b808850ba338f8452d57852869829d7db7ebb3f4e6e1d57f1f943e14bfdc",
+      "path": "source/deps/runs/investment_rebuild_002/proposals/investment_rebuild_002_16/schedule.hpp",
+      "sha256": "a144029de04ba0d3d6e303a1f0d24defc730f0513f154d1e3d6ecd194b5b1775"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_002/proposals/investment_rebuild_002_18/schedule.hpp",
+      "original_sha256": "76e03b8e1f3490d21a362d3fb2009fd3cb0ad566a83dffa8478e05a69f659b32",
+      "path": "source/deps/runs/investment_rebuild_002/proposals/investment_rebuild_002_18/schedule.hpp",
+      "sha256": "61dc86251833420567828e93c84d4657583a8c90ada232d4f2081e4c8ff40338"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_002/proposals/investment_rebuild_002_19/schedule.hpp",
+      "original_sha256": "c90e802939652a6f268844891dab1599db48fea88137c05ac1c58e3002f032fc",
+      "path": "source/deps/runs/investment_rebuild_002/proposals/investment_rebuild_002_19/schedule.hpp",
+      "sha256": "c41abf26d85289725da504a0e86fa6c7898dde926d7df6bae49e6a490e3bf0ce"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_002/proposals/investment_rebuild_002_20/schedule.hpp",
+      "original_sha256": "533ecfd0d75a1d4c7b031df50b668a8f2cdd43a481b7166e05710346a84b882b",
+      "path": "source/deps/runs/investment_rebuild_002/proposals/investment_rebuild_002_20/schedule.hpp",
+      "sha256": "ea5454832b97109ea8cb86fe7ffa123d86acae7d7479482ef30fa72e33e1ddac"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_002/proposals/investment_rebuild_002_22/schedule.hpp",
+      "original_sha256": "f39055ad4690ad95f588685cfbb817349c575e80310e2b3ea8aeecedbaf1f2c0",
+      "path": "source/deps/runs/investment_rebuild_002/proposals/investment_rebuild_002_22/schedule.hpp",
+      "sha256": "9333a0ac703aa445843f5ddd1ed7632db233587b6bbb884795e0414468c511a1"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_002/proposals/investment_rebuild_002_23/schedule.hpp",
+      "original_sha256": "1cd2b42aeae6f942141b595097386026979c7d2e83460572d399cf1e7d0c57d3",
+      "path": "source/deps/runs/investment_rebuild_002/proposals/investment_rebuild_002_23/schedule.hpp",
+      "sha256": "a2971aadb7f80eaeea060acf6fd455ec9d1c766bdb089bcc2132c97fb99786ef"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_002/proposals/investment_rebuild_002_24/schedule.hpp",
+      "original_sha256": "5d50d477e1e0ee96e0a69cd92f6f69c64827a302ebd53ae8424a029121df2f5f",
+      "path": "source/deps/runs/investment_rebuild_002/proposals/investment_rebuild_002_24/schedule.hpp",
+      "sha256": "658a9eb1424f4a845daa3cb3dadb1552384a40482cf6d3d5f2134de1c3ca2695"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_002/proposals/investment_rebuild_002_25/schedule.hpp",
+      "original_sha256": "854e62562acb158754198ba327feee51cc2c199d912c8cf387d5f74871355b7b",
+      "path": "source/deps/runs/investment_rebuild_002/proposals/investment_rebuild_002_25/schedule.hpp",
+      "sha256": "5a3d8e337b5028015ea26eec16573bc44168fcab2caa5b18a3296c296c67d665"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/investment_rebuild_002/proposals/investment_rebuild_002_27/schedule.hpp",
+      "original_sha256": "d17fedfd5a37e6400be350546cae87a50e0b1325a1ac0048f09da95a0abfbd7f",
+      "path": "source/deps/runs/investment_rebuild_002/proposals/investment_rebuild_002_27/schedule.hpp",
+      "sha256": "f19ba2a9090ed8a12723d42dde4529ab6b3a5f948ae1904f8c18144cec077df7"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_day_library_001/days.hpp",
+      "original_sha256": "a8bbd94bbb9729d86fe2dc8e942e09da0f49ab2bbaecac82d84293ad6f4ec62c",
+      "path": "source/deps/runs/justin_day_library_001/days.hpp",
+      "sha256": "2a0a8d98acd8d239aedf0ee85a1f3b0a717961c037902119cbadd2a33bb11087"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_0/source/agent.hpp",
+      "original_sha256": "bc98f89caa87c28b64c8f04e07b4a47fd4d33bfaf8f0951d9e641421669dd2c0",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_0/source/agent.hpp",
+      "sha256": "d8cf2de6eea3797aa5a1c40ce2969ae74ca27275192a4c5f8c04791fab3e19a3"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_1/source/agent.hpp",
+      "original_sha256": "1f8fa368d4f6f784cc4bc990976e9900e889ec671e396e3eb3f8bae890b5e1e0",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_1/source/agent.hpp",
+      "sha256": "4ba3a129920b1290c5975793f2667baa2183f999673a7df535d9f1af62a8197e"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_10/source/agent.hpp",
+      "original_sha256": "875d92c2513c55b57457bbabb50677bdc193e2f8efc4dbc42e6efd39e89b27dd",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_10/source/agent.hpp",
+      "sha256": "9e52653ad353597d99a21a094ee7178fa8c4bc7b293a886a3f40ba25e2cb714e"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_11/source/agent.hpp",
+      "original_sha256": "a06f796098b7db46174364e08d2f1ce11423225c0110f126949c23bfad5b75e4",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_11/source/agent.hpp",
+      "sha256": "411bad0351125e2301186ceafab7e9a53e80681103402d0b2deae7c13ecc41c4"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_12/source/agent.hpp",
+      "original_sha256": "c4a33ef49617034b6b33b820aae80edd5d88de0050993d025db7581a296130a1",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_12/source/agent.hpp",
+      "sha256": "c0424921fb11459c1fda7c44fabc82d5d070bbe7ba48bbbfa4a53661840c36b4"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_13/source/agent.hpp",
+      "original_sha256": "076960e4711948746bf1706263616767b2cf65f02a5660135d78551885415fe5",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_13/source/agent.hpp",
+      "sha256": "487b767d9bbfb6eb6ef56189dc63e70824c94d532151e7d055fad8a9dfa157fc"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_14/source/agent.hpp",
+      "original_sha256": "19c1547e90f3e301f13db704c7594391527d5832c252aafaa63a3dba49b0e4e4",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_14/source/agent.hpp",
+      "sha256": "3ebe2cf406f955c554ba73f43c046b2aab1b8759deebc33a5ca01b32205556d9"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_15/source/agent.hpp",
+      "original_sha256": "c46fdd95ee11343c7b49dbd135b7affeb5d02bd32461bef16d8e0ee3968915fe",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_15/source/agent.hpp",
+      "sha256": "f5e395b546233c65922a08754dfd31006dc66ff661668b48a9262fb50d057127"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_16/source/agent.hpp",
+      "original_sha256": "885e61ccc8f89dc8c21941527e24b41e4c9fc279f551b90ba6844781000d4c53",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_16/source/agent.hpp",
+      "sha256": "e9866857e19df370f9b27f9f51c45ae84283edf70a97c38cf5035e3fb1d59c33"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_17/source/agent.hpp",
+      "original_sha256": "52da298fa92b965155d0cb6ebeca6f6e1958856d3028ebba21c4b240c3221499",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_17/source/agent.hpp",
+      "sha256": "b70832cb0c859c5fe813a071fa0afeaaa7a0f0cf443e83b445aebfbf49de37f5"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_18/source/agent.hpp",
+      "original_sha256": "5c31e3d44e7ffe15c6c4263e95cefaa2d804ca49c3be463bd440b0bfd2f330ef",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_18/source/agent.hpp",
+      "sha256": "6eee54236fed4ea0cbdd303cd87b46af8b70c3fbb772e7d70ec903b5fefb5f21"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_2/source/agent.hpp",
+      "original_sha256": "5e9eb4786dfb900958f5cdb0e7a1b30db16fbe2c47bef35f990f4d51d448aa8c",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_2/source/agent.hpp",
+      "sha256": "834f57809c73b0de6ae7690a9a904dab433907dcc9f98ef8d1fe01d0203ccae0"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_20/source/agent.hpp",
+      "original_sha256": "b8876638f3fb2aa9bafd9ed371f4454cfeba100951d18ee0a0f07267bfb4f380",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_20/source/agent.hpp",
+      "sha256": "68e3cb5a2d7577058355ce713f8f62ef3f7d6354aa20f9ceda5010cc422c1e70"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_21/source/agent.hpp",
+      "original_sha256": "b904f9350bf18947d332a0c956ee8064b3cadaa15ed4b354eb9220a3634eac3b",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_21/source/agent.hpp",
+      "sha256": "6fff6fa61acc60e8134515e5a017cdc1041fefaf46df3b81018bbe0516c2f63a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_22/source/agent.hpp",
+      "original_sha256": "9a484ba90a744495c7e3638276bbd0c7458bb67fc0a54ad9c9fba61021448dc7",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_22/source/agent.hpp",
+      "sha256": "b2cbc474394371edcbfb7ec151e0cb68722e1455da6d6d5ccf2096a747bf1bde"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_23/source/agent.hpp",
+      "original_sha256": "5dca053afe9de626a7146b74823aba2a53a56a94f4ca71c0e22e1599f0b8d593",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_23/source/agent.hpp",
+      "sha256": "55cc4e8e1f26cb477ddf9f0da11b298f183bc60f6c1275bd4a4a7ed77e7ebdb0"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_24/source/agent.hpp",
+      "original_sha256": "23172895444d08bc84de2af98ee19b613a86560f8426fdfaab548eac8df82208",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_24/source/agent.hpp",
+      "sha256": "a4e69252b395e6942269c5e2fad468a5372027d9b08a245832904ddcafd1a2de"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_25/source/agent.hpp",
+      "original_sha256": "fb32aab15001e0d1738e478b382dcf75adb21b1233e0f883c35351f60988c8e7",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_25/source/agent.hpp",
+      "sha256": "91960b10c42bc3e718fd215a74ca1f45a9ef7e5ce9b862ff53d8f625c4d80ff9"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_4/source/agent.hpp",
+      "original_sha256": "415609d946114b16a4366cdd6bc7223b0dd5fe614cb8883c2dbb973810a692b4",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_4/source/agent.hpp",
+      "sha256": "e50bed47c948e3ce1d0354896f5c6169890256fc1c25eeaaed56058304fe0776"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_5/source/agent.hpp",
+      "original_sha256": "3b85030e65b02ec24da35caf1ad49f7dbe19f8f1ab04fc2e3d9e01d86fb21754",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_5/source/agent.hpp",
+      "sha256": "2d9b3d62b21780be6ba43d4bb16c72373d82683281a3c30b0f7c995d7e1f80b7"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_7/source/agent.hpp",
+      "original_sha256": "39830fcd129eb723129fe4ea38ae2eade2943fab979061a740f7aadae2999e2f",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_7/source/agent.hpp",
+      "sha256": "0563766a1f02e9f90767b2e10055a9e7de37b66830cc54ec8193288f44e97fd3"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_9/source/agent.hpp",
+      "original_sha256": "25e39fe6248f26cfb421b18dc2e3ff3eb94bcd4fc18ad98306bb5955f71876b4",
+      "path": "source/deps/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_9/source/agent.hpp",
+      "sha256": "def53cb7c429e2782a65425721a24ad45aaf18b4e428fceedbfcd376dfb698d2"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/shop_herd_combinations_001/proposals/shop_herd_s6_m3_g1/source/agent.hpp",
+      "original_sha256": "268dae009f2ed46bfb6e73ed93dda399f8fab2d9e31461abe41f4fde610878c2",
+      "path": "source/deps/runs/shop_herd_combinations_001/proposals/shop_herd_s6_m3_g1/source/agent.hpp",
+      "sha256": "eb5834c3922798a14cd0966686a7e442260dc738b3951c28d8ad7044abfd6db1"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/shop_herd_day_library_001/days.hpp",
+      "original_sha256": "8668ce1ec6b2ab9d5c94dec4a315530d3a0f8f84c7802ed698a1a43ca69b1566",
+      "path": "source/deps/runs/shop_herd_day_library_001/days.hpp",
+      "sha256": "99fe74f56d69fb529c9128da78fa075cfb7532e3a97569cee61fe2ee80db689a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_11/schedule.hpp",
+      "original_sha256": "355279ff26d826b08c88b9a7d45256459857c84ae058437f09280a56d72b5bb5",
+      "path": "source/deps/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_11/schedule.hpp",
+      "sha256": "f51f48c8545558e4f627e782134f3621b37fe8acaa3297500b4c1050b43f191e"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_13/schedule.hpp",
+      "original_sha256": "bc68a05e08d70ff3f5b6daca46219d0c1929f8f1cc3bfe76ee9dfd4b99b46e75",
+      "path": "source/deps/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_13/schedule.hpp",
+      "sha256": "7841c1359dc387ac7787b00e6cae8d8f91bf54431ef49722377a95b4c00a702f"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_14/schedule.hpp",
+      "original_sha256": "974b2b554ac00f3521689ca9040e19708e97ed1d73872cabf3c79ea9df2e31d7",
+      "path": "source/deps/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_14/schedule.hpp",
+      "sha256": "7bc74293fbee263cedc960904618fdc817be86a8d48f1396d42eb4d40ae7ee7c"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_15/schedule.hpp",
+      "original_sha256": "44bd2c5dde1a0b7498f4391dfe49613a1c040d67b7b5c34830ab4892ac8bf79e",
+      "path": "source/deps/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_15/schedule.hpp",
+      "sha256": "9ed35095eeff373fb4169ba137b2fe7ac24ded50b3f855bf67aff3ee26e39f3c"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_16/schedule.hpp",
+      "original_sha256": "130c758127a2f9f5ef1c467ac6bbdd53dbf14356154a139e4242849d46087e47",
+      "path": "source/deps/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_16/schedule.hpp",
+      "sha256": "9120bfde3864d871b7258c2e4f4df0ac35e762b215ac5cf02ddb9a77383a06de"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_18/schedule.hpp",
+      "original_sha256": "c3f971846b78ce2e01d5c1cf5cc04d17fb0e8db52b43c1786f9453afb3d4aafe",
+      "path": "source/deps/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_18/schedule.hpp",
+      "sha256": "40b3cf97d789383aaa9e0abb7a756e55288a4003780d73c8911ca4f4e893aceb"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_19/schedule.hpp",
+      "original_sha256": "06b3f98a1b37133cf6a9ac1e1c6e4594d1c49fa5475741ef14f679e5cbc9dfcd",
+      "path": "source/deps/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_19/schedule.hpp",
+      "sha256": "05c3b0b26cd70b1877a455b554eaaba11b106f33ab0f43edfdefd9070618aab0"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_20/schedule.hpp",
+      "original_sha256": "e281e1a79d033ae1c11707e717bc9d6cc07f6df6492223db1612e5da7a8da21d",
+      "path": "source/deps/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_20/schedule.hpp",
+      "sha256": "67d8d92a33c4f26f418d02c78ca21867605233517be39d26e247ae8f3b9e12c8"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_23/schedule.hpp",
+      "original_sha256": "ac3bd082009d8f91e1823bb1c08c6195ecbbc00f9d47ad22fcf5572877a99829",
+      "path": "source/deps/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_23/schedule.hpp",
+      "sha256": "54ddf5ea2db32d601036ec9983597ae3359b18313c1b2a212e1201e66dbe62fe"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_24/schedule.hpp",
+      "original_sha256": "92821eafa26ec8636888809446d494abb0103bcd04041ea28e78de8046db4566",
+      "path": "source/deps/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_24/schedule.hpp",
+      "sha256": "3d67e2d0501661c50ec9f30b6e4e71a7769b4d15ff4fe295db5aed3c2d87bd90"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_25/schedule.hpp",
+      "original_sha256": "ac3b6d1158937a5a5951c2ff804d6f7fb89375082695baaab39ea1726a5f8f70",
+      "path": "source/deps/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_25/schedule.hpp",
+      "sha256": "57d7b7fe889474ac9e201cce99857587ec7f1f47d9774ba5c8c979acbe85e03b"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_26/schedule.hpp",
+      "original_sha256": "2a9e0e728e6cf4d5c87d6083861604dfb5efd256a961c6c4f47f2c10524e626a",
+      "path": "source/deps/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_26/schedule.hpp",
+      "sha256": "23865bae0d8b3b81d208da0735c1f3d97ef7bd2a5c52b83b61c284d4452e8598"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_27/schedule.hpp",
+      "original_sha256": "3c3b78782557da75cb9048ff81cdc7bd246f8fae4c24d5ef8c0b8821abee927a",
+      "path": "source/deps/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_27/schedule.hpp",
+      "sha256": "5492a682a0154fd8a19231ba16df1dd393da607864cd2f4f911d6d06cf508a6c"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_8/schedule.hpp",
+      "original_sha256": "764ab97fb68eacaf7c2bafefe259e6be1036d645eb403affe01e97fd4688e0c2",
+      "path": "source/deps/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_8/schedule.hpp",
+      "sha256": "754b8c901fde947272b923254f96899b5c22eda4c6a94620aeacfdd62e5d5a76"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_9/schedule.hpp",
+      "original_sha256": "6b25017bf75728841d15b187b5002ceb4c86fc13bbd41eeb8909ab127da8fa74",
+      "path": "source/deps/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_9/schedule.hpp",
+      "sha256": "61d4019434a44e4d6ef3c9a9a6e0ade53c90526e4f8e9f04a37b428db5e5d6a4"
+    }
+  ]
+}

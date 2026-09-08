@@ -1,0 +1,19 @@
+lto-wrapper: warning: using serial compilation of 16 LTRANS jobs
+lto-wrapper: note: see the ‘-flto’ option documentation for more information
+/usr/bin/ld: /tmp/ccIfHlx6.ltrans8.ltrans.o: in function `compositions_sale_copy::investment_context_guarded_001_best::Agent::Agent() [clone .lto_priv.0]':
+<artificial>:(.text+0xf7c6): undefined reference to `compositions_sale_copy::top_replay_library::Agent::Agent(int)'
+/usr/bin/ld: /tmp/ccIfHlx6.ltrans14.ltrans.o: in function `compositions_sale_copy::DeferredAnimalAgent<compositions_sale_copy::shop_herd_guarded_001_best::Agent>::act(kag::agent::AgentObservation const&, kag::agent::DecisionBudget const&, kag::Action&)':
+<artificial>:(.text+0x1353a): undefined reference to `compositions_sale_copy::top_replay_library::Agent::act(kag::agent::AgentObservation const&, kag::agent::DecisionBudget const&, kag::Action&)'
+collect2: error: ld returned 1 exit status
+
+ERROR conda.cli.main_run:execute(127): `conda run g++ -std=c++20 -march=native -mtune=native -fno-exceptions -fno-rtti -fno-math-errno -fno-semantic-interposition -fno-plt -pthread -O3 -DNDEBUG -flto -DCOMPOSITIONS_PAIR -I /home/pavel/Programming/kaggriculture -I /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/include -I /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/71e25182834302d43d0e /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/src/arena.cpp /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/public_router/source/agent.cpp /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/opening_funding_sep08_001/proposals/opening_funding_q13/source/agent.cpp -o /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/71e25182834302d43d0e/arena` failed. (See above for error)
+Traceback (most recent call last):
+  File "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py", line 95, in <module>
+    main()
+  File "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py", line 90, in main
+    subprocess.run(command, check=True)
+  File "/home/pavel/anaconda3/envs/kaggriculture/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['conda', 'run', '-n', 'kaggriculture', 'g++', '-std=c++20', '-march=native', '-mtune=native', '-fno-exceptions', '-fno-rtti', '-fno-math-errno', '-fno-semantic-interposition', '-fno-plt', '-pthread', '-O3', '-DNDEBUG', '-flto', '-DCOMPOSITIONS_PAIR', '-I', '/home/pavel/Programming/kaggriculture', '-I', '/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/include', '-I', '/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/71e25182834302d43d0e', '/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/src/arena.cpp', '/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/public_router/source/agent.cpp', '/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/opening_funding_sep08_001/proposals/opening_funding_q13/source/agent.cpp', '-o', '/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/71e25182834302d43d0e/arena']' returned non-zero exit status 1.
+
+ERROR conda.cli.main_run:execute(127): `conda run python /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py --pair opening_funding_q13 public_router` failed. (See above for error)

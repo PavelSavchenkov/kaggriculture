@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "name": "junghoon_wool_sales",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::junghoon_wool_sales::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "source/deps/candidates/junghoon_wool_sales/source/agent.cpp",
+    "source/deps/league/top_replay_library/source/agent.cpp"
+  ]
+}

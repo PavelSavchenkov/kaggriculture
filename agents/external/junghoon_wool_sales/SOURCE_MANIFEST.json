@@ -1,0 +1,65 @@
+{
+  "original_package": "experiments/v6/sep07_compositions_v0/candidates/junghoon_wool_sales",
+  "original_manifest": {
+    "format_version": 1,
+    "name": "junghoon_wool_sales",
+    "header": "source/agent.hpp",
+    "type": "compositions::junghoon_wool_sales::Agent",
+    "sources": [
+      "source/agent.cpp",
+      "../../league/top_replay_library/source/agent.cpp"
+    ]
+  },
+  "snapshot_base_commit": "f07754bb5c86bed6c77a309e4d9b2d5f53d74008",
+  "namespace_replacements": {
+    "compositions": "catalog_junghoon_wool_sales_compositions",
+    "compositions_sale_copy": "catalog_junghoon_wool_sales_sale",
+    "kag::agents": "kag::catalog_junghoon_wool_sales_agents",
+    "kag::agents_sale_copy": "kag::catalog_junghoon_wool_sales_sale_agents",
+    "kag::native": "kag::catalog_junghoon_wool_sales_native",
+    "kag::sixday_native": "kag::catalog_junghoon_wool_sales_sixday"
+  },
+  "transformation": "Copied compiler dependency closure; renamed private namespaces, resolved include paths, and added a forwarding API wrapper with a default constructor. No policy decisions changed.",
+  "lineage_entry": "../../../handoff/sep08_agent/docs/lineage.md",
+  "evidence_entry": "../../../handoff/sep08_agent/readme.md",
+  "rating": "No independently measured Kaggle rating for this catalog package. See dated source leaderboard evidence in the handoff.",
+  "reuse": "Preserve source attribution. No new license is granted for third-party notebook or replay content.",
+  "files": [
+    {
+      "original": "experiments/v6/sep07_compositions_v0/candidates/junghoon_wool_sales/source/agent.cpp",
+      "original_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "path": "source/deps/candidates/junghoon_wool_sales/source/agent.cpp",
+      "sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/candidates/junghoon_wool_sales/source/agent.hpp",
+      "original_sha256": "565a01edee561ae00ad85bab8adb118af1db19ae09e09b182e5091831d7b0bdd",
+      "path": "source/deps/candidates/junghoon_wool_sales/source/agent.hpp",
+      "sha256": "2dd1b213c06ef85667486540f194ec1f32a824fb6a67ae5d2e0e0ed85b828c43"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/animal_ticket.hpp",
+      "original_sha256": "48754af8f8d422e36d976f9cf1ca82f108379675e92394809fe25c2331247a2f",
+      "path": "source/deps/include/animal_ticket.hpp",
+      "sha256": "da4850323a7f670ba010dba57946ee0664fd6ccfaa98ee5597ba12cfe0697335"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.cpp",
+      "original_sha256": "e01111d8be2aed27711d2ccaabb3a3730398dd022ea767db9c7080140f83be0f",
+      "path": "source/deps/league/top_replay_library/source/agent.cpp",
+      "sha256": "865f220fba1ddca1d2f98a0c7dd896add609753f65cbc6dfa32b042ea36b94ed"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.hpp",
+      "original_sha256": "7a34ba395b73d511860dc827e8895e0b7f816203ad4dc968b692f89609dd800d",
+      "path": "source/deps/league/top_replay_library/source/agent.hpp",
+      "sha256": "8d2ffc8c292e009fa504f0ee0d163de6d7dc26cd83672942f50e6ddd464bc9a3"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/top_replay_library/source/tapes.inc",
+      "original_sha256": "a90688675433a879056e29e50f1795d75edfd27b5fc07781b9e4f0472ca6c94e",
+      "path": "source/deps/league/top_replay_library/source/tapes.inc",
+      "sha256": "a90688675433a879056e29e50f1795d75edfd27b5fc07781b9e4f0472ca6c94e"
+    }
+  ]
+}

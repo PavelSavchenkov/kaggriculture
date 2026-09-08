@@ -1,0 +1,26 @@
+{
+  "packaging": "Private namespace/include rewrite and forwarding API construction; no policy decisions changed.",
+  "operational": {
+    "name": "crop_value_m2_t4",
+    "games": 16,
+    "typed_generic_thread_records_equal": 4,
+    "self_pass_complete": true
+  },
+  "debug": {
+    "name": "crop_value_m2_t4",
+    "debug_self_pass_games": 8,
+    "generic_complete_records_equal": 8
+  },
+  "session_parity_matchups": [
+    {
+      "a": "empty_sale_slots_m2",
+      "b": "crop_value_m2_t4",
+      "games": 8,
+      "reference": "experiments/v6/sep07_compositions_v0/runs/animal_repair_sep08_001/broad_2360000/empty_sale_slots_m2_vs_crop_value_m2_t4.json",
+      "reference_sha256": "446d7e0ed3af2f1e41f55a9bd8f2fc8e9dd6832d9496b27a830116e0588f5d14"
+    }
+  ],
+  "cold_source_parity_games": 0,
+  "complete_direct_results": [],
+  "scope": "Finite full-game witnesses; does not imply equivalence on every possible observation or a research promotion. Full shared reports: handoff/sep08_agent/evidence/."
+}

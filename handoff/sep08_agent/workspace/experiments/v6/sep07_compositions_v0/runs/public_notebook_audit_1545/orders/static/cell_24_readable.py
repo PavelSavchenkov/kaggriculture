@@ -1,0 +1,13 @@
+p0 = A['ledger'][A['ledger'].player == 0]
+daily = p0.assign(kind=p0.category.map(lambda c: 'revenue' if c == 'revenue' else 'cost')).pivot_table(index='day', columns='kind', values='cash', aggfunc='sum').reindex(range(int(A['last_day']) + 1)).fillna(0.0)
+fig, ax = plt.subplots(figsize=(8, 3.4))
+ax.bar(daily.index, daily.get('revenue', 0.0), width=0.72, color=BLUE, label='sales revenue')
+ax.bar(daily.index, daily.get('cost', 0.0), width=0.72, color=RED, label='spending')
+ax.axhline(0, lw=1, color=INK_2)
+ax.set_xlabel('day')
+ax.set_ylabel('cash flow')
+ax.yaxis.set_major_formatter(mticker.StrMethodFormatter('${x:,.0f}'))
+ax.grid(axis='y')
+ax.legend(loc='upper left', ncols=2)
+ax.set_title('Daily cash flow: when the farm was buying, and when it was earning')
+plt.show()

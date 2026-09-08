@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "name": "shop_herd_guarded_001_best",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::shop_herd_guarded_001_best::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "source/deps/candidates/shop_herd_guarded_001_best/source/agent.cpp",
+    "source/deps/league/top_replay_library/source/agent.cpp"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "cases": 1800,
+  "changed_cases": 547,
+  "errors": [],
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "g++",
+    "-std=c++20",
+    "-O2",
+    "-DNDEBUG",
+    "-fno-exceptions",
+    "-fno-rtti",
+    "-I",
+    "/home/pavel/Programming/kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/farm_signal_sep08_001/check_guard.cpp",
+    "-o",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/farm_signal_sep08_001/guard_check"
+  ],
+  "source_sha256": "6cc3a4162fd1367cb656e4acc9669da61adaac151514ac670a8c72830a455544",
+  "fixture_sha256": "8e0cab0ed1e7ae4931f70699f77b8c9535a9d6f92aab2db84326bbbe4dc1ed09",
+  "scope": "Pure capacity decision parity on all five routes, day boundaries, tied prices, full/empty/zero orders, carried stocks and requested service effects. Whole-game source parity and strength are separate."
+}

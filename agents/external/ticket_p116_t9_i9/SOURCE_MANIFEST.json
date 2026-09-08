@@ -1,0 +1,65 @@
+{
+  "original_package": "experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p116_v4_001/proposals/ticket_p116_t9_i9",
+  "original_manifest": {
+    "format_version": 1,
+    "name": "ticket_p116_t9_i9",
+    "header": "source/agent.hpp",
+    "type": "compositions::ticket_p116_t9_i9::Agent",
+    "sources": [
+      "source/agent.cpp",
+      "../../../../league/top_replay_library/source/agent.cpp"
+    ]
+  },
+  "snapshot_base_commit": "f07754bb5c86bed6c77a309e4d9b2d5f53d74008",
+  "namespace_replacements": {
+    "compositions": "catalog_ticket_p116_t9_i9_compositions",
+    "compositions_sale_copy": "catalog_ticket_p116_t9_i9_sale",
+    "kag::agents": "kag::catalog_ticket_p116_t9_i9_agents",
+    "kag::agents_sale_copy": "kag::catalog_ticket_p116_t9_i9_sale_agents",
+    "kag::native": "kag::catalog_ticket_p116_t9_i9_native",
+    "kag::sixday_native": "kag::catalog_ticket_p116_t9_i9_sixday"
+  },
+  "transformation": "Copied compiler dependency closure; renamed private namespaces, resolved include paths, and added a forwarding API wrapper with a default constructor. No policy decisions changed.",
+  "lineage_entry": "../../../handoff/sep08_agent/docs/lineage.md",
+  "evidence_entry": "../../../handoff/sep08_agent/readme.md",
+  "rating": "No independently measured Kaggle rating for this catalog package. See dated source leaderboard evidence in the handoff.",
+  "reuse": "Preserve source attribution. No new license is granted for third-party notebook or replay content.",
+  "files": [
+    {
+      "original": "experiments/v6/sep07_compositions_v0/include/animal_ticket.hpp",
+      "original_sha256": "48754af8f8d422e36d976f9cf1ca82f108379675e92394809fe25c2331247a2f",
+      "path": "source/deps/include/animal_ticket.hpp",
+      "sha256": "b65311d10d55fc2ca2ef6fecae669bd46eb2fa3f43abf0f617f5106583025782"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.cpp",
+      "original_sha256": "e01111d8be2aed27711d2ccaabb3a3730398dd022ea767db9c7080140f83be0f",
+      "path": "source/deps/league/top_replay_library/source/agent.cpp",
+      "sha256": "b7f2f77e42fb19f2962287ddbdda998b46f50fc74264ba77b06587a97c13f784"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.hpp",
+      "original_sha256": "7a34ba395b73d511860dc827e8895e0b7f816203ad4dc968b692f89609dd800d",
+      "path": "source/deps/league/top_replay_library/source/agent.hpp",
+      "sha256": "10304f6946cf3775c5b4e17a0986d464100ee15857950135f2fe3291a51c7745"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/top_replay_library/source/tapes.inc",
+      "original_sha256": "a90688675433a879056e29e50f1795d75edfd27b5fc07781b9e4f0472ca6c94e",
+      "path": "source/deps/league/top_replay_library/source/tapes.inc",
+      "sha256": "a90688675433a879056e29e50f1795d75edfd27b5fc07781b9e4f0472ca6c94e"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p116_v4_001/proposals/ticket_p116_t9_i9/source/agent.cpp",
+      "original_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "path": "source/deps/runs/animal_tickets_market_p116_v4_001/proposals/ticket_p116_t9_i9/source/agent.cpp",
+      "sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/animal_tickets_market_p116_v4_001/proposals/ticket_p116_t9_i9/source/agent.hpp",
+      "original_sha256": "bcd12ffb9cc0fcde935f7bb14d1d8d085f662614feb443cda3d8f680542a341c",
+      "path": "source/deps/runs/animal_tickets_market_p116_v4_001/proposals/ticket_p116_t9_i9/source/agent.hpp",
+      "sha256": "1da7a6004ce0ffa36739bc07bf6ec2731a045327128845608ba528a337ccfcb3"
+    }
+  ]
+}

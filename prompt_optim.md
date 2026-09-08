@@ -6,6 +6,31 @@ attachments, or the author's uncommitted experiment. Paths below are relative to
 the repository root. Historical results are starting evidence, not a substitute
 for checking the agents available in your checkout.
 
+## September 8 continuation package
+
+Read `handoff/sep08_agent/readme.md` first. It contains the full restored pipeline,
+source/evidence inventory, exact deployment rebuild, working and failed ideas,
+league, promotion gates and concrete unfinished work. It supersedes September 7
+labels of “current” or “last submitted” below.
+
+- `agents/external/animal_repair_q24_premium_m2/` is the last submitted policy:
+  IDs 56101451 and identical repeat 56102764, both COMPLETE. The exact frozen
+  C++ version won 4,040/4,096 native games against the teammate.
+- `agents/external/empty_sale_slots_m2/` is still the accepted research reference.
+  The submitted agent's broad win gain did not pass the required native-margin
+  confidence gate. Keep its King regression visible.
+- `agents/external/cow_service_retained_q24_premium_m2/` is a useful discovery
+  successor: cheaper cow schedules, unchanged wins and investment choices.
+- `agents/inhouse/early_melon_b98_m1/` is the independent cold reference and
+  remains much weaker than the mainline.
+
+Use `handoff/sep08_agent/reproduce.py` and `tools/run_comparison.py` to restore
+and test the loop without the original session folder. Study all 45 listed
+comparison agents and the newer public-port evidence. Keep source provenance,
+branch activation, estimated-versus-realized errors and failed attempts.
+The most useful next tasks are general post-edit purchase funding, rival-flow
+forecasting, broader complete farms, and general continuation repair.
+
 ## Objective and working agreement
 
 Work for 24 hours from this run's start, unless I provide a different duration or

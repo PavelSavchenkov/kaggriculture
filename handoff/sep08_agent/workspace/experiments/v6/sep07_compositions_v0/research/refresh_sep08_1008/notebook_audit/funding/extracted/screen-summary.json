@@ -1,0 +1,31 @@
+{
+  "decision": "NO-GO",
+  "candidate_sha256": "7a3c12b2ec8efe8fac107ce984e5951e92e8595dced39fcd787536cbcc887607",
+  "engine_version": "1.32.7",
+  "seed_start": 2026091000,
+  "seed_count": 24,
+  "seat_swapped": true,
+  "summary": {
+    "exp20260908_01 vs ahmed_v23": {
+      "games": 48,
+      "valid": true,
+      "wins": 0,
+      "draws": 0,
+      "points": 0.0,
+      "mean_margin": -6432.1875,
+      "median_margin": -4358.0,
+      "p10_margin": -14800.1,
+      "variance": 25674716.623670213,
+      "runtime_max": 0.03238591599802021,
+      "monitored_faults": {
+        "atomic_plant_rejections": 0,
+        "contract_errors": 2360,
+        "overflow_units": 0,
+        "unfilled_requested_market_units": 0,
+        "unit_noops": 9589
+      }
+    }
+  },
+  "candidate_96_seed_run": false,
+  "competition_submitted": false
+}

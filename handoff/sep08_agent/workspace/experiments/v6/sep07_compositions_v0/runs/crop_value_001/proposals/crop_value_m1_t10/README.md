@@ -1,0 +1,3 @@
+# crop_value_m1_t10
+
+Current broad reference with the complete fertilization004_0 crop continuation selected at day20hour0. Mode1,threshold10. Mode0always selects it; mode1requires twice current strawberry price minus current fertilizer price to exceed threshold; mode2requires observed strawberry shop demand at least threshold. This cheap heuristic uses only public observations; no future shops, opponent private state or seed. Both controllers use independent instance state and consume actual observations. Sources retain Justin/V30/terminal/day7shop/generalday11animal lineage through the parent package. Local change: conditional productive fertilization learned from owncash−17/rivalcash+12floor-price failures. Discovery only; no promotion or submission.

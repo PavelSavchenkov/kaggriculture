@@ -1,0 +1,35 @@
+[
+  [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "g++",
+    "-std=c++20",
+    "-O3",
+    "-DNDEBUG",
+    "-march=native",
+    "-mtune=native",
+    "-fno-exceptions",
+    "-fno-rtti",
+    "-fno-math-errno",
+    "-fno-semantic-interposition",
+    "-fno-plt",
+    "-flto",
+    "-I",
+    "/home/pavel/Programming/kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/early_melon_sep08_001/search.cpp",
+    "-o",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/early_melon_sep08_001/search"
+  ],
+  [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/early_melon_sep08_001/search",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/early_melon_sep08_001/INPUT_PLANS.txt",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/cold_renewal_sep08_001/scenarios.txt",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/early_melon_sep08_001/ESTIMATES.json"
+  ]
+]

@@ -1,0 +1,31 @@
+#pragma once
+#include "../../../../../../../../../../agents/common/api/agent_api.hpp"
+
+namespace compositions_crop_parent {
+// One complete crop-family alternative, chosen from already observed shops.
+// A failed entry contract keeps the base, including its later improvements.
+template<class Base,class Changed> class CropRotationShopGate {
+    Base base_;
+    Changed changed_;
+    int minimum_tomatoes_;
+    int crop_mode_=0;
+    bool selected_=false;
+public:
+    void set_crop_mode(int mode){crop_mode_=mode;}
+    bool crop_selected()const{return selected_;}
+    explicit CropRotationShopGate(int minimum_tomatoes):minimum_tomatoes_(minimum_tomatoes){}
+    static kag::agent::AgentInfo info(){return {"crop_rotation_shop_gate"};}
+    void reset(const kag::agent::AgentInit& init){base_.reset(init);changed_.reset(init);selected_=false;}
+    void act(const kag::agent::AgentObservation& o,const kag::agent::DecisionBudget& budget,kag::Action& action) {
+        kag::Action alternative;base_.act(o,budget,action);changed_.act(o,budget,alternative);
+        if(o.day==12 && o.hour==0) {
+            int demand=0;
+            for(int i=0;i<o.n_shops;++i)
+                demand+=bool(kag::SHOP_MASK[o.shops[i]]&(1u<<kag::TOMATO));
+            const bool choose=crop_mode_==0 ? demand>=minimum_tomatoes_ : crop_mode_==2;
+            selected_=choose && (changed_.matched_days()&(uint32_t(1)<<12));
+        }
+        if(selected_)action=alternative;
+    }
+};
+}

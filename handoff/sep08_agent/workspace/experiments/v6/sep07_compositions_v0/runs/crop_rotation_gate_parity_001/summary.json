@@ -1,0 +1,87 @@
+[
+  {
+    "agent": "crop_rotation_t2",
+    "opponent": "investment_context_guarded_001_best",
+    "summary": {
+      "agent_a": "crop_rotation_t2",
+      "agent_b": "investment_context_guarded_001_best",
+      "seconds": 0.462893,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.541016,
+      "mean_cash": 94610.9,
+      "mean_margin": 82.166,
+      "cash_cvar10": 55233,
+      "margin_cvar10": -2154.4,
+      "pass_J": 86735.3
+    }
+  },
+  {
+    "agent": "crop_rotation_t2",
+    "opponent": "teammate_shoprouter",
+    "summary": {
+      "agent_a": "crop_rotation_t2",
+      "agent_b": "teammate_shoprouter",
+      "seconds": 0.501612,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.988281,
+      "mean_cash": 92595.7,
+      "mean_margin": 10342.4,
+      "cash_cvar10": 55088.7,
+      "margin_cvar10": 2383.19,
+      "pass_J": 85094.3
+    }
+  },
+  {
+    "agent": "crop_rotation_t2",
+    "opponent": "public_router",
+    "summary": {
+      "agent_a": "crop_rotation_t2",
+      "agent_b": "public_router",
+      "seconds": 0.468318,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.914062,
+      "mean_cash": 94148.6,
+      "mean_margin": 5830.98,
+      "cash_cvar10": 57103.6,
+      "margin_cvar10": -1726.87,
+      "pass_J": 86739.6
+    }
+  },
+  {
+    "agent": "crop_rotation_t2",
+    "opponent": "king_rc4",
+    "summary": {
+      "agent_a": "crop_rotation_t2",
+      "agent_b": "king_rc4",
+      "seconds": 0.52439,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.738281,
+      "mean_cash": 92289.5,
+      "mean_margin": 3731.87,
+      "cash_cvar10": 55454.3,
+      "margin_cvar10": -7534.19,
+      "pass_J": 84922.5
+    }
+  },
+  {
+    "agent": "crop_rotation_t2",
+    "opponent": "public_router_v5",
+    "summary": {
+      "agent_a": "crop_rotation_t2",
+      "agent_b": "public_router_v5",
+      "seconds": 0.482303,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.837891,
+      "mean_cash": 93992.3,
+      "mean_margin": 3344.45,
+      "cash_cvar10": 55995.6,
+      "margin_cvar10": -3698.96,
+      "pass_J": 86393
+    }
+  }
+]

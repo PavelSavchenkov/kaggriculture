@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "name": "yusuke_sep08_m2",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::yusuke_sep08_m2::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "source/deps/runs/yusuke_port_sep08_001/proposals/yusuke_sep08_m2/source/agent.cpp",
+    "source/deps/runs/yusuke_port_sep08_001/source/policy.cpp"
+  ]
+}

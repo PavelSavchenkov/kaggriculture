@@ -1,0 +1,17 @@
+start=55 home=54 requirements=0 invariants=1
+hour 9: worker 12 action failed op=10 arg=0 n=1 at=(1,0)
+hour 11: worker 12 action failed op=10 arg=0 n=1 at=(2,0)
+hour 12: worker 12 action failed op=1 arg=0 n=1 at=(2,0)
+hour 13: worker 12 action failed op=10 arg=0 n=1 at=(2,0)
+hour 20: worker 12 action failed op=6 arg=0 n=1 at=(3,5)
+hour 22: shed availability missing item=7 required=19 present=7
+tile_work for tile 3 was not completed
+tile_work for tile 12 was not completed
+tile_work for tile 13 was not completed
+required_outcomes[7] metric=12 subject=7 tile=-1 through_hour=-1 value=7 bounds=[0,0]
+required_end_tiles[3] tile=3 kind=2 item=11 was not reached
+required_end_tiles[12] tile=12 kind=2 item=11 was not reached
+required_end_tiles[13] tile=13 kind=2 item=11 was not reached
+required_end_tiles[64] tile=64 kind=1 item=-1 was not reached
+required_end_tiles[81] tile=81 kind=0 item=-1 was not reached
+end_shed was not reached

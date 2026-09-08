@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-09-08T03:47:16.680871+00:00",
+  "parent": {
+    "name": "observed_sale_lead_start_216",
+    "path": "runs/observed_sale_lead_004/proposals/observed_sale_lead_start_216",
+    "promoted_utc": "2026-09-08T00:51:01.675772+00:00",
+    "report": "results/observed_sale_lead_start216_validation.json",
+    "previous": "rival_wool_context_v3",
+    "committed_catalog": "agents/external/bohann_opening_v1",
+    "last_submission": "investment_context_guarded_001_best"
+  },
+  "variants": [
+    "empty_sale_slots_m0",
+    "empty_sale_slots_m1",
+    "empty_sale_slots_m2"
+  ],
+  "evidence": "runs/arlene_v4_sep08_001/CLAMP_WITNESSES.json",
+  "hypothesis": "Empty SELL slots are not economically neutral when a later order moves relative to the rival. Test removal on the accepted agent, with a separate late non-input-only version preserving its initial funding.",
+  "lineage": "New local output-order transform, motivated by exact Arlene source-clamp failure. No new external policy code copied; all inherited source lineage remains intact.",
+  "discovery": {
+    "seeds": 64,
+    "seed_start": 1000,
+    "seat_mode": "both",
+    "opponents": [
+      "observed_sale_lead_start_216",
+      "public_router_v52",
+      "ahmed_v23",
+      "junghoon_wool_sales",
+      "john_131",
+      "teammate_shoprouter",
+      "king_rc4",
+      "bohann_opening_v1"
+    ]
+  },
+  "source_hashes": {
+    "runs/observed_sale_lead_004/proposals/observed_sale_lead_start_216/source/agent.hpp": "618eb49c327d093657c2c8953a49dc86e5041c9fbc23ba6e3fd43961e973ec52",
+    "runs/observed_sale_lead_004/proposals/observed_sale_lead_start_216/agent.json": "3f257057372c4c0e71d26cf4d576094620a2aead4ac97356b01f9882b5e7ce46",
+    "runs/empty_sale_slots_sep08_001/prepare.py": "d6a7c9d8b041845e0653f4f6ae602a1dc96c3ea78b6d450f8727724951105a47"
+  }
+}

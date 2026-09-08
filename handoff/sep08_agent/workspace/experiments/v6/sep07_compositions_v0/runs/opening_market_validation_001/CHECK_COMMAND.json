@@ -1,0 +1,21 @@
+[
+  "conda",
+  "run",
+  "-n",
+  "kaggriculture",
+  "python",
+  "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/opening_market_validation_001/check.py",
+  "opening_market_checks_001",
+  "--agent",
+  "opening_q32_b13_v1",
+  "--parent",
+  "bohann_opening_v1",
+  "--native-seed",
+  "1763000",
+  "--generic",
+  "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/ff1633fa78d9d8bc3b32/arena",
+  "--pair",
+  "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/650aa0168b484909fcf4/arena",
+  "--debug",
+  "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/c92f0da9baa86d0974da/arena"
+]

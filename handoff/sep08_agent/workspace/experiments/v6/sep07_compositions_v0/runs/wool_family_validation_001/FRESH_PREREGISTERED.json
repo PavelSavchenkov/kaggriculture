@@ -1,0 +1,107 @@
+{
+  "created_utc": "2026-09-07T21:19:07.807396+00:00",
+  "candidate": "wool_family_context_v1",
+  "baseline": "late_value_s32_t0_r05",
+  "seed_start": 1870000,
+  "seeds": 512,
+  "seat_mode": "both",
+  "opponents": [
+    "animal_adaptive_r1_c0_b0",
+    "binghua_116",
+    "bohann_opening_v1",
+    "crop_mix_t2_wheat",
+    "crop_rotation_t2_berry",
+    "crop_value_m2_t4",
+    "investment_context_guarded_001_best",
+    "john_131",
+    "junghoon_wool_sales",
+    "king_rc4",
+    "late_goose_wheat_context",
+    "late_value_s32_t0_r05",
+    "opening_q32_b13_v1",
+    "opening_router_v4",
+    "public_capacity_router",
+    "public_router",
+    "public_router_v5",
+    "public_router_v52",
+    "public_sixday",
+    "shop_herd_guarded_001_best",
+    "shop_herd_s6_m3_g1",
+    "teammate_shoprouter",
+    "ticket_p116_t9_i9",
+    "wheat_one_fert"
+  ],
+  "grouping": {
+    "prior_versions": [
+      "shop_herd_guarded_001_best",
+      "shop_herd_s6_m3_g1",
+      "opening_router_v4",
+      "animal_adaptive_r1_c0_b0",
+      "investment_context_guarded_001_best",
+      "crop_value_m2_t4",
+      "crop_rotation_t2_berry",
+      "wheat_one_fert",
+      "crop_mix_t2_wheat",
+      "bohann_opening_v1"
+    ],
+    "teammate": [
+      "teammate_shoprouter"
+    ],
+    "public_controllers": [
+      "king_rc4",
+      "public_router",
+      "public_capacity_router",
+      "public_sixday",
+      "public_router_v5",
+      "public_router_v52"
+    ],
+    "top_replays": [
+      "binghua_116",
+      "junghoon_wool_sales",
+      "john_131",
+      "ticket_p116_t9_i9"
+    ]
+  },
+  "historical_grouping": {
+    "prior_versions": [
+      "shop_herd_guarded_001_best",
+      "shop_herd_s6_m3_g1",
+      "opening_router_v4"
+    ],
+    "teammate": [
+      "teammate_shoprouter"
+    ],
+    "public_controllers": [
+      "king_rc4",
+      "public_router",
+      "public_capacity_router",
+      "public_sixday"
+    ],
+    "top_replays": [
+      "binghua_116",
+      "junghoon_wool_sales",
+      "john_131",
+      "ticket_p116_t9_i9"
+    ]
+  },
+  "gates": {
+    "current_group_utility_gain_95_lower": 0,
+    "historical_group_utility_gain_95_lower": -0.0025,
+    "minimum_individual_utility_gain": -0.02,
+    "minimum_paired_mean_margin_gain": 0,
+    "direct_parent_utility": 0.5,
+    "direct_parent_mean_margin": 0
+  },
+  "scope": "Six simple observed-shop rules compared on6144 paired diagnosis contexts (12288 games), all1024 seeds reused1000..2023. Rule6 has positive means and nondecreasing utility for allthree sampled opponents. No diagnosis split is called untouched.",
+  "extra_requirement": "NewpublicV5/2 is included in current grouping before results; exact source/course and runtime-selector parity required.",
+  "candidate_files_sha256": {
+    "runs/v52_family_001/source/entry.hpp": "dd36a16dc13002c3634e5ae6952bed9beac21a0de5d6c2551ed09b58c8867a3e",
+    "runs/v52_family_001/source/transfer.hpp": "0c9b8b03d6e64ad5282e990de4499dd161d16ebcc4a719293d8ee9499258d743",
+    "runs/v52_family_001/source/improved.hpp": "07d5caca6d30dcd7e25abec2f34b1ca5f5cb1dfd546415a2305bd35be506c819",
+    "runs/v52_family_001/proposals/wool_family_context_v1/IMPORT.json": "4c857f3faf7db941c6b06dc198a4e8b687275e9bf6834fcc5c76c3774426e6ca",
+    "runs/v52_family_001/proposals/wool_family_context_v1/agent.json": "372ad76180bc5afec97fb8dc14771430376a609774344965b0200532dc4a38f5",
+    "runs/v52_family_001/proposals/wool_family_context_v1/README.md": "9f19e109c789231011e2aebd5831c691dca7ab6abb836eab4ef61558b40930bb",
+    "runs/v52_family_001/proposals/wool_family_context_v1/source/agent.hpp": "33bb1bf82915a97f38db1bf1072b80e9e40a6d452695c7f0b4fd5abe1c2e51dc",
+    "runs/v52_family_001/proposals/wool_family_context_v1/source/agent.cpp": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+  }
+}

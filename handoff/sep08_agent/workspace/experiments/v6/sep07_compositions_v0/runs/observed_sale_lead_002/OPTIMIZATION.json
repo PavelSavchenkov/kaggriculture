@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-09-07T23:48:02.173201+00:00",
+  "parent": "observed_sale_lead_v1",
+  "source_sha256": "6e8d7378730955841113682ee0cc3c24f1453fa43c15dd20e80636cc7822a0d9",
+  "new_sha256": "7c1439bcce692a00fad1009a6d8ce2b0b51d98585c7496ecad5849d0673efc1f",
+  "reason": "Completed256game prototype takes140.068seconds; parent9.46499. Skip copies when full market or no eligible available product; predicate implies previous sale-lead loop cannot add an order.",
+  "required_parity": "All completed full prototype game records must match fast equivalent. Fresh validation only after parity and broad screen.",
+  "limits": "No change to approximate next-observation model; only fewer fruitless calls. Diagnostic forecast counters intentionally count eligible opportunities only."
+}

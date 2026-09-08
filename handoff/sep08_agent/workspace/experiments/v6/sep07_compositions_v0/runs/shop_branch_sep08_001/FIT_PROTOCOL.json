@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-09-08T08:39:17.049085+00:00",
+  "source": "runs/cold_renewal_sep08_001/fresh",
+  "baseline": "service_bank_p362_m2",
+  "candidate": "cold_renewal_p98",
+  "train_seeds": [
+    2400000,
+    2400063
+  ],
+  "validation_seeds": [
+    2400064,
+    2400127
+  ],
+  "features": "Counts among only first two observed shops: milk, yarn, egg, carrot shop instances.",
+  "rules": "Single count>=1, >=2 or ==0; two predicates on different features combined by AND. Trigger16..48 of64training seeds. Include never-switch control.",
+  "selection": "Largest training utility gain, then margin gain, then fewer conditions. Validation is evaluated only after rule choice.",
+  "limitations": "Retrospective seed split of previously exposed audit data, not a fresh or blind strength claim. Standalone outcome mixing additionally requires the common legal prefix check."
+}

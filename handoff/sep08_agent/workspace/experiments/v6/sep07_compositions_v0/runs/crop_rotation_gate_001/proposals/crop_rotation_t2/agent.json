@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "crop_rotation_t2",
+  "header": "source/agent.hpp",
+  "type": "compositions::crop_rotation_t2::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../../../league/top_replay_library/source/agent.cpp"
+  ]
+}

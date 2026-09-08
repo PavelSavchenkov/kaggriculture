@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "name": "late_force_goose",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::late_force_goose::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../../../league/top_replay_library/source/agent.cpp",
+    "../../../../league/public_router/source/agent.cpp"
+  ]
+}

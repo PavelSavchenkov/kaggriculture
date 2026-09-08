@@ -1,0 +1,53 @@
+{
+  "leaf": "off",
+  "kind": "no_care",
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/build/audit_off",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/goose_c31_d13_off_002",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/off_terminal_no_care_audit.txt",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/off_terminal_no_care_audit"
+  ],
+  "games": 64,
+  "activated_games": 46,
+  "produced_equal": 18,
+  "sold_equal": 64,
+  "rival_actions_equal": 64,
+  "activated_output_gain": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    0
+  ],
+  "activated_sold_gain": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "activated_cash_gain": 898,
+  "activated_hire_cost_gain": -898,
+  "activated_hires_gain": -8,
+  "mean_margin_vs_crop_control": 98.5625,
+  "min_cash_gain": 0
+}

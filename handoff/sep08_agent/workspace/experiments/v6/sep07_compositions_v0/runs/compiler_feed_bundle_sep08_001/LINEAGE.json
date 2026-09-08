@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-09-08T02:54:24.852858+00:00",
+  "variants": [
+    "compiler_feed_mixed_b1",
+    "compiler_feed_mixed_b2",
+    "compiler_feed_mixed_b4",
+    "compiler_feed_p355_b1",
+    "compiler_feed_p355_b2",
+    "compiler_feed_p355_b4",
+    "compiler_feed_p362_b1",
+    "compiler_feed_p362_b2",
+    "compiler_feed_p362_b4",
+    "compiler_feed_p4_b1",
+    "compiler_feed_p4_b2",
+    "compiler_feed_p4_b4",
+    "compiler_feed_p55_b1",
+    "compiler_feed_p55_b2",
+    "compiler_feed_p55_b4"
+  ],
+  "discovery": {
+    "seed_start": 1000,
+    "seeds": 8,
+    "seat_mode": "both",
+    "opponents": [
+      "public_router",
+      "observed_sale_lead_start_216"
+    ]
+  },
+  "parent": "runs/compiler_care_sep08_001",
+  "evidence": "runs/dated_day_service_sep08_002/RESULTS.json",
+  "source_hashes": {
+    "runs/compiler_care_sep08_001/compiler/source/agent.hpp": "d6ba6d798c08e367fa899c4341e17d8648ffdc504a395156dfafe4ed627e5e16",
+    "runs/compiler_care_sep08_001/compiler/source/agent.cpp": "ed440e5a6151bb7decbea82936f4d7d171505bc51f5db1525396b1e7b2bbde63",
+    "runs/compiler_feed_bundle_sep08_001/prepare.py": "f771e529148ba929e05f31062277038d969e2f0b0f9a267d743565eaa8ad471c"
+  },
+  "hypothesis": "Enough carried wheat can be stranded on a few workers while other workers care for unfed animals. Smaller pickup bundles may spread the existing wheat among routes.",
+  "scope": "Single physical input-distribution choice across five fixed farms. No shop selector, global work-priority change, or incumbent mutation."
+}

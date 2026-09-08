@@ -1,0 +1,100 @@
+from math import comb, sqrt
+from statistics import NormalDist
+
+def wilson(k, n, z=1.96):
+    p = k / n
+    d = 1 + z * z / n
+    centre = (p + z * z / (2 * n)) / d
+    half = z * sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / d
+    return centre - half, centre + half
+
+print(f"{'games':>7}{'wins needed':>13}{'= win rate':>12}{'95% lower':>11}")
+for n in (16, 24, 40, 60, 80, 120, 200, 400):
+    for k in range(n // 2, n + 1):
+        lo, _ = wilson(k, n)
+        if lo > 0.5:
+            print(f"{n:>7}{k:>13}{k/n:>12.3f}{lo:>11.3f}")
+            break
+
+print()
+print("Games needed for an 80% chance of detecting a true edge of this size:")
+za, zb = NormalDist().inv_cdf(0.975), NormalDist().inv_cdf(0.80)
+for p in (0.55, 0.60, 0.70):
+    n = ((za * 0.5 + zb * sqrt(p * (1 - p))) / (p - 0.5)) ** 2
+    print(f"  true win rate {p:.0%}  ->  about {int(n) + 1} games")
+
+
+# ---- cell ----
+
+import time
+from kaggle_environments import make
+
+def play(agent_a, agent_b, seed):
+    env = make("kaggriculture", configuration={"seed": seed}, debug=False)
+    env.run([agent_a, agent_b])
+    return env.state[0].reward, env.state[1].reward
+
+def head_to_head(path_a, path_b, seeds, label_a="A", label_b="B", verbose=True):
+    wins_a = wins_b = draws = 0
+    cash_a = cash_b = 0
+    t0 = time.time()
+    for i, seed in enumerate(seeds):
+        swap = (i % 2 == 1)                       # odd seeds swap seats
+        first, second = (path_b, path_a) if swap else (path_a, path_b)
+        r0, r1 = play(first, second, seed)
+        ra, rb = (r1, r0) if swap else (r0, r1)
+        if ra is None or rb is None:              # one side crashed
+            if verbose:
+                print(f"  seed {seed}: crash (A={ra} B={rb})", flush=True)
+            continue
+        cash_a += ra
+        cash_b += rb
+        if ra > rb:
+            wins_a += 1
+        elif rb > ra:
+            wins_b += 1
+        else:
+            draws += 1
+        if verbose:
+            print(f"  seed {seed:>4}{' swap' if swap else '     '}  "
+                  f"{label_a} {ra:>10,.0f}   {label_b} {rb:>10,.0f}   "
+                  f"[{wins_a}-{wins_b}-{draws}]  {time.time()-t0:.0f}s", flush=True)
+    n = wins_a + wins_b + draws
+    if n:
+        lo, hi = wilson(wins_a, n)
+        print(f"\n{label_a} {wins_a} - {label_b} {wins_b} - draw {draws}   ({n} games)")
+        print(f"win rate {wins_a/n:.3f}   Wilson 95% [{lo:.3f}, {hi:.3f}]")
+        print(f"mean final cash  {label_a} {cash_a/n:,.0f}   {label_b} {cash_b/n:,.0f}")
+    return wins_a, wins_b, draws
+
+
+# ---- cell ----
+
+head_to_head("starter", "random", list(range(12)), "starter", "random")
+
+# ---- cell ----
+
+import subprocess, sys, textwrap, pathlib
+
+subprocess.run([sys.executable, "-m", "pip", "install", "-q", "ziglang"], check=True)
+print(subprocess.run([sys.executable, "-m", "ziglang", "c++", "--version"],
+                     capture_output=True, text=True).stdout.strip())
+
+
+# ---- cell ----
+
+# Proof that it produces a loadable shared library, the same way the C++ agents are built.
+work = pathlib.Path("zigdemo"); work.mkdir(exist_ok=True)
+(work / "demo.cpp").write_text(textwrap.dedent("""
+    #include <cstdint>
+    extern "C" int32_t answer() { return 42; }
+"""))
+
+subprocess.run([sys.executable, "-m", "ziglang", "c++",
+                "-O3", "-std=c++17", "-shared", "-fPIC",
+                "-o", str(work / "demo.so"), str(work / "demo.cpp")], check=True)
+
+import ctypes
+lib = ctypes.CDLL(str((work / "demo.so").resolve()))
+lib.answer.restype = ctypes.c_int32
+print("loaded shared library, answer() =", lib.answer())

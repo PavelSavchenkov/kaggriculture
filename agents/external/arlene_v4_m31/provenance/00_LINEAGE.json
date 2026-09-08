@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-09-08T03:28:24.136899+00:00",
+  "source": "https://www.kaggle.com/code/lynnsakurai/farming-score-v4-a-better-shop",
+  "reference": "research/refresh_sep08_0308/notebook_audit/arlene/decoded_main.py",
+  "reference_sha256": "1590394cf30c8989a3e1cfdb027d89b5ccd97c2fb4cdc14959a15555b2b2361a",
+  "donor": "Known Thomas four-route tape and tetsutani capacity controller; seven functions and compressed route blob match exactly.",
+  "local_changes": "Typed C++ port from the already verified capacity-router C++; literal new budget, sequential clamp, final settlement, pickup-aware projection and padded-worker weed repair. Isolated bit masks are local ablations.",
+  "rating": "Unknown; notebook performance claims are not locally validated.",
+  "reuse_restrictions": "User authorized public code borrowing. No separate license stated in retrieved notebook metadata; retain source attribution and do not infer a license.",
+  "variants": [
+    "arlene_v4_m0",
+    "arlene_v4_m1",
+    "arlene_v4_m2",
+    "arlene_v4_m4",
+    "arlene_v4_m7",
+    "arlene_v4_m8",
+    "arlene_v4_m16",
+    "arlene_v4_m31"
+  ],
+  "source_hashes": {
+    "research/refresh_sep08_0308/notebook_audit/arlene/decoded_main.py": "1590394cf30c8989a3e1cfdb027d89b5ccd97c2fb4cdc14959a15555b2b2361a",
+    "league/public_capacity_router/source/agent.cpp": "910b1e96851168d3577a19c0de4072a150d8712cedbc0ca25fe457cf3be06626",
+    "league/public_capacity_router/source/agent.hpp": "46c5f6da441306e625f57a28bdf60d20c96443feae9252fdec378817d1be6fbd",
+    "league/public_router/source/routes.inc": "c46d6efc86a9407d09715e752f445a8f6042cb62a7aaca68a656e4a1bd067fd0",
+    "runs/arlene_v4_sep08_001/budget.hpp": "40b79120562a8e0ea5a77f3045c92527f9665b1dc44902c754ec90aa84f429ee",
+    "runs/arlene_v4_sep08_001/prepare.py": "0ff5f603e9db8f65f31d7182108ea329068d4f7d0f1a8f7176a9fd27011ea98f",
+    "runs/arlene_v4_sep08_001/source/agent.cpp": "4ab2169349596e26d55dbd39150e19cc0767f6ea012f171a284c732285fa814c",
+    "runs/arlene_v4_sep08_001/source/agent.hpp": "bd0f6ab5ceaaf3659b133da65c2ead3facd8be9c431b5c2609227a215d2732fc"
+  }
+}

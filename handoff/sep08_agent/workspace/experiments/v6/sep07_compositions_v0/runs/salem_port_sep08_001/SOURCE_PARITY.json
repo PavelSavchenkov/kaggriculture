@@ -1,0 +1,46 @@
+{
+  "completed_utc": "2026-09-08T10:29:04.138360+00:00",
+  "counts": {
+    "repay_turns": 692,
+    "weed_starts": 985,
+    "weed_replay_actions": 6285,
+    "advance_turns": 692,
+    "recorded_cases": 5752,
+    "forced_cases": 5752
+  },
+  "result": "matched_actions=11504",
+  "commands": [
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "g++",
+      "-std=c++20",
+      "-O2",
+      "-I",
+      "/home/pavel/Programming/kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/salem_port_sep08_001/parity.cpp",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/salem_port_sep08_001/source/policy.cpp",
+      "-o",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/salem_port_sep08_001/parity"
+    ],
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/salem_port_sep08_001/parity",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/salem_port_sep08_001/source_cases.txt"
+    ]
+  ],
+  "reference_sha256": "3b1cb91feb451b44d075d853f9211be216aea7f85df09d91fa232e4e9dff8fe9",
+  "fixture_sha256": "6c7e54eae1e31f8bcb08196b23a1204e5fd51ae1eda0ab272cf81fbe02242130",
+  "replays": [
+    "replays/episode-106273396-replay.json",
+    "replays/episode-106275959-replay.json",
+    "replays/episode-106276127-replay.json",
+    "replays/episode-106276684-replay.json"
+  ],
+  "scope": "Eight full recorded and eight forced observation sequences. Force weed repairs, stock, demand and sale repayment. Remove only the public outer exception fallback to fail on reference errors. Source parity does not establish strength."
+}

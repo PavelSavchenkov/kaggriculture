@@ -1,0 +1,18 @@
+{
+  "source_url": "https://www.kaggle.com/code/destbreso/x-ray-your-agent",
+  "old_file": "research/refresh_1446/notebooks/x_ray/x-ray-your-agent.ipynb",
+  "new_file": "runs/fresh_courses_1642/notebooks/destbreso_xray/x-ray-your-agent.ipynb",
+  "old_sha256": "b22b5bbf581f2a2b0666dadb379f8cc2921fe035d5c80f1fad015e294ca8a58f",
+  "new_sha256": "846156b91b90f459f1745435e94c3512c27c2d38045b8b1ae45b0ef5ad4c7f46",
+  "code_ast_equal": true,
+  "old_functions": 42,
+  "new_functions": 42,
+  "changed_functions": [],
+  "classification": "Replay diagnostic notebook; no deployable competitive agent. No notebook code executed.",
+  "relevant_existing_ideas": [
+    "Separate observed plans, repairs and branching rather than inferring a private policy from one tape.",
+    "Compare board occupancy and worker presence; movement is not itself wasted work.",
+    "Shared market effects matter; observed price correlation is not an exact causal market counterfactual."
+  ],
+  "decision": "No agent port. Retain provenance and diagnostic ideas; local exact paired market evidence remains authoritative."
+}

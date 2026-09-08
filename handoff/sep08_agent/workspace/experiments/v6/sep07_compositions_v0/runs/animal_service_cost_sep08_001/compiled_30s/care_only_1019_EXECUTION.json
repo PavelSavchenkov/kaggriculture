@@ -1,0 +1,21 @@
+{
+  "name": "care_only_1019",
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/build/care_only",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/compiled_30s/care_only_1019",
+    "1019",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/cow_triple_1019.txt",
+    "30"
+  ],
+  "baseline": "runs/animal_group_policy_sep08_001/contexts_audit/cow_triple_alternate",
+  "mode": "care_only",
+  "seed": 1019,
+  "returncode": 0,
+  "seconds": 318.1436261140043
+}

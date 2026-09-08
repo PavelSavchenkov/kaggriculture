@@ -1,0 +1,61 @@
+{
+  "pair": {
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+      "--pair",
+      "arlene_v4_m31",
+      "public_router"
+    ],
+    "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/ad3919d60b0db4232696/arena"
+  },
+  "debug": {
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+      "--agents",
+      "arlene_v4_m0",
+      "arlene_v4_m1",
+      "arlene_v4_m2",
+      "arlene_v4_m4",
+      "arlene_v4_m7",
+      "arlene_v4_m8",
+      "arlene_v4_m16",
+      "arlene_v4_m31",
+      "public_router",
+      "pass",
+      "--debug"
+    ],
+    "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/af5643692596d7ca5a91/arena"
+  },
+  "generic": {
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+      "--agents",
+      "arlene_v4_m0",
+      "arlene_v4_m1",
+      "arlene_v4_m2",
+      "arlene_v4_m4",
+      "arlene_v4_m7",
+      "arlene_v4_m8",
+      "arlene_v4_m16",
+      "arlene_v4_m31",
+      "public_router",
+      "pass"
+    ],
+    "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/4265b97f3909e4279c80/arena"
+  }
+}

@@ -1,0 +1,402 @@
+{
+  "source": {
+    "episode": 106463571,
+    "seat": 1,
+    "team": "自己找差距",
+    "team_id": 16660726,
+    "submission_id": 56068263,
+    "rank": 7,
+    "leaderboard_score": 2815.0,
+    "episode_create_time": "2026-09-07T13:24:30.083000",
+    "replay_sha256": "2cca301cc087a05ad91c7e86c8009ddd565cbeeed0238471cc5f64d5db6e9ff4",
+    "replay_file": "replays/episode-106463571-replay.json",
+    "cohorts": [
+      "refresh_1342"
+    ],
+    "final_cash": 128740.0,
+    "final_margin": 14931.0,
+    "all_shops": [
+      "YARN_STORE",
+      "YARN_STORE",
+      "ICE_CREAM_SHOP",
+      "YARN_STORE",
+      "BAKERY",
+      "BAKERY",
+      "PET_CAFE",
+      "SMOOTHIE_SHOP"
+    ],
+    "purchase_sequence": [
+      {
+        "step": 1,
+        "animal": "COW",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 8
+      },
+      {
+        "step": 1,
+        "animal": "SHEEP",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 9
+      },
+      {
+        "step": 65,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 1
+      },
+      {
+        "step": 88,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 1
+      },
+      {
+        "step": 150,
+        "animal": "COW",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 5
+      },
+      {
+        "step": 169,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 2
+      },
+      {
+        "step": 176,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 1
+      },
+      {
+        "step": 195,
+        "animal": "COW",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 4
+      },
+      {
+        "step": 195,
+        "animal": "SHEEP",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 5
+      },
+      {
+        "step": 217,
+        "animal": "SHEEP",
+        "actual": 0,
+        "requested": 0,
+        "order_index": 2
+      },
+      {
+        "step": 226,
+        "animal": "SHEEP",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 2
+      },
+      {
+        "step": 241,
+        "animal": "SHEEP",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 3
+      },
+      {
+        "step": 265,
+        "animal": "SHEEP",
+        "actual": 1,
+        "requested": 1,
+        "order_index": 8
+      },
+      {
+        "step": 289,
+        "animal": "SHEEP",
+        "actual": 4,
+        "requested": 4,
+        "order_index": 0
+      },
+      {
+        "step": 337,
+        "animal": "SHEEP",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 4
+      },
+      {
+        "step": 361,
+        "animal": "SHEEP",
+        "actual": 3,
+        "requested": 3,
+        "order_index": 8
+      },
+      {
+        "step": 385,
+        "animal": "SHEEP",
+        "actual": 5,
+        "requested": 5,
+        "order_index": 4
+      },
+      {
+        "step": 409,
+        "animal": "SHEEP",
+        "actual": 2,
+        "requested": 2,
+        "order_index": 8
+      },
+      {
+        "step": 457,
+        "animal": "SHEEP",
+        "actual": 3,
+        "requested": 3,
+        "order_index": 7
+      }
+    ],
+    "placement_sequence": [
+      {
+        "step": 4,
+        "animal": "COW",
+        "x": 4,
+        "y": 4
+      },
+      {
+        "step": 5,
+        "animal": "COW",
+        "x": 4,
+        "y": 3
+      },
+      {
+        "step": 7,
+        "animal": "SHEEP",
+        "x": 3,
+        "y": 4
+      },
+      {
+        "step": 9,
+        "animal": "SHEEP",
+        "x": 3,
+        "y": 3
+      },
+      {
+        "step": 69,
+        "animal": "COW",
+        "x": 4,
+        "y": 2
+      },
+      {
+        "step": 95,
+        "animal": "COW",
+        "x": 2,
+        "y": 4
+      },
+      {
+        "step": 156,
+        "animal": "COW",
+        "x": 5,
+        "y": 3
+      },
+      {
+        "step": 156,
+        "animal": "COW",
+        "x": 5,
+        "y": 4
+      },
+      {
+        "step": 177,
+        "animal": "COW",
+        "x": 6,
+        "y": 4
+      },
+      {
+        "step": 183,
+        "animal": "COW",
+        "x": 5,
+        "y": 2
+      },
+      {
+        "step": 199,
+        "animal": "COW",
+        "x": 6,
+        "y": 3
+      },
+      {
+        "step": 200,
+        "animal": "SHEEP",
+        "x": 7,
+        "y": 4
+      },
+      {
+        "step": 205,
+        "animal": "SHEEP",
+        "x": 6,
+        "y": 2
+      },
+      {
+        "step": 258,
+        "animal": "SHEEP",
+        "x": 1,
+        "y": 4
+      },
+      {
+        "step": 259,
+        "animal": "SHEEP",
+        "x": 3,
+        "y": 2
+      },
+      {
+        "step": 260,
+        "animal": "SHEEP",
+        "x": 4,
+        "y": 1
+      },
+      {
+        "step": 270,
+        "animal": "SHEEP",
+        "x": 2,
+        "y": 3
+      },
+      {
+        "step": 303,
+        "animal": "SHEEP",
+        "x": 9,
+        "y": 0
+      },
+      {
+        "step": 303,
+        "animal": "SHEEP",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "step": 308,
+        "animal": "SHEEP",
+        "x": 8,
+        "y": 0
+      },
+      {
+        "step": 309,
+        "animal": "SHEEP",
+        "x": 4,
+        "y": 0
+      },
+      {
+        "step": 350,
+        "animal": "SHEEP",
+        "x": 0,
+        "y": 1
+      },
+      {
+        "step": 357,
+        "animal": "SHEEP",
+        "x": 9,
+        "y": 1
+      },
+      {
+        "step": 369,
+        "animal": "SHEEP",
+        "x": 0,
+        "y": 4
+      },
+      {
+        "step": 375,
+        "animal": "SHEEP",
+        "x": 1,
+        "y": 3
+      },
+      {
+        "step": 380,
+        "animal": "SHEEP",
+        "x": 1,
+        "y": 2
+      },
+      {
+        "step": 397,
+        "animal": "SHEEP",
+        "x": 2,
+        "y": 2
+      },
+      {
+        "step": 402,
+        "animal": "SHEEP",
+        "x": 0,
+        "y": 6
+      },
+      {
+        "step": 403,
+        "animal": "SHEEP",
+        "x": 3,
+        "y": 1
+      },
+      {
+        "step": 404,
+        "animal": "SHEEP",
+        "x": 2,
+        "y": 1
+      },
+      {
+        "step": 405,
+        "animal": "SHEEP",
+        "x": 0,
+        "y": 5
+      },
+      {
+        "step": 421,
+        "animal": "SHEEP",
+        "x": 2,
+        "y": 9
+      },
+      {
+        "step": 426,
+        "animal": "SHEEP",
+        "x": 1,
+        "y": 9
+      },
+      {
+        "step": 465,
+        "animal": "SHEEP",
+        "x": 6,
+        "y": 4
+      },
+      {
+        "step": 474,
+        "animal": "SHEEP",
+        "x": 5,
+        "y": 2
+      },
+      {
+        "step": 475,
+        "animal": "SHEEP",
+        "x": 2,
+        "y": 4
+      }
+    ],
+    "total_actual_purchases": {
+      "GOOSE": 0,
+      "COW": 9,
+      "SHEEP": 27
+    }
+  },
+  "replay_sha256": "2cca301cc087a05ad91c7e86c8009ddd565cbeeed0238471cc5f64d5db6e9ff4",
+  "normalization": "Existing triple encoder; active worker count only. No original private branch formula recovered.",
+  "artifacts": {
+    "raw_actions_719.json": "17bf7541cf55983c1bf697a87b965b2c21c993da88e0295204ad16030421fe8f",
+    "daily_product.csv": "ad5e505da879ba5ab9632a3cbe2c3eeab069a14924cfcd78caf9a63fad78ecfe",
+    "normalized_actions_719.json": "93d44a048298b7b4865bd6ff16974d51c2272d6151550a648e33bd0fb95a0b28",
+    "state_before_288.json": "ae5cc07b2c75730e1ba9f91316552f2174ed929c9543a0f0e70cad15f726651d",
+    "crop_days.csv": "8bff4591cc4b4d5796f86c10a0a0ede2c11fe22b6fe1770d542a5361e66af776",
+    "tile_transitions.csv": "c265f1b2e24513eb7811ab57bec4d8a4035d26d7a9a17daf4c23335676d1ee4d",
+    "animal_instances.csv": "ce08ff06a06ea6c95891bd73dad535fe311a8fece04a84f263a9dd04fe781302",
+    "unit_events.csv": "7cec6c1a235536cab1a01c2b5bfaa2f72e6e637e470d317d051a88a3410c835d",
+    "crop_instances.csv": "8555c8fba00fcc65758f0b948a4c7c54867a74f7666b74fecce3107792707cc2",
+    "transactions.csv": "dd2d749f1dda76d4db86b9a463a21ad0fc075f53e33305e694c1154fba73e5c0",
+    "animal_days.csv": "92b7fa82d09c11e1dfff9cd9c08cc650098db8ed26bedeb1d610e94ce96fa813"
+  }
+}

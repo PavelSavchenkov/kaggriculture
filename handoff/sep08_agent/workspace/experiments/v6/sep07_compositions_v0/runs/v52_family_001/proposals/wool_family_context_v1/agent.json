@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "name": "wool_family_context_v1",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::wool_family_context_v1::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../../../league/top_replay_library/source/agent.cpp",
+    "../../../../league/public_router/source/agent.cpp"
+  ]
+}

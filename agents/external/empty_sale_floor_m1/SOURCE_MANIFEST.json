@@ -1,0 +1,1381 @@
+{
+  "original_package": "experiments/v6/sep07_compositions_v0/runs/empty_sale_floor_sep08_001/proposals/empty_sale_floor_m1",
+  "original_manifest": {
+    "format_version": 1,
+    "name": "empty_sale_floor_m1",
+    "header": "source/agent.hpp",
+    "type": "compositions::empty_sale_floor_m1::Agent",
+    "sources": [
+      "source/agent.cpp",
+      "../../../observed_sale_lead_004/proposals/observed_sale_lead_start_216/source/agent.cpp",
+      "../../../observed_sale_lead_003/parent_source/league/top_replay_library/source/agent.cpp",
+      "../../../observed_sale_lead_003/parent_source/league/public_router/source/agent.cpp"
+    ]
+  },
+  "snapshot_base_commit": "f07754bb5c86bed6c77a309e4d9b2d5f53d74008",
+  "namespace_replacements": {
+    "compositions": "catalog_empty_sale_floor_m1_compositions",
+    "compositions_sale_copy": "catalog_empty_sale_floor_m1_sale",
+    "kag::agents": "kag::catalog_empty_sale_floor_m1_agents",
+    "kag::agents_sale_copy": "kag::catalog_empty_sale_floor_m1_sale_agents",
+    "kag::native": "kag::catalog_empty_sale_floor_m1_native",
+    "kag::sixday_native": "kag::catalog_empty_sale_floor_m1_sixday"
+  },
+  "transformation": "Copied compiler dependency closure; renamed private namespaces, resolved include paths, and added a forwarding API wrapper with a default constructor. No policy decisions changed.",
+  "lineage_entry": "../../../handoff/sep08_agent/docs/lineage.md",
+  "evidence_entry": "../../../handoff/sep08_agent/readme.md",
+  "rating": "No independently measured Kaggle rating for this catalog package. See dated source leaderboard evidence in the handoff.",
+  "reuse": "Preserve source attribution. No new license is granted for third-party notebook or replay content.",
+  "files": [
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/empty_sale_floor_sep08_001/proposals/empty_sale_floor_m1/source/agent.cpp",
+      "original_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "path": "source/deps/runs/empty_sale_floor_sep08_001/proposals/empty_sale_floor_m1/source/agent.cpp",
+      "sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/empty_sale_floor_sep08_001/proposals/empty_sale_floor_m1/source/agent.hpp",
+      "original_sha256": "574854e60ecfd001b3f15341e58fca2f14aaa07e926561a211093b28403cade3",
+      "path": "source/deps/runs/empty_sale_floor_sep08_001/proposals/empty_sale_floor_m1/source/agent.hpp",
+      "sha256": "3319196207ff41530c5afdf826db2deee7c0c2f2a4f39c497f9d8b38dbefc76b"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/candidates/firstday_m85_sale7/source/agent.hpp",
+      "original_sha256": "209faaf17f2f22865c736cf56fdd77f85aa457af4155cafd2cd976f2b2c1a856",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/candidates/firstday_m85_sale7/source/agent.hpp",
+      "sha256": "ca6600836b56363659d6372258ff61d1ff57c99d41f0aae66bfe8ac16220150c"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/candidates/investment_context_guarded_001_best/source/agent.hpp",
+      "original_sha256": "a7c0359da62735d2e55ffb92675330e894c9d2a775914a647e76098e42bdcc9b",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/candidates/investment_context_guarded_001_best/source/agent.hpp",
+      "sha256": "e416e97aaf92f027e807e0728bd664f9b124ace77eb9603cc0abeedcb8344856"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/candidates/opening_router_v2/source/agent.hpp",
+      "original_sha256": "1bc158adaad070a7ebbc7560b9d3c362879b898d00c62566ea3f379cc4a3e5db",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/candidates/opening_router_v2/source/agent.hpp",
+      "sha256": "8ecc61b264940dc913ae3488916a321eec03c0773136d0e39c7b9483bb8aeaaa"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/candidates/shop_herd_guarded_001_best/source/agent.hpp",
+      "original_sha256": "afc5f29ae972d2c87ccfb9c8877cf7878ed7f27d856708c26688ce101eadcdda",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/candidates/shop_herd_guarded_001_best/source/agent.hpp",
+      "sha256": "60642bdf87b624f04145aadcb30da13af0108abf5c999ebd68be8939b20a59f6"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/include/adaptive_ticket.hpp",
+      "original_sha256": "0bf2cc603eae70aed5083c9db21a4acc24239ae210fd38433adae37615acd19c",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/include/adaptive_ticket.hpp",
+      "sha256": "014005e2aaf327c8b9d81d17f0fca21b74eb874a20974506b2431114e7a59439"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/include/animal_investment_value.hpp",
+      "original_sha256": "a163d086b7b5029591b70d4187330588a30c9c7be3f4f41546100178de0a3180",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/include/animal_investment_value.hpp",
+      "sha256": "355f40547e7b9a2dee351ef6a567b4ac17082890afc680e33e74d30bf8f10873"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/include/animal_ticket.hpp",
+      "original_sha256": "6813169c9fdee0e7884ea5d6a3f8a9fdca6e8e4933f8d1414a5c8779c1984bba",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/include/animal_ticket.hpp",
+      "sha256": "6ccabb324e181cc8d05aed02646c4eaaa2127ebbfdd4d328c81c951f29e51fc6"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/include/biology.hpp",
+      "original_sha256": "c5faf7245368be361c0cbd43c82da53e47b447752de4772cb2fe5d0246511470",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/include/biology.hpp",
+      "sha256": "5693f2e61239389afebc2986d3f5eb7bfb40cbd2f4cebf51cddeb6a39f9e671a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/include/crop_branch_sequence.hpp",
+      "original_sha256": "8fb4aba32d0ff80845ec7de9b786f0acf01ca40bbbbbf9193b715e6e3e923e61",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/include/crop_branch_sequence.hpp",
+      "sha256": "6f747c42492a221e87b3fb36fefcd93cad21a963b484005ff273b3ea4a4aabb3"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/include/crop_rotation_shop_gate.hpp",
+      "original_sha256": "3dda1572eac85e99d3bcc06a4acd9ae91859772f3fb605e414dcb6441809e1a6",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/include/crop_rotation_shop_gate.hpp",
+      "sha256": "1b95549a4f73c7ac0759726344e16d6c339b20f549eddcb493e607763e942f92"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/include/crop_value_gate.hpp",
+      "original_sha256": "27ac2d189089c25578656eeedd95d16d4f3514f6578803dea404bfc2f1eaf65e",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/include/crop_value_gate.hpp",
+      "sha256": "60b665984fa0eb3c5aa5e4b2d5a1b21c6f8232ffe899b2645c4070a562e34b5d"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/include/day_override.hpp",
+      "original_sha256": "895a14a5721a5a82b53ccaf1ed6d732eea3bd10cc5a05a0a327008752f7e226d",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/include/day_override.hpp",
+      "sha256": "84dfa72415876cd8cb1222cdb4efae891ab5b72dd6d19e7913a7460458b3c4e5"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/include/deferred_animal.hpp",
+      "original_sha256": "b192142828c212f8bd4f1ad1101124881d41691c7ea436f38d49b6252a155698",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/include/deferred_animal.hpp",
+      "sha256": "0960228737fad77718bc622a47ebc1d5dfb31319738f0df8bc14fe7de4caca6e"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/include/guarded_day.hpp",
+      "original_sha256": "d0957012562a942af78ff4ce774e93d9dc1b964976ef0a9ea1447e0bdb1dbb1c",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/include/guarded_day.hpp",
+      "sha256": "d81d402d0960dd30d4544020f461c28fde38acd32778700795f1b28910ca1c39"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/include/guarded_sequence.hpp",
+      "original_sha256": "5cfbff742a7ee0c3d3f0479725a1ac8e11976d449adbc7e39cdcc5a6820915a1",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/include/guarded_sequence.hpp",
+      "sha256": "219068bd8aa43cf2f66863792e4a2a2c362c89c30df62249b5d6e3822add4f40"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/include/herd_forecast.hpp",
+      "original_sha256": "388644be4b7ae173539543d998015ee38eb12ad46b1f3cd95da502790d3ddb38",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/include/herd_forecast.hpp",
+      "sha256": "c91b37da7b8dc858a3cebfdf93f9bc6c0d29906a84fa35cfe33529255bf60624"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/include/market_course.hpp",
+      "original_sha256": "cd91f2621ae39ed4224fef28d336ec91783bfd5f49dcb2a7bdd45b5cc5fe6947",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/include/market_course.hpp",
+      "sha256": "0e5d33afbfe1746e27db0ffca11fc9129e8dcef19d9d1f9c0ebe98a0b5722250"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/include/planned_opening.hpp",
+      "original_sha256": "fb37c2ff092613f4a534f3f26970eb979b5988f083874cd403dbfb70ad531c42",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/include/planned_opening.hpp",
+      "sha256": "6cd145f2a53cc491543745c3d3b93b065e2ebd92536986f1b3b173932557d510"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/include/sampled_animal_value.hpp",
+      "original_sha256": "32e3fb6300923bc781d17eaf583654952447bed000b9c1b58a7812693dde8daf",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/include/sampled_animal_value.hpp",
+      "sha256": "f3a531679e0694bd02ca8f19d50edb97b9f44ea8686b01165d46abbbcb883972"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/include/shop_herd.hpp",
+      "original_sha256": "998b7ec68b1a9c5d20a260a249972dd27cb251786372ece9703ba0f6730f2bbb",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/include/shop_herd.hpp",
+      "sha256": "f7374c2d22cec30f58eed0d2a0a4b24174d5cec183456c7c3d1f4712c025293e"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/include/terminal_layer.hpp",
+      "original_sha256": "926822c6fbeb9c4aa5b9f47937a0a770eeaae56f9e2ba037abacc10ebdd03485",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/include/terminal_layer.hpp",
+      "sha256": "52d936e1cc33ee5057e01095fb61e952c807b454699ce1249e7a5111238c3b21"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/league/public_router/source/agent.cpp",
+      "original_sha256": "b71ea33c2346c61acc802809f6ce049b61e20f86c76e34b4812f3658600e0b4d",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/league/public_router/source/agent.cpp",
+      "sha256": "de6b17d54852d28a0c46835d94ff91b8a8330c43ac4e8fbf4527ec286023532b"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/league/public_router/source/agent.hpp",
+      "original_sha256": "8a0e65833542e75f4221efa6c90c277707f1d14e79c6b4f4f0107fae0a7724c6",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/league/public_router/source/agent.hpp",
+      "sha256": "dd6149c11d57c44a03ba316cde9824c76a5b7c4065f89de9e79888e49710e88d"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/league/public_router/source/routes.inc",
+      "original_sha256": "c46d6efc86a9407d09715e752f445a8f6042cb62a7aaca68a656e4a1bd067fd0",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/league/public_router/source/routes.inc",
+      "sha256": "c46d6efc86a9407d09715e752f445a8f6042cb62a7aaca68a656e4a1bd067fd0"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/league/public_router_v52/source/data.inc",
+      "original_sha256": "4bb154fdbc1d694011aed1bbef8c8f00cd920e545ef25769bd2a57beebe014ae",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/league/public_router_v52/source/data.inc",
+      "sha256": "4bb154fdbc1d694011aed1bbef8c8f00cd920e545ef25769bd2a57beebe014ae"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/league/top_replay_library/source/agent.cpp",
+      "original_sha256": "091ff8a4ddd0ae4b1af206024ed2c52a38ef9b840897998a4d79b2aa9a083102",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/league/top_replay_library/source/agent.cpp",
+      "sha256": "46aa26926a87b5fe54b846ddd2479b3041d9080e669327317e37a395ec438746"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/league/top_replay_library/source/agent.hpp",
+      "original_sha256": "461cc2b1bef9b0c878a44294d834d2abae3aa5a4644ad9e9d4061ba09b3fe3ce",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/league/top_replay_library/source/agent.hpp",
+      "sha256": "b11a228591f6878db1e06e121d98b11c2db8fdf31d98127272de35321b873d96"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/league/top_replay_library/source/tapes.inc",
+      "original_sha256": "a90688675433a879056e29e50f1795d75edfd27b5fc07781b9e4f0472ca6c94e",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/league/top_replay_library/source/tapes.inc",
+      "sha256": "a90688675433a879056e29e50f1795d75edfd27b5fc07781b9e4f0472ca6c94e"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/advance_sales_001/proposals/advance_sales_001_7/source/agent.hpp",
+      "original_sha256": "1c65d786b49a1b8c01153a3f90d50a55cb54be80caab4acd34c18b77c08fd411",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/advance_sales_001/proposals/advance_sales_001_7/source/agent.hpp",
+      "sha256": "3a95978b2e51f8604a9053ef9bc0b91fcd63baeed5888601a60992c59b9ad7f7"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d11_i10/entry.hpp",
+      "original_sha256": "5b76b936cf92f888e8f94d02b38c9c3760c250d5f5279d2878b6229bd61d74fb",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d11_i10/entry.hpp",
+      "sha256": "9fc85ac199923b529286eb9b8c703c478d7fa01c00488ac19d1c68a977030cbd"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d11_i11/entry.hpp",
+      "original_sha256": "a2e41a76f70fdd351d2d438c115b27ff47b8de0a299eb026c8b54f63f6f67fa2",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d11_i11/entry.hpp",
+      "sha256": "61cc430fdabdf952852fba53786faec25a0e4a9e1fa7e6336aaf46a6750dd635"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d11_i9/entry.hpp",
+      "original_sha256": "7a3617985b8f4a2bd8d927764e8f02cb3771f1d899826acdf148cde9963a279b",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d11_i9/entry.hpp",
+      "sha256": "cb0d5d0a08afc2696ac86f136950f5f26026cc4965f7998ba36cb36cddcad5ca"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d15_i10/entry.hpp",
+      "original_sha256": "c539d969d329e6f59a1c6addd34d0497b6e6abacaafa93c8cc3bbbc30b12ab64",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d15_i10/entry.hpp",
+      "sha256": "7d35c9d80b20e084a7c7cf2f62c8f59f611e2679dc3ebeaa67892f2764c87669"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d15_i11/entry.hpp",
+      "original_sha256": "39ef42c87c7adff65471c94747535da40010ae618c87676752131a6bff89b986",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d15_i11/entry.hpp",
+      "sha256": "4de935cbd00d7d4e2f23c8bd3f3f2ade246218ed9360f339d5ccd15f7200f805"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d15_i9/entry.hpp",
+      "original_sha256": "11a744a89135797073810eaa703fcf4ebff2eab616be6e0d262c11e36ce28aa4",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d15_i9/entry.hpp",
+      "sha256": "cdb07ded0a1f7ade813c936ec1d53419c12490e3ac4c3a6676553c54d8793480"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d18_i10/entry.hpp",
+      "original_sha256": "dbdad6bdb785651759a3b1a853714bae6371e348239e6e06130f3faae0360243",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d18_i10/entry.hpp",
+      "sha256": "5e934a274cfff354b0f3a14812231aaaade8e9cd6f538e73c53ca2c4f4868bf9"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d18_i11/entry.hpp",
+      "original_sha256": "b2b023e46dcc852c5176bd18732feebce91e96f1dcbd5834f1d99be7bc687c3b",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d18_i11/entry.hpp",
+      "sha256": "c003c5314b9b04756275a79265098dae984f0043de0f20a50d53ba414744d049"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d18_i9/entry.hpp",
+      "original_sha256": "5ae44c56d7bacc44d7b9135f755cfb291d52afd71d1df95d5b32ef2bc36462a6",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d18_i9/entry.hpp",
+      "sha256": "9a054ed5052ee1ac83858fb3cf27541bca9e00ebf3033582f24e0afe70161d25"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d21_i10/entry.hpp",
+      "original_sha256": "f50dd6c3f099c53abb9627c4822d8aea1fd758ae96cf9fafc0b5756b09b6bf25",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d21_i10/entry.hpp",
+      "sha256": "056f2d1467a0955c436355f552d836f3f2cb8015e62585452bc5a6160da5a695"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d21_i11/entry.hpp",
+      "original_sha256": "815c40730a6a1908d39867fdf64e78ca8adeaa5ada2eef51debe4b2a04463dd7",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d21_i11/entry.hpp",
+      "sha256": "0b51c3c226650eace4dba2df228cb5bd3390cd17992ae9e0bce6286bfffbf39a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d21_i9/entry.hpp",
+      "original_sha256": "026fa88bf15f3e20cf866a893fb3e08ac9c21a0dd8891102ba5ed0a1a262ca46",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/animal_entries_006_d21_i9/entry.hpp",
+      "sha256": "553d18e081349595a4eacb87bc000e8b41aed1dee42b0e1950f0d21a02829155"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/model.hpp",
+      "original_sha256": "6f9177a3f310f87f5973fa6bc0bb87714b1324d6c01f1bdfa2c23e2ec80c56f1",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_006/model.hpp",
+      "sha256": "706fbe9f2a3002c9547df7dbbf764a4c703fb14bf81347af9d19aaa158965498"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d11_i10/entry.hpp",
+      "original_sha256": "e97e1aaeb174d0689a616ee511849d249240249d1f989fac4940ea39199e1638",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d11_i10/entry.hpp",
+      "sha256": "ce848725fd85c831ad275d576e1b88596555272372dc85fadbeb84711a17eba8"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d11_i11/entry.hpp",
+      "original_sha256": "28cdcf9955e9d0d8953dd1469d7464b5cb7c1746a9ef2e56db4e53db42cfe000",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d11_i11/entry.hpp",
+      "sha256": "9fd731fb53de912dc8dd4e1d02bf8af6ad5bd97efb5e952044abe408d512d74e"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d11_i9/entry.hpp",
+      "original_sha256": "7b287b640b98749722de86c26c4e5a1be6f1b312574a8b94cb1aa77e09622584",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d11_i9/entry.hpp",
+      "sha256": "1eca3bcae99c254751a3e2cd958d0ef2ccffc97051dfec2d53a75723fcba662f"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d15_i10/entry.hpp",
+      "original_sha256": "d9ecd81721ccef59a25494ab754500d5429c97e98e1c75469189a608271eac16",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d15_i10/entry.hpp",
+      "sha256": "a5c3f96dc1edc535d56dc431ba6152ef8cff90e8ecd17e3db093d23509d83d6d"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d15_i11/entry.hpp",
+      "original_sha256": "16ce45fa64e9ca60c7ad5d84ad2bdbc98c146464ec292e4a9a6b82821aecef96",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d15_i11/entry.hpp",
+      "sha256": "8434799f28d02616bd669e286df16d9540eda924cee629bd3025798ee57c9945"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d15_i9/entry.hpp",
+      "original_sha256": "03ecdad80bb970749d82cc1a2c26f2c15bd2bcb4b1afe4b4191b4aef81c39c28",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d15_i9/entry.hpp",
+      "sha256": "43c5dd3f4ece270675166667d0b1b2490d05c7dd2ca33704c2f4c7721329a3ae"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d18_i10/entry.hpp",
+      "original_sha256": "a96c848ef949bbd727d643b925650b5e103a3d1effea10fd2f2618b536d04e9c",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d18_i10/entry.hpp",
+      "sha256": "e8aa456aa6314cd090ee61a4bb3653997d8f907d06d65b84e01122bd471a07e0"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d18_i11/entry.hpp",
+      "original_sha256": "2b25b69c4619cf6368f12c904f390d29792dfcb2dd1c6f4c6d05faf37fdbc45d",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d18_i11/entry.hpp",
+      "sha256": "741accbd3bf3d5f034b9f280a1d8dff4fa8a90808553768b6a3c9c50bdc2b31c"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d18_i9/entry.hpp",
+      "original_sha256": "9384a45d2da35ec0402cd496e89b6440fd1c65ba28da75de76e08c3105504c47",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d18_i9/entry.hpp",
+      "sha256": "5eee6e4e815ead4f46ea78560610dcd7e56d8da31d1b113bcc437ed259b489cf"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d21_i10/entry.hpp",
+      "original_sha256": "17e1eba44a5862bab9e62c59460d3b6fdb97d949a0aa33d7c9cccc899971afe5",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d21_i10/entry.hpp",
+      "sha256": "a18e7a4ddaa544566c3d35d85b06ef7c03e493bf187d896da9dfe46e2970ea05"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d21_i11/entry.hpp",
+      "original_sha256": "89ce1bdb04b83a1e594d35081d15b6404bdd5577f1a845c45852966eedf7e7e8",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d21_i11/entry.hpp",
+      "sha256": "e43a12ba63509d31e76ad4af11c346ba36ede1fc03f37cb30186c3271ca72299"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d21_i9/entry.hpp",
+      "original_sha256": "6dc17ead6f67a22048153808f878acb07b1ec5cfb89aaf153babc12cf8552a12",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/animal_entries_007_d21_i9/entry.hpp",
+      "sha256": "bef4becb1ec9747d598f3f57b709150d2c62606912b0a6232fbe583732bdd93a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/model.hpp",
+      "original_sha256": "8449a8517286e29191d00c6eea1ee7ef315554eaaf26126ef29f4a276a40775b",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entries_007/model.hpp",
+      "sha256": "a4631bf501c40d6e535e3f9236cdb7a9f54c403aff87591e73494ac572a20170"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_entry_bank_001/bank.hpp",
+      "original_sha256": "2ea91da13330506cc0dc12b15f6a1d93cf581f5e629c22907785f853a60c076c",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_entry_bank_001/bank.hpp",
+      "sha256": "addf17e3812521a379efabce94de2f113b530fc67f2b000a6a916578cfdde500"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/animal_investments_001/proposals/animal_adaptive_r1_c0_b0/source/agent.hpp",
+      "original_sha256": "e16f37221b908830292e48de4914dd15e3a9c4e40f31582f21179014fe35bf60",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/animal_investments_001/proposals/animal_adaptive_r1_c0_b0/source/agent.hpp",
+      "sha256": "08db60a1bff28eff8ab2adc1984c6379d081d0cdcb8deaef4b5c934d1187e67f"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_mix_001/proposals/crop_mix_t2_wheat/source/agent.hpp",
+      "original_sha256": "73fcf06f5da87090f72bb07215c8eb939b36262f127ff7d87c6f1746fa1f7a32",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_mix_001/proposals/crop_mix_t2_wheat/source/agent.hpp",
+      "sha256": "611b626ac8c0e97446f1e5f024248ab2696092203e2398eefec16e4d125696c1"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/12/schedule.hpp",
+      "original_sha256": "d03de2eaed9041c9be4526e9ded1ddf536eaa77e4ff2ec00b6bd244d27e5d69d",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/12/schedule.hpp",
+      "sha256": "5c946768555fbb6cf495cb2a514ab5d402dc3058c2b0484274e046e4394dee12"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/13/schedule.hpp",
+      "original_sha256": "bc4729942321227cfbc72b566baf04cf2b0d76626fbb359f638b2dc3b1985a7b",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/13/schedule.hpp",
+      "sha256": "df94fdd6cca3387a93a61d9dbeda87e0903aa7e9ad98e6c29545f020bb93fe37"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/14/schedule.hpp",
+      "original_sha256": "350ca32df41360fffa7586f358c1ae28551d52df11e33cbe768d352c591958ac",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/14/schedule.hpp",
+      "sha256": "e99d02c1557dfcda66efa60362d9dde3a841931d2f153e61e1adabb7a91b0196"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/15/schedule.hpp",
+      "original_sha256": "ccd68076d01894e2f3196bb05de5e10c12eb45c462e72ce5835fbbec822267bb",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/15/schedule.hpp",
+      "sha256": "3ad031e87d80562fc30df6f67cd13f108e4e8528ca2abfad1f0ce807b9318ef2"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/16/schedule.hpp",
+      "original_sha256": "505b7f88df797d129187e66650f5269e9d65002f5600c0a26b3f9bde845cf27a",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/16/schedule.hpp",
+      "sha256": "bd2098c73089d722c7d4292713e2fa1ac5751ed461d4f2d277c5a99521a9d350"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/17/schedule.hpp",
+      "original_sha256": "89d42385fb050b13c0d0284c9203d64f9ccff6aaf10ec256b25c5a0d81eb69d0",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/17/schedule.hpp",
+      "sha256": "f7903ca6713025d973976bcb41c2e25a28ff630f2daf6dd45cd030d3ce9b4596"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/18/schedule.hpp",
+      "original_sha256": "ef9d87b03f372eda4c94bfe4b41e096ca1fcbf1e2d01ad71ee0d8aff37cc7c05",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/18/schedule.hpp",
+      "sha256": "b1f6f63863739fe5c52db09c6854febfda7129d4e1b0dc35d47a5d885f410729"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/19/schedule.hpp",
+      "original_sha256": "0148595ee6f0a6d0a887610dec57590f0443666d4d4cb867d873b2f02e3d738f",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/19/schedule.hpp",
+      "sha256": "b21825945048ca2c045ffa4616e485b00906be43a6949baef22d65d7091f1006"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/20/schedule.hpp",
+      "original_sha256": "c8df7b1d2b9b944c22de4ec6345724797d7e18306278231ec694d016939fc55f",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/20/schedule.hpp",
+      "sha256": "c9c94d4dfba3e69a8bba7eb6acb21b21614958712f652d223770c25149629323"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/21/schedule.hpp",
+      "original_sha256": "3a04afba0673e4a80ff27c5156f67d1aa294f685ae50a5b4eec8954f06d50968",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/21/schedule.hpp",
+      "sha256": "dc7cb947645cd5d1461e300188edb1afb267eb6545b7ab0e1dcbe9eaf312ba07"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/22/schedule.hpp",
+      "original_sha256": "1d764472f5433334d0abad7c531f7767a1097364c42627c8345df407927d3a4f",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/22/schedule.hpp",
+      "sha256": "58066137306e675565c358555f5f24d655f9d70ec24674c715e06f2f458a39ef"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/23/schedule.hpp",
+      "original_sha256": "70a1b6687138e97a70b3b501eaf3c5135b67ceb7b6946e57c139f6f28d163e19",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/23/schedule.hpp",
+      "sha256": "c6e2d438e6093787b1b970563231c1c9a720a16de7d58222d3106f8147cbfaa5"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/24/schedule.hpp",
+      "original_sha256": "dc403323e03f55124fa632e3109ad70af6292998417f83c45655b75001c2d694",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/24/schedule.hpp",
+      "sha256": "58d559f1dd532e69e3ae80b0fb71df4467842705e52c8d7540ec3902e6465730"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/25/schedule.hpp",
+      "original_sha256": "eeffd0cab737cd62363b3aad17f2981ef8141b092b6d6981829010d404f7e823",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/25/schedule.hpp",
+      "sha256": "902c715e932fc4cd286f5b797d19e32ed285bbbb8508c60f4d3b389262c31795"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/26/schedule.hpp",
+      "original_sha256": "b703484ca56fe92e10ca3fc32786db286d22c305bd9d3cf0ae8b0fc19dc81a82",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/26/schedule.hpp",
+      "sha256": "1a5e9ef99b1284be37824a1e7ad49a108b666ffc2e84fe9953278783eacf2195"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/27/schedule.hpp",
+      "original_sha256": "7207cba42a78212229917f89ab6143baff9afa8f1dc046c8bcd7d54cd4b035c3",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/27/schedule.hpp",
+      "sha256": "b32f8d3e08bbce30241d00213d841de3d32973e98e3315727f20c527bce5f40c"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/28/schedule.hpp",
+      "original_sha256": "1887c064bbc463378fca3da586951f0a625673d10cb130e0145667d034ea631b",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_009/days/28/schedule.hpp",
+      "sha256": "a132c1deaa2d43bad7b84229c0294ab734b116c97f47e1c12f246975fb603e16"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/12/schedule.hpp",
+      "original_sha256": "55183727b590406421d61911b52c2de48ba71650dcdd23fef0cfeba4adb61ed3",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/12/schedule.hpp",
+      "sha256": "884a601888cb534118ec2524d3abb10cd8a7c9f5755d3cdd669edcc140ed87ff"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/13/schedule.hpp",
+      "original_sha256": "24ab6acca97b137ca79f1fea9a936792b36b1b0893def4175699bf945cdadf83",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/13/schedule.hpp",
+      "sha256": "1fb156c16345efc9ae86b7120823aeba5a36ba574f50a1628024c5c0565b3415"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/14/schedule.hpp",
+      "original_sha256": "28bce4e56d2b10e4e03a57dfd1a22c37fa06ff6cf1d6bc425cb8f8b2c340ab14",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/14/schedule.hpp",
+      "sha256": "91fcd88a54dc3175af64cee4241feae2e494ac8c8a576d2a1f36236d95715164"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/15/schedule.hpp",
+      "original_sha256": "88bbfd1e6f10871ad0671f398d00e9ff25af3a22fd73530a442f61607892cda4",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/15/schedule.hpp",
+      "sha256": "fa3d0a2cfd8dfda8f68a219f0691582dca189c3f9580f36b5a9cca71a1d85472"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/16/schedule.hpp",
+      "original_sha256": "b20f9e768d730b49c580b5089ebeb150ab798b355c49355a665d833e308c5b2f",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/16/schedule.hpp",
+      "sha256": "5212e0aa8c67e6092b7ef378e05e8c1afb2d8c3acd9a57b38f88a4957723a7c3"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/17/schedule.hpp",
+      "original_sha256": "73065fa51edb7c263d7358ec75ffdffa86d05d35a0ca2b9aa5fda5c90c7dd7da",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/17/schedule.hpp",
+      "sha256": "a37ab10c8c9752500ca464711183363c616c8b17f813efd1ebe428c99c877de9"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/18/schedule.hpp",
+      "original_sha256": "083264fffa795824f125a9accbd7b251a628cd08d2b320b6899a462816234d55",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/18/schedule.hpp",
+      "sha256": "88b41905e8a8bb9b109d0550344108a416ee2265c30fa31b6ce9306673e81cac"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/19/schedule.hpp",
+      "original_sha256": "4667f7d1057ceb1144a13d017220e376f0db7371c94d6489421ba24926ad70cf",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/19/schedule.hpp",
+      "sha256": "f8ec77c7f2ee0506f4d5ca0f7bdb8591a2a18721af0f7cfe3ff3d551069eb2a5"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/20/schedule.hpp",
+      "original_sha256": "22ea58d3d67680a3f01161144e0727165b3a647c4914cb3a725b6f2dcadd5a21",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/20/schedule.hpp",
+      "sha256": "4d4449827cc8923bb73ed10a425e67ecf9a682a1cdb6cacf7d811a5aae5d6d2b"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/21/schedule.hpp",
+      "original_sha256": "e6f3b54bae6d75ce715f45bfffed203896ca2d74020f8bb1c95feb545f690740",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/21/schedule.hpp",
+      "sha256": "fd7e9f4c7e41b62eb1d4486233df27931d034dd9f5a3eaf16cf7a40cc4db5508"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/22/schedule.hpp",
+      "original_sha256": "b7cc71a55a59db74df9ef54bf0075a2a5495ee7ed1a02e3863f2e95dac52319f",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/22/schedule.hpp",
+      "sha256": "34c8fea074529591696f6ba2be2d7b49805161ef74c3d6d425333c070b78219d"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/23/schedule.hpp",
+      "original_sha256": "3a242e5781d023612bbab8247b7c11d871c07e60b156d101827c663559855b4b",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/23/schedule.hpp",
+      "sha256": "59ed72a0ed2a5b36cf6a98a2972f768838d90dbb4f66d2b9942bdcac9fa89811"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/24/schedule.hpp",
+      "original_sha256": "2d183181867c65aecbce9d19e2e9ee9ff9449c3b882136ba001ed627ed3d86bb",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/24/schedule.hpp",
+      "sha256": "2736e2c57161e90bd4c1a6d07c654ac6a5d6f1f52c592a3deaf08fbfd7f8b05a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/25/schedule.hpp",
+      "original_sha256": "1208b9c4b01a36942502e085d79f4801afee834aaa2fe44abcf11e285f91256e",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/25/schedule.hpp",
+      "sha256": "cbc62ec0f7e11fa82ae1d729eded2b8230e0f3bb0401ef358a5ab519dbadc68f"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/26/schedule.hpp",
+      "original_sha256": "5a61de1aeb5e4436f2f73b1e75e675aef14c0ab218730de2271af8835f28165f",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/26/schedule.hpp",
+      "sha256": "1ea97d3f497cbdb953df0001e273601165b94522fbda750bb3a6b3d3d12dc419"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/27/schedule.hpp",
+      "original_sha256": "482e2b3f01d0a80b424d2961eca3a9909f451d1ec8d1694b5f3188ee5a19fd3b",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/27/schedule.hpp",
+      "sha256": "262c27434362c9118adf93c5949888e9943040ee4d6571eab6ea5348d586183d"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/28/schedule.hpp",
+      "original_sha256": "873067feedd127d76ed9d4a1f4fb596f5aa443c8283c7743f1991ef8a0eab1d9",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_010/days/28/schedule.hpp",
+      "sha256": "36f6862b8aa332f5bf6ce51d1771842cdf7d933ff824ee5ed68e5cba7f4b0b1a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_berry_gate_001/proposals/crop_rotation_t2_berry/source/agent.hpp",
+      "original_sha256": "ad1423e5d0cbd924a8b4c9deb9c374fbdaee072bb3d3dab942d6d55fdabfdd9b",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_rotation_berry_gate_001/proposals/crop_rotation_t2_berry/source/agent.hpp",
+      "sha256": "fa2ec4bd30e6cc27e0231b77072ed754fb7f9c9f31df71033c9bf40fc3ebefb9"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/crop_value_001/proposals/crop_value_m2_t4/source/agent.hpp",
+      "original_sha256": "7808f44e834c22fc842aa9d232695f741b4e858060a17c8ac9c346e8f601c740",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/crop_value_001/proposals/crop_value_m2_t4/source/agent.hpp",
+      "sha256": "af0fd2fc8d057f5225ec4c9b8b752653561f03c68abfcf6c771f01f460ff8620"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/fertilization_004/proposals/fertilization_004_0/closure/20/schedule.hpp",
+      "original_sha256": "b5bef6d8f3297c214f728eb2f7268edd87d230ffc84b2abfeb3f234fe3b61009",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/fertilization_004/proposals/fertilization_004_0/closure/20/schedule.hpp",
+      "sha256": "099601c1faaa3e4f6a7c069bc4d5f2933ccc5b9609799182c5eeb75eb663ae68"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/fertilization_004/proposals/fertilization_004_0/closure/21/schedule.hpp",
+      "original_sha256": "16ec7e1324223864fa28383c92be6fd2571062ad42489fc54734358e02a747d9",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/fertilization_004/proposals/fertilization_004_0/closure/21/schedule.hpp",
+      "sha256": "4207e79d2d69de830887d636ab854e14f3cc66d6a61cd3e15d4617aa3239acba"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/fertilization_004/proposals/fertilization_004_0/closure/22/schedule.hpp",
+      "original_sha256": "8ff3526f78987729af2797ee8c2c32a5dccc94305ab5cdbf16fd0c8ff7d812bb",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/fertilization_004/proposals/fertilization_004_0/closure/22/schedule.hpp",
+      "sha256": "51318412d9f0d13637975b1a40fc956eff38cce4b40e806f9f2eafb4b0f60393"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/fertilization_004/proposals/fertilization_004_0/closure/23/schedule.hpp",
+      "original_sha256": "4265b7d7afaebc0f72ea5ac45c62d2d1c3f3553d74a0cff0eb26d887c3f73903",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/fertilization_004/proposals/fertilization_004_0/closure/23/schedule.hpp",
+      "sha256": "9ca876dc19880e9dbf9c9e06655ac49aa2069feee9b562efcb642f9b7a56102c"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/fertilization_004/proposals/fertilization_004_0/closure/24/schedule.hpp",
+      "original_sha256": "d7b2bb45b100abd7e84bf82e3d02105ad44b22a1cfea487d705742e0ab82e957",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/fertilization_004/proposals/fertilization_004_0/closure/24/schedule.hpp",
+      "sha256": "6dac3b1bd9e02323052d664f1a00cf8b23f3f38e33bad157640fe9de569f7372"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/fertilization_004/proposals/fertilization_004_0/closure/25/schedule.hpp",
+      "original_sha256": "6a8eeebdab258399392337c950fd4be300fd704a2f822d1380f44bf207ed4199",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/fertilization_004/proposals/fertilization_004_0/closure/25/schedule.hpp",
+      "sha256": "3eefcbc376bc14c71096a3eb8a3784691eb30cf1136dd6cc6e699a3dd38ec86f"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/fertilization_004/proposals/fertilization_004_0/closure/26/schedule.hpp",
+      "original_sha256": "8f652ea719257434385955ab7701d4ac0e28bed734b589ff84d6b0c2dd88b170",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/fertilization_004/proposals/fertilization_004_0/closure/26/schedule.hpp",
+      "sha256": "85fab6120bb928de673cef4549ae0c6bc6d30970cf23acaf57c654edcc0abd01"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/fertilization_004/proposals/fertilization_004_0/closure/27/schedule.hpp",
+      "original_sha256": "693f7776fbec6c260ea2bd067d0ae97afa5a437e153600d706f976eab060ea1c",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/fertilization_004/proposals/fertilization_004_0/closure/27/schedule.hpp",
+      "sha256": "606fc32ee5b5c9de19626aed7090344ad81312c2bd2eb41bb095a6e1c020520d"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/fertilization_004/proposals/fertilization_004_0/closure/28/schedule.hpp",
+      "original_sha256": "383d99c06762e1bc91f4372ef279f81fe2db934c74a27acd1ed9565afe684da7",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/fertilization_004/proposals/fertilization_004_0/closure/28/schedule.hpp",
+      "sha256": "4dbc0464628b26056ab60da1756e3c8a620636e77c21e3558263031f1ffb90bb"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/fertilization_packages_001/proposals/fertilization_004_0_closure/source/agent.hpp",
+      "original_sha256": "c58f0918eae60949d052984a2fbbe93dcef3b7055437356cf1ae0705efd46749",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/fertilization_packages_001/proposals/fertilization_004_0_closure/source/agent.hpp",
+      "sha256": "e2d1616a83bdec84b10e3a7b2b9db4291a2e81e4771427a8f76ccdf3621ccdf6"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_day_contexts_001/days.hpp",
+      "original_sha256": "5f56f808f6f3bdf2f27d24d5239df4349592724f6a48ddb1d53095be98be32c5",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_day_contexts_001/days.hpp",
+      "sha256": "c533424d8d713320c1216ca9d4ee6f7008d4727243f19aecbc3f2700c8a42595"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_day_library_001/days.hpp",
+      "original_sha256": "06762574832707b913f74a79f6b983359bf376213ff1f28c29486709a178cd4b",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_day_library_001/days.hpp",
+      "sha256": "4461beb5a42ef5a6358b677366c4d41bd87e2573ded6d658fa52a9296ae715ac"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_day_library_002/days.hpp",
+      "original_sha256": "baee3bd7933f6d98d9860384eb777dbb1ff92f646b00d82666508d3054173d68",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_day_library_002/days.hpp",
+      "sha256": "56052373af122a89180998c8052e80484409e1edd29cc68f44d2bdf2603ca8ce"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_13/schedule.hpp",
+      "original_sha256": "0842384d1d843a88f7b6db1c516cd33ff4eda42f880d3ababb41db4b73e59e39",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_13/schedule.hpp",
+      "sha256": "e8242600b0c7b8dfd01ef9d306ee1a8b7a9bf75ab4b09bf2b8d3ba4f1973e78f"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_14/schedule.hpp",
+      "original_sha256": "85997c83dea391fe1de37101931a1d39c22b729cda2a87ad2e091855e15030e4",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_14/schedule.hpp",
+      "sha256": "0ec66db6b2a7f9d91062533441c2e76c3d52ebc71acbd0a767fca2bea131e2bd"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_15/schedule.hpp",
+      "original_sha256": "92fb8930fe2c2b428c9367d4d47a0dc07c28f180c912d686dfac6a96286450f7",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_15/schedule.hpp",
+      "sha256": "ba9e3a25eda304bd9da00718e3ccdab85b1b335df93eccd4812f8d8ffa73e7aa"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_16/schedule.hpp",
+      "original_sha256": "8f07a8abf0576ed88424990b5643ffc34b77d0e4968e187adfe3bed44c6237e4",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_16/schedule.hpp",
+      "sha256": "ec77f5ef0ca1184c4e19bc4fe1909d3c3661de60a3787406969970fe032bd7aa"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_18/schedule.hpp",
+      "original_sha256": "1249127fdc512e003b19150d6b563420a887dc940d46dd846adf4390a092089e",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_18/schedule.hpp",
+      "sha256": "46babd54f77e06911471b338fbbff8fc837ffacce873019509c8c64f6faaea56"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_19/schedule.hpp",
+      "original_sha256": "383645e8e4342df2b37406d219fbd2f75d5ee2bcd89824f660b42e18b126c607",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_19/schedule.hpp",
+      "sha256": "eeb1d47ca0f312e50e6015894aa05840303b0d382265da0d7d3df25af314f996"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_20/schedule.hpp",
+      "original_sha256": "c8f9e00c5cb862469e53e8b2f71fe9561a4b16a321d5aeb7dfc5f75c084ddbbf",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_20/schedule.hpp",
+      "sha256": "d18e6b7633c6f80f6384df70505f4621145c06487c1a637f460152ae5f4469ea"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_23/schedule.hpp",
+      "original_sha256": "e8b54869fdf4abee685bd002bda428954ddeb1ec4eb8be758aed206f761d7af2",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_23/schedule.hpp",
+      "sha256": "aa4c1b8df3d57d32bee3d56ddaab70c10ad77edaa3c49047d4995aabd8ef4db0"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_24/schedule.hpp",
+      "original_sha256": "c14f8e217bb6b06e662811101fb18a7b1f8e2f6369b212ea9f2fd78bb34fb3cc",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_24/schedule.hpp",
+      "sha256": "53df2dc15e9e2ede946ecd845b7e9bf32f43b0378f35b6e191c2c9bc0f11f24e"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_25/schedule.hpp",
+      "original_sha256": "0df3bd7acf60d2ec052fced51ca7ead6ef9288fc97a84d81eb018d39a76ebba1",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_25/schedule.hpp",
+      "sha256": "c9f8b8c7f0fc273dfe3df361e44fd3d5e14d34b1ddad2f21d8a0066857cab826"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_27/schedule.hpp",
+      "original_sha256": "323f85be49edaf53f8ff1272591c28077fa1459abce9d636ed93e01256716552",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_001/proposals/investment_rebuild_001_27/schedule.hpp",
+      "sha256": "40b3549c1cadecd09cfbb5969e6018fd33a51c36fcb41dd26d8a4486accf3805"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_13/schedule.hpp",
+      "original_sha256": "255e8613405e82627762fa312e8c3ec52933014a085fe7f757dab8a6dda097e5",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_13/schedule.hpp",
+      "sha256": "8ec16c8141fb4a232f9b455851a33775cc6dd80279a7c497b54aab32929246c0"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_14/schedule.hpp",
+      "original_sha256": "1789bf70cd8685ca9fb5beab9f6f351e6d39213b1bd9ff08d9e64433fa6dfef0",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_14/schedule.hpp",
+      "sha256": "797814d2107757b3fb997690c829cb6528c6fcf38a2894ecdcc4ffe58cdda038"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_15/schedule.hpp",
+      "original_sha256": "2f8982c2752d63bf0467397afbce11b24770f59c84522fe35ae99e00f3fa1f49",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_15/schedule.hpp",
+      "sha256": "70d9f55810c22ca86934a6abdb5d9fecb85b578e18fad840af5725e4e7debaa3"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_16/schedule.hpp",
+      "original_sha256": "6da2d02f057bfe41eb4fd6a909c7879f495fee2ac232fa52bb874a4c3c9873a6",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_16/schedule.hpp",
+      "sha256": "662b51d6ffab924de9b6bf57d8f3608e0cd03f2aabea4eab97e74b284d04a8a0"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_18/schedule.hpp",
+      "original_sha256": "fb2729e4837c4fbdf13f99a902da18065f8dd4a3ce521c1e416e1c227ba6d78a",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_18/schedule.hpp",
+      "sha256": "58ef447d1adbe7950ff30e4aac9314d8bff352a0c915445d360744657a28e8d7"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_19/schedule.hpp",
+      "original_sha256": "33fd1f0e4173bfdc8d3496339b19ea65ed10c3191be313e43b7dd504d6dea4b4",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_19/schedule.hpp",
+      "sha256": "3ca8d1d946677df1176a6766e1ad06d69ec4cbd3a45f51e2abeff0376ca71ede"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_20/schedule.hpp",
+      "original_sha256": "9447e08e3785e9a907a77e5c6674dbcf414ea2c20c30d2b16bf8090245f821c8",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_20/schedule.hpp",
+      "sha256": "3d8245579a5d791bc8efe4ea49298b80c576eb07d699e753613c6967289933cb"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_22/schedule.hpp",
+      "original_sha256": "42c7a25b32d0f6d874e1ef709d239f31306aa4d2afd0e6d53d959d39dd55d3fe",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_22/schedule.hpp",
+      "sha256": "a29c2e678e1e4ce8434f82dce970c359b472fb011d9cbf45f687057faa374ae4"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_23/schedule.hpp",
+      "original_sha256": "f4fb92665c11af193bfb9ed2681794a679687fa4f909cbb93bf20e300186285d",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_23/schedule.hpp",
+      "sha256": "92e954c99b582628711fe7a56d14f5f48660dae5e953e4f77129d9a8dbdf49f0"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_24/schedule.hpp",
+      "original_sha256": "70637a0c0d6596bcff2119edb650933b3f18b24f003a8e9523e1f5a107bb09ac",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_24/schedule.hpp",
+      "sha256": "91c3388ed585dc5b1e0e54117d2e60a8bdda8a24496abba3fe04e0d892df1cd3"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_25/schedule.hpp",
+      "original_sha256": "db0e38e2247767fdb4cdcf4fb1fcf578414041c627dba1ae19d1e095c595b70a",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_25/schedule.hpp",
+      "sha256": "207a1ed7c602b1a8fba729ca84687ab6314ff66822428b70f3eaf943bc661aee"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_27/schedule.hpp",
+      "original_sha256": "1db73c97ca755f9ddcde1b9c802d1fca86078727467f9c187754dd05236b3495",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/investment_rebuild_002/proposals/investment_rebuild_002_27/schedule.hpp",
+      "sha256": "2cd7bb77b700ca94da381f583d1473107b9dac2d7d0b46744e311924300fc079"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_day_library_001/days.hpp",
+      "original_sha256": "4693226068a0ff2bf04c9c0922265411260821e18eb75bcdc7a6a30ccd5f0944",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_day_library_001/days.hpp",
+      "sha256": "d773509503a3b47e78c3d1f5e3de8c346d3267cc0ddeb1abbedd21056f322f42"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_0/source/agent.hpp",
+      "original_sha256": "3d279b913c6e971c82d1c2ac9ca73d0b29d754ab4ec91f2c605b9c64f938c957",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_0/source/agent.hpp",
+      "sha256": "52c3796a2eeddff9959d63c2599f1c8e161a50d0d30935797d65639c9e831e54"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_1/source/agent.hpp",
+      "original_sha256": "af3cf78ad5f69f1738d92c08df00bb33af4618f70b49ab895e323033b6525074",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_1/source/agent.hpp",
+      "sha256": "3a89a5c1c6ec5eda7d12f278f7a5ac608ab3bd0e75253f712953258a369d712d"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_10/source/agent.hpp",
+      "original_sha256": "4216fa698ddff2abcafa8c47549814122d1c730c39f44305aa20c2dc467e2ce5",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_10/source/agent.hpp",
+      "sha256": "dbe367a8e424b2332c8cd6c56bcb84705023ef4899df0d48bc61eff18a43bdc6"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_11/source/agent.hpp",
+      "original_sha256": "147cec6e78fa7e5af456436d67c431be96763d9b38267d3969612eb479c2210d",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_11/source/agent.hpp",
+      "sha256": "7790c594240bc163a0f7871ce9a7c56f6242df89e8101c1c97e448cd31e1c210"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_12/source/agent.hpp",
+      "original_sha256": "e513fc5bbb03b2e7f4e8df8893706bacf153ae8b02b6c3c66be12313f4b5c74c",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_12/source/agent.hpp",
+      "sha256": "3797524757b6c08c0d5bf651bad85a10bee8ee3df3a8519299e66e9e483eac84"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_13/source/agent.hpp",
+      "original_sha256": "e64ef5abe2c82e4e1466854ad9e27ccfba733cacad5fe8c8f7f711713c932c95",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_13/source/agent.hpp",
+      "sha256": "ce174833b97658d213e346c13b1383efe6dc5882ade8b76d9410241cb927591b"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_14/source/agent.hpp",
+      "original_sha256": "fbfa23991dfcf6b376fcbbadee03b76a3bce71130a68561c868562911142a87d",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_14/source/agent.hpp",
+      "sha256": "d3a4a75cc4e9311429885dfe37540c98e75f594d5356f226f2e8a1959e2e4126"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_15/source/agent.hpp",
+      "original_sha256": "f38616ae86a234601328bbb971cb37531c8b98547250fcbaf8fa29b37ff0ea2b",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_15/source/agent.hpp",
+      "sha256": "57125d4f2c345a8b381a3288a5baa9c737ffbb45ba10b67f6f9db671aa51846b"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_16/source/agent.hpp",
+      "original_sha256": "0d21b19eb4ef4d4693cf27855bc74de939962860e0aaa8bad4c6cb4401bc2d36",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_16/source/agent.hpp",
+      "sha256": "e5c107d43957af7d82009af19867da9206b23a6cc3d3c2f0915a536feb54edc5"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_17/source/agent.hpp",
+      "original_sha256": "f1a569ec064c80e2d545fcc7c0ab3fd9972c22d7ab756fbe1629a4e012c5054c",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_17/source/agent.hpp",
+      "sha256": "bb55deaeac206f82fdc3734923eeb1491fbd0e909a691e62c722f6fbbba4cae8"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_18/source/agent.hpp",
+      "original_sha256": "b99afe41c2e86ddcc38a1b89cb60724076b5d92b0bd96bbea2732783dba52be1",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_18/source/agent.hpp",
+      "sha256": "ae9b5538c3ace3a12ea253aa8ebb76c1e25ffbe6ed16a15ee12ec7053d05c57b"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_2/source/agent.hpp",
+      "original_sha256": "c403bbe7004cf2dc5307c3e9685400107f0ef3e660870823cf8b17bf559d0852",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_2/source/agent.hpp",
+      "sha256": "7730f5dee8d6d7e1ff43ed8b04f59d9d6014a6ff043d9edf6ce8308829d3714a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_20/source/agent.hpp",
+      "original_sha256": "69564a415ea3ddeea285b0cae7e229baf8cdd7bfb915e244862491ce8f1f16d4",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_20/source/agent.hpp",
+      "sha256": "61175f4582e8bcd37c255d187910ae9783f29a3d8676a6026ccfef7c5ba08c6c"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_21/source/agent.hpp",
+      "original_sha256": "bff9f602663cde7538e7a5e25db1da732f9b5acffe106283c00406d2690c72ed",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_21/source/agent.hpp",
+      "sha256": "44d33112b9b435c64a997bf6ea7119bbd1a79ca358dddc207f25c91145dbee1d"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_22/source/agent.hpp",
+      "original_sha256": "a5518322374fb7e99bcdea111a0c083f3c4c78ac0aacf8f01853ecba8b1a953d",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_22/source/agent.hpp",
+      "sha256": "7058594cd837dfa0f62648c2e9551e05eee4c95bf7b7c928fe0a38156d03adcd"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_23/source/agent.hpp",
+      "original_sha256": "5a154c4ee089ef40ff281cfe6e008b70b33927740d9aedb9c4a9882fdc64530e",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_23/source/agent.hpp",
+      "sha256": "987411b2a4be2f1753176cfa09572fb5baf7b5e14d9fffd26ec3f627014347b6"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_24/source/agent.hpp",
+      "original_sha256": "11b1299e108e113466d7bd519f4edfa6f05351d77266edd35de09306a553d08e",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_24/source/agent.hpp",
+      "sha256": "e3c9310ad5ed6a582870b3ddb1ea913982b34fd85a1a892a9c4d5718aa3398d9"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_25/source/agent.hpp",
+      "original_sha256": "e539395132b565b45ca95512cceef9aac47593ccad8f16cbb5335893d97a355c",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_25/source/agent.hpp",
+      "sha256": "c691f9a710fb77473c8b9efcf9a3a5f59c9303be1490e379fd6dd2fc981fb069"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_4/source/agent.hpp",
+      "original_sha256": "03591aabf7e4674577c72804ef50afd5b1aac48259400d8a41aeffd0866fa86e",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_4/source/agent.hpp",
+      "sha256": "2fd83263c21c3cfbb56f0900ba966018449333369c85f8ea6d35ba255f8149ee"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_5/source/agent.hpp",
+      "original_sha256": "13ef7009aa620832e705170dfc8b9fe00bc38b366c3a00e6dc851d64c8529b35",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_5/source/agent.hpp",
+      "sha256": "95db691a13a667bfc319a5180369e181184fc22e87db91b39f617a4a6f23ab59"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_7/source/agent.hpp",
+      "original_sha256": "01a106535e8934d5d7af3d1489d1e4d524505413166bc75bb827b18950a86529",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_7/source/agent.hpp",
+      "sha256": "aa6f379a6b3c42d43b57eadb4947c79cecb39090b64cade69b383f0975a5f4d4"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_9/source/agent.hpp",
+      "original_sha256": "2978fe0cccab9254d572a5c9f746d28ba8c2b897ed82b6ebbd7283d08d723f1a",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/justin_reduce_hires_001/proposals/justin_reduce_hires_001_9/source/agent.hpp",
+      "sha256": "81c3a7065bbf292925018fd67ea46078896e565fb540fd3b5fb3ac974681fb2a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/late_portfolio_001/proposals/late_value_s32_t0_r05/source/agent.hpp",
+      "original_sha256": "3284115be52829fbbf0160842a8a96d6e44e282d9d001d5b94376b754d19f1e8",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/late_portfolio_001/proposals/late_value_s32_t0_r05/source/agent.hpp",
+      "sha256": "46b520102ea977725da804dea5fa3953e0978f0437cf443abc15e6a4bfeeb9ca"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/late_portfolio_001/source/data.hpp",
+      "original_sha256": "337828428ab8603b3dcba5a3081e9778109d410bea46d8c859cae1440524fe89",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/late_portfolio_001/source/data.hpp",
+      "sha256": "5554c3c74b82a295024acff138769add4f3e83067278b866fffdc9d6e96a58c9"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/late_portfolio_001/source/model.hpp",
+      "original_sha256": "21d831dbd4b7a19a33c0eefef164dd19a60ed21a2a0c4d83482418cca61294de",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/late_portfolio_001/source/model.hpp",
+      "sha256": "252040b9266b73fa0039a99b8137c60d86bfc0008e103cbe63fa62157ee456af"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/late_portfolio_001/source/policy.hpp",
+      "original_sha256": "c0ca9dbd99ef72dc1e650904c6fa18d9252d2169ebdbaef1b95c5f2e2054eafa",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/late_portfolio_001/source/policy.hpp",
+      "sha256": "94570a1f17bc0ac520e2babf5f23eccc4365c9c5f5271a3098ee5bee4ead99a5"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/opening_market_search_001/policy/source/agent.hpp",
+      "original_sha256": "cdf0d666e5323d35e9761799cf85e0fa3cff57eb5d2ca027279b80caa5424773",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/opening_market_search_001/policy/source/agent.hpp",
+      "sha256": "23ae214f9210b02cd69fc0edb9979bd2937fda46d951e269b815a91d8ea407f1"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/opening_market_search_001/proposals/opening_q32_b13_v1/source/agent.hpp",
+      "original_sha256": "472cd477daad9cf1c3505c47203e4a62dd8d0e7ad3be23a24c019dcb5bafdeef",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/opening_market_search_001/proposals/opening_q32_b13_v1/source/agent.hpp",
+      "sha256": "a375b3c16acfbdfcb1be28981117119bdfcf8fa215e1831d44b77ed7ba69936e"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/13/schedule.hpp",
+      "original_sha256": "efa1f7f39bbaf5f48d2ac565b417d6db4863864de92ae7b177db3a736d61bf25",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/13/schedule.hpp",
+      "sha256": "93e603c3acb841d79de82a7dfc3d9df566670ecec8dda081ef72cd620b78c1be"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/14/schedule.hpp",
+      "original_sha256": "3e7370878f68d0b37209fbc1af48953ed0d0bca69e0e7cc9a3c841b5f2c8b66f",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/14/schedule.hpp",
+      "sha256": "39ee23eb641df95b79e79887b4f964084a2386ec7fc80a3bdb28b00bf26b9b32"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/15/schedule.hpp",
+      "original_sha256": "e6c999dae70879bed48f84d95d33f4ba7b9e33e9f81f5eaecaef5787e41d1e8e",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/15/schedule.hpp",
+      "sha256": "5e5fb1db37f3c088980c69402748ead30c5e08adafc792f2fd9a248dd8a09d65"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/16/schedule.hpp",
+      "original_sha256": "a0b0e4ad76985a5446f5a92fc7dad323a0842d0830e2cb58cc58906032f19e5e",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/16/schedule.hpp",
+      "sha256": "dc4b46ed8e6d08a07d6e3660bde270472a3b8a562190a66ff15af4bcf0f655ef"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/17/schedule.hpp",
+      "original_sha256": "686fa4e75a4e35e4aa52b40fd024ab0cbdcb322b8b8639fb3fb7de9185b4818b",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/17/schedule.hpp",
+      "sha256": "dba7ab35b3e300076990973420d3302ba52e3b35eda81310e11f6063a84fc6ec"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/18/schedule.hpp",
+      "original_sha256": "1c7ddc7006868132014cbb60b52d5e5998575943ef340691b5495044c3016caa",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/18/schedule.hpp",
+      "sha256": "e94a0514f5b01fd8f9de56cefc8b5e312f6f556fc0057e74ca9f1b38d321627d"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/19/schedule.hpp",
+      "original_sha256": "8aa0f90c973690652263647873e592113ce8c0c89090ef39c690ee97af1cf069",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/19/schedule.hpp",
+      "sha256": "6d6ae4c3cb775dc52f23e450a9ec1148618ba7e4855fb659763f38a26c4c2dcd"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/20/schedule.hpp",
+      "original_sha256": "bb5386ef090b8dceabbabc5d182b06c4e8a0e3935503da50017124e68085d8c2",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/20/schedule.hpp",
+      "sha256": "7d3fe12fdf8d6a82f8d4115b4b4e08a6990df11d8d64b8061b2f91ae9d66b3b7"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/21/schedule.hpp",
+      "original_sha256": "053b8460f75a34245a6ec78e26eab5088bb40883d3d7c14bd79b8fba784eb0f3",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/21/schedule.hpp",
+      "sha256": "4e0e2e6f12b829d15035d2cfe256093ff2179ee23452eeceb6700bbdea97c746"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/22/schedule.hpp",
+      "original_sha256": "ebe02f0e2f4d8641e29711b6268cf2df0a20df4906618e969f611c18d4309e99",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/22/schedule.hpp",
+      "sha256": "151140652c785e434b9c15fc61d7f0c1ad702a22adce91670126cb9009a280d3"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/23/schedule.hpp",
+      "original_sha256": "f1ed170c7e93b4ac53c3c8eeb36618a83e2254acee89f96962e9fc2053225cea",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/23/schedule.hpp",
+      "sha256": "935ca6fccc0c132afbc75232c74d64763c9a143983c7f1868da00fe4d95d8c96"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/24/schedule.hpp",
+      "original_sha256": "46ba5e176dfc6ba625f2e3f21b6085ce95eba34d085b10bcbfb98d94737c2603",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/24/schedule.hpp",
+      "sha256": "a2ec91544fc43c048bf8b1c360173a6c3f0df739ab0d1968b3f37c8f0bb48ae6"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/25/schedule.hpp",
+      "original_sha256": "7437c777a6ac3ed954e0d753da5125b804b6dc6b0d9b65bfd3cad7f676b2dfc6",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/25/schedule.hpp",
+      "sha256": "556af9195a5c82daa3a7904269a5f5795acbc8b929635b2565847cb430a0ad0d"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/26/schedule.hpp",
+      "original_sha256": "5110a24198f177cb76388af04f5e9595d74dc5f73097265a3070771af7eeab40",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/26/schedule.hpp",
+      "sha256": "cbfac66f7441ec81b7b85d1591112234eeea384421dc89a52286bfcf828f3f4a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/27/schedule.hpp",
+      "original_sha256": "c0e9ece4fc2f281bf8f2239eb4aa004ebf490af79cc0b0d1ff3dc5462536ac7f",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/27/schedule.hpp",
+      "sha256": "4450a340ec0966f2958961d1a79767360ec9aa2a775d7387e8730df37b3ae96f"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/28/schedule.hpp",
+      "original_sha256": "503683410fbb7a616dd0aa1eec1852e47bab0d948032a1d825e68054689e6205",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert/days/28/schedule.hpp",
+      "sha256": "299771b1bd79bc3b6af8e514b6e55c01ed14faf5e52a962869f0646743fda1ca"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/13/schedule.hpp",
+      "original_sha256": "e218c85d08a9ceb69b642b32f6913fb47c7fb8e93808f1babf29d7c71f243e1a",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/13/schedule.hpp",
+      "sha256": "6ce76129c692a14666654fabbcc049a20a98a5592fee6c183149409c62e9df84"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/14/schedule.hpp",
+      "original_sha256": "03c4c4e246e0bd02b96c7ecbe9842e5305d165c06e6814cdad095fa490d2ba41",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/14/schedule.hpp",
+      "sha256": "6b87f85203deccda08a12c8cd1a1d62f4fb0934b47845966824bd4eb1cd910dc"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/15/schedule.hpp",
+      "original_sha256": "550a7fbffe5c116f8b4ea1e9e9614fbb6331538212e4b0795abaf0360cd0a780",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/15/schedule.hpp",
+      "sha256": "6122e19bc27cd289ea29ccf91f9da92ba910b25cbcfaf6741dfb5a5f228ec9d5"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/16/schedule.hpp",
+      "original_sha256": "14483fe239abb41ebd6f2201a44da0545f612ea16bb6eab07127df9ddb522d6e",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/16/schedule.hpp",
+      "sha256": "ab9e5df1701d81a314aa1215da63f8564f99e17ad767d4576f213718cb2275de"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/17/schedule.hpp",
+      "original_sha256": "390a61b5c0b4b2daa2c01a27b452cd36487e8450e6a76cbf4db31f5b080b8e4d",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/17/schedule.hpp",
+      "sha256": "a1cc907399ff6d711f5b82744f4182e23832f12a9c7bab08d419630d07fc821b"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/18/schedule.hpp",
+      "original_sha256": "743bc3b5fa760d931ab84b14f1e66a0378f23ce3c81190192a5dd8f189b0d22d",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/18/schedule.hpp",
+      "sha256": "080a7277701bd65ea776baf64ba545a1d1cfd6a9e58a57fb46ecd024b4486a0d"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/19/schedule.hpp",
+      "original_sha256": "037f01c1acf9c5f349804d6f499fa7255fd73ff1cc08c09005f800837415a8c0",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/19/schedule.hpp",
+      "sha256": "ffb96f4852bb67f0997d373db37632375167aae2c60e5c367f8a0e78e3aa4015"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/20/schedule.hpp",
+      "original_sha256": "c0fef42d88f7820858c9ffe36fa8016c4db2c5e603c5a81798058f1e278f5c18",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/20/schedule.hpp",
+      "sha256": "bd0023a6704dabaab7aa96cc80141674aa08377ddefe731143c9ed23a116a962"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/21/schedule.hpp",
+      "original_sha256": "eaccc07c025d3b16492954c2699eb24b4300461546ad64a172570af804562463",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/21/schedule.hpp",
+      "sha256": "e10bb415d82c363fa9b078c27ba70323764a934ee516a827c6900ab2b764515b"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/22/schedule.hpp",
+      "original_sha256": "5786626bd76bf63eb7426e8cc0f30f6eabece6aa20f4f41939624a470c5ee24b",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/22/schedule.hpp",
+      "sha256": "a8f02082c1921b57a6e425783d654254be69d3fdd0e8d4a03a0cb5f7b76633e8"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/23/schedule.hpp",
+      "original_sha256": "23a33d5c12675941771c8617a2fc27ef6f221dd4ccb5a14fa32abd4f8e676c93",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/23/schedule.hpp",
+      "sha256": "ffd30f1dd1d7646bbb7671dc11a962b49b26eb871e84a89c11dcf7935e4ebb0c"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/24/schedule.hpp",
+      "original_sha256": "3a0426b66ab05402aeb347ad2a051c32daa16a20de532a8bff1b6228dd2144d0",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/24/schedule.hpp",
+      "sha256": "5a3b7517156d094dd345d2da1117c993a3c17d1491483a8ee2ed3076ae406a91"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/25/schedule.hpp",
+      "original_sha256": "68ca39f2f3ce1902495c3b5c3d07bd634326e7fb0ea35fb51f5df36cd53f1423",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/25/schedule.hpp",
+      "sha256": "fdb607d230349fbc09fe6adb785a64e3a8f7f9d4228c858aa48a43179abbed27"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/26/schedule.hpp",
+      "original_sha256": "468a786a1a7b44626a37a6222fde823241db575bed574412e4f2ac6934658f41",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/26/schedule.hpp",
+      "sha256": "ccb18fc5b374c2d66e33be96d166cc8a7564ab8f5b7a234215fd0e06340c99c8"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/27/schedule.hpp",
+      "original_sha256": "b5c78dc1612b2892efad0af6644fed38be73ab6b0eba554ec7187751fb4f87af",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/27/schedule.hpp",
+      "sha256": "3476a5dd0fc0664867804c0cd5dc678aa05aec9b2adb2b8dbfdd0eb59319286c"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/28/schedule.hpp",
+      "original_sha256": "be71367c5ea26de09b49a92784292cd4aeaddc49a2ef488009457a3013926a99",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/one_fert_berry/days/28/schedule.hpp",
+      "sha256": "86d6eafbbacf30d7b89bc49b3325d9182e847df80780af84561da28e16d2c7bc"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/proposals/wheat_one_fert/source/agent.hpp",
+      "original_sha256": "18eb880590e70020be152ec8b82135abc2d12aa88d41100bce6f2f6d6fbf5d5b",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/proposals/wheat_one_fert/source/agent.hpp",
+      "sha256": "de18f95e0220a849b2ca6c0ac62c88fbbd948f2307d2fb205b31eb74bc41bce2"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/source/policy.hpp",
+      "original_sha256": "6abd5671664f98cd5c39fa3f5b4e62503a342bca58fb753c9e4bd8c5238a8eeb",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/productive_wheat_rotation_001/source/policy.hpp",
+      "sha256": "fa89ad1a716614bd1a8655e0dace75052bf399da1a3832a208561c7337536e96"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/rival_wool_context_003/proposals/rival_wool_context_v3/source/agent.hpp",
+      "original_sha256": "21bb5efe11c0ba499892f3c5e74d8d95c2399ee05722170b8eb4f74679172ee6",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/rival_wool_context_003/proposals/rival_wool_context_v3/source/agent.hpp",
+      "sha256": "23ee0900f1a6f7f41f97272f8c533c2836b0d1313537c9ab5caa085ccf328cd5"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/rival_wool_context_003/source/policy.hpp",
+      "original_sha256": "fd18de753405fd35b19813d29d0e823b54db323df7794091205ea611fca42f79",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/rival_wool_context_003/source/policy.hpp",
+      "sha256": "0830f8b09a134f68f60e39d203aa8bad75bd45e76b16312cd65d6eab1b8c7f12"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/shop_herd_combinations_001/proposals/shop_herd_s6_m3_g1/source/agent.hpp",
+      "original_sha256": "e78eb480f1ae744894d4afc756bee50b120fa15513a07e934cc6788b6e40c537",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/shop_herd_combinations_001/proposals/shop_herd_s6_m3_g1/source/agent.hpp",
+      "sha256": "3f7c6cd914dda9b419a343047e582cdd94117c68cc43e35ad32556ad0cda0301"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/shop_herd_day_library_001/days.hpp",
+      "original_sha256": "374de0db1838f0e7cba00f6932f4650300b05d605b086091d5f5e7ff04f985d7",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/shop_herd_day_library_001/days.hpp",
+      "sha256": "2a470de18722f0b49a1b3476da9be984851988603d26e3f779e1bb46461757a0"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_11/schedule.hpp",
+      "original_sha256": "c9bd06b81e0c8ce6794bc0e33213b7f960d583abba222029b0b0f0394ff16d44",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_11/schedule.hpp",
+      "sha256": "9e3bc51385c20a9107a74e4154a99883707f7434358d04389c41e7101fa79d88"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_13/schedule.hpp",
+      "original_sha256": "34a13b06bb5b1ae364c301dd19586f742ac4f6e559c30910a78bf03578345bb0",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_13/schedule.hpp",
+      "sha256": "a591198ff535a6813cada0d782f2bb81f423547f8bd7b05db9c133eec2afe5c1"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_14/schedule.hpp",
+      "original_sha256": "4d1dd7608d93e95fd0b091bad933a548e91194df51252aa4c9a8c82437a4993e",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_14/schedule.hpp",
+      "sha256": "c35b97dc3a19475481057587af56bc7051981a89ad893c80235aacb159fa1df7"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_15/schedule.hpp",
+      "original_sha256": "694de28f60f9d0e9484121d38cd01a3a24b7680991abd26e8e2c49b5c7548ef6",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_15/schedule.hpp",
+      "sha256": "f639d8fc658585b23a44ca2198d14e8387d2d4dc7f46f9b3ff9c92f29428c1a6"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_16/schedule.hpp",
+      "original_sha256": "a0b35bbc68b551eff3f50e7165844fadc4322030cf98078a1e21211357689090",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_16/schedule.hpp",
+      "sha256": "8082466c77785e68b184f3bab1c62ed80cc5eb4a28f603c06fc8c8c722d26e19"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_18/schedule.hpp",
+      "original_sha256": "cc4ef809f6a644e56d8a0add760f57e3bff5908badf8ad079d571e959304f8a6",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_18/schedule.hpp",
+      "sha256": "c083c319207da398df470cd0f2bcdd55bd00af9a2192d482e4a2c7d62edc98e0"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_19/schedule.hpp",
+      "original_sha256": "70b3b7edc58b4fe4f6990bdc3d84f7bf90ba9c31c15e9d4a436ca36856ad55a6",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_19/schedule.hpp",
+      "sha256": "e362288b87249fdf2dbc672fbef5c5619f92ad4d9bb45d73f13ddeddb5e88a25"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_20/schedule.hpp",
+      "original_sha256": "39c01e96c23ee3cd50a15ec2e3824d0c2c13d4783a1017abf7f254ebc3217535",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_20/schedule.hpp",
+      "sha256": "c36b156278d0f5a05cf4e9b97b032b92f46a30ff046fe0b1162ef17d6d253ded"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_23/schedule.hpp",
+      "original_sha256": "bb2c9726f63f647525ef5c601d86363d2194408c2dfac1e3808784173b5c6337",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_23/schedule.hpp",
+      "sha256": "4d0865782c3805e1cdad26fdc8ec9e68e3b442c91a9521d46d2bd0727a8cff88"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_24/schedule.hpp",
+      "original_sha256": "4e0f1a3a8989cdea16a2628abf6c3aa11d0f37f0486be4f43276784b4ef4aca2",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_24/schedule.hpp",
+      "sha256": "4ffa97ed9710888e943cc9968252c7765e4f32acc7e123f693013901e6cb43dc"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_25/schedule.hpp",
+      "original_sha256": "009d58334b9af5795c4cd475b42b37988e0b0278e370da7568963df8254672bf",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_25/schedule.hpp",
+      "sha256": "643df7b90671edd6ce964bad0884d85be7e37a46a87e62d221a35a32bd6c9f76"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_26/schedule.hpp",
+      "original_sha256": "619fd06e7762b9d32bc356d7887696d79f01160e92ae9bce2d8b4dfaf7555fa4",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_26/schedule.hpp",
+      "sha256": "fffd1a1474d1c0928619fec6dc31c57bea90b0730bde9914f0cd5372c3f27ef7"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_27/schedule.hpp",
+      "original_sha256": "1110b4930e0ffe259020a8b75572de96f07c9d6ba5a6caa93230437cbbefbfbf",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_27/schedule.hpp",
+      "sha256": "203751779dd6cc81d74ef2af1f6a874c84defc8fdc6978e78680319a620e5b3c"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_8/schedule.hpp",
+      "original_sha256": "0c9c8a3a44b7de4ac3ff3f4117ca0261e53e5901c32e11b0c9e1ccc831a2bd51",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_8/schedule.hpp",
+      "sha256": "eaa735bdf2497b25de9a9f5751851a4c4bcefbc9ab2112a4dcb61c8f467f9556"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_9/schedule.hpp",
+      "original_sha256": "98d841cc012449f2e5838f3ad93db50d480dc13e32858e844a81dfab1c21026b",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/shop_herd_rebuild_002/proposals/shop_herd_rebuild_002_9/schedule.hpp",
+      "sha256": "7fcce152a834241574eacad2132afb39d7adb856f7d71310ea5b7356c5316851"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/v52_family_001/source/entry.hpp",
+      "original_sha256": "48bc95f99622f21b9dcab5fa77871010006dde07e75ebea6cd1213cffaea266b",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/v52_family_001/source/entry.hpp",
+      "sha256": "0be3a216381767270893e0213e49c7ef0f10483c52ee84e689978d8adda3eb88"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/v52_family_001/source/improved.hpp",
+      "original_sha256": "c0efcc0dcb08f81f3882d03165d8f1a82eed443253a38d3c5f06507f765ac03f",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/v52_family_001/source/improved.hpp",
+      "sha256": "30f2f56ca747f26087c51a8173ad5f835053f8609f751ea941f16ed713aad855"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/v52_family_001/source/transfer.hpp",
+      "original_sha256": "e8bea9a00598d1157d46ac241c1f63f251f2194ceac379ad3ce6e7442b24357f",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/v52_family_001/source/transfer.hpp",
+      "sha256": "e8d31d4999e8b57d1313573f69e1146fb58f30c967d76e96bfe58f3a68676b28"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/wool_family_context_v2_001/proposals/wool_family_context_v2/source/agent.hpp",
+      "original_sha256": "69d8882ad30ef421d487977822a06f314d9bdbe4120df31b043cddd9d463589e",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/wool_family_context_v2_001/proposals/wool_family_context_v2/source/agent.hpp",
+      "sha256": "7a22eee83bbe3f68679f00cc778d1ee913878ae63c43df6a737f1ec9270a64cb"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/wool_family_context_v2_001/source/entry.hpp",
+      "original_sha256": "a73994a7abf997e5b8f98e05828d9ee138b5a1ceb3e7573db0f18d6c07dcd1cd",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/wool_family_context_v2_001/source/entry.hpp",
+      "sha256": "c1dd338c471f9eec6ff4bfd895977db2cd7ef3143b70b505ec76cd782cd9a743"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/wool_family_context_v2_001/source/improved.hpp",
+      "original_sha256": "2645c7f712516f83913956d7c35317edc5b3df69e35b9f0f58f084d7c12664f2",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/wool_family_context_v2_001/source/improved.hpp",
+      "sha256": "36927f51f715a5564e1f9cf37525fa8855e13dcd4cb0d67456cd48abca6c9238"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/runs/wool_family_context_v2_001/source/transfer.hpp",
+      "original_sha256": "823732eddd6a96ec3e8e0a0b810f2278de5e9dd0ab80b6f4b0f6bb58ae565e23",
+      "path": "source/deps/runs/observed_sale_lead_003/parent_source/runs/wool_family_context_v2_001/source/transfer.hpp",
+      "sha256": "cf1957b9d1556f648afd58764ccf907e9a218314c42c8399bb758f78db2a37b1"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/source/shared_vector.hpp",
+      "original_sha256": "4ece3f4ee4016e9cbd58d83295c740517ef7922852b5ac3051a52dc709164d42",
+      "path": "source/deps/runs/observed_sale_lead_003/source/shared_vector.hpp",
+      "sha256": "41b90ec720f660b9b7c668ac82e9c3b6759438222ab2ade9a8cd0d1a90f5e1f3"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_004/proposals/observed_sale_lead_start_216/source/agent.cpp",
+      "original_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "path": "source/deps/runs/observed_sale_lead_004/proposals/observed_sale_lead_start_216/source/agent.cpp",
+      "sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_004/proposals/observed_sale_lead_start_216/source/agent.hpp",
+      "original_sha256": "618eb49c327d093657c2c8953a49dc86e5041c9fbc23ba6e3fd43961e973ec52",
+      "path": "source/deps/runs/observed_sale_lead_004/proposals/observed_sale_lead_start_216/source/agent.hpp",
+      "sha256": "454db204d153f14f5744dba5f2526d646c7e83865eafc9369558a36cb3cfc386"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_004/source/policy.hpp",
+      "original_sha256": "4b6fd66857f34a42955335647291a21a3eaefda958f1c0cc540b8a5e0852ef2b",
+      "path": "source/deps/runs/observed_sale_lead_004/source/policy.hpp",
+      "sha256": "1adab4ef1d0abc73e380c4fed174ac7a11cd2df0cc48b8e70f12c812e903a63e"
+    }
+  ]
+}

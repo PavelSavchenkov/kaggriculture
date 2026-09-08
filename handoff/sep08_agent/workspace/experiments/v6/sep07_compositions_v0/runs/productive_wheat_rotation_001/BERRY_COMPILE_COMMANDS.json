@@ -1,0 +1,76 @@
+[
+  {
+    "name": "one_fert_berry",
+    "command": [
+      "conda",
+      "run",
+      "--no-capture-output",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/build/compile_wheat_berry",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/one_fert_berry",
+      "1000",
+      "22",
+      "2"
+    ],
+    "returncode": 0,
+    "started_utc": "2026-09-07T15:25:52.998886+00:00",
+    "finished_utc": "2026-09-07T15:26:01.112011+00:00"
+  },
+  {
+    "name": "one_plain_berry",
+    "command": [
+      "conda",
+      "run",
+      "--no-capture-output",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/build/compile_wheat_berry",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/one_plain_berry",
+      "1000",
+      "22",
+      "2",
+      "--no-fertilizer"
+    ],
+    "returncode": 0,
+    "started_utc": "2026-09-07T15:25:52.999140+00:00",
+    "finished_utc": "2026-09-07T15:25:58.213949+00:00"
+  },
+  {
+    "name": "three_fert_berry",
+    "command": [
+      "conda",
+      "run",
+      "--no-capture-output",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/build/compile_wheat_berry",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/three_fert_berry",
+      "1000",
+      "21,22,31",
+      "2"
+    ],
+    "returncode": 0,
+    "started_utc": "2026-09-07T15:25:58.214028+00:00",
+    "finished_utc": "2026-09-07T15:26:14.999042+00:00"
+  },
+  {
+    "name": "three_plain_berry",
+    "command": [
+      "conda",
+      "run",
+      "--no-capture-output",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/build/compile_wheat_berry",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/three_plain_berry",
+      "1000",
+      "21,22,31",
+      "2",
+      "--no-fertilizer"
+    ],
+    "returncode": 0,
+    "started_utc": "2026-09-07T15:26:01.112095+00:00",
+    "finished_utc": "2026-09-07T15:26:10.757770+00:00"
+  }
+]

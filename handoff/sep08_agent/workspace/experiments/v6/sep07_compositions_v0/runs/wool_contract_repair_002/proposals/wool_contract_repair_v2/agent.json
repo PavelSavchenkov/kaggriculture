@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "name": "wool_contract_repair_v2",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::wool_contract_repair_v2::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../../../league/top_replay_library/source/agent.cpp",
+    "../../../../league/public_router/source/agent.cpp"
+  ]
+}

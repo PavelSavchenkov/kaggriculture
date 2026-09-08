@@ -1,0 +1,163 @@
+{
+  "end_tile_changes": [
+    {
+      "tile": 6,
+      "before": {
+        "kind": "coop",
+        "crop": -1,
+        "animal": 9,
+        "age_days": 9,
+        "stored_units": 1,
+        "consecutive_dry_days": 1,
+        "pending_care_bonus": 0,
+        "fertilizer_days_remaining": 0,
+        "watered_today": false,
+        "fed_today": false,
+        "cared_today": false,
+        "fertilizer_available": true
+      },
+      "after": {
+        "kind": "coop",
+        "crop": -1,
+        "animal": 9,
+        "age_days": 9,
+        "stored_units": 2,
+        "consecutive_dry_days": 0,
+        "pending_care_bonus": 1,
+        "fertilizer_days_remaining": 0,
+        "watered_today": false,
+        "fed_today": false,
+        "cared_today": false,
+        "fertilizer_available": true
+      }
+    },
+    {
+      "tile": 16,
+      "before": {
+        "kind": "pasture",
+        "crop": -1,
+        "animal": 11,
+        "age_days": 7,
+        "stored_units": 0,
+        "consecutive_dry_days": 1,
+        "pending_care_bonus": 1,
+        "fertilizer_days_remaining": 0,
+        "watered_today": false,
+        "fed_today": false,
+        "cared_today": false,
+        "fertilizer_available": true
+      },
+      "after": {
+        "kind": "pasture",
+        "crop": -1,
+        "animal": 11,
+        "age_days": 7,
+        "stored_units": 0,
+        "consecutive_dry_days": 0,
+        "pending_care_bonus": 2,
+        "fertilizer_days_remaining": 0,
+        "watered_today": false,
+        "fed_today": false,
+        "cared_today": false,
+        "fertilizer_available": true
+      }
+    },
+    {
+      "tile": 17,
+      "before": {
+        "kind": "coop",
+        "crop": -1,
+        "animal": 9,
+        "age_days": 9,
+        "stored_units": 1,
+        "consecutive_dry_days": 1,
+        "pending_care_bonus": 0,
+        "fertilizer_days_remaining": 0,
+        "watered_today": false,
+        "fed_today": false,
+        "cared_today": false,
+        "fertilizer_available": true
+      },
+      "after": {
+        "kind": "coop",
+        "crop": -1,
+        "animal": 9,
+        "age_days": 9,
+        "stored_units": 2,
+        "consecutive_dry_days": 0,
+        "pending_care_bonus": 1,
+        "fertilizer_days_remaining": 0,
+        "watered_today": false,
+        "fed_today": false,
+        "cared_today": false,
+        "fertilizer_available": true
+      }
+    },
+    {
+      "tile": 27,
+      "before": {
+        "kind": "pasture",
+        "crop": -1,
+        "animal": 11,
+        "age_days": 7,
+        "stored_units": 0,
+        "consecutive_dry_days": 1,
+        "pending_care_bonus": 1,
+        "fertilizer_days_remaining": 0,
+        "watered_today": false,
+        "fed_today": false,
+        "cared_today": false,
+        "fertilizer_available": true
+      },
+      "after": {
+        "kind": "pasture",
+        "crop": -1,
+        "animal": 11,
+        "age_days": 7,
+        "stored_units": 0,
+        "consecutive_dry_days": 0,
+        "pending_care_bonus": 2,
+        "fertilizer_days_remaining": 0,
+        "watered_today": false,
+        "fed_today": false,
+        "cared_today": false,
+        "fertilizer_available": true
+      }
+    },
+    {
+      "tile": 37,
+      "before": {
+        "kind": "pasture",
+        "crop": -1,
+        "animal": 10,
+        "age_days": 8,
+        "stored_units": 1,
+        "consecutive_dry_days": 1,
+        "pending_care_bonus": 0,
+        "fertilizer_days_remaining": 0,
+        "watered_today": false,
+        "fed_today": false,
+        "cared_today": false,
+        "fertilizer_available": true
+      },
+      "after": {
+        "kind": "pasture",
+        "crop": -1,
+        "animal": 10,
+        "age_days": 8,
+        "stored_units": 6,
+        "consecutive_dry_days": 0,
+        "pending_care_bonus": 1,
+        "fertilizer_days_remaining": 0,
+        "watered_today": false,
+        "fed_today": false,
+        "cared_today": false,
+        "fertilizer_available": true
+      }
+    }
+  ],
+  "extra_feed": 5,
+  "hire_saving": 233,
+  "extra_wheat_consumed": 5,
+  "scope": "Yield held on animals at next day, not harvested or sold cash."
+}

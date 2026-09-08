@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-09-08T11:52:33.961433+00:00",
+  "parent": "runs/empty_sale_slots_sep08_001/proposals/empty_sale_slots_m2",
+  "idea_source": "https://www.kaggle.com/code/yhay81/shop-router-0908",
+  "witness": "runs/animal_group_policy_sep08_001/GAP_WITNESS.txt",
+  "changes": "Only first-turn wheat buy/sell quantities32->13/20/24. Entire accepted policy remains underneath.",
+  "limits": "Initial quantity cannot observe the unseen opponent. Direct counters may regress other opponents; test Bohann and old opening versions as well as the current league.",
+  "negative": "Copying both market turns adds an incompatible worker and changes funding; two cow escapes in witness. Rejected."
+}

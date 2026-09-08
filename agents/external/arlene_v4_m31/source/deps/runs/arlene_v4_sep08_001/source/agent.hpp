@@ -1,0 +1,14 @@
+#pragma once
+#include "../../../../../../../common/api/agent_api.hpp"
+namespace catalog_arlene_v4_m31_compositions::arlene_v4_sep08 {
+class AgentCore {
+    int route_=0;
+    int mask_;
+public:
+    explicit AgentCore(int mask=31):mask_(mask) {}
+    static kag::agent::AgentInfo info() {return {"public_capacity_router"};}
+    void reset(const kag::agent::AgentInit&) {route_=0;}
+    void act(const kag::agent::AgentObservation&,const kag::agent::DecisionBudget&,kag::Action&);
+};
+class Agent:public AgentCore {};
+}

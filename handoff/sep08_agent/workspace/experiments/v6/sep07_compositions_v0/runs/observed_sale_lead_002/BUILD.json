@@ -1,0 +1,25 @@
+{
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "python",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+    "--agents",
+    "ahmed_v23",
+    "investment_context_guarded_001_best",
+    "john_131",
+    "junghoon_wool_sales",
+    "king_rc4",
+    "observed_sale_lead_fast_milk_wool",
+    "observed_sale_lead_fast_v2",
+    "public_router",
+    "public_router_v5",
+    "public_router_v52",
+    "rival_wool_context_v3",
+    "sale_lead_fast_control",
+    "teammate_shoprouter"
+  ],
+  "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/529cc5e53f8b0309e1e8/arena"
+}

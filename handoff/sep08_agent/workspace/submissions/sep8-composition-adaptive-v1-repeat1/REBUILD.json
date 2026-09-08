@@ -1,0 +1,36 @@
+{
+  "commands": [
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/submissions/sep8-composition-adaptive-v1/build_export.py"
+    ],
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/submissions/sep8-composition-adaptive-v1/build_submission.py"
+    ]
+  ],
+  "artifacts": {
+    "main.py": {
+      "bytes": 393755,
+      "sha256": "2e74c4c57459e26f334970de3d461a6ed890d94bbd4ccdd30d7c17996bad81cb"
+    },
+    "policy_data.json": {
+      "bytes": 2728976,
+      "sha256": "d98e8b5a4b27351f4b24d6c0c56656e5452f634aacbf438ba6938c4e03e7d332"
+    },
+    "submission.tar.gz": {
+      "bytes": 301239,
+      "sha256": "d65b8150db33becdedb4f752e8d773fe1c1b24306cb4459974104564d6bde374"
+    }
+  },
+  "source_hashes_verified": 463,
+  "scope": "Exporter includes only source_tree. Adapter templates and scripts are retained locally. No live experiment or previous submission is read."
+}

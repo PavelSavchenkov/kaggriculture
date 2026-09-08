@@ -1,0 +1,46 @@
+{
+  "original_package": "experiments/v6/sep07_compositions_v0/league/public_capacity_router",
+  "original_manifest": {
+    "format_version": 1,
+    "name": "public_capacity_router",
+    "header": "source/agent.hpp",
+    "type": "compositions::public_capacity_router::Agent",
+    "sources": [
+      "source/agent.cpp"
+    ]
+  },
+  "snapshot_base_commit": "f07754bb5c86bed6c77a309e4d9b2d5f53d74008",
+  "namespace_replacements": {
+    "compositions": "catalog_public_capacity_router_compositions",
+    "compositions_sale_copy": "catalog_public_capacity_router_sale",
+    "kag::agents": "kag::catalog_public_capacity_router_agents",
+    "kag::agents_sale_copy": "kag::catalog_public_capacity_router_sale_agents",
+    "kag::native": "kag::catalog_public_capacity_router_native",
+    "kag::sixday_native": "kag::catalog_public_capacity_router_sixday"
+  },
+  "transformation": "Copied compiler dependency closure; renamed private namespaces, resolved include paths, and added a forwarding API wrapper with a default constructor. No policy decisions changed.",
+  "lineage_entry": "../../../handoff/sep08_agent/docs/lineage.md",
+  "evidence_entry": "../../../handoff/sep08_agent/readme.md",
+  "rating": "No independently measured Kaggle rating for this catalog package. See dated source leaderboard evidence in the handoff.",
+  "reuse": "Preserve source attribution. No new license is granted for third-party notebook or replay content.",
+  "files": [
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/public_capacity_router/source/agent.cpp",
+      "original_sha256": "910b1e96851168d3577a19c0de4072a150d8712cedbc0ca25fe457cf3be06626",
+      "path": "source/deps/league/public_capacity_router/source/agent.cpp",
+      "sha256": "046e096c62fb491de092d171b3b20ada9cc6453b1ceaeb807801e6bbe2738de5"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/public_capacity_router/source/agent.hpp",
+      "original_sha256": "46c5f6da441306e625f57a28bdf60d20c96443feae9252fdec378817d1be6fbd",
+      "path": "source/deps/league/public_capacity_router/source/agent.hpp",
+      "sha256": "9bb562f5f4b7cbc2ea89eef1b2ca8c42a5ea30d5ba57e227f81d3f86a265adfe"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/public_router/source/routes.inc",
+      "original_sha256": "c46d6efc86a9407d09715e752f445a8f6042cb62a7aaca68a656e4a1bd067fd0",
+      "path": "source/deps/league/public_router/source/routes.inc",
+      "sha256": "c46d6efc86a9407d09715e752f445a8f6042cb62a7aaca68a656e4a1bd067fd0"
+    }
+  ]
+}

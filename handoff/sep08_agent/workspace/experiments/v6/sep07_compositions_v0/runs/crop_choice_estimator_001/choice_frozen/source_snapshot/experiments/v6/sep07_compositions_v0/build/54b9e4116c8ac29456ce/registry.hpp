@@ -1,0 +1,55 @@
+#pragma once
+#include <memory>
+#include <string>
+#include "evaluation.hpp"
+#include "experiments/v6/sep07_compositions_v0/runs/crop_mix_001/proposals/crop_mix_t2_wheat/source/agent.hpp"
+#include "experiments/v6/sep07_compositions_v0/runs/crop_rotation_berry_gate_001/proposals/crop_rotation_t2_berry/source/agent.hpp"
+#include "experiments/v6/sep07_compositions_v0/runs/crop_value_001/proposals/crop_value_m2_t4/source/agent.hpp"
+#include "experiments/v6/sep07_compositions_v0/league/king_rc4/source/agent.hpp"
+#include "experiments/v6/sep07_compositions_v0/league/public_router/source/agent.hpp"
+#include "experiments/v6/sep07_compositions_v0/league/public_router_v5/source/agent.hpp"
+#include "experiments/v6/sep07_compositions_v0/league/teammate_shoprouter/source/agent.hpp"
+#include "experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/proposals/wheat_one_fert/source/agent.hpp"
+#include "experiments/v6/sep07_compositions_v0/runs/productive_wheat_placements_001/proposals/wp_c13/source/agent.hpp"
+#include "experiments/v6/sep07_compositions_v0/runs/productive_wheat_placements_001/proposals/wp_c21/source/agent.hpp"
+#include "experiments/v6/sep07_compositions_v0/runs/productive_wheat_placements_001/proposals/wp_c22/source/agent.hpp"
+#include "experiments/v6/sep07_compositions_v0/runs/productive_wheat_placements_001/proposals/wp_c31/source/agent.hpp"
+#include "experiments/v6/sep07_compositions_v0/runs/productive_wheat_placements_001/proposals/wp_c40/source/agent.hpp"
+#include "experiments/v6/sep07_compositions_v0/runs/productive_wheat_placements_001/proposals/wp_c80/source/agent.hpp"
+#include "experiments/v6/sep07_compositions_v0/runs/productive_wheat_placements_001/proposals/wp_p21_22/source/agent.hpp"
+#include "experiments/v6/sep07_compositions_v0/runs/productive_wheat_placements_001/proposals/wp_p21_31/source/agent.hpp"
+struct AnyAgent {
+    virtual ~AnyAgent() = default;
+    virtual void reset(const kag::agent::AgentInit&) = 0;
+    virtual void act(const kag::agent::AgentObservation&, const kag::agent::DecisionBudget&, kag::Action&) = 0;
+};
+template<class T> struct AgentModel : AnyAgent {
+    T value;
+    void reset(const kag::agent::AgentInit& i) override { value.reset(i); }
+    void act(const kag::agent::AgentObservation& o, const kag::agent::DecisionBudget& b, kag::Action& a) override { value.act(o,b,a); }
+};
+struct AgentBox {
+    std::unique_ptr<AnyAgent> value;
+    void reset(const kag::agent::AgentInit& i) { value->reset(i); }
+    void act(const kag::agent::AgentObservation& o, const kag::agent::DecisionBudget& b, kag::Action& a) { value->act(o,b,a); }
+};
+inline AgentBox make_agent(const std::string& name) {
+    if (name == "pass") return {std::make_unique<AgentModel<compositions::Pass>>()};
+    if (name == "crop_mix_t2_wheat") return {std::make_unique<AgentModel<compositions::crop_mix_t2_wheat::Agent>>()};
+    if (name == "crop_rotation_t2_berry") return {std::make_unique<AgentModel<compositions::crop_rotation_t2_berry::Agent>>()};
+    if (name == "crop_value_m2_t4") return {std::make_unique<AgentModel<compositions::crop_value_m2_t4::Agent>>()};
+    if (name == "king_rc4") return {std::make_unique<AgentModel<compositions::king_rc4::Agent>>()};
+    if (name == "public_router") return {std::make_unique<AgentModel<compositions::public_router::Agent>>()};
+    if (name == "public_router_v5") return {std::make_unique<AgentModel<compositions::public_router_v5::Agent>>()};
+    if (name == "teammate_shoprouter") return {std::make_unique<AgentModel<compositions::teammate_shoprouter::Agent>>()};
+    if (name == "wheat_one_fert") return {std::make_unique<AgentModel<compositions::wheat_one_fert::Agent>>()};
+    if (name == "wp_c13") return {std::make_unique<AgentModel<compositions::wp_c13::Agent>>()};
+    if (name == "wp_c21") return {std::make_unique<AgentModel<compositions::wp_c21::Agent>>()};
+    if (name == "wp_c22") return {std::make_unique<AgentModel<compositions::wp_c22::Agent>>()};
+    if (name == "wp_c31") return {std::make_unique<AgentModel<compositions::wp_c31::Agent>>()};
+    if (name == "wp_c40") return {std::make_unique<AgentModel<compositions::wp_c40::Agent>>()};
+    if (name == "wp_c80") return {std::make_unique<AgentModel<compositions::wp_c80::Agent>>()};
+    if (name == "wp_p21_22") return {std::make_unique<AgentModel<compositions::wp_p21_22::Agent>>()};
+    if (name == "wp_p21_31") return {std::make_unique<AgentModel<compositions::wp_p21_31::Agent>>()};
+    std::abort();
+}

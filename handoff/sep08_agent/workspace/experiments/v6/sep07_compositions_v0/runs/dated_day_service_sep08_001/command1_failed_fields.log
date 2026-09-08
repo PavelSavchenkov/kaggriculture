@@ -1,0 +1,21 @@
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/dated_day_service_sep08_001/compile.cpp: In function ‘int main(int, char**)’:
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/dated_day_service_sep08_001/compile.cpp:61:22: error: ‘struct day_solver::ReplayResult’ has no member named ‘satisfies_requirements’
+   61 |         if(!original.satisfies_requirements || !original.simulator_invariants) {
+      |                      ^~~~~~~~~~~~~~~~~~~~~~
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/dated_day_service_sep08_001/compile.cpp:61:58: error: ‘struct day_solver::ReplayResult’ has no member named ‘simulator_invariants’
+   61 |         if(!original.satisfies_requirements || !original.simulator_invariants) {
+      |                                                          ^~~~~~~~~~~~~~~~~~~~
+gmake[3]: *** [CMakeFiles/compile_days.dir/build.make:76: CMakeFiles/compile_days.dir/compile.cpp.o] Error 1
+gmake[3]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/Makefile2:101: CMakeFiles/compile_days.dir/all] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:108: CMakeFiles/compile_days.dir/rule] Error 2
+gmake: *** [Makefile:124: compile_days] Error 2
+
+ERROR conda.cli.main_run:execute(127): `conda run cmake --build /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/dated_day_service_sep08_001/build --target compile_days -j2` failed. (See above for error)
+[ 12%] Building CXX object day_solver/CMakeFiles/day_scheduler.dir/src/scheduler.cpp.o
+[ 25%] Building CXX object day_solver/CMakeFiles/day_scheduler.dir/src/prepare_problem.cpp.o
+[ 37%] Linking CXX static library libday_scheduler.a
+[ 37%] Built target day_scheduler
+[ 50%] Building CXX object CMakeFiles/compile_days.dir/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/compiler_care_sep08_001/compiler/source/agent.cpp.o
+[ 62%] Building CXX object CMakeFiles/compile_days.dir/compile.cpp.o
+

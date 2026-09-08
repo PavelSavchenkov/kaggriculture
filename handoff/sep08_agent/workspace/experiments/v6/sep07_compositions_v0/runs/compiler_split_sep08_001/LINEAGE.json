@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-09-08T03:03:05.313964+00:00",
+  "variants": [
+    "compiler_split_mixed",
+    "compiler_split_goose",
+    "compiler_split_p355",
+    "compiler_split_p362",
+    "compiler_split_p4",
+    "compiler_split_p55"
+  ],
+  "discovery": {
+    "seed_start": 1000,
+    "seeds": 8,
+    "seat_mode": "both",
+    "opponents": [
+      "public_router",
+      "observed_sale_lead_start_216"
+    ]
+  },
+  "parent": "runs/compiler_care_sep08_001",
+  "source_hashes": {
+    "runs/compiler_care_sep08_001/compiler/source/agent.hpp": "d6ba6d798c08e367fa899c4341e17d8648ffdc504a395156dfafe4ed627e5e16",
+    "runs/compiler_care_sep08_001/compiler/source/agent.cpp": "ed440e5a6151bb7decbea82936f4d7d171505bc51f5db1525396b1e7b2bbde63",
+    "runs/compiler_split_sep08_001/prepare.py": "27d0ebbe4dc149b518b3b4efb1f4eff904d1ed03d33a3e24aaaca7a2e6f67df2"
+  },
+  "purpose": "Create a clean physical/market boundary before adding reusable route and input assignments. Require complete old game records, not only final rewards, to match."
+}

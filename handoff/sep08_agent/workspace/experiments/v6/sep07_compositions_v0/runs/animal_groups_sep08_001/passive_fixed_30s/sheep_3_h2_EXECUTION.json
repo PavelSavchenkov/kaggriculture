@@ -1,0 +1,94 @@
+{
+  "name": "sheep_3_h2",
+  "agent_case": "sheep_3",
+  "seed": 1016,
+  "extra_hires": 2,
+  "prefix": "terminal_groups_30s/sheep_3",
+  "problem": "passive_terminal_contracts/sheep_3_h2.json",
+  "orders": "terminal_groups_30s/sheep_3/days/29/orders_h2.txt",
+  "source_problem": "terminal_groups_30s/sheep_3/days/29/problem_h2.json",
+  "source_sha256": "2ed837027075d7b0e8ee27d7e451d0eaf0070cfd78b7b8287d980c11a5edd620",
+  "corrections": [
+    {
+      "cell": 64,
+      "before": {
+        "kind": "weed",
+        "crop": -1,
+        "animal": -1,
+        "age_days": 0,
+        "stored_units": 0,
+        "consecutive_dry_days": 0,
+        "pending_care_bonus": 0,
+        "fertilizer_days_remaining": 0,
+        "watered_today": false,
+        "fed_today": false,
+        "cared_today": false,
+        "fertilizer_available": false
+      },
+      "after": {
+        "kind": "empty",
+        "crop": -1,
+        "animal": -1,
+        "age_days": 0,
+        "stored_units": 0,
+        "consecutive_dry_days": 0,
+        "pending_care_bonus": 0,
+        "fertilizer_days_remaining": 0,
+        "watered_today": false,
+        "fed_today": false,
+        "cared_today": false,
+        "fertilizer_available": false
+      }
+    },
+    {
+      "cell": 70,
+      "before": {
+        "kind": "empty",
+        "crop": -1,
+        "animal": -1,
+        "age_days": 0,
+        "stored_units": 0,
+        "consecutive_dry_days": 0,
+        "pending_care_bonus": 0,
+        "fertilizer_days_remaining": 0,
+        "watered_today": false,
+        "fed_today": false,
+        "cared_today": false,
+        "fertilizer_available": false
+      },
+      "after": {
+        "kind": "weed",
+        "crop": -1,
+        "animal": -1,
+        "age_days": 0,
+        "stored_units": 0,
+        "consecutive_dry_days": 0,
+        "pending_care_bonus": 0,
+        "fertilizer_days_remaining": 0,
+        "watered_today": false,
+        "fed_today": false,
+        "cared_today": false,
+        "fertilizer_available": false
+      }
+    }
+  ],
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/build/hinted_solve_v2",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/passive_terminal_contracts/sheep_3_h2.json",
+    "1016",
+    "29",
+    "30",
+    "4",
+    "2",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/passive_fixed_30s/sheep_3_h2"
+  ],
+  "problem_sha256": "d90d8c880ad43dc54b5c74b2c5da8210df3c588693151753ea34e54dec062c76",
+  "returncode": 0,
+  "seconds": 1.2017348039662465
+}

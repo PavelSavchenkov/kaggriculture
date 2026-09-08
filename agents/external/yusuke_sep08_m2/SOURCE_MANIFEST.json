@@ -1,0 +1,59 @@
+{
+  "original_package": "experiments/v6/sep07_compositions_v0/runs/yusuke_port_sep08_001/proposals/yusuke_sep08_m2",
+  "original_manifest": {
+    "format_version": 1,
+    "name": "yusuke_sep08_m2",
+    "header": "source/agent.hpp",
+    "type": "compositions::yusuke_sep08_m2::Agent",
+    "sources": [
+      "source/agent.cpp",
+      "../../source/policy.cpp"
+    ]
+  },
+  "snapshot_base_commit": "f07754bb5c86bed6c77a309e4d9b2d5f53d74008",
+  "namespace_replacements": {
+    "compositions": "catalog_yusuke_sep08_m2_compositions",
+    "compositions_sale_copy": "catalog_yusuke_sep08_m2_sale",
+    "kag::agents": "kag::catalog_yusuke_sep08_m2_agents",
+    "kag::agents_sale_copy": "kag::catalog_yusuke_sep08_m2_sale_agents",
+    "kag::native": "kag::catalog_yusuke_sep08_m2_native",
+    "kag::sixday_native": "kag::catalog_yusuke_sep08_m2_sixday"
+  },
+  "transformation": "Copied compiler dependency closure; renamed private namespaces, resolved include paths, and added a forwarding API wrapper with a default constructor. No policy decisions changed.",
+  "lineage_entry": "../../../handoff/sep08_agent/docs/lineage.md",
+  "evidence_entry": "../../../handoff/sep08_agent/readme.md",
+  "rating": "No independently measured Kaggle rating for this catalog package. See dated source leaderboard evidence in the handoff.",
+  "reuse": "Preserve source attribution. No new license is granted for third-party notebook or replay content.",
+  "files": [
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/yusuke_port_sep08_001/proposals/yusuke_sep08_m2/source/agent.cpp",
+      "original_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "path": "source/deps/runs/yusuke_port_sep08_001/proposals/yusuke_sep08_m2/source/agent.cpp",
+      "sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/yusuke_port_sep08_001/proposals/yusuke_sep08_m2/source/agent.hpp",
+      "original_sha256": "6c92b9e6a47193403b287c8025ce399a79932e2f1b33cca1e92576402657dc94",
+      "path": "source/deps/runs/yusuke_port_sep08_001/proposals/yusuke_sep08_m2/source/agent.hpp",
+      "sha256": "5f08cd7f1b298d6cc9abf0704b67bca691b69b71b118cbe1b29daa1120813070"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/yusuke_port_sep08_001/source/data.inc",
+      "original_sha256": "220ad06211d85f17188adbe7f9bdb0c2b66283959b971deae50452d0f6f5823b",
+      "path": "source/deps/runs/yusuke_port_sep08_001/source/data.inc",
+      "sha256": "220ad06211d85f17188adbe7f9bdb0c2b66283959b971deae50452d0f6f5823b"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/yusuke_port_sep08_001/source/policy.cpp",
+      "original_sha256": "cfaa30a10e5ca4ec11f7c20f3d8c6450728b76086c51ed013d7dc478a7845897",
+      "path": "source/deps/runs/yusuke_port_sep08_001/source/policy.cpp",
+      "sha256": "18c1be7e6f7f09a05f466a2e2d314f0bc74a3987fde4c39fbfb1306a7794800a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/yusuke_port_sep08_001/source/policy.hpp",
+      "original_sha256": "aa2d81e3a2da724bac337b40a500cd0a842f275418402dceba959e14b67443af",
+      "path": "source/deps/runs/yusuke_port_sep08_001/source/policy.hpp",
+      "sha256": "94ebf70c3e1b7294684eb0f3657fe6b3496ae94d18f89870665833244bf83b51"
+    }
+  ]
+}

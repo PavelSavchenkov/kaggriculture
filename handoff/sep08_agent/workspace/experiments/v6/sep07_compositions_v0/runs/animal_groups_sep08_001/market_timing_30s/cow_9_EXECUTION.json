@@ -1,0 +1,52 @@
+{
+  "name": "cow_9",
+  "seed": 1014,
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/build/compile_v6",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/market_timing_30s/cow_9",
+    "1014",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/later_groups_30s/cow_9.txt",
+    "30",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/terminal_groups_30s/cow_9"
+  ],
+  "estimate": {
+    "seed": "1014",
+    "id": "10051",
+    "count": "1",
+    "entry_day": "15",
+    "rotations": "9:15:10",
+    "animal_cost": "400",
+    "removed_animals": "0",
+    "seeds_saved": "50",
+    "field_operations_delta": "28",
+    "source_visit_deficit": "30",
+    "mean_own_gain": "2347.12",
+    "mean_margin_gain": "2706",
+    "margin_sd": "161.623",
+    "risk_score": "2625.19",
+    "estimate_seconds": "4.9999e-05"
+  },
+  "prefix_files": {
+    "terminal_groups_30s/cow_9/days/15/actions.txt": "b10aaaa55eabb722259748a3c799bf13c4210517fcf5e5f806a34a775fa549df",
+    "terminal_groups_30s/cow_9/days/16/actions.txt": "5d7d6408c25ecdd20d4398bd10338b8c6774860eed47214c06939093d6e1e823",
+    "terminal_groups_30s/cow_9/days/17/actions.txt": "9ace78f08a382ba382d6a9598b9b1f3be259820031d0b0afa4b4fdb17b3a86ea",
+    "terminal_groups_30s/cow_9/days/18/actions.txt": "fe7f12302bc6a42cd2005602724010ebb23073414ceb9beebcc4d26c33d97e67",
+    "terminal_groups_30s/cow_9/days/19/actions.txt": "6c8ec422cda2cd74dcdb7a97e5b54de43aeee8ee5f7b64cb863dcf0dd941e21a",
+    "terminal_groups_30s/cow_9/days/20/actions.txt": "88046266446a95b7044083d54ed29189d169f272ef152f16975e83ecef98e01e",
+    "terminal_groups_30s/cow_9/days/21/actions.txt": "eac24ade825ed8c62546705beae41d2c82b9dab160aa48d054a7b1f2e3ad5b3a",
+    "terminal_groups_30s/cow_9/days/22/actions.txt": "642d93a0e377582c1a74604739201da207df96bea7efe8a36f561ec2335cabc9",
+    "terminal_groups_30s/cow_9/days/23/actions.txt": "8cffc9f360587733ad4a2f94e224703210bc348446b029c480662e722b84b93b",
+    "terminal_groups_30s/cow_9/days/24/actions.txt": "ac6957acbac10ff9affe8671b94c98a60ad3134adea83b6569bd9318d8f517f7",
+    "terminal_groups_30s/cow_9/days/25/actions.txt": "fce580ab284ac1104997f27c54f8eff5cf605d6e7be557b12b7c3ec24b824af6",
+    "terminal_groups_30s/cow_9/days/26/actions.txt": "fd5e63b4dbfa8eacf60c367abf2b92bc968a66744c52f71f3cc5532a66d6d117",
+    "terminal_groups_30s/cow_9/days/27/actions.txt": "c7550953df62aad694eaaddb8a2a59d86df8b824dc13c5b8297c982a41f33918"
+  },
+  "returncode": 4,
+  "seconds": 91.73272402607836
+}

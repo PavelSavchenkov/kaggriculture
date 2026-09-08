@@ -1,0 +1,36 @@
+{
+  "name": "mixed_early",
+  "seed": 1008,
+  "estimate": {
+    "seed": "1008",
+    "id": "48",
+    "count": "3",
+    "entry_day": "8",
+    "rotations": "5:8:9;7:8:11;8:8:11",
+    "animal_cost": "1300",
+    "removed_animals": "0",
+    "seeds_saved": "310",
+    "field_operations_delta": "152",
+    "source_visit_deficit": "151",
+    "mean_own_gain": "10965.8",
+    "mean_margin_gain": "11101.3",
+    "margin_sd": "1770.37",
+    "risk_score": "10216.2",
+    "estimate_seconds": "6.9006e-05"
+  },
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_group_policy_sep08_001/build/compile_public",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_group_policy_sep08_001/broader_courses_30s/mixed_early",
+    "1008",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_group_policy_sep08_001/broader_courses_30s/mixed_early.txt",
+    "30"
+  ],
+  "returncode": 3,
+  "seconds": 2.3585282149724662
+}

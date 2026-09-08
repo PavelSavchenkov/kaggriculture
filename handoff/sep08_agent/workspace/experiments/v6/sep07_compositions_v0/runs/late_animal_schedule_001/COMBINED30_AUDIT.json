@@ -1,0 +1,77 @@
+[
+  {
+    "leaf": "off",
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/build/audit_off",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/goose_c31_d13_off_002",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/off_combined30.txt",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/off_combined30_audit"
+    ],
+    "days": [
+      14,
+      18,
+      20,
+      21,
+      24,
+      27
+    ],
+    "original_records_exact": 64,
+    "produced_equal": 64,
+    "sold_equal": 64,
+    "rival_actions_equal": 64,
+    "cash_gain": 477.96875,
+    "worker_days_gain": -4.3125,
+    "unit_faults_gain": 0,
+    "hires_gain": -4.3125,
+    "hire_cost_gain": -477.96875,
+    "activated_games": 46,
+    "activated_cash_gain": 665,
+    "activated_hires_gain": -6,
+    "activated_hire_cost_gain": -665,
+    "candidate_vs_crop_control_margin": -68.90625,
+    "completed_utc": "2026-09-07T19:06:52.664163+00:00"
+  },
+  {
+    "leaf": "on",
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/build/audit_on",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/goose_c31_d13_on_002",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/on_combined30.txt",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/on_combined30_audit"
+    ],
+    "days": [
+      14,
+      18,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "original_records_exact": 64,
+    "produced_equal": 64,
+    "sold_equal": 64,
+    "rival_actions_equal": 64,
+    "cash_gain": 541.9375,
+    "worker_days_gain": -5.03125,
+    "unit_faults_gain": 0,
+    "hires_gain": -5.03125,
+    "hire_cost_gain": -541.9375,
+    "activated_games": 46,
+    "activated_cash_gain": 754,
+    "activated_hires_gain": -7,
+    "activated_hire_cost_gain": -754,
+    "candidate_vs_crop_control_margin": 58.390625,
+    "completed_utc": "2026-09-07T19:06:52.440189+00:00"
+  }
+]

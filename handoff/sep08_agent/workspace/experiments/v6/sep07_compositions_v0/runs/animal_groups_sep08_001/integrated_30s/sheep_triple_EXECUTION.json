@@ -1,0 +1,48 @@
+{
+  "name": "sheep_triple",
+  "seed": 1016,
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/build/compile_v8",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/sheep_triple",
+    "1016",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/later_groups_30s/sheep_triple.txt",
+    "30",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/terminal_groups_30s/sheep_triple"
+  ],
+  "estimate": {
+    "seed": "1016",
+    "id": "14297",
+    "count": "3",
+    "entry_day": "20",
+    "rotations": "3:20:11;12:20:11;13:20:11",
+    "animal_cost": "1500",
+    "removed_animals": "0",
+    "seeds_saved": "60",
+    "field_operations_delta": "53",
+    "source_visit_deficit": "56",
+    "mean_own_gain": "3893.22",
+    "mean_margin_gain": "3966.72",
+    "margin_sd": "118.224",
+    "risk_score": "3907.61",
+    "estimate_seconds": "4.1102e-05"
+  },
+  "prefix_files": {
+    "terminal_groups_30s/sheep_triple/days/20/actions.txt": "ef8ed714685cde6b0ba95360948157218703db3cd50cc630ca9417fcb4c0f185",
+    "terminal_groups_30s/sheep_triple/days/21/actions.txt": "3b28b476a14d2008263801759adf95931394cc906402b0177ddd331c7a61c514",
+    "terminal_groups_30s/sheep_triple/days/22/actions.txt": "717e2772b30a0ca22653ad63ce7ebb7ecd203a0d2f7ebaffdc75866717f12282",
+    "terminal_groups_30s/sheep_triple/days/23/actions.txt": "74484159be0e9310ce9abf0f843b03f3c868a31fcd19c2a61550c8bf4e2070af",
+    "terminal_groups_30s/sheep_triple/days/24/actions.txt": "dd100ea4f9ee9fb628bde6b79e8efbb35efade05cec82c4cb1fca2243bf2aa6c",
+    "terminal_groups_30s/sheep_triple/days/25/actions.txt": "61f7d781406f05518bd42de6dc7ea69abda93a5d970c874bd21c11876c976e11",
+    "terminal_groups_30s/sheep_triple/days/26/actions.txt": "035f1629f87b70ade679d7d45febd34b8af5d88dba868c791b3e9d3d95e3ee16",
+    "terminal_groups_30s/sheep_triple/days/27/actions.txt": "7db4715387c38a34e006be79e05df290929e11f438552d128d2d01ca3155ad18",
+    "terminal_groups_30s/sheep_triple/days/28/actions.txt": "27ff264e8fed887d597988ceb70802b49316b69e116038ff5edaa0539911846b"
+  },
+  "returncode": 0,
+  "seconds": 2.7654027090175077
+}

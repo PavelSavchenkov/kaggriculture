@@ -1,0 +1,38 @@
+[
+  {
+    "index": 0,
+    "type": "markdown",
+    "characters": 2865,
+    "preview": "# Kaggriculture v24 \u2014 Ready to Run\n\n**This notebook includes the complete v24 agent. No agent input or donor download is required.**\nEnable Internet for the environment installation, then run all cells in order.\nThe subm"
+  },
+  {
+    "index": 1,
+    "type": "code",
+    "characters": 44,
+    "preview": "%pip install -q kaggle-environments==1.32.7\n"
+  },
+  {
+    "index": 2,
+    "type": "code",
+    "characters": 96113,
+    "preview": "%%writefile /kaggle/working/main.py\n# SPDX-License-Identifier: Apache-2.0\n# v24 modifications: stable premium-sale priority after step 144; all v23 routes and quantities retained.\n# Inspiration: yamakawanin King RC4 tran"
+  },
+  {
+    "index": 3,
+    "type": "code",
+    "characters": 1739,
+    "preview": "import contextlib\nimport hashlib\nimport io\nfrom importlib.metadata import version\nfrom pathlib import Path\n\nSMOKE_TESTS_PASSED = False\nMAIN = Path(\"/kaggle/working/main.py\")\nEXPECTED_SHA256 = \"d5e3ab887e3385db76d06a96b8b"
+  },
+  {
+    "index": 4,
+    "type": "code",
+    "characters": 1448,
+    "preview": "import hashlib\nimport json\nimport tarfile\nfrom pathlib import Path\n\nassert globals().get(\"SMOKE_TESTS_PASSED\") is True, \"Run the smoke-test cell first\"\nMAIN = Path(\"/kaggle/working/main.py\")\nsource_bytes = MAIN.read_byte"
+  },
+  {
+    "index": 5,
+    "type": "markdown",
+    "characters": 1096,
+    "preview": "## Attribution and license\n\nThe full Apache-2.0 license and inherited notices are preserved in `main.py`.\n\n- **thomastschinkel** \u2014 five production routes and public-state routing, retained\n  from v23. [Replay routing not"
+  }
+]

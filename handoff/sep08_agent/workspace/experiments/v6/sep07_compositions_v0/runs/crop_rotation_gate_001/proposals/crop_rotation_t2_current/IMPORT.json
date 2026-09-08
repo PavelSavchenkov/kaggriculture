@@ -1,0 +1,14 @@
+{
+  "base": "crop_value_m2_t4",
+  "changed": "crop_rotation_009",
+  "rule": "Atday12hour0 choose complete crop replacement if at least2already observed shops consume tomato and its physical entry matches. Otherwise retain base.",
+  "discovery": "runs/crop_rotation_gate_001/gates.csv;512games\u00d75opponents,25thresholdgates. +0.8203percentage-point equal-opponent utility; +$74.74margin versus submitted source. Not fresh validation.",
+  "lineage": "User observed-shop composition intuition; Mengfei tomato service calendar; local closed crop compilation and bounded C++ gate search. Complete source lineage in crop_rotation_009/agent/IMPORT.json.",
+  "files_sha256": {
+    "include/crop_rotation_shop_gate.hpp": "c86506ce44e5fd239b26cb9b0bc23fb4e3a4649b7f174bd5032eaed1d67224fa",
+    "runs/crop_value_001/proposals/crop_value_m2_t4/source/agent.hpp": "406007a214ac04db59ad5a42436fd78eff560495ceed88f775ba73d89db536b6",
+    "runs/crop_rotation_009/agent/source/agent.hpp": "73e265a58950574ea321fac48bc6fcb640c329872089fd085b766ff618a60c55",
+    "runs/crop_rotation_gate_001/gates.csv": "19e78075e6d2948c11927c990c1ac2961178675884a9b5b10af336c7f70061d6",
+    "runs/crop_rotation_gate_001/RUN.json": "038f37bc36635d6188a08a6376f9a825b8f6c71903e882e2e153e7a8875a6090"
+  }
+}

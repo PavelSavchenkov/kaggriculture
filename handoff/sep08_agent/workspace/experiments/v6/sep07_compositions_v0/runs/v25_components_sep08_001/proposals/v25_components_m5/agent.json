@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "v25_components_m5",
+  "header": "source/agent.hpp",
+  "type": "compositions::v25_components_m5::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../source/policy.cpp"
+  ]
+}

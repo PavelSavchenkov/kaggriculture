@@ -1,0 +1,23 @@
+{
+  "name": "sheep_3_h2_m2",
+  "problem": "terminal_groups_30s/sheep_3/days/29/problem_h2.json",
+  "problem_sha256": "2ed837027075d7b0e8ee27d7e451d0eaf0070cfd78b7b8287d980c11a5edd620",
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/build/hinted_solve_v2",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/terminal_groups_30s/sheep_3/days/29/problem_h2.json",
+    "1016",
+    "29",
+    "30",
+    "4",
+    "2",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/fixed_hints_30s/sheep_3_h2_m2"
+  ],
+  "returncode": 0,
+  "seconds": 1.162360892049037
+}

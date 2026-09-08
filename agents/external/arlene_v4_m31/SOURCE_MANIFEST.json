@@ -1,0 +1,65 @@
+{
+  "original_package": "experiments/v6/sep07_compositions_v0/runs/arlene_v4_sep08_001/proposals/arlene_v4_m31",
+  "original_manifest": {
+    "format_version": 1,
+    "name": "arlene_v4_m31",
+    "header": "source/agent.hpp",
+    "type": "compositions::arlene_v4_m31::Agent",
+    "sources": [
+      "source/agent.cpp",
+      "../../source/agent.cpp"
+    ]
+  },
+  "snapshot_base_commit": "f07754bb5c86bed6c77a309e4d9b2d5f53d74008",
+  "namespace_replacements": {
+    "compositions": "catalog_arlene_v4_m31_compositions",
+    "compositions_sale_copy": "catalog_arlene_v4_m31_sale",
+    "kag::agents": "kag::catalog_arlene_v4_m31_agents",
+    "kag::agents_sale_copy": "kag::catalog_arlene_v4_m31_sale_agents",
+    "kag::native": "kag::catalog_arlene_v4_m31_native",
+    "kag::sixday_native": "kag::catalog_arlene_v4_m31_sixday"
+  },
+  "transformation": "Copied compiler dependency closure; renamed private namespaces, resolved include paths, and added a forwarding API wrapper with a default constructor. No policy decisions changed.",
+  "lineage_entry": "../../../handoff/sep08_agent/docs/lineage.md",
+  "evidence_entry": "../../../handoff/sep08_agent/readme.md",
+  "rating": "No independently measured Kaggle rating for this catalog package. See dated source leaderboard evidence in the handoff.",
+  "reuse": "Preserve source attribution. No new license is granted for third-party notebook or replay content.",
+  "files": [
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/public_router/source/routes.inc",
+      "original_sha256": "c46d6efc86a9407d09715e752f445a8f6042cb62a7aaca68a656e4a1bd067fd0",
+      "path": "source/deps/league/public_router/source/routes.inc",
+      "sha256": "c46d6efc86a9407d09715e752f445a8f6042cb62a7aaca68a656e4a1bd067fd0"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/arlene_v4_sep08_001/budget.hpp",
+      "original_sha256": "40b79120562a8e0ea5a77f3045c92527f9665b1dc44902c754ec90aa84f429ee",
+      "path": "source/deps/runs/arlene_v4_sep08_001/budget.hpp",
+      "sha256": "40b79120562a8e0ea5a77f3045c92527f9665b1dc44902c754ec90aa84f429ee"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/arlene_v4_sep08_001/proposals/arlene_v4_m31/source/agent.cpp",
+      "original_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "path": "source/deps/runs/arlene_v4_sep08_001/proposals/arlene_v4_m31/source/agent.cpp",
+      "sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/arlene_v4_sep08_001/proposals/arlene_v4_m31/source/agent.hpp",
+      "original_sha256": "121297f4fa0c04e7b82f78ae0573a9403a5bc12bbbfcfdf1a6205efb6e596702",
+      "path": "source/deps/runs/arlene_v4_sep08_001/proposals/arlene_v4_m31/source/agent.hpp",
+      "sha256": "9e840ff381ce9844ba6617bfda88af42ecfb15f1c8c806a7ab126628e6d8f7fb"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/arlene_v4_sep08_001/source/agent.cpp",
+      "original_sha256": "4ab2169349596e26d55dbd39150e19cc0767f6ea012f171a284c732285fa814c",
+      "path": "source/deps/runs/arlene_v4_sep08_001/source/agent.cpp",
+      "sha256": "dc982600ea93d1d333dd707032d5367fc7d3391844c62e11167148026de2b7d1"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/arlene_v4_sep08_001/source/agent.hpp",
+      "original_sha256": "bd0f6ab5ceaaf3659b133da65c2ead3facd8be9c431b5c2609227a215d2732fc",
+      "path": "source/deps/runs/arlene_v4_sep08_001/source/agent.hpp",
+      "sha256": "3471f7b6324a0b2a66eb5bfcbaa68bb77e4b59e5db2cc75817a0fa4bee78570c"
+    }
+  ]
+}

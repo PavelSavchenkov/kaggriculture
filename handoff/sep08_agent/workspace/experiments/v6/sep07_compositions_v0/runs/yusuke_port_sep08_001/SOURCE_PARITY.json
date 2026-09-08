@@ -1,0 +1,21 @@
+{
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "g++",
+    "-std=c++20",
+    "-O2",
+    "-I",
+    "/home/pavel/Programming/kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/yusuke_port_sep08_001/source/verify.cpp",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/yusuke_port_sep08_001/source/policy.cpp",
+    "-o",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/yusuke_port_sep08_001/verify"
+  ],
+  "actions": 2876,
+  "routing_cases": 24,
+  "reset_cases": 24,
+  "scope": "All four literal action tapes and frozen Yarn/egg thresholds, both threshold sides and equality. Empty upstream slots remain PASS. API worker count is aligned at runtime."
+}

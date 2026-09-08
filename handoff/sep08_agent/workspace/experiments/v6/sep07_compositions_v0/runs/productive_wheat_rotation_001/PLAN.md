@@ -1,0 +1,11 @@
+# Productive wheat rotation experiment
+
+Scenario: fully enabled game, paired seeds and seats against the current local reference, teammate and strong public opponents. Objective: improve win utility and cash margin while reporting production, labor, feed, fertilizer, seed spending, inventory, discards and failures. Only legal observations may select or repair a runtime course.
+
+Parent: `crop_value_m2_t4`, including its observed-state fertilization gate. This is a larger warm replacement of a crop block, not an edit to the submitted agent. The outer decisions are one cell or a neighboring three-cell block, entry day, repeated wheat calendar and fertilizer control. These remain explicit until the compiler has demonstrated useful choices across placements.
+
+The target lifecycle plants wheat, waters at ages0/2/3/4, fertilizes at age2 before water, and harvests at age4. A paired no-fertilizer control keeps the same calendar and yields4 instead of6 units if realized. Consecutive cycles may harvest and replant on the same day; terminal planting must be productive before the game ends. Donor evidence: get some fries, episode106458209 seat1, submission56048814, replay SHA256 a29dcd3a7bdfd172d984adeefe373147180d47fecc8bf43a73827c294e232f10, cells(3,2) and(4,0). Exact schedules include occasional extra water; age0/2/3/4 is a locally inferred sufficient service template, not a claim about private code.
+
+Cheap dated biology and source-quote economics screen placements before compilation. Source quotes are diagnostics and cannot certify value under endogenous market changes. V30 then compiles complete affected days, keeping other obligations and rebuilding seed/fertilizer/feed supply, market commitments, deposit capacity and workforce. Complete C++ games distinguish physical/compiler failure from poor economics. Retain failed requests with their witnesses; do not silently shorten or alter their rotations.
+
+Discovery begins at1000. Only useful complete courses receive full paired checks and unused audit seeds1700000+. Promotion requires unused-seed evidence, PASS/self checks, source/guard parity, debug/generic/pair/thread consistency and explicit attribution. No shared compiler, core header, catalog, handoff or submission changes are authorized here. Each outer edit rebuilds its own dependency closure.

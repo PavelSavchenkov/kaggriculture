@@ -1,0 +1,35 @@
+{
+  "name": "goose_pair",
+  "seed": 1001,
+  "estimate": {
+    "seed": "1001",
+    "id": "6775",
+    "count": "2",
+    "entry_day": "10",
+    "rotations": "23:10:9;32:10:9",
+    "animal_cost": "600",
+    "seeds_saved": "0",
+    "field_operations_delta": "148",
+    "source_visit_deficit": "140",
+    "mean_own_gain": "2450.69",
+    "mean_margin_gain": "2450.69",
+    "margin_sd": "98.4871",
+    "risk_score": "2401.44",
+    "estimate_seconds": "5.9758e-05"
+  },
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/build/compile",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/fixtures_3s/goose_pair",
+    "1001",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/fixtures_3s/goose_pair.txt",
+    "3"
+  ],
+  "returncode": 4,
+  "seconds": 14.220512066967785
+}

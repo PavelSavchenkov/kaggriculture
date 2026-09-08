@@ -1,0 +1,115 @@
+{
+  "created_utc": "2026-09-07T22:42:59.461005+00:00",
+  "seed_start": 1954000,
+  "seeds": 128,
+  "seat_mode": "both",
+  "jobs": [
+    [
+      "rival_wool_context_v3",
+      "wool_family_context_v2",
+      true
+    ],
+    [
+      "wool_family_context_v2",
+      "wool_family_context_v2",
+      true
+    ],
+    [
+      "rival_wool_context_v3",
+      "investment_context_guarded_001_best",
+      true
+    ],
+    [
+      "wool_family_context_v2",
+      "investment_context_guarded_001_best",
+      true
+    ],
+    [
+      "rival_wool_context_v3",
+      "teammate_shoprouter",
+      true
+    ],
+    [
+      "wool_family_context_v2",
+      "teammate_shoprouter",
+      true
+    ],
+    [
+      "rival_wool_context_v3",
+      "king_rc4",
+      true
+    ],
+    [
+      "wool_family_context_v2",
+      "king_rc4",
+      true
+    ],
+    [
+      "rival_wool_context_v3",
+      "public_router",
+      true
+    ],
+    [
+      "wool_family_context_v2",
+      "public_router",
+      true
+    ],
+    [
+      "rival_wool_context_v3",
+      "public_router_v5",
+      true
+    ],
+    [
+      "wool_family_context_v2",
+      "public_router_v5",
+      true
+    ],
+    [
+      "rival_wool_context_v3",
+      "public_router_v52",
+      true
+    ],
+    [
+      "wool_family_context_v2",
+      "public_router_v52",
+      true
+    ],
+    [
+      "rival_wool_context_v3",
+      "junghoon_wool_sales",
+      true
+    ],
+    [
+      "wool_family_context_v2",
+      "junghoon_wool_sales",
+      true
+    ],
+    [
+      "rival_wool_context_v3",
+      "john_131",
+      true
+    ],
+    [
+      "wool_family_context_v2",
+      "john_131",
+      true
+    ],
+    [
+      "rival_wool_context_v3",
+      "pass",
+      false
+    ],
+    [
+      "wool_family_context_v2",
+      "pass",
+      false
+    ]
+  ],
+  "scope": "Frozen candidate native-stream and PASS audit; no fitting.",
+  "gates": {
+    "direct_parent_paired_margin_nonnegative_every_game": true,
+    "minimum_mean_margin_gain": 0,
+    "minimum_individual_utility_gain": 0,
+    "minimum_pass_J_gain": 0
+  }
+}

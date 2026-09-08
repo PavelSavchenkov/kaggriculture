@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "ahmed_v23",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::ahmed_v23::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "source/deps/league/ahmed_v23/source/agent.cpp"
+  ]
+}

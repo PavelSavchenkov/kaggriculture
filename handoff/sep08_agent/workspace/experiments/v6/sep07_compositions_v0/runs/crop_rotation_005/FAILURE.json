@@ -1,0 +1,7 @@
+{
+  "stage": "market_schedule",
+  "day": 22,
+  "cause": "Added next-morning tomato sale was constrained to hour0; source hour0 already uses all10order slots. Construction returned3 before solving day22.",
+  "evidence": "Prior ten day endpoints, including first harvest day21, passed. New variant broadens only the allowed insertion window to the earliest free slot before hour23.",
+  "status": "Incomplete course; not an agent or performance result."
+}

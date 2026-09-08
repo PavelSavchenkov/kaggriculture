@@ -17,5 +17,8 @@ public:
     int selected_route() const{return route_;}
     int advanced_turns() const{return advanced_turns_;}
 };
-class Agent:public AgentCore {};
+class Agent:public AgentCore {
+public:
+    Agent():AgentCore(true) {}
+};
 }

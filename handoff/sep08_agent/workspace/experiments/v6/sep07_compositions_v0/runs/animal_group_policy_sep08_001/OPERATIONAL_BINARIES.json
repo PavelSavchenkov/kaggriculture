@@ -1,0 +1,67 @@
+{
+  "pair": {
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+      "--pair",
+      "animal_groups_m2",
+      "public_router"
+    ],
+    "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/a4ecc039fcf018ffbb5e/arena"
+  },
+  "debug": {
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+      "--agents",
+      "animal_groups_m0",
+      "animal_groups_m1",
+      "animal_groups_m2",
+      "animal_groups_cow1",
+      "animal_groups_cow3",
+      "animal_groups_sheep12",
+      "animal_groups_sheep3",
+      "public_router",
+      "pass",
+      "--debug"
+    ],
+    "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/54c85ff2263dd80e010a/arena"
+  },
+  "generic": {
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+      "--agents",
+      "animal_groups_m0",
+      "animal_groups_m1",
+      "animal_groups_m2",
+      "animal_groups_cow1",
+      "animal_groups_cow3",
+      "animal_groups_sheep12",
+      "animal_groups_sheep3",
+      "empty_sale_slots_m2",
+      "teammate_shoprouter",
+      "public_router",
+      "public_router_v52",
+      "ahmed_v23",
+      "junghoon_wool_sales",
+      "king_rc4",
+      "yusuke_sep08_m2",
+      "investment_context_guarded_001_best",
+      "pass"
+    ],
+    "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/947a2fed0bd97d78b8fc/arena"
+  }
+}

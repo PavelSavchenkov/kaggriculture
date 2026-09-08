@@ -1,0 +1,74 @@
+[
+  {
+    "ref": "ayeshasummaiyya/fields-of-fortune-strategic-farming-agent",
+    "title": "Fields of Fortune \ud83c\udf3e | Strategic Farming Agent",
+    "author": "Aisha",
+    "lastRunTime": "2026-09-07 18:49:03.583000",
+    "totalVotes": "5",
+    "retrieved_utc": "2026-09-07T19:12:53.896266+00:00",
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "kaggle",
+      "kernels",
+      "pull",
+      "ayeshasummaiyya/fields-of-fortune-strategic-farming-agent",
+      "-p",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/research/refresh_1902/notebooks/ayeshasummaiyya/fields-of-fortune-strategic-farming-agent",
+      "-m"
+    ],
+    "code_bytes": 39381,
+    "code_sha256": "4d72dc70de7c7fc38fec46b2071e58461051839bcbb80d685b08cf6c41723e1c",
+    "scope": "Downloaded and extracted as text only. No notebook code executed."
+  },
+  {
+    "ref": "mansiaggarwal88/kaggriculture-can-specialists-beat-one-agent",
+    "title": "\ud83d\ude9c Kaggriculture: Can Specialists Beat One Agent?",
+    "author": "Mansi Aggarwal",
+    "lastRunTime": "2026-09-07 18:21:12.363000",
+    "totalVotes": "4",
+    "retrieved_utc": "2026-09-07T19:12:53.837591+00:00",
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "kaggle",
+      "kernels",
+      "pull",
+      "mansiaggarwal88/kaggriculture-can-specialists-beat-one-agent",
+      "-p",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/research/refresh_1902/notebooks/mansiaggarwal88/kaggriculture-can-specialists-beat-one-agent",
+      "-m"
+    ],
+    "code_bytes": 6072,
+    "code_sha256": "8097342d7989b4ee39ae02d19559ed209c1f0bf6bfbcb5238f417ae76c7e0c0a",
+    "scope": "Downloaded and extracted as text only. No notebook code executed."
+  },
+  {
+    "ref": "souvikdbiswas/kaggriculture-v5-hybrid-agent",
+    "title": "Kaggriculture V5 Hybrid Agent",
+    "author": "Souvik_D_Biswas",
+    "lastRunTime": "2026-09-07 17:59:01.213000",
+    "totalVotes": "0",
+    "retrieved_utc": "2026-09-07T19:12:55.423823+00:00",
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "kaggle",
+      "kernels",
+      "pull",
+      "souvikdbiswas/kaggriculture-v5-hybrid-agent",
+      "-p",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/research/refresh_1902/notebooks/souvikdbiswas/kaggriculture-v5-hybrid-agent",
+      "-m"
+    ],
+    "code_bytes": 150121,
+    "code_sha256": "931f20ed3268e9159b8c9d17b9b465a79341a6d277c223a6db4fd0ea5a9f2f1e",
+    "scope": "Downloaded and extracted as text only. No notebook code executed."
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "original_package": "experiments/v6/sep07_compositions_v0/runs/ahmed_v25_sep08_001/proposals/ahmed_v25",
+  "original_manifest": {
+    "format_version": 1,
+    "name": "ahmed_v25",
+    "header": "source/agent.hpp",
+    "type": "compositions::ahmed_v25::Agent",
+    "sources": [
+      "source/agent.cpp"
+    ]
+  },
+  "snapshot_base_commit": "f07754bb5c86bed6c77a309e4d9b2d5f53d74008",
+  "namespace_replacements": {
+    "compositions": "catalog_ahmed_v25_compositions",
+    "compositions_sale_copy": "catalog_ahmed_v25_sale",
+    "kag::agents": "kag::catalog_ahmed_v25_agents",
+    "kag::agents_sale_copy": "kag::catalog_ahmed_v25_sale_agents",
+    "kag::native": "kag::catalog_ahmed_v25_native",
+    "kag::sixday_native": "kag::catalog_ahmed_v25_sixday"
+  },
+  "transformation": "Copied compiler dependency closure; renamed private namespaces, resolved include paths, and added a forwarding API wrapper with a default constructor. No policy decisions changed.",
+  "lineage_entry": "../../../handoff/sep08_agent/docs/lineage.md",
+  "evidence_entry": "../../../handoff/sep08_agent/readme.md",
+  "rating": "No independently measured Kaggle rating for this catalog package. See dated source leaderboard evidence in the handoff.",
+  "reuse": "Preserve source attribution. No new license is granted for third-party notebook or replay content.",
+  "files": [
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/ahmed_v25_sep08_001/proposals/ahmed_v25/source/agent.cpp",
+      "original_sha256": "6a9ab2ca595e125028c571fe436a9cd2cf4caa1410b76b8c95cb569055dbb8e8",
+      "path": "source/deps/runs/ahmed_v25_sep08_001/proposals/ahmed_v25/source/agent.cpp",
+      "sha256": "51ac7dbde19e308cd2210d88fdc428b1bd531823ab2162cc5f3afc11309d158d"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/ahmed_v25_sep08_001/proposals/ahmed_v25/source/agent.hpp",
+      "original_sha256": "9026dba4d0d2120cd7f11d74e7dc864f0617a0d05a3ddaabc3d5e0fbfb0d0e76",
+      "path": "source/deps/runs/ahmed_v25_sep08_001/proposals/ahmed_v25/source/agent.hpp",
+      "sha256": "2b07ae08f758661ad95d94af2a1020647ea1c8a5659f92dd9fe89de285a7ec9a"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/runs/ahmed_v25_sep08_001/proposals/ahmed_v25/source/data.inc",
+      "original_sha256": "220ad06211d85f17188adbe7f9bdb0c2b66283959b971deae50452d0f6f5823b",
+      "path": "source/deps/runs/ahmed_v25_sep08_001/proposals/ahmed_v25/source/data.inc",
+      "sha256": "220ad06211d85f17188adbe7f9bdb0c2b66283959b971deae50452d0f6f5823b"
+    }
+  ]
+}

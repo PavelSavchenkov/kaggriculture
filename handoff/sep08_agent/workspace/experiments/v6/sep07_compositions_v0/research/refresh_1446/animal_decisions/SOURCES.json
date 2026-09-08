@@ -1,0 +1,19 @@
+{
+  "cohorts": [
+    "refresh_1446"
+  ],
+  "input_sha256": {
+    "research/refresh_1446/top_replay_manifest.csv": "c8d4ec45696c90d2e38ab7219cd8643b264a6311620d97ef59c3ac04bd7129a0",
+    "research/refresh_1446/transactions.csv": "b9678266d62ec481de16254f5914bd4f657f90ad16a8c3a47a98e1d5f84d4b2c",
+    "research/refresh_1446/unit_events.csv": "90293e144897e7d0c7a85b527dc722964c2837a28d9aab8bfe8ba4eb1e6da363",
+    "research/refresh_1446/animal_instances.csv": "9ed6b6f26e2fb13f10dfd97d36f2cef9dead2de390b79678b77d08d117f81010"
+  },
+  "games": 72,
+  "selection": "Globally strong players from each frozen public leaderboard cohort; deduplicated episode/team, no local strength selection",
+  "caveats": [
+    "Different observed shops are not proof of the private branch condition",
+    "Immediate affordability ignores future commitments",
+    "Missing or failed purchase is not labeled intentional waiting",
+    "Recorded successful placements are from the existing audited action/transaction reconstruction"
+  ]
+}

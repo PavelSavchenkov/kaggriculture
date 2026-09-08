@@ -1,0 +1,3 @@
+gmake: *** No rule to make target 'compile_crop_rotation'.  Stop.
+
+ERROR conda.cli.main_run:execute(127): `conda run cmake --build experiments/v6/sep07_compositions_v0/build/day_scheduler --target compile_crop_rotation -j 3` failed. (See above for error)

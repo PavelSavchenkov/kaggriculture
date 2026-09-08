@@ -1,0 +1,43 @@
+{
+  "upstream": "https://www.kaggle.com/code/ahmedberatozer/notebook07b5f4563e",
+  "upstream_sha256": "bb3109331d4087d5e5890515f9b1d1e0d4f9ea6015ee3d1b172a93b8b1d8dbb4",
+  "version": "V25 EXP149",
+  "unchanged_python_definitions_from_verified_v23": [
+    "_get",
+    "_int",
+    "_fib",
+    "_step_of",
+    "_shed_adjacent",
+    "_tile_at",
+    "_is_noop",
+    "_View",
+    "Chassis",
+    "make_agent"
+  ],
+  "cpp_execution_parent": "league/ahmed_v23",
+  "tapes": "research/refresh_sep08_1108/notebook_audit/yusuke/actions.json.txt",
+  "tapes_equal_v25": true,
+  "changes": [
+    "Four Yusuke routes and original thresholds replace V23 production routes.",
+    "Enable only alignment, weed repair and sale leading; remove disabled economic layers.",
+    "Final step718 deposits adjacent carried cargo and liquidates by current lot value."
+  ],
+  "rating": null,
+  "original_replay_provenance": "Unspecified by source",
+  "source_parity": {
+    "actions": 10793,
+    "routes": 4,
+    "report": "SOURCE_PARITY.json",
+    "sha256": "163557211b20bc93efd83b1b9dada7f5621bcec4c20f5ae23ec0172922f87ebe"
+  },
+  "scope": "Faithful public C++ agent port, not an inhouse improvement.",
+  "operational_validation": {
+    "games": 24,
+    "report": "OPERATIONAL_CHECKS.json"
+  },
+  "discovery": {
+    "games": 8448,
+    "report": "DISCOVERY_SUMMARY.json",
+    "whole_agent_promoted": false
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "name": "observed_sale_lead_shared_v3",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::observed_sale_lead_shared_v3::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../parent_source/league/top_replay_library/source/agent.cpp",
+    "../../parent_source/league/public_router/source/agent.cpp"
+  ]
+}

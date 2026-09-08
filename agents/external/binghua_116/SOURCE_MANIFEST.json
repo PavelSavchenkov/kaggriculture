@@ -1,0 +1,59 @@
+{
+  "original_package": "experiments/v6/sep07_compositions_v0/league/binghua_116",
+  "original_manifest": {
+    "format_version": 1,
+    "name": "binghua_116",
+    "header": "source/agent.hpp",
+    "type": "compositions::binghua_116::Agent",
+    "sources": [
+      "source/agent.cpp",
+      "../top_replay_library/source/agent.cpp"
+    ]
+  },
+  "snapshot_base_commit": "f07754bb5c86bed6c77a309e4d9b2d5f53d74008",
+  "namespace_replacements": {
+    "compositions": "catalog_binghua_116_compositions",
+    "compositions_sale_copy": "catalog_binghua_116_sale",
+    "kag::agents": "kag::catalog_binghua_116_agents",
+    "kag::agents_sale_copy": "kag::catalog_binghua_116_sale_agents",
+    "kag::native": "kag::catalog_binghua_116_native",
+    "kag::sixday_native": "kag::catalog_binghua_116_sixday"
+  },
+  "transformation": "Copied compiler dependency closure; renamed private namespaces, resolved include paths, and added a forwarding API wrapper with a default constructor. No policy decisions changed.",
+  "lineage_entry": "../../../handoff/sep08_agent/docs/lineage.md",
+  "evidence_entry": "../../../handoff/sep08_agent/readme.md",
+  "rating": "No independently measured Kaggle rating for this catalog package. See dated source leaderboard evidence in the handoff.",
+  "reuse": "Preserve source attribution. No new license is granted for third-party notebook or replay content.",
+  "files": [
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/binghua_116/source/agent.cpp",
+      "original_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "path": "source/deps/league/binghua_116/source/agent.cpp",
+      "sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/binghua_116/source/agent.hpp",
+      "original_sha256": "be64fc779a2ee25be34bc81262d188d891d7733714dae11602fcb380c8ee01cc",
+      "path": "source/deps/league/binghua_116/source/agent.hpp",
+      "sha256": "7fdf339220acbba881fa3d37aa1796905f1dd3c4df593f37c2c78c7e7f6f857b"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.cpp",
+      "original_sha256": "e01111d8be2aed27711d2ccaabb3a3730398dd022ea767db9c7080140f83be0f",
+      "path": "source/deps/league/top_replay_library/source/agent.cpp",
+      "sha256": "50f2a19d970784a60452c571095da8b67f0c489bb81a07b168de38e3276edeac"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.hpp",
+      "original_sha256": "7a34ba395b73d511860dc827e8895e0b7f816203ad4dc968b692f89609dd800d",
+      "path": "source/deps/league/top_replay_library/source/agent.hpp",
+      "sha256": "54ae286847ec72e3d53bbd34b37f0154962ee16d19cb1e47db0a0e3ebb34d310"
+    },
+    {
+      "original": "experiments/v6/sep07_compositions_v0/league/top_replay_library/source/tapes.inc",
+      "original_sha256": "a90688675433a879056e29e50f1795d75edfd27b5fc07781b9e4f0472ca6c94e",
+      "path": "source/deps/league/top_replay_library/source/tapes.inc",
+      "sha256": "a90688675433a879056e29e50f1795d75edfd27b5fc07781b9e4f0472ca6c94e"
+    }
+  ]
+}

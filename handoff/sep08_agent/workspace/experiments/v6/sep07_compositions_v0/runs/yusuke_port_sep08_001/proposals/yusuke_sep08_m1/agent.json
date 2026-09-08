@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "yusuke_sep08_m1",
+  "header": "source/agent.hpp",
+  "type": "compositions::yusuke_sep08_m1::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../source/policy.cpp"
+  ]
+}

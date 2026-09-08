@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-09-08T01:20:36.883125+00:00",
+  "parent": "runs/compiler_labor_sep08_001",
+  "parent_sha256": {
+    "runs/compiler_labor_sep08_001/compiler/source/agent.hpp": "a4df30e4a5e42c251da24abd2740d3cdaa62d024c933d77d7d50142ead3bdf76",
+    "runs/compiler_labor_sep08_001/compiler/source/agent.cpp": "380a6e29ba901c4628bd09781b8f863fcae9487282c39fd5dac65fad39d25fd7",
+    "runs/compiler_labor_sep08_001/cold_farm.hpp": "b271a2520e2485fca621c5610dd51e0ee50593596dc9d34c31d1b77ffc31f579",
+    "runs/compiler_labor_sep08_001/ANALYSIS.json": "76f6b1d671ad6a30024604bcf7ee01d332ca9f3b6c2112f48cb17cac62de0af9"
+  },
+  "variants": [
+    "compiler_route_mixed_m0",
+    "compiler_route_mixed_m1",
+    "compiler_route_mixed_m2",
+    "compiler_route_mixed_m3",
+    "compiler_route_goose_m0",
+    "compiler_route_goose_m1",
+    "compiler_route_goose_m2",
+    "compiler_route_goose_m3",
+    "compiler_route_p4_m0",
+    "compiler_route_p4_m1",
+    "compiler_route_p4_m2",
+    "compiler_route_p4_m3",
+    "compiler_route_p55_m0",
+    "compiler_route_p55_m1",
+    "compiler_route_p55_m2",
+    "compiler_route_p55_m3"
+  ],
+  "discovery": {
+    "seed_start": 1000,
+    "seeds": 8,
+    "seat_mode": "both",
+    "opponents": [
+      "public_router",
+      "observed_sale_lead_start_216"
+    ]
+  },
+  "mode_bits": {
+    "1": "Add2000 to a field job already under the worker.",
+    "2": "Add25% of other currently possible same-tile field job values, each capped2000."
+  },
+  "controls": {
+    "mixed": "Previous labor mixed m1 (eight hands).",
+    "goose": "Previous labor goose m3 (estimated hands).",
+    "p4": "Original program4 with source hiring/layout/service.",
+    "p55": "Original program55 with source hiring/layout/service."
+  },
+  "evidence": "With identical source hiring, compiler takes3981 moves versus3200 for source55, loses about$37318 cash, and misses animal service. Source4 has a similar778 extra moves. Earlier persistent-target ablations failed; this experiment values complete visits without retaining a target.",
+  "scope": "Local routing-score ablations; no copied new external policy block, no promotion or broad strength claim."
+}

@@ -1,0 +1,16 @@
+{
+  "completed_utc": "2026-09-07T19:31:47.219035+00:00",
+  "notebook": "research/refresh_1902/notebooks/souvikdbiswas/kaggriculture-v5-hybrid-agent/kaggriculture-v5-hybrid-agent.ipynb",
+  "previous_policy": "research/refresh_1112/notebooks/thomastschinkel/kaggriculture-93-8-win-rate-public-state-router/extracted_main.py",
+  "source_bytes_equal": false,
+  "source_sha256": "cb59afce1e19bfc2cfb993a1b5ff40c2a1272137fc27eee7c522c8ff7f420472",
+  "tapes_equal": true,
+  "trees_equal": true,
+  "function_ast_equal": {
+    "_features": true,
+    "_choose": true,
+    "agent": false
+  },
+  "new_function_names": [],
+  "scope": "Only AST literal extraction and base64/zlib/JSON decoding; no notebook policy execution."
+}
