@@ -1,0 +1,17 @@
+{
+  "utc": "2026-09-09T13:41:20.810669+00:00",
+  "experiment_source": "experiments/v6/sep09_labor_estimator",
+  "published_agents": [
+    {
+      "name": "early_structure_cow",
+      "path": "agents/external/early_structure_cow",
+      "type": "kag::agents::early_structure_cow::Agent"
+    },
+    {
+      "name": "nanare_four_quadrant_course",
+      "path": "agents/external/nanare_four_quadrant_course",
+      "type": "kag::agents::nanare_four_quadrant_course::Agent"
+    }
+  ],
+  "dependency_policy": "Frozen local solver/engine and agent dependency snapshots are included. No Git command or assumption about machine-local uncommitted dependencies was used."
+}

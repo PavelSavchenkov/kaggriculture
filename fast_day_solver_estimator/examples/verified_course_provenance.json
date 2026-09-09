@@ -1,0 +1,30 @@
+{
+  "utc": "2026-09-09T11:28:28.825012+00:00",
+  "status": "completed",
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_guided",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_seed_benchmark_v2/jobs/s1470762556_melon12_d12/guided/course",
+    "1470762556",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/melon12_d12.txt",
+    "3.0"
+  ],
+  "scope": "Original warm compiler with conservative learned call deferral: retain route reuse, try calls with predicted success at least 0.02 first, then retry deferred calls if needed. No predicted failure is a proof of infeasibility.",
+  "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+  "binary_sha256": "5993f0d7f383b1ac5ea88119d7ada72c40256b8320572677cacbbb6d032f6881",
+  "spec_sha256": "2ca9bff827cffed4a47cf6947def122459ce95c59bc393435888b7c9544ba6c1",
+  "resume_prefix": null,
+  "completed_utc": "2026-09-09T11:29:26.777491+00:00",
+  "returncode": 0,
+  "wall_seconds": 57.91961700400134,
+  "cpu_seconds": 75.258584,
+  "compiler_status": {
+    "status": "compiled",
+    "days": 18
+  }
+}

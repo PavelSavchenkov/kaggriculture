@@ -1,0 +1,91 @@
+{
+  "scope": "Development diagnostic: apply the new family-macro inclusive-threshold criterion to the complete exposed owned panel; not prospective acceptance",
+  "primary": "cost_direct_extra",
+  "target": "Difference between best available verified upper bills, not proven minimum marginal cost.",
+  "censored_pairs": 19,
+  "unpredicted_pairs": 0,
+  "thresholds": "Inclusive signed error <= -500 and >= 500. This differs at exact equality from older strict-threshold summary fields.",
+  "family_weighting": "Unweighted mean of family MAEs; paired bootstrap resamples complete families with equal family weights.",
+  "comparisons": [
+    {
+      "candidate": "cost_direct_extra",
+      "baseline": "original_flat_10",
+      "pairs": 170,
+      "families": 8,
+      "baseline_family_macro_cash_mae": 133.44273107163067,
+      "candidate_family_macro_cash_mae": 109.59987431120635,
+      "family_macro_mae_reduction_fraction": 0.17867482603923723,
+      "family_bootstrap_95_saved_cash_error": [
+        13.934033585799966,
+        32.866034035267035
+      ],
+      "baseline_bias": -59.523529411764706,
+      "candidate_bias": -101.1498623876808,
+      "baseline_under_by_at_least_500": 0.023529411764705882,
+      "candidate_under_by_at_least_500": 0.023529411764705882,
+      "baseline_over_by_at_least_500": 0.0,
+      "candidate_over_by_at_least_500": 0.0,
+      "gates": {
+        "family_macro_mae_reduction_at_least_20_percent": false,
+        "positive_family_bootstrap_saved_cash_error": true,
+        "no_more_underestimates_by_at_least_500": true
+      },
+      "passes": false
+    },
+    {
+      "candidate": "timing_boost",
+      "baseline": "original_flat_10",
+      "pairs": 170,
+      "families": 8,
+      "baseline_family_macro_cash_mae": 133.44273107163067,
+      "candidate_family_macro_cash_mae": 109.53328437007914,
+      "family_macro_mae_reduction_fraction": 0.17917384116424584,
+      "family_bootstrap_95_saved_cash_error": [
+        15.781979105735461,
+        31.620002316501797
+      ],
+      "baseline_bias": -59.523529411764706,
+      "candidate_bias": -88.00388149731378,
+      "baseline_under_by_at_least_500": 0.023529411764705882,
+      "candidate_under_by_at_least_500": 0.023529411764705882,
+      "baseline_over_by_at_least_500": 0.0,
+      "candidate_over_by_at_least_500": 0.0,
+      "gates": {
+        "family_macro_mae_reduction_at_least_20_percent": false,
+        "positive_family_bootstrap_saved_cash_error": true,
+        "no_more_underestimates_by_at_least_500": true
+      },
+      "passes": false
+    },
+    {
+      "candidate": "timing_extra",
+      "baseline": "original_flat_10",
+      "pairs": 170,
+      "families": 8,
+      "baseline_family_macro_cash_mae": 133.44273107163067,
+      "candidate_family_macro_cash_mae": 111.16466131614516,
+      "family_macro_mae_reduction_fraction": 0.16694854471711074,
+      "family_bootstrap_95_saved_cash_error": [
+        14.719970315973342,
+        29.087534586994582
+      ],
+      "baseline_bias": -59.523529411764706,
+      "candidate_bias": -85.43237826474086,
+      "baseline_under_by_at_least_500": 0.023529411764705882,
+      "candidate_under_by_at_least_500": 0.023529411764705882,
+      "baseline_over_by_at_least_500": 0.0,
+      "candidate_over_by_at_least_500": 0.0,
+      "gates": {
+        "family_macro_mae_reduction_at_least_20_percent": false,
+        "positive_family_bootstrap_saved_cash_error": true,
+        "no_more_underestimates_by_at_least_500": true
+      },
+      "passes": false
+    }
+  ],
+  "input_sha256": {
+    "runs/expansion_owned_guided_pairs_v4/ERRORS.jsonl": "5c84d03f60c8b10d2ffaa673969993b369a7e65a71001eb301ed0f006a6185c4",
+    "runs/expansion_owned_guided_pairs_v4/RESULTS.json": "12d72986c13af77104cb677a690ad2c9c3bf0d75c4f2b1ec477e06d72f51c7d2",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/scripts/report_marginal_gate_v3.py": "0db66e5d99ee9dfe582e75453649fb43418d98dfd5a392c5d73d99dc2d2f10d0"
+  }
+}

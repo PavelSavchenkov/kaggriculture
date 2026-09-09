@@ -1,0 +1,13 @@
+# Review 035 - 2026-09-09 12:36 UTC
+
+The complete prospective warm seed benchmark passes all fixed gates. On 56 pairs from eight new seeds and seven specifications, the unchanged .02 deferral candidate reduces mean complete child CPU from 163.439797 to 125.853622 seconds, a 22.997% reduction. The seed-cluster interval for saved mean CPU is [26.733397, 45.355530] seconds. There are zero lost and four gained certificates; failures fall from 26 to 22. Mean common-success hire bill falls 4.8, with equal production on all 30 common successes.
+
+Keep individual risk visible: nine common bills rise, eight fall and thirteen are equal; the worst increase is 466. The seed interval for mean bill change spans [-64.85, 48.84]. All 64 successful courses have independent 719-transition verification, and every logged binary hash matches the unchanged current candidate/control. The common-query audit finds 1,720 identical full inputs, 83 different execution outcomes and no deferred original success. Backend variability is consistent with these observations, not a reason to erase adverse outcomes. The earlier exposed benchmark's failed quality gate remains on record.
+
+Accept this only as a passed fixed-fixture seed-transfer gate. It is now concrete evidence of faster complete iterations, beyond the previously accepted cold replay. Source/rival agents and shop sequence are still fixed. The separate .10 cold-stage candidate continues on another seed panel without retuning. Broader source/calendar/shop transfer is a higher priority than another marginal improvement on the same fixture.
+
+The retry forest is set aside: its better aggregate calibration does not translate into a clear decision gain. A simple existing-model expected-saving cutoff on prior-certified cases saves 28.31% development retry CPU with identical best recorded bills. Its C++ implementation passes 54,750 full-sequence/bill checks, four invalid-state controls, and averages 0.513 microseconds for selection after options are scored. Physical features and existing model inference must still be charged. Freeze a narrow prospective known-certificate retry test before new thirty-second outcomes; do not classify initially unknown cases as discardable.
+
+Decision: preserve both frozen pending tests; document the new complete-compiler result and its narrow scope; freeze the cheap retry candidate; then inspect how to test the warm caller on different shop/input calendars without changing the underlying policy. Do not fit a new forest while the main third-wave reports are pending.
+
+Next review 12:56:39 UTC. Deadline September 10 00:56:39 UTC.

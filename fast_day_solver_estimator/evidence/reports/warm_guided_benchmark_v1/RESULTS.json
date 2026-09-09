@@ -1,0 +1,1921 @@
+[
+  {
+    "id": "r0_carrot12_d15",
+    "repeat": 0,
+    "spec": "data/warm_courses_v1/specs/carrot12_d15.txt",
+    "modes": [
+      "guided",
+      "original"
+    ],
+    "runs": [
+      {
+        "mode": "guided",
+        "utc": "2026-09-09T10:05:14.499910+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_guided",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r0_carrot12_d15/guided/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/carrot12_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original warm compiler with conservative learned call deferral: retain route reuse, try calls with predicted success at least 0.02 first, then retry deferred calls if needed. No predicted failure is a proof of infeasibility.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "5993f0d7f383b1ac5ea88119d7ada72c40256b8320572677cacbbb6d032f6881",
+        "spec_sha256": "a38466d5ee242f79628673f1e6ab4e7d473dfb5971e6d79b5aa5e5c3b7c4127e",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:06:41.512467+00:00",
+        "returncode": 4,
+        "wall_seconds": 86.99052255300194,
+        "cpu_seconds": 125.470731,
+        "compiler_status": {
+          "status": "compiler_failure",
+          "day": 29
+        }
+      },
+      {
+        "mode": "original",
+        "utc": "2026-09-09T10:06:42.326263+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_early",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r0_carrot12_d15/original/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/carrot12_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original exposed fixed-calendar warm compiler; source includes only relocated. No estimator changes or gain claim.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "f190ab98abd9860809b7aeae501cf993fac1a0d06edcb12ad7631295016cb165",
+        "spec_sha256": "a38466d5ee242f79628673f1e6ab4e7d473dfb5971e6d79b5aa5e5c3b7c4127e",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:09:06.868897+00:00",
+        "returncode": 4,
+        "wall_seconds": 144.52033884100092,
+        "cpu_seconds": 182.22383,
+        "compiler_status": {
+          "status": "compiler_failure",
+          "day": 29
+        }
+      }
+    ]
+  },
+  {
+    "id": "r0_cow8_d15",
+    "repeat": 0,
+    "spec": "data/warm_courses_v1/specs/cow8_d15.txt",
+    "modes": [
+      "guided",
+      "original"
+    ],
+    "runs": [
+      {
+        "mode": "guided",
+        "utc": "2026-09-09T10:05:14.501889+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_guided",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r0_cow8_d15/guided/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/cow8_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original warm compiler with conservative learned call deferral: retain route reuse, try calls with predicted success at least 0.02 first, then retry deferred calls if needed. No predicted failure is a proof of infeasibility.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "5993f0d7f383b1ac5ea88119d7ada72c40256b8320572677cacbbb6d032f6881",
+        "spec_sha256": "537585e717236d924256bd2df5c0fd10aa20298f93604e321e26237f7078857d",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:07:43.752553+00:00",
+        "returncode": 4,
+        "wall_seconds": 149.227865724999,
+        "cpu_seconds": 204.896799,
+        "compiler_status": {
+          "status": "compiler_failure",
+          "day": 29
+        }
+      },
+      {
+        "mode": "original",
+        "utc": "2026-09-09T10:07:44.562404+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_early",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r0_cow8_d15/original/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/cow8_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original exposed fixed-calendar warm compiler; source includes only relocated. No estimator changes or gain claim.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "f190ab98abd9860809b7aeae501cf993fac1a0d06edcb12ad7631295016cb165",
+        "spec_sha256": "537585e717236d924256bd2df5c0fd10aa20298f93604e321e26237f7078857d",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:10:45.694893+00:00",
+        "returncode": 0,
+        "wall_seconds": 181.11031831499713,
+        "cpu_seconds": 230.904547,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 15
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 81895,
+          "rival_cash": 109231,
+          "action_hashes": [
+            14361381141089408479,
+            17795690581550109641
+          ],
+          "hires": 296,
+          "hire_cost": 10369,
+          "produced0": [
+            480,
+            82,
+            24,
+            249,
+            72,
+            71,
+            365,
+            161,
+            487,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "r0_melon12_d12",
+    "repeat": 0,
+    "spec": "data/warm_courses_v1/specs/melon12_d12.txt",
+    "modes": [
+      "original",
+      "guided"
+    ],
+    "runs": [
+      {
+        "mode": "original",
+        "utc": "2026-09-09T10:09:07.691670+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_early",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r0_melon12_d12/original/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/melon12_d12.txt",
+          "3.0"
+        ],
+        "scope": "Original exposed fixed-calendar warm compiler; source includes only relocated. No estimator changes or gain claim.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "f190ab98abd9860809b7aeae501cf993fac1a0d06edcb12ad7631295016cb165",
+        "spec_sha256": "2ca9bff827cffed4a47cf6947def122459ce95c59bc393435888b7c9544ba6c1",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:10:11.958674+00:00",
+        "returncode": 0,
+        "wall_seconds": 64.24538664000283,
+        "cpu_seconds": 78.10432899999999,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 18
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 94984,
+          "rival_cash": 122310,
+          "action_hashes": [
+            11128659492544257620,
+            17795690581550109641
+          ],
+          "hires": 274,
+          "hire_cost": 5743,
+          "produced0": [
+            480,
+            82,
+            24,
+            249,
+            144,
+            71,
+            245,
+            161,
+            375,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "mode": "guided",
+        "utc": "2026-09-09T10:10:13.686897+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_guided",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r0_melon12_d12/guided/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/melon12_d12.txt",
+          "3.0"
+        ],
+        "scope": "Original warm compiler with conservative learned call deferral: retain route reuse, try calls with predicted success at least 0.02 first, then retry deferred calls if needed. No predicted failure is a proof of infeasibility.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "5993f0d7f383b1ac5ea88119d7ada72c40256b8320572677cacbbb6d032f6881",
+        "spec_sha256": "2ca9bff827cffed4a47cf6947def122459ce95c59bc393435888b7c9544ba6c1",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:11:02.962000+00:00",
+        "returncode": 0,
+        "wall_seconds": 49.25368187199638,
+        "cpu_seconds": 63.006278,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 18
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 94984,
+          "rival_cash": 122310,
+          "action_hashes": [
+            9819848835985746705,
+            17795690581550109641
+          ],
+          "hires": 274,
+          "hire_cost": 5743,
+          "produced0": [
+            480,
+            82,
+            24,
+            249,
+            144,
+            71,
+            245,
+            161,
+            375,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "r0_sheep8_d15",
+    "repeat": 0,
+    "spec": "data/warm_courses_v1/specs/sheep8_d15.txt",
+    "modes": [
+      "guided",
+      "original"
+    ],
+    "runs": [
+      {
+        "mode": "guided",
+        "utc": "2026-09-09T10:10:47.404303+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_guided",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r0_sheep8_d15/guided/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/sheep8_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original warm compiler with conservative learned call deferral: retain route reuse, try calls with predicted success at least 0.02 first, then retry deferred calls if needed. No predicted failure is a proof of infeasibility.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "5993f0d7f383b1ac5ea88119d7ada72c40256b8320572677cacbbb6d032f6881",
+        "spec_sha256": "80ace3959bcd711f46edd3a5ea14ce0f5c894e11a7a1e990f6aec2dd55c973db",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:12:46.107187+00:00",
+        "returncode": 0,
+        "wall_seconds": 118.6807587009971,
+        "cpu_seconds": 170.704789,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 15
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 80407,
+          "rival_cash": 122079,
+          "action_hashes": [
+            3998390899648948140,
+            17795690581550109641
+          ],
+          "hires": 296,
+          "hire_cost": 10657,
+          "produced0": [
+            480,
+            82,
+            24,
+            249,
+            72,
+            71,
+            245,
+            273,
+            487,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "mode": "original",
+        "utc": "2026-09-09T10:12:47.842630+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_early",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r0_sheep8_d15/original/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/sheep8_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original exposed fixed-calendar warm compiler; source includes only relocated. No estimator changes or gain claim.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "f190ab98abd9860809b7aeae501cf993fac1a0d06edcb12ad7631295016cb165",
+        "spec_sha256": "80ace3959bcd711f46edd3a5ea14ce0f5c894e11a7a1e990f6aec2dd55c973db",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:15:44.791164+00:00",
+        "returncode": 0,
+        "wall_seconds": 176.92692807200365,
+        "cpu_seconds": 223.455345,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 15
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 80407,
+          "rival_cash": 122079,
+          "action_hashes": [
+            17112683860999768797,
+            17795690581550109641
+          ],
+          "hires": 296,
+          "hire_cost": 10657,
+          "produced0": [
+            480,
+            82,
+            24,
+            249,
+            72,
+            71,
+            245,
+            273,
+            487,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "r0_strawberry8_d12",
+    "repeat": 0,
+    "spec": "data/warm_courses_v1/specs/strawberry8_d12.txt",
+    "modes": [
+      "guided",
+      "original"
+    ],
+    "runs": [
+      {
+        "mode": "guided",
+        "utc": "2026-09-09T10:11:04.679504+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_guided",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r0_strawberry8_d12/guided/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/strawberry8_d12.txt",
+          "3.0"
+        ],
+        "scope": "Original warm compiler with conservative learned call deferral: retain route reuse, try calls with predicted success at least 0.02 first, then retry deferred calls if needed. No predicted failure is a proof of infeasibility.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "5993f0d7f383b1ac5ea88119d7ada72c40256b8320572677cacbbb6d032f6881",
+        "spec_sha256": "9ab247cab810b1762736efad26e8f9dd47fa77498c965d5a3568c7a059393246",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:11:49.160946+00:00",
+        "returncode": 0,
+        "wall_seconds": 44.45954069700383,
+        "cpu_seconds": 49.741175000000005,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 18
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 93704,
+          "rival_cash": 122394,
+          "action_hashes": [
+            4981464807935514460,
+            17795690581550109641
+          ],
+          "hires": 270,
+          "hire_cost": 4879,
+          "produced0": [
+            480,
+            82,
+            24,
+            313,
+            72,
+            71,
+            245,
+            161,
+            375,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "mode": "original",
+        "utc": "2026-09-09T10:11:50.875842+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_early",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r0_strawberry8_d12/original/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/strawberry8_d12.txt",
+          "3.0"
+        ],
+        "scope": "Original exposed fixed-calendar warm compiler; source includes only relocated. No estimator changes or gain claim.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "f190ab98abd9860809b7aeae501cf993fac1a0d06edcb12ad7631295016cb165",
+        "spec_sha256": "9ab247cab810b1762736efad26e8f9dd47fa77498c965d5a3568c7a059393246",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:12:39.947180+00:00",
+        "returncode": 0,
+        "wall_seconds": 49.04865266200068,
+        "cpu_seconds": 54.295401,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 18
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 93704,
+          "rival_cash": 122394,
+          "action_hashes": [
+            15830056855446972125,
+            17795690581550109641
+          ],
+          "hires": 270,
+          "hire_cost": 4879,
+          "produced0": [
+            480,
+            82,
+            24,
+            313,
+            72,
+            71,
+            245,
+            161,
+            375,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "r0_tomato12_d15",
+    "repeat": 0,
+    "spec": "data/warm_courses_v1/specs/tomato12_d15.txt",
+    "modes": [
+      "original",
+      "guided"
+    ],
+    "runs": [
+      {
+        "mode": "original",
+        "utc": "2026-09-09T10:12:41.705609+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_early",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r0_tomato12_d15/original/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/tomato12_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original exposed fixed-calendar warm compiler; source includes only relocated. No estimator changes or gain claim.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "f190ab98abd9860809b7aeae501cf993fac1a0d06edcb12ad7631295016cb165",
+        "spec_sha256": "aeb9cc3015b7949a12c91d63a0c0b6dccacd0f80da37f505c9dcac5af413e916",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:14:17.246772+00:00",
+        "returncode": 0,
+        "wall_seconds": 95.51939220700297,
+        "cpu_seconds": 115.62643999999999,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 15
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 121877,
+          "rival_cash": 117577,
+          "action_hashes": [
+            8575012553023357201,
+            17795690581550109641
+          ],
+          "hires": 279,
+          "hire_cost": 6853,
+          "produced0": [
+            480,
+            82,
+            120,
+            249,
+            72,
+            71,
+            245,
+            161,
+            375,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "mode": "guided",
+        "utc": "2026-09-09T10:14:18.987045+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_guided",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r0_tomato12_d15/guided/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/tomato12_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original warm compiler with conservative learned call deferral: retain route reuse, try calls with predicted success at least 0.02 first, then retry deferred calls if needed. No predicted failure is a proof of infeasibility.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "5993f0d7f383b1ac5ea88119d7ada72c40256b8320572677cacbbb6d032f6881",
+        "spec_sha256": "aeb9cc3015b7949a12c91d63a0c0b6dccacd0f80da37f505c9dcac5af413e916",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:15:14.684351+00:00",
+        "returncode": 0,
+        "wall_seconds": 55.67495308799698,
+        "cpu_seconds": 73.986069,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 15
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 121877,
+          "rival_cash": 117577,
+          "action_hashes": [
+            4505416299157423161,
+            17795690581550109641
+          ],
+          "hires": 279,
+          "hire_cost": 6853,
+          "produced0": [
+            480,
+            82,
+            120,
+            249,
+            72,
+            71,
+            245,
+            161,
+            375,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "r0_wheat12_d15",
+    "repeat": 0,
+    "spec": "data/warm_courses_v1/specs/wheat12_d15.txt",
+    "modes": [
+      "guided",
+      "original"
+    ],
+    "runs": [
+      {
+        "mode": "guided",
+        "utc": "2026-09-09T10:15:16.401473+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_guided",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r0_wheat12_d15/guided/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/wheat12_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original warm compiler with conservative learned call deferral: retain route reuse, try calls with predicted success at least 0.02 first, then retry deferred calls if needed. No predicted failure is a proof of infeasibility.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "5993f0d7f383b1ac5ea88119d7ada72c40256b8320572677cacbbb6d032f6881",
+        "spec_sha256": "4e060cb43cb74dd0c450fbf03d7783e19ccbb52ec86babff7729dc6bb76c868f",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:16:34.638169+00:00",
+        "returncode": 0,
+        "wall_seconds": 78.21440617600456,
+        "cpu_seconds": 109.239217,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 15
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 100239,
+          "rival_cash": 122017,
+          "action_hashes": [
+            2190703369337180293,
+            17795690581550109641
+          ],
+          "hires": 284,
+          "hire_cost": 7696,
+          "produced0": [
+            696,
+            82,
+            24,
+            249,
+            72,
+            71,
+            245,
+            161,
+            375,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "mode": "original",
+        "utc": "2026-09-09T10:16:36.356383+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_early",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r0_wheat12_d15/original/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/wheat12_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original exposed fixed-calendar warm compiler; source includes only relocated. No estimator changes or gain claim.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "f190ab98abd9860809b7aeae501cf993fac1a0d06edcb12ad7631295016cb165",
+        "spec_sha256": "4e060cb43cb74dd0c450fbf03d7783e19ccbb52ec86babff7729dc6bb76c868f",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:18:31.216808+00:00",
+        "returncode": 0,
+        "wall_seconds": 114.83894252400205,
+        "cpu_seconds": 144.803881,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 15
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 100239,
+          "rival_cash": 122017,
+          "action_hashes": [
+            18129464714796901922,
+            17795690581550109641
+          ],
+          "hires": 284,
+          "hire_cost": 7696,
+          "produced0": [
+            696,
+            82,
+            24,
+            249,
+            72,
+            71,
+            245,
+            161,
+            375,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "r1_carrot12_d15",
+    "repeat": 1,
+    "spec": "data/warm_courses_v1/specs/carrot12_d15.txt",
+    "modes": [
+      "original",
+      "guided"
+    ],
+    "runs": [
+      {
+        "mode": "original",
+        "utc": "2026-09-09T10:15:46.518278+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_early",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r1_carrot12_d15/original/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/carrot12_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original exposed fixed-calendar warm compiler; source includes only relocated. No estimator changes or gain claim.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "f190ab98abd9860809b7aeae501cf993fac1a0d06edcb12ad7631295016cb165",
+        "spec_sha256": "a38466d5ee242f79628673f1e6ab4e7d473dfb5971e6d79b5aa5e5c3b7c4127e",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:18:11.645658+00:00",
+        "returncode": 4,
+        "wall_seconds": 145.1054048579972,
+        "cpu_seconds": 184.316565,
+        "compiler_status": {
+          "status": "compiler_failure",
+          "day": 29
+        }
+      },
+      {
+        "mode": "guided",
+        "utc": "2026-09-09T10:18:12.440074+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_guided",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r1_carrot12_d15/guided/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/carrot12_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original warm compiler with conservative learned call deferral: retain route reuse, try calls with predicted success at least 0.02 first, then retry deferred calls if needed. No predicted failure is a proof of infeasibility.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "5993f0d7f383b1ac5ea88119d7ada72c40256b8320572677cacbbb6d032f6881",
+        "spec_sha256": "a38466d5ee242f79628673f1e6ab4e7d473dfb5971e6d79b5aa5e5c3b7c4127e",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:19:39.395138+00:00",
+        "returncode": 4,
+        "wall_seconds": 86.93252183099685,
+        "cpu_seconds": 127.558324,
+        "compiler_status": {
+          "status": "compiler_failure",
+          "day": 29
+        }
+      }
+    ]
+  },
+  {
+    "id": "r1_cow8_d15",
+    "repeat": 1,
+    "spec": "data/warm_courses_v1/specs/cow8_d15.txt",
+    "modes": [
+      "original",
+      "guided"
+    ],
+    "runs": [
+      {
+        "mode": "original",
+        "utc": "2026-09-09T10:18:32.959290+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_early",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r1_cow8_d15/original/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/cow8_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original exposed fixed-calendar warm compiler; source includes only relocated. No estimator changes or gain claim.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "f190ab98abd9860809b7aeae501cf993fac1a0d06edcb12ad7631295016cb165",
+        "spec_sha256": "537585e717236d924256bd2df5c0fd10aa20298f93604e321e26237f7078857d",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:21:27.394462+00:00",
+        "returncode": 0,
+        "wall_seconds": 174.41294285000185,
+        "cpu_seconds": 221.465497,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 15
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 82738,
+          "rival_cash": 109231,
+          "action_hashes": [
+            6149510760410917173,
+            17795690581550109641
+          ],
+          "hires": 294,
+          "hire_cost": 9526,
+          "produced0": [
+            480,
+            82,
+            24,
+            249,
+            72,
+            71,
+            365,
+            161,
+            487,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "mode": "guided",
+        "utc": "2026-09-09T10:21:29.115341+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_guided",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r1_cow8_d15/guided/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/cow8_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original warm compiler with conservative learned call deferral: retain route reuse, try calls with predicted success at least 0.02 first, then retry deferred calls if needed. No predicted failure is a proof of infeasibility.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "5993f0d7f383b1ac5ea88119d7ada72c40256b8320572677cacbbb6d032f6881",
+        "spec_sha256": "537585e717236d924256bd2df5c0fd10aa20298f93604e321e26237f7078857d",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:23:35.512866+00:00",
+        "returncode": 0,
+        "wall_seconds": 126.37542468099855,
+        "cpu_seconds": 173.049238,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 15
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 82505,
+          "rival_cash": 109231,
+          "action_hashes": [
+            17238641773475337855,
+            17795690581550109641
+          ],
+          "hires": 295,
+          "hire_cost": 9759,
+          "produced0": [
+            480,
+            82,
+            24,
+            249,
+            72,
+            71,
+            365,
+            161,
+            487,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "r1_melon12_d12",
+    "repeat": 1,
+    "spec": "data/warm_courses_v1/specs/melon12_d12.txt",
+    "modes": [
+      "guided",
+      "original"
+    ],
+    "runs": [
+      {
+        "mode": "guided",
+        "utc": "2026-09-09T10:19:40.208905+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_guided",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r1_melon12_d12/guided/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/melon12_d12.txt",
+          "3.0"
+        ],
+        "scope": "Original warm compiler with conservative learned call deferral: retain route reuse, try calls with predicted success at least 0.02 first, then retry deferred calls if needed. No predicted failure is a proof of infeasibility.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "5993f0d7f383b1ac5ea88119d7ada72c40256b8320572677cacbbb6d032f6881",
+        "spec_sha256": "2ca9bff827cffed4a47cf6947def122459ce95c59bc393435888b7c9544ba6c1",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:20:29.613071+00:00",
+        "returncode": 0,
+        "wall_seconds": 49.382738849002635,
+        "cpu_seconds": 63.491873000000005,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 18
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 94984,
+          "rival_cash": 122310,
+          "action_hashes": [
+            8740179870806462287,
+            17795690581550109641
+          ],
+          "hires": 274,
+          "hire_cost": 5743,
+          "produced0": [
+            480,
+            82,
+            24,
+            249,
+            144,
+            71,
+            245,
+            161,
+            375,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "mode": "original",
+        "utc": "2026-09-09T10:20:31.323480+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_early",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r1_melon12_d12/original/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/melon12_d12.txt",
+          "3.0"
+        ],
+        "scope": "Original exposed fixed-calendar warm compiler; source includes only relocated. No estimator changes or gain claim.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "f190ab98abd9860809b7aeae501cf993fac1a0d06edcb12ad7631295016cb165",
+        "spec_sha256": "2ca9bff827cffed4a47cf6947def122459ce95c59bc393435888b7c9544ba6c1",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:21:35.748536+00:00",
+        "returncode": 0,
+        "wall_seconds": 64.40236075999564,
+        "cpu_seconds": 78.078594,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 18
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 94984,
+          "rival_cash": 122310,
+          "action_hashes": [
+            8666076194820060998,
+            17795690581550109641
+          ],
+          "hires": 274,
+          "hire_cost": 5743,
+          "produced0": [
+            480,
+            82,
+            24,
+            249,
+            144,
+            71,
+            245,
+            161,
+            375,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "r1_sheep8_d15",
+    "repeat": 1,
+    "spec": "data/warm_courses_v1/specs/sheep8_d15.txt",
+    "modes": [
+      "original",
+      "guided"
+    ],
+    "runs": [
+      {
+        "mode": "original",
+        "utc": "2026-09-09T10:21:37.469521+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_early",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r1_sheep8_d15/original/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/sheep8_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original exposed fixed-calendar warm compiler; source includes only relocated. No estimator changes or gain claim.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "f190ab98abd9860809b7aeae501cf993fac1a0d06edcb12ad7631295016cb165",
+        "spec_sha256": "80ace3959bcd711f46edd3a5ea14ce0f5c894e11a7a1e990f6aec2dd55c973db",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:24:49.621038+00:00",
+        "returncode": 0,
+        "wall_seconds": 192.12979790300597,
+        "cpu_seconds": 249.550811,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 15
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 77446,
+          "rival_cash": 122079,
+          "action_hashes": [
+            3805653604973434190,
+            17795690581550109641
+          ],
+          "hires": 299,
+          "hire_cost": 13618,
+          "produced0": [
+            480,
+            82,
+            24,
+            249,
+            72,
+            71,
+            245,
+            273,
+            487,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "mode": "guided",
+        "utc": "2026-09-09T10:24:51.337177+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_guided",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r1_sheep8_d15/guided/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/sheep8_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original warm compiler with conservative learned call deferral: retain route reuse, try calls with predicted success at least 0.02 first, then retry deferred calls if needed. No predicted failure is a proof of infeasibility.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "5993f0d7f383b1ac5ea88119d7ada72c40256b8320572677cacbbb6d032f6881",
+        "spec_sha256": "80ace3959bcd711f46edd3a5ea14ce0f5c894e11a7a1e990f6aec2dd55c973db",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:27:00.017313+00:00",
+        "returncode": 0,
+        "wall_seconds": 128.65750779900554,
+        "cpu_seconds": 183.743093,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 15
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 77446,
+          "rival_cash": 122079,
+          "action_hashes": [
+            15465833426129368372,
+            17795690581550109641
+          ],
+          "hires": 299,
+          "hire_cost": 13618,
+          "produced0": [
+            480,
+            82,
+            24,
+            249,
+            72,
+            71,
+            245,
+            273,
+            487,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "r1_strawberry8_d12",
+    "repeat": 1,
+    "spec": "data/warm_courses_v1/specs/strawberry8_d12.txt",
+    "modes": [
+      "original",
+      "guided"
+    ],
+    "runs": [
+      {
+        "mode": "original",
+        "utc": "2026-09-09T10:23:37.246580+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_early",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r1_strawberry8_d12/original/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/strawberry8_d12.txt",
+          "3.0"
+        ],
+        "scope": "Original exposed fixed-calendar warm compiler; source includes only relocated. No estimator changes or gain claim.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "f190ab98abd9860809b7aeae501cf993fac1a0d06edcb12ad7631295016cb165",
+        "spec_sha256": "9ab247cab810b1762736efad26e8f9dd47fa77498c965d5a3568c7a059393246",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:24:26.390900+00:00",
+        "returncode": 0,
+        "wall_seconds": 49.12254659199971,
+        "cpu_seconds": 54.537088,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 18
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 93704,
+          "rival_cash": 122394,
+          "action_hashes": [
+            1794708950528072338,
+            17795690581550109641
+          ],
+          "hires": 270,
+          "hire_cost": 4879,
+          "produced0": [
+            480,
+            82,
+            24,
+            313,
+            72,
+            71,
+            245,
+            161,
+            375,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "mode": "guided",
+        "utc": "2026-09-09T10:24:28.106722+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_guided",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r1_strawberry8_d12/guided/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/strawberry8_d12.txt",
+          "3.0"
+        ],
+        "scope": "Original warm compiler with conservative learned call deferral: retain route reuse, try calls with predicted success at least 0.02 first, then retry deferred calls if needed. No predicted failure is a proof of infeasibility.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "5993f0d7f383b1ac5ea88119d7ada72c40256b8320572677cacbbb6d032f6881",
+        "spec_sha256": "9ab247cab810b1762736efad26e8f9dd47fa77498c965d5a3568c7a059393246",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:25:12.661482+00:00",
+        "returncode": 0,
+        "wall_seconds": 44.53211155500321,
+        "cpu_seconds": 49.978864,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 18
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 93704,
+          "rival_cash": 122394,
+          "action_hashes": [
+            13300820016846722389,
+            17795690581550109641
+          ],
+          "hires": 270,
+          "hire_cost": 4879,
+          "produced0": [
+            480,
+            82,
+            24,
+            313,
+            72,
+            71,
+            245,
+            161,
+            375,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "r1_tomato12_d15",
+    "repeat": 1,
+    "spec": "data/warm_courses_v1/specs/tomato12_d15.txt",
+    "modes": [
+      "guided",
+      "original"
+    ],
+    "runs": [
+      {
+        "mode": "guided",
+        "utc": "2026-09-09T10:25:14.403262+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_guided",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r1_tomato12_d15/guided/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/tomato12_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original warm compiler with conservative learned call deferral: retain route reuse, try calls with predicted success at least 0.02 first, then retry deferred calls if needed. No predicted failure is a proof of infeasibility.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "5993f0d7f383b1ac5ea88119d7ada72c40256b8320572677cacbbb6d032f6881",
+        "spec_sha256": "aeb9cc3015b7949a12c91d63a0c0b6dccacd0f80da37f505c9dcac5af413e916",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:26:14.518350+00:00",
+        "returncode": 0,
+        "wall_seconds": 60.09217200699641,
+        "cpu_seconds": 80.525568,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 15
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 121644,
+          "rival_cash": 117577,
+          "action_hashes": [
+            7584131992208741308,
+            17795690581550109641
+          ],
+          "hires": 280,
+          "hire_cost": 7086,
+          "produced0": [
+            480,
+            82,
+            120,
+            249,
+            72,
+            71,
+            245,
+            161,
+            375,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "mode": "original",
+        "utc": "2026-09-09T10:26:16.229335+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_early",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r1_tomato12_d15/original/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/tomato12_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original exposed fixed-calendar warm compiler; source includes only relocated. No estimator changes or gain claim.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "f190ab98abd9860809b7aeae501cf993fac1a0d06edcb12ad7631295016cb165",
+        "spec_sha256": "aeb9cc3015b7949a12c91d63a0c0b6dccacd0f80da37f505c9dcac5af413e916",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:27:55.747255+00:00",
+        "returncode": 0,
+        "wall_seconds": 99.49560701100563,
+        "cpu_seconds": 120.620018,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 15
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 121644,
+          "rival_cash": 117577,
+          "action_hashes": [
+            3233676000943256884,
+            17795690581550109641
+          ],
+          "hires": 280,
+          "hire_cost": 7086,
+          "produced0": [
+            480,
+            82,
+            120,
+            249,
+            72,
+            71,
+            245,
+            161,
+            375,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "r1_wheat12_d15",
+    "repeat": 1,
+    "spec": "data/warm_courses_v1/specs/wheat12_d15.txt",
+    "modes": [
+      "original",
+      "guided"
+    ],
+    "runs": [
+      {
+        "mode": "original",
+        "utc": "2026-09-09T10:27:01.724622+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_early",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r1_wheat12_d15/original/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/wheat12_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original exposed fixed-calendar warm compiler; source includes only relocated. No estimator changes or gain claim.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "f190ab98abd9860809b7aeae501cf993fac1a0d06edcb12ad7631295016cb165",
+        "spec_sha256": "4e060cb43cb74dd0c450fbf03d7783e19ccbb52ec86babff7729dc6bb76c868f",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:28:56.655548+00:00",
+        "returncode": 0,
+        "wall_seconds": 114.90963580400421,
+        "cpu_seconds": 146.21909100000002,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 15
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 100239,
+          "rival_cash": 122017,
+          "action_hashes": [
+            16634173732548346007,
+            17795690581550109641
+          ],
+          "hires": 284,
+          "hire_cost": 7696,
+          "produced0": [
+            696,
+            82,
+            24,
+            249,
+            72,
+            71,
+            245,
+            161,
+            375,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "mode": "guided",
+        "utc": "2026-09-09T10:28:58.394220+00:00",
+        "status": "completed",
+        "command": [
+          "conda",
+          "run",
+          "--no-capture-output",
+          "-n",
+          "kaggriculture",
+          "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/warm_compile_guided",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/runs/warm_guided_benchmark_v1/jobs/r1_wheat12_d15/guided/course",
+          "1201301738",
+          "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/data/warm_courses_v1/specs/wheat12_d15.txt",
+          "3.0"
+        ],
+        "scope": "Original warm compiler with conservative learned call deferral: retain route reuse, try calls with predicted success at least 0.02 first, then retry deferred calls if needed. No predicted failure is a proof of infeasibility.",
+        "timing_scope": "Complete child process CPU and wall time, including the common conda/runtime launcher, contract construction, route reuse, four-worker fixed repair, cold fallback, full-game endpoint checks and artifact output.",
+        "binary_sha256": "5993f0d7f383b1ac5ea88119d7ada72c40256b8320572677cacbbb6d032f6881",
+        "spec_sha256": "4e060cb43cb74dd0c450fbf03d7783e19ccbb52ec86babff7729dc6bb76c868f",
+        "resume_prefix": null,
+        "completed_utc": "2026-09-09T10:30:16.297192+00:00",
+        "returncode": 0,
+        "wall_seconds": 77.88151892799942,
+        "cpu_seconds": 110.986097,
+        "compiler_status": {
+          "status": "compiled",
+          "days": 15
+        },
+        "independent": {
+          "real_transitions": 719,
+          "cash": 100239,
+          "rival_cash": 122017,
+          "action_hashes": [
+            18261067681707925378,
+            17795690581550109641
+          ],
+          "hires": 284,
+          "hire_cost": 7696,
+          "produced0": [
+            696,
+            82,
+            24,
+            249,
+            72,
+            71,
+            245,
+            161,
+            375,
+            0,
+            0,
+            0
+          ],
+          "produced1": [
+            534,
+            93,
+            80,
+            262,
+            72,
+            88,
+            267,
+            131,
+            382,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "scope": "The reused diagnostic helper contains two stale descriptions of a failed development gate. This 56-pair prospective seed-transfer gate passes; the original files and all numerical results are preserved.",
+  "affected_fields": [
+    "DIAGNOSIS.json.scope",
+    "DIAGNOSIS.json.interpretation"
+  ],
+  "authoritative_gate": "SEED_REPORT.json",
+  "diagnosis_sha256": "ba29c6485481a9b4abcc24df778eec5386dd4090a0370b69534830b801a3306c",
+  "replacement_interpretation": "All 1,720 common executed full inputs are identical, with 83 outcome differences and no deferred original successes. These differences are consistent with bounded multithreaded backend variation; they do not establish its cause or guarantee future quality. The complete seed-transfer gate passes."
+}

@@ -1,0 +1,17 @@
+{
+  "exported_utc": "2026-09-09T13:41:19.616222+00:00",
+  "classification": "external",
+  "lineage": "Exact recorded course from nanare, episode 106867299 seat 0; source reward 122310. It is a replay fixture, not the original adaptive policy.",
+  "rating": "Unknown for this packaged agent.",
+  "optimization_status": "Cataloged as an estimator benchmark fixture at explicit user request; no new strategy promotion or submission.",
+  "reuse": "Retain attribution and inherited source licenses; no new source-code license is inferred from public availability.",
+  "changes": "Include relocation and namespace isolation only; policy actions are intended to remain identical. See package validation for complete-course parity.",
+  "renamed_parent_files": [],
+  "source_sha256": {
+    "experiments/v6/sep09_labor_estimator/baselines/warm/runs/submission_losses_sep08_001/proposals/nanare_four_quadrant_course/agent.json": "0d5f571be21a22a6a2c4a7a76421e4cddeafccde45bdf0c66938fc51347169ca",
+    "experiments/v6/sep09_labor_estimator/baselines/warm/runs/submission_losses_sep08_001/proposals/nanare_four_quadrant_course/README.md": "6b6194ed402897f738d0f93e7517d6c117916ff473821d93feeedb5876d51f1f",
+    "experiments/v6/sep09_labor_estimator/baselines/warm/runs/submission_losses_sep08_001/proposals/nanare_four_quadrant_course/source/agent.hpp": "86c69a612489109cf7bddc12e458186e2a4dd9ec435eff5070b515cced72b538",
+    "experiments/v6/sep09_labor_estimator/baselines/warm/runs/submission_losses_sep08_001/proposals/nanare_four_quadrant_course/source/replay.inc": "363ae08d0cdf8d6c5b4cf22ee5fb96ad10953f31b05ce6e98c126b3a8664b536",
+    "experiments/v6/sep09_labor_estimator/baselines/warm/runs/submission_losses_sep08_001/proposals/nanare_four_quadrant_course/source/agent.cpp": "162e32ba8cddfaea1a9ba06ce747fc741cb6a9caebdca7f96c8851c2abf48b15"
+  }
+}

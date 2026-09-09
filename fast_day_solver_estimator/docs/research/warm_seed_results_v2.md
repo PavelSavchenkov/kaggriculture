@@ -1,0 +1,13 @@
+# Complete compiler test on new environment seeds
+
+The unchanged .02 learned deferral candidate passes the prospective seed-transfer gate. Across 56 paired compiler runs (eight new seeds, seven specifications), mean complete child CPU falls from 163.44 to 125.85 seconds: 23.00% saved. The seed-cluster 95% interval for saved mean CPU is 26.73 to 45.36 seconds. Mean wall time falls from 127.95 to 92.34 seconds under the measured concurrent workload; CPU is the primary timing metric.
+
+The original completes 30/56 courses and the candidate 34/56. No paired certificate is lost and four are gained. All 64 successful outputs pass independent full-game verification over 719 real transitions. All 30 common-success pairs have identical production. Their mean hire bill changes by -4.8, but nine bills rise, eight fall and thirteen stay equal; the largest increase is 466. The seed-cluster interval for mean bill change is [-64.85, 48.84]. This is a passed finite-sample gate, not a guarantee against individual quality regressions.
+
+Timing includes the common launcher, contract construction, route reuse, four-thread repair, cold fallback, in-compiler endpoint checks and artifact output. Independent post-run verification is outside both timed invocations. The 1,979 probability evaluations take 0.250 wall seconds in total. The candidate defers 383 queries and retries deferred calls when other choices fail; predicted failure never means physical impossibility.
+
+All 1,720 common executed full problem inputs are identical. There are 83 execution-outcome differences on those identical inputs and no deferred query that succeeded in the paired original run. Bounded multithreaded repair can vary, and different physical schedules can behave differently in the full game. These observations do not prove a cause for every difference. Both improvements and regressions remain in the paired metrics.
+
+The candidate was unchanged from the earlier exposed-course benchmark, whose quality gate failed. This later test uses disjoint environment seeds selected before any new outcomes. It retains the same exposed source agent, rival, seven specifications and shop sequence. Accept the result only for that seed-transfer scope. Other source agents, shop/input calendars and the separate cold-stage candidate remain unvalidated here.
+
+Primary evidence: `runs/warm_seed_benchmark_v2/SEED_REPORT.json`, `RESULTS.json`, and `INDEPENDENT_REPORT_CHECK.json`. The reused diagnostic helper contains stale wording about a failed development gate; `DIAGNOSIS_SCOPE_CORRECTION.json` corrects those descriptions without changing its original numbers or files.

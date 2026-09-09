@@ -1,0 +1,25 @@
+{
+  "utc": "2026-09-09T12:34:28.010215+00:00",
+  "status": "passed",
+  "states": 10950,
+  "decision_replays": 54750,
+  "complete_sequence_and_bill_mismatches": 0,
+  "maximum_backend_cpu_difference": 0.0,
+  "invalid_state_rejections": 4,
+  "policy_cpu_us": {
+    "mean": 0.51283406392693,
+    "p50": 0.4940000000036582,
+    "p95": 0.7250000000000312,
+    "p99": 0.8460000000005616
+  },
+  "timing_scope": "Policy construction and all adaptive choices/observations on already scored options; includes clock overhead. Physical feature extraction and existing model inference are excluded here and must be charged separately.",
+  "input_sha256": {
+    "runs/long_retry_study_v1/PREDICTIONS.jsonl": "4ef98be5d3b73fbd46765ca0cdb620d7bd61d1717f7d71202060be474d10193a",
+    "runs/long_retry_utility_v1/DECISIONS.jsonl": "5ee2a75b277fd9f43e897d5c4665d20a848ecec7fc8a00798fa0b1ea0ece6898",
+    "runs/long_retry_study_v1/RESULTS.json": "1a00d38484cf4d55e2ba3b4caa707b142d2e6d84e2633e5f5e21932b40acdb78",
+    "scripts/check_long_retry_cpp.py": "462e9c9cd97459353245720f3b880b18aea77ea6c877430ffa5b85d068f24e49",
+    "build/replay_long_retry_cpp": "413a15539288c69660753a509eade6a90886f25f85443a65410364daab061828",
+    "include/long_retry_policy.hpp": "81a8d04c09179e8eaf4199411fedf78ada0722ca38f32a70f633994c78e0d79e",
+    "source/replay_long_retry_cpp.cpp": "119fab2f5fb187c4ac8fe4c832eb95d66d989cf3d0f4744f8165e76e3d4faf71"
+  }
+}

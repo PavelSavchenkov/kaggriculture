@@ -1,0 +1,9 @@
+# Review 029 — 2026-09-09 10:37 UTC
+
+The third-wave freeze was written at 10:33:46 UTC, before any holdout_b download. It pins the protocol, candidate code, model weights, inference/reference binaries, numerical checks and an exposure inventory of 5,309 physical keys and 160 explicit calendar contracts. All checked model and C++ files still match their independent parity evidence. The reserved intake completed 32 episodes from all eight preassigned families. Full ordinary replay parity passes on all 32 selected player-games; terminal extraction accepts 31 and preserves one exclusion. The ordinary source index has 903 records and 461 distinct physical obligations.
+
+Decision: proceed directly through frozen generation, input-only forecasts and the new reference sweep. The compact candidate set is fixed. New scripts may assemble inputs or audit results but must not tune predictors, alter selected variants or use new outcomes before forecasts are saved. Calendar menus and horizons remain part of identity. Keep a total limit of eight reference processes across the new panels.
+
+Warm quality diagnosis is now stronger: all 433 common executed queries have identical full DayProblem inputs. No deferred query was a successful original query. Eight common calls have different returned success or endpoint outcomes; the lost terminal cow certificate arose at an executed, undeferred count. The higher cow bill also follows a differing full-game endpoint at an executed count. Solver variability is a plausible cause; the diagnostic does not reverse the failed benchmark gate or prove equal future quality. Avoid making the estimator more complicated to fix a failure it did not directly cause. New-seed paired testing and a recorded-outcome policy control can separate this uncertainty from selection quality.
+
+Next review 10:56:39 UTC. Experiment deadline September 10 00:56:39 UTC.

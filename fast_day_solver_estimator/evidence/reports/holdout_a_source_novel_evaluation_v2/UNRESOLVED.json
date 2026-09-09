@@ -1,0 +1,272 @@
+[
+  {
+    "id": "cc07224576b12f17581c",
+    "family": "team_16665237",
+    "method": "fitted_tasks",
+    "reference_workers": null,
+    "lower_bound": 8,
+    "prediction": 10.850491007488564,
+    "raw_prediction": 10.850491007488564
+  },
+  {
+    "id": "2bb7f6a5d5e6bcc34691",
+    "family": "team_16665237",
+    "method": "fitted_tasks",
+    "reference_workers": null,
+    "lower_bound": 6,
+    "prediction": 8.724353734392203,
+    "raw_prediction": 8.724353734392203
+  },
+  {
+    "id": "cc07224576b12f17581c",
+    "family": "team_16665237",
+    "method": "fitted_geometry",
+    "reference_workers": null,
+    "lower_bound": 8,
+    "prediction": 10.695699505333646,
+    "raw_prediction": 10.695699505333646
+  },
+  {
+    "id": "2bb7f6a5d5e6bcc34691",
+    "family": "team_16665237",
+    "method": "fitted_geometry",
+    "reference_workers": null,
+    "lower_bound": 6,
+    "prediction": 9.722317828391663,
+    "raw_prediction": 9.722317828391663
+  },
+  {
+    "id": "cc07224576b12f17581c",
+    "family": "team_16665237",
+    "method": "fitted_timing",
+    "reference_workers": null,
+    "lower_bound": 8,
+    "prediction": 11.32926236041277,
+    "raw_prediction": 11.32926236041277
+  },
+  {
+    "id": "2bb7f6a5d5e6bcc34691",
+    "family": "team_16665237",
+    "method": "fitted_timing",
+    "reference_workers": null,
+    "lower_bound": 6,
+    "prediction": 10.397389131389232,
+    "raw_prediction": 10.397389131389232
+  },
+  {
+    "id": "cc07224576b12f17581c",
+    "family": "team_16665237",
+    "method": "ridge_floor",
+    "reference_workers": null,
+    "lower_bound": 8,
+    "prediction": 10.042968577429203,
+    "raw_prediction": 10.042968577429203
+  },
+  {
+    "id": "2bb7f6a5d5e6bcc34691",
+    "family": "team_16665237",
+    "method": "ridge_floor",
+    "reference_workers": null,
+    "lower_bound": 6,
+    "prediction": 11.810205251878667,
+    "raw_prediction": 11.810205251878667
+  },
+  {
+    "id": "cc07224576b12f17581c",
+    "family": "team_16665237",
+    "method": "extra_trees",
+    "reference_workers": null,
+    "lower_bound": 8,
+    "prediction": 10.673065476190477,
+    "raw_prediction": 10.673065476190477
+  },
+  {
+    "id": "2bb7f6a5d5e6bcc34691",
+    "family": "team_16665237",
+    "method": "extra_trees",
+    "reference_workers": null,
+    "lower_bound": 6,
+    "prediction": 10.302566964285713,
+    "raw_prediction": 10.302566964285713
+  },
+  {
+    "id": "cc07224576b12f17581c",
+    "family": "team_16665237",
+    "method": "geometry_extra",
+    "reference_workers": null,
+    "lower_bound": 8,
+    "prediction": 10.487246945212073,
+    "raw_prediction": 10.487246945212073
+  },
+  {
+    "id": "2bb7f6a5d5e6bcc34691",
+    "family": "team_16665237",
+    "method": "geometry_extra",
+    "reference_workers": null,
+    "lower_bound": 6,
+    "prediction": 11.838488576668656,
+    "raw_prediction": 11.838488576668656
+  },
+  {
+    "id": "cc07224576b12f17581c",
+    "family": "team_16665237",
+    "method": "timing_extra",
+    "reference_workers": null,
+    "lower_bound": 8,
+    "prediction": 10.952299552994589,
+    "raw_prediction": 10.952299552994589
+  },
+  {
+    "id": "2bb7f6a5d5e6bcc34691",
+    "family": "team_16665237",
+    "method": "timing_extra",
+    "reference_workers": null,
+    "lower_bound": 6,
+    "prediction": 11.305542433011066,
+    "raw_prediction": 11.305542433011066
+  },
+  {
+    "id": "cc07224576b12f17581c",
+    "family": "team_16665237",
+    "method": "timing_boost",
+    "reference_workers": null,
+    "lower_bound": 8,
+    "prediction": 10.542640925196304,
+    "raw_prediction": 10.542640925196304
+  },
+  {
+    "id": "2bb7f6a5d5e6bcc34691",
+    "family": "team_16665237",
+    "method": "timing_boost",
+    "reference_workers": null,
+    "lower_bound": 6,
+    "prediction": 11.846095395257917,
+    "raw_prediction": 11.846095395257917
+  },
+  {
+    "id": "cc07224576b12f17581c",
+    "family": "team_16665237",
+    "method": "timing_patterns",
+    "reference_workers": null,
+    "lower_bound": 8,
+    "prediction": 11.079892038951046,
+    "raw_prediction": 11.079892038951046
+  },
+  {
+    "id": "2bb7f6a5d5e6bcc34691",
+    "family": "team_16665237",
+    "method": "timing_patterns",
+    "reference_workers": null,
+    "lower_bound": 6,
+    "prediction": 10.035793395760729,
+    "raw_prediction": 10.035793395760729
+  },
+  {
+    "id": "cc07224576b12f17581c",
+    "family": "team_16665237",
+    "method": "monotone_timing",
+    "reference_workers": null,
+    "lower_bound": 8,
+    "prediction": 10.77718477372977,
+    "raw_prediction": 10.77718477372977
+  },
+  {
+    "id": "2bb7f6a5d5e6bcc34691",
+    "family": "team_16665237",
+    "method": "monotone_timing",
+    "reference_workers": null,
+    "lower_bound": 6,
+    "prediction": 12.356228934485065,
+    "raw_prediction": 12.356228934485065
+  },
+  {
+    "id": "cc07224576b12f17581c",
+    "family": "team_16665237",
+    "method": "cost_direct_extra",
+    "reference_workers": null,
+    "lower_bound": 8,
+    "prediction": 10.779004446640316,
+    "raw_prediction": 10.779004446640316
+  },
+  {
+    "id": "2bb7f6a5d5e6bcc34691",
+    "family": "team_16665237",
+    "method": "cost_direct_extra",
+    "reference_workers": null,
+    "lower_bound": 6,
+    "prediction": 11.733600250687257,
+    "raw_prediction": 11.733600250687257
+  },
+  {
+    "id": "cc07224576b12f17581c",
+    "family": "team_16665237",
+    "method": "cost_root_extra",
+    "reference_workers": null,
+    "lower_bound": 8,
+    "prediction": 10.650889354551229,
+    "raw_prediction": 10.650889354551229
+  },
+  {
+    "id": "2bb7f6a5d5e6bcc34691",
+    "family": "team_16665237",
+    "method": "cost_root_extra",
+    "reference_workers": null,
+    "lower_bound": 6,
+    "prediction": 10.535851730459633,
+    "raw_prediction": 10.535851730459633
+  },
+  {
+    "id": "cc07224576b12f17581c",
+    "family": "team_16665237",
+    "method": "cost_worker_leaf",
+    "reference_workers": null,
+    "lower_bound": 8,
+    "prediction": 10.812500676406925,
+    "raw_prediction": 10.812500676406925
+  },
+  {
+    "id": "2bb7f6a5d5e6bcc34691",
+    "family": "team_16665237",
+    "method": "cost_worker_leaf",
+    "reference_workers": null,
+    "lower_bound": 6,
+    "prediction": 11.450948242710005,
+    "raw_prediction": 11.450948242710005
+  },
+  {
+    "id": "cc07224576b12f17581c",
+    "family": "team_16665237",
+    "method": "original_geometry",
+    "reference_workers": null,
+    "lower_bound": 8,
+    "prediction": 15,
+    "raw_prediction": 15
+  },
+  {
+    "id": "cc07224576b12f17581c",
+    "family": "team_16665237",
+    "method": "original_geometry_with_bound",
+    "reference_workers": null,
+    "lower_bound": 8,
+    "prediction": 15,
+    "raw_prediction": 15
+  },
+  {
+    "id": "2bb7f6a5d5e6bcc34691",
+    "family": "team_16665237",
+    "method": "original_geometry",
+    "reference_workers": null,
+    "lower_bound": 6,
+    "prediction": 14,
+    "raw_prediction": 14
+  },
+  {
+    "id": "2bb7f6a5d5e6bcc34691",
+    "family": "team_16665237",
+    "method": "original_geometry_with_bound",
+    "reference_workers": null,
+    "lower_bound": 6,
+    "prediction": 14,
+    "raw_prediction": 14
+  }
+]

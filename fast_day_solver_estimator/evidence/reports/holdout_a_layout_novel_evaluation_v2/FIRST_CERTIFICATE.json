@@ -1,0 +1,4291 @@
+{
+  "scope": "Post hoc diagnostic of an observable stop-after-first-certificate rule. Not an additional predeclared acceptance gate or an original warm-compiler benchmark.",
+  "timing": "Measured C++ scoring and decisions plus recorded compiler CPU through the first strict success. No reference-best label enters this stopping rule.",
+  "summary": [
+    {
+      "method": "boost/hybrid_cpu",
+      "pools": 46,
+      "certified_pools": 46,
+      "mean_time_to_first_certificate": 1.0179924454565217,
+      "p95_time_to_first_certificate": 3.52032230975,
+      "mean_first_bill": 906.3260869565217,
+      "mean_first_bill_regret": 752.3478260869565,
+      "first_certificate_is_best": 0.5869565217391305
+    },
+    {
+      "method": "boost/hybrid_nominal",
+      "pools": 46,
+      "certified_pools": 46,
+      "mean_time_to_first_certificate": 1.1216756194782607,
+      "p95_time_to_first_certificate": 3.6951248542500004,
+      "mean_first_bill": 6435.5,
+      "mean_first_bill_regret": 6281.521739130435,
+      "first_certificate_is_best": 0.5869565217391305
+    },
+    {
+      "method": "boost/query_nominal",
+      "pools": 46,
+      "certified_pools": 46,
+      "mean_time_to_first_certificate": 4.080430410413043,
+      "p95_time_to_first_certificate": 17.96580226675,
+      "mean_first_bill": 156545.19565217392,
+      "mean_first_bill_regret": 156391.21739130435,
+      "first_certificate_is_best": 0.0
+    },
+    {
+      "method": "cost_direct_extra/around",
+      "pools": 46,
+      "certified_pools": 46,
+      "mean_time_to_first_certificate": 1.0692856064565215,
+      "p95_time_to_first_certificate": 4.6439081235,
+      "mean_first_bill": 176.06521739130434,
+      "mean_first_bill_regret": 22.08695652173913,
+      "first_certificate_is_best": 0.6521739130434783
+    },
+    {
+      "method": "cost_direct_extra/sequential",
+      "pools": 46,
+      "certified_pools": 46,
+      "mean_time_to_first_certificate": 37.89700443982608,
+      "p95_time_to_first_certificate": 60.86820201450001,
+      "mean_first_bill": 1328712.2608695652,
+      "mean_first_bill_regret": 1328558.2826086956,
+      "first_certificate_is_best": 0.0
+    },
+    {
+      "method": "logistic/hybrid_cpu",
+      "pools": 46,
+      "certified_pools": 46,
+      "mean_time_to_first_certificate": 1.018788304152174,
+      "p95_time_to_first_certificate": 3.5201414072499997,
+      "mean_first_bill": 668.3695652173913,
+      "mean_first_bill_regret": 514.3913043478261,
+      "first_certificate_is_best": 0.5869565217391305
+    },
+    {
+      "method": "original_flat_10/sequential",
+      "pools": 46,
+      "certified_pools": 46,
+      "mean_time_to_first_certificate": 46.15945234236956,
+      "p95_time_to_first_certificate": 137.04818224974997,
+      "mean_first_bill": 1452926.0217391304,
+      "mean_first_bill_regret": 1452772.043478261,
+      "first_certificate_is_best": 0.0
+    },
+    {
+      "method": "original_geometry/around",
+      "pools": 46,
+      "certified_pools": 46,
+      "mean_time_to_first_certificate": 3.2583593598695653,
+      "p95_time_to_first_certificate": 1.9197405725,
+      "mean_first_bill": 1490.4782608695652,
+      "mean_first_bill_regret": 1336.5,
+      "first_certificate_is_best": 0.0
+    },
+    {
+      "method": "original_geometry/sequential",
+      "pools": 46,
+      "certified_pools": 46,
+      "mean_time_to_first_certificate": 38.61690244178261,
+      "p95_time_to_first_certificate": 59.11722985475001,
+      "mean_first_bill": 1478454.8695652173,
+      "mean_first_bill_regret": 1478300.891304348,
+      "first_certificate_is_best": 0.0
+    }
+  ],
+  "comparisons": [
+    {
+      "before": "original_geometry/around",
+      "after": "cost_direct_extra/around",
+      "common_pools": 46,
+      "mean_seconds_saved": 2.1890737534130436,
+      "saved_seconds_family_95": [
+        -0.7964482780382389,
+        7.628446939173911
+      ],
+      "mean_bill_saved": 1314.4130434782608,
+      "saved_bill_family_95": [
+        855.7027659574468,
+        1882.1914893617022
+      ]
+    },
+    {
+      "before": "original_geometry/sequential",
+      "after": "cost_direct_extra/around",
+      "common_pools": 46,
+      "mean_seconds_saved": 37.54761683532609,
+      "saved_seconds_family_95": [
+        32.838699059854086,
+        43.116713598059306
+      ],
+      "mean_bill_saved": 1478278.8043478262,
+      "saved_bill_family_95": [
+        1047751.0836406619,
+        1994748.3354995374
+      ]
+    },
+    {
+      "before": "original_flat_10/sequential",
+      "after": "cost_direct_extra/around",
+      "common_pools": 46,
+      "mean_seconds_saved": 45.090166735913044,
+      "saved_seconds_family_95": [
+        38.426965974703336,
+        52.06569143996057
+      ],
+      "mean_bill_saved": 1452749.956521739,
+      "saved_bill_family_95": [
+        1056291.2188405797,
+        1924414.3876965772
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "pool": "00d16dfdaa82a898ef51",
+      "family": "team_16681125",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 45.886641732,
+      "first_certificate_bill": 121392.0,
+      "reference_best_bill": 7.0,
+      "regret": 121385.0,
+      "calls_until_certificate": 16
+    },
+    {
+      "pool": "00d16dfdaa82a898ef51",
+      "family": "team_16681125",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 46.097768615,
+      "first_certificate_bill": 121392.0,
+      "reference_best_bill": 7.0,
+      "regret": 121385.0,
+      "calls_until_certificate": 16
+    },
+    {
+      "pool": "00d16dfdaa82a898ef51",
+      "family": "team_16681125",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.16024291200000002,
+      "first_certificate_bill": 12.0,
+      "reference_best_bill": 7.0,
+      "regret": 5.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "00d16dfdaa82a898ef51",
+      "family": "team_16681125",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.40657000600000004,
+      "first_certificate_bill": 7.0,
+      "reference_best_bill": 7.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "00d16dfdaa82a898ef51",
+      "family": "team_16681125",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 46.097805785000006,
+      "first_certificate_bill": 121392.0,
+      "reference_best_bill": 7.0,
+      "regret": 121385.0,
+      "calls_until_certificate": 16
+    },
+    {
+      "pool": "00d16dfdaa82a898ef51",
+      "family": "team_16681125",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.406517539,
+      "first_certificate_bill": 7.0,
+      "reference_best_bill": 7.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "00d16dfdaa82a898ef51",
+      "family": "team_16681125",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.406508757,
+      "first_certificate_bill": 7.0,
+      "reference_best_bill": 7.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "00d16dfdaa82a898ef51",
+      "family": "team_16681125",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.406512516,
+      "first_certificate_bill": 7.0,
+      "reference_best_bill": 7.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "00d16dfdaa82a898ef51",
+      "family": "team_16681125",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.2414293,
+      "first_certificate_bill": 88.0,
+      "reference_best_bill": 7.0,
+      "regret": 81.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "040d81a560a8dc6c60dc",
+      "family": "team_16665237",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 22.330636054,
+      "first_certificate_bill": 5702886.0,
+      "reference_best_bill": 20.0,
+      "regret": 5702866.0,
+      "calls_until_certificate": 8
+    },
+    {
+      "pool": "040d81a560a8dc6c60dc",
+      "family": "team_16665237",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 22.330630903,
+      "first_certificate_bill": 5702886.0,
+      "reference_best_bill": 20.0,
+      "regret": 5702866.0,
+      "calls_until_certificate": 8
+    },
+    {
+      "pool": "040d81a560a8dc6c60dc",
+      "family": "team_16665237",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.430877275,
+      "first_certificate_bill": 33.0,
+      "reference_best_bill": 20.0,
+      "regret": 13.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "040d81a560a8dc6c60dc",
+      "family": "team_16665237",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.430923241,
+      "first_certificate_bill": 33.0,
+      "reference_best_bill": 20.0,
+      "regret": 13.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "040d81a560a8dc6c60dc",
+      "family": "team_16665237",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 22.33064301,
+      "first_certificate_bill": 5702886.0,
+      "reference_best_bill": 20.0,
+      "regret": 5702866.0,
+      "calls_until_certificate": 8
+    },
+    {
+      "pool": "040d81a560a8dc6c60dc",
+      "family": "team_16665237",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.43089464699999996,
+      "first_certificate_bill": 33.0,
+      "reference_best_bill": 20.0,
+      "regret": 13.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "040d81a560a8dc6c60dc",
+      "family": "team_16665237",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.430909571,
+      "first_certificate_bill": 33.0,
+      "reference_best_bill": 20.0,
+      "regret": 13.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "040d81a560a8dc6c60dc",
+      "family": "team_16665237",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.430851075,
+      "first_certificate_bill": 33.0,
+      "reference_best_bill": 20.0,
+      "regret": 13.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "040d81a560a8dc6c60dc",
+      "family": "team_16665237",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.854794225,
+      "first_certificate_bill": 17710.0,
+      "reference_best_bill": 20.0,
+      "regret": 17690.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "095fa630934c9fd2c99e",
+      "family": "team_16663403",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 31.725465576,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 232.0,
+      "regret": 1346036.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "095fa630934c9fd2c99e",
+      "family": "team_16663403",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 31.468672406,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 232.0,
+      "regret": 1346036.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "095fa630934c9fd2c99e",
+      "family": "team_16663403",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.519268921,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 232.0,
+      "regret": 1364.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "095fa630934c9fd2c99e",
+      "family": "team_16663403",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 2.036716151,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "095fa630934c9fd2c99e",
+      "family": "team_16663403",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 51.39373040600001,
+      "first_certificate_bill": 75024.0,
+      "reference_best_bill": 232.0,
+      "regret": 74792.0,
+      "calls_until_certificate": 17
+    },
+    {
+      "pool": "095fa630934c9fd2c99e",
+      "family": "team_16663403",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 2.0367593889999998,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "095fa630934c9fd2c99e",
+      "family": "team_16663403",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 2.036686614,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "095fa630934c9fd2c99e",
+      "family": "team_16663403",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 2.036688465,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "095fa630934c9fd2c99e",
+      "family": "team_16663403",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.985465794,
+      "first_certificate_bill": 196417.0,
+      "reference_best_bill": 232.0,
+      "regret": 196185.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "16918ef721d10477ca74",
+      "family": "team_16801171",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 37.570050431999995,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 232.0,
+      "regret": 513996.0,
+      "calls_until_certificate": 13
+    },
+    {
+      "pool": "16918ef721d10477ca74",
+      "family": "team_16801171",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 37.57006429399999,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 232.0,
+      "regret": 513996.0,
+      "calls_until_certificate": 13
+    },
+    {
+      "pool": "16918ef721d10477ca74",
+      "family": "team_16801171",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.837478026,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 232.0,
+      "regret": 1364.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "16918ef721d10477ca74",
+      "family": "team_16801171",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.669822834,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "16918ef721d10477ca74",
+      "family": "team_16801171",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 49.77152476,
+      "first_certificate_bill": 75024.0,
+      "reference_best_bill": 232.0,
+      "regret": 74792.0,
+      "calls_until_certificate": 17
+    },
+    {
+      "pool": "16918ef721d10477ca74",
+      "family": "team_16801171",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.669804831,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "16918ef721d10477ca74",
+      "family": "team_16801171",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.669791489,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "16918ef721d10477ca74",
+      "family": "team_16801171",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.669785991,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "16918ef721d10477ca74",
+      "family": "team_16801171",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 9.697273842999998,
+      "first_certificate_bill": 10945.0,
+      "reference_best_bill": 232.0,
+      "regret": 10713.0,
+      "calls_until_certificate": 4
+    },
+    {
+      "pool": "17ed1dcefa9b34293a8a",
+      "family": "team_16665237",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 37.212600124000005,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 143.0,
+      "regret": 514085.0,
+      "calls_until_certificate": 13
+    },
+    {
+      "pool": "17ed1dcefa9b34293a8a",
+      "family": "team_16665237",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 37.849023076,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 143.0,
+      "regret": 514085.0,
+      "calls_until_certificate": 13
+    },
+    {
+      "pool": "17ed1dcefa9b34293a8a",
+      "family": "team_16665237",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.7259523990000001,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 143.0,
+      "regret": 1453.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "17ed1dcefa9b34293a8a",
+      "family": "team_16665237",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 1.118937412,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "17ed1dcefa9b34293a8a",
+      "family": "team_16665237",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 37.84904948900001,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 143.0,
+      "regret": 514085.0,
+      "calls_until_certificate": 13
+    },
+    {
+      "pool": "17ed1dcefa9b34293a8a",
+      "family": "team_16665237",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 1.118901346,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "17ed1dcefa9b34293a8a",
+      "family": "team_16665237",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 1.118896659,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "17ed1dcefa9b34293a8a",
+      "family": "team_16665237",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 1.118892506,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "17ed1dcefa9b34293a8a",
+      "family": "team_16665237",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.688175129,
+      "first_certificate_bill": 17710.0,
+      "reference_best_bill": 143.0,
+      "regret": 17567.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "1cad1d54a65037c01084",
+      "family": "team_16681125",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 26.427001718000003,
+      "first_certificate_bill": 3524577.0,
+      "reference_best_bill": 143.0,
+      "regret": 3524434.0,
+      "calls_until_certificate": 9
+    },
+    {
+      "pool": "1cad1d54a65037c01084",
+      "family": "team_16681125",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 26.42699882900001,
+      "first_certificate_bill": 3524577.0,
+      "reference_best_bill": 143.0,
+      "regret": 3524434.0,
+      "calls_until_certificate": 9
+    },
+    {
+      "pool": "1cad1d54a65037c01084",
+      "family": "team_16681125",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.268081698,
+      "first_certificate_bill": 4180.0,
+      "reference_best_bill": 143.0,
+      "regret": 4037.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "1cad1d54a65037c01084",
+      "family": "team_16681125",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.623309276,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "1cad1d54a65037c01084",
+      "family": "team_16681125",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 26.427034857000006,
+      "first_certificate_bill": 3524577.0,
+      "reference_best_bill": 143.0,
+      "regret": 3524434.0,
+      "calls_until_certificate": 9
+    },
+    {
+      "pool": "1cad1d54a65037c01084",
+      "family": "team_16681125",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.6232942,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "1cad1d54a65037c01084",
+      "family": "team_16681125",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.623295086,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "1cad1d54a65037c01084",
+      "family": "team_16681125",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.6234351929999999,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "1cad1d54a65037c01084",
+      "family": "team_16681125",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.442260027,
+      "first_certificate_bill": 28656.0,
+      "reference_best_bill": 143.0,
+      "regret": 28513.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "1e1c310ffc6cb90c5f3c",
+      "family": "team_16645426",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 135.62707494100002,
+      "first_certificate_bill": 5702886.0,
+      "reference_best_bill": 33.0,
+      "regret": 5702853.0,
+      "calls_until_certificate": 44
+    },
+    {
+      "pool": "1e1c310ffc6cb90c5f3c",
+      "family": "team_16645426",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 22.073722833999994,
+      "first_certificate_bill": 5702886.0,
+      "reference_best_bill": 33.0,
+      "regret": 5702853.0,
+      "calls_until_certificate": 8
+    },
+    {
+      "pool": "1e1c310ffc6cb90c5f3c",
+      "family": "team_16645426",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.05878840999999997,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 33.0,
+      "regret": 110.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "1e1c310ffc6cb90c5f3c",
+      "family": "team_16645426",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.079458538,
+      "first_certificate_bill": 54.0,
+      "reference_best_bill": 33.0,
+      "regret": 21.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "1e1c310ffc6cb90c5f3c",
+      "family": "team_16645426",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 22.073785631999993,
+      "first_certificate_bill": 5702886.0,
+      "reference_best_bill": 33.0,
+      "regret": 5702853.0,
+      "calls_until_certificate": 8
+    },
+    {
+      "pool": "1e1c310ffc6cb90c5f3c",
+      "family": "team_16645426",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.07942318400000001,
+      "first_certificate_bill": 54.0,
+      "reference_best_bill": 33.0,
+      "regret": 21.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "1e1c310ffc6cb90c5f3c",
+      "family": "team_16645426",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.07941268699999998,
+      "first_certificate_bill": 54.0,
+      "reference_best_bill": 33.0,
+      "regret": 21.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "1e1c310ffc6cb90c5f3c",
+      "family": "team_16645426",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.07941473700000001,
+      "first_certificate_bill": 54.0,
+      "reference_best_bill": 33.0,
+      "regret": 21.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "1e1c310ffc6cb90c5f3c",
+      "family": "team_16645426",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.14056873299999997,
+      "first_certificate_bill": 10945.0,
+      "reference_best_bill": 33.0,
+      "regret": 10912.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "2010baf684dc7f726f06",
+      "family": "team_16681125",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 34.241840855,
+      "first_certificate_bill": 832039.0,
+      "reference_best_bill": 376.0,
+      "regret": 831663.0,
+      "calls_until_certificate": 12
+    },
+    {
+      "pool": "2010baf684dc7f726f06",
+      "family": "team_16681125",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 34.24014602,
+      "first_certificate_bill": 832039.0,
+      "reference_best_bill": 376.0,
+      "regret": 831663.0,
+      "calls_until_certificate": 12
+    },
+    {
+      "pool": "2010baf684dc7f726f06",
+      "family": "team_16681125",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.4116372669999999,
+      "first_certificate_bill": 986.0,
+      "reference_best_bill": 376.0,
+      "regret": 610.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "2010baf684dc7f726f06",
+      "family": "team_16681125",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 4.914650337,
+      "first_certificate_bill": 376.0,
+      "reference_best_bill": 376.0,
+      "regret": 0.0,
+      "calls_until_certificate": 2
+    },
+    {
+      "pool": "2010baf684dc7f726f06",
+      "family": "team_16681125",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 34.498516759,
+      "first_certificate_bill": 832039.0,
+      "reference_best_bill": 376.0,
+      "regret": 831663.0,
+      "calls_until_certificate": 12
+    },
+    {
+      "pool": "2010baf684dc7f726f06",
+      "family": "team_16681125",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 9.485600551,
+      "first_certificate_bill": 196417.0,
+      "reference_best_bill": 376.0,
+      "regret": 196041.0,
+      "calls_until_certificate": 3
+    },
+    {
+      "pool": "2010baf684dc7f726f06",
+      "family": "team_16681125",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 5.055321396,
+      "first_certificate_bill": 28656.0,
+      "reference_best_bill": 376.0,
+      "regret": 28280.0,
+      "calls_until_certificate": 2
+    },
+    {
+      "pool": "2010baf684dc7f726f06",
+      "family": "team_16681125",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 5.09284877,
+      "first_certificate_bill": 17710.0,
+      "reference_best_bill": 376.0,
+      "regret": 17334.0,
+      "calls_until_certificate": 2
+    },
+    {
+      "pool": "2010baf684dc7f726f06",
+      "family": "team_16681125",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 5.121061739,
+      "first_certificate_bill": 196417.0,
+      "reference_best_bill": 376.0,
+      "regret": 196041.0,
+      "calls_until_certificate": 2
+    },
+    {
+      "pool": "26427d4b55bb4d0a980f",
+      "family": "team_16681125",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 35.296082987,
+      "first_certificate_bill": 832039.0,
+      "reference_best_bill": 232.0,
+      "regret": 831807.0,
+      "calls_until_certificate": 12
+    },
+    {
+      "pool": "26427d4b55bb4d0a980f",
+      "family": "team_16681125",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 42.775354201,
+      "first_certificate_bill": 317810.0,
+      "reference_best_bill": 232.0,
+      "regret": 317578.0,
+      "calls_until_certificate": 14
+    },
+    {
+      "pool": "26427d4b55bb4d0a980f",
+      "family": "team_16681125",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.38377481,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 232.0,
+      "regret": 1364.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "26427d4b55bb4d0a980f",
+      "family": "team_16681125",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.357812154,
+      "first_certificate_bill": 376.0,
+      "reference_best_bill": 232.0,
+      "regret": 144.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "26427d4b55bb4d0a980f",
+      "family": "team_16681125",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 42.775358711,
+      "first_certificate_bill": 317810.0,
+      "reference_best_bill": 232.0,
+      "regret": 317578.0,
+      "calls_until_certificate": 14
+    },
+    {
+      "pool": "26427d4b55bb4d0a980f",
+      "family": "team_16681125",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.35781547599999997,
+      "first_certificate_bill": 376.0,
+      "reference_best_bill": 232.0,
+      "regret": 144.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "26427d4b55bb4d0a980f",
+      "family": "team_16681125",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.35779218199999996,
+      "first_certificate_bill": 376.0,
+      "reference_best_bill": 232.0,
+      "regret": 144.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "26427d4b55bb4d0a980f",
+      "family": "team_16681125",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.357793202,
+      "first_certificate_bill": 376.0,
+      "reference_best_bill": 232.0,
+      "regret": 144.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "26427d4b55bb4d0a980f",
+      "family": "team_16681125",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.862487788,
+      "first_certificate_bill": 46367.0,
+      "reference_best_bill": 232.0,
+      "regret": 46135.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "27aa7afaef6cce8381cc",
+      "family": "team_16665237",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 52.057981502,
+      "first_certificate_bill": 75024.0,
+      "reference_best_bill": 232.0,
+      "regret": 74792.0,
+      "calls_until_certificate": 17
+    },
+    {
+      "pool": "27aa7afaef6cce8381cc",
+      "family": "team_16665237",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 52.057983512,
+      "first_certificate_bill": 75024.0,
+      "reference_best_bill": 232.0,
+      "regret": 74792.0,
+      "calls_until_certificate": 17
+    },
+    {
+      "pool": "27aa7afaef6cce8381cc",
+      "family": "team_16665237",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.721353162,
+      "first_certificate_bill": 609.0,
+      "reference_best_bill": 232.0,
+      "regret": 377.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "27aa7afaef6cce8381cc",
+      "family": "team_16665237",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.6168514230000001,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "27aa7afaef6cce8381cc",
+      "family": "team_16665237",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 52.057995333,
+      "first_certificate_bill": 75024.0,
+      "reference_best_bill": 232.0,
+      "regret": 74792.0,
+      "calls_until_certificate": 17
+    },
+    {
+      "pool": "27aa7afaef6cce8381cc",
+      "family": "team_16665237",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.6168403,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "27aa7afaef6cce8381cc",
+      "family": "team_16665237",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.6168418710000001,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "27aa7afaef6cce8381cc",
+      "family": "team_16665237",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.616841485,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "27aa7afaef6cce8381cc",
+      "family": "team_16665237",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 20.721978408000002,
+      "first_certificate_bill": 75024.0,
+      "reference_best_bill": 232.0,
+      "regret": 74792.0,
+      "calls_until_certificate": 7
+    },
+    {
+      "pool": "29d0210f02f27efdfb88",
+      "family": "team_16795448",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 29.377822549999994,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 143.0,
+      "regret": 2178165.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "29d0210f02f27efdfb88",
+      "family": "team_16795448",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 26.325956696,
+      "first_certificate_bill": 3524577.0,
+      "reference_best_bill": 143.0,
+      "regret": 3524434.0,
+      "calls_until_certificate": 9
+    },
+    {
+      "pool": "29d0210f02f27efdfb88",
+      "family": "team_16795448",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.18394001499999996,
+      "first_certificate_bill": 2583.0,
+      "reference_best_bill": 143.0,
+      "regret": 2440.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "29d0210f02f27efdfb88",
+      "family": "team_16795448",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.15166946,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "29d0210f02f27efdfb88",
+      "family": "team_16795448",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 28.308792764999996,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 143.0,
+      "regret": 2178165.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "29d0210f02f27efdfb88",
+      "family": "team_16795448",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.15166300400000002,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "29d0210f02f27efdfb88",
+      "family": "team_16795448",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.15165432800000003,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "29d0210f02f27efdfb88",
+      "family": "team_16795448",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.15164634400000002,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "29d0210f02f27efdfb88",
+      "family": "team_16795448",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.707000891,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 143.0,
+      "regret": 1346125.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "2bbf0e0d46022493edec",
+      "family": "team_16734914",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 28.061527334999994,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 232.0,
+      "regret": 2178076.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "2bbf0e0d46022493edec",
+      "family": "team_16734914",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 30.942785016,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 232.0,
+      "regret": 1346036.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "2bbf0e0d46022493edec",
+      "family": "team_16734914",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.41044238,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 232.0,
+      "regret": 1364.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "2bbf0e0d46022493edec",
+      "family": "team_16734914",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 1.887606553,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "2bbf0e0d46022493edec",
+      "family": "team_16734914",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 48.163732577000005,
+      "first_certificate_bill": 121392.0,
+      "reference_best_bill": 232.0,
+      "regret": 121160.0,
+      "calls_until_certificate": 16
+    },
+    {
+      "pool": "2bbf0e0d46022493edec",
+      "family": "team_16734914",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 1.887608578,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "2bbf0e0d46022493edec",
+      "family": "team_16734914",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 1.887589518,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "2bbf0e0d46022493edec",
+      "family": "team_16734914",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 1.887582949,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "2bbf0e0d46022493edec",
+      "family": "team_16734914",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.746530488,
+      "first_certificate_bill": 832039.0,
+      "reference_best_bill": 232.0,
+      "regret": 831807.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "3fd3fcf04fe8544630e1",
+      "family": "team_16795448",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 39.152102469999996,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 232.0,
+      "regret": 513996.0,
+      "calls_until_certificate": 13
+    },
+    {
+      "pool": "3fd3fcf04fe8544630e1",
+      "family": "team_16795448",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 30.988526863,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 232.0,
+      "regret": 1346036.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "3fd3fcf04fe8544630e1",
+      "family": "team_16795448",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.30684595800000003,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 232.0,
+      "regret": 1364.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "3fd3fcf04fe8544630e1",
+      "family": "team_16795448",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.7243332549999999,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "3fd3fcf04fe8544630e1",
+      "family": "team_16795448",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 62.00372596700001,
+      "first_certificate_bill": 10945.0,
+      "reference_best_bill": 232.0,
+      "regret": 10713.0,
+      "calls_until_certificate": 21
+    },
+    {
+      "pool": "3fd3fcf04fe8544630e1",
+      "family": "team_16795448",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.724326951,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "3fd3fcf04fe8544630e1",
+      "family": "team_16795448",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.724314936,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "3fd3fcf04fe8544630e1",
+      "family": "team_16795448",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.724307695,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "3fd3fcf04fe8544630e1",
+      "family": "team_16795448",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.9887196739999999,
+      "first_certificate_bill": 317810.0,
+      "reference_best_bill": 232.0,
+      "regret": 317578.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "4003abd9e7439bdb42c5",
+      "family": "team_16645426",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 51.104488785000015,
+      "first_certificate_bill": 75024.0,
+      "reference_best_bill": 143.0,
+      "regret": 74881.0,
+      "calls_until_certificate": 17
+    },
+    {
+      "pool": "4003abd9e7439bdb42c5",
+      "family": "team_16645426",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 31.212321427000006,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 143.0,
+      "regret": 1346125.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "4003abd9e7439bdb42c5",
+      "family": "team_16645426",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.32593376200000007,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 143.0,
+      "regret": 1453.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "4003abd9e7439bdb42c5",
+      "family": "team_16645426",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.46284658799999995,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 143.0,
+      "regret": 89.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "4003abd9e7439bdb42c5",
+      "family": "team_16645426",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 51.104526619,
+      "first_certificate_bill": 75024.0,
+      "reference_best_bill": 143.0,
+      "regret": 74881.0,
+      "calls_until_certificate": 17
+    },
+    {
+      "pool": "4003abd9e7439bdb42c5",
+      "family": "team_16645426",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.462864314,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 143.0,
+      "regret": 89.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "4003abd9e7439bdb42c5",
+      "family": "team_16645426",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.462869925,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 143.0,
+      "regret": 89.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "4003abd9e7439bdb42c5",
+      "family": "team_16645426",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.462835495,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 143.0,
+      "regret": 89.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "4003abd9e7439bdb42c5",
+      "family": "team_16645426",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.38835192500000004,
+      "first_certificate_bill": 4180.0,
+      "reference_best_bill": 143.0,
+      "regret": 4037.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "410bf46aee4dfab32fe6",
+      "family": "team_16665237",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 38.983729703,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 88.0,
+      "regret": 514140.0,
+      "calls_until_certificate": 13
+    },
+    {
+      "pool": "410bf46aee4dfab32fe6",
+      "family": "team_16665237",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 38.983759897999995,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 88.0,
+      "regret": 514140.0,
+      "calls_until_certificate": 13
+    },
+    {
+      "pool": "410bf46aee4dfab32fe6",
+      "family": "team_16665237",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 1.9296693440000001,
+      "first_certificate_bill": 609.0,
+      "reference_best_bill": 88.0,
+      "regret": 521.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "410bf46aee4dfab32fe6",
+      "family": "team_16665237",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.40692231900000003,
+      "first_certificate_bill": 88.0,
+      "reference_best_bill": 88.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "410bf46aee4dfab32fe6",
+      "family": "team_16665237",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 38.983769875,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 88.0,
+      "regret": 514140.0,
+      "calls_until_certificate": 13
+    },
+    {
+      "pool": "410bf46aee4dfab32fe6",
+      "family": "team_16665237",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.40690524800000005,
+      "first_certificate_bill": 88.0,
+      "reference_best_bill": 88.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "410bf46aee4dfab32fe6",
+      "family": "team_16665237",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.40689221600000003,
+      "first_certificate_bill": 88.0,
+      "reference_best_bill": 88.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "410bf46aee4dfab32fe6",
+      "family": "team_16665237",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.406922489,
+      "first_certificate_bill": 88.0,
+      "reference_best_bill": 88.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "410bf46aee4dfab32fe6",
+      "family": "team_16665237",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.993347558,
+      "first_certificate_bill": 75024.0,
+      "reference_best_bill": 88.0,
+      "regret": 74936.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "46a3067283db4e9b9b6e",
+      "family": "team_16734914",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 43.024486522000004,
+      "first_certificate_bill": 196417.0,
+      "reference_best_bill": 88.0,
+      "regret": 196329.0,
+      "calls_until_certificate": 15
+    },
+    {
+      "pool": "46a3067283db4e9b9b6e",
+      "family": "team_16734914",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 37.000599414,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 88.0,
+      "regret": 514140.0,
+      "calls_until_certificate": 13
+    },
+    {
+      "pool": "46a3067283db4e9b9b6e",
+      "family": "team_16734914",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.384427645,
+      "first_certificate_bill": 609.0,
+      "reference_best_bill": 88.0,
+      "regret": 521.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "46a3067283db4e9b9b6e",
+      "family": "team_16734914",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.267927474,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 88.0,
+      "regret": 55.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "46a3067283db4e9b9b6e",
+      "family": "team_16734914",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 43.024530902999985,
+      "first_certificate_bill": 196417.0,
+      "reference_best_bill": 88.0,
+      "regret": 196329.0,
+      "calls_until_certificate": 15
+    },
+    {
+      "pool": "46a3067283db4e9b9b6e",
+      "family": "team_16734914",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.26791059,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 88.0,
+      "regret": 55.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "46a3067283db4e9b9b6e",
+      "family": "team_16734914",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.267910503,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 88.0,
+      "regret": 55.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "46a3067283db4e9b9b6e",
+      "family": "team_16734914",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.267906301,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 88.0,
+      "regret": 55.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "46a3067283db4e9b9b6e",
+      "family": "team_16734914",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.9091487219999999,
+      "first_certificate_bill": 46367.0,
+      "reference_best_bill": 88.0,
+      "regret": 46279.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "4dc3f6e5467b9e8f39e0",
+      "family": "team_16665237",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 32.200523491,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 12.0,
+      "regret": 1346256.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "4dc3f6e5467b9e8f39e0",
+      "family": "team_16665237",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 29.335504075000003,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 12.0,
+      "regret": 2178296.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "4dc3f6e5467b9e8f39e0",
+      "family": "team_16665237",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.077939038,
+      "first_certificate_bill": 33.0,
+      "reference_best_bill": 12.0,
+      "regret": 21.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "4dc3f6e5467b9e8f39e0",
+      "family": "team_16665237",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.10154715199999996,
+      "first_certificate_bill": 20.0,
+      "reference_best_bill": 12.0,
+      "regret": 8.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "4dc3f6e5467b9e8f39e0",
+      "family": "team_16665237",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 36.908448762999996,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 12.0,
+      "regret": 514216.0,
+      "calls_until_certificate": 13
+    },
+    {
+      "pool": "4dc3f6e5467b9e8f39e0",
+      "family": "team_16665237",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.10153865399999999,
+      "first_certificate_bill": 20.0,
+      "reference_best_bill": 12.0,
+      "regret": 8.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "4dc3f6e5467b9e8f39e0",
+      "family": "team_16665237",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.10153490899999999,
+      "first_certificate_bill": 20.0,
+      "reference_best_bill": 12.0,
+      "regret": 8.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "4dc3f6e5467b9e8f39e0",
+      "family": "team_16665237",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.10153906,
+      "first_certificate_bill": 20.0,
+      "reference_best_bill": 12.0,
+      "regret": 8.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "4dc3f6e5467b9e8f39e0",
+      "family": "team_16665237",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.11573704499999998,
+      "first_certificate_bill": 376.0,
+      "reference_best_bill": 12.0,
+      "regret": 364.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "4f35ac4f5d36fef51d8e",
+      "family": "team_16736427",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 143.12314682900006,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 54.0,
+      "regret": 2178254.0,
+      "calls_until_certificate": 46
+    },
+    {
+      "pool": "4f35ac4f5d36fef51d8e",
+      "family": "team_16736427",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 28.055219877,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 54.0,
+      "regret": 2178254.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "4f35ac4f5d36fef51d8e",
+      "family": "team_16736427",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.23054383499999997,
+      "first_certificate_bill": 376.0,
+      "reference_best_bill": 54.0,
+      "regret": 322.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "4f35ac4f5d36fef51d8e",
+      "family": "team_16736427",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.28397799500000004,
+      "first_certificate_bill": 88.0,
+      "reference_best_bill": 54.0,
+      "regret": 34.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "4f35ac4f5d36fef51d8e",
+      "family": "team_16736427",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 28.055262611000003,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 54.0,
+      "regret": 2178254.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "4f35ac4f5d36fef51d8e",
+      "family": "team_16736427",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.283957991,
+      "first_certificate_bill": 88.0,
+      "reference_best_bill": 54.0,
+      "regret": 34.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "4f35ac4f5d36fef51d8e",
+      "family": "team_16736427",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.28395610200000004,
+      "first_certificate_bill": 88.0,
+      "reference_best_bill": 54.0,
+      "regret": 34.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "4f35ac4f5d36fef51d8e",
+      "family": "team_16736427",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.283955905,
+      "first_certificate_bill": 88.0,
+      "reference_best_bill": 54.0,
+      "regret": 34.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "4f35ac4f5d36fef51d8e",
+      "family": "team_16736427",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.4877015,
+      "first_certificate_bill": 609.0,
+      "reference_best_bill": 54.0,
+      "regret": 555.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "5143c895a51898ac3b50",
+      "family": "team_16736427",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 28.046731582000003,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 143.0,
+      "regret": 2178165.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "5143c895a51898ac3b50",
+      "family": "team_16736427",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 140.205831987,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 143.0,
+      "regret": 2178165.0,
+      "calls_until_certificate": 44
+    },
+    {
+      "pool": "5143c895a51898ac3b50",
+      "family": "team_16736427",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 106.32697682199999,
+      "first_certificate_bill": 2583.0,
+      "reference_best_bill": 143.0,
+      "regret": 2440.0,
+      "calls_until_certificate": 33
+    },
+    {
+      "pool": "5143c895a51898ac3b50",
+      "family": "team_16736427",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.569136867,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "5143c895a51898ac3b50",
+      "family": "team_16736427",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 28.046766542000004,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 143.0,
+      "regret": 2178165.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "5143c895a51898ac3b50",
+      "family": "team_16736427",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.569111559,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "5143c895a51898ac3b50",
+      "family": "team_16736427",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.569093006,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "5143c895a51898ac3b50",
+      "family": "team_16736427",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.5690871679999999,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "5143c895a51898ac3b50",
+      "family": "team_16736427",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.289943366,
+      "first_certificate_bill": 2583.0,
+      "reference_best_bill": 143.0,
+      "regret": 2440.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "60ba8364db4d9034a9fd",
+      "family": "team_16801171",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 137.52188468599994,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 143.0,
+      "regret": 2178165.0,
+      "calls_until_certificate": 44
+    },
+    {
+      "pool": "60ba8364db4d9034a9fd",
+      "family": "team_16801171",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 30.831190358999994,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 143.0,
+      "regret": 1346125.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "60ba8364db4d9034a9fd",
+      "family": "team_16801171",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.28811272699999996,
+      "first_certificate_bill": 986.0,
+      "reference_best_bill": 143.0,
+      "regret": 843.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "60ba8364db4d9034a9fd",
+      "family": "team_16801171",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 2.8965800159999997,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "60ba8364db4d9034a9fd",
+      "family": "team_16801171",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 30.831433996999994,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 143.0,
+      "regret": 1346125.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "60ba8364db4d9034a9fd",
+      "family": "team_16801171",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 2.8965511889999997,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "60ba8364db4d9034a9fd",
+      "family": "team_16801171",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 2.89654352,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "60ba8364db4d9034a9fd",
+      "family": "team_16801171",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 2.896503668,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "60ba8364db4d9034a9fd",
+      "family": "team_16801171",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.317082104,
+      "first_certificate_bill": 2583.0,
+      "reference_best_bill": 143.0,
+      "regret": 2440.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "614368270430409639ec",
+      "family": "team_16795448",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 28.202753620000003,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 376.0,
+      "regret": 2177932.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "614368270430409639ec",
+      "family": "team_16795448",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 58.90017079499998,
+      "first_certificate_bill": 17710.0,
+      "reference_best_bill": 376.0,
+      "regret": 17334.0,
+      "calls_until_certificate": 20
+    },
+    {
+      "pool": "614368270430409639ec",
+      "family": "team_16795448",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 1.18064707,
+      "first_certificate_bill": 2583.0,
+      "reference_best_bill": 376.0,
+      "regret": 2207.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "614368270430409639ec",
+      "family": "team_16795448",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 5.771238524,
+      "first_certificate_bill": 376.0,
+      "reference_best_bill": 376.0,
+      "regret": 0.0,
+      "calls_until_certificate": 2
+    },
+    {
+      "pool": "614368270430409639ec",
+      "family": "team_16795448",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 54.396519211999994,
+      "first_certificate_bill": 46367.0,
+      "reference_best_bill": 376.0,
+      "regret": 45991.0,
+      "calls_until_certificate": 18
+    },
+    {
+      "pool": "614368270430409639ec",
+      "family": "team_16795448",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 5.829375773,
+      "first_certificate_bill": 6764.0,
+      "reference_best_bill": 376.0,
+      "regret": 6388.0,
+      "calls_until_certificate": 2
+    },
+    {
+      "pool": "614368270430409639ec",
+      "family": "team_16795448",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 5.875613845999999,
+      "first_certificate_bill": 4180.0,
+      "reference_best_bill": 376.0,
+      "regret": 3804.0,
+      "calls_until_certificate": 2
+    },
+    {
+      "pool": "614368270430409639ec",
+      "family": "team_16795448",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 5.875178324999999,
+      "first_certificate_bill": 4180.0,
+      "reference_best_bill": 376.0,
+      "regret": 3804.0,
+      "calls_until_certificate": 2
+    },
+    {
+      "pool": "614368270430409639ec",
+      "family": "team_16795448",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.653310492,
+      "first_certificate_bill": 6764.0,
+      "reference_best_bill": 376.0,
+      "regret": 6388.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "6490d4a08fc9b5f8d68b",
+      "family": "team_16645426",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 22.224670272000004,
+      "first_certificate_bill": 5702886.0,
+      "reference_best_bill": 143.0,
+      "regret": 5702743.0,
+      "calls_until_certificate": 8
+    },
+    {
+      "pool": "6490d4a08fc9b5f8d68b",
+      "family": "team_16645426",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 34.420249474,
+      "first_certificate_bill": 832039.0,
+      "reference_best_bill": 143.0,
+      "regret": 831896.0,
+      "calls_until_certificate": 12
+    },
+    {
+      "pool": "6490d4a08fc9b5f8d68b",
+      "family": "team_16645426",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.3361893750000001,
+      "first_certificate_bill": 2583.0,
+      "reference_best_bill": 143.0,
+      "regret": 2440.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "6490d4a08fc9b5f8d68b",
+      "family": "team_16645426",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.08330210300000011,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "6490d4a08fc9b5f8d68b",
+      "family": "team_16645426",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 28.101521383,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 143.0,
+      "regret": 2178165.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "6490d4a08fc9b5f8d68b",
+      "family": "team_16645426",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.08322232499999997,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "6490d4a08fc9b5f8d68b",
+      "family": "team_16645426",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.08324613899999993,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "6490d4a08fc9b5f8d68b",
+      "family": "team_16645426",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.0832440640000001,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "6490d4a08fc9b5f8d68b",
+      "family": "team_16645426",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 1.702674836,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 143.0,
+      "regret": 514085.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "65293e9351ef8b34add5",
+      "family": "team_16681125",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 61.759693377000005,
+      "first_certificate_bill": 10945.0,
+      "reference_best_bill": 33.0,
+      "regret": 10912.0,
+      "calls_until_certificate": 21
+    },
+    {
+      "pool": "65293e9351ef8b34add5",
+      "family": "team_16681125",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 41.615698474000006,
+      "first_certificate_bill": 317810.0,
+      "reference_best_bill": 33.0,
+      "regret": 317777.0,
+      "calls_until_certificate": 14
+    },
+    {
+      "pool": "65293e9351ef8b34add5",
+      "family": "team_16681125",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.4879547020000002,
+      "first_certificate_bill": 88.0,
+      "reference_best_bill": 33.0,
+      "regret": 55.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "65293e9351ef8b34add5",
+      "family": "team_16681125",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.24924399199999997,
+      "first_certificate_bill": 54.0,
+      "reference_best_bill": 33.0,
+      "regret": 21.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "65293e9351ef8b34add5",
+      "family": "team_16681125",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 41.61572421200001,
+      "first_certificate_bill": 317810.0,
+      "reference_best_bill": 33.0,
+      "regret": 317777.0,
+      "calls_until_certificate": 14
+    },
+    {
+      "pool": "65293e9351ef8b34add5",
+      "family": "team_16681125",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.24918943200000004,
+      "first_certificate_bill": 54.0,
+      "reference_best_bill": 33.0,
+      "regret": 21.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "65293e9351ef8b34add5",
+      "family": "team_16681125",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.249203668,
+      "first_certificate_bill": 54.0,
+      "reference_best_bill": 33.0,
+      "regret": 21.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "65293e9351ef8b34add5",
+      "family": "team_16681125",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.2492023359999999,
+      "first_certificate_bill": 54.0,
+      "reference_best_bill": 33.0,
+      "regret": 21.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "65293e9351ef8b34add5",
+      "family": "team_16681125",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.5625448889999999,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 33.0,
+      "regret": 199.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "70c85df7739f9f5d0198",
+      "family": "team_16795448",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 25.059858248,
+      "first_certificate_bill": 3524577.0,
+      "reference_best_bill": 143.0,
+      "regret": 3524434.0,
+      "calls_until_certificate": 9
+    },
+    {
+      "pool": "70c85df7739f9f5d0198",
+      "family": "team_16795448",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 25.098958704999998,
+      "first_certificate_bill": 3524577.0,
+      "reference_best_bill": 143.0,
+      "regret": 3524434.0,
+      "calls_until_certificate": 9
+    },
+    {
+      "pool": "70c85df7739f9f5d0198",
+      "family": "team_16795448",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.19184133100000003,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 143.0,
+      "regret": 1453.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "70c85df7739f9f5d0198",
+      "family": "team_16795448",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.333003746,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "70c85df7739f9f5d0198",
+      "family": "team_16795448",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 28.360299366000007,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 143.0,
+      "regret": 2178165.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "70c85df7739f9f5d0198",
+      "family": "team_16795448",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.33294168900000004,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "70c85df7739f9f5d0198",
+      "family": "team_16795448",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.33293957,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "70c85df7739f9f5d0198",
+      "family": "team_16795448",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.3329407910000001,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "70c85df7739f9f5d0198",
+      "family": "team_16795448",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.15142946100000004,
+      "first_certificate_bill": 986.0,
+      "reference_best_bill": 143.0,
+      "regret": 843.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "759e1b5b3c5f8faf25c4",
+      "family": "team_16645426",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 31.678629804,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 143.0,
+      "regret": 1346125.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "759e1b5b3c5f8faf25c4",
+      "family": "team_16645426",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 28.299944089,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 143.0,
+      "regret": 2178165.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "759e1b5b3c5f8faf25c4",
+      "family": "team_16645426",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.313399069,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 143.0,
+      "regret": 1453.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "759e1b5b3c5f8faf25c4",
+      "family": "team_16645426",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.520273885,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "759e1b5b3c5f8faf25c4",
+      "family": "team_16645426",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 28.310147639,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 143.0,
+      "regret": 2178165.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "759e1b5b3c5f8faf25c4",
+      "family": "team_16645426",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.5202735400000001,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "759e1b5b3c5f8faf25c4",
+      "family": "team_16645426",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.520222239,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "759e1b5b3c5f8faf25c4",
+      "family": "team_16645426",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.520214455,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "759e1b5b3c5f8faf25c4",
+      "family": "team_16645426",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.33423879600000006,
+      "first_certificate_bill": 2583.0,
+      "reference_best_bill": 143.0,
+      "regret": 2440.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "79d4da74e4b6074d4db2",
+      "family": "team_16734914",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 30.791297585000002,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 88.0,
+      "regret": 1346180.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "79d4da74e4b6074d4db2",
+      "family": "team_16734914",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 28.057083723999998,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 88.0,
+      "regret": 2178220.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "79d4da74e4b6074d4db2",
+      "family": "team_16734914",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.21909617899999995,
+      "first_certificate_bill": 609.0,
+      "reference_best_bill": 88.0,
+      "regret": 521.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "79d4da74e4b6074d4db2",
+      "family": "team_16734914",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.24822819499999987,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 88.0,
+      "regret": 55.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "79d4da74e4b6074d4db2",
+      "family": "team_16734914",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 27.955582098999997,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 88.0,
+      "regret": 2178220.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "79d4da74e4b6074d4db2",
+      "family": "team_16734914",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.24819626899999997,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 88.0,
+      "regret": 55.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "79d4da74e4b6074d4db2",
+      "family": "team_16734914",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.24819447499999997,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 88.0,
+      "regret": 55.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "79d4da74e4b6074d4db2",
+      "family": "team_16734914",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.248086129,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 88.0,
+      "regret": 55.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "79d4da74e4b6074d4db2",
+      "family": "team_16734914",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.197427821,
+      "first_certificate_bill": 986.0,
+      "reference_best_bill": 88.0,
+      "regret": 898.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "802f4fcc459eda6d3dec",
+      "family": "team_16795448",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 31.931246192000003,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 232.0,
+      "regret": 1346036.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "802f4fcc459eda6d3dec",
+      "family": "team_16795448",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 31.109784534999992,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 232.0,
+      "regret": 1346036.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "802f4fcc459eda6d3dec",
+      "family": "team_16795448",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.21229633299999984,
+      "first_certificate_bill": 2583.0,
+      "reference_best_bill": 232.0,
+      "regret": 2351.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "802f4fcc459eda6d3dec",
+      "family": "team_16795448",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 3.831681483,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 2
+    },
+    {
+      "pool": "802f4fcc459eda6d3dec",
+      "family": "team_16795448",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 31.109782744999997,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 232.0,
+      "regret": 1346036.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "802f4fcc459eda6d3dec",
+      "family": "team_16795448",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 3.7161348450000005,
+      "first_certificate_bill": 75024.0,
+      "reference_best_bill": 232.0,
+      "regret": 74792.0,
+      "calls_until_certificate": 2
+    },
+    {
+      "pool": "802f4fcc459eda6d3dec",
+      "family": "team_16795448",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 3.4046726540000005,
+      "first_certificate_bill": 986.0,
+      "reference_best_bill": 232.0,
+      "regret": 754.0,
+      "calls_until_certificate": 2
+    },
+    {
+      "pool": "802f4fcc459eda6d3dec",
+      "family": "team_16795448",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 3.4044686650000004,
+      "first_certificate_bill": 986.0,
+      "reference_best_bill": 232.0,
+      "regret": 754.0,
+      "calls_until_certificate": 2
+    },
+    {
+      "pool": "802f4fcc459eda6d3dec",
+      "family": "team_16795448",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.5859124520000001,
+      "first_certificate_bill": 75024.0,
+      "reference_best_bill": 232.0,
+      "regret": 74792.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "9b215ef6dcc2309f99e8",
+      "family": "team_16645426",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 29.029261257000005,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 54.0,
+      "regret": 2178254.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "9b215ef6dcc2309f99e8",
+      "family": "team_16645426",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 23.298312069,
+      "first_certificate_bill": 5702886.0,
+      "reference_best_bill": 54.0,
+      "regret": 5702832.0,
+      "calls_until_certificate": 8
+    },
+    {
+      "pool": "9b215ef6dcc2309f99e8",
+      "family": "team_16645426",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.157869532,
+      "first_certificate_bill": 376.0,
+      "reference_best_bill": 54.0,
+      "regret": 322.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "9b215ef6dcc2309f99e8",
+      "family": "team_16645426",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 1.7141075470000002,
+      "first_certificate_bill": 54.0,
+      "reference_best_bill": 54.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "9b215ef6dcc2309f99e8",
+      "family": "team_16645426",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 32.787366991999995,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 54.0,
+      "regret": 1346214.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "9b215ef6dcc2309f99e8",
+      "family": "team_16645426",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 1.714100963,
+      "first_certificate_bill": 54.0,
+      "reference_best_bill": 54.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "9b215ef6dcc2309f99e8",
+      "family": "team_16645426",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 1.7140836080000001,
+      "first_certificate_bill": 54.0,
+      "reference_best_bill": 54.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "9b215ef6dcc2309f99e8",
+      "family": "team_16645426",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 1.714083367,
+      "first_certificate_bill": 54.0,
+      "reference_best_bill": 54.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "9b215ef6dcc2309f99e8",
+      "family": "team_16645426",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.09381725799999997,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 54.0,
+      "regret": 178.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "9d4dc2dc491f6f253171",
+      "family": "team_16801171",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 28.376366422999997,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 232.0,
+      "regret": 2178076.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "9d4dc2dc491f6f253171",
+      "family": "team_16801171",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 28.298379367999996,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 232.0,
+      "regret": 2178076.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "9d4dc2dc491f6f253171",
+      "family": "team_16801171",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.5858610399999999,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 232.0,
+      "regret": 1364.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "9d4dc2dc491f6f253171",
+      "family": "team_16801171",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 1.022300676,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "9d4dc2dc491f6f253171",
+      "family": "team_16801171",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 28.053950576000005,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 232.0,
+      "regret": 2178076.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "9d4dc2dc491f6f253171",
+      "family": "team_16801171",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 1.022294468,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "9d4dc2dc491f6f253171",
+      "family": "team_16801171",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 1.0222918829999998,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "9d4dc2dc491f6f253171",
+      "family": "team_16801171",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 1.0222798849999999,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "9d4dc2dc491f6f253171",
+      "family": "team_16801171",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.4701721770000001,
+      "first_certificate_bill": 17710.0,
+      "reference_best_bill": 232.0,
+      "regret": 17478.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "9e14d66543df722a4ec9",
+      "family": "team_16736427",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 59.141501305999995,
+      "first_certificate_bill": 17710.0,
+      "reference_best_bill": 376.0,
+      "regret": 17334.0,
+      "calls_until_certificate": 20
+    },
+    {
+      "pool": "9e14d66543df722a4ec9",
+      "family": "team_16736427",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 59.14149373000001,
+      "first_certificate_bill": 17710.0,
+      "reference_best_bill": 376.0,
+      "regret": 17334.0,
+      "calls_until_certificate": 20
+    },
+    {
+      "pool": "9e14d66543df722a4ec9",
+      "family": "team_16736427",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 22.264008939,
+      "first_certificate_bill": 10945.0,
+      "reference_best_bill": 376.0,
+      "regret": 10569.0,
+      "calls_until_certificate": 8
+    },
+    {
+      "pool": "9e14d66543df722a4ec9",
+      "family": "team_16736427",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 2.705277646,
+      "first_certificate_bill": 376.0,
+      "reference_best_bill": 376.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "9e14d66543df722a4ec9",
+      "family": "team_16736427",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 66.73659312200002,
+      "first_certificate_bill": 6764.0,
+      "reference_best_bill": 376.0,
+      "regret": 6388.0,
+      "calls_until_certificate": 22
+    },
+    {
+      "pool": "9e14d66543df722a4ec9",
+      "family": "team_16736427",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 2.7052546719999997,
+      "first_certificate_bill": 376.0,
+      "reference_best_bill": 376.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "9e14d66543df722a4ec9",
+      "family": "team_16736427",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 2.705245459,
+      "first_certificate_bill": 376.0,
+      "reference_best_bill": 376.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "9e14d66543df722a4ec9",
+      "family": "team_16736427",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 2.705246973,
+      "first_certificate_bill": 376.0,
+      "reference_best_bill": 376.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "9e14d66543df722a4ec9",
+      "family": "team_16736427",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 71.42280932000001,
+      "first_certificate_bill": 17710.0,
+      "reference_best_bill": 376.0,
+      "regret": 17334.0,
+      "calls_until_certificate": 24
+    },
+    {
+      "pool": "a744727db841d6f2d00c",
+      "family": "team_16663403",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 60.09624371199998,
+      "first_certificate_bill": 17710.0,
+      "reference_best_bill": 143.0,
+      "regret": 17567.0,
+      "calls_until_certificate": 20
+    },
+    {
+      "pool": "a744727db841d6f2d00c",
+      "family": "team_16663403",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 38.713884332000006,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 143.0,
+      "regret": 514085.0,
+      "calls_until_certificate": 13
+    },
+    {
+      "pool": "a744727db841d6f2d00c",
+      "family": "team_16663403",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.5904837949999999,
+      "first_certificate_bill": 986.0,
+      "reference_best_bill": 143.0,
+      "regret": 843.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "a744727db841d6f2d00c",
+      "family": "team_16663403",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.502411103,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 143.0,
+      "regret": 89.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "a744727db841d6f2d00c",
+      "family": "team_16663403",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 38.713898863000004,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 143.0,
+      "regret": 514085.0,
+      "calls_until_certificate": 13
+    },
+    {
+      "pool": "a744727db841d6f2d00c",
+      "family": "team_16663403",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.5024269499999999,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 143.0,
+      "regret": 89.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "a744727db841d6f2d00c",
+      "family": "team_16663403",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.502390629,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 143.0,
+      "regret": 89.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "a744727db841d6f2d00c",
+      "family": "team_16663403",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.502396272,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 143.0,
+      "regret": 89.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "a744727db841d6f2d00c",
+      "family": "team_16663403",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 3.6325969430000002,
+      "first_certificate_bill": 2583.0,
+      "reference_best_bill": 143.0,
+      "regret": 2440.0,
+      "calls_until_certificate": 2
+    },
+    {
+      "pool": "b01431b57c210b6e0779",
+      "family": "team_16801171",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 38.729703857000004,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 143.0,
+      "regret": 514085.0,
+      "calls_until_certificate": 13
+    },
+    {
+      "pool": "b01431b57c210b6e0779",
+      "family": "team_16801171",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 28.699158617,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 143.0,
+      "regret": 2178165.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "b01431b57c210b6e0779",
+      "family": "team_16801171",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.314045707,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 143.0,
+      "regret": 1453.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "b01431b57c210b6e0779",
+      "family": "team_16801171",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.708175081,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "b01431b57c210b6e0779",
+      "family": "team_16801171",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 38.729753519,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 143.0,
+      "regret": 514085.0,
+      "calls_until_certificate": 13
+    },
+    {
+      "pool": "b01431b57c210b6e0779",
+      "family": "team_16801171",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.708179423,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "b01431b57c210b6e0779",
+      "family": "team_16801171",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.708145689,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "b01431b57c210b6e0779",
+      "family": "team_16801171",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.708145786,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "b01431b57c210b6e0779",
+      "family": "team_16801171",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.503155035,
+      "first_certificate_bill": 2583.0,
+      "reference_best_bill": 143.0,
+      "regret": 2440.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "b0fb52758dfb8246bd11",
+      "family": "team_16736427",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 30.985292792000003,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 143.0,
+      "regret": 1346125.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "b0fb52758dfb8246bd11",
+      "family": "team_16736427",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 34.513323563,
+      "first_certificate_bill": 832039.0,
+      "reference_best_bill": 143.0,
+      "regret": 831896.0,
+      "calls_until_certificate": 12
+    },
+    {
+      "pool": "b0fb52758dfb8246bd11",
+      "family": "team_16736427",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.3867202740000001,
+      "first_certificate_bill": 2583.0,
+      "reference_best_bill": 143.0,
+      "regret": 2440.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "b0fb52758dfb8246bd11",
+      "family": "team_16736427",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 5.735320927,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 143.0,
+      "regret": 89.0,
+      "calls_until_certificate": 2
+    },
+    {
+      "pool": "b0fb52758dfb8246bd11",
+      "family": "team_16736427",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 34.51333382999999,
+      "first_certificate_bill": 832039.0,
+      "reference_best_bill": 143.0,
+      "regret": 831896.0,
+      "calls_until_certificate": 12
+    },
+    {
+      "pool": "b0fb52758dfb8246bd11",
+      "family": "team_16736427",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 3.6320948820000005,
+      "first_certificate_bill": 10945.0,
+      "reference_best_bill": 143.0,
+      "regret": 10802.0,
+      "calls_until_certificate": 2
+    },
+    {
+      "pool": "b0fb52758dfb8246bd11",
+      "family": "team_16736427",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 3.558872195,
+      "first_certificate_bill": 986.0,
+      "reference_best_bill": 143.0,
+      "regret": 843.0,
+      "calls_until_certificate": 2
+    },
+    {
+      "pool": "b0fb52758dfb8246bd11",
+      "family": "team_16736427",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 3.5586989879999997,
+      "first_certificate_bill": 986.0,
+      "reference_best_bill": 143.0,
+      "regret": 843.0,
+      "calls_until_certificate": 2
+    },
+    {
+      "pool": "b0fb52758dfb8246bd11",
+      "family": "team_16736427",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.490356175,
+      "first_certificate_bill": 10945.0,
+      "reference_best_bill": 143.0,
+      "regret": 10802.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "b9125cb391c7f4a08abe",
+      "family": "team_16663403",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 153.65241379500006,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 88.0,
+      "regret": 514140.0,
+      "calls_until_certificate": 49
+    },
+    {
+      "pool": "b9125cb391c7f4a08abe",
+      "family": "team_16663403",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 65.488403435,
+      "first_certificate_bill": 6764.0,
+      "reference_best_bill": 88.0,
+      "regret": 6676.0,
+      "calls_until_certificate": 22
+    },
+    {
+      "pool": "b9125cb391c7f4a08abe",
+      "family": "team_16663403",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.8456577200000001,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 88.0,
+      "regret": 144.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "b9125cb391c7f4a08abe",
+      "family": "team_16663403",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.8456938829999999,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 88.0,
+      "regret": 144.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "b9125cb391c7f4a08abe",
+      "family": "team_16663403",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 65.488424973,
+      "first_certificate_bill": 6764.0,
+      "reference_best_bill": 88.0,
+      "regret": 6676.0,
+      "calls_until_certificate": 22
+    },
+    {
+      "pool": "b9125cb391c7f4a08abe",
+      "family": "team_16663403",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.845684027,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 88.0,
+      "regret": 144.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "b9125cb391c7f4a08abe",
+      "family": "team_16663403",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.8456829490000001,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 88.0,
+      "regret": 144.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "b9125cb391c7f4a08abe",
+      "family": "team_16663403",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.8456832440000001,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 88.0,
+      "regret": 144.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "b9125cb391c7f4a08abe",
+      "family": "team_16663403",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 7.063065793999999,
+      "first_certificate_bill": 2583.0,
+      "reference_best_bill": 88.0,
+      "regret": 2495.0,
+      "calls_until_certificate": 3
+    },
+    {
+      "pool": "bbabdedf83861003c828",
+      "family": "team_16734914",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 43.453805718999995,
+      "first_certificate_bill": 196417.0,
+      "reference_best_bill": 143.0,
+      "regret": 196274.0,
+      "calls_until_certificate": 15
+    },
+    {
+      "pool": "bbabdedf83861003c828",
+      "family": "team_16734914",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 43.453827365,
+      "first_certificate_bill": 196417.0,
+      "reference_best_bill": 143.0,
+      "regret": 196274.0,
+      "calls_until_certificate": 15
+    },
+    {
+      "pool": "bbabdedf83861003c828",
+      "family": "team_16734914",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 1.005334232,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 143.0,
+      "regret": 1453.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "bbabdedf83861003c828",
+      "family": "team_16734914",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.4686903780000001,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 143.0,
+      "regret": 89.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "bbabdedf83861003c828",
+      "family": "team_16734914",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 31.109645367,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 143.0,
+      "regret": 1346125.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "bbabdedf83861003c828",
+      "family": "team_16734914",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.468688696,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 143.0,
+      "regret": 89.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "bbabdedf83861003c828",
+      "family": "team_16734914",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.4686603919999999,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 143.0,
+      "regret": 89.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "bbabdedf83861003c828",
+      "family": "team_16734914",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.46867206199999994,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 143.0,
+      "regret": 89.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "bbabdedf83861003c828",
+      "family": "team_16734914",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.762143506,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 143.0,
+      "regret": 514085.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "c6b96b93f9dfc9bf673f",
+      "family": "team_16681125",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 31.518736829000005,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 143.0,
+      "regret": 1346125.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "c6b96b93f9dfc9bf673f",
+      "family": "team_16681125",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 57.46163669699998,
+      "first_certificate_bill": 28656.0,
+      "reference_best_bill": 143.0,
+      "regret": 28513.0,
+      "calls_until_certificate": 19
+    },
+    {
+      "pool": "c6b96b93f9dfc9bf673f",
+      "family": "team_16681125",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.623404412,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 143.0,
+      "regret": 1453.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "c6b96b93f9dfc9bf673f",
+      "family": "team_16681125",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.5667645140000002,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 143.0,
+      "regret": 89.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "c6b96b93f9dfc9bf673f",
+      "family": "team_16681125",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 57.461630157,
+      "first_certificate_bill": 28656.0,
+      "reference_best_bill": 143.0,
+      "regret": 28513.0,
+      "calls_until_certificate": 19
+    },
+    {
+      "pool": "c6b96b93f9dfc9bf673f",
+      "family": "team_16681125",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.566741742,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 143.0,
+      "regret": 89.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "c6b96b93f9dfc9bf673f",
+      "family": "team_16681125",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.566758509,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 143.0,
+      "regret": 89.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "c6b96b93f9dfc9bf673f",
+      "family": "team_16681125",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.5667471400000001,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 143.0,
+      "regret": 89.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "c6b96b93f9dfc9bf673f",
+      "family": "team_16681125",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 27.945677657000005,
+      "first_certificate_bill": 2583.0,
+      "reference_best_bill": 143.0,
+      "regret": 2440.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "cb3da83fb3703b5efbc6",
+      "family": "team_16736427",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 34.024747618000006,
+      "first_certificate_bill": 832039.0,
+      "reference_best_bill": 143.0,
+      "regret": 831896.0,
+      "calls_until_certificate": 12
+    },
+    {
+      "pool": "cb3da83fb3703b5efbc6",
+      "family": "team_16736427",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 34.02476695000001,
+      "first_certificate_bill": 832039.0,
+      "reference_best_bill": 143.0,
+      "regret": 831896.0,
+      "calls_until_certificate": 12
+    },
+    {
+      "pool": "cb3da83fb3703b5efbc6",
+      "family": "team_16736427",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.24472445199999998,
+      "first_certificate_bill": 609.0,
+      "reference_best_bill": 143.0,
+      "regret": 466.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "cb3da83fb3703b5efbc6",
+      "family": "team_16736427",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.2733077839999999,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "cb3da83fb3703b5efbc6",
+      "family": "team_16736427",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 34.02480181799999,
+      "first_certificate_bill": 832039.0,
+      "reference_best_bill": 143.0,
+      "regret": 831896.0,
+      "calls_until_certificate": 12
+    },
+    {
+      "pool": "cb3da83fb3703b5efbc6",
+      "family": "team_16736427",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.27335016999999995,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "cb3da83fb3703b5efbc6",
+      "family": "team_16736427",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.2732876900000001,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "cb3da83fb3703b5efbc6",
+      "family": "team_16736427",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.27328938,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "cb3da83fb3703b5efbc6",
+      "family": "team_16736427",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.4447779220000001,
+      "first_certificate_bill": 4180.0,
+      "reference_best_bill": 143.0,
+      "regret": 4037.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "ce88235bce99fcc004d5",
+      "family": "team_16663403",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 52.622162593999995,
+      "first_certificate_bill": 46367.0,
+      "reference_best_bill": 232.0,
+      "regret": 46135.0,
+      "calls_until_certificate": 18
+    },
+    {
+      "pool": "ce88235bce99fcc004d5",
+      "family": "team_16663403",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 28.211148103000003,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 232.0,
+      "regret": 2178076.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "ce88235bce99fcc004d5",
+      "family": "team_16663403",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.5530130969999999,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 232.0,
+      "regret": 1364.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "ce88235bce99fcc004d5",
+      "family": "team_16663403",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.613418382,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "ce88235bce99fcc004d5",
+      "family": "team_16663403",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 28.061996928000003,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 232.0,
+      "regret": 2178076.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "ce88235bce99fcc004d5",
+      "family": "team_16663403",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.613414529,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "ce88235bce99fcc004d5",
+      "family": "team_16663403",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.6134018519999999,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "ce88235bce99fcc004d5",
+      "family": "team_16663403",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.6133999900000001,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "ce88235bce99fcc004d5",
+      "family": "team_16663403",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 6.905091676,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 232.0,
+      "regret": 2178076.0,
+      "calls_until_certificate": 3
+    },
+    {
+      "pool": "cf42787ab18fe6c3b17a",
+      "family": "team_16736427",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 31.373598726,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 143.0,
+      "regret": 1346125.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "cf42787ab18fe6c3b17a",
+      "family": "team_16736427",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 31.373629277000003,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 143.0,
+      "regret": 1346125.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "cf42787ab18fe6c3b17a",
+      "family": "team_16736427",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.17997928100000007,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 143.0,
+      "regret": 1453.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "cf42787ab18fe6c3b17a",
+      "family": "team_16736427",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.16576442400000013,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "cf42787ab18fe6c3b17a",
+      "family": "team_16736427",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 34.46685826,
+      "first_certificate_bill": 832039.0,
+      "reference_best_bill": 143.0,
+      "regret": 831896.0,
+      "calls_until_certificate": 12
+    },
+    {
+      "pool": "cf42787ab18fe6c3b17a",
+      "family": "team_16736427",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.16576242699999988,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "cf42787ab18fe6c3b17a",
+      "family": "team_16736427",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.16573181599999975,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "cf42787ab18fe6c3b17a",
+      "family": "team_16736427",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.16573706200000016,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "cf42787ab18fe6c3b17a",
+      "family": "team_16736427",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.182765463,
+      "first_certificate_bill": 2583.0,
+      "reference_best_bill": 143.0,
+      "regret": 2440.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "d4dc75abacba2c083516",
+      "family": "team_16801171",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 29.167210604999998,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 143.0,
+      "regret": 2178165.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "d4dc75abacba2c083516",
+      "family": "team_16801171",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 27.824560993999995,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 143.0,
+      "regret": 2178165.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "d4dc75abacba2c083516",
+      "family": "team_16801171",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.24750921300000023,
+      "first_certificate_bill": 609.0,
+      "reference_best_bill": 143.0,
+      "regret": 466.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "d4dc75abacba2c083516",
+      "family": "team_16801171",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.6724905359999999,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "d4dc75abacba2c083516",
+      "family": "team_16801171",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 27.824644796999998,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 143.0,
+      "regret": 2178165.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "d4dc75abacba2c083516",
+      "family": "team_16801171",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.672516993,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "d4dc75abacba2c083516",
+      "family": "team_16801171",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.672457277,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "d4dc75abacba2c083516",
+      "family": "team_16801171",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.672457151,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "d4dc75abacba2c083516",
+      "family": "team_16801171",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.4135274810000001,
+      "first_certificate_bill": 6764.0,
+      "reference_best_bill": 143.0,
+      "regret": 6621.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "e98b78d91a6f182a2cf5",
+      "family": "team_16734914",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 46.483923045999994,
+      "first_certificate_bill": 121392.0,
+      "reference_best_bill": 143.0,
+      "regret": 121249.0,
+      "calls_until_certificate": 16
+    },
+    {
+      "pool": "e98b78d91a6f182a2cf5",
+      "family": "team_16734914",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 46.483953144,
+      "first_certificate_bill": 121392.0,
+      "reference_best_bill": 143.0,
+      "regret": 121249.0,
+      "calls_until_certificate": 16
+    },
+    {
+      "pool": "e98b78d91a6f182a2cf5",
+      "family": "team_16734914",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.23730640100000003,
+      "first_certificate_bill": 609.0,
+      "reference_best_bill": 143.0,
+      "regret": 466.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "e98b78d91a6f182a2cf5",
+      "family": "team_16734914",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.2102288429999999,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "e98b78d91a6f182a2cf5",
+      "family": "team_16734914",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 47.067768556,
+      "first_certificate_bill": 121392.0,
+      "reference_best_bill": 143.0,
+      "regret": 121249.0,
+      "calls_until_certificate": 16
+    },
+    {
+      "pool": "e98b78d91a6f182a2cf5",
+      "family": "team_16734914",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.2102767969999999,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "e98b78d91a6f182a2cf5",
+      "family": "team_16734914",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.2102216469999998,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "e98b78d91a6f182a2cf5",
+      "family": "team_16734914",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.21022005099999985,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "e98b78d91a6f182a2cf5",
+      "family": "team_16734914",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 2.0609213109999995,
+      "first_certificate_bill": 121392.0,
+      "reference_best_bill": 143.0,
+      "regret": 121249.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "ed5b84bc80da4fc4172b",
+      "family": "team_16645426",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 28.276791036000002,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 232.0,
+      "regret": 2178076.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "ed5b84bc80da4fc4172b",
+      "family": "team_16645426",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 28.314826012,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 232.0,
+      "regret": 2178076.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "ed5b84bc80da4fc4172b",
+      "family": "team_16645426",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 1.889954258,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 232.0,
+      "regret": 1364.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "ed5b84bc80da4fc4172b",
+      "family": "team_16645426",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.8948394280000002,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "ed5b84bc80da4fc4172b",
+      "family": "team_16645426",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 28.142417929999997,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 232.0,
+      "regret": 2178076.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "ed5b84bc80da4fc4172b",
+      "family": "team_16645426",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.8948602840000001,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "ed5b84bc80da4fc4172b",
+      "family": "team_16645426",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.894813303,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "ed5b84bc80da4fc4172b",
+      "family": "team_16645426",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.8948200480000003,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "ed5b84bc80da4fc4172b",
+      "family": "team_16645426",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 6.814217915999999,
+      "first_certificate_bill": 46367.0,
+      "reference_best_bill": 232.0,
+      "regret": 46135.0,
+      "calls_until_certificate": 3
+    },
+    {
+      "pool": "f15c6b3cdbbcc96a5d03",
+      "family": "team_16795448",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 59.04440400000001,
+      "first_certificate_bill": 17710.0,
+      "reference_best_bill": 232.0,
+      "regret": 17478.0,
+      "calls_until_certificate": 20
+    },
+    {
+      "pool": "f15c6b3cdbbcc96a5d03",
+      "family": "team_16795448",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 59.04443822900001,
+      "first_certificate_bill": 17710.0,
+      "reference_best_bill": 232.0,
+      "regret": 17478.0,
+      "calls_until_certificate": 20
+    },
+    {
+      "pool": "f15c6b3cdbbcc96a5d03",
+      "family": "team_16795448",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 1.1082405390000003,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 232.0,
+      "regret": 1364.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "f15c6b3cdbbcc96a5d03",
+      "family": "team_16795448",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 1.5178717,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "f15c6b3cdbbcc96a5d03",
+      "family": "team_16795448",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 47.007209855999996,
+      "first_certificate_bill": 121392.0,
+      "reference_best_bill": 232.0,
+      "regret": 121160.0,
+      "calls_until_certificate": 16
+    },
+    {
+      "pool": "f15c6b3cdbbcc96a5d03",
+      "family": "team_16795448",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 1.5178738630000002,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "f15c6b3cdbbcc96a5d03",
+      "family": "team_16795448",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 1.517858476,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "f15c6b3cdbbcc96a5d03",
+      "family": "team_16795448",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 1.517864037,
+      "first_certificate_bill": 232.0,
+      "reference_best_bill": 232.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "f15c6b3cdbbcc96a5d03",
+      "family": "team_16795448",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 7.166306578,
+      "first_certificate_bill": 121392.0,
+      "reference_best_bill": 232.0,
+      "regret": 121160.0,
+      "calls_until_certificate": 3
+    },
+    {
+      "pool": "f3da53fddc57f86a5686",
+      "family": "team_16663403",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 28.029132433000004,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 143.0,
+      "regret": 2178165.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "f3da53fddc57f86a5686",
+      "family": "team_16663403",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 39.04822688499999,
+      "first_certificate_bill": 514228.0,
+      "reference_best_bill": 143.0,
+      "regret": 514085.0,
+      "calls_until_certificate": 13
+    },
+    {
+      "pool": "f3da53fddc57f86a5686",
+      "family": "team_16663403",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.4762494959999999,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 143.0,
+      "regret": 1453.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "f3da53fddc57f86a5686",
+      "family": "team_16663403",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.30196096499999986,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "f3da53fddc57f86a5686",
+      "family": "team_16663403",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 28.027947463999997,
+      "first_certificate_bill": 2178308.0,
+      "reference_best_bill": 143.0,
+      "regret": 2178165.0,
+      "calls_until_certificate": 10
+    },
+    {
+      "pool": "f3da53fddc57f86a5686",
+      "family": "team_16663403",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.3019668679999998,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "f3da53fddc57f86a5686",
+      "family": "team_16663403",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.3019457199999999,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "f3da53fddc57f86a5686",
+      "family": "team_16663403",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.301949427,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 143.0,
+      "regret": 0.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "f3da53fddc57f86a5686",
+      "family": "team_16663403",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.3341886420000001,
+      "first_certificate_bill": 1596.0,
+      "reference_best_bill": 143.0,
+      "regret": 1453.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "f516269d02271b2ea8c7",
+      "family": "team_16663403",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 46.336030282,
+      "first_certificate_bill": 121392.0,
+      "reference_best_bill": 88.0,
+      "regret": 121304.0,
+      "calls_until_certificate": 16
+    },
+    {
+      "pool": "f516269d02271b2ea8c7",
+      "family": "team_16663403",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 46.336053441999994,
+      "first_certificate_bill": 121392.0,
+      "reference_best_bill": 88.0,
+      "regret": 121304.0,
+      "calls_until_certificate": 16
+    },
+    {
+      "pool": "f516269d02271b2ea8c7",
+      "family": "team_16663403",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.14042652300000003,
+      "first_certificate_bill": 609.0,
+      "reference_best_bill": 88.0,
+      "regret": 521.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "f516269d02271b2ea8c7",
+      "family": "team_16663403",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.1457157019999999,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 88.0,
+      "regret": 55.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "f516269d02271b2ea8c7",
+      "family": "team_16663403",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 22.114407525,
+      "first_certificate_bill": 5702886.0,
+      "reference_best_bill": 88.0,
+      "regret": 5702798.0,
+      "calls_until_certificate": 8
+    },
+    {
+      "pool": "f516269d02271b2ea8c7",
+      "family": "team_16663403",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.1457261800000002,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 88.0,
+      "regret": 55.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "f516269d02271b2ea8c7",
+      "family": "team_16663403",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.1456774090000001,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 88.0,
+      "regret": 55.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "f516269d02271b2ea8c7",
+      "family": "team_16663403",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.1456762499999999,
+      "first_certificate_bill": 143.0,
+      "reference_best_bill": 88.0,
+      "regret": 55.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "f516269d02271b2ea8c7",
+      "family": "team_16663403",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.8522600639999999,
+      "first_certificate_bill": 317810.0,
+      "reference_best_bill": 88.0,
+      "regret": 317722.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "fe4963ea00f00dd4afaf",
+      "family": "team_16665237",
+      "method": "original_flat_10/sequential",
+      "first_certificate_cpu_seconds": 32.37351274699999,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 33.0,
+      "regret": 1346235.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "fe4963ea00f00dd4afaf",
+      "family": "team_16665237",
+      "method": "original_geometry/sequential",
+      "first_certificate_cpu_seconds": 32.373540012,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 33.0,
+      "regret": 1346235.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "fe4963ea00f00dd4afaf",
+      "family": "team_16665237",
+      "method": "original_geometry/around",
+      "first_certificate_cpu_seconds": 0.11003117799999998,
+      "first_certificate_bill": 88.0,
+      "reference_best_bill": 33.0,
+      "regret": 55.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "fe4963ea00f00dd4afaf",
+      "family": "team_16665237",
+      "method": "cost_direct_extra/around",
+      "first_certificate_cpu_seconds": 0.07822739900000018,
+      "first_certificate_bill": 54.0,
+      "reference_best_bill": 33.0,
+      "regret": 21.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "fe4963ea00f00dd4afaf",
+      "family": "team_16665237",
+      "method": "cost_direct_extra/sequential",
+      "first_certificate_cpu_seconds": 32.373541681999995,
+      "first_certificate_bill": 1346268.0,
+      "reference_best_bill": 33.0,
+      "regret": 1346235.0,
+      "calls_until_certificate": 11
+    },
+    {
+      "pool": "fe4963ea00f00dd4afaf",
+      "family": "team_16665237",
+      "method": "boost/hybrid_nominal",
+      "first_certificate_cpu_seconds": 0.07824114800000002,
+      "first_certificate_bill": 54.0,
+      "reference_best_bill": 33.0,
+      "regret": 21.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "fe4963ea00f00dd4afaf",
+      "family": "team_16665237",
+      "method": "boost/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.07821812199999999,
+      "first_certificate_bill": 54.0,
+      "reference_best_bill": 33.0,
+      "regret": 21.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "fe4963ea00f00dd4afaf",
+      "family": "team_16665237",
+      "method": "logistic/hybrid_cpu",
+      "first_certificate_cpu_seconds": 0.07820909900000016,
+      "first_certificate_bill": 54.0,
+      "reference_best_bill": 33.0,
+      "regret": 21.0,
+      "calls_until_certificate": 1
+    },
+    {
+      "pool": "fe4963ea00f00dd4afaf",
+      "family": "team_16665237",
+      "method": "boost/query_nominal",
+      "first_certificate_cpu_seconds": 0.2553509550000001,
+      "first_certificate_bill": 609.0,
+      "reference_best_bill": 33.0,
+      "regret": 576.0,
+      "calls_until_certificate": 1
+    }
+  ],
+  "input_sha256": {
+    "runs/holdout_a_layout_novel_evaluation_v2/DEFINITIONS.json": "b6b2017b4caef7d5580480f4e956a53c6a5187edcafda49216544d575967f4cd",
+    "runs/holdout_a_layout_novel_evaluation_v2/cpp/CALLS.csv": "f50c24b286b7a56899718562a9dd0a0582688022cba97ed7bf18faa3abd35d6d",
+    "runs/holdout_a_layout_novel_evaluation_v2/MEASURED_CASES.jsonl": "1167dfdeaf2fd533107df5e4c73541b0ad5ac031883547aa952184d6bfb21e06",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/scripts/analyze_first_certificate.py": "264b8ac9387d37b0416a20ea5b1399cce91f1f4ea84c4d716f897a7f04bf47df"
+  }
+}

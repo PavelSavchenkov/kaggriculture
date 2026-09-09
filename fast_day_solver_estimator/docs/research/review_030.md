@@ -1,0 +1,13 @@
+# Review 030 — 2026-09-09 10:56 UTC
+
+The third-wave input and prediction freeze completed at 10:44:00 UTC before any new reference call. The 1,235 ordinary physical obligations require 44,023 calls; the H24 and H23 calendar panels require 2,541 and 2,943. Eight backend processes are running in total. Latest counts are 2,166 ordinary, 270 H24-calendar and 196 H23-calendar calls. All references use unchanged three-second backends; the terminal wrapper enforces phase-22 work deadlines.
+
+The novelty audit leaves 374 source contracts, 37 full layout pools, 37 removal parents, 29 owned-addition parents, 35 larger-addition parents and 145 calendar contracts. The candidate's 55,160 C++ query predictions and 8,274 adaptive/forced planning outputs pass independent numerical comparison. New-input ordinary adaptive prediction averages 69.69 us versus forced-curve 129.23 us. Other calendars average 86.56 us. No new-label accuracy or decision result is available yet.
+
+The unchanged warm candidate is now running on 56 paired cases across eight predeclared new seeds, all eligible under original compiler construction preconditions. No source, rival, shop sequence, model or threshold changed. Initial completed cases include both failures and successes; do not draw an aggregate speed conclusion from this partial benchmark. Seed-cluster reporting and the original strict quality gate are specified.
+
+Hard-label audit: adding two newly certified larger-addition pairs changes direct-cost marginal MAE from 90.77 on 134 old labeled pairs to 3,973.31 on 136. The dominant new 28-worker upper gives a 512,632 reference-bill increment; its physical marginal interval is [-1,563, 514,216]. Retain this case and its very weak lower/upper identification. It is not evidence that the true cheapest workforce requires 28 workers. The initial short-budget targets and forecasts are unchanged. The original flat10 and all learned methods miss this new upper by a large amount. Updated signed-risk reporting is running with unchanged thresholds.
+
+Decision: maintain the frozen tests and pause fitting. Continue preparing complete-sweep analyses and separating physical upper evidence from short-backend outcomes. The new panel projection reader preserves all alias counts and every signed metric of the completed 228-contract owned panel exactly. This addresses the previous reader's inability to represent equivalent variants. No more same-panel warm reruns; the new seeds provide the required next evidence. General estimator adoption remains open, and the only accepted component is the earlier scoped H24 cold ranking.
+
+Next review 11:16:39 UTC. Experiment deadline September 10 00:56:39 UTC.

@@ -1,0 +1,4047 @@
+[
+  {
+    "added_assets": [
+      10
+    ],
+    "baseline": "233a95b7075a2ccd40b2",
+    "baseline_cost": 1596.0,
+    "baseline_tasks": 95.0,
+    "baseline_workers": 16,
+    "candidate": "6b8ab28dd74ca4d3e1b8",
+    "candidate_tasks": 125.0,
+    "candidate_workers": 28,
+    "delta_tasks": 30.0,
+    "error": -512362.0281808036,
+    "family": "team_16741542",
+    "method": "cost_direct_extra",
+    "mode": "cold",
+    "physical_delta_lower": -1563.0,
+    "physical_delta_upper": 514216.0,
+    "pool": "233a95b7075a2ccd40b2",
+    "prediction": 269.97181919642856,
+    "raw_memberships": 1,
+    "target": 512632.0,
+    "variant": "land_crop10",
+    "variant_aliases": [
+      "land_crop10"
+    ],
+    "panel": "large",
+    "forecasts": {
+      "cost_direct_extra": {
+        "baseline_workers": 12.123281069155093,
+        "candidate_workers": 13.616842459891682,
+        "marginal_cash": 269.97181919642856
+      },
+      "fitted_timing": {
+        "baseline_workers": 10.178906299239538,
+        "candidate_workers": 12.427604937637655,
+        "marginal_cash": 195.73526456164774
+      },
+      "timing_extra": {
+        "baseline_workers": 12.006937315157252,
+        "candidate_workers": 14.414678551117284,
+        "marginal_cash": 532.3348403885717
+      },
+      "timing_boost": {
+        "baseline_workers": 12.304574078676605,
+        "candidate_workers": 14.802333997207823,
+        "marginal_cash": 635.621249617918
+      }
+    },
+    "same_leaf_fraction": 0.359375,
+    "trees_increasing_cost": 69,
+    "trees_decreasing_cost": 11,
+    "positive_tree_mean_contribution": 276.84440104166663,
+    "negative_tree_mean_contribution": -6.872581845238095,
+    "changed_features": 37,
+    "largest_scaled_feature_changes": [
+      {
+        "name": "bought_8",
+        "baseline": 8.0,
+        "candidate": 18.0,
+        "scaled_change": 4.356838445698491
+      },
+      {
+        "name": "bbox_height",
+        "baseline": 5.0,
+        "candidate": 10.0,
+        "scaled_change": 2.3592406933510053
+      },
+      {
+        "name": "input_distance",
+        "baseline": 37.0,
+        "candidate": 97.0,
+        "scaled_change": 1.988832505897631
+      },
+      {
+        "name": "input_action_distance",
+        "baseline": 37.0,
+        "candidate": 97.0,
+        "scaled_change": 1.988832505897631
+      },
+      {
+        "name": "op_8",
+        "baseline": 7.0,
+        "candidate": 17.0,
+        "scaled_change": 1.845694439468305
+      },
+      {
+        "name": "op_11",
+        "baseline": 0.0,
+        "candidate": 10.0,
+        "scaled_change": 1.822901428090095
+      },
+      {
+        "name": "input_8",
+        "baseline": 0.0,
+        "candidate": 10.0,
+        "scaled_change": 1.822901428090095
+      },
+      {
+        "name": "pair_distance_mean",
+        "baseline": 3.84307694,
+        "candidate": 5.58571434,
+        "scaled_change": 1.7426374
+      },
+      {
+        "name": "quadrant_tasks_2",
+        "baseline": 0.0,
+        "candidate": 30.0,
+        "scaled_change": 1.65765135912807
+      },
+      {
+        "name": "purchase_units",
+        "baseline": 60.0,
+        "candidate": 81.0,
+        "scaled_change": 1.4538338979098353
+      },
+      {
+        "name": "task_distance",
+        "baseline": 266.0,
+        "candidate": 446.0,
+        "scaled_change": 1.34403745349551
+      },
+      {
+        "name": "input_actions",
+        "baseline": 19.0,
+        "candidate": 29.0,
+        "scaled_change": 1.317260257962876
+      }
+    ],
+    "baseline_support": {
+      "panel": "large",
+      "id": "233a95b7075a2ccd40b2",
+      "families": [
+        "team_16741542"
+      ],
+      "in_training": true,
+      "reference_workers": 16,
+      "lower_bound": 6,
+      "point_workers": 12.123281069155093,
+      "raw_forest_cash": 249.75247395833333,
+      "effective_training_support": 9.734616407401614,
+      "training_weight_at_least_15_workers": 0.00546875,
+      "outside_training_feature_count": 0,
+      "outside_training_max_scaled_gap": 0.0,
+      "outside_training_features": [],
+      "nearest_training_rows": [
+        {
+          "id": "233a95b7075a2ccd40b2",
+          "workers": 12,
+          "distance": 0.0
+        },
+        {
+          "id": "c5609de99196cf2fcc1c",
+          "workers": 12,
+          "distance": 0.06534890745383583
+        },
+        {
+          "id": "ac69c8989e3a1e124052",
+          "workers": 12,
+          "distance": 0.3237339584142422
+        },
+        {
+          "id": "a4192571588177a871e3",
+          "workers": 12,
+          "distance": 0.44660182343681293
+        },
+        {
+          "id": "7a27791023ef4a1290cc",
+          "workers": 12,
+          "distance": 0.5492959389284565
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "233a95b7075a2ccd40b2",
+          "workers": 12,
+          "weight": 0.17239560123291733
+        },
+        {
+          "id": "c5609de99196cf2fcc1c",
+          "workers": 12,
+          "weight": 0.16729577484402844
+        },
+        {
+          "id": "a4192571588177a871e3",
+          "workers": 12,
+          "weight": 0.15364560123291737
+        },
+        {
+          "id": "ac69c8989e3a1e124052",
+          "workers": 12,
+          "weight": 0.09399158337577447
+        },
+        {
+          "id": "7a27791023ef4a1290cc",
+          "workers": 12,
+          "weight": 0.07243280361386975
+        },
+        {
+          "id": "e87a3bb5fa8cb9f91b38",
+          "workers": 12,
+          "weight": 0.04724679170910786
+        },
+        {
+          "id": "523c5b6b7ef1ae8ec9d7",
+          "workers": 12,
+          "weight": 0.03842982742339359
+        },
+        {
+          "id": "cfadc7dec35744ef3728",
+          "workers": 12,
+          "weight": 0.03489560123291741
+        }
+      ]
+    },
+    "candidate_support": {
+      "panel": "large",
+      "id": "6b8ab28dd74ca4d3e1b8",
+      "families": [
+        "team_16741542"
+      ],
+      "in_training": false,
+      "reference_workers": 28,
+      "lower_bound": 8,
+      "point_workers": 13.616842459891682,
+      "raw_forest_cash": 519.7242931547618,
+      "effective_training_support": 37.20185808103347,
+      "training_weight_at_least_15_workers": 0.14103422619047623,
+      "outside_training_feature_count": 0,
+      "outside_training_max_scaled_gap": 0.0,
+      "outside_training_features": [],
+      "nearest_training_rows": [
+        {
+          "id": "233a95b7075a2ccd40b2",
+          "workers": 12,
+          "distance": 0.5409787169864493
+        },
+        {
+          "id": "c5609de99196cf2fcc1c",
+          "workers": 12,
+          "distance": 0.5449114165969684
+        },
+        {
+          "id": "ac69c8989e3a1e124052",
+          "workers": 12,
+          "distance": 0.663641429371469
+        },
+        {
+          "id": "a4192571588177a871e3",
+          "workers": 12,
+          "distance": 0.6953613952055913
+        },
+        {
+          "id": "7a27791023ef4a1290cc",
+          "workers": 12,
+          "distance": 0.7983372091234047
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "233a95b7075a2ccd40b2",
+          "workers": 12,
+          "weight": 0.06303971636002886
+        },
+        {
+          "id": "c5609de99196cf2fcc1c",
+          "workers": 12,
+          "weight": 0.062063153860028863
+        },
+        {
+          "id": "c39dd0aa29b8818a7581",
+          "workers": 17,
+          "weight": 0.06132812500000003
+        },
+        {
+          "id": "a4192571588177a871e3",
+          "workers": 12,
+          "weight": 0.05952409136002886
+        },
+        {
+          "id": "574d8e12224f5de59eed",
+          "workers": 13,
+          "weight": 0.05141369047619049
+        },
+        {
+          "id": "ac69c8989e3a1e124052",
+          "workers": 12,
+          "weight": 0.032905787788600295
+        },
+        {
+          "id": "3995cb23cd2a63a77856",
+          "workers": 16,
+          "weight": 0.03052455357142857
+        },
+        {
+          "id": "f045bb45ba29bfa51a55",
+          "workers": 14,
+          "weight": 0.028311011904761905
+        }
+      ]
+    }
+  },
+  {
+    "added_assets": [
+      8
+    ],
+    "baseline": "233a95b7075a2ccd40b2",
+    "baseline_cost": 1596.0,
+    "baseline_tasks": 95.0,
+    "baseline_workers": 16,
+    "candidate": "d73afee47fede481a6da",
+    "candidate_tasks": 119.0,
+    "candidate_workers": 21,
+    "delta_tasks": 24.0,
+    "error": -15845.091462053571,
+    "family": "team_16741542",
+    "method": "cost_direct_extra",
+    "mode": "cold",
+    "physical_delta_lower": -1576.0,
+    "physical_delta_upper": 17698.0,
+    "pool": "233a95b7075a2ccd40b2",
+    "prediction": 268.9085379464284,
+    "raw_memberships": 1,
+    "target": 16114.0,
+    "variant": "land_crop8",
+    "variant_aliases": [
+      "land_crop8"
+    ],
+    "panel": "large",
+    "forecasts": {
+      "cost_direct_extra": {
+        "baseline_workers": 12.123281069155093,
+        "candidate_workers": 13.61227902105048,
+        "marginal_cash": 268.9085379464284
+      },
+      "fitted_timing": {
+        "baseline_workers": 10.178906299239538,
+        "candidate_workers": 11.99161041269819,
+        "marginal_cash": 133.41348027196432
+      },
+      "timing_extra": {
+        "baseline_workers": 12.006937315157252,
+        "candidate_workers": 13.978684026177818,
+        "marginal_cash": 371.03440471678744
+      },
+      "timing_boost": {
+        "baseline_workers": 12.304574078676605,
+        "candidate_workers": 14.366339472268358,
+        "marginal_cash": 471.2513137157396
+      }
+    },
+    "same_leaf_fraction": 0.4296875,
+    "trees_increasing_cost": 62,
+    "trees_decreasing_cost": 9,
+    "positive_tree_mean_contribution": 273.82799479166664,
+    "negative_tree_mean_contribution": -4.919456845238095,
+    "changed_features": 37,
+    "largest_scaled_feature_changes": [
+      {
+        "name": "bought_8",
+        "baseline": 8.0,
+        "candidate": 16.0,
+        "scaled_change": 3.485470756558793
+      },
+      {
+        "name": "bbox_height",
+        "baseline": 5.0,
+        "candidate": 10.0,
+        "scaled_change": 2.3592406933510053
+      },
+      {
+        "name": "input_distance",
+        "baseline": 37.0,
+        "candidate": 87.0,
+        "scaled_change": 1.6573604215813593
+      },
+      {
+        "name": "input_action_distance",
+        "baseline": 37.0,
+        "candidate": 87.0,
+        "scaled_change": 1.6573604215813593
+      },
+      {
+        "name": "pair_distance_mean",
+        "baseline": 3.84307694,
+        "candidate": 5.46345806,
+        "scaled_change": 1.6203811199999998
+      },
+      {
+        "name": "op_8",
+        "baseline": 7.0,
+        "candidate": 15.0,
+        "scaled_change": 1.476555551574644
+      },
+      {
+        "name": "op_11",
+        "baseline": 0.0,
+        "candidate": 8.0,
+        "scaled_change": 1.4583211424720761
+      },
+      {
+        "name": "input_8",
+        "baseline": 0.0,
+        "candidate": 8.0,
+        "scaled_change": 1.4583211424720761
+      },
+      {
+        "name": "quadrant_tasks_2",
+        "baseline": 0.0,
+        "candidate": 24.0,
+        "scaled_change": 1.326121087302456
+      },
+      {
+        "name": "purchase_units",
+        "baseline": 60.0,
+        "candidate": 77.0,
+        "scaled_change": 1.176913155450819
+      },
+      {
+        "name": "task_distance",
+        "baseline": 266.0,
+        "candidate": 416.0,
+        "scaled_change": 1.1200312112462583
+      },
+      {
+        "name": "input_actions",
+        "baseline": 19.0,
+        "candidate": 27.0,
+        "scaled_change": 1.053808206370301
+      }
+    ],
+    "baseline_support": {
+      "panel": "large",
+      "id": "233a95b7075a2ccd40b2",
+      "families": [
+        "team_16741542"
+      ],
+      "in_training": true,
+      "reference_workers": 16,
+      "lower_bound": 6,
+      "point_workers": 12.123281069155093,
+      "raw_forest_cash": 249.75247395833333,
+      "effective_training_support": 9.734616407401614,
+      "training_weight_at_least_15_workers": 0.00546875,
+      "outside_training_feature_count": 0,
+      "outside_training_max_scaled_gap": 0.0,
+      "outside_training_features": [],
+      "nearest_training_rows": [
+        {
+          "id": "233a95b7075a2ccd40b2",
+          "workers": 12,
+          "distance": 0.0
+        },
+        {
+          "id": "c5609de99196cf2fcc1c",
+          "workers": 12,
+          "distance": 0.06534890745383583
+        },
+        {
+          "id": "ac69c8989e3a1e124052",
+          "workers": 12,
+          "distance": 0.3237339584142422
+        },
+        {
+          "id": "a4192571588177a871e3",
+          "workers": 12,
+          "distance": 0.44660182343681293
+        },
+        {
+          "id": "7a27791023ef4a1290cc",
+          "workers": 12,
+          "distance": 0.5492959389284565
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "233a95b7075a2ccd40b2",
+          "workers": 12,
+          "weight": 0.17239560123291733
+        },
+        {
+          "id": "c5609de99196cf2fcc1c",
+          "workers": 12,
+          "weight": 0.16729577484402844
+        },
+        {
+          "id": "a4192571588177a871e3",
+          "workers": 12,
+          "weight": 0.15364560123291737
+        },
+        {
+          "id": "ac69c8989e3a1e124052",
+          "workers": 12,
+          "weight": 0.09399158337577447
+        },
+        {
+          "id": "7a27791023ef4a1290cc",
+          "workers": 12,
+          "weight": 0.07243280361386975
+        },
+        {
+          "id": "e87a3bb5fa8cb9f91b38",
+          "workers": 12,
+          "weight": 0.04724679170910786
+        },
+        {
+          "id": "523c5b6b7ef1ae8ec9d7",
+          "workers": 12,
+          "weight": 0.03842982742339359
+        },
+        {
+          "id": "cfadc7dec35744ef3728",
+          "workers": 12,
+          "weight": 0.03489560123291741
+        }
+      ]
+    },
+    "candidate_support": {
+      "panel": "large",
+      "id": "d73afee47fede481a6da",
+      "families": [
+        "team_16741542"
+      ],
+      "in_training": false,
+      "reference_workers": 21,
+      "lower_bound": 7,
+      "point_workers": 13.61227902105048,
+      "raw_forest_cash": 518.6610119047618,
+      "effective_training_support": 29.794719567042538,
+      "training_weight_at_least_15_workers": 0.13882068452380958,
+      "outside_training_feature_count": 0,
+      "outside_training_max_scaled_gap": 0.0,
+      "outside_training_features": [],
+      "nearest_training_rows": [
+        {
+          "id": "233a95b7075a2ccd40b2",
+          "workers": 12,
+          "distance": 0.45252999937959737
+        },
+        {
+          "id": "c5609de99196cf2fcc1c",
+          "workers": 12,
+          "distance": 0.4572241026497929
+        },
+        {
+          "id": "ac69c8989e3a1e124052",
+          "workers": 12,
+          "distance": 0.587215714189136
+        },
+        {
+          "id": "a4192571588177a871e3",
+          "workers": 12,
+          "distance": 0.6290094578370505
+        },
+        {
+          "id": "7a27791023ef4a1290cc",
+          "workers": 12,
+          "distance": 0.7360330479559987
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "233a95b7075a2ccd40b2",
+          "workers": 12,
+          "weight": 0.07724820752164499
+        },
+        {
+          "id": "c5609de99196cf2fcc1c",
+          "workers": 12,
+          "weight": 0.07627164502164499
+        },
+        {
+          "id": "a4192571588177a871e3",
+          "workers": 12,
+          "weight": 0.073732582521645
+        },
+        {
+          "id": "c39dd0aa29b8818a7581",
+          "workers": 17,
+          "weight": 0.0639322916666667
+        },
+        {
+          "id": "574d8e12224f5de59eed",
+          "workers": 13,
+          "weight": 0.05571056547619049
+        },
+        {
+          "id": "ac69c8989e3a1e124052",
+          "workers": 12,
+          "weight": 0.039301778950216464
+        },
+        {
+          "id": "3995cb23cd2a63a77856",
+          "workers": 16,
+          "weight": 0.032477678571428574
+        },
+        {
+          "id": "7a27791023ef4a1290cc",
+          "workers": 12,
+          "weight": 0.031879903950216455
+        }
+      ]
+    }
+  },
+  {
+    "added_assets": [
+      1
+    ],
+    "baseline": "31772fa708d23252072b",
+    "baseline_cost": 4180.0,
+    "baseline_tasks": 85.0,
+    "baseline_workers": 18,
+    "candidate": "ae9c3c7ca92097a53171",
+    "candidate_tasks": 88.0,
+    "candidate_workers": 21,
+    "delta_tasks": 3.0,
+    "error": -13534.141276041666,
+    "family": "team_16767215",
+    "method": "cost_direct_extra",
+    "mode": "cold",
+    "physical_delta_lower": -4168.0,
+    "physical_delta_upper": 17698.0,
+    "pool": "31772fa708d23252072b",
+    "prediction": -4.141276041666686,
+    "raw_memberships": 1,
+    "target": 13530.0,
+    "variant": "crop1_near",
+    "variant_aliases": [
+      "crop1_near"
+    ],
+    "panel": "owned",
+    "forecasts": {
+      "cost_direct_extra": {
+        "baseline_workers": 11.455231950575174,
+        "candidate_workers": 11.408700759095773,
+        "marginal_cash": -4.141276041666686
+      },
+      "fitted_timing": {
+        "baseline_workers": 10.855347821775736,
+        "candidate_workers": 11.070235348988227,
+        "marginal_cash": 14.20681586228676
+      },
+      "timing_extra": {
+        "baseline_workers": 11.77315739894422,
+        "candidate_workers": 12.02545385675393,
+        "marginal_cash": 23.854346866530477
+      },
+      "timing_boost": {
+        "baseline_workers": 12.246463523739626,
+        "candidate_workers": 12.475051487195746,
+        "marginal_cash": 32.91666673768117
+      }
+    },
+    "same_leaf_fraction": 0.9765625,
+    "trees_increasing_cost": 1,
+    "trees_decreasing_cost": 2,
+    "positive_tree_mean_contribution": 0.6002604166666666,
+    "negative_tree_mean_contribution": -4.741536458333333,
+    "changed_features": 42,
+    "largest_scaled_feature_changes": [
+      {
+        "name": "purchase_weighted_hour",
+        "baseline": 8.33333302,
+        "candidate": 5.0,
+        "scaled_change": -0.6527452678078535
+      },
+      {
+        "name": "connected_components",
+        "baseline": 7.0,
+        "candidate": 6.0,
+        "scaled_change": -0.5699057214632914
+      },
+      {
+        "name": "bought_8",
+        "baseline": 0.0,
+        "candidate": 1.0,
+        "scaled_change": 0.4356838445698491
+      },
+      {
+        "name": "purchase_events",
+        "baseline": 3.0,
+        "candidate": 5.0,
+        "scaled_change": 0.3596497093319772
+      },
+      {
+        "name": "route_pack_return",
+        "baseline": 11.0,
+        "candidate": 12.0,
+        "scaled_change": 0.25069671100278007
+      },
+      {
+        "name": "deadline_required_ops_max",
+        "baseline": 29.0,
+        "candidate": 28.0,
+        "scaled_change": -0.23065084096125651
+      },
+      {
+        "name": "quadrant_tasks_1",
+        "baseline": 25.0,
+        "candidate": 28.0,
+        "scaled_change": 0.19258575402689376
+      },
+      {
+        "name": "op_8",
+        "baseline": 0.0,
+        "candidate": 1.0,
+        "scaled_change": 0.1845694439468305
+      },
+      {
+        "name": "op_11",
+        "baseline": 2.0,
+        "candidate": 3.0,
+        "scaled_change": 0.18229014280900951
+      },
+      {
+        "name": "input_8",
+        "baseline": 2.0,
+        "candidate": 3.0,
+        "scaled_change": 0.18229014280900951
+      },
+      {
+        "name": "deadline_required_actions_17",
+        "baseline": 13.0,
+        "candidate": 12.0,
+        "scaled_change": -0.17769393329088853
+      },
+      {
+        "name": "deadline_required_actions_18",
+        "baseline": 18.0,
+        "candidate": 17.0,
+        "scaled_change": -0.1669695491262578
+      }
+    ],
+    "baseline_support": {
+      "panel": "owned",
+      "id": "31772fa708d23252072b",
+      "families": [
+        "team_16767215"
+      ],
+      "in_training": false,
+      "reference_workers": 18,
+      "lower_bound": 6,
+      "point_workers": 11.455231950575174,
+      "raw_forest_cash": 183.51564360119045,
+      "effective_training_support": 34.19768659630845,
+      "training_weight_at_least_15_workers": 0.02066592261904762,
+      "outside_training_feature_count": 5,
+      "outside_training_max_scaled_gap": 5.204102281862412,
+      "outside_training_features": [
+        {
+          "name": "withdrawal_checkpoint_49",
+          "value": 100.0,
+          "min": 0.0,
+          "max": 58.0,
+          "scaled_gap": 5.204102281862412
+        },
+        {
+          "name": "output_1",
+          "value": 79.0,
+          "min": 0.0,
+          "max": 50.0,
+          "scaled_gap": 3.3435652553833575
+        },
+        {
+          "name": "deadline_required_actions_21",
+          "value": 32.0,
+          "min": 0.0,
+          "max": 27.0,
+          "scaled_gap": 0.7030040806749503
+        },
+        {
+          "name": "species_1",
+          "value": 40.0,
+          "min": 0.0,
+          "max": 37.0,
+          "scaled_gap": 0.3621339478583853
+        },
+        {
+          "name": "deadline_required_actions_20",
+          "value": 29.0,
+          "min": 0.0,
+          "max": 27.0,
+          "scaled_gap": 0.29346520546129856
+        }
+      ],
+      "nearest_training_rows": [
+        {
+          "id": "b925b69a450ae199c2ad",
+          "workers": 10,
+          "distance": 1.0324114630170749
+        },
+        {
+          "id": "c0a51560551dac18d388",
+          "workers": 10,
+          "distance": 1.0659276368094377
+        },
+        {
+          "id": "3899601f304036eff2e3",
+          "workers": 9,
+          "distance": 1.206724775167808
+        },
+        {
+          "id": "6decdd5208147f9b7dd5",
+          "workers": 13,
+          "distance": 1.210338100655503
+        },
+        {
+          "id": "f90065fb8f88726c790e",
+          "workers": 9,
+          "distance": 1.2111625419927827
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "c0a51560551dac18d388",
+          "workers": 10,
+          "weight": 0.0894159226190476
+        },
+        {
+          "id": "b925b69a450ae199c2ad",
+          "workers": 10,
+          "weight": 0.07561383928571427
+        },
+        {
+          "id": "0af7724e39909de27388",
+          "workers": 12,
+          "weight": 0.06834077380952383
+        },
+        {
+          "id": "fa97b3520de9893712a9",
+          "workers": 8,
+          "weight": 0.03290550595238095
+        },
+        {
+          "id": "5127c8ea7dc5b23319bd",
+          "workers": 9,
+          "weight": 0.031594122023809526
+        },
+        {
+          "id": "89c1d7ea7f0ca135d3de",
+          "workers": 14,
+          "weight": 0.03139880952380952
+        },
+        {
+          "id": "b61dfee01c704c16a5ec",
+          "workers": 11,
+          "weight": 0.03095238095238095
+        },
+        {
+          "id": "9fa47c6abf2a6ca8df81",
+          "workers": 11,
+          "weight": 0.027938988095238086
+        }
+      ]
+    },
+    "candidate_support": {
+      "panel": "owned",
+      "id": "ae9c3c7ca92097a53171",
+      "families": [
+        "team_16767215"
+      ],
+      "in_training": false,
+      "reference_workers": 21,
+      "lower_bound": 6,
+      "point_workers": 11.408700759095773,
+      "raw_forest_cash": 179.3743675595238,
+      "effective_training_support": 34.103955529469395,
+      "training_weight_at_least_15_workers": 0.019363839285714286,
+      "outside_training_feature_count": 5,
+      "outside_training_max_scaled_gap": 5.204102281862412,
+      "outside_training_features": [
+        {
+          "name": "withdrawal_checkpoint_49",
+          "value": 100.0,
+          "min": 0.0,
+          "max": 58.0,
+          "scaled_gap": 5.204102281862412
+        },
+        {
+          "name": "output_1",
+          "value": 79.0,
+          "min": 0.0,
+          "max": 50.0,
+          "scaled_gap": 3.3435652553833575
+        },
+        {
+          "name": "deadline_required_actions_21",
+          "value": 31.0,
+          "min": 0.0,
+          "max": 27.0,
+          "scaled_gap": 0.5624032645399603
+        },
+        {
+          "name": "species_1",
+          "value": 40.0,
+          "min": 0.0,
+          "max": 37.0,
+          "scaled_gap": 0.3621339478583853
+        },
+        {
+          "name": "deadline_required_actions_20",
+          "value": 28.0,
+          "min": 0.0,
+          "max": 27.0,
+          "scaled_gap": 0.14673260273064928
+        }
+      ],
+      "nearest_training_rows": [
+        {
+          "id": "b925b69a450ae199c2ad",
+          "workers": 10,
+          "distance": 1.0255055421179682
+        },
+        {
+          "id": "c0a51560551dac18d388",
+          "workers": 10,
+          "distance": 1.0466544731055436
+        },
+        {
+          "id": "6decdd5208147f9b7dd5",
+          "workers": 13,
+          "distance": 1.1847329104329993
+        },
+        {
+          "id": "3899601f304036eff2e3",
+          "workers": 9,
+          "distance": 1.1904929200950767
+        },
+        {
+          "id": "f90065fb8f88726c790e",
+          "workers": 9,
+          "distance": 1.1960644411236203
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "c0a51560551dac18d388",
+          "workers": 10,
+          "weight": 0.0890252976190476
+        },
+        {
+          "id": "b925b69a450ae199c2ad",
+          "workers": 10,
+          "weight": 0.07522321428571428
+        },
+        {
+          "id": "0af7724e39909de27388",
+          "workers": 12,
+          "weight": 0.06925223214285715
+        },
+        {
+          "id": "fa97b3520de9893712a9",
+          "workers": 8,
+          "weight": 0.03251488095238095
+        },
+        {
+          "id": "5127c8ea7dc5b23319bd",
+          "workers": 9,
+          "weight": 0.031594122023809526
+        },
+        {
+          "id": "b61dfee01c704c16a5ec",
+          "workers": 11,
+          "weight": 0.03095238095238095
+        },
+        {
+          "id": "89c1d7ea7f0ca135d3de",
+          "workers": 14,
+          "weight": 0.030096726190476188
+        },
+        {
+          "id": "9fa47c6abf2a6ca8df81",
+          "workers": 11,
+          "weight": 0.027938988095238086
+        }
+      ]
+    }
+  },
+  {
+    "added_assets": [
+      2
+    ],
+    "baseline": "a07bc326be8bb4f2beae",
+    "baseline_cost": 232.0,
+    "baseline_tasks": 147.0,
+    "baseline_workers": 12,
+    "candidate": "2a22298396122ce9ecad",
+    "candidate_tasks": 155.0,
+    "candidate_workers": 16,
+    "delta_tasks": 8.0,
+    "error": -1364.3640252976188,
+    "family": "team_16767215",
+    "method": "cost_direct_extra",
+    "mode": "cold",
+    "physical_delta_lower": -144.0,
+    "physical_delta_upper": 1542.0,
+    "pool": "a07bc326be8bb4f2beae",
+    "prediction": -0.3640252976189231,
+    "raw_memberships": 1,
+    "target": 1364.0,
+    "variant": "crop2_far_late",
+    "variant_aliases": [
+      "crop2_far_late"
+    ],
+    "panel": "owned",
+    "forecasts": {
+      "cost_direct_extra": {
+        "baseline_workers": 12.879903092964616,
+        "candidate_workers": 12.87737513950893,
+        "marginal_cash": -0.3640252976189231
+      },
+      "fitted_timing": {
+        "baseline_workers": 13.430496736474993,
+        "candidate_workers": 14.104554175902805,
+        "marginal_cash": 172.1111847166843
+      },
+      "timing_extra": {
+        "baseline_workers": 12.944641551205304,
+        "candidate_workers": 13.600244786995484,
+        "marginal_cash": 147.82865199638394
+      },
+      "timing_boost": {
+        "baseline_workers": 12.933492677283022,
+        "candidate_workers": 13.506761130370856,
+        "marginal_cash": 127.65239784765441
+      }
+    },
+    "same_leaf_fraction": 0.703125,
+    "trees_increasing_cost": 15,
+    "trees_decreasing_cost": 21,
+    "positive_tree_mean_contribution": 19.43833705357143,
+    "negative_tree_mean_contribution": -19.802362351190474,
+    "changed_features": 36,
+    "largest_scaled_feature_changes": [
+      {
+        "name": "bought_8",
+        "baseline": 0.0,
+        "candidate": 2.0,
+        "scaled_change": 0.8713676891396982
+      },
+      {
+        "name": "op_12",
+        "baseline": 5.0,
+        "candidate": 7.0,
+        "scaled_change": 0.7653247495565204
+      },
+      {
+        "name": "bbox_width",
+        "baseline": 9.0,
+        "candidate": 10.0,
+        "scaled_change": 0.6494217417430893
+      },
+      {
+        "name": "connected_components",
+        "baseline": 1.0,
+        "candidate": 2.0,
+        "scaled_change": 0.5699057214632914
+      },
+      {
+        "name": "input_distance",
+        "baseline": 80.0,
+        "candidate": 96.0,
+        "scaled_change": 0.5303553349060349
+      },
+      {
+        "name": "input_action_distance",
+        "baseline": 80.0,
+        "candidate": 96.0,
+        "scaled_change": 0.5303553349060349
+      },
+      {
+        "name": "route_pack_return",
+        "baseline": 17.0,
+        "candidate": 19.0,
+        "scaled_change": 0.5013934220055601
+      },
+      {
+        "name": "task_distance",
+        "baseline": 471.0,
+        "candidate": 535.0,
+        "scaled_change": 0.4778799834650702
+      },
+      {
+        "name": "op_8",
+        "baseline": 13.0,
+        "candidate": 15.0,
+        "scaled_change": 0.369138887893661
+      },
+      {
+        "name": "input_8",
+        "baseline": 9.0,
+        "candidate": 11.0,
+        "scaled_change": 0.36458028561801903
+      },
+      {
+        "name": "op_11",
+        "baseline": 9.0,
+        "candidate": 11.0,
+        "scaled_change": 0.36458028561801903
+      },
+      {
+        "name": "route_pack_open",
+        "baseline": 12.0,
+        "candidate": 13.0,
+        "scaled_change": 0.36355372677024894
+      }
+    ],
+    "baseline_support": {
+      "panel": "owned",
+      "id": "a07bc326be8bb4f2beae",
+      "families": [
+        "team_16767215"
+      ],
+      "in_training": true,
+      "reference_workers": 12,
+      "lower_bound": 9,
+      "point_workers": 12.879903092964616,
+      "raw_forest_cash": 358.7060453869048,
+      "effective_training_support": 16.19840575594659,
+      "training_weight_at_least_15_workers": 0.010305059523809522,
+      "outside_training_feature_count": 0,
+      "outside_training_max_scaled_gap": 0.0,
+      "outside_training_features": [],
+      "nearest_training_rows": [
+        {
+          "id": "a07bc326be8bb4f2beae",
+          "workers": 13,
+          "distance": 0.0
+        },
+        {
+          "id": "553219096a6bdb783586",
+          "workers": 13,
+          "distance": 0.4932418034286938
+        },
+        {
+          "id": "29ea63c1001439fd1b50",
+          "workers": 12,
+          "distance": 0.5544534096573812
+        },
+        {
+          "id": "24abcf4aedb558becf1d",
+          "workers": 10,
+          "distance": 0.6569148760251942
+        },
+        {
+          "id": "11e082bd94b5e2e425b6",
+          "workers": 11,
+          "distance": 0.6756424550154809
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "a07bc326be8bb4f2beae",
+          "workers": 13,
+          "weight": 0.20969122023809508
+        },
+        {
+          "id": "fb00bceaa5e92cdb6f1b",
+          "workers": 12,
+          "weight": 0.06073288690476192
+        },
+        {
+          "id": "adccd585af95c29cd36b",
+          "workers": 14,
+          "weight": 0.057738095238095255
+        },
+        {
+          "id": "29ea63c1001439fd1b50",
+          "workers": 12,
+          "weight": 0.04043898809523809
+        },
+        {
+          "id": "2b71e9b790ee39bcd315",
+          "workers": 13,
+          "weight": 0.032533482142857145
+        },
+        {
+          "id": "553219096a6bdb783586",
+          "workers": 13,
+          "weight": 0.029631696428571427
+        },
+        {
+          "id": "4e12e1e40fe86791c055",
+          "workers": 14,
+          "weight": 0.028813244047619053
+        },
+        {
+          "id": "5ecb9bfcf5521d30ede8",
+          "workers": 13,
+          "weight": 0.02881324404761905
+        }
+      ]
+    },
+    "candidate_support": {
+      "panel": "owned",
+      "id": "2a22298396122ce9ecad",
+      "families": [
+        "team_16767215"
+      ],
+      "in_training": false,
+      "reference_workers": 16,
+      "lower_bound": 10,
+      "point_workers": 12.87737513950893,
+      "raw_forest_cash": 358.3420200892858,
+      "effective_training_support": 27.464948222009628,
+      "training_weight_at_least_15_workers": 0.03084077380952381,
+      "outside_training_feature_count": 0,
+      "outside_training_max_scaled_gap": 0.0,
+      "outside_training_features": [],
+      "nearest_training_rows": [
+        {
+          "id": "a07bc326be8bb4f2beae",
+          "workers": 13,
+          "distance": 0.14210353609371318
+        },
+        {
+          "id": "553219096a6bdb783586",
+          "workers": 13,
+          "distance": 0.4677965836309768
+        },
+        {
+          "id": "29ea63c1001439fd1b50",
+          "workers": 12,
+          "distance": 0.572536913280308
+        },
+        {
+          "id": "24abcf4aedb558becf1d",
+          "workers": 10,
+          "distance": 0.7017411841064993
+        },
+        {
+          "id": "11e082bd94b5e2e425b6",
+          "workers": 11,
+          "distance": 0.7045850880890732
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "a07bc326be8bb4f2beae",
+          "workers": 13,
+          "weight": 0.14547991071428562
+        },
+        {
+          "id": "5ecb9bfcf5521d30ede8",
+          "workers": 13,
+          "weight": 0.04667038690476193
+        },
+        {
+          "id": "553219096a6bdb783586",
+          "workers": 13,
+          "weight": 0.04585193452380953
+        },
+        {
+          "id": "fb00bceaa5e92cdb6f1b",
+          "workers": 12,
+          "weight": 0.037927827380952385
+        },
+        {
+          "id": "adccd585af95c29cd36b",
+          "workers": 14,
+          "weight": 0.03532366071428572
+        },
+        {
+          "id": "87b50577271c99aad642",
+          "workers": 12,
+          "weight": 0.034412202380952384
+        },
+        {
+          "id": "29ea63c1001439fd1b50",
+          "workers": 12,
+          "weight": 0.030673363095238094
+        },
+        {
+          "id": "2b71e9b790ee39bcd315",
+          "workers": 13,
+          "weight": 0.02659970238095238
+        }
+      ]
+    }
+  },
+  {
+    "added_assets": [
+      1
+    ],
+    "baseline": "0af7724e39909de27388",
+    "baseline_cost": 609.0,
+    "baseline_tasks": 84.0,
+    "baseline_workers": 14,
+    "candidate": "e5af97300faaac8c689b",
+    "candidate_tasks": 88.0,
+    "candidate_workers": 16,
+    "delta_tasks": 4.0,
+    "error": -990.1389322916668,
+    "family": "team_16622349",
+    "method": "cost_direct_extra",
+    "mode": "cold",
+    "physical_delta_lower": -597.0,
+    "physical_delta_upper": 1584.0,
+    "pool": "0af7724e39909de27388",
+    "prediction": -3.1389322916667766,
+    "raw_memberships": 1,
+    "target": 987.0,
+    "variant": "crop1_far",
+    "variant_aliases": [
+      "crop1_far"
+    ],
+    "panel": "owned",
+    "forecasts": {
+      "cost_direct_extra": {
+        "baseline_workers": 11.43444334369984,
+        "candidate_workers": 11.39917444154628,
+        "marginal_cash": -3.1389322916667766
+      },
+      "fitted_timing": {
+        "baseline_workers": 11.54567340116099,
+        "candidate_workers": 11.811645554585482,
+        "marginal_cash": 23.67152165477981
+      },
+      "timing_extra": {
+        "baseline_workers": 12.111666982126906,
+        "candidate_workers": 12.352752399540142,
+        "marginal_cash": 34.71630010750607
+      },
+      "timing_boost": {
+        "baseline_workers": 12.254627731907032,
+        "candidate_workers": 12.535960306225764,
+        "marginal_cash": 40.511890701897414
+      }
+    },
+    "same_leaf_fraction": 0.9375,
+    "trees_increasing_cost": 0,
+    "trees_decreasing_cost": 8,
+    "positive_tree_mean_contribution": 0.0,
+    "negative_tree_mean_contribution": -3.1389322916666673,
+    "changed_features": 38,
+    "largest_scaled_feature_changes": [
+      {
+        "name": "max_tile_tasks",
+        "baseline": 2.0,
+        "candidate": 4.0,
+        "scaled_change": 2.0
+      },
+      {
+        "name": "max_chain",
+        "baseline": 2.0,
+        "candidate": 4.0,
+        "scaled_change": 2.0
+      },
+      {
+        "name": "bought_8",
+        "baseline": 0.0,
+        "candidate": 1.0,
+        "scaled_change": 0.4356838445698491
+      },
+      {
+        "name": "op_12",
+        "baseline": 0.0,
+        "candidate": 1.0,
+        "scaled_change": 0.3826623747782602
+      },
+      {
+        "name": "purchase_events",
+        "baseline": 0.0,
+        "candidate": 2.0,
+        "scaled_change": 0.3596497093319772
+      },
+      {
+        "name": "route_pack_return",
+        "baseline": 11.0,
+        "candidate": 12.0,
+        "scaled_change": 0.25069671100278007
+      },
+      {
+        "name": "input_action_distance",
+        "baseline": 20.0,
+        "candidate": 27.0,
+        "scaled_change": 0.2320304590213903
+      },
+      {
+        "name": "input_distance",
+        "baseline": 20.0,
+        "candidate": 27.0,
+        "scaled_change": 0.2320304590213903
+      },
+      {
+        "name": "deadline_required_ops_max",
+        "baseline": 38.0,
+        "candidate": 37.0,
+        "scaled_change": -0.23065084096125651
+      },
+      {
+        "name": "quadrant_tasks_2",
+        "baseline": 4.0,
+        "candidate": 8.0,
+        "scaled_change": 0.221020181217076
+      },
+      {
+        "name": "task_distance",
+        "baseline": 330.0,
+        "candidate": 358.0,
+        "scaled_change": 0.2090724927659682
+      },
+      {
+        "name": "pair_distance_mean",
+        "baseline": 5.36521721,
+        "candidate": 5.56891775,
+        "scaled_change": 0.20370053999999982
+      }
+    ],
+    "baseline_support": {
+      "panel": "owned",
+      "id": "0af7724e39909de27388",
+      "families": [
+        "team_16622349"
+      ],
+      "in_training": true,
+      "reference_workers": 14,
+      "lower_bound": 6,
+      "point_workers": 11.43444334369984,
+      "raw_forest_cash": 181.6654575892857,
+      "effective_training_support": 17.279528614900194,
+      "training_weight_at_least_15_workers": 0.00902157738095238,
+      "outside_training_feature_count": 0,
+      "outside_training_max_scaled_gap": 0.0,
+      "outside_training_features": [],
+      "nearest_training_rows": [
+        {
+          "id": "0af7724e39909de27388",
+          "workers": 12,
+          "distance": 0.0
+        },
+        {
+          "id": "fa97b3520de9893712a9",
+          "workers": 8,
+          "distance": 1.0944541349149082
+        },
+        {
+          "id": "c0a51560551dac18d388",
+          "workers": 10,
+          "distance": 1.2062266005963722
+        },
+        {
+          "id": "8a9718055973049f67b9",
+          "workers": 9,
+          "distance": 1.2997110231665996
+        },
+        {
+          "id": "4000127cb989cd1298d1",
+          "workers": 10,
+          "distance": 1.3024038021484623
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "0af7724e39909de27388",
+          "workers": 12,
+          "weight": 0.21374627976190472
+        },
+        {
+          "id": "c0a51560551dac18d388",
+          "workers": 10,
+          "weight": 0.05308779761904763
+        },
+        {
+          "id": "2348cb0bde34094ba42a",
+          "workers": 11,
+          "weight": 0.038374255952380955
+        },
+        {
+          "id": "fa97b3520de9893712a9",
+          "workers": 8,
+          "weight": 0.027957589285714287
+        },
+        {
+          "id": "b925b69a450ae199c2ad",
+          "workers": 10,
+          "weight": 0.026060267857142858
+        },
+        {
+          "id": "9c2b5f468a5676ab350d",
+          "workers": 11,
+          "weight": 0.02507440476190476
+        },
+        {
+          "id": "b6ef413990dfd1f56327",
+          "workers": 13,
+          "weight": 0.023270089285714283
+        },
+        {
+          "id": "ebc430e8b978b69bc03d",
+          "workers": 11,
+          "weight": 0.022098214285714287
+        }
+      ]
+    },
+    "candidate_support": {
+      "panel": "owned",
+      "id": "e5af97300faaac8c689b",
+      "families": [
+        "team_16622349"
+      ],
+      "in_training": false,
+      "reference_workers": 16,
+      "lower_bound": 6,
+      "point_workers": 11.39917444154628,
+      "raw_forest_cash": 178.52652529761903,
+      "effective_training_support": 19.52548071471585,
+      "training_weight_at_least_15_workers": 0.00902157738095238,
+      "outside_training_feature_count": 0,
+      "outside_training_max_scaled_gap": 0.0,
+      "outside_training_features": [],
+      "nearest_training_rows": [
+        {
+          "id": "0af7724e39909de27388",
+          "workers": 12,
+          "distance": 0.19811702750909793
+        },
+        {
+          "id": "fa97b3520de9893712a9",
+          "workers": 8,
+          "distance": 1.0866701164383519
+        },
+        {
+          "id": "c0a51560551dac18d388",
+          "workers": 10,
+          "distance": 1.1975342872617794
+        },
+        {
+          "id": "8a9718055973049f67b9",
+          "workers": 9,
+          "distance": 1.286364180136391
+        },
+        {
+          "id": "4000127cb989cd1298d1",
+          "workers": 10,
+          "distance": 1.2891955482892186
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "0af7724e39909de27388",
+          "workers": 12,
+          "weight": 0.1991629464285714
+        },
+        {
+          "id": "c0a51560551dac18d388",
+          "workers": 10,
+          "weight": 0.04957217261904762
+        },
+        {
+          "id": "2348cb0bde34094ba42a",
+          "workers": 11,
+          "weight": 0.039025297619047626
+        },
+        {
+          "id": "9c2b5f468a5676ab350d",
+          "workers": 11,
+          "weight": 0.026190476190476188
+        },
+        {
+          "id": "fa97b3520de9893712a9",
+          "workers": 8,
+          "weight": 0.024051339285714284
+        },
+        {
+          "id": "b925b69a450ae199c2ad",
+          "workers": 10,
+          "weight": 0.022544642857142857
+        },
+        {
+          "id": "89c1d7ea7f0ca135d3de",
+          "workers": 14,
+          "weight": 0.02202380952380952
+        },
+        {
+          "id": "ebc430e8b978b69bc03d",
+          "workers": 11,
+          "weight": 0.02079613095238095
+        }
+      ]
+    }
+  },
+  {
+    "added_assets": [
+      2
+    ],
+    "baseline": "0af7724e39909de27388",
+    "baseline_cost": 609.0,
+    "baseline_tasks": 84.0,
+    "baseline_workers": 14,
+    "candidate": "1189927d2a52b5bb9ee6",
+    "candidate_tasks": 94.0,
+    "candidate_workers": 16,
+    "delta_tasks": 10.0,
+    "error": -977.6514508928572,
+    "family": "team_16622349",
+    "method": "cost_direct_extra",
+    "mode": "cold",
+    "physical_delta_lower": -589.0,
+    "physical_delta_upper": 1584.0,
+    "pool": "0af7724e39909de27388",
+    "prediction": 9.348549107142844,
+    "raw_memberships": 1,
+    "target": 987.0,
+    "variant": "animal2_far",
+    "variant_aliases": [
+      "animal2_far"
+    ],
+    "panel": "owned",
+    "forecasts": {
+      "cost_direct_extra": {
+        "baseline_workers": 11.43444334369984,
+        "candidate_workers": 11.539483221308187,
+        "marginal_cash": 9.348549107142844
+      },
+      "fitted_timing": {
+        "baseline_workers": 11.54567340116099,
+        "candidate_workers": 12.56655815260764,
+        "marginal_cash": 122.0194412721722
+      },
+      "timing_extra": {
+        "baseline_workers": 12.111666982126906,
+        "candidate_workers": 13.11856454251474,
+        "marginal_cash": 155.54549297965997
+      },
+      "timing_boost": {
+        "baseline_workers": 12.254627731907032,
+        "candidate_workers": 13.382481919187917,
+        "marginal_cash": 196.45189377617208
+      }
+    },
+    "same_leaf_fraction": 0.78125,
+    "trees_increasing_cost": 15,
+    "trees_decreasing_cost": 12,
+    "positive_tree_mean_contribution": 14.57016369047619,
+    "negative_tree_mean_contribution": -5.221614583333334,
+    "changed_features": 39,
+    "largest_scaled_feature_changes": [
+      {
+        "name": "max_tile_tasks",
+        "baseline": 2.0,
+        "candidate": 5.0,
+        "scaled_change": 3.0
+      },
+      {
+        "name": "max_chain",
+        "baseline": 2.0,
+        "candidate": 5.0,
+        "scaled_change": 3.0
+      },
+      {
+        "name": "bought_9",
+        "baseline": 0.0,
+        "candidate": 2.0,
+        "scaled_change": 2.0
+      },
+      {
+        "name": "op_7",
+        "baseline": 0.0,
+        "candidate": 2.0,
+        "scaled_change": 2.0
+      },
+      {
+        "name": "input_9",
+        "baseline": 0.0,
+        "candidate": 2.0,
+        "scaled_change": 2.0
+      },
+      {
+        "name": "op_13",
+        "baseline": 0.0,
+        "candidate": 2.0,
+        "scaled_change": 2.0
+      },
+      {
+        "name": "required_pickup_types",
+        "baseline": 0.0,
+        "candidate": 1.0,
+        "scaled_change": 1.0
+      },
+      {
+        "name": "distinct_inputs",
+        "baseline": 2.0,
+        "candidate": 3.0,
+        "scaled_change": 1.0
+      },
+      {
+        "name": "input_action_distance",
+        "baseline": 20.0,
+        "candidate": 46.0,
+        "scaled_change": 0.8618274192223069
+      },
+      {
+        "name": "input_distance",
+        "baseline": 20.0,
+        "candidate": 46.0,
+        "scaled_change": 0.8618274192223069
+      },
+      {
+        "name": "op_12",
+        "baseline": 0.0,
+        "candidate": 2.0,
+        "scaled_change": 0.7653247495565204
+      },
+      {
+        "name": "quadrant_tasks_2",
+        "baseline": 4.0,
+        "candidate": 14.0,
+        "scaled_change": 0.55255045304269
+      }
+    ],
+    "baseline_support": {
+      "panel": "owned",
+      "id": "0af7724e39909de27388",
+      "families": [
+        "team_16622349"
+      ],
+      "in_training": true,
+      "reference_workers": 14,
+      "lower_bound": 6,
+      "point_workers": 11.43444334369984,
+      "raw_forest_cash": 181.6654575892857,
+      "effective_training_support": 17.279528614900194,
+      "training_weight_at_least_15_workers": 0.00902157738095238,
+      "outside_training_feature_count": 0,
+      "outside_training_max_scaled_gap": 0.0,
+      "outside_training_features": [],
+      "nearest_training_rows": [
+        {
+          "id": "0af7724e39909de27388",
+          "workers": 12,
+          "distance": 0.0
+        },
+        {
+          "id": "fa97b3520de9893712a9",
+          "workers": 8,
+          "distance": 1.0944541349149082
+        },
+        {
+          "id": "c0a51560551dac18d388",
+          "workers": 10,
+          "distance": 1.2062266005963722
+        },
+        {
+          "id": "8a9718055973049f67b9",
+          "workers": 9,
+          "distance": 1.2997110231665996
+        },
+        {
+          "id": "4000127cb989cd1298d1",
+          "workers": 10,
+          "distance": 1.3024038021484623
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "0af7724e39909de27388",
+          "workers": 12,
+          "weight": 0.21374627976190472
+        },
+        {
+          "id": "c0a51560551dac18d388",
+          "workers": 10,
+          "weight": 0.05308779761904763
+        },
+        {
+          "id": "2348cb0bde34094ba42a",
+          "workers": 11,
+          "weight": 0.038374255952380955
+        },
+        {
+          "id": "fa97b3520de9893712a9",
+          "workers": 8,
+          "weight": 0.027957589285714287
+        },
+        {
+          "id": "b925b69a450ae199c2ad",
+          "workers": 10,
+          "weight": 0.026060267857142858
+        },
+        {
+          "id": "9c2b5f468a5676ab350d",
+          "workers": 11,
+          "weight": 0.02507440476190476
+        },
+        {
+          "id": "b6ef413990dfd1f56327",
+          "workers": 13,
+          "weight": 0.023270089285714283
+        },
+        {
+          "id": "ebc430e8b978b69bc03d",
+          "workers": 11,
+          "weight": 0.022098214285714287
+        }
+      ]
+    },
+    "candidate_support": {
+      "panel": "owned",
+      "id": "1189927d2a52b5bb9ee6",
+      "families": [
+        "team_16622349"
+      ],
+      "in_training": false,
+      "reference_workers": 16,
+      "lower_bound": 7,
+      "point_workers": 11.539483221308187,
+      "raw_forest_cash": 191.01400669642857,
+      "effective_training_support": 25.89511986602845,
+      "training_weight_at_least_15_workers": 0.01097470238095238,
+      "outside_training_feature_count": 0,
+      "outside_training_max_scaled_gap": 0.0,
+      "outside_training_features": [],
+      "nearest_training_rows": [
+        {
+          "id": "0af7724e39909de27388",
+          "workers": 12,
+          "distance": 0.4184777471761199
+        },
+        {
+          "id": "fa97b3520de9893712a9",
+          "workers": 8,
+          "distance": 1.1508010199193006
+        },
+        {
+          "id": "c0a51560551dac18d388",
+          "workers": 10,
+          "distance": 1.2494603638529906
+        },
+        {
+          "id": "4000127cb989cd1298d1",
+          "workers": 10,
+          "distance": 1.3237822299447393
+        },
+        {
+          "id": "841c77ad844265be0c4e",
+          "workers": 10,
+          "distance": 1.3327078382368183
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "0af7724e39909de27388",
+          "workers": 12,
+          "weight": 0.16646205357142854
+        },
+        {
+          "id": "2348cb0bde34094ba42a",
+          "workers": 11,
+          "weight": 0.039564732142857155
+        },
+        {
+          "id": "c0a51560551dac18d388",
+          "workers": 10,
+          "weight": 0.034914434523809525
+        },
+        {
+          "id": "9c2b5f468a5676ab350d",
+          "workers": 11,
+          "weight": 0.026469494047619044
+        },
+        {
+          "id": "89c1d7ea7f0ca135d3de",
+          "workers": 14,
+          "weight": 0.02593005952380952
+        },
+        {
+          "id": "b6ef413990dfd1f56327",
+          "workers": 13,
+          "weight": 0.02243303571428571
+        },
+        {
+          "id": "fd06b9e07107755582ca",
+          "workers": 11,
+          "weight": 0.02077752976190476
+        },
+        {
+          "id": "b61dfee01c704c16a5ec",
+          "workers": 11,
+          "weight": 0.020275297619047616
+        }
+      ]
+    }
+  },
+  {
+    "added_assets": [
+      8
+    ],
+    "baseline": "01ffd7bb59a622a4c3f4",
+    "baseline_cost": 143.0,
+    "baseline_tasks": 121.0,
+    "baseline_workers": 11,
+    "candidate": "ea0bed958165ffb5eb1b",
+    "candidate_tasks": 145.0,
+    "candidate_workers": 15,
+    "delta_tasks": 24.0,
+    "error": -773.4557384672619,
+    "family": "team_16797543",
+    "method": "cost_direct_extra",
+    "mode": "cold",
+    "physical_delta_lower": -55.0,
+    "physical_delta_upper": 953.0,
+    "pool": "01ffd7bb59a622a4c3f4",
+    "prediction": 69.54426153273809,
+    "raw_memberships": 1,
+    "target": 843.0,
+    "variant": "land_crop8",
+    "variant_aliases": [
+      "land_crop8"
+    ],
+    "panel": "large",
+    "forecasts": {
+      "cost_direct_extra": {
+        "baseline_workers": 11.67372623645666,
+        "candidate_workers": 12.281290948454034,
+        "marginal_cash": 69.54426153273809
+      },
+      "fitted_timing": {
+        "baseline_workers": 10.774038295274979,
+        "candidate_workers": 12.555093220030061,
+        "marginal_cash": 181.36131744420493
+      },
+      "timing_extra": {
+        "baseline_workers": 11.32772828141991,
+        "candidate_workers": 12.923747571293973,
+        "marginal_cash": 192.85183321996007
+      },
+      "timing_boost": {
+        "baseline_workers": 11.513679483343491,
+        "candidate_workers": 13.25541670959486,
+        "marginal_cash": 246.79461931803155
+      }
+    },
+    "same_leaf_fraction": 0.078125,
+    "trees_increasing_cost": 82,
+    "trees_decreasing_cost": 33,
+    "positive_tree_mean_contribution": 82.65038132440476,
+    "negative_tree_mean_contribution": -13.106119791666666,
+    "changed_features": 32,
+    "largest_scaled_feature_changes": [
+      {
+        "name": "quadrant_tasks_3",
+        "baseline": 0.0,
+        "candidate": 24.0,
+        "scaled_change": 24.0
+      },
+      {
+        "name": "quadrant_tiles_3",
+        "baseline": 0.0,
+        "candidate": 8.0,
+        "scaled_change": 8.0
+      },
+      {
+        "name": "bought_8",
+        "baseline": 0.0,
+        "candidate": 8.0,
+        "scaled_change": 3.485470756558793
+      },
+      {
+        "name": "input_distance",
+        "baseline": 54.0,
+        "candidate": 104.0,
+        "scaled_change": 1.6573604215813593
+      },
+      {
+        "name": "input_action_distance",
+        "baseline": 54.0,
+        "candidate": 104.0,
+        "scaled_change": 1.6573604215813593
+      },
+      {
+        "name": "op_8",
+        "baseline": 10.0,
+        "candidate": 18.0,
+        "scaled_change": 1.476555551574644
+      },
+      {
+        "name": "op_11",
+        "baseline": 7.0,
+        "candidate": 15.0,
+        "scaled_change": 1.4583211424720761
+      },
+      {
+        "name": "input_8",
+        "baseline": 7.0,
+        "candidate": 15.0,
+        "scaled_change": 1.4583211424720761
+      },
+      {
+        "name": "purchase_units",
+        "baseline": 16.0,
+        "candidate": 33.0,
+        "scaled_change": 1.176913155450819
+      },
+      {
+        "name": "task_distance",
+        "baseline": 467.0,
+        "candidate": 617.0,
+        "scaled_change": 1.1200312112462583
+      },
+      {
+        "name": "route_pack_open",
+        "baseline": 11.0,
+        "candidate": 14.0,
+        "scaled_change": 1.0906611803107469
+      },
+      {
+        "name": "input_actions",
+        "baseline": 15.0,
+        "candidate": 23.0,
+        "scaled_change": 1.053808206370301
+      }
+    ],
+    "baseline_support": {
+      "panel": "large",
+      "id": "01ffd7bb59a622a4c3f4",
+      "families": [
+        "team_16797543"
+      ],
+      "in_training": true,
+      "reference_workers": 11,
+      "lower_bound": 8,
+      "point_workers": 11.67372623645666,
+      "raw_forest_cash": 202.96163504464286,
+      "effective_training_support": 19.24130892370309,
+      "training_weight_at_least_15_workers": 0.0,
+      "outside_training_feature_count": 0,
+      "outside_training_max_scaled_gap": 0.0,
+      "outside_training_features": [],
+      "nearest_training_rows": [
+        {
+          "id": "01ffd7bb59a622a4c3f4",
+          "workers": 12,
+          "distance": 0.0
+        },
+        {
+          "id": "b2809eb82e54f1177d01",
+          "workers": 10,
+          "distance": 0.24034659154047794
+        },
+        {
+          "id": "e5a66e9a2c0fb44d0492",
+          "workers": 10,
+          "distance": 0.45771986402938175
+        },
+        {
+          "id": "4c4fe27c3f25d46fa2bc",
+          "workers": 10,
+          "distance": 0.470868847234399
+        },
+        {
+          "id": "a7e528ed36ba10d488eb",
+          "workers": 9,
+          "distance": 0.47511263772951495
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "01ffd7bb59a622a4c3f4",
+          "workers": 12,
+          "weight": 0.2064205109126983
+        },
+        {
+          "id": "51172d7f8f345eec7144",
+          "workers": 12,
+          "weight": 0.047209821428571434
+        },
+        {
+          "id": "280d0d1364f39a5a64bd",
+          "workers": 12,
+          "weight": 0.03531436011904762
+        },
+        {
+          "id": "c5b5aa1c9cc1a47d2579",
+          "workers": 12,
+          "weight": 0.02796688988095238
+        },
+        {
+          "id": "bc8d9bbd8b2aac3d6206",
+          "workers": 12,
+          "weight": 0.024711681547619043
+        },
+        {
+          "id": "b2809eb82e54f1177d01",
+          "workers": 10,
+          "weight": 0.019661458333333333
+        },
+        {
+          "id": "a63707687e98b4ebb157",
+          "workers": 11,
+          "weight": 0.015625
+        },
+        {
+          "id": "6f79757e682c821ff6ac",
+          "workers": 13,
+          "weight": 0.01251860119047619
+        }
+      ]
+    },
+    "candidate_support": {
+      "panel": "large",
+      "id": "ea0bed958165ffb5eb1b",
+      "families": [
+        "team_16797543"
+      ],
+      "in_training": false,
+      "reference_workers": 15,
+      "lower_bound": 10,
+      "point_workers": 12.281290948454034,
+      "raw_forest_cash": 272.50589657738095,
+      "effective_training_support": 65.59124529893535,
+      "training_weight_at_least_15_workers": 0.03629092261904762,
+      "outside_training_feature_count": 2,
+      "outside_training_max_scaled_gap": 24.0,
+      "outside_training_features": [
+        {
+          "name": "quadrant_tasks_3",
+          "value": 24.0,
+          "min": 0.0,
+          "max": 0.0,
+          "scaled_gap": 24.0
+        },
+        {
+          "name": "quadrant_tiles_3",
+          "value": 8.0,
+          "min": 0.0,
+          "max": 0.0,
+          "scaled_gap": 8.0
+        }
+      ],
+      "nearest_training_rows": [
+        {
+          "id": "01ffd7bb59a622a4c3f4",
+          "workers": 12,
+          "distance": 1.703179356364321
+        },
+        {
+          "id": "b2809eb82e54f1177d01",
+          "workers": 10,
+          "distance": 1.7125653731992023
+        },
+        {
+          "id": "e5a66e9a2c0fb44d0492",
+          "workers": 10,
+          "distance": 1.749061549665182
+        },
+        {
+          "id": "e8d81bcd99e257c9dae6",
+          "workers": 12,
+          "distance": 1.7665600895522346
+        },
+        {
+          "id": "72a3f3d78c13daadfee8",
+          "workers": 12,
+          "distance": 1.7850368099244613
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "aa3f16c86fd0965e5157",
+          "workers": 12,
+          "weight": 0.042266555059523814
+        },
+        {
+          "id": "46b5452dc0784b145d10",
+          "workers": 12,
+          "weight": 0.035522355248917746
+        },
+        {
+          "id": "137bac6fd55bb4e3b793",
+          "workers": 11,
+          "weight": 0.03149181547619047
+        },
+        {
+          "id": "1ff72f24ffa790179140",
+          "workers": 12,
+          "weight": 0.030468749999999996
+        },
+        {
+          "id": "8707e2c314e87143fec8",
+          "workers": 11,
+          "weight": 0.027585565476190472
+        },
+        {
+          "id": "4941a9fab84b0259ac54",
+          "workers": 12,
+          "weight": 0.02634858630952381
+        },
+        {
+          "id": "f2539922c3068d957480",
+          "workers": 12,
+          "weight": 0.02408282529291361
+        },
+        {
+          "id": "7de29b063ccf05f5005d",
+          "workers": 11,
+          "weight": 0.022302827380952378
+        }
+      ]
+    }
+  },
+  {
+    "added_assets": [
+      9
+    ],
+    "baseline": "a07bc326be8bb4f2beae",
+    "baseline_cost": 232.0,
+    "baseline_tasks": 147.0,
+    "baseline_workers": 12,
+    "candidate": "f1cbf5dd352c96c384d7",
+    "candidate_tasks": 174.0,
+    "candidate_workers": 15,
+    "delta_tasks": 27.0,
+    "error": -737.1894531249999,
+    "family": "team_16767215",
+    "method": "cost_direct_extra",
+    "mode": "cold",
+    "physical_delta_lower": -89.0,
+    "physical_delta_upper": 932.0,
+    "pool": "a07bc326be8bb4f2beae",
+    "prediction": 16.810546875000114,
+    "raw_memberships": 1,
+    "target": 754.0,
+    "variant": "land_crop9",
+    "variant_aliases": [
+      "land_crop9"
+    ],
+    "panel": "large",
+    "forecasts": {
+      "cost_direct_extra": {
+        "baseline_workers": 12.879903092964616,
+        "candidate_workers": 12.996643001818784,
+        "marginal_cash": 16.810546875000114
+      },
+      "fitted_timing": {
+        "baseline_workers": 13.430496736474993,
+        "candidate_workers": 15.648007530781033,
+        "marginal_cash": 904.978854177757
+      },
+      "timing_extra": {
+        "baseline_workers": 12.944641551205304,
+        "candidate_workers": 15.139990733307059,
+        "marginal_cash": 703.3659639437419
+      },
+      "timing_boost": {
+        "baseline_workers": 12.933492677283022,
+        "candidate_workers": 14.838089973682964,
+        "marginal_cash": 558.5369745497222
+      }
+    },
+    "same_leaf_fraction": 0.59375,
+    "trees_increasing_cost": 29,
+    "trees_decreasing_cost": 22,
+    "positive_tree_mean_contribution": 36.60171130952381,
+    "negative_tree_mean_contribution": -19.79116443452381,
+    "changed_features": 33,
+    "largest_scaled_feature_changes": [
+      {
+        "name": "quadrant_tasks_3",
+        "baseline": 0.0,
+        "candidate": 27.0,
+        "scaled_change": 27.0
+      },
+      {
+        "name": "quadrant_tiles_3",
+        "baseline": 0.0,
+        "candidate": 9.0,
+        "scaled_change": 9.0
+      },
+      {
+        "name": "bought_8",
+        "baseline": 0.0,
+        "candidate": 9.0,
+        "scaled_change": 3.921154601128642
+      },
+      {
+        "name": "input_distance",
+        "baseline": 80.0,
+        "candidate": 135.0,
+        "scaled_change": 1.8230964637394953
+      },
+      {
+        "name": "input_action_distance",
+        "baseline": 80.0,
+        "candidate": 135.0,
+        "scaled_change": 1.8230964637394953
+      },
+      {
+        "name": "op_8",
+        "baseline": 13.0,
+        "candidate": 22.0,
+        "scaled_change": 1.6611249955214744
+      },
+      {
+        "name": "op_11",
+        "baseline": 9.0,
+        "candidate": 18.0,
+        "scaled_change": 1.6406112852810855
+      },
+      {
+        "name": "input_8",
+        "baseline": 9.0,
+        "candidate": 18.0,
+        "scaled_change": 1.6406112852810855
+      },
+      {
+        "name": "route_pack_return",
+        "baseline": 17.0,
+        "candidate": 23.0,
+        "scaled_change": 1.5041802660166805
+      },
+      {
+        "name": "purchase_units",
+        "baseline": 56.0,
+        "candidate": 75.0,
+        "scaled_change": 1.3153735266803273
+      },
+      {
+        "name": "task_distance",
+        "baseline": 471.0,
+        "candidate": 636.0,
+        "scaled_change": 1.232034332370884
+      },
+      {
+        "name": "input_actions",
+        "baseline": 33.0,
+        "candidate": 42.0,
+        "scaled_change": 1.1855342321665885
+      }
+    ],
+    "baseline_support": {
+      "panel": "large",
+      "id": "a07bc326be8bb4f2beae",
+      "families": [
+        "team_16767215"
+      ],
+      "in_training": true,
+      "reference_workers": 12,
+      "lower_bound": 9,
+      "point_workers": 12.879903092964616,
+      "raw_forest_cash": 358.7060453869048,
+      "effective_training_support": 16.19840575594659,
+      "training_weight_at_least_15_workers": 0.010305059523809522,
+      "outside_training_feature_count": 0,
+      "outside_training_max_scaled_gap": 0.0,
+      "outside_training_features": [],
+      "nearest_training_rows": [
+        {
+          "id": "a07bc326be8bb4f2beae",
+          "workers": 13,
+          "distance": 0.0
+        },
+        {
+          "id": "553219096a6bdb783586",
+          "workers": 13,
+          "distance": 0.4932418034286938
+        },
+        {
+          "id": "29ea63c1001439fd1b50",
+          "workers": 12,
+          "distance": 0.5544534096573812
+        },
+        {
+          "id": "24abcf4aedb558becf1d",
+          "workers": 10,
+          "distance": 0.6569148760251942
+        },
+        {
+          "id": "11e082bd94b5e2e425b6",
+          "workers": 11,
+          "distance": 0.6756424550154809
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "a07bc326be8bb4f2beae",
+          "workers": 13,
+          "weight": 0.20969122023809508
+        },
+        {
+          "id": "fb00bceaa5e92cdb6f1b",
+          "workers": 12,
+          "weight": 0.06073288690476192
+        },
+        {
+          "id": "adccd585af95c29cd36b",
+          "workers": 14,
+          "weight": 0.057738095238095255
+        },
+        {
+          "id": "29ea63c1001439fd1b50",
+          "workers": 12,
+          "weight": 0.04043898809523809
+        },
+        {
+          "id": "2b71e9b790ee39bcd315",
+          "workers": 13,
+          "weight": 0.032533482142857145
+        },
+        {
+          "id": "553219096a6bdb783586",
+          "workers": 13,
+          "weight": 0.029631696428571427
+        },
+        {
+          "id": "4e12e1e40fe86791c055",
+          "workers": 14,
+          "weight": 0.028813244047619053
+        },
+        {
+          "id": "5ecb9bfcf5521d30ede8",
+          "workers": 13,
+          "weight": 0.02881324404761905
+        }
+      ]
+    },
+    "candidate_support": {
+      "panel": "large",
+      "id": "f1cbf5dd352c96c384d7",
+      "families": [
+        "team_16767215"
+      ],
+      "in_training": false,
+      "reference_workers": 15,
+      "lower_bound": 11,
+      "point_workers": 12.996643001818784,
+      "raw_forest_cash": 375.51659226190486,
+      "effective_training_support": 32.63409144477164,
+      "training_weight_at_least_15_workers": 0.05089285714285714,
+      "outside_training_feature_count": 10,
+      "outside_training_max_scaled_gap": 27.0,
+      "outside_training_features": [
+        {
+          "name": "quadrant_tasks_3",
+          "value": 27.0,
+          "min": 0.0,
+          "max": 0.0,
+          "scaled_gap": 27.0
+        },
+        {
+          "name": "quadrant_tiles_3",
+          "value": 9.0,
+          "min": 0.0,
+          "max": 0.0,
+          "scaled_gap": 9.0
+        },
+        {
+          "name": "route_pack_open",
+          "value": 15.0,
+          "min": 2.0,
+          "max": 14.0,
+          "scaled_gap": 0.36355372677024894
+        },
+        {
+          "name": "tasks",
+          "value": 174.0,
+          "min": 15.0,
+          "max": 162.0,
+          "scaled_gap": 0.35529574669769876
+        },
+        {
+          "name": "task_motion_bound",
+          "value": 243.0,
+          "min": 27.0,
+          "max": 230.0,
+          "scaled_gap": 0.2748578644441243
+        },
+        {
+          "name": "route_pack_return",
+          "value": 23.0,
+          "min": 2.0,
+          "max": 22.0,
+          "scaled_gap": 0.25069671100278007
+        },
+        {
+          "name": "neighbor_work_1",
+          "value": 472.0,
+          "min": 12.0,
+          "max": 456.0,
+          "scaled_gap": 0.1583580893078392
+        },
+        {
+          "name": "neighbor_work_2",
+          "value": 1228.0,
+          "min": 28.0,
+          "max": 1214.0,
+          "scaled_gap": 0.05128142597798334
+        },
+        {
+          "name": "route_work_proxy",
+          "value": 343.75,
+          "min": 40.5,
+          "max": 342.0,
+          "scaled_gap": 0.024767383288751513
+        },
+        {
+          "name": "neighbor_work_3",
+          "value": 2134.0,
+          "min": 52.0,
+          "max": 2122.0,
+          "scaled_gap": 0.024669181251741903
+        }
+      ],
+      "nearest_training_rows": [
+        {
+          "id": "a07bc326be8bb4f2beae",
+          "workers": 13,
+          "distance": 1.9163529719007786
+        },
+        {
+          "id": "553219096a6bdb783586",
+          "workers": 13,
+          "distance": 1.9660726824656634
+        },
+        {
+          "id": "29ea63c1001439fd1b50",
+          "workers": 12,
+          "distance": 1.9891063418679278
+        },
+        {
+          "id": "11e082bd94b5e2e425b6",
+          "workers": 11,
+          "distance": 2.041075424013368
+        },
+        {
+          "id": "24abcf4aedb558becf1d",
+          "workers": 10,
+          "distance": 2.057632381701289
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "a07bc326be8bb4f2beae",
+          "workers": 13,
+          "weight": 0.12040550595238086
+        },
+        {
+          "id": "553219096a6bdb783586",
+          "workers": 13,
+          "weight": 0.05600818452380953
+        },
+        {
+          "id": "5ecb9bfcf5521d30ede8",
+          "workers": 13,
+          "weight": 0.040085565476190486
+        },
+        {
+          "id": "fb00bceaa5e92cdb6f1b",
+          "workers": 12,
+          "weight": 0.03467261904761905
+        },
+        {
+          "id": "adccd585af95c29cd36b",
+          "workers": 14,
+          "weight": 0.030505952380952384
+        },
+        {
+          "id": "87b50577271c99aad642",
+          "workers": 12,
+          "weight": 0.029203869047619048
+        },
+        {
+          "id": "29ea63c1001439fd1b50",
+          "workers": 12,
+          "weight": 0.026767113095238097
+        },
+        {
+          "id": "b4e7fbb60147ed4a03a7",
+          "workers": 15,
+          "weight": 0.024107142857142858
+        }
+      ]
+    }
+  },
+  {
+    "added_assets": [
+      10
+    ],
+    "baseline": "a07bc326be8bb4f2beae",
+    "baseline_cost": 232.0,
+    "baseline_tasks": 147.0,
+    "baseline_workers": 12,
+    "candidate": "3d14a901a31e67fae28c",
+    "candidate_tasks": 177.0,
+    "candidate_workers": 15,
+    "delta_tasks": 30.0,
+    "error": -737.1894531249999,
+    "family": "team_16767215",
+    "method": "cost_direct_extra",
+    "mode": "cold",
+    "physical_delta_lower": -89.0,
+    "physical_delta_upper": 932.0,
+    "pool": "a07bc326be8bb4f2beae",
+    "prediction": 16.810546875000114,
+    "raw_memberships": 1,
+    "target": 754.0,
+    "variant": "land_crop10",
+    "variant_aliases": [
+      "land_crop10"
+    ],
+    "panel": "large",
+    "forecasts": {
+      "cost_direct_extra": {
+        "baseline_workers": 12.879903092964616,
+        "candidate_workers": 12.996643001818784,
+        "marginal_cash": 16.810546875000114
+      },
+      "fitted_timing": {
+        "baseline_workers": 13.430496736474993,
+        "candidate_workers": 15.816363951556056,
+        "marginal_cash": 1007.6762708505208
+      },
+      "timing_extra": {
+        "baseline_workers": 12.944641551205304,
+        "candidate_workers": 15.31547130984711,
+        "marginal_cash": 810.4091156331733
+      },
+      "timing_boost": {
+        "baseline_workers": 12.933492677283022,
+        "candidate_workers": 15.060700926682006,
+        "marginal_cash": 656.6046197472688
+      }
+    },
+    "same_leaf_fraction": 0.59375,
+    "trees_increasing_cost": 29,
+    "trees_decreasing_cost": 22,
+    "positive_tree_mean_contribution": 36.60171130952381,
+    "negative_tree_mean_contribution": -19.79116443452381,
+    "changed_features": 33,
+    "largest_scaled_feature_changes": [
+      {
+        "name": "quadrant_tasks_3",
+        "baseline": 0.0,
+        "candidate": 30.0,
+        "scaled_change": 30.0
+      },
+      {
+        "name": "quadrant_tiles_3",
+        "baseline": 0.0,
+        "candidate": 10.0,
+        "scaled_change": 10.0
+      },
+      {
+        "name": "bought_8",
+        "baseline": 0.0,
+        "candidate": 10.0,
+        "scaled_change": 4.356838445698491
+      },
+      {
+        "name": "input_distance",
+        "baseline": 80.0,
+        "candidate": 140.0,
+        "scaled_change": 1.988832505897631
+      },
+      {
+        "name": "input_action_distance",
+        "baseline": 80.0,
+        "candidate": 140.0,
+        "scaled_change": 1.988832505897631
+      },
+      {
+        "name": "op_8",
+        "baseline": 13.0,
+        "candidate": 23.0,
+        "scaled_change": 1.845694439468305
+      },
+      {
+        "name": "op_11",
+        "baseline": 9.0,
+        "candidate": 19.0,
+        "scaled_change": 1.822901428090095
+      },
+      {
+        "name": "input_8",
+        "baseline": 9.0,
+        "candidate": 19.0,
+        "scaled_change": 1.822901428090095
+      },
+      {
+        "name": "route_pack_return",
+        "baseline": 17.0,
+        "candidate": 23.0,
+        "scaled_change": 1.5041802660166805
+      },
+      {
+        "name": "purchase_units",
+        "baseline": 56.0,
+        "candidate": 77.0,
+        "scaled_change": 1.4538338979098353
+      },
+      {
+        "name": "task_distance",
+        "baseline": 471.0,
+        "candidate": 651.0,
+        "scaled_change": 1.34403745349551
+      },
+      {
+        "name": "input_actions",
+        "baseline": 33.0,
+        "candidate": 43.0,
+        "scaled_change": 1.317260257962876
+      }
+    ],
+    "baseline_support": {
+      "panel": "large",
+      "id": "a07bc326be8bb4f2beae",
+      "families": [
+        "team_16767215"
+      ],
+      "in_training": true,
+      "reference_workers": 12,
+      "lower_bound": 9,
+      "point_workers": 12.879903092964616,
+      "raw_forest_cash": 358.7060453869048,
+      "effective_training_support": 16.19840575594659,
+      "training_weight_at_least_15_workers": 0.010305059523809522,
+      "outside_training_feature_count": 0,
+      "outside_training_max_scaled_gap": 0.0,
+      "outside_training_features": [],
+      "nearest_training_rows": [
+        {
+          "id": "a07bc326be8bb4f2beae",
+          "workers": 13,
+          "distance": 0.0
+        },
+        {
+          "id": "553219096a6bdb783586",
+          "workers": 13,
+          "distance": 0.4932418034286938
+        },
+        {
+          "id": "29ea63c1001439fd1b50",
+          "workers": 12,
+          "distance": 0.5544534096573812
+        },
+        {
+          "id": "24abcf4aedb558becf1d",
+          "workers": 10,
+          "distance": 0.6569148760251942
+        },
+        {
+          "id": "11e082bd94b5e2e425b6",
+          "workers": 11,
+          "distance": 0.6756424550154809
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "a07bc326be8bb4f2beae",
+          "workers": 13,
+          "weight": 0.20969122023809508
+        },
+        {
+          "id": "fb00bceaa5e92cdb6f1b",
+          "workers": 12,
+          "weight": 0.06073288690476192
+        },
+        {
+          "id": "adccd585af95c29cd36b",
+          "workers": 14,
+          "weight": 0.057738095238095255
+        },
+        {
+          "id": "29ea63c1001439fd1b50",
+          "workers": 12,
+          "weight": 0.04043898809523809
+        },
+        {
+          "id": "2b71e9b790ee39bcd315",
+          "workers": 13,
+          "weight": 0.032533482142857145
+        },
+        {
+          "id": "553219096a6bdb783586",
+          "workers": 13,
+          "weight": 0.029631696428571427
+        },
+        {
+          "id": "4e12e1e40fe86791c055",
+          "workers": 14,
+          "weight": 0.028813244047619053
+        },
+        {
+          "id": "5ecb9bfcf5521d30ede8",
+          "workers": 13,
+          "weight": 0.02881324404761905
+        }
+      ]
+    },
+    "candidate_support": {
+      "panel": "large",
+      "id": "3d14a901a31e67fae28c",
+      "families": [
+        "team_16767215"
+      ],
+      "in_training": false,
+      "reference_workers": 15,
+      "lower_bound": 11,
+      "point_workers": 12.996643001818784,
+      "raw_forest_cash": 375.51659226190486,
+      "effective_training_support": 32.63409144477164,
+      "training_weight_at_least_15_workers": 0.05089285714285714,
+      "outside_training_feature_count": 10,
+      "outside_training_max_scaled_gap": 30.0,
+      "outside_training_features": [
+        {
+          "name": "quadrant_tasks_3",
+          "value": 30.0,
+          "min": 0.0,
+          "max": 0.0,
+          "scaled_gap": 30.0
+        },
+        {
+          "name": "quadrant_tiles_3",
+          "value": 10.0,
+          "min": 0.0,
+          "max": 0.0,
+          "scaled_gap": 10.0
+        },
+        {
+          "name": "tasks",
+          "value": 177.0,
+          "min": 15.0,
+          "max": 162.0,
+          "scaled_gap": 0.44411968337212343
+        },
+        {
+          "name": "route_pack_open",
+          "value": 15.0,
+          "min": 2.0,
+          "max": 14.0,
+          "scaled_gap": 0.36355372677024894
+        },
+        {
+          "name": "task_motion_bound",
+          "value": 247.0,
+          "min": 27.0,
+          "max": 230.0,
+          "scaled_gap": 0.3594295150423164
+        },
+        {
+          "name": "neighbor_work_1",
+          "value": 484.0,
+          "min": 12.0,
+          "max": 456.0,
+          "scaled_gap": 0.27712665628871863
+        },
+        {
+          "name": "route_pack_return",
+          "value": 23.0,
+          "min": 2.0,
+          "max": 22.0,
+          "scaled_gap": 0.25069671100278007
+        },
+        {
+          "name": "neighbor_work_2",
+          "value": 1264.0,
+          "min": 28.0,
+          "max": 1214.0,
+          "scaled_gap": 0.18314794992136907
+        },
+        {
+          "name": "neighbor_work_3",
+          "value": 2184.0,
+          "min": 52.0,
+          "max": 2122.0,
+          "scaled_gap": 0.12745743646733318
+        },
+        {
+          "name": "route_work_proxy",
+          "value": 349.166656,
+          "min": 40.5,
+          "max": 342.0,
+          "scaled_gap": 0.10142818060036028
+        }
+      ],
+      "nearest_training_rows": [
+        {
+          "id": "a07bc326be8bb4f2beae",
+          "workers": 13,
+          "distance": 2.1278929160028746
+        },
+        {
+          "id": "553219096a6bdb783586",
+          "workers": 13,
+          "distance": 2.1719630581127305
+        },
+        {
+          "id": "29ea63c1001439fd1b50",
+          "workers": 12,
+          "distance": 2.193151391969818
+        },
+        {
+          "id": "11e082bd94b5e2e425b6",
+          "workers": 11,
+          "distance": 2.2417341297549274
+        },
+        {
+          "id": "24abcf4aedb558becf1d",
+          "workers": 10,
+          "distance": 2.2591425129533524
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "a07bc326be8bb4f2beae",
+          "workers": 13,
+          "weight": 0.12040550595238086
+        },
+        {
+          "id": "553219096a6bdb783586",
+          "workers": 13,
+          "weight": 0.05600818452380953
+        },
+        {
+          "id": "5ecb9bfcf5521d30ede8",
+          "workers": 13,
+          "weight": 0.040085565476190486
+        },
+        {
+          "id": "fb00bceaa5e92cdb6f1b",
+          "workers": 12,
+          "weight": 0.03467261904761905
+        },
+        {
+          "id": "adccd585af95c29cd36b",
+          "workers": 14,
+          "weight": 0.030505952380952384
+        },
+        {
+          "id": "87b50577271c99aad642",
+          "workers": 12,
+          "weight": 0.029203869047619048
+        },
+        {
+          "id": "29ea63c1001439fd1b50",
+          "workers": 12,
+          "weight": 0.026767113095238097
+        },
+        {
+          "id": "b4e7fbb60147ed4a03a7",
+          "workers": 15,
+          "weight": 0.024107142857142858
+        }
+      ]
+    }
+  },
+  {
+    "added_assets": [
+      10
+    ],
+    "baseline": "9248a1493adcf202a487",
+    "baseline_cost": 232.0,
+    "baseline_tasks": 139.0,
+    "baseline_workers": 12,
+    "candidate": "738a5e1a2f13ed6402c0",
+    "candidate_tasks": 169.0,
+    "candidate_workers": 15,
+    "delta_tasks": 30.0,
+    "error": -580.0669456845238,
+    "family": "team_16655704",
+    "method": "cost_direct_extra",
+    "mode": "cold",
+    "physical_delta_lower": -89.0,
+    "physical_delta_upper": 932.0,
+    "pool": "9248a1493adcf202a487",
+    "prediction": 173.93305431547614,
+    "raw_memberships": 1,
+    "target": 754.0,
+    "variant": "land_crop10",
+    "variant_aliases": [
+      "land_crop10"
+    ],
+    "panel": "large",
+    "forecasts": {
+      "cost_direct_extra": {
+        "baseline_workers": 12.041388423859127,
+        "candidate_workers": 13.154047156013693,
+        "marginal_cash": 173.93305431547614
+      },
+      "fitted_timing": {
+        "baseline_workers": 12.327767617914574,
+        "candidate_workers": 14.713770144905988,
+        "marginal_cash": 598.8928076498587
+      },
+      "timing_extra": {
+        "baseline_workers": 12.1003518147227,
+        "candidate_workers": 14.741092577829951,
+        "marginal_cash": 641.9412405218228
+      },
+      "timing_boost": {
+        "baseline_workers": 12.099719634572686,
+        "candidate_workers": 15.008927643174935,
+        "marginal_cash": 745.0862349582438
+      }
+    },
+    "same_leaf_fraction": 0.1171875,
+    "trees_increasing_cost": 107,
+    "trees_decreasing_cost": 5,
+    "positive_tree_mean_contribution": 174.9824962797619,
+    "negative_tree_mean_contribution": -1.0494419642857145,
+    "changed_features": 32,
+    "largest_scaled_feature_changes": [
+      {
+        "name": "quadrant_tasks_3",
+        "baseline": 0.0,
+        "candidate": 30.0,
+        "scaled_change": 30.0
+      },
+      {
+        "name": "quadrant_tiles_3",
+        "baseline": 0.0,
+        "candidate": 10.0,
+        "scaled_change": 10.0
+      },
+      {
+        "name": "bought_8",
+        "baseline": 0.0,
+        "candidate": 10.0,
+        "scaled_change": 4.356838445698491
+      },
+      {
+        "name": "purchase_weighted_hour",
+        "baseline": 14.0,
+        "candidate": 3.5,
+        "scaled_change": -2.0561477868726303
+      },
+      {
+        "name": "input_action_distance",
+        "baseline": 51.0,
+        "candidate": 111.0,
+        "scaled_change": 1.988832505897631
+      },
+      {
+        "name": "input_distance",
+        "baseline": 51.0,
+        "candidate": 111.0,
+        "scaled_change": 1.988832505897631
+      },
+      {
+        "name": "op_8",
+        "baseline": 7.0,
+        "candidate": 17.0,
+        "scaled_change": 1.845694439468305
+      },
+      {
+        "name": "op_11",
+        "baseline": 4.0,
+        "candidate": 14.0,
+        "scaled_change": 1.822901428090095
+      },
+      {
+        "name": "input_8",
+        "baseline": 4.0,
+        "candidate": 14.0,
+        "scaled_change": 1.822901428090095
+      },
+      {
+        "name": "route_pack_return",
+        "baseline": 17.0,
+        "candidate": 23.0,
+        "scaled_change": 1.5041802660166805
+      },
+      {
+        "name": "purchase_units",
+        "baseline": 7.0,
+        "candidate": 28.0,
+        "scaled_change": 1.4538338979098353
+      },
+      {
+        "name": "task_distance",
+        "baseline": 517.0,
+        "candidate": 697.0,
+        "scaled_change": 1.34403745349551
+      }
+    ],
+    "baseline_support": {
+      "panel": "large",
+      "id": "9248a1493adcf202a487",
+      "families": [
+        "team_16655704"
+      ],
+      "in_training": true,
+      "reference_workers": 12,
+      "lower_bound": 9,
+      "point_workers": 12.041388423859127,
+      "raw_forest_cash": 237.95993303571424,
+      "effective_training_support": 19.796946387128326,
+      "training_weight_at_least_15_workers": 0.0,
+      "outside_training_feature_count": 0,
+      "outside_training_max_scaled_gap": 0.0,
+      "outside_training_features": [],
+      "nearest_training_rows": [
+        {
+          "id": "9248a1493adcf202a487",
+          "workers": 12,
+          "distance": 0.0
+        },
+        {
+          "id": "d44438592a5214baa158",
+          "workers": 12,
+          "distance": 0.002099259346540607
+        },
+        {
+          "id": "806bcf6fb070e58925be",
+          "workers": 13,
+          "distance": 0.3141384422995788
+        },
+        {
+          "id": "bee137e6627216345e22",
+          "workers": 13,
+          "distance": 0.3160791806435254
+        },
+        {
+          "id": "77eab0b1a4d397c071c6",
+          "workers": 13,
+          "distance": 0.3185376195979779
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "d44438592a5214baa158",
+          "workers": 12,
+          "weight": 0.1399103252327513
+        },
+        {
+          "id": "9248a1493adcf202a487",
+          "workers": 12,
+          "weight": 0.1399103252327513
+        },
+        {
+          "id": "24e98377723305ae42e4",
+          "workers": 12,
+          "weight": 0.04650026861104899
+        },
+        {
+          "id": "029be3709bcd6c5505f8",
+          "workers": 12,
+          "weight": 0.026715112925140765
+        },
+        {
+          "id": "8d45f259e00420844c07",
+          "workers": 12,
+          "weight": 0.02279125804021523
+        },
+        {
+          "id": "dd67703787db6515b113",
+          "workers": 12,
+          "weight": 0.02279125804021523
+        },
+        {
+          "id": "0a1839e30577f9637f61",
+          "workers": 12,
+          "weight": 0.022247023809523814
+        },
+        {
+          "id": "c0b05612fea63fe18442",
+          "workers": 12,
+          "weight": 0.02070230647401183
+        }
+      ]
+    },
+    "candidate_support": {
+      "panel": "large",
+      "id": "738a5e1a2f13ed6402c0",
+      "families": [
+        "team_16655704"
+      ],
+      "in_training": false,
+      "reference_workers": 15,
+      "lower_bound": 11,
+      "point_workers": 13.154047156013693,
+      "raw_forest_cash": 411.89298735119047,
+      "effective_training_support": 36.663466035188485,
+      "training_weight_at_least_15_workers": 0.07591145833333332,
+      "outside_training_feature_count": 11,
+      "outside_training_max_scaled_gap": 30.0,
+      "outside_training_features": [
+        {
+          "name": "quadrant_tasks_3",
+          "value": 30.0,
+          "min": 0.0,
+          "max": 0.0,
+          "scaled_gap": 30.0
+        },
+        {
+          "name": "quadrant_tiles_3",
+          "value": 10.0,
+          "min": 0.0,
+          "max": 0.0,
+          "scaled_gap": 10.0
+        },
+        {
+          "name": "distance_sum",
+          "value": 344.0,
+          "min": 24.0,
+          "max": 297.0,
+          "scaled_gap": 0.7418594223515776
+        },
+        {
+          "name": "rooted_mst",
+          "value": 80.0,
+          "min": 10.0,
+          "max": 71.0,
+          "scaled_gap": 0.6180260318129679
+        },
+        {
+          "name": "active_tiles",
+          "value": 82.0,
+          "min": 9.0,
+          "max": 74.0,
+          "scaled_gap": 0.5055693020926741
+        },
+        {
+          "name": "task_motion_bound",
+          "value": 249.0,
+          "min": 27.0,
+          "max": 230.0,
+          "scaled_gap": 0.40171534034141243
+        },
+        {
+          "name": "route_pack_open",
+          "value": 15.0,
+          "min": 2.0,
+          "max": 14.0,
+          "scaled_gap": 0.36355372677024894
+        },
+        {
+          "name": "route_work_proxy",
+          "value": 364.0,
+          "min": 40.5,
+          "max": 342.0,
+          "scaled_gap": 0.3113613899157333
+        },
+        {
+          "name": "route_pack_return",
+          "value": 23.0,
+          "min": 2.0,
+          "max": 22.0,
+          "scaled_gap": 0.25069671100278007
+        },
+        {
+          "name": "tasks",
+          "value": 169.0,
+          "min": 15.0,
+          "max": 162.0,
+          "scaled_gap": 0.20725585224032425
+        },
+        {
+          "name": "adjacent_pairs",
+          "value": 133.0,
+          "min": 5.0,
+          "max": 127.0,
+          "scaled_gap": 0.2029363319768739
+        }
+      ],
+      "nearest_training_rows": [
+        {
+          "id": "9248a1493adcf202a487",
+          "workers": 12,
+          "distance": 2.1312374587372305
+        },
+        {
+          "id": "d44438592a5214baa158",
+          "workers": 12,
+          "distance": 2.1312384926175043
+        },
+        {
+          "id": "16ecaa859b1252b9b6f0",
+          "workers": 12,
+          "distance": 2.134995322031763
+        },
+        {
+          "id": "ecf2b197b8be0a943d5d",
+          "workers": 12,
+          "distance": 2.134995322031763
+        },
+        {
+          "id": "806bcf6fb070e58925be",
+          "workers": 13,
+          "distance": 2.1472916632133217
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "806bcf6fb070e58925be",
+          "workers": 13,
+          "weight": 0.05874255952380955
+        },
+        {
+          "id": "0a1839e30577f9637f61",
+          "workers": 12,
+          "weight": 0.05866815476190478
+        },
+        {
+          "id": "77eab0b1a4d397c071c6",
+          "workers": 13,
+          "weight": 0.05671502976190478
+        },
+        {
+          "id": "bee137e6627216345e22",
+          "workers": 13,
+          "weight": 0.054371279761904784
+        },
+        {
+          "id": "fe41935c15c74424cd46",
+          "workers": 13,
+          "weight": 0.0396577380952381
+        },
+        {
+          "id": "a17b16f3dd7d31030a4e",
+          "workers": 12,
+          "weight": 0.033401537698412705
+        },
+        {
+          "id": "44c521c97512c1e41ccd",
+          "workers": 12,
+          "weight": 0.03336629333751045
+        },
+        {
+          "id": "a40d6feeee53c3a10de8",
+          "workers": 13,
+          "weight": 0.03126860119047619
+        }
+      ]
+    }
+  },
+  {
+    "added_assets": [
+      10
+    ],
+    "baseline": "13b40120e90ddbe54719",
+    "baseline_cost": 143.0,
+    "baseline_tasks": 136.0,
+    "baseline_workers": 11,
+    "candidate": "71bb2218179fa2ef32b9",
+    "candidate_tasks": 166.0,
+    "candidate_workers": 15,
+    "delta_tasks": 30.0,
+    "error": -574.9504975818452,
+    "family": "team_16655704",
+    "method": "cost_direct_extra",
+    "mode": "cold",
+    "physical_delta_lower": 0.0,
+    "physical_delta_upper": 932.0,
+    "pool": "13b40120e90ddbe54719",
+    "prediction": 268.04950241815476,
+    "raw_memberships": 1,
+    "target": 843.0,
+    "variant": "land_crop10",
+    "variant_aliases": [
+      "land_crop10"
+    ],
+    "panel": "large",
+    "forecasts": {
+      "cost_direct_extra": {
+        "baseline_workers": 12.00287591843378,
+        "candidate_workers": 13.534178689582056,
+        "marginal_cash": 268.04950241815476
+      },
+      "fitted_timing": {
+        "baseline_workers": 12.47670262422697,
+        "candidate_workers": 14.728501553310606,
+        "marginal_cash": 582.9999077094146
+      },
+      "timing_extra": {
+        "baseline_workers": 12.014442970183334,
+        "candidate_workers": 14.546169371999424,
+        "marginal_cash": 580.8260655373829
+      },
+      "timing_boost": {
+        "baseline_workers": 11.998797350729632,
+        "candidate_workers": 14.852691195099629,
+        "marginal_cash": 698.5716163376229
+      }
+    },
+    "same_leaf_fraction": 0.0703125,
+    "trees_increasing_cost": 105,
+    "trees_decreasing_cost": 6,
+    "positive_tree_mean_contribution": 270.23973679315475,
+    "negative_tree_mean_contribution": -2.190234375,
+    "changed_features": 32,
+    "largest_scaled_feature_changes": [
+      {
+        "name": "quadrant_tasks_3",
+        "baseline": 0.0,
+        "candidate": 30.0,
+        "scaled_change": 30.0
+      },
+      {
+        "name": "quadrant_tiles_3",
+        "baseline": 0.0,
+        "candidate": 10.0,
+        "scaled_change": 10.0
+      },
+      {
+        "name": "bought_8",
+        "baseline": 0.0,
+        "candidate": 10.0,
+        "scaled_change": 4.356838445698491
+      },
+      {
+        "name": "input_distance",
+        "baseline": 37.0,
+        "candidate": 97.0,
+        "scaled_change": 1.988832505897631
+      },
+      {
+        "name": "input_action_distance",
+        "baseline": 37.0,
+        "candidate": 97.0,
+        "scaled_change": 1.988832505897631
+      },
+      {
+        "name": "purchase_weighted_hour",
+        "baseline": 14.818182,
+        "candidate": 5.09375,
+        "scaled_change": -1.9042732700374656
+      },
+      {
+        "name": "op_8",
+        "baseline": 11.0,
+        "candidate": 21.0,
+        "scaled_change": 1.845694439468305
+      },
+      {
+        "name": "op_11",
+        "baseline": 2.0,
+        "candidate": 12.0,
+        "scaled_change": 1.822901428090095
+      },
+      {
+        "name": "input_8",
+        "baseline": 2.0,
+        "candidate": 12.0,
+        "scaled_change": 1.822901428090095
+      },
+      {
+        "name": "purchase_units",
+        "baseline": 11.0,
+        "candidate": 32.0,
+        "scaled_change": 1.4538338979098353
+      },
+      {
+        "name": "task_distance",
+        "baseline": 501.0,
+        "candidate": 681.0,
+        "scaled_change": 1.34403745349551
+      },
+      {
+        "name": "input_actions",
+        "baseline": 18.0,
+        "candidate": 28.0,
+        "scaled_change": 1.317260257962876
+      }
+    ],
+    "baseline_support": {
+      "panel": "large",
+      "id": "13b40120e90ddbe54719",
+      "families": [
+        "team_16655704"
+      ],
+      "in_training": true,
+      "reference_workers": 11,
+      "lower_bound": 9,
+      "point_workers": 12.00287591843378,
+      "raw_forest_cash": 232.41413225446428,
+      "effective_training_support": 29.28247136605749,
+      "training_weight_at_least_15_workers": 0.0,
+      "outside_training_feature_count": 0,
+      "outside_training_max_scaled_gap": 0.0,
+      "outside_training_features": [],
+      "nearest_training_rows": [
+        {
+          "id": "13b40120e90ddbe54719",
+          "workers": 12,
+          "distance": 0.0
+        },
+        {
+          "id": "fe56b69432e0b4a2d6a1",
+          "workers": 12,
+          "distance": 0.008719383582779251
+        },
+        {
+          "id": "6188a9ee881689bf9add",
+          "workers": 11,
+          "distance": 0.22215972417882948
+        },
+        {
+          "id": "45771f1f96c7cce1e4f0",
+          "workers": 11,
+          "distance": 0.22233076866973955
+        },
+        {
+          "id": "cbbdce5f7a5389f88c65",
+          "workers": 12,
+          "distance": 0.26703752004244097
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "13b40120e90ddbe54719",
+          "workers": 12,
+          "weight": 0.07181551190718845
+        },
+        {
+          "id": "fe56b69432e0b4a2d6a1",
+          "workers": 12,
+          "weight": 0.07025301190718845
+        },
+        {
+          "id": "666fbd0af29cc0313c7c",
+          "workers": 12,
+          "weight": 0.052305280385238226
+        },
+        {
+          "id": "cbbdce5f7a5389f88c65",
+          "workers": 12,
+          "weight": 0.051437051974200905
+        },
+        {
+          "id": "cc60294995b88a9bdd65",
+          "workers": 12,
+          "weight": 0.050949562033585964
+        },
+        {
+          "id": "60c6a5e2970819e516f2",
+          "workers": 12,
+          "weight": 0.03833649572723626
+        },
+        {
+          "id": "6c6c9fee93be699b6123",
+          "workers": 12,
+          "weight": 0.03833649572723626
+        },
+        {
+          "id": "c0b05612fea63fe18442",
+          "workers": 12,
+          "weight": 0.037745435439484804
+        }
+      ]
+    },
+    "candidate_support": {
+      "panel": "large",
+      "id": "71bb2218179fa2ef32b9",
+      "families": [
+        "team_16655704"
+      ],
+      "in_training": false,
+      "reference_workers": 15,
+      "lower_bound": 11,
+      "point_workers": 13.534178689582056,
+      "raw_forest_cash": 500.46363467261904,
+      "effective_training_support": 43.31279083574,
+      "training_weight_at_least_15_workers": 0.17652529761904767,
+      "outside_training_feature_count": 9,
+      "outside_training_max_scaled_gap": 30.0,
+      "outside_training_features": [
+        {
+          "name": "quadrant_tasks_3",
+          "value": 30.0,
+          "min": 0.0,
+          "max": 0.0,
+          "scaled_gap": 30.0
+        },
+        {
+          "name": "quadrant_tiles_3",
+          "value": 10.0,
+          "min": 0.0,
+          "max": 0.0,
+          "scaled_gap": 10.0
+        },
+        {
+          "name": "route_pack_open",
+          "value": 15.0,
+          "min": 2.0,
+          "max": 14.0,
+          "scaled_gap": 0.36355372677024894
+        },
+        {
+          "name": "distance_sum",
+          "value": 311.0,
+          "min": 24.0,
+          "max": 297.0,
+          "scaled_gap": 0.22097940240259759
+        },
+        {
+          "name": "task_motion_bound",
+          "value": 240.0,
+          "min": 27.0,
+          "max": 230.0,
+          "scaled_gap": 0.21142912649548024
+        },
+        {
+          "name": "rooted_mst",
+          "value": 74.0,
+          "min": 10.0,
+          "max": 71.0,
+          "scaled_gap": 0.20600867727098932
+        },
+        {
+          "name": "active_tiles",
+          "value": 76.0,
+          "min": 9.0,
+          "max": 74.0,
+          "scaled_gap": 0.12639232552316854
+        },
+        {
+          "name": "tasks",
+          "value": 166.0,
+          "min": 15.0,
+          "max": 162.0,
+          "scaled_gap": 0.11843191556589958
+        },
+        {
+          "name": "route_work_proxy",
+          "value": 346.666687,
+          "min": 40.5,
+          "max": 342.0,
+          "scaled_gap": 0.06604664321007687
+        }
+      ],
+      "nearest_training_rows": [
+        {
+          "id": "13b40120e90ddbe54719",
+          "workers": 12,
+          "distance": 2.1299288094565543
+        },
+        {
+          "id": "fe56b69432e0b4a2d6a1",
+          "workers": 12,
+          "distance": 2.1299466568445036
+        },
+        {
+          "id": "cbbdce5f7a5389f88c65",
+          "workers": 12,
+          "distance": 2.141656565091427
+        },
+        {
+          "id": "cc60294995b88a9bdd65",
+          "workers": 12,
+          "distance": 2.144394706677406
+        },
+        {
+          "id": "666fbd0af29cc0313c7c",
+          "workers": 12,
+          "distance": 2.1448322481246853
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "b4e7fbb60147ed4a03a7",
+          "workers": 15,
+          "weight": 0.059356398809523835
+        },
+        {
+          "id": "3995cb23cd2a63a77856",
+          "workers": 16,
+          "weight": 0.05171130952380955
+        },
+        {
+          "id": "a40d6feeee53c3a10de8",
+          "workers": 13,
+          "weight": 0.03805803571428573
+        },
+        {
+          "id": "bedec35edb1d1395d623",
+          "workers": 13,
+          "weight": 0.03578869047619048
+        },
+        {
+          "id": "f675a7c3a70c73bc1372",
+          "workers": 13,
+          "weight": 0.03578869047619048
+        },
+        {
+          "id": "355a8e4e7771c022fd52",
+          "workers": 13,
+          "weight": 0.03578869047619048
+        },
+        {
+          "id": "54f702944d7020e401f4",
+          "workers": 15,
+          "weight": 0.035658482142857155
+        },
+        {
+          "id": "c427fa6a6ea1ee1f3591",
+          "workers": 13,
+          "weight": 0.03236607142857143
+        }
+      ]
+    }
+  },
+  {
+    "added_assets": [
+      9
+    ],
+    "baseline": "caaea349b0735ad9509e",
+    "baseline_cost": 143.0,
+    "baseline_tasks": 144.0,
+    "baseline_workers": 11,
+    "candidate": "34fc3d0fc0c0fee7f4b0",
+    "candidate_tasks": 171.0,
+    "candidate_workers": 14,
+    "delta_tasks": 27.0,
+    "error": -420.602845982143,
+    "family": "team_16797543",
+    "method": "cost_direct_extra",
+    "mode": "cold",
+    "physical_delta_lower": 0.0,
+    "physical_delta_upper": 555.0,
+    "pool": "caaea349b0735ad9509e",
+    "prediction": 45.39715401785699,
+    "raw_memberships": 1,
+    "target": 466.0,
+    "variant": "land_crop9",
+    "variant_aliases": [
+      "land_crop9"
+    ],
+    "panel": "large",
+    "forecasts": {
+      "cost_direct_extra": {
+        "baseline_workers": 12.079233579282407,
+        "candidate_workers": 12.394491593295303,
+        "marginal_cash": 45.39715401785699
+      },
+      "fitted_timing": {
+        "baseline_workers": 11.207213213958187,
+        "candidate_workers": 13.526622364349205,
+        "marginal_cash": 337.26103485108604
+      },
+      "timing_extra": {
+        "baseline_workers": 12.035573278128238,
+        "candidate_workers": 14.269442720487769,
+        "marginal_cash": 473.45735357342255
+      },
+      "timing_boost": {
+        "baseline_workers": 11.958480950309157,
+        "candidate_workers": 14.346626901980914,
+        "marginal_cash": 511.37353746928943
+      }
+    },
+    "same_leaf_fraction": 0.359375,
+    "trees_increasing_cost": 67,
+    "trees_decreasing_cost": 13,
+    "positive_tree_mean_contribution": 50.465122767857146,
+    "negative_tree_mean_contribution": -5.06796875,
+    "changed_features": 34,
+    "largest_scaled_feature_changes": [
+      {
+        "name": "quadrant_tasks_3",
+        "baseline": 0.0,
+        "candidate": 27.0,
+        "scaled_change": 27.0
+      },
+      {
+        "name": "quadrant_tiles_3",
+        "baseline": 0.0,
+        "candidate": 9.0,
+        "scaled_change": 9.0
+      },
+      {
+        "name": "bought_8",
+        "baseline": 0.0,
+        "candidate": 9.0,
+        "scaled_change": 3.921154601128642
+      },
+      {
+        "name": "input_distance",
+        "baseline": 103.0,
+        "candidate": 158.0,
+        "scaled_change": 1.8230964637394953
+      },
+      {
+        "name": "input_action_distance",
+        "baseline": 103.0,
+        "candidate": 158.0,
+        "scaled_change": 1.8230964637394953
+      },
+      {
+        "name": "op_8",
+        "baseline": 11.0,
+        "candidate": 20.0,
+        "scaled_change": 1.6611249955214744
+      },
+      {
+        "name": "op_11",
+        "baseline": 14.0,
+        "candidate": 23.0,
+        "scaled_change": 1.6406112852810855
+      },
+      {
+        "name": "input_8",
+        "baseline": 14.0,
+        "candidate": 23.0,
+        "scaled_change": 1.6406112852810855
+      },
+      {
+        "name": "purchase_units",
+        "baseline": 27.0,
+        "candidate": 46.0,
+        "scaled_change": 1.3153735266803273
+      },
+      {
+        "name": "route_pack_return",
+        "baseline": 18.0,
+        "candidate": 23.0,
+        "scaled_change": 1.2534835550139003
+      },
+      {
+        "name": "task_distance",
+        "baseline": 540.0,
+        "candidate": 705.0,
+        "scaled_change": 1.232034332370884
+      },
+      {
+        "name": "input_actions",
+        "baseline": 30.0,
+        "candidate": 39.0,
+        "scaled_change": 1.1855342321665885
+      }
+    ],
+    "baseline_support": {
+      "panel": "large",
+      "id": "caaea349b0735ad9509e",
+      "families": [
+        "team_16797543"
+      ],
+      "in_training": true,
+      "reference_workers": 11,
+      "lower_bound": 9,
+      "point_workers": 12.079233579282407,
+      "raw_forest_cash": 243.40963541666662,
+      "effective_training_support": 8.991137388068168,
+      "training_weight_at_least_15_workers": 0.0,
+      "outside_training_feature_count": 0,
+      "outside_training_max_scaled_gap": 0.0,
+      "outside_training_features": [],
+      "nearest_training_rows": [
+        {
+          "id": "caaea349b0735ad9509e",
+          "workers": 12,
+          "distance": 0.0
+        },
+        {
+          "id": "c8098dcef325d0fac110",
+          "workers": 12,
+          "distance": 0.08980207150021047
+        },
+        {
+          "id": "1e5167feb6240ca11a11",
+          "workers": 12,
+          "distance": 0.11610846088879634
+        },
+        {
+          "id": "ae3138dd2ea194d198b7",
+          "workers": 12,
+          "distance": 0.21471683294447028
+        },
+        {
+          "id": "a64f44e61f0f0a2908a0",
+          "workers": 13,
+          "distance": 0.28956785344609814
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "caaea349b0735ad9509e",
+          "workers": 12,
+          "weight": 0.21045386904761892
+        },
+        {
+          "id": "1e5167feb6240ca11a11",
+          "workers": 12,
+          "weight": 0.18642113095238086
+        },
+        {
+          "id": "c8098dcef325d0fac110",
+          "workers": 12,
+          "weight": 0.12844122023809512
+        },
+        {
+          "id": "a64f44e61f0f0a2908a0",
+          "workers": 13,
+          "weight": 0.06329985119047621
+        },
+        {
+          "id": "ae3138dd2ea194d198b7",
+          "workers": 12,
+          "weight": 0.058444940476190504
+        },
+        {
+          "id": "bb25b3e0886ee648575a",
+          "workers": 12,
+          "weight": 0.0480840773809524
+        },
+        {
+          "id": "5e1dc81356c71bfc60a5",
+          "workers": 13,
+          "weight": 0.047879464285714296
+        },
+        {
+          "id": "d3f694a14f6a81d60232",
+          "workers": 11,
+          "weight": 0.026822916666666665
+        }
+      ]
+    },
+    "candidate_support": {
+      "panel": "large",
+      "id": "34fc3d0fc0c0fee7f4b0",
+      "families": [
+        "team_16797543"
+      ],
+      "in_training": false,
+      "reference_workers": 14,
+      "lower_bound": 11,
+      "point_workers": 12.394491593295303,
+      "raw_forest_cash": 288.80678943452375,
+      "effective_training_support": 17.714726433594063,
+      "training_weight_at_least_15_workers": 0.009579613095238096,
+      "outside_training_feature_count": 7,
+      "outside_training_max_scaled_gap": 27.0,
+      "outside_training_features": [
+        {
+          "name": "quadrant_tasks_3",
+          "value": 27.0,
+          "min": 0.0,
+          "max": 0.0,
+          "scaled_gap": 27.0
+        },
+        {
+          "name": "quadrant_tiles_3",
+          "value": 9.0,
+          "min": 0.0,
+          "max": 0.0,
+          "scaled_gap": 9.0
+        },
+        {
+          "name": "route_pack_open",
+          "value": 15.0,
+          "min": 2.0,
+          "max": 14.0,
+          "scaled_gap": 0.36355372677024894
+        },
+        {
+          "name": "tasks",
+          "value": 171.0,
+          "min": 15.0,
+          "max": 162.0,
+          "scaled_gap": 0.266471810023274
+        },
+        {
+          "name": "route_pack_return",
+          "value": 23.0,
+          "min": 2.0,
+          "max": 22.0,
+          "scaled_gap": 0.25069671100278007
+        },
+        {
+          "name": "task_motion_bound",
+          "value": 240.0,
+          "min": 27.0,
+          "max": 230.0,
+          "scaled_gap": 0.21142912649548024
+        },
+        {
+          "name": "route_work_proxy",
+          "value": 346.416656,
+          "min": 40.5,
+          "max": 342.0,
+          "scaled_gap": 0.06250800686089361
+        }
+      ],
+      "nearest_training_rows": [
+        {
+          "id": "c8098dcef325d0fac110",
+          "workers": 12,
+          "distance": 1.9132040741229777
+        },
+        {
+          "id": "a64f44e61f0f0a2908a0",
+          "workers": 13,
+          "distance": 1.9149271033230175
+        },
+        {
+          "id": "caaea349b0735ad9509e",
+          "workers": 12,
+          "distance": 1.9154667423366716
+        },
+        {
+          "id": "1e5167feb6240ca11a11",
+          "workers": 12,
+          "distance": 1.918748827121816
+        },
+        {
+          "id": "ae3138dd2ea194d198b7",
+          "workers": 12,
+          "distance": 1.9356858572705893
+        }
+      ],
+      "highest_weight_training_rows": [
+        {
+          "id": "a64f44e61f0f0a2908a0",
+          "workers": 13,
+          "weight": 0.12278645833333324
+        },
+        {
+          "id": "1ff72f24ffa790179140",
+          "workers": 12,
+          "weight": 0.07806919642857142
+        },
+        {
+          "id": "caaea349b0735ad9509e",
+          "workers": 12,
+          "weight": 0.07353050595238095
+        },
+        {
+          "id": "5e1dc81356c71bfc60a5",
+          "workers": 13,
+          "weight": 0.0734188988095238
+        },
+        {
+          "id": "1e5167feb6240ca11a11",
+          "workers": 12,
+          "weight": 0.07118675595238094
+        },
+        {
+          "id": "553219096a6bdb783586",
+          "workers": 13,
+          "weight": 0.06912202380952381
+        },
+        {
+          "id": "adfda873974d547ca31e",
+          "workers": 13,
+          "weight": 0.06705729166666667
+        },
+        {
+          "id": "bb25b3e0886ee648575a",
+          "workers": 12,
+          "weight": 0.06607142857142857
+        }
+      ]
+    }
+  }
+]

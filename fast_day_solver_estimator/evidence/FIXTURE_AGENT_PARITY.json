@@ -1,0 +1,384 @@
+{
+  "status": "passed",
+  "scope": "Both relocated fixture agents, fixed seed 1201301738, complete 719-transition source season; 90 problem/action files byte-identical.",
+  "original": {
+    "seed": 1201301738,
+    "source_action_hash": 16497299122324328382,
+    "rival_action_hash": 17795690581550109641,
+    "source_cash": 99787,
+    "rival_cash": 122310,
+    "extract_wall_seconds": 0.131942,
+    "scope": "Original exposed fixed-shop scenario, 719 real transitions. Day29 has an offline empty final phase only; its normalized cost prediction is unsupported."
+  },
+  "published": {
+    "seed": 1201301738,
+    "source_action_hash": 16497299122324328382,
+    "rival_action_hash": 17795690581550109641,
+    "source_cash": 99787,
+    "rival_cash": 122310,
+    "extract_wall_seconds": 0.13207,
+    "scope": "Original exposed fixed-shop scenario, 719 real transitions. Day29 has an offline empty final phase only; its normalized cost prediction is unsupported."
+  },
+  "files": [
+    {
+      "file": "0/problem.json",
+      "sha256": "7e40429968ca1a85ed8c17e5facd70f089b04cefdd3cf6e362f0c7af4a6f8096"
+    },
+    {
+      "file": "0/actions.txt",
+      "sha256": "d9e5a6ac07523dadb9ac10941d0b7182bbacbff1ee3a5da70433764084f93803"
+    },
+    {
+      "file": "0/economic_actions.txt",
+      "sha256": "f1076ff0dbb669eb0dcf484c0aa4537f0dada6135958e455b155a11bc02193c1"
+    },
+    {
+      "file": "1/problem.json",
+      "sha256": "671f5841685d20bf8e4f3d003e8ecbd04ab963db98c482ea1b2d869713f6d8d3"
+    },
+    {
+      "file": "1/actions.txt",
+      "sha256": "da6c27fd0175e842de8d8aff79b3d2239e103e94c47aba1bcad168843212f710"
+    },
+    {
+      "file": "1/economic_actions.txt",
+      "sha256": "f5032c1f22b32e81993a13cfef8dbacf79d6604899e97af1e64c3a6f6d94f947"
+    },
+    {
+      "file": "2/problem.json",
+      "sha256": "f98d3408f409d1dc16100d66e85b38f897a483d7b270d7d28697cd6eb536a2e7"
+    },
+    {
+      "file": "2/actions.txt",
+      "sha256": "0166507e00073f80b4ff70e9e692fef1e67d0f247bf570ea2cf79bde5b6f25c3"
+    },
+    {
+      "file": "2/economic_actions.txt",
+      "sha256": "a331b495945646750aa0494266bf0c96b005fefe9ba2b77753b78d1a0022917d"
+    },
+    {
+      "file": "3/problem.json",
+      "sha256": "c3258ca5a4cc36b0668726ec9a5a24d5ad1a9cc6c6f54f9e435c0c0e7b82e710"
+    },
+    {
+      "file": "3/actions.txt",
+      "sha256": "4860b9c901ee8cc028ed290b3eef483e0d92c4024131778fe236b878985b5d79"
+    },
+    {
+      "file": "3/economic_actions.txt",
+      "sha256": "fcb65e3f0ba48a217554835bc3ac1bc9360c5f38a22a263a41ecf775920375d8"
+    },
+    {
+      "file": "4/problem.json",
+      "sha256": "04077d6c45c64fba987053b0f9c7eb115c882e7832d81b4e3b85ebd703fd3f3f"
+    },
+    {
+      "file": "4/actions.txt",
+      "sha256": "9ff5a3305568c9a72273fc27785977e36dd6c9f736b9683ec7fcbbbe7b95ee7d"
+    },
+    {
+      "file": "4/economic_actions.txt",
+      "sha256": "85460de8ec6d7dbcc44225c208401f069da3052e721f401e551af32d94fd098b"
+    },
+    {
+      "file": "5/problem.json",
+      "sha256": "3315ce2ea5d11bf9bd19372bf58064a9cb388b36a0f7ecaddc8421388d49a0b9"
+    },
+    {
+      "file": "5/actions.txt",
+      "sha256": "0ae03022a87e99bbe18d51c5d93e544f2450a4306234213fe3df602a91dfa52c"
+    },
+    {
+      "file": "5/economic_actions.txt",
+      "sha256": "dc97320e8f2999cb7b2690f0ebdd7ff028b77424e00fd1a8ea6017defd08d334"
+    },
+    {
+      "file": "6/problem.json",
+      "sha256": "0c8ea97d1cccb5cca5c56dd69e2b64c052bec17598330d883e100b3317128b7f"
+    },
+    {
+      "file": "6/actions.txt",
+      "sha256": "8113030c7ab36e042ab7be8bd454592afcda47a2db9cbc96443f8f1fef58b50f"
+    },
+    {
+      "file": "6/economic_actions.txt",
+      "sha256": "346094c3b4eba5add90fac532d0e63700d29c15a1cf7348897da23aeb7c0a60b"
+    },
+    {
+      "file": "7/problem.json",
+      "sha256": "9c338ab816fa1e2aeb4b62be5ef59fb749f67f03959439aabaf9fa0b132f2b4c"
+    },
+    {
+      "file": "7/actions.txt",
+      "sha256": "59d56f12187bb74624f41ef4f24b94ae284f9960364ba4a55489dbca9ba9c188"
+    },
+    {
+      "file": "7/economic_actions.txt",
+      "sha256": "15c68cdf5a99e2ea865d930fb97ec84cfec400bab8711f00f87cd72c601838ec"
+    },
+    {
+      "file": "8/problem.json",
+      "sha256": "211f71dc35146f051bfc081069aab1966f3d646f76516326ca03166127ef26c1"
+    },
+    {
+      "file": "8/actions.txt",
+      "sha256": "0c745e31fc507504ae6de58b21fa867fcca1a5455e540ecb83e8ff2bd5659afc"
+    },
+    {
+      "file": "8/economic_actions.txt",
+      "sha256": "54fb1840181b506e7459b07f2f1ec4c666f23c51991ac9d4f00fb60aff0d0174"
+    },
+    {
+      "file": "9/problem.json",
+      "sha256": "3fb6148dac2cbbaadeb9c93cff4dbf4fef13a890bb4137e979ebffce2bb5df04"
+    },
+    {
+      "file": "9/actions.txt",
+      "sha256": "ecbe3c18cba27ab9232a1214b51cbcfdce9b1330afedd6b77afb1d360baad45f"
+    },
+    {
+      "file": "9/economic_actions.txt",
+      "sha256": "d8204ac19dd8132c1fe369e62d4122b7f50d0264fbe1a9b2c51e9b464cb6f2fd"
+    },
+    {
+      "file": "10/problem.json",
+      "sha256": "ea6260f2ca96212296dd469747918b8a3b65fc82de92b51c81a0ec8e190c1fb8"
+    },
+    {
+      "file": "10/actions.txt",
+      "sha256": "01f33b4711fd7d03e64e8a3e14fda15dbf5991b51b599b719b56dd155eb8930d"
+    },
+    {
+      "file": "10/economic_actions.txt",
+      "sha256": "857778c25943a6ae6363bffd09a946274b6dd8bff0ce69a03ead9afb3e351694"
+    },
+    {
+      "file": "11/problem.json",
+      "sha256": "7f1a20687bfe41a96b7f3d93bc4988556d19fa196ec4cab3c19e77ba22d2341f"
+    },
+    {
+      "file": "11/actions.txt",
+      "sha256": "efb5b23e6d64bdb410c2c18f60a5fa3809d834bb9bf18499c15f17a29674ae2f"
+    },
+    {
+      "file": "11/economic_actions.txt",
+      "sha256": "4d0f97d5608aec75c81aa6ed815e45335c4ab5abb73e60a5f4305bddaab0d138"
+    },
+    {
+      "file": "12/problem.json",
+      "sha256": "154200231966ca3061b4b383630c0f4853309aad8a3f30c4e05816d3d4c0e3a2"
+    },
+    {
+      "file": "12/actions.txt",
+      "sha256": "886d3012994171578513526528bac7fb809abea4b3e9b213dc35fab72c0eeb7a"
+    },
+    {
+      "file": "12/economic_actions.txt",
+      "sha256": "b5f096eb3e9855f6efc5e6969776965fcfda040960645036365cd2b763220704"
+    },
+    {
+      "file": "13/problem.json",
+      "sha256": "0794afbaeae3c9814255ae54b144199eef5603f76292c81e7031ff02149d06ea"
+    },
+    {
+      "file": "13/actions.txt",
+      "sha256": "5e4a6995df6868dd074acd7e86f91e3c57e907f5a50cc544f9d2510fc7b097e0"
+    },
+    {
+      "file": "13/economic_actions.txt",
+      "sha256": "b00041922941edb13fb46aac63370c17c0afe6ab47246b43bb109cc2c458df79"
+    },
+    {
+      "file": "14/problem.json",
+      "sha256": "f3ee3614334672323dbbf14d3705d9bc24bb48fd416713d3e98df18609748d82"
+    },
+    {
+      "file": "14/actions.txt",
+      "sha256": "1ef1c883b3974d3828bfdd14c2e621aa4f571b9f9ded1760917a229cede79087"
+    },
+    {
+      "file": "14/economic_actions.txt",
+      "sha256": "d287038eba5fcf3a38d5635749a00e63d22b0203c6f0babc244b4777fe9ba2f0"
+    },
+    {
+      "file": "15/problem.json",
+      "sha256": "d891c4a006b73a0b4e48f9c139ac542ca9eb08fb29c320b022dd8b911189f58e"
+    },
+    {
+      "file": "15/actions.txt",
+      "sha256": "307f34bf9b255430262c4dbb8bec72e9582b702c86aff81ad3ef557e6a8fc36d"
+    },
+    {
+      "file": "15/economic_actions.txt",
+      "sha256": "a24078acd21cb2bff951ea34252d6a26e3c7d3e713b6661f701f5784edaaaa88"
+    },
+    {
+      "file": "16/problem.json",
+      "sha256": "82ea322e964a9fd2512510d0b701053849cc969ca101dba77d417bfd7457af5f"
+    },
+    {
+      "file": "16/actions.txt",
+      "sha256": "e32b24510da912dd398c1821c438df2988ae95f3234d627fd6bd0277817d4d6d"
+    },
+    {
+      "file": "16/economic_actions.txt",
+      "sha256": "df3af01e6876b582ddf19e77bd930902d234317c5d20454e14a9f9895308d5c0"
+    },
+    {
+      "file": "17/problem.json",
+      "sha256": "889f30a34a960cb8f15392177829bc03a664ebb347ca1fb15951c66c7d1e12b9"
+    },
+    {
+      "file": "17/actions.txt",
+      "sha256": "8763549681be3fd20239447945914b1f568a8ad5acf962927e0019105b0e1f60"
+    },
+    {
+      "file": "17/economic_actions.txt",
+      "sha256": "3520b2bb60999317d2244adccd0556ada579c1cb4d9b2d48b40db0eb61147d41"
+    },
+    {
+      "file": "18/problem.json",
+      "sha256": "3eb0b792d23c61b25345a64b89aa08798cb66ffd624a229ccd94be0d7f60f67e"
+    },
+    {
+      "file": "18/actions.txt",
+      "sha256": "ccebdad4fc5cd4d5836483c795e5ffccfe29feb6943abc658f065c11c2a0f2f0"
+    },
+    {
+      "file": "18/economic_actions.txt",
+      "sha256": "75229b87a1f2c01ba34598b81109cd7993771045a3b137880f644ba8af59e81a"
+    },
+    {
+      "file": "19/problem.json",
+      "sha256": "fab2efbdb02f20575bce0b076f94b979cb79ec8209bc98ee0e508f9c7da12633"
+    },
+    {
+      "file": "19/actions.txt",
+      "sha256": "9ce03d9e72190b94d717cba7ad0350ee52cae9ba39d17c5a4026727091787d77"
+    },
+    {
+      "file": "19/economic_actions.txt",
+      "sha256": "640f31b27f29326e9ffc8ff71b57c63d5f131f34059d02580abce10e841cbc3b"
+    },
+    {
+      "file": "20/problem.json",
+      "sha256": "da037ff15645a9d8d3643ea26f9aa9413c5bdf89670569bc4d603038bc1ebc97"
+    },
+    {
+      "file": "20/actions.txt",
+      "sha256": "d0fa81336005ad06cb98f19dec9ead66693164453333f2e69783bc5c46465703"
+    },
+    {
+      "file": "20/economic_actions.txt",
+      "sha256": "2da0c428886ae5fbb55133cd1d4c08917e4769c6304e7942f02ce05c329425cb"
+    },
+    {
+      "file": "21/problem.json",
+      "sha256": "d6e1e038dfe0b340d3223adba4cd6662b894e78eeefccc1ef272e8a474c05458"
+    },
+    {
+      "file": "21/actions.txt",
+      "sha256": "95d9e2cf2c94ef05c10dcd7276b13f036d9e42fbe51d386e6d4499ff7537728d"
+    },
+    {
+      "file": "21/economic_actions.txt",
+      "sha256": "dc2cc2c7374802a505cb323dfbeffe5c14a441e76530377437fd1f5f38aeff42"
+    },
+    {
+      "file": "22/problem.json",
+      "sha256": "6afe1ba3d561c5eadbeeb8a61d3dca29d2834b26f13db0fd4d137b85bb872f1f"
+    },
+    {
+      "file": "22/actions.txt",
+      "sha256": "d5f8ec71920e2ad9bd884156dfbe92f6c133b343ef2c370d25bdb4e8817d7c6f"
+    },
+    {
+      "file": "22/economic_actions.txt",
+      "sha256": "846e2a1a79b4b7df1936f7777430b5a083a6329bf075557e730f88aa6852467d"
+    },
+    {
+      "file": "23/problem.json",
+      "sha256": "07efe7f303f4cae857786907b0acab78ac8f3edf91b920a8c846af2745feac39"
+    },
+    {
+      "file": "23/actions.txt",
+      "sha256": "3c9a33ad703b69a1354e26102da80767ce0ba7b90090d1017488a1ed7dca2975"
+    },
+    {
+      "file": "23/economic_actions.txt",
+      "sha256": "366862855509bbb4bb3b0987ba303751fffda65d677577266461fd8e8f4c00fa"
+    },
+    {
+      "file": "24/problem.json",
+      "sha256": "a5e0b1b5a293eb63db33483bae1a0921ea8fc54cfd88fee113041d658f27b630"
+    },
+    {
+      "file": "24/actions.txt",
+      "sha256": "0e7a5fbb3b96759770eafee81e61e0036ea07ed1051fa534bbdc79b7e28cfcf5"
+    },
+    {
+      "file": "24/economic_actions.txt",
+      "sha256": "1040d8ec263baafc50549580f126714ea1251eb9f3167dc50208971261e9a38e"
+    },
+    {
+      "file": "25/problem.json",
+      "sha256": "38b24a0442b36372fdac75a494cfd16a9024ac93110c344018ac14c9fab40ce1"
+    },
+    {
+      "file": "25/actions.txt",
+      "sha256": "f659dc47944514d698ac3858e044a2bfab6275bb09b8a8fe0eb3653825143956"
+    },
+    {
+      "file": "25/economic_actions.txt",
+      "sha256": "476d25b5aa85f2eaa37f4565fddcf2b287a28fbd052fffb32ac32341e2486bc0"
+    },
+    {
+      "file": "26/problem.json",
+      "sha256": "ee1a2054bf7083ab8e87ce5af7e4f364439874b5aaaea5ba07debb9f54dd0cc5"
+    },
+    {
+      "file": "26/actions.txt",
+      "sha256": "46887dcd093fb315c2debf24b5fd850f4e916dafca46fa19183e2f8abd627d36"
+    },
+    {
+      "file": "26/economic_actions.txt",
+      "sha256": "058b874c6474c2d551c0ec42410c7dbdc6db6618ff8d6142ad0a567def3dc6b2"
+    },
+    {
+      "file": "27/problem.json",
+      "sha256": "57d1af1afe2cb8e89f8ed7c6c6470f26f08dd7ecc02525b90da288573c775840"
+    },
+    {
+      "file": "27/actions.txt",
+      "sha256": "9817ec3eb2587520ebe5e7650b9708294e5db01c7398cbf3b8815d4156cd4c3a"
+    },
+    {
+      "file": "27/economic_actions.txt",
+      "sha256": "0d60c699d69044660b29753bf18910618da2995fdaed3acb9a8c1ab347731a60"
+    },
+    {
+      "file": "28/problem.json",
+      "sha256": "6c9e5c70f6cfddff247b7be96f0785e1aab5017acb7c2fba59e9dbb1e9b9ab27"
+    },
+    {
+      "file": "28/actions.txt",
+      "sha256": "875dde60f7d53ecc4f76404b8361ccb70ea80bf91ab2a4f5b96102194cdd3c45"
+    },
+    {
+      "file": "28/economic_actions.txt",
+      "sha256": "f4296c96c47be243980e0eeafd981de14f62bc70c6c887d5eb16ae5f43197816"
+    },
+    {
+      "file": "29/problem.json",
+      "sha256": "f7add8452e618639fd8f57ea0c5a80ec6476886e41c359d290ff9e4864dcd760"
+    },
+    {
+      "file": "29/actions.txt",
+      "sha256": "b413e2d144ddd5846dcf17dc1cd3f45685671d7f8e0108e35ebf572018ca7a40"
+    },
+    {
+      "file": "29/economic_actions.txt",
+      "sha256": "ced1b5db83c8d0901e4585185d2b4ce47a521f7b89feb3ffc837b052134d09d3"
+    }
+  ]
+}

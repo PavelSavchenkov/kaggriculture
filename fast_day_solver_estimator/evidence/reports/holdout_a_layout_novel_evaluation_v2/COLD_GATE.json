@@ -1,0 +1,162 @@
+{
+  "scope": "Reader regression: reapply unchanged cold gate to completed second-wave novel layouts; not a new result",
+  "baseline": "original_geometry/around",
+  "candidate": "cost_direct_extra/around",
+  "comparison": {
+    "before": "original_geometry/around",
+    "after": "cost_direct_extra/around",
+    "pools": 46,
+    "timed_pools": 46,
+    "before_mean_seconds": 13.205633329543478,
+    "after_mean_seconds": 1.6159916368695626,
+    "relative_time_reduction_percent": 87.76286152626784,
+    "seconds_saved_family_bootstrap_95": [
+      5.4540674198333825,
+      18.434041228914893
+    ],
+    "before_no_certificate_at_30s": 1,
+    "after_no_certificate_at_30s": 0,
+    "largest_regressions": [
+      {
+        "pool": "2010baf684dc7f726f06",
+        "family": "team_16681125",
+        "before_time": 1.450161474,
+        "after_time": 4.914650337,
+        "seconds_saved": -3.4644888630000006,
+        "before_cost_at_30s": 376.0,
+        "after_cost_at_30s": 376.0
+      },
+      {
+        "pool": "802f4fcc459eda6d3dec",
+        "family": "team_16795448",
+        "before_time": 1.960900934,
+        "after_time": 3.831681483,
+        "seconds_saved": -1.870780549,
+        "before_cost_at_30s": 232.0,
+        "after_cost_at_30s": 232.0
+      },
+      {
+        "pool": "4dc3f6e5467b9e8f39e0",
+        "family": "team_16665237",
+        "before_time": 0.60630092,
+        "after_time": 1.735602592,
+        "seconds_saved": -1.129301672,
+        "before_cost_at_30s": 12.0,
+        "after_cost_at_30s": 12.0
+      },
+      {
+        "pool": "040d81a560a8dc6c60dc",
+        "family": "team_16665237",
+        "before_time": 1.2875118140000001,
+        "after_time": 1.287557778,
+        "seconds_saved": -4.596399999989842e-05,
+        "before_cost_at_30s": 20.0,
+        "after_cost_at_30s": 20.0
+      },
+      {
+        "pool": "b9125cb391c7f4a08abe",
+        "family": "team_16663403",
+        "before_time": 2.4499856859999998,
+        "after_time": 2.450021847,
+        "seconds_saved": -3.616100000014555e-05,
+        "before_cost_at_30s": 88.0,
+        "after_cost_at_30s": 88.0
+      }
+    ],
+    "largest_speedups": [
+      {
+        "pool": "5143c895a51898ac3b50",
+        "family": "team_16736427",
+        "before_time": 108.11828739599997,
+        "after_time": 0.569136867,
+        "seconds_saved": 107.54915052899997,
+        "before_cost_at_30s": null,
+        "after_cost_at_30s": 143.0
+      },
+      {
+        "pool": "2bbf0e0d46022493edec",
+        "family": "team_16734914",
+        "before_time": 57.37981606499999,
+        "after_time": 1.887606553,
+        "seconds_saved": 55.492209511999995,
+        "before_cost_at_30s": 376.0,
+        "after_cost_at_30s": 232.0
+      },
+      {
+        "pool": "9e14d66543df722a4ec9",
+        "family": "team_16736427",
+        "before_time": 43.922828208,
+        "after_time": 2.705277646,
+        "seconds_saved": 41.217550562,
+        "before_cost_at_30s": 10945.0,
+        "after_cost_at_30s": 376.0
+      },
+      {
+        "pool": "79d4da74e4b6074d4db2",
+        "family": "team_16734914",
+        "before_time": 28.238467363,
+        "after_time": 1.472893922,
+        "seconds_saved": 26.765573441,
+        "before_cost_at_30s": 88.0,
+        "after_cost_at_30s": 88.0
+      },
+      {
+        "pool": "095fa630934c9fd2c99e",
+        "family": "team_16663403",
+        "before_time": 28.214543412999998,
+        "after_time": 2.036716151,
+        "seconds_saved": 26.177827261999997,
+        "before_cost_at_30s": 232.0,
+        "after_cost_at_30s": 232.0
+      }
+    ]
+  },
+  "original_30s": {
+    "method": "original_geometry/around",
+    "budget_cpu_seconds": 30,
+    "pools": 46,
+    "reference_certified_pools": 46,
+    "no_certificate_rate": 0.021739130434782594,
+    "mean_conditional_cost": 392.2888888888889,
+    "mean_conditional_regret": 238.06666666666666,
+    "best_cost_recall_all_pools": 0.9347826086956522,
+    "mean_time_to_best": 13.205633329543478,
+    "p95_time_to_best": 40.00173799675,
+    "max_time_to_best": 108.11828739599997,
+    "mean_scoring_cpu_us_per_proposal": 71.6094652173934,
+    "mean_full_decision_cpu_ms": 0.007434021739093658,
+    "model_use_fraction_within_budget": 0.0,
+    "model_use_fraction_before_best": 0.0
+  },
+  "candidate_30s": {
+    "method": "cost_direct_extra/around",
+    "budget_cpu_seconds": 30,
+    "pools": 46,
+    "reference_certified_pools": 46,
+    "no_certificate_rate": 0.0,
+    "mean_conditional_cost": 153.97826086956522,
+    "mean_conditional_regret": 0.0,
+    "best_cost_recall_all_pools": 1.0,
+    "mean_time_to_best": 1.6159916368695653,
+    "p95_time_to_best": 4.6439081235,
+    "max_time_to_best": 12.650892150999999,
+    "mean_scoring_cpu_us_per_proposal": 81.03788695652224,
+    "mean_full_decision_cpu_ms": 0.005004173913037155,
+    "model_use_fraction_within_budget": 0.0,
+    "model_use_fraction_before_best": 0.0
+  },
+  "gates": {
+    "mean_time_reduction_at_least_20_percent": true,
+    "positive_family_interval_for_saved_time": true,
+    "no_worse_30s_certificate_rate": true,
+    "no_worse_30s_mean_verified_bill": true,
+    "exact_frozen_cpp_query_choices": true
+  },
+  "passes": true,
+  "limit": "Time to reference-best is retrospective; fixed-budget bill and certificate rate are separate. This does not accept the complete warm compiler or general marginal estimator.",
+  "input_sha256": {
+    "runs/holdout_a_layout_novel_evaluation_v2/MEASURED_RESULTS.json": "b0bd08a272800ac009f34f057b6691b74da702fab5a6f1a8c55060ffb9c01f00",
+    "runs/holdout_a_layout_novel_evaluation_v2/REPORT.json": "310460f2d36db3094c2a8e6b5ca495d873da01d0f63e4fdaff1ade854e7065f1",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/scripts/report_cold_gate_v3.py": "c994ea7869b7ada79a6db22ab0f9438ad4b768e806d1d18ca6cbd0888c21aaeb"
+  }
+}

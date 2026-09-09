@@ -1,0 +1,253 @@
+{
+  "utc": "2026-09-09T08:24:37.867319+00:00",
+  "scope": "Ordinary 24-phase, earliest-hire-menu cold layout search with equal-work/value candidates. This does not accept a general marginal estimator, terminal/calendar transfer or the original warm course pipeline.",
+  "primary": "cost_direct_extra/around",
+  "baseline": "original_geometry/around",
+  "novel_layout_pools": 46,
+  "primary_gates": {
+    "mean_time_reduction_at_least_20_percent": true,
+    "positive_family_interval_for_saved_time": true,
+    "no_worse_30s_certificate_rate": true,
+    "no_worse_30s_mean_verified_bill": true,
+    "exact_frozen_cpp_query_choices": true
+  },
+  "primary_passes": true,
+  "comparison": {
+    "before": "original_geometry/around",
+    "after": "cost_direct_extra/around",
+    "pools": 46,
+    "timed_pools": 46,
+    "before_mean_seconds": 13.205633329543478,
+    "after_mean_seconds": 1.6159916368695626,
+    "relative_time_reduction_percent": 87.76286152626784,
+    "seconds_saved_family_bootstrap_95": [
+      5.4540674198333825,
+      18.434041228914893
+    ],
+    "before_no_certificate_at_30s": 1,
+    "after_no_certificate_at_30s": 0,
+    "largest_regressions": [
+      {
+        "pool": "2010baf684dc7f726f06",
+        "family": "team_16681125",
+        "before_time": 1.450161474,
+        "after_time": 4.914650337,
+        "seconds_saved": -3.4644888630000006,
+        "before_cost_at_30s": 376.0,
+        "after_cost_at_30s": 376.0
+      },
+      {
+        "pool": "802f4fcc459eda6d3dec",
+        "family": "team_16795448",
+        "before_time": 1.960900934,
+        "after_time": 3.831681483,
+        "seconds_saved": -1.870780549,
+        "before_cost_at_30s": 232.0,
+        "after_cost_at_30s": 232.0
+      },
+      {
+        "pool": "4dc3f6e5467b9e8f39e0",
+        "family": "team_16665237",
+        "before_time": 0.60630092,
+        "after_time": 1.735602592,
+        "seconds_saved": -1.129301672,
+        "before_cost_at_30s": 12.0,
+        "after_cost_at_30s": 12.0
+      },
+      {
+        "pool": "040d81a560a8dc6c60dc",
+        "family": "team_16665237",
+        "before_time": 1.2875118140000001,
+        "after_time": 1.287557778,
+        "seconds_saved": -4.596399999989842e-05,
+        "before_cost_at_30s": 20.0,
+        "after_cost_at_30s": 20.0
+      },
+      {
+        "pool": "b9125cb391c7f4a08abe",
+        "family": "team_16663403",
+        "before_time": 2.4499856859999998,
+        "after_time": 2.450021847,
+        "seconds_saved": -3.616100000014555e-05,
+        "before_cost_at_30s": 88.0,
+        "after_cost_at_30s": 88.0
+      }
+    ],
+    "largest_speedups": [
+      {
+        "pool": "5143c895a51898ac3b50",
+        "family": "team_16736427",
+        "before_time": 108.11828739599997,
+        "after_time": 0.569136867,
+        "seconds_saved": 107.54915052899997,
+        "before_cost_at_30s": null,
+        "after_cost_at_30s": 143.0
+      },
+      {
+        "pool": "2bbf0e0d46022493edec",
+        "family": "team_16734914",
+        "before_time": 57.37981606499999,
+        "after_time": 1.887606553,
+        "seconds_saved": 55.492209511999995,
+        "before_cost_at_30s": 376.0,
+        "after_cost_at_30s": 232.0
+      },
+      {
+        "pool": "9e14d66543df722a4ec9",
+        "family": "team_16736427",
+        "before_time": 43.922828208,
+        "after_time": 2.705277646,
+        "seconds_saved": 41.217550562,
+        "before_cost_at_30s": 10945.0,
+        "after_cost_at_30s": 376.0
+      },
+      {
+        "pool": "79d4da74e4b6074d4db2",
+        "family": "team_16734914",
+        "before_time": 28.238467363,
+        "after_time": 1.472893922,
+        "seconds_saved": 26.765573441,
+        "before_cost_at_30s": 88.0,
+        "after_cost_at_30s": 88.0
+      },
+      {
+        "pool": "095fa630934c9fd2c99e",
+        "family": "team_16663403",
+        "before_time": 28.214543412999998,
+        "after_time": 2.036716151,
+        "seconds_saved": 26.177827261999997,
+        "before_cost_at_30s": 232.0,
+        "after_cost_at_30s": 232.0
+      }
+    ]
+  },
+  "optional_primary": "boost/hybrid_nominal",
+  "optional_checks": {
+    "time_gain_at_least_5_percent": false,
+    "positive_saved_time_interval": false,
+    "fixed_budget_quality_improves": false,
+    "time_regression_at_most_5_percent": false
+  },
+  "optional_passes": false,
+  "optional_reason": "13.04 percent slower than direct-cost nearby ordering, with the same 30-second quality; fails both predeclared routes to adoption.",
+  "secondary_hybrid_cpu": {
+    "before": "cost_direct_extra/around",
+    "after": "boost/hybrid_cpu",
+    "pools": 46,
+    "timed_pools": 46,
+    "before_mean_seconds": 1.6159916368695648,
+    "after_mean_seconds": 1.5949191853478257,
+    "relative_time_reduction_percent": 1.3039950851824844,
+    "seconds_saved_family_bootstrap_95": [
+      -0.2240953203404254,
+      0.3149886414489129
+    ],
+    "before_no_certificate_at_30s": 0,
+    "after_no_certificate_at_30s": 0,
+    "largest_regressions": [
+      {
+        "pool": "614368270430409639ec",
+        "family": "team_16795448",
+        "before_time": 5.771238524,
+        "after_time": 8.427151547,
+        "seconds_saved": -2.655913022999999,
+        "before_cost_at_30s": 376.0,
+        "after_cost_at_30s": 376.0
+      },
+      {
+        "pool": "2010baf684dc7f726f06",
+        "family": "team_16681125",
+        "before_time": 4.914650337,
+        "after_time": 5.96466792,
+        "seconds_saved": -1.0500175829999998,
+        "before_cost_at_30s": 376.0,
+        "after_cost_at_30s": 376.0
+      },
+      {
+        "pool": "802f4fcc459eda6d3dec",
+        "family": "team_16795448",
+        "before_time": 3.831681483,
+        "after_time": 4.336946223,
+        "seconds_saved": -0.5052647399999999,
+        "before_cost_at_30s": 232.0,
+        "after_cost_at_30s": 232.0
+      },
+      {
+        "pool": "4003abd9e7439bdb42c5",
+        "family": "team_16645426",
+        "before_time": 3.448983153,
+        "after_time": 3.449006452,
+        "seconds_saved": -2.3298999999976644e-05,
+        "before_cost_at_30s": 143.0,
+        "after_cost_at_30s": 143.0
+      },
+      {
+        "pool": "c6b96b93f9dfc9bf673f",
+        "family": "team_16681125",
+        "before_time": 2.934633903,
+        "after_time": 2.934627926,
+        "seconds_saved": 5.976999999823818e-06,
+        "before_cost_at_30s": 143.0,
+        "after_cost_at_30s": 143.0
+      }
+    ],
+    "largest_speedups": [
+      {
+        "pool": "b0fb52758dfb8246bd11",
+        "family": "team_16736427",
+        "before_time": 12.650892150999999,
+        "after_time": 7.4714383720000015,
+        "seconds_saved": 5.1794537789999975,
+        "before_cost_at_30s": 143.0,
+        "after_cost_at_30s": 143.0
+      },
+      {
+        "pool": "70c85df7739f9f5d0198",
+        "family": "team_16795448",
+        "before_time": 0.333003746,
+        "after_time": 0.33293957,
+        "seconds_saved": 6.417599999997137e-05,
+        "before_cost_at_30s": 143.0,
+        "after_cost_at_30s": 143.0
+      },
+      {
+        "pool": "00d16dfdaa82a898ef51",
+        "family": "team_16681125",
+        "before_time": 0.40657000600000004,
+        "after_time": 0.406508757,
+        "seconds_saved": 6.124900000004097e-05,
+        "before_cost_at_30s": 7.0,
+        "after_cost_at_30s": 7.0
+      },
+      {
+        "pool": "6490d4a08fc9b5f8d68b",
+        "family": "team_16645426",
+        "before_time": 0.08330210300000011,
+        "after_time": 0.08324613899999993,
+        "seconds_saved": 5.5964000000185976e-05,
+        "before_cost_at_30s": 143.0,
+        "after_cost_at_30s": 143.0
+      },
+      {
+        "pool": "759e1b5b3c5f8faf25c4",
+        "family": "team_16645426",
+        "before_time": 0.520273885,
+        "after_time": 0.520222239,
+        "seconds_saved": 5.16460000000718e-05,
+        "before_cost_at_30s": 143.0,
+        "after_cost_at_30s": 143.0
+      }
+    ]
+  },
+  "secondary_reason": "1.30 percent mean gain with an interval crossing zero and no 30-second quality gain; insufficient evidence to adopt.",
+  "adopted_scoped_component": "search_v2_cost_only_h24_cold",
+  "whole_pipeline_accepted": false,
+  "timing_limit": "Time to reference-best cost is retrospective. The caller cannot observe that stopping time. Fixed-budget quality is reported separately; no complete original warm-pipeline speedup is claimed.",
+  "frozen_files_verified": 41,
+  "input_sha256": {
+    "snapshots/search_wave_v2/FREEZE.json": "726b2a9bb435201571a58ef83444b422e6fc634d69fd188d5b9a4017b9cb0e6c",
+    "runs/holdout_a_layout_novel_evaluation_v2/MEASURED_RESULTS.json": "b0bd08a272800ac009f34f057b6691b74da702fab5a6f1a8c55060ffb9c01f00",
+    "runs/holdout_a_layout_novel_evaluation_v2/REPORT.json": "310460f2d36db3094c2a8e6b5ca495d873da01d0f63e4fdaff1ade854e7065f1",
+    "scripts/record_search_gate.py": "10b036cdd18e8b77cb23a2d80b329de9830cc3c856ccd46fc50ce1d74149d694"
+  }
+}

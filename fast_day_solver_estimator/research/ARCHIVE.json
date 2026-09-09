@@ -1,0 +1,17 @@
+{
+  "archive": "research/checkpoint.tar.zst",
+  "sha256": "227b434d0fef022524b5367a11f59a34e3631f7ae00e96d925e631a06fcb5495",
+  "bytes": 511791171,
+  "uncompressed_file_bytes": 17414506026,
+  "members": 311107,
+  "regular_files": 294319,
+  "links": 0,
+  "path_audit": "passed",
+  "zstd_stream_check": "passed",
+  "source_experiment": "experiments/v6/fast_day_solver_estimator",
+  "excluded": [
+    "./build",
+    "*/__pycache__"
+  ],
+  "historical_absolute_paths": "Preserved inside evidence; not extraction destinations."
+}

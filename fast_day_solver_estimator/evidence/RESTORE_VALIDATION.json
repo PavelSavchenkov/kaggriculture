@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "fresh_research_cmake_configured": true,
+  "targets_built": [
+    "reference",
+    "predict_planning"
+  ],
+  "minimal_reference": {
+    "id": "minimal",
+    "workers": 1,
+    "status": "FEASIBLE",
+    "budget_seconds": 0.1,
+    "wall_seconds": 0.024631676,
+    "cpu_seconds": 0.007749,
+    "active_hours": 24,
+    "virtual_phase_removal_failed": false,
+    "schedule_hash": 12176729677326725509
+  },
+  "planning_repeats_rows": 2,
+  "planning_minimal_workers": 1,
+  "scope": "Restoration, build, strict certificate and inference smoke checks. Not new promotion evidence.",
+  "earlier_archive_test": {
+    "archive_sha256": "8b9bb9e2d5571127dcc2351761fb9b919a3727faeb7259643812eff06e3a96c4",
+    "experiment": "/home/pavel/Programming/kaggriculture/work/fast_day_estimator_restored/experiments/v6/fast_day_solver_estimator",
+    "historical_paths": "Preserved. Build new runtime manifests in this workspace; do not rewrite frozen evidence.",
+    "background_jobs_started": false
+  },
+  "archive": {
+    "archive_sha256": "227b434d0fef022524b5367a11f59a34e3631f7ae00e96d925e631a06fcb5495",
+    "experiment": "/home/pavel/Programming/kaggriculture/work/fast_day_estimator_final_restore/experiments/v6/fast_day_solver_estimator",
+    "historical_paths": "Preserved. Build new runtime manifests in this workspace; do not rewrite frozen evidence.",
+    "background_jobs_started": false
+  },
+  "final_archive_built_and_executed": true
+}

@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "utc": "2026-09-09T14:56:27.234771+00:00",
+  "cli_cases": [
+    {
+      "active_hours": 24,
+      "analytically_rejected": false,
+      "minimum_workers_lower_bound": 6,
+      "estimated_workers": 12.12236915870949,
+      "estimated_hire_cost": 249.62115885416668,
+      "uses_direct_cost": true,
+      "weak_probe": true,
+      "low_peak": true,
+      "complete_curve": true,
+      "probe_workers": 13,
+      "probe_probability": 0.044700727653328574,
+      "query_evaluations": 35,
+      "certificate": false
+    },
+    {
+      "active_hours": 23,
+      "analytically_rejected": false,
+      "minimum_workers_lower_bound": 5,
+      "estimated_workers": 11.663534104500526,
+      "estimated_hire_cost": 202.0545353005468,
+      "uses_direct_cost": false,
+      "weak_probe": false,
+      "low_peak": true,
+      "complete_curve": true,
+      "probe_workers": 0,
+      "probe_probability": null,
+      "query_evaluations": 36,
+      "certificate": false
+    },
+    {
+      "active_hours": 24,
+      "analytically_rejected": true,
+      "minimum_workers_lower_bound": 41,
+      "estimated_workers": null,
+      "estimated_hire_cost": null,
+      "uses_direct_cost": false,
+      "weak_probe": false,
+      "low_peak": false,
+      "complete_curve": false,
+      "probe_workers": 0,
+      "probe_probability": null,
+      "query_evaluations": 0,
+      "certificate": false
+    }
+  ],
+  "cold_gate_arithmetic": true,
+  "warm_gate_arithmetic": true,
+  "independent_719_transition_course": true,
+  "scope": "Package functionality, frozen report arithmetic, and optional existing full-course replay. No new model promotion or performance benchmark."
+}

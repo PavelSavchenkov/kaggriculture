@@ -1,0 +1,18 @@
+{
+  "tests": 414,
+  "calls": 24145,
+  "exact_frozen_query_choices": true,
+  "scoring_cpu_us_per_proposal_mixed_methods": {
+    "mean": 74.01438840579704,
+    "p95": 111.16826000000299
+  },
+  "scope": "Real C++ physical features, bounds, model inference, lazy deferral and policy decisions. Cached reference outcomes are revealed only after each next-query decision. Parsing and CSV output are outside scoring and decision timers.",
+  "all_no_certificate_pools": [],
+  "input_sha256": {
+    "runs/holdout_a_layout_novel_v2/DATASET.json": "8b3229a09375ddff222c69b24cce5cae97f147cde037e337ae88376c59bc0658",
+    "data/holdout_a_layout_v2/index.jsonl": "ff2948b10ecd4bca16353f4c773439f5f237cdfffabb12c3b27019e1d4274a43",
+    "runs/holdout_a_predictions_v2/PREDICTIONS.jsonl": "ce18e137b822ffda4cdadbe1d06b4d3b31750dcc5898a082d6ae04ec7b3d0709",
+    "runs/holdout_a_predictions_v2/QUERY_PREDICTIONS.jsonl": "ed63ce84be4e96cfba10bcffa102fcb6267978c8fa1bb13be9ed9d4b68446c5f",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/build/replay_search_cpp": "20459a7568e2fe772368a437d08858497c5bb283498fbb248d4624ce966c5392"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "unique_match_seat_seed_cases": 20,
+  "games_per_runner": 80,
+  "total_games": 160,
+  "transitions_per_game": 719,
+  "seeds": [
+    1201301738,
+    1470762556
+  ],
+  "cases": [
+    "early versus course",
+    "early self-play",
+    "course self-play",
+    "early versus PASS",
+    "course versus PASS"
+  ],
+  "both_seats": true,
+  "reset_repeat_parity": true,
+  "concurrent_instance_parity": true,
+  "generic_typed_parity": true,
+  "runner_assertions_enabled": true,
+  "action_contract_validated": true,
+  "observation_scope": "Both policies are called only through LocalAgent with make_observation; no full Sim, hidden inventory or seed is passed to act. Fixed replay fixture remains limited to its documented course.",
+  "output_sha256": "592d6a73215eded84849b8ef854150f4bc64b420e379e948f60aeb55bcef3815",
+  "scope": "Interface and relocation validation, not strategic strength or throughput promotion."
+}

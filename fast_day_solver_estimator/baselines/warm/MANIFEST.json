@@ -1,0 +1,268 @@
+{
+  "utc": "2026-09-09T05:50:10.142738+00:00",
+  "purpose": "Read-only import for estimator and original warm-compiler diagnostics; no deployment or new official agent.",
+  "adaptation": "Only archive-root include prefixes rewritten to experiment-local baselines/warm paths. Relative includes and algorithms preserved.",
+  "files": [
+    {
+      "source": "experiments/v6/sep07_compositions_v0/runs/expansion_portfolio_sep08_001/next_compile/compile_early_inputs.cpp",
+      "path": "baselines/warm/runs/expansion_portfolio_sep08_001/next_compile/compile_early_inputs.cpp",
+      "source_sha256": "54ca1a04031d228a4f7d551e9f47396f75beda48811cbb098fd220be85e4d8bb",
+      "sha256": "31857ebd86acd6c3521cfa56c4aeedb32f3fc2652f0aadcec69334a65c046b53"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/source/fixed_repair.hpp",
+      "path": "baselines/warm/runs/animal_groups_sep08_001/source/fixed_repair.hpp",
+      "source_sha256": "5a63fb6518be43a7d1a2c7039c27f11a2b2639e1b87b4026df2a8b6a04b07332",
+      "sha256": "5a63fb6518be43a7d1a2c7039c27f11a2b2639e1b87b4026df2a8b6a04b07332"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/include/crop_service.hpp",
+      "path": "baselines/warm/include/crop_service.hpp",
+      "source_sha256": "9a2651c237240464fb384a46a9c25ca4ada6ac5cea21bd793e520743abf41ad5",
+      "sha256": "9a2651c237240464fb384a46a9c25ca4ada6ac5cea21bd793e520743abf41ad5"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/include/biology.hpp",
+      "path": "baselines/warm/include/biology.hpp",
+      "source_sha256": "82225498387721be96a6fc0da45323086faa9f1057ff3a5607b909b23876bb23",
+      "sha256": "82225498387721be96a6fc0da45323086faa9f1057ff3a5607b909b23876bb23"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/runs/submission_losses_sep08_001/general_quadrant_compile/source/season.hpp",
+      "path": "baselines/warm/runs/submission_losses_sep08_001/general_quadrant_compile/source/season.hpp",
+      "source_sha256": "aac70fd820f81fe5801d8f2c89ba304d50c56aa82b46a81eda9792bad369fb73",
+      "sha256": "a49856a112222bd9972bc9df698c2f74b826bc505af898c6b4aa2d8540dc47cc"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/runs/submission_losses_sep08_001/proposals/nanare_four_quadrant_course/source/agent.hpp",
+      "path": "baselines/warm/runs/submission_losses_sep08_001/proposals/nanare_four_quadrant_course/source/agent.hpp",
+      "source_sha256": "86c69a612489109cf7bddc12e458186e2a4dd9ec435eff5070b515cced72b538",
+      "sha256": "86c69a612489109cf7bddc12e458186e2a4dd9ec435eff5070b515cced72b538"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/runs/submission_losses_sep08_001/proposals/nanare_four_quadrant_course/README.md",
+      "path": "baselines/warm/runs/submission_losses_sep08_001/proposals/nanare_four_quadrant_course/README.md",
+      "source_sha256": "6b6194ed402897f738d0f93e7517d6c117916ff473821d93feeedb5876d51f1f",
+      "sha256": "6b6194ed402897f738d0f93e7517d6c117916ff473821d93feeedb5876d51f1f"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/runs/submission_losses_sep08_001/proposals/nanare_four_quadrant_course/agent.json",
+      "path": "baselines/warm/runs/submission_losses_sep08_001/proposals/nanare_four_quadrant_course/agent.json",
+      "source_sha256": "0d5f571be21a22a6a2c4a7a76421e4cddeafccde45bdf0c66938fc51347169ca",
+      "sha256": "0d5f571be21a22a6a2c4a7a76421e4cddeafccde45bdf0c66938fc51347169ca"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/runs/submission_losses_sep08_001/proposals/early_structure_cow/source/agent.hpp",
+      "path": "baselines/warm/runs/submission_losses_sep08_001/proposals/early_structure_cow/source/agent.hpp",
+      "source_sha256": "b32a47fe11b236e3990f0d94f7cd6e94f36341df57b73af2bbf5fb19498575a4",
+      "sha256": "b32a47fe11b236e3990f0d94f7cd6e94f36341df57b73af2bbf5fb19498575a4"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/runs/submission_losses_sep08_001/proposals/early_structure_cow/README.md",
+      "path": "baselines/warm/runs/submission_losses_sep08_001/proposals/early_structure_cow/README.md",
+      "source_sha256": "5897b10fd5bd216695d54c44d02dc374d1fe860f6254ae077718c2a05b1b0fc9",
+      "sha256": "5897b10fd5bd216695d54c44d02dc374d1fe860f6254ae077718c2a05b1b0fc9"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/runs/submission_losses_sep08_001/proposals/early_structure_cow/agent.json",
+      "path": "baselines/warm/runs/submission_losses_sep08_001/proposals/early_structure_cow/agent.json",
+      "source_sha256": "032bc6f9df6ad3fe96798145f08bd7668dd88536c6861406081904dcd0c977b3",
+      "sha256": "032bc6f9df6ad3fe96798145f08bd7668dd88536c6861406081904dcd0c977b3"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/runs/submission_losses_sep08_001/source/structure_repair.hpp",
+      "path": "baselines/warm/runs/submission_losses_sep08_001/source/structure_repair.hpp",
+      "source_sha256": "1fbdab7b151e0ab8a5cf72562a1a593e9618ecfd9b454643ebede40805a5ee8c",
+      "sha256": "1fbdab7b151e0ab8a5cf72562a1a593e9618ecfd9b454643ebede40805a5ee8c"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/include/day_compile_helpers.hpp",
+      "path": "baselines/warm/include/day_compile_helpers.hpp",
+      "source_sha256": "3f29af8aca1c72a4720dca939f9c2bb807aee08e94da65fc28a198839554dcb5",
+      "sha256": "3f29af8aca1c72a4720dca939f9c2bb807aee08e94da65fc28a198839554dcb5"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/include/market_tape.hpp",
+      "path": "baselines/warm/include/market_tape.hpp",
+      "source_sha256": "f223dafef369e33013b2e5a55460aff8358652ded520a16128e5b26d17faf72c",
+      "sha256": "f223dafef369e33013b2e5a55460aff8358652ded520a16128e5b26d17faf72c"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/include/guarded_day.hpp",
+      "path": "baselines/warm/include/guarded_day.hpp",
+      "source_sha256": "6375ec72e127709f4770e302a7779ba0c7421b9c8e8696ec8c9170966b085eb9",
+      "sha256": "6375ec72e127709f4770e302a7779ba0c7421b9c8e8696ec8c9170966b085eb9"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/include/planned_opening.hpp",
+      "path": "baselines/warm/include/planned_opening.hpp",
+      "source_sha256": "b9a4ae72039849ff33d18a2b6411659a205f3873f66836afa3a47dc9b44197e6",
+      "sha256": "b9a4ae72039849ff33d18a2b6411659a205f3873f66836afa3a47dc9b44197e6"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/candidates/opening_router_v2/source/agent.hpp",
+      "path": "baselines/warm/candidates/opening_router_v2/source/agent.hpp",
+      "source_sha256": "1c56b882d50dd3da40635bf012d72e4d5578318190345d78bb9b9874cd2bd5ef",
+      "sha256": "1c56b882d50dd3da40635bf012d72e4d5578318190345d78bb9b9874cd2bd5ef"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/candidates/opening_router_v2/README.md",
+      "path": "baselines/warm/candidates/opening_router_v2/README.md",
+      "source_sha256": "81df55ca546bc978be41f9e995e9531f12047018ed9cf07e49f85b171629f0d3",
+      "sha256": "81df55ca546bc978be41f9e995e9531f12047018ed9cf07e49f85b171629f0d3"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/candidates/opening_router_v2/agent.json",
+      "path": "baselines/warm/candidates/opening_router_v2/agent.json",
+      "source_sha256": "dcfae8ea260f86817529525ec9ddea3c53bc23d8c68c48e0aaafd723752555d0",
+      "sha256": "dcfae8ea260f86817529525ec9ddea3c53bc23d8c68c48e0aaafd723752555d0"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/candidates/firstday_m85_sale7/source/agent.hpp",
+      "path": "baselines/warm/candidates/firstday_m85_sale7/source/agent.hpp",
+      "source_sha256": "fabff2c40576b0d3701c9b21d5f8fd02fd4b5a15a0d5ea4d02f349d567b43fdd",
+      "sha256": "fabff2c40576b0d3701c9b21d5f8fd02fd4b5a15a0d5ea4d02f349d567b43fdd"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/candidates/firstday_m85_sale7/README.md",
+      "path": "baselines/warm/candidates/firstday_m85_sale7/README.md",
+      "source_sha256": "13da01117794345641d0b3824566f2213632a034341b350cd992b3ab516a86a6",
+      "sha256": "13da01117794345641d0b3824566f2213632a034341b350cd992b3ab516a86a6"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/candidates/firstday_m85_sale7/agent.json",
+      "path": "baselines/warm/candidates/firstday_m85_sale7/agent.json",
+      "source_sha256": "641d446b9077fd0ba9d90e008e0cf3a9f62e797004335da095004fb462884b03",
+      "sha256": "641d446b9077fd0ba9d90e008e0cf3a9f62e797004335da095004fb462884b03"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/runs/advance_sales_001/proposals/advance_sales_001_7/source/agent.hpp",
+      "path": "baselines/warm/runs/advance_sales_001/proposals/advance_sales_001_7/source/agent.hpp",
+      "source_sha256": "be3b33c643f219a1f2f02930b7189341fe0211e6f7b9ba9057f529965834c34c",
+      "sha256": "be3b33c643f219a1f2f02930b7189341fe0211e6f7b9ba9057f529965834c34c"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/runs/advance_sales_001/proposals/advance_sales_001_7/README.md",
+      "path": "baselines/warm/runs/advance_sales_001/proposals/advance_sales_001_7/README.md",
+      "source_sha256": "54981c6aa50adadb15f268f2f58baceec14dcd38fb8f84f55d485b143817f1ba",
+      "sha256": "54981c6aa50adadb15f268f2f58baceec14dcd38fb8f84f55d485b143817f1ba"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/runs/advance_sales_001/proposals/advance_sales_001_7/agent.json",
+      "path": "baselines/warm/runs/advance_sales_001/proposals/advance_sales_001_7/agent.json",
+      "source_sha256": "ff8ca33f1aab5f5fd67f5d67120a7f23540b1c0e14ce9f1794a2c2b38a20ba2f",
+      "sha256": "ff8ca33f1aab5f5fd67f5d67120a7f23540b1c0e14ce9f1794a2c2b38a20ba2f"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/include/day_override.hpp",
+      "path": "baselines/warm/include/day_override.hpp",
+      "source_sha256": "07d7477302c7f9bc06bd2bf48eef9f0c5fc100b69dcc97c3c4e93272ae480f0d",
+      "sha256": "07d7477302c7f9bc06bd2bf48eef9f0c5fc100b69dcc97c3c4e93272ae480f0d"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.hpp",
+      "path": "baselines/warm/league/top_replay_library/source/agent.hpp",
+      "source_sha256": "7a34ba395b73d511860dc827e8895e0b7f816203ad4dc968b692f89609dd800d",
+      "sha256": "7a34ba395b73d511860dc827e8895e0b7f816203ad4dc968b692f89609dd800d"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/league/top_replay_library/README.md",
+      "path": "baselines/warm/league/top_replay_library/README.md",
+      "source_sha256": "6870dea3e9d25ba86f2ac2a7f7e5dfd229bfce439b82846b10999cb3ae6b6fb2",
+      "sha256": "6870dea3e9d25ba86f2ac2a7f7e5dfd229bfce439b82846b10999cb3ae6b6fb2"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/league/top_replay_library/agent.json",
+      "path": "baselines/warm/league/top_replay_library/agent.json",
+      "source_sha256": "01c7a9582b46c6b1663403c7ec103dba3c18e3ed66a980344fb7c811c9390e17",
+      "sha256": "01c7a9582b46c6b1663403c7ec103dba3c18e3ed66a980344fb7c811c9390e17"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/include/market_course.hpp",
+      "path": "baselines/warm/include/market_course.hpp",
+      "source_sha256": "cc56db531ec61322dfc9c86de08bb32da9b1b77809036e031638c342051155b2",
+      "sha256": "cc56db531ec61322dfc9c86de08bb32da9b1b77809036e031638c342051155b2"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/league/public_router/source/agent.hpp",
+      "path": "baselines/warm/league/public_router/source/agent.hpp",
+      "source_sha256": "7311b936fc319dec92f1338a1535a045f53ad63c6ca198022f410bd200c589e8",
+      "sha256": "7311b936fc319dec92f1338a1535a045f53ad63c6ca198022f410bd200c589e8"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/league/public_router/README.md",
+      "path": "baselines/warm/league/public_router/README.md",
+      "source_sha256": "09e94b24292589a1be32407cf8330da9c90bcb2f2b3e55f023d32750182c821b",
+      "sha256": "09e94b24292589a1be32407cf8330da9c90bcb2f2b3e55f023d32750182c821b"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/league/public_router/agent.json",
+      "path": "baselines/warm/league/public_router/agent.json",
+      "source_sha256": "1cde5375c409b194b61c057f37669dde3d46a7b774a38202e7802ca72b589923",
+      "sha256": "1cde5375c409b194b61c057f37669dde3d46a7b774a38202e7802ca72b589923"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/include/day_contract.hpp",
+      "path": "baselines/warm/include/day_contract.hpp",
+      "source_sha256": "a46823968d09e6dd6435a637c908e1d652f18e7793114a5e91bc53ff9c569cd2",
+      "sha256": "a46823968d09e6dd6435a637c908e1d652f18e7793114a5e91bc53ff9c569cd2"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/include/evaluation.hpp",
+      "path": "baselines/warm/include/evaluation.hpp",
+      "source_sha256": "3a2821900ef5cbe2094ff25be19a8cf48d41e5aa7b4d83d9528221b5fa692b3e",
+      "sha256": "3a2821900ef5cbe2094ff25be19a8cf48d41e5aa7b4d83d9528221b5fa692b3e"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/include/profile.hpp",
+      "path": "baselines/warm/include/profile.hpp",
+      "source_sha256": "ee9a5305aa3778dca3e6272b1f4d38afd0f4a806b3c5c5414367626a34e70724",
+      "sha256": "ee9a5305aa3778dca3e6272b1f4d38afd0f4a806b3c5c5414367626a34e70724"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/runs/expansion_portfolio_sep08_001/next_compile/compile.cpp",
+      "path": "baselines/warm/runs/expansion_portfolio_sep08_001/next_compile/compile.cpp",
+      "source_sha256": "7bfb82e274ca80fbce2c0c17bc480b655bd6f88be2a0c9f3ad018df3e87a9867",
+      "sha256": "f71b7c420fb3e0d88a04663a5ae1ddf1f3beab783f261ff76d4d38795f308fb4"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/runs/submission_losses_sep08_001/proposals/nanare_four_quadrant_course/source/agent.cpp",
+      "path": "baselines/warm/runs/submission_losses_sep08_001/proposals/nanare_four_quadrant_course/source/agent.cpp",
+      "source_sha256": "162e32ba8cddfaea1a9ba06ce747fc741cb6a9caebdca7f96c8851c2abf48b15",
+      "sha256": "162e32ba8cddfaea1a9ba06ce747fc741cb6a9caebdca7f96c8851c2abf48b15"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/runs/submission_losses_sep08_001/proposals/nanare_four_quadrant_course/source/replay.inc",
+      "path": "baselines/warm/runs/submission_losses_sep08_001/proposals/nanare_four_quadrant_course/source/replay.inc",
+      "source_sha256": "363ae08d0cdf8d6c5b4cf22ee5fb96ad10953f31b05ce6e98c126b3a8664b536",
+      "sha256": "363ae08d0cdf8d6c5b4cf22ee5fb96ad10953f31b05ce6e98c126b3a8664b536"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/runs/submission_losses_sep08_001/proposals/early_structure_cow/source/agent.cpp",
+      "path": "baselines/warm/runs/submission_losses_sep08_001/proposals/early_structure_cow/source/agent.cpp",
+      "source_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+    }
+  ],
+  "persistent_direct_dependencies": {
+    "day_solver/src/components/native_light_exact/exact.hpp": "35f821efe0d98d848b6208562992f1dbf23c76d3ed54bd7e392fe971763a1d7c",
+    "fast_game_engine/sim.hpp": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
+    "agents/common/api/agent_api.hpp": "c441308471aa746d7c3d6e668688d39d1f77249ccd56b15fed3368d11c5aa3d8",
+    "agents/external/cow_service_retained_q24_premium_m2/source/agent.hpp": "0494f2928f45fec6191560546b9510939922e599c819b3aad56b7380007f51e4",
+    "day_solver/include/day_solver/scheduler.hpp": "018b9688de75884cf309e6a657cce47209f8d87c3886909880c188cd16a90f3b",
+    "day_solver/include/day_solver/io.hpp": "e0397987df86f2f88ed85662e5f604d05c407c4649d9c5af2eee81a3af97209a",
+    "agents/common/runtime/observation_builder.hpp": "4ef231815a587f899540aadbeaf3cef9f7083cd343f893f6524fc2551ac09d4f",
+    "agents/external/cow_service_retained_q24_premium_m2/source/agent.cpp": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+    "agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/animal_group_policy_sep08_001/proposals/animal_groups_m2/source/agent.cpp": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+    "agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/animal_group_policy_sep08_001/source/library.cpp": "de00c9e6d9e49bb7483bfde95bcd3fe1265fcc59ef94f9b324565d10812c0806",
+    "agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/animal_repair_sep08_001/proposals/animal_repair_q24_premium_m2/source/agent.cpp": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+    "agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/animal_repair_sep08_001/source/repair.cpp": "7f3d9264ba215720b7d7892522e6916d09fd3921601e1bccba4a101b00086c8a",
+    "agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/animal_service_policy_sep08_002/proposals/cow_service_retained_q24_premium_m2/source/agent.cpp": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+    "agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/animal_service_policy_sep08_002/source/library.cpp": "302b02ffd7ed2f3d2048c21ff778f6e81ffd47e511fefc5a31101b4400191b77",
+    "agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/empty_sale_slots_sep08_001/proposals/empty_sale_slots_m2/source/agent.cpp": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+    "agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/observed_sale_lead_003/parent_source/league/public_router/source/agent.cpp": "68cb3c524d46c132f99d32974ded7dbd40188d05be84b41dac7f5f3e7b95bfbb",
+    "agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/observed_sale_lead_003/parent_source/league/top_replay_library/source/agent.cpp": "982ec0ba8f6dbf03230bd1dcc6e9530530c67774df0e26021643195e9e45c908",
+    "agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/observed_sale_lead_004/proposals/observed_sale_lead_start_216/source/agent.cpp": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+  },
+  "archive_seal_sha256": "49b86b55075d8d4308183c087f90fa34ace05a1c06e0bb19a4b71f33c1436f9d"
+}

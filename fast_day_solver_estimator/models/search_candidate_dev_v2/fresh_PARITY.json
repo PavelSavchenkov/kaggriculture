@@ -1,0 +1,53 @@
+{
+  "unique_inputs": 685,
+  "query_predictions": 82200,
+  "parity": {
+    "cost": {
+      "max_absolute": 5.115907697472721e-13,
+      "max_relative": 4.1428945022253535e-15
+    },
+    "logistic": {
+      "max_absolute": 7.105427357601002e-15,
+      "max_relative": 3.544265049838439e-14
+    },
+    "boost": {
+      "max_absolute": 6.661338147750939e-16,
+      "max_relative": 6.169868919233695e-15
+    },
+    "cpu": {
+      "max_absolute": 7.105427357601002e-15,
+      "max_relative": 5.791149809024354e-15
+    }
+  },
+  "timing_us": {
+    "features_and_bound": {
+      "mean": 56.04630608272506,
+      "p50": 60.325,
+      "p95": 83.22439999999999,
+      "p99": 90.1624
+    },
+    "cost_model": {
+      "mean": 7.621949878345498,
+      "p50": 7.638,
+      "p95": 9.9661,
+      "p99": 12.015480000000004
+    },
+    "one_query_all_three_models": {
+      "mean": 2.418095316301703,
+      "p50": 1.855,
+      "p95": 6.219,
+      "p99": 7.76901999999999
+    },
+    "cheap_path_total": {
+      "mean": 63.668255961070564,
+      "p50": 68.655,
+      "p95": 91.4874,
+      "p99": 100.65996000000004
+    }
+  },
+  "scope": "Mixed input order each pass; feature extraction once then all 40 proposed workforce counts. Query timing includes feature transforms, logistic, boosted probability and log-CPU model. Parsing/output excluded; offline reference jobs share the host.",
+  "input_sha256": {
+    "runs/fresh_reference_v0/features_v1.csv": "2c10e4e1ace64ef6e1c8c975f8331f2e36c6af40b8738bb1b9da1753ee513697",
+    "models/search_candidate_dev_v2/fresh_predictions.csv": "e9a829ec32cd7ca55929e2c4876fac81b03fb6697b8d00ee3fcda0344865b9a4"
+  }
+}

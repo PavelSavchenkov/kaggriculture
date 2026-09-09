@@ -1,0 +1,357 @@
+{
+  "scope": "Exposed fixed-calendar course-compilation benchmark, not unseen online-agent search.",
+  "paired_runs": 14,
+  "courses": 7,
+  "original_mean_cpu": 154.90518928571427,
+  "screened_mean_cpu": 161.64129842857145,
+  "cpu_saving_fraction": -0.04348536788159363,
+  "course_cluster_95_saved_cpu": [
+    -16.473682499999967,
+    0.8904368571428449
+  ],
+  "course_cluster_95_saving_fraction": [
+    -0.09046315010397765,
+    0.006770553470927698
+  ],
+  "original_mean_wall": 116.35518480628785,
+  "screened_mean_wall": 122.01347634149975,
+  "original_failed_runs": 6,
+  "screened_failed_runs": 6,
+  "lost_certificates": 0,
+  "gained_certificates": 0,
+  "common_successes": 8,
+  "mean_hire_cost_delta_on_common_successes": 58.25,
+  "worst_hire_cost_delta": 233,
+  "mean_own_cash_delta_on_common_successes": -58.25,
+  "worst_own_cash_delta": -233,
+  "screened_queries": 2,
+  "screen_calls": 568,
+  "total_screen_seconds": 0.067298854,
+  "gates": {
+    "mean_cpu_saving_at_least_20_percent": false,
+    "positive_course_cluster_interval": false,
+    "no_lost_certificates": true,
+    "no_worse_mean_common_hire_bill": false
+  },
+  "passes_fixed_development_gate": false,
+  "caveats": "Finite-budget four-thread warm repair can vary between runs. These are exposed fixed scenarios; report quality and individual differences alongside mean speed. Independent verification is outside the timed compiler invocation.",
+  "pairs": [
+    {
+      "id": "r0_carrot12_d15",
+      "spec": "data/warm_courses_v1/specs/carrot12_d15.txt",
+      "repeat": 0,
+      "original_cpu": 167.72411,
+      "screened_cpu": 177.801422,
+      "saved_cpu": -10.077312000000006,
+      "original_wall": 130.53787515799922,
+      "screened_wall": 135.91912773600052,
+      "original_returncode": 4,
+      "screened_returncode": 4,
+      "original_status": {
+        "status": "compiler_failure",
+        "day": 29
+      },
+      "screened_status": {
+        "status": "compiler_failure",
+        "day": 29
+      }
+    },
+    {
+      "id": "r0_cow8_d15",
+      "spec": "data/warm_courses_v1/specs/cow8_d15.txt",
+      "repeat": 0,
+      "original_cpu": 265.580244,
+      "screened_cpu": 223.778982,
+      "saved_cpu": 41.80126199999998,
+      "original_wall": 196.17213022700162,
+      "screened_wall": 163.35875228299847,
+      "original_returncode": 4,
+      "screened_returncode": 4,
+      "original_status": {
+        "status": "compiler_failure",
+        "day": 29
+      },
+      "screened_status": {
+        "status": "compiler_failure",
+        "day": 27
+      }
+    },
+    {
+      "id": "r0_melon12_d12",
+      "spec": "data/warm_courses_v1/specs/melon12_d12.txt",
+      "repeat": 0,
+      "original_cpu": 71.351104,
+      "screened_cpu": 70.215046,
+      "saved_cpu": 1.1360580000000056,
+      "original_wall": 52.539052906002325,
+      "screened_wall": 52.75091927200265,
+      "original_returncode": 0,
+      "screened_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 18
+      },
+      "screened_status": {
+        "status": "compiled",
+        "days": 18
+      },
+      "hire_cost_delta": 0,
+      "own_cash_delta": 0,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    },
+    {
+      "id": "r0_sheep8_d15",
+      "spec": "data/warm_courses_v1/specs/sheep8_d15.txt",
+      "repeat": 0,
+      "original_cpu": 232.367533,
+      "screened_cpu": 250.37452,
+      "saved_cpu": -18.00698699999998,
+      "original_wall": 167.96620046500175,
+      "screened_wall": 181.0995648429962,
+      "original_returncode": 4,
+      "screened_returncode": 4,
+      "original_status": {
+        "status": "compiler_failure",
+        "day": 27
+      },
+      "screened_status": {
+        "status": "compiler_failure",
+        "day": 29
+      }
+    },
+    {
+      "id": "r0_strawberry8_d12",
+      "spec": "data/warm_courses_v1/specs/strawberry8_d12.txt",
+      "repeat": 0,
+      "original_cpu": 67.218537,
+      "screened_cpu": 65.009174,
+      "saved_cpu": 2.209362999999996,
+      "original_wall": 59.31368297199515,
+      "screened_wall": 56.637412022995704,
+      "original_returncode": 0,
+      "screened_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 18
+      },
+      "screened_status": {
+        "status": "compiled",
+        "days": 18
+      },
+      "hire_cost_delta": 0,
+      "own_cash_delta": 0,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    },
+    {
+      "id": "r0_tomato12_d15",
+      "spec": "data/warm_courses_v1/specs/tomato12_d15.txt",
+      "repeat": 0,
+      "original_cpu": 118.078407,
+      "screened_cpu": 118.260871,
+      "saved_cpu": -0.18246399999999596,
+      "original_wall": 88.707629594006,
+      "screened_wall": 86.87943782000366,
+      "original_returncode": 0,
+      "screened_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "screened_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "hire_cost_delta": 0,
+      "own_cash_delta": 0,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    },
+    {
+      "id": "r0_wheat12_d15",
+      "spec": "data/warm_courses_v1/specs/wheat12_d15.txt",
+      "repeat": 0,
+      "original_cpu": 147.20985299999998,
+      "screened_cpu": 155.903828,
+      "saved_cpu": -8.693975000000023,
+      "original_wall": 109.08701104500506,
+      "screened_wall": 113.03433907299768,
+      "original_returncode": 0,
+      "screened_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "screened_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "hire_cost_delta": 233,
+      "own_cash_delta": -233,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    },
+    {
+      "id": "r1_carrot12_d15",
+      "spec": "data/warm_courses_v1/specs/carrot12_d15.txt",
+      "repeat": 1,
+      "original_cpu": 187.347974,
+      "screened_cpu": 211.836455,
+      "saved_cpu": -24.488481000000007,
+      "original_wall": 141.7967110000027,
+      "screened_wall": 165.36264708799717,
+      "original_returncode": 4,
+      "screened_returncode": 4,
+      "original_status": {
+        "status": "compiler_failure",
+        "day": 29
+      },
+      "screened_status": {
+        "status": "compiler_failure",
+        "day": 29
+      }
+    },
+    {
+      "id": "r1_cow8_d15",
+      "spec": "data/warm_courses_v1/specs/cow8_d15.txt",
+      "repeat": 1,
+      "original_cpu": 231.57408900000001,
+      "screened_cpu": 271.109332,
+      "saved_cpu": -39.53524299999998,
+      "original_wall": 167.1690102069988,
+      "screened_wall": 195.8426399759992,
+      "original_returncode": 4,
+      "screened_returncode": 4,
+      "original_status": {
+        "status": "compiler_failure",
+        "day": 29
+      },
+      "screened_status": {
+        "status": "compiler_failure",
+        "day": 29
+      }
+    },
+    {
+      "id": "r1_melon12_d12",
+      "spec": "data/warm_courses_v1/specs/melon12_d12.txt",
+      "repeat": 1,
+      "original_cpu": 71.32871399999999,
+      "screened_cpu": 70.090129,
+      "saved_cpu": 1.2385849999999863,
+      "original_wall": 53.465088879005634,
+      "screened_wall": 53.02325876899704,
+      "original_returncode": 0,
+      "screened_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 18
+      },
+      "screened_status": {
+        "status": "compiled",
+        "days": 18
+      },
+      "hire_cost_delta": 0,
+      "own_cash_delta": 0,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    },
+    {
+      "id": "r1_sheep8_d15",
+      "spec": "data/warm_courses_v1/specs/sheep8_d15.txt",
+      "repeat": 1,
+      "original_cpu": 255.837851,
+      "screened_cpu": 300.639609,
+      "saved_cpu": -44.80175800000001,
+      "original_wall": 188.25968690500304,
+      "screened_wall": 231.37143184900197,
+      "original_returncode": 4,
+      "screened_returncode": 4,
+      "original_status": {
+        "status": "compiler_failure",
+        "day": 29
+      },
+      "screened_status": {
+        "status": "compiler_failure",
+        "day": 29
+      }
+    },
+    {
+      "id": "r1_strawberry8_d12",
+      "spec": "data/warm_courses_v1/specs/strawberry8_d12.txt",
+      "repeat": 1,
+      "original_cpu": 70.24007,
+      "screened_cpu": 65.318346,
+      "saved_cpu": 4.9217239999999975,
+      "original_wall": 62.94077175300481,
+      "screened_wall": 58.68956290699862,
+      "original_returncode": 0,
+      "screened_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 18
+      },
+      "screened_status": {
+        "status": "compiled",
+        "days": 18
+      },
+      "hire_cost_delta": 0,
+      "own_cash_delta": 0,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    },
+    {
+      "id": "r1_tomato12_d15",
+      "spec": "data/warm_courses_v1/specs/tomato12_d15.txt",
+      "repeat": 1,
+      "original_cpu": 130.734232,
+      "screened_cpu": 135.56317800000002,
+      "saved_cpu": -4.82894600000003,
+      "original_wall": 98.52552128300158,
+      "screened_wall": 102.82498191900231,
+      "original_returncode": 0,
+      "screened_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "screened_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "hire_cost_delta": 233,
+      "own_cash_delta": -233,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    },
+    {
+      "id": "r1_wheat12_d15",
+      "spec": "data/warm_courses_v1/specs/wheat12_d15.txt",
+      "repeat": 1,
+      "original_cpu": 152.07993199999999,
+      "screened_cpu": 147.077286,
+      "saved_cpu": 5.002645999999999,
+      "original_wall": 112.49221489400225,
+      "screened_wall": 111.39459322300536,
+      "original_returncode": 0,
+      "screened_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "screened_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "hire_cost_delta": 0,
+      "own_cash_delta": 0,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    }
+  ],
+  "input_sha256": {
+    "runs/warm_screen_benchmark_v1/PROTOCOL.json": "ac3b7e0d1d58af095899bd97ecd06b3ad5663c94eeb09954344bfd99b1572c6e",
+    "runs/warm_screen_benchmark_v1/RESULTS.json": "53c20ec883eae83dab9cd902e338d801e9c9516660bce91b6d5b6de859859d6c",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/scripts/analyze_warm_screen.py": "e9e9aafb9ea21ccbccd48a1d86e25464de4cf621ff5bb0400249da352f2cf7f2"
+  }
+}

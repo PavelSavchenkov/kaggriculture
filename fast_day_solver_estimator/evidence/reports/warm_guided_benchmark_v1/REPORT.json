@@ -1,0 +1,369 @@
+{
+  "scope": "Exposed fixed-calendar course-compilation benchmark, not unseen online-agent search.",
+  "paired_runs": 14,
+  "courses": 7,
+  "original_mean_cpu": 148.87153121428574,
+  "guided_mean_cpu": 113.31272249999999,
+  "cpu_saving_fraction": 0.23885566584992257,
+  "course_cluster_95_saved_cpu": [
+    21.231436857142853,
+    49.003484285714336
+  ],
+  "course_cluster_95_saving_fraction": [
+    0.1853952113020697,
+    0.2870750148515022
+  ],
+  "original_mean_wall": 118.98487535993003,
+  "guided_mean_wall": 82.5968374615716,
+  "original_failed_runs": 2,
+  "guided_failed_runs": 3,
+  "lost_certificates": 1,
+  "gained_certificates": 0,
+  "common_successes": 11,
+  "mean_hire_cost_delta_on_common_successes": 21.181818181818183,
+  "worst_hire_cost_delta": 233,
+  "mean_own_cash_delta_on_common_successes": -21.181818181818183,
+  "worst_own_cash_delta": -233,
+  "deferred_queries": 108,
+  "prediction_calls": 507,
+  "total_prediction_wall_seconds": 0.047578222,
+  "gates": {
+    "mean_cpu_saving_at_least_20_percent": true,
+    "positive_course_cluster_interval": true,
+    "no_lost_certificates": false,
+    "no_worse_mean_common_hire_bill": false
+  },
+  "passes_fixed_development_gate": false,
+  "caveats": "Finite-budget four-thread warm repair can vary between runs. These are exposed fixed scenarios; report quality and individual differences alongside mean speed. Independent verification is outside the timed compiler invocation.",
+  "pairs": [
+    {
+      "id": "r0_carrot12_d15",
+      "spec": "data/warm_courses_v1/specs/carrot12_d15.txt",
+      "repeat": 0,
+      "original_cpu": 182.22383,
+      "guided_cpu": 125.470731,
+      "saved_cpu": 56.75309899999999,
+      "original_wall": 144.52033884100092,
+      "guided_wall": 86.99052255300194,
+      "original_returncode": 4,
+      "guided_returncode": 4,
+      "original_status": {
+        "status": "compiler_failure",
+        "day": 29
+      },
+      "guided_status": {
+        "status": "compiler_failure",
+        "day": 29
+      }
+    },
+    {
+      "id": "r0_cow8_d15",
+      "spec": "data/warm_courses_v1/specs/cow8_d15.txt",
+      "repeat": 0,
+      "original_cpu": 230.904547,
+      "guided_cpu": 204.896799,
+      "saved_cpu": 26.00774800000002,
+      "original_wall": 181.11031831499713,
+      "guided_wall": 149.227865724999,
+      "original_returncode": 0,
+      "guided_returncode": 4,
+      "original_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "guided_status": {
+        "status": "compiler_failure",
+        "day": 29
+      }
+    },
+    {
+      "id": "r0_melon12_d12",
+      "spec": "data/warm_courses_v1/specs/melon12_d12.txt",
+      "repeat": 0,
+      "original_cpu": 78.10432899999999,
+      "guided_cpu": 63.006278,
+      "saved_cpu": 15.098050999999991,
+      "original_wall": 64.24538664000283,
+      "guided_wall": 49.25368187199638,
+      "original_returncode": 0,
+      "guided_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 18
+      },
+      "guided_status": {
+        "status": "compiled",
+        "days": 18
+      },
+      "hire_cost_delta": 0,
+      "own_cash_delta": 0,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    },
+    {
+      "id": "r0_sheep8_d15",
+      "spec": "data/warm_courses_v1/specs/sheep8_d15.txt",
+      "repeat": 0,
+      "original_cpu": 223.455345,
+      "guided_cpu": 170.704789,
+      "saved_cpu": 52.75055599999999,
+      "original_wall": 176.92692807200365,
+      "guided_wall": 118.6807587009971,
+      "original_returncode": 0,
+      "guided_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "guided_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "hire_cost_delta": 0,
+      "own_cash_delta": 0,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    },
+    {
+      "id": "r0_strawberry8_d12",
+      "spec": "data/warm_courses_v1/specs/strawberry8_d12.txt",
+      "repeat": 0,
+      "original_cpu": 54.295401,
+      "guided_cpu": 49.741175000000005,
+      "saved_cpu": 4.554225999999993,
+      "original_wall": 49.04865266200068,
+      "guided_wall": 44.45954069700383,
+      "original_returncode": 0,
+      "guided_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 18
+      },
+      "guided_status": {
+        "status": "compiled",
+        "days": 18
+      },
+      "hire_cost_delta": 0,
+      "own_cash_delta": 0,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    },
+    {
+      "id": "r0_tomato12_d15",
+      "spec": "data/warm_courses_v1/specs/tomato12_d15.txt",
+      "repeat": 0,
+      "original_cpu": 115.62643999999999,
+      "guided_cpu": 73.986069,
+      "saved_cpu": 41.64037099999999,
+      "original_wall": 95.51939220700297,
+      "guided_wall": 55.67495308799698,
+      "original_returncode": 0,
+      "guided_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "guided_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "hire_cost_delta": 0,
+      "own_cash_delta": 0,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    },
+    {
+      "id": "r0_wheat12_d15",
+      "spec": "data/warm_courses_v1/specs/wheat12_d15.txt",
+      "repeat": 0,
+      "original_cpu": 144.803881,
+      "guided_cpu": 109.239217,
+      "saved_cpu": 35.56466399999999,
+      "original_wall": 114.83894252400205,
+      "guided_wall": 78.21440617600456,
+      "original_returncode": 0,
+      "guided_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "guided_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "hire_cost_delta": 0,
+      "own_cash_delta": 0,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    },
+    {
+      "id": "r1_carrot12_d15",
+      "spec": "data/warm_courses_v1/specs/carrot12_d15.txt",
+      "repeat": 1,
+      "original_cpu": 184.316565,
+      "guided_cpu": 127.558324,
+      "saved_cpu": 56.758241,
+      "original_wall": 145.1054048579972,
+      "guided_wall": 86.93252183099685,
+      "original_returncode": 4,
+      "guided_returncode": 4,
+      "original_status": {
+        "status": "compiler_failure",
+        "day": 29
+      },
+      "guided_status": {
+        "status": "compiler_failure",
+        "day": 29
+      }
+    },
+    {
+      "id": "r1_cow8_d15",
+      "spec": "data/warm_courses_v1/specs/cow8_d15.txt",
+      "repeat": 1,
+      "original_cpu": 221.465497,
+      "guided_cpu": 173.049238,
+      "saved_cpu": 48.416259,
+      "original_wall": 174.41294285000185,
+      "guided_wall": 126.37542468099855,
+      "original_returncode": 0,
+      "guided_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "guided_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "hire_cost_delta": 233,
+      "own_cash_delta": -233,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    },
+    {
+      "id": "r1_melon12_d12",
+      "spec": "data/warm_courses_v1/specs/melon12_d12.txt",
+      "repeat": 1,
+      "original_cpu": 78.078594,
+      "guided_cpu": 63.491873000000005,
+      "saved_cpu": 14.58672099999999,
+      "original_wall": 64.40236075999564,
+      "guided_wall": 49.382738849002635,
+      "original_returncode": 0,
+      "guided_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 18
+      },
+      "guided_status": {
+        "status": "compiled",
+        "days": 18
+      },
+      "hire_cost_delta": 0,
+      "own_cash_delta": 0,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    },
+    {
+      "id": "r1_sheep8_d15",
+      "spec": "data/warm_courses_v1/specs/sheep8_d15.txt",
+      "repeat": 1,
+      "original_cpu": 249.550811,
+      "guided_cpu": 183.743093,
+      "saved_cpu": 65.80771800000002,
+      "original_wall": 192.12979790300597,
+      "guided_wall": 128.65750779900554,
+      "original_returncode": 0,
+      "guided_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "guided_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "hire_cost_delta": 0,
+      "own_cash_delta": 0,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    },
+    {
+      "id": "r1_strawberry8_d12",
+      "spec": "data/warm_courses_v1/specs/strawberry8_d12.txt",
+      "repeat": 1,
+      "original_cpu": 54.537088,
+      "guided_cpu": 49.978864,
+      "saved_cpu": 4.558223999999996,
+      "original_wall": 49.12254659199971,
+      "guided_wall": 44.53211155500321,
+      "original_returncode": 0,
+      "guided_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 18
+      },
+      "guided_status": {
+        "status": "compiled",
+        "days": 18
+      },
+      "hire_cost_delta": 0,
+      "own_cash_delta": 0,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    },
+    {
+      "id": "r1_tomato12_d15",
+      "spec": "data/warm_courses_v1/specs/tomato12_d15.txt",
+      "repeat": 1,
+      "original_cpu": 120.620018,
+      "guided_cpu": 80.525568,
+      "saved_cpu": 40.094449999999995,
+      "original_wall": 99.49560701100563,
+      "guided_wall": 60.09217200699641,
+      "original_returncode": 0,
+      "guided_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "guided_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "hire_cost_delta": 0,
+      "own_cash_delta": 0,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    },
+    {
+      "id": "r1_wheat12_d15",
+      "spec": "data/warm_courses_v1/specs/wheat12_d15.txt",
+      "repeat": 1,
+      "original_cpu": 146.21909100000002,
+      "guided_cpu": 110.986097,
+      "saved_cpu": 35.23299400000002,
+      "original_wall": 114.90963580400421,
+      "guided_wall": 77.88151892799942,
+      "original_returncode": 0,
+      "guided_returncode": 0,
+      "original_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "guided_status": {
+        "status": "compiled",
+        "days": 15
+      },
+      "hire_cost_delta": 0,
+      "own_cash_delta": 0,
+      "rival_cash_delta": 0,
+      "production_equal": true
+    }
+  ],
+  "input_sha256": {
+    "runs/warm_guided_benchmark_v1/PROTOCOL.json": "72c4d7f408a58951052bb144ad7057a54acd550e072e64085606763c7eac4eec",
+    "runs/warm_guided_benchmark_v1/RESULTS.json": "6e3fbc12f5e378df9bd12b0e432f5c0c439407570a7de692c018ea874d4a4ec4",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/scripts/analyze_warm_guided.py": "1e2ecc9f26e50d859638117eb7a9312e17a59b0877e894d078f444ecdec0104c"
+  }
+}

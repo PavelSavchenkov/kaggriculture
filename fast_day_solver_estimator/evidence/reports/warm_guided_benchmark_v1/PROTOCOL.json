@@ -1,0 +1,165 @@
+{
+  "utc": "2026-09-09T10:05:13.626839+00:00",
+  "status": "completed",
+  "cases": [
+    {
+      "id": "r0_carrot12_d15",
+      "repeat": 0,
+      "spec": "data/warm_courses_v1/specs/carrot12_d15.txt",
+      "modes": [
+        "guided",
+        "original"
+      ]
+    },
+    {
+      "id": "r0_cow8_d15",
+      "repeat": 0,
+      "spec": "data/warm_courses_v1/specs/cow8_d15.txt",
+      "modes": [
+        "guided",
+        "original"
+      ]
+    },
+    {
+      "id": "r0_melon12_d12",
+      "repeat": 0,
+      "spec": "data/warm_courses_v1/specs/melon12_d12.txt",
+      "modes": [
+        "original",
+        "guided"
+      ]
+    },
+    {
+      "id": "r0_sheep8_d15",
+      "repeat": 0,
+      "spec": "data/warm_courses_v1/specs/sheep8_d15.txt",
+      "modes": [
+        "guided",
+        "original"
+      ]
+    },
+    {
+      "id": "r0_strawberry8_d12",
+      "repeat": 0,
+      "spec": "data/warm_courses_v1/specs/strawberry8_d12.txt",
+      "modes": [
+        "guided",
+        "original"
+      ]
+    },
+    {
+      "id": "r0_tomato12_d15",
+      "repeat": 0,
+      "spec": "data/warm_courses_v1/specs/tomato12_d15.txt",
+      "modes": [
+        "original",
+        "guided"
+      ]
+    },
+    {
+      "id": "r0_wheat12_d15",
+      "repeat": 0,
+      "spec": "data/warm_courses_v1/specs/wheat12_d15.txt",
+      "modes": [
+        "guided",
+        "original"
+      ]
+    },
+    {
+      "id": "r1_carrot12_d15",
+      "repeat": 1,
+      "spec": "data/warm_courses_v1/specs/carrot12_d15.txt",
+      "modes": [
+        "original",
+        "guided"
+      ]
+    },
+    {
+      "id": "r1_cow8_d15",
+      "repeat": 1,
+      "spec": "data/warm_courses_v1/specs/cow8_d15.txt",
+      "modes": [
+        "original",
+        "guided"
+      ]
+    },
+    {
+      "id": "r1_melon12_d12",
+      "repeat": 1,
+      "spec": "data/warm_courses_v1/specs/melon12_d12.txt",
+      "modes": [
+        "guided",
+        "original"
+      ]
+    },
+    {
+      "id": "r1_sheep8_d15",
+      "repeat": 1,
+      "spec": "data/warm_courses_v1/specs/sheep8_d15.txt",
+      "modes": [
+        "original",
+        "guided"
+      ]
+    },
+    {
+      "id": "r1_strawberry8_d12",
+      "repeat": 1,
+      "spec": "data/warm_courses_v1/specs/strawberry8_d12.txt",
+      "modes": [
+        "original",
+        "guided"
+      ]
+    },
+    {
+      "id": "r1_tomato12_d15",
+      "repeat": 1,
+      "spec": "data/warm_courses_v1/specs/tomato12_d15.txt",
+      "modes": [
+        "guided",
+        "original"
+      ]
+    },
+    {
+      "id": "r1_wheat12_d15",
+      "repeat": 1,
+      "spec": "data/warm_courses_v1/specs/wheat12_d15.txt",
+      "modes": [
+        "original",
+        "guided"
+      ]
+    }
+  ],
+  "jobs": 2,
+  "scope": "Exposed fixed-calendar course-compilation benchmark, not unseen online-agent search.",
+  "inputs": "All seven imported course specifications, fixed original seed/shops/source/rival, no resume prefixes, three seconds per cold fallback, unchanged warm repair.",
+  "comparison": "Original early-input compiler versus route reuse followed by probability-below-0.02 deferral. Deferred queries are retried in original order if all other trials fail. Two repeats reverse each course's method order.",
+  "primary": "Mean complete child CPU across all requested courses, including failures. Wall time, failure rate, hire cost, final cash and signed per-course differences are reported separately.",
+  "acceptance": "Require at least 20 percent mean CPU saving with a positive course-cluster confidence interval, no extra failed courses, and no worse mean verified hiring bill. Report individual economic and cost regressions; never turn an earlier failure into a speed gain.",
+  "verification": "Every successful course is independently replayed over all 719 real transitions. Every learned deferral is logged with its pure query probability; it is not an infeasibility claim.",
+  "sha256": {
+    "build/warm_compile_early": "f190ab98abd9860809b7aeae501cf993fac1a0d06edcb12ad7631295016cb165",
+    "build/warm_compile_guided": "5993f0d7f383b1ac5ea88119d7ada72c40256b8320572677cacbbb6d032f6881",
+    "build/verify_warm_course": "3fe1bcd53013b7b2f70a97fe958451b9bf8faeddd0d391e9f170db1797412135",
+    "source/warm_compile_guided.cpp": "005f89d97943e8b76082e30a4aba9882318d36d7238a5ab4517d93b0ac870823",
+    "scripts/run_warm_compile.py": "f312489bd4c641b833656a1717028d87782d07264a848a6684008d9724799f79",
+    "scripts/run_warm_guided.py": "3832ca6d8bff8ee2b3265b5733a3a2fdbcdabe7942dee1c1cf995cfdd64cf431",
+    "models/context_candidate_dev_v2/context_model.hpp": "b702ba2c689c67677e3aca25142c2c4f0f2c5660e657db9f72e9a652e9636088",
+    "scripts/analyze_warm_guided.py": "1e2ecc9f26e50d859638117eb7a9312e17a59b0877e894d078f444ecdec0104c",
+    "scripts/benchmark_warm_guided.py": "d6abb595eecc091df13517070c8d348d75eb83ff34a152e95f0bdca2d949881e",
+    "data/warm_courses_v1/specs/carrot12_d15.txt": "a38466d5ee242f79628673f1e6ab4e7d473dfb5971e6d79b5aa5e5c3b7c4127e",
+    "data/warm_courses_v1/specs/cow8_d15.txt": "537585e717236d924256bd2df5c0fd10aa20298f93604e321e26237f7078857d",
+    "data/warm_courses_v1/specs/melon12_d12.txt": "2ca9bff827cffed4a47cf6947def122459ce95c59bc393435888b7c9544ba6c1",
+    "data/warm_courses_v1/specs/sheep8_d15.txt": "80ace3959bcd711f46edd3a5ea14ce0f5c894e11a7a1e990f6aec2dd55c973db",
+    "data/warm_courses_v1/specs/strawberry8_d12.txt": "9ab247cab810b1762736efad26e8f9dd47fa77498c965d5a3568c7a059393246",
+    "data/warm_courses_v1/specs/tomato12_d15.txt": "aeb9cc3015b7949a12c91d63a0c0b6dccacd0f80da37f505c9dcac5af413e916",
+    "data/warm_courses_v1/specs/wheat12_d15.txt": "4e060cb43cb74dd0c450fbf03d7783e19ccbb52ec86babff7729dc6bb76c868f",
+    "include/context_query_features.hpp": "8aa86798b9ba449141a140db54843fe57c24ca4204306e6bcb93b577b3d4f2cb",
+    "include/planning_context.hpp": "069962dc499b54b9863276a0063f8c73586e4dc0863bf4f0f73f7679754dcc37",
+    "include/planning_features.hpp": "448e8f4e2842edc2674e9433c9c3e150db0dc4a3870110834302001eaf6f7034",
+    "include/features.hpp": "adfde66b4ba040d7bfe5321709987bf5354777d68e3d7e9399a8de033d9bc9a6",
+    "include/bounds.hpp": "17c97777796a703f0a09ed78d545461a0ae1eb4e20d91396243d83b55348e40b",
+    "include/supply_bounds.hpp": "c9b9512d9b59d8640db6c85ddd5141c7724d31f018450b1d145b5b40434fc62a",
+    "include/release_bounds.hpp": "134e3c58c85cee20cc91feb61cb7477f9f09c375738de92f4a714d2baf7d5a3f"
+  },
+  "completed_utc": "2026-09-09T10:30:17.283634+00:00"
+}

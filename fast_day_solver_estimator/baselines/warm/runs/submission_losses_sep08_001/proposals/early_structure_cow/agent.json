@@ -1,0 +1,20 @@
+{
+  "format_version": 1,
+  "name": "early_structure_cow",
+  "header": "source/agent.hpp",
+  "type": "compositions::early_structure_cow::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../../../../../../agents/external/cow_service_retained_q24_premium_m2/source/agent.cpp",
+    "../../../../../../../agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/animal_group_policy_sep08_001/proposals/animal_groups_m2/source/agent.cpp",
+    "../../../../../../../agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/animal_group_policy_sep08_001/source/library.cpp",
+    "../../../../../../../agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/animal_repair_sep08_001/proposals/animal_repair_q24_premium_m2/source/agent.cpp",
+    "../../../../../../../agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/animal_repair_sep08_001/source/repair.cpp",
+    "../../../../../../../agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/animal_service_policy_sep08_002/proposals/cow_service_retained_q24_premium_m2/source/agent.cpp",
+    "../../../../../../../agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/animal_service_policy_sep08_002/source/library.cpp",
+    "../../../../../../../agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/empty_sale_slots_sep08_001/proposals/empty_sale_slots_m2/source/agent.cpp",
+    "../../../../../../../agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/observed_sale_lead_003/parent_source/league/public_router/source/agent.cpp",
+    "../../../../../../../agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/observed_sale_lead_003/parent_source/league/top_replay_library/source/agent.cpp",
+    "../../../../../../../agents/external/cow_service_retained_q24_premium_m2/source/deps/runs/observed_sale_lead_004/proposals/observed_sale_lead_start_216/source/agent.cpp"
+  ]
+}

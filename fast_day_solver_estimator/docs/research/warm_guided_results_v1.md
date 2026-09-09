@@ -1,0 +1,13 @@
+# Learned deferral in the original warm compiler
+
+The original caller tries zero through six extra hires, reusing source visits at zero, then invoking up to one second of four-thread fixed repair and three seconds of cold fallback. The experimental version retains visit reuse and defers repair/cold calls with predicted success below 0.02. It tries deferred counts in their original order if all other counts fail. Nothing is permanently rejected on a learned prediction.
+
+The first complete benchmark uses all seven exposed expansion courses, the original seed and shop sequence, and two repeats with reversed method order. Every completed course passes independent replay of all 719 transitions. Mean complete compiler CPU falls from 148.87 to 113.31 seconds, a 23.89% reduction. The course-cluster interval for saved CPU is [21.23, 49.00] seconds. Mean wall time falls from 118.98 to 82.60 seconds. Inference totals 0.0476 wall seconds over 507 predictions, with 108 deferred trials.
+
+The quality gate fails. Original compilation succeeds on twelve of fourteen runs; guided compilation succeeds on eleven. Among the eleven common successes, mean hire cost rises by 21.18, entirely from a 233 increase on one cow course. The other common bills are unchanged. Do not adopt the full integration from its mean speed gain.
+
+The recorded inputs narrow the diagnosis. All 433 common executed calls have identical full DayProblem inputs. No deferred call was a successful call in the paired original run. Eight common calls produce different solver or full-game endpoint results. The lost terminal cow certificate comes from an executed, undeferred call with four extra hires; the bill increase follows a different full-game endpoint on an executed two-extra-hire call. Four-thread repair and finite time budgets can vary. This is consistent with backend variability; it does not prove future quality is equal or reverse the failed gate.
+
+Keep the older necessary-screen benchmark separately: it costs 4.35% more CPU and skips only two of 568 calls. It is a negative result, not the control timing for the new deferral pair.
+
+Evidence: `runs/warm_guided_benchmark_v1/REPORT.json` and `DIAGNOSIS.json`; per-call inputs, probabilities and endpoint artifacts remain under each paired job. A prospective follow-up now covers eight fixed SHA256-selected environment seeds and all seven courses, with no excluded seeds/course pairs, model change or refit. This changes environment randomness while keeping the same exposed source/rival and shop sequence. It is not evidence of transfer to new agent families or shops. The follow-up is `runs/warm_seed_benchmark_v2`.

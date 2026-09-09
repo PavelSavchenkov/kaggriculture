@@ -1,0 +1,1275 @@
+{
+  "scope": "Second prospective wave; parameters and predictions frozen before new references; novel source panel.",
+  "target": "Cheapest verified upper bound; shorter-sweep and source witnesses remain separate. This is not minimum-cost truth.",
+  "contracts": 560,
+  "labeled": 558,
+  "unresolved": 2,
+  "shared_family_contracts": 10,
+  "family_weighting": "Each physical contract counts once overall and once for each family in which it occurs when computing family macro metrics.",
+  "input_sha256": {
+    "runs/holdout_a_source_novel_v2/DATASET.json": "d3c19e64ed20ac6c91a0db30c4e7a944ba153939835e2200429bb4f27c80dbfe",
+    "runs/holdout_a_predictions_v2/PREDICTIONS.jsonl": "ce18e137b822ffda4cdadbe1d06b4d3b31750dcc5898a082d6ae04ec7b3d0709"
+  },
+  "summary": [
+    {
+      "method": "cost_direct_extra",
+      "labeled_contracts": 558,
+      "worker_mae": 0.49726236728530504,
+      "worker_rmse": 0.903058295299341,
+      "worker_bias": -0.07935358783452476,
+      "reference_cost_mae": 91.89410499735456,
+      "under_by_2_workers": 0.026881720430107527,
+      "under_by_500_cash": 0.025089605734767026,
+      "under_by_at_least_2_workers": 0.026881720430107527,
+      "under_by_at_least_1_worker": 0.06451612903225806,
+      "over_by_at_least_1_worker": 0.04121863799283154,
+      "under_by_at_least_500_cash": 0.025089605734767026,
+      "over_by_at_least_500_cash": 0.0,
+      "cash_bias": -63.82977508622099,
+      "p95_absolute_worker_error": 1.418022467513678,
+      "family_macro_worker_mae": 0.4505957094649427,
+      "families": {
+        "team_16645426": {
+          "worker_mae": 0.3494820495919056,
+          "worker_rmse": 1.1130364654665406,
+          "worker_bias": -0.2535348810849254,
+          "reference_cost_mae": 155.3400083244305,
+          "under_by_2_workers": 0.03636363636363636,
+          "under_by_500_cash": 0.03636363636363636
+        },
+        "team_16663403": {
+          "worker_mae": 0.63373590216767,
+          "worker_rmse": 1.148003839717676,
+          "worker_bias": -0.23990690616316868,
+          "reference_cost_mae": 150.827141633791,
+          "under_by_2_workers": 0.0625,
+          "under_by_500_cash": 0.0625
+        },
+        "team_16665237": {
+          "worker_mae": 0.5715872006173137,
+          "worker_rmse": 0.773180924189773,
+          "worker_bias": 0.23024898326960178,
+          "reference_cost_mae": 57.45193076879734,
+          "under_by_2_workers": 0.019801980198019802,
+          "under_by_500_cash": 0.009900990099009901
+        },
+        "team_16681125": {
+          "worker_mae": 0.6093270893000985,
+          "worker_rmse": 0.7605393022804066,
+          "worker_bias": -0.29710509669944174,
+          "reference_cost_mae": 53.34804976843786,
+          "under_by_2_workers": 0.009009009009009009,
+          "under_by_500_cash": 0.009009009009009009
+        },
+        "team_16734914": {
+          "worker_mae": 0.339942352391497,
+          "worker_rmse": 0.705047235390487,
+          "worker_bias": 0.04752483791866956,
+          "reference_cost_mae": 52.10629856842999,
+          "under_by_2_workers": 0.0196078431372549,
+          "under_by_500_cash": 0.0196078431372549
+        },
+        "team_16736427": {
+          "worker_mae": 0.5184149900342709,
+          "worker_rmse": 1.1237158353507495,
+          "worker_bias": -0.06360413217660506,
+          "reference_cost_mae": 157.4857510772961,
+          "under_by_2_workers": 0.0375,
+          "under_by_500_cash": 0.0375
+        },
+        "team_16795448": {
+          "worker_mae": 0.3690156853365839,
+          "worker_rmse": 1.1614438031590322,
+          "worker_bias": -0.16264402354946,
+          "reference_cost_mae": 182.80997770093617,
+          "under_by_2_workers": 0.02564102564102564,
+          "under_by_500_cash": 0.02564102564102564
+        },
+        "team_16801171": {
+          "worker_mae": 0.2132604062802017,
+          "worker_rmse": 0.39671653559202674,
+          "worker_bias": 0.09001944543303897,
+          "reference_cost_mae": 19.44582273668964,
+          "under_by_2_workers": 0.0,
+          "under_by_500_cash": 0.0
+        }
+      }
+    },
+    {
+      "method": "cost_root_extra",
+      "labeled_contracts": 558,
+      "worker_mae": 0.4900433999442172,
+      "worker_rmse": 0.9000077590670689,
+      "worker_bias": -0.1770822934731321,
+      "reference_cost_mae": 91.88544489696076,
+      "under_by_2_workers": 0.02867383512544803,
+      "under_by_500_cash": 0.026881720430107527,
+      "under_by_at_least_2_workers": 0.02867383512544803,
+      "under_by_at_least_1_worker": 0.07347670250896057,
+      "over_by_at_least_1_worker": 0.026881720430107527,
+      "under_by_at_least_500_cash": 0.026881720430107527,
+      "over_by_at_least_500_cash": 0.0,
+      "cash_bias": -71.27012123046744,
+      "p95_absolute_worker_error": 1.3756324343867403,
+      "family_macro_worker_mae": 0.4432521992427172,
+      "families": {
+        "team_16645426": {
+          "worker_mae": 0.3497336546556972,
+          "worker_rmse": 1.0882730721020861,
+          "worker_bias": -0.2615574576626362,
+          "reference_cost_mae": 154.88045055800848,
+          "under_by_2_workers": 0.03636363636363636,
+          "under_by_500_cash": 0.03636363636363636
+        },
+        "team_16663403": {
+          "worker_mae": 0.6424398540895562,
+          "worker_rmse": 1.1591701889799388,
+          "worker_bias": -0.3043594244227605,
+          "reference_cost_mae": 152.67045471146972,
+          "under_by_2_workers": 0.0625,
+          "under_by_500_cash": 0.0625
+        },
+        "team_16665237": {
+          "worker_mae": 0.5193756179272904,
+          "worker_rmse": 0.7479357814341143,
+          "worker_bias": 0.08854620573233452,
+          "reference_cost_mae": 55.02029890262374,
+          "under_by_2_workers": 0.019801980198019802,
+          "under_by_500_cash": 0.019801980198019802
+        },
+        "team_16681125": {
+          "worker_mae": 0.6549108646594257,
+          "worker_rmse": 0.8064407874682157,
+          "worker_bias": -0.516714920937891,
+          "reference_cost_mae": 58.37964783127153,
+          "under_by_2_workers": 0.018018018018018018,
+          "under_by_500_cash": 0.009009009009009009
+        },
+        "team_16734914": {
+          "worker_mae": 0.326392983311152,
+          "worker_rmse": 0.6531986879425439,
+          "worker_bias": 0.014838209040771558,
+          "reference_cost_mae": 49.48138869933513,
+          "under_by_2_workers": 0.0196078431372549,
+          "under_by_500_cash": 0.0196078431372549
+        },
+        "team_16736427": {
+          "worker_mae": 0.4681807781403894,
+          "worker_rmse": 1.1036523115026589,
+          "worker_bias": -0.14138537854316602,
+          "reference_cost_mae": 152.49238384006236,
+          "under_by_2_workers": 0.0375,
+          "under_by_500_cash": 0.0375
+        },
+        "team_16795448": {
+          "worker_mae": 0.36570345867620685,
+          "worker_rmse": 1.1422142597266771,
+          "worker_bias": -0.1742275269089545,
+          "reference_cost_mae": 182.00336458224197,
+          "under_by_2_workers": 0.02564102564102564,
+          "under_by_500_cash": 0.02564102564102564
+        },
+        "team_16801171": {
+          "worker_mae": 0.21928038248201978,
+          "worker_rmse": 0.4099302538132046,
+          "worker_bias": 0.06551289491786301,
+          "reference_cost_mae": 21.664163729750744,
+          "under_by_2_workers": 0.0,
+          "under_by_500_cash": 0.0
+        }
+      }
+    },
+    {
+      "method": "cost_worker_leaf",
+      "labeled_contracts": 558,
+      "worker_mae": 0.4842661518098557,
+      "worker_rmse": 0.8453193386167531,
+      "worker_bias": -0.08018495194463046,
+      "reference_cost_mae": 90.29076713572518,
+      "under_by_2_workers": 0.026881720430107527,
+      "under_by_500_cash": 0.026881720430107527,
+      "under_by_at_least_2_workers": 0.026881720430107527,
+      "under_by_at_least_1_worker": 0.06630824372759857,
+      "over_by_at_least_1_worker": 0.044802867383512544,
+      "under_by_at_least_500_cash": 0.026881720430107527,
+      "over_by_at_least_500_cash": 0.0,
+      "cash_bias": -62.88516492880009,
+      "p95_absolute_worker_error": 1.4462549847010417,
+      "family_macro_worker_mae": 0.43516981075746175,
+      "families": {
+        "team_16645426": {
+          "worker_mae": 0.31705796737925585,
+          "worker_rmse": 0.9495469253487994,
+          "worker_bias": -0.21749536570095893,
+          "reference_cost_mae": 150.3540564789211,
+          "under_by_2_workers": 0.03636363636363636,
+          "under_by_500_cash": 0.03636363636363636
+        },
+        "team_16663403": {
+          "worker_mae": 0.6085112231442779,
+          "worker_rmse": 1.0686395462023128,
+          "worker_bias": -0.2109092982998455,
+          "reference_cost_mae": 148.2882475683272,
+          "under_by_2_workers": 0.0625,
+          "under_by_500_cash": 0.0625
+        },
+        "team_16665237": {
+          "worker_mae": 0.5946278481538386,
+          "worker_rmse": 0.8147561686056857,
+          "worker_bias": 0.24225469639795202,
+          "reference_cost_mae": 59.37424918633419,
+          "under_by_2_workers": 0.019801980198019802,
+          "under_by_500_cash": 0.019801980198019802
+        },
+        "team_16681125": {
+          "worker_mae": 0.5966352770012485,
+          "worker_rmse": 0.7442958321669596,
+          "worker_bias": -0.38080125355045225,
+          "reference_cost_mae": 53.03616264083017,
+          "under_by_2_workers": 0.009009009009009009,
+          "under_by_500_cash": 0.009009009009009009
+        },
+        "team_16734914": {
+          "worker_mae": 0.3270856874853422,
+          "worker_rmse": 0.6130089142272548,
+          "worker_bias": 0.06737440511043508,
+          "reference_cost_mae": 50.30253166730417,
+          "under_by_2_workers": 0.0196078431372549,
+          "under_by_500_cash": 0.0196078431372549
+        },
+        "team_16736427": {
+          "worker_mae": 0.4767225762459516,
+          "worker_rmse": 1.013900201723435,
+          "worker_bias": -0.04706488579450615,
+          "reference_cost_mae": 151.99190605030523,
+          "under_by_2_workers": 0.0375,
+          "under_by_500_cash": 0.0375
+        },
+        "team_16795448": {
+          "worker_mae": 0.35246947203236123,
+          "worker_rmse": 1.0216903617866282,
+          "worker_bias": -0.13574771499608068,
+          "reference_cost_mae": 180.0538020602746,
+          "under_by_2_workers": 0.02564102564102564,
+          "under_by_500_cash": 0.02564102564102564
+        },
+        "team_16801171": {
+          "worker_mae": 0.20824843461741827,
+          "worker_rmse": 0.3941631626209431,
+          "worker_bias": 0.10142651674648838,
+          "reference_cost_mae": 18.36677662543442,
+          "under_by_2_workers": 0.0,
+          "under_by_500_cash": 0.0
+        }
+      }
+    },
+    {
+      "method": "extra_trees",
+      "labeled_contracts": 558,
+      "worker_mae": 0.5011517476465879,
+      "worker_rmse": 0.9078846133863264,
+      "worker_bias": -0.22066411304674816,
+      "reference_cost_mae": 92.58308480572742,
+      "under_by_2_workers": 0.03225806451612903,
+      "under_by_500_cash": 0.026881720430107527,
+      "under_by_at_least_2_workers": 0.03225806451612903,
+      "under_by_at_least_1_worker": 0.09498207885304659,
+      "over_by_at_least_1_worker": 0.017921146953405017,
+      "under_by_at_least_500_cash": 0.026881720430107527,
+      "over_by_at_least_500_cash": 0.0,
+      "cash_bias": -74.38726364078467,
+      "p95_absolute_worker_error": 1.4978466479231705,
+      "family_macro_worker_mae": 0.44803783956135945,
+      "families": {
+        "team_16645426": {
+          "worker_mae": 0.3373394415197691,
+          "worker_rmse": 1.0432131680339598,
+          "worker_bias": -0.24545976756939364,
+          "reference_cost_mae": 153.46736105491493,
+          "under_by_2_workers": 0.03636363636363636,
+          "under_by_500_cash": 0.03636363636363636
+        },
+        "team_16663403": {
+          "worker_mae": 0.6490610270969599,
+          "worker_rmse": 1.1623085667689006,
+          "worker_bias": -0.33548834639569014,
+          "reference_cost_mae": 154.38397485062958,
+          "under_by_2_workers": 0.0625,
+          "under_by_500_cash": 0.0625
+        },
+        "team_16665237": {
+          "worker_mae": 0.5062061490263289,
+          "worker_rmse": 0.7610826310055339,
+          "worker_bias": -0.0052815155459006,
+          "reference_cost_mae": 54.550820407372726,
+          "under_by_2_workers": 0.039603960396039604,
+          "under_by_500_cash": 0.019801980198019802
+        },
+        "team_16681125": {
+          "worker_mae": 0.7268408681564807,
+          "worker_rmse": 0.8896771621452696,
+          "worker_bias": -0.6349347756672016,
+          "reference_cost_mae": 62.07962846897593,
+          "under_by_2_workers": 0.018018018018018018,
+          "under_by_500_cash": 0.009009009009009009
+        },
+        "team_16734914": {
+          "worker_mae": 0.3138305263893941,
+          "worker_rmse": 0.626839782390156,
+          "worker_bias": 0.014210541430888889,
+          "reference_cost_mae": 47.797183810078,
+          "under_by_2_workers": 0.0196078431372549,
+          "under_by_500_cash": 0.0196078431372549
+        },
+        "team_16736427": {
+          "worker_mae": 0.4673955840514112,
+          "worker_rmse": 1.0829907612626906,
+          "worker_bias": -0.13425455316289098,
+          "reference_cost_mae": 152.15645700691712,
+          "under_by_2_workers": 0.0375,
+          "under_by_500_cash": 0.0375
+        },
+        "team_16795448": {
+          "worker_mae": 0.36120030269439213,
+          "worker_rmse": 1.1017013353675065,
+          "worker_bias": -0.16852414268819116,
+          "reference_cost_mae": 181.39213821730257,
+          "under_by_2_workers": 0.02564102564102564,
+          "under_by_500_cash": 0.02564102564102564
+        },
+        "team_16801171": {
+          "worker_mae": 0.22242881755613936,
+          "worker_rmse": 0.41856981007307764,
+          "worker_bias": 0.06370057092621173,
+          "reference_cost_mae": 22.660427980639263,
+          "under_by_2_workers": 0.0,
+          "under_by_500_cash": 0.0
+        }
+      }
+    },
+    {
+      "method": "fitted_geometry",
+      "labeled_contracts": 558,
+      "worker_mae": 1.0001112878782328,
+      "worker_rmse": 1.5412956789632164,
+      "worker_bias": -0.4103702997948572,
+      "reference_cost_mae": 123.05181241321081,
+      "under_by_2_workers": 0.07168458781362007,
+      "under_by_500_cash": 0.02867383512544803,
+      "under_by_at_least_2_workers": 0.07168458781362007,
+      "under_by_at_least_1_worker": 0.25268817204301075,
+      "over_by_at_least_1_worker": 0.1057347670250896,
+      "under_by_at_least_500_cash": 0.02867383512544803,
+      "over_by_at_least_500_cash": 0.0,
+      "cash_bias": -86.0011688604279,
+      "p95_absolute_worker_error": 2.2689635563647252,
+      "family_macro_worker_mae": 0.9773021753855562,
+      "families": {
+        "team_16645426": {
+          "worker_mae": 1.0318406558008992,
+          "worker_rmse": 1.8467425170012917,
+          "worker_bias": -0.31419693648719177,
+          "reference_cost_mae": 202.7650847759675,
+          "under_by_2_workers": 0.03636363636363636,
+          "under_by_500_cash": 0.03636363636363636
+        },
+        "team_16663403": {
+          "worker_mae": 1.1940800525532433,
+          "worker_rmse": 1.9608360200995734,
+          "worker_bias": -0.8114650660185084,
+          "reference_cost_mae": 184.69070922987018,
+          "under_by_2_workers": 0.13541666666666666,
+          "under_by_500_cash": 0.0625
+        },
+        "team_16665237": {
+          "worker_mae": 1.0140675330357032,
+          "worker_rmse": 1.3144603172377431,
+          "worker_bias": -0.180728589606459,
+          "reference_cost_mae": 78.57218329849529,
+          "under_by_2_workers": 0.07920792079207921,
+          "under_by_500_cash": 0.019801980198019802
+        },
+        "team_16681125": {
+          "worker_mae": 0.9979357029833854,
+          "worker_rmse": 1.211389311645995,
+          "worker_bias": -0.6885714861555898,
+          "reference_cost_mae": 75.10533172705739,
+          "under_by_2_workers": 0.0990990990990991,
+          "under_by_500_cash": 0.009009009009009009
+        },
+        "team_16734914": {
+          "worker_mae": 0.849104300127667,
+          "worker_rmse": 1.3344387822029868,
+          "worker_bias": -0.19671547454072572,
+          "reference_cost_mae": 85.82894268518987,
+          "under_by_2_workers": 0.0392156862745098,
+          "under_by_500_cash": 0.0196078431372549
+        },
+        "team_16736427": {
+          "worker_mae": 1.0627151924801574,
+          "worker_rmse": 1.871870824023339,
+          "worker_bias": -0.3847321600337585,
+          "reference_cost_mae": 190.6214606246822,
+          "under_by_2_workers": 0.0375,
+          "under_by_500_cash": 0.0375
+        },
+        "team_16795448": {
+          "worker_mae": 0.8916030987466599,
+          "worker_rmse": 1.7685012161383178,
+          "worker_bias": -0.13613607713173134,
+          "reference_cost_mae": 220.17387989758907,
+          "under_by_2_workers": 0.02564102564102564,
+          "under_by_500_cash": 0.02564102564102564
+        },
+        "team_16801171": {
+          "worker_mae": 0.777070867356734,
+          "worker_rmse": 1.1455990027399696,
+          "worker_bias": -0.13272134172624242,
+          "reference_cost_mae": 63.05670595902884,
+          "under_by_2_workers": 0.02857142857142857,
+          "under_by_500_cash": 0.02857142857142857
+        }
+      }
+    },
+    {
+      "method": "fitted_tasks",
+      "labeled_contracts": 558,
+      "worker_mae": 1.012238595905803,
+      "worker_rmse": 1.5898986351903985,
+      "worker_bias": -0.3222664138156388,
+      "reference_cost_mae": 126.50636936761946,
+      "under_by_2_workers": 0.07347670250896057,
+      "under_by_500_cash": 0.02867383512544803,
+      "under_by_at_least_2_workers": 0.07347670250896057,
+      "under_by_at_least_1_worker": 0.1953405017921147,
+      "over_by_at_least_1_worker": 0.15591397849462366,
+      "under_by_at_least_500_cash": 0.02867383512544803,
+      "over_by_at_least_500_cash": 0.0,
+      "cash_bias": -78.37342333234425,
+      "p95_absolute_worker_error": 2.2776513811268977,
+      "family_macro_worker_mae": 0.9911531868114012,
+      "families": {
+        "team_16645426": {
+          "worker_mae": 1.037815554759974,
+          "worker_rmse": 1.9038766399493263,
+          "worker_bias": -0.13570680791679451,
+          "reference_cost_mae": 208.35542483076603,
+          "under_by_2_workers": 0.03636363636363636,
+          "under_by_500_cash": 0.03636363636363636
+        },
+        "team_16663403": {
+          "worker_mae": 1.1881622466103028,
+          "worker_rmse": 2.0091205008325987,
+          "worker_bias": -0.7109839821957508,
+          "reference_cost_mae": 185.16665860202193,
+          "under_by_2_workers": 0.09375,
+          "under_by_500_cash": 0.0625
+        },
+        "team_16665237": {
+          "worker_mae": 1.0901706726519695,
+          "worker_rmse": 1.4075305503092166,
+          "worker_bias": -0.1945991256231053,
+          "reference_cost_mae": 85.9036353683481,
+          "under_by_2_workers": 0.10891089108910891,
+          "under_by_500_cash": 0.019801980198019802
+        },
+        "team_16681125": {
+          "worker_mae": 0.9772920032304354,
+          "worker_rmse": 1.212788131487243,
+          "worker_bias": -0.6485274054112838,
+          "reference_cost_mae": 77.16859808793816,
+          "under_by_2_workers": 0.11711711711711711,
+          "under_by_500_cash": 0.009009009009009009
+        },
+        "team_16734914": {
+          "worker_mae": 0.882073850264015,
+          "worker_rmse": 1.4082906321166566,
+          "worker_bias": -0.04629979162730422,
+          "reference_cost_mae": 90.60325860273869,
+          "under_by_2_workers": 0.0392156862745098,
+          "under_by_500_cash": 0.0196078431372549
+        },
+        "team_16736427": {
+          "worker_mae": 1.0203131167259516,
+          "worker_rmse": 1.8914678040060326,
+          "worker_bias": -0.2969473820528232,
+          "reference_cost_mae": 188.08027239916487,
+          "under_by_2_workers": 0.0375,
+          "under_by_500_cash": 0.0375
+        },
+        "team_16795448": {
+          "worker_mae": 0.9394170947950438,
+          "worker_rmse": 1.846991794846753,
+          "worker_bias": 0.05306213118755078,
+          "reference_cost_mae": 229.63177663175236,
+          "under_by_2_workers": 0.02564102564102564,
+          "under_by_500_cash": 0.02564102564102564
+        },
+        "team_16801171": {
+          "worker_mae": 0.7939809554535165,
+          "worker_rmse": 1.209439740701882,
+          "worker_bias": 0.019824862391916807,
+          "reference_cost_mae": 67.55952153475963,
+          "under_by_2_workers": 0.02857142857142857,
+          "under_by_500_cash": 0.02857142857142857
+        }
+      }
+    },
+    {
+      "method": "fitted_timing",
+      "labeled_contracts": 558,
+      "worker_mae": 0.6746120446722798,
+      "worker_rmse": 1.1859047538098193,
+      "worker_bias": -0.10311235742476424,
+      "reference_cost_mae": 103.77329600592442,
+      "under_by_2_workers": 0.034050179211469536,
+      "under_by_500_cash": 0.02867383512544803,
+      "under_by_at_least_2_workers": 0.034050179211469536,
+      "under_by_at_least_1_worker": 0.0913978494623656,
+      "over_by_at_least_1_worker": 0.08064516129032258,
+      "under_by_at_least_500_cash": 0.02867383512544803,
+      "over_by_at_least_500_cash": 0.0,
+      "cash_bias": -62.64305964967778,
+      "p95_absolute_worker_error": 1.6136146833596465,
+      "family_macro_worker_mae": 0.6731630488167608,
+      "families": {
+        "team_16645426": {
+          "worker_mae": 0.6721497371279801,
+          "worker_rmse": 1.483164895683861,
+          "worker_bias": -0.05644562114223801,
+          "reference_cost_mae": 180.40713220426895,
+          "under_by_2_workers": 0.03636363636363636,
+          "under_by_500_cash": 0.03636363636363636
+        },
+        "team_16663403": {
+          "worker_mae": 0.8079799886535238,
+          "worker_rmse": 1.5381417080471587,
+          "worker_bias": -0.24420104443361754,
+          "reference_cost_mae": 162.44018968895054,
+          "under_by_2_workers": 0.0625,
+          "under_by_500_cash": 0.0625
+        },
+        "team_16665237": {
+          "worker_mae": 0.6632516688095638,
+          "worker_rmse": 0.9336613141671942,
+          "worker_bias": -0.15828654172322212,
+          "reference_cost_mae": 63.44236971955076,
+          "under_by_2_workers": 0.039603960396039604,
+          "under_by_500_cash": 0.019801980198019802
+        },
+        "team_16681125": {
+          "worker_mae": 0.6212910212130811,
+          "worker_rmse": 0.800999648768777,
+          "worker_bias": -0.3435873277200868,
+          "reference_cost_mae": 50.66782430127609,
+          "under_by_2_workers": 0.018018018018018018,
+          "under_by_500_cash": 0.009009009009009009
+        },
+        "team_16734914": {
+          "worker_mae": 0.6589557513899449,
+          "worker_rmse": 1.0500320814743107,
+          "worker_bias": 0.16330139838325408,
+          "reference_cost_mae": 69.61901755416991,
+          "under_by_2_workers": 0.0196078431372549,
+          "under_by_500_cash": 0.0196078431372549
+        },
+        "team_16736427": {
+          "worker_mae": 0.7404155713947598,
+          "worker_rmse": 1.5198219203885361,
+          "worker_bias": 0.014134857238514154,
+          "reference_cost_mae": 170.55902989701553,
+          "under_by_2_workers": 0.0375,
+          "under_by_500_cash": 0.0375
+        },
+        "team_16795448": {
+          "worker_mae": 0.6902367107044247,
+          "worker_rmse": 1.5050801130054954,
+          "worker_bias": 0.0898780460895981,
+          "reference_cost_mae": 212.12836265514204,
+          "under_by_2_workers": 0.02564102564102564,
+          "under_by_500_cash": 0.02564102564102564
+        },
+        "team_16801171": {
+          "worker_mae": 0.5310239412408082,
+          "worker_rmse": 0.8479234448513454,
+          "worker_bias": 0.11951145349545601,
+          "reference_cost_mae": 48.31287145146806,
+          "under_by_2_workers": 0.02857142857142857,
+          "under_by_500_cash": 0.02857142857142857
+        }
+      }
+    },
+    {
+      "method": "geometry_extra",
+      "labeled_contracts": 558,
+      "worker_mae": 0.5445774645857931,
+      "worker_rmse": 0.9415151417282968,
+      "worker_bias": -0.20071214803945722,
+      "reference_cost_mae": 93.68825135610868,
+      "under_by_2_workers": 0.03225806451612903,
+      "under_by_500_cash": 0.026881720430107527,
+      "under_by_at_least_2_workers": 0.03225806451612903,
+      "under_by_at_least_1_worker": 0.10752688172043011,
+      "over_by_at_least_1_worker": 0.023297491039426525,
+      "under_by_at_least_500_cash": 0.026881720430107527,
+      "over_by_at_least_500_cash": 0.0,
+      "cash_bias": -67.85079132275085,
+      "p95_absolute_worker_error": 1.5562696685403885,
+      "family_macro_worker_mae": 0.49412236256636555,
+      "families": {
+        "team_16645426": {
+          "worker_mae": 0.38147457443368377,
+          "worker_rmse": 1.1160123854592467,
+          "worker_bias": -0.264257510312161,
+          "reference_cost_mae": 157.07632185705012,
+          "under_by_2_workers": 0.03636363636363636,
+          "under_by_500_cash": 0.03636363636363636
+        },
+        "team_16663403": {
+          "worker_mae": 0.6323617966742562,
+          "worker_rmse": 1.1411905516669814,
+          "worker_bias": -0.2496550568651216,
+          "reference_cost_mae": 150.2417844052517,
+          "under_by_2_workers": 0.0625,
+          "under_by_500_cash": 0.0625
+        },
+        "team_16665237": {
+          "worker_mae": 0.5747083749533769,
+          "worker_rmse": 0.7839275166702668,
+          "worker_bias": -0.0321899840079224,
+          "reference_cost_mae": 55.76056270528578,
+          "under_by_2_workers": 0.0297029702970297,
+          "under_by_500_cash": 0.019801980198019802
+        },
+        "team_16681125": {
+          "worker_mae": 0.7451552012302282,
+          "worker_rmse": 0.9229799667493368,
+          "worker_bias": -0.6297594650044611,
+          "reference_cost_mae": 58.44913130342099,
+          "under_by_2_workers": 0.02702702702702703,
+          "under_by_500_cash": 0.009009009009009009
+        },
+        "team_16734914": {
+          "worker_mae": 0.3184280474536395,
+          "worker_rmse": 0.6337686636456035,
+          "worker_bias": 0.012429807897277075,
+          "reference_cost_mae": 48.64126993868578,
+          "under_by_2_workers": 0.0196078431372549,
+          "under_by_500_cash": 0.0196078431372549
+        },
+        "team_16736427": {
+          "worker_mae": 0.6008524653118188,
+          "worker_rmse": 1.1814629456659549,
+          "worker_bias": -0.07955543464987272,
+          "reference_cost_mae": 161.61959587184472,
+          "under_by_2_workers": 0.0375,
+          "under_by_500_cash": 0.0375
+        },
+        "team_16795448": {
+          "worker_mae": 0.4603198875796235,
+          "worker_rmse": 1.184526568026445,
+          "worker_bias": -0.10319479000936632,
+          "reference_cost_mae": 189.7732760948114,
+          "under_by_2_workers": 0.02564102564102564,
+          "under_by_500_cash": 0.02564102564102564
+        },
+        "team_16801171": {
+          "worker_mae": 0.2396785528942978,
+          "worker_rmse": 0.43256424212770256,
+          "worker_bias": 0.030119013715561697,
+          "reference_cost_mae": 24.093796390906128,
+          "under_by_2_workers": 0.0,
+          "under_by_500_cash": 0.0
+        }
+      }
+    },
+    {
+      "method": "monotone_timing",
+      "labeled_contracts": 558,
+      "worker_mae": 0.5594432281252294,
+      "worker_rmse": 0.9234042524954288,
+      "worker_bias": -0.059119750957768905,
+      "reference_cost_mae": 96.77495697313513,
+      "under_by_2_workers": 0.02867383512544803,
+      "under_by_500_cash": 0.026881720430107527,
+      "under_by_at_least_2_workers": 0.02867383512544803,
+      "under_by_at_least_1_worker": 0.06630824372759857,
+      "over_by_at_least_1_worker": 0.03763440860215054,
+      "under_by_at_least_500_cash": 0.026881720430107527,
+      "over_by_at_least_500_cash": 0.0,
+      "cash_bias": -57.48251031359927,
+      "p95_absolute_worker_error": 1.5351466381238055,
+      "family_macro_worker_mae": 0.5351384361800127,
+      "families": {
+        "team_16645426": {
+          "worker_mae": 0.47417996160792886,
+          "worker_rmse": 1.076934262955632,
+          "worker_bias": -0.1733527313301716,
+          "reference_cost_mae": 163.9394665478883,
+          "under_by_2_workers": 0.03636363636363636,
+          "under_by_500_cash": 0.03636363636363636
+        },
+        "team_16663403": {
+          "worker_mae": 0.7122142067273424,
+          "worker_rmse": 1.1689781092549063,
+          "worker_bias": -0.17541227161587924,
+          "reference_cost_mae": 155.5011029483413,
+          "under_by_2_workers": 0.052083333333333336,
+          "under_by_500_cash": 0.0625
+        },
+        "team_16665237": {
+          "worker_mae": 0.5835717258278155,
+          "worker_rmse": 0.8354547952138864,
+          "worker_bias": 0.06502108228225664,
+          "reference_cost_mae": 61.04807337695782,
+          "under_by_2_workers": 0.019801980198019802,
+          "under_by_500_cash": 0.019801980198019802
+        },
+        "team_16681125": {
+          "worker_mae": 0.6320329051144068,
+          "worker_rmse": 0.7913323651840964,
+          "worker_bias": -0.2273568567121614,
+          "reference_cost_mae": 55.21699286785923,
+          "under_by_2_workers": 0.018018018018018018,
+          "under_by_500_cash": 0.009009009009009009
+        },
+        "team_16734914": {
+          "worker_mae": 0.4390385805244871,
+          "worker_rmse": 0.680431812959144,
+          "worker_bias": 0.1172348388581557,
+          "reference_cost_mae": 55.746150336630414,
+          "under_by_2_workers": 0.0196078431372549,
+          "under_by_500_cash": 0.0196078431372549
+        },
+        "team_16736427": {
+          "worker_mae": 0.5199736248421415,
+          "worker_rmse": 1.119538952555654,
+          "worker_bias": -0.03786245841614612,
+          "reference_cost_mae": 154.0284937543978,
+          "under_by_2_workers": 0.0375,
+          "under_by_500_cash": 0.0375
+        },
+        "team_16795448": {
+          "worker_mae": 0.5214760554561573,
+          "worker_rmse": 1.1407320006096207,
+          "worker_bias": -0.052503931266318596,
+          "reference_cost_mae": 196.6605290404869,
+          "under_by_2_workers": 0.02564102564102564,
+          "under_by_500_cash": 0.02564102564102564
+        },
+        "team_16801171": {
+          "worker_mae": 0.3986204293398214,
+          "worker_rmse": 0.5616115681547418,
+          "worker_bias": 0.11498351642902713,
+          "reference_cost_mae": 42.83203648898846,
+          "under_by_2_workers": 0.02857142857142857,
+          "under_by_500_cash": 0.0
+        }
+      }
+    },
+    {
+      "method": "original_geometry",
+      "labeled_contracts": 558,
+      "worker_mae": 3.6236559139784945,
+      "worker_rmse": 4.100004371009122,
+      "worker_bias": 3.4587813620071683,
+      "reference_cost_mae": 1421.8960573476702,
+      "under_by_2_workers": 0.017921146953405017,
+      "under_by_500_cash": 0.017921146953405017,
+      "under_by_at_least_2_workers": 0.017921146953405017,
+      "under_by_at_least_1_worker": 0.026881720430107527,
+      "over_by_at_least_1_worker": 0.942652329749104,
+      "under_by_at_least_500_cash": 0.017921146953405017,
+      "over_by_at_least_500_cash": 0.578853046594982,
+      "cash_bias": 1321.942652329749,
+      "p95_absolute_worker_error": 6.0,
+      "family_macro_worker_mae": 3.8208671059555597,
+      "families": {
+        "team_16645426": {
+          "worker_mae": 4.1454545454545455,
+          "worker_rmse": 4.576620428378843,
+          "worker_bias": 3.8181818181818183,
+          "reference_cost_mae": 1668.909090909091,
+          "under_by_2_workers": 0.03636363636363636,
+          "under_by_500_cash": 0.03636363636363636
+        },
+        "team_16663403": {
+          "worker_mae": 3.4166666666666665,
+          "worker_rmse": 3.816084380618437,
+          "worker_bias": 3.0208333333333335,
+          "reference_cost_mae": 1339.96875,
+          "under_by_2_workers": 0.041666666666666664,
+          "under_by_500_cash": 0.041666666666666664
+        },
+        "team_16665237": {
+          "worker_mae": 3.108910891089109,
+          "worker_rmse": 3.5876576102957305,
+          "worker_bias": 3.089108910891089,
+          "reference_cost_mae": 848.1386138613861,
+          "under_by_2_workers": 0.0,
+          "under_by_500_cash": 0.0
+        },
+        "team_16681125": {
+          "worker_mae": 2.765765765765766,
+          "worker_rmse": 3.449768238722842,
+          "worker_bias": 2.765765765765766,
+          "reference_cost_mae": 1609.5405405405406,
+          "under_by_2_workers": 0.0,
+          "under_by_500_cash": 0.0
+        },
+        "team_16734914": {
+          "worker_mae": 4.019607843137255,
+          "worker_rmse": 4.421427326988779,
+          "worker_bias": 3.9019607843137254,
+          "reference_cost_mae": 1446.2941176470588,
+          "under_by_2_workers": 0.0196078431372549,
+          "under_by_500_cash": 0.0196078431372549
+        },
+        "team_16736427": {
+          "worker_mae": 4.175,
+          "worker_rmse": 4.474930167052889,
+          "worker_bias": 3.85,
+          "reference_cost_mae": 1417.15,
+          "under_by_2_workers": 0.0375,
+          "under_by_500_cash": 0.0375
+        },
+        "team_16795448": {
+          "worker_mae": 4.564102564102564,
+          "worker_rmse": 4.90421064507654,
+          "worker_bias": 4.256410256410256,
+          "reference_cost_mae": 1962.974358974359,
+          "under_by_2_workers": 0.02564102564102564,
+          "under_by_500_cash": 0.02564102564102564
+        },
+        "team_16801171": {
+          "worker_mae": 4.371428571428571,
+          "worker_rmse": 4.68736904578982,
+          "worker_bias": 4.314285714285714,
+          "reference_cost_mae": 1536.7142857142858,
+          "under_by_2_workers": 0.0,
+          "under_by_500_cash": 0.0
+        }
+      }
+    },
+    {
+      "method": "original_geometry_with_bound",
+      "labeled_contracts": 558,
+      "worker_mae": 3.6236559139784945,
+      "worker_rmse": 4.100004371009122,
+      "worker_bias": 3.4587813620071683,
+      "reference_cost_mae": 1421.8960573476702,
+      "under_by_2_workers": 0.017921146953405017,
+      "under_by_500_cash": 0.017921146953405017,
+      "under_by_at_least_2_workers": 0.017921146953405017,
+      "under_by_at_least_1_worker": 0.026881720430107527,
+      "over_by_at_least_1_worker": 0.942652329749104,
+      "under_by_at_least_500_cash": 0.017921146953405017,
+      "over_by_at_least_500_cash": 0.578853046594982,
+      "cash_bias": 1321.942652329749,
+      "p95_absolute_worker_error": 6.0,
+      "family_macro_worker_mae": 3.8208671059555597,
+      "families": {
+        "team_16645426": {
+          "worker_mae": 4.1454545454545455,
+          "worker_rmse": 4.576620428378843,
+          "worker_bias": 3.8181818181818183,
+          "reference_cost_mae": 1668.909090909091,
+          "under_by_2_workers": 0.03636363636363636,
+          "under_by_500_cash": 0.03636363636363636
+        },
+        "team_16663403": {
+          "worker_mae": 3.4166666666666665,
+          "worker_rmse": 3.816084380618437,
+          "worker_bias": 3.0208333333333335,
+          "reference_cost_mae": 1339.96875,
+          "under_by_2_workers": 0.041666666666666664,
+          "under_by_500_cash": 0.041666666666666664
+        },
+        "team_16665237": {
+          "worker_mae": 3.108910891089109,
+          "worker_rmse": 3.5876576102957305,
+          "worker_bias": 3.089108910891089,
+          "reference_cost_mae": 848.1386138613861,
+          "under_by_2_workers": 0.0,
+          "under_by_500_cash": 0.0
+        },
+        "team_16681125": {
+          "worker_mae": 2.765765765765766,
+          "worker_rmse": 3.449768238722842,
+          "worker_bias": 2.765765765765766,
+          "reference_cost_mae": 1609.5405405405406,
+          "under_by_2_workers": 0.0,
+          "under_by_500_cash": 0.0
+        },
+        "team_16734914": {
+          "worker_mae": 4.019607843137255,
+          "worker_rmse": 4.421427326988779,
+          "worker_bias": 3.9019607843137254,
+          "reference_cost_mae": 1446.2941176470588,
+          "under_by_2_workers": 0.0196078431372549,
+          "under_by_500_cash": 0.0196078431372549
+        },
+        "team_16736427": {
+          "worker_mae": 4.175,
+          "worker_rmse": 4.474930167052889,
+          "worker_bias": 3.85,
+          "reference_cost_mae": 1417.15,
+          "under_by_2_workers": 0.0375,
+          "under_by_500_cash": 0.0375
+        },
+        "team_16795448": {
+          "worker_mae": 4.564102564102564,
+          "worker_rmse": 4.90421064507654,
+          "worker_bias": 4.256410256410256,
+          "reference_cost_mae": 1962.974358974359,
+          "under_by_2_workers": 0.02564102564102564,
+          "under_by_500_cash": 0.02564102564102564
+        },
+        "team_16801171": {
+          "worker_mae": 4.371428571428571,
+          "worker_rmse": 4.68736904578982,
+          "worker_bias": 4.314285714285714,
+          "reference_cost_mae": 1536.7142857142858,
+          "under_by_2_workers": 0.0,
+          "under_by_500_cash": 0.0
+        }
+      }
+    },
+    {
+      "method": "ridge_floor",
+      "labeled_contracts": 558,
+      "worker_mae": 0.5747652078322592,
+      "worker_rmse": 0.9471066125279397,
+      "worker_bias": -0.17812243402690653,
+      "reference_cost_mae": 97.6218765875098,
+      "under_by_2_workers": 0.03046594982078853,
+      "under_by_500_cash": 0.026881720430107527,
+      "under_by_at_least_2_workers": 0.03046594982078853,
+      "under_by_at_least_1_worker": 0.09498207885304659,
+      "over_by_at_least_1_worker": 0.026881720430107527,
+      "under_by_at_least_500_cash": 0.026881720430107527,
+      "over_by_at_least_500_cash": 0.0,
+      "cash_bias": -67.90465002411511,
+      "p95_absolute_worker_error": 1.5165495763051033,
+      "family_macro_worker_mae": 0.5520270839997309,
+      "families": {
+        "team_16645426": {
+          "worker_mae": 0.516286852489855,
+          "worker_rmse": 1.0698258955201607,
+          "worker_bias": -0.2154546658426675,
+          "reference_cost_mae": 165.57184230867807,
+          "under_by_2_workers": 0.03636363636363636,
+          "under_by_500_cash": 0.03636363636363636
+        },
+        "team_16663403": {
+          "worker_mae": 0.7106143149940408,
+          "worker_rmse": 1.212109066931839,
+          "worker_bias": -0.3536122150569045,
+          "reference_cost_mae": 155.56421230297738,
+          "under_by_2_workers": 0.0625,
+          "under_by_500_cash": 0.0625
+        },
+        "team_16665237": {
+          "worker_mae": 0.6317011279283463,
+          "worker_rmse": 0.9498454658370802,
+          "worker_bias": -0.2696327444640347,
+          "reference_cost_mae": 64.67611863466684,
+          "under_by_2_workers": 0.039603960396039604,
+          "under_by_500_cash": 0.019801980198019802
+        },
+        "team_16681125": {
+          "worker_mae": 0.5940871504171436,
+          "worker_rmse": 0.7895206356080225,
+          "worker_bias": -0.21079966437362802,
+          "reference_cost_mae": 54.8648438695901,
+          "under_by_2_workers": 0.009009009009009009,
+          "under_by_500_cash": 0.009009009009009009
+        },
+        "team_16734914": {
+          "worker_mae": 0.43907206051600517,
+          "worker_rmse": 0.7080239799420645,
+          "worker_bias": -0.07747875638537685,
+          "reference_cost_mae": 58.12694089089002,
+          "under_by_2_workers": 0.0196078431372549,
+          "under_by_500_cash": 0.0196078431372549
+        },
+        "team_16736427": {
+          "worker_mae": 0.57653498332837,
+          "worker_rmse": 1.0826803556250573,
+          "worker_bias": -0.07768521130120863,
+          "reference_cost_mae": 154.76946353761917,
+          "under_by_2_workers": 0.0375,
+          "under_by_500_cash": 0.0375
+        },
+        "team_16795448": {
+          "worker_mae": 0.6009359622561683,
+          "worker_rmse": 1.1555479426897535,
+          "worker_bias": -0.033073310152884776,
+          "reference_cost_mae": 202.39492002395247,
+          "under_by_2_workers": 0.02564102564102564,
+          "under_by_500_cash": 0.02564102564102564
+        },
+        "team_16801171": {
+          "worker_mae": 0.3469842200679176,
+          "worker_rmse": 0.47108305903082565,
+          "worker_bias": 0.03010232456863794,
+          "reference_cost_mae": 31.862947762103055,
+          "under_by_2_workers": 0.0,
+          "under_by_500_cash": 0.0
+        }
+      }
+    },
+    {
+      "method": "timing_boost",
+      "labeled_contracts": 558,
+      "worker_mae": 0.4592780248609956,
+      "worker_rmse": 0.8270483062236602,
+      "worker_bias": -0.10102437288637185,
+      "reference_cost_mae": 88.40728283168612,
+      "under_by_2_workers": 0.025089605734767026,
+      "under_by_500_cash": 0.025089605734767026,
+      "under_by_at_least_2_workers": 0.025089605734767026,
+      "under_by_at_least_1_worker": 0.05197132616487455,
+      "over_by_at_least_1_worker": 0.012544802867383513,
+      "under_by_at_least_500_cash": 0.025089605734767026,
+      "over_by_at_least_500_cash": 0.0,
+      "cash_bias": -58.95596619607944,
+      "p95_absolute_worker_error": 1.1427595441593907,
+      "family_macro_worker_mae": 0.43487622772172146,
+      "families": {
+        "team_16645426": {
+          "worker_mae": 0.37027311500496385,
+          "worker_rmse": 1.0226271360180854,
+          "worker_bias": -0.24484876931505165,
+          "reference_cost_mae": 155.69944202448457,
+          "under_by_2_workers": 0.03636363636363636,
+          "under_by_500_cash": 0.03636363636363636
+        },
+        "team_16663403": {
+          "worker_mae": 0.618133441559067,
+          "worker_rmse": 1.086511639765969,
+          "worker_bias": -0.20947139353089983,
+          "reference_cost_mae": 148.4732934417311,
+          "under_by_2_workers": 0.052083333333333336,
+          "under_by_500_cash": 0.0625
+        },
+        "team_16665237": {
+          "worker_mae": 0.4990469253999029,
+          "worker_rmse": 0.7274172800722019,
+          "worker_bias": -0.08736460378508278,
+          "reference_cost_mae": 59.32677689799609,
+          "under_by_2_workers": 0.0297029702970297,
+          "under_by_500_cash": 0.009900990099009901
+        },
+        "team_16681125": {
+          "worker_mae": 0.44876208282726104,
+          "worker_rmse": 0.562971016963448,
+          "worker_bias": -0.10083101970510577,
+          "reference_cost_mae": 35.23724742100455,
+          "under_by_2_workers": 0.0,
+          "under_by_500_cash": 0.009009009009009009
+        },
+        "team_16734914": {
+          "worker_mae": 0.32801050415603905,
+          "worker_rmse": 0.6387735004425791,
+          "worker_bias": 0.01786976389557937,
+          "reference_cost_mae": 47.4199650336818,
+          "under_by_2_workers": 0.0196078431372549,
+          "under_by_500_cash": 0.0196078431372549
+        },
+        "team_16736427": {
+          "worker_mae": 0.5293101052573359,
+          "worker_rmse": 1.0656269849323814,
+          "worker_bias": -0.0779004654281831,
+          "reference_cost_mae": 155.80276840697394,
+          "under_by_2_workers": 0.0375,
+          "under_by_500_cash": 0.0375
+        },
+        "team_16795448": {
+          "worker_mae": 0.42122303412614986,
+          "worker_rmse": 1.0889469061148942,
+          "worker_bias": -0.13942476855088481,
+          "reference_cost_mae": 187.61005267724602,
+          "under_by_2_workers": 0.02564102564102564,
+          "under_by_500_cash": 0.02564102564102564
+        },
+        "team_16801171": {
+          "worker_mae": 0.264250613443052,
+          "worker_rmse": 0.42959089615459695,
+          "worker_bias": 0.006080518795110785,
+          "reference_cost_mae": 25.479907317425486,
+          "under_by_2_workers": 0.0,
+          "under_by_500_cash": 0.0
+        }
+      }
+    },
+    {
+      "method": "timing_extra",
+      "labeled_contracts": 558,
+      "worker_mae": 0.4964753138944552,
+      "worker_rmse": 0.8873081668732048,
+      "worker_bias": -0.11068432134290722,
+      "reference_cost_mae": 91.82910710629356,
+      "under_by_2_workers": 0.026881720430107527,
+      "under_by_500_cash": 0.026881720430107527,
+      "under_by_at_least_2_workers": 0.026881720430107527,
+      "under_by_at_least_1_worker": 0.05913978494623656,
+      "over_by_at_least_1_worker": 0.03225806451612903,
+      "under_by_at_least_500_cash": 0.026881720430107527,
+      "over_by_at_least_500_cash": 0.0,
+      "cash_bias": -60.52207843988516,
+      "p95_absolute_worker_error": 1.3077437302714683,
+      "family_macro_worker_mae": 0.46974374864166923,
+      "families": {
+        "team_16645426": {
+          "worker_mae": 0.39608849006655483,
+          "worker_rmse": 1.1009905515386047,
+          "worker_bias": -0.23495472236187231,
+          "reference_cost_mae": 159.05582078199367,
+          "under_by_2_workers": 0.03636363636363636,
+          "under_by_500_cash": 0.03636363636363636
+        },
+        "team_16663403": {
+          "worker_mae": 0.6215989609788767,
+          "worker_rmse": 1.1397367060239145,
+          "worker_bias": -0.19230183096286665,
+          "reference_cost_mae": 149.409943725415,
+          "under_by_2_workers": 0.0625,
+          "under_by_500_cash": 0.0625
+        },
+        "team_16665237": {
+          "worker_mae": 0.5310630881939853,
+          "worker_rmse": 0.7586949543154174,
+          "worker_bias": -0.06883683292068805,
+          "reference_cost_mae": 59.84436840345882,
+          "under_by_2_workers": 0.0297029702970297,
+          "under_by_500_cash": 0.019801980198019802
+        },
+        "team_16681125": {
+          "worker_mae": 0.5073130065832944,
+          "worker_rmse": 0.634974577174706,
+          "worker_bias": -0.25003965498644865,
+          "reference_cost_mae": 41.57322335057136,
+          "under_by_2_workers": 0.0,
+          "under_by_500_cash": 0.009009009009009009
+        },
+        "team_16734914": {
+          "worker_mae": 0.3728182541165792,
+          "worker_rmse": 0.686204104333102,
+          "worker_bias": 0.04134132977116961,
+          "reference_cost_mae": 52.417373968407844,
+          "under_by_2_workers": 0.0196078431372549,
+          "under_by_500_cash": 0.0196078431372549
+        },
+        "team_16736427": {
+          "worker_mae": 0.6016835831835685,
+          "worker_rmse": 1.1684998885542057,
+          "worker_bias": -0.03838284407095653,
+          "reference_cost_mae": 162.4586720930103,
+          "under_by_2_workers": 0.0375,
+          "under_by_500_cash": 0.0375
+        },
+        "team_16795448": {
+          "worker_mae": 0.46575425669772386,
+          "worker_rmse": 1.1679744568539754,
+          "worker_bias": -0.10548497682697014,
+          "reference_cost_mae": 191.4344595380044,
+          "under_by_2_workers": 0.02564102564102564,
+          "under_by_500_cash": 0.02564102564102564
+        },
+        "team_16801171": {
+          "worker_mae": 0.26163034931277085,
+          "worker_rmse": 0.4297796157574316,
+          "worker_bias": 0.03826113398532792,
+          "reference_cost_mae": 25.737474963242274,
+          "under_by_2_workers": 0.0,
+          "under_by_500_cash": 0.0
+        }
+      }
+    },
+    {
+      "method": "timing_patterns",
+      "labeled_contracts": 558,
+      "worker_mae": 0.5195463079351711,
+      "worker_rmse": 0.9601685861973319,
+      "worker_bias": -0.17769536805333794,
+      "reference_cost_mae": 91.67711444912797,
+      "under_by_2_workers": 0.034050179211469536,
+      "under_by_500_cash": 0.026881720430107527,
+      "under_by_at_least_2_workers": 0.034050179211469536,
+      "under_by_at_least_1_worker": 0.0985663082437276,
+      "over_by_at_least_1_worker": 0.035842293906810034,
+      "under_by_at_least_500_cash": 0.026881720430107527,
+      "over_by_at_least_500_cash": 0.0,
+      "cash_bias": -69.47581026865548,
+      "p95_absolute_worker_error": 1.5700112346771935,
+      "family_macro_worker_mae": 0.47011719113996897,
+      "families": {
+        "team_16645426": {
+          "worker_mae": 0.35841203949155004,
+          "worker_rmse": 1.124358497017673,
+          "worker_bias": -0.22440739124546574,
+          "reference_cost_mae": 153.66069452985823,
+          "under_by_2_workers": 0.03636363636363636,
+          "under_by_500_cash": 0.03636363636363636
+        },
+        "team_16663403": {
+          "worker_mae": 0.6064111914649049,
+          "worker_rmse": 1.1706846237628388,
+          "worker_bias": -0.32498482643414744,
+          "reference_cost_mae": 146.91004278098094,
+          "under_by_2_workers": 0.0625,
+          "under_by_500_cash": 0.0625
+        },
+        "team_16665237": {
+          "worker_mae": 0.6446153283573601,
+          "worker_rmse": 0.9837431462835039,
+          "worker_bias": -0.2108039955754893,
+          "reference_cost_mae": 64.0407515501608,
+          "under_by_2_workers": 0.0594059405940594,
+          "under_by_500_cash": 0.019801980198019802
+        },
+        "team_16681125": {
+          "worker_mae": 0.622316412066432,
+          "worker_rmse": 0.7689724484309453,
+          "worker_bias": -0.3282952116930364,
+          "reference_cost_mae": 49.97872211881314,
+          "under_by_2_workers": 0.009009009009009009,
+          "under_by_500_cash": 0.009009009009009009
+        },
+        "team_16734914": {
+          "worker_mae": 0.3180247779999295,
+          "worker_rmse": 0.6934259040257401,
+          "worker_bias": 0.012546897717256356,
+          "reference_cost_mae": 46.7642393279433,
+          "under_by_2_workers": 0.0196078431372549,
+          "under_by_500_cash": 0.0196078431372549
+        },
+        "team_16736427": {
+          "worker_mae": 0.5945309842038469,
+          "worker_rmse": 1.1837952442896273,
+          "worker_bias": -0.05113555339818795,
+          "reference_cost_mae": 160.76692062638799,
+          "under_by_2_workers": 0.0375,
+          "under_by_500_cash": 0.0375
+        },
+        "team_16795448": {
+          "worker_mae": 0.3773422187066093,
+          "worker_rmse": 1.1689263388234916,
+          "worker_bias": -0.12874279255512297,
+          "reference_cost_mae": 180.9733003755055,
+          "under_by_2_workers": 0.02564102564102564,
+          "under_by_500_cash": 0.02564102564102564
+        },
+        "team_16801171": {
+          "worker_mae": 0.23928457682911933,
+          "worker_rmse": 0.5189289155165255,
+          "worker_bias": 0.054442196807741434,
+          "reference_cost_mae": 23.543254859490936,
+          "under_by_2_workers": 0.0,
+          "under_by_500_cash": 0.0
+        }
+      }
+    }
+  ]
+}

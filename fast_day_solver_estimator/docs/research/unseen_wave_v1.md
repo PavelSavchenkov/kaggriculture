@@ -1,0 +1,25 @@
+# First unseen validation wave — frozen before download
+
+Candidate: `models/candidate_v1`. Primary predictor is the timing/routing formula plus residual extra trees, chosen from the eight development-family folds. Also preserve the two exported linear predictors and the fitted task-only, fitted old geometry, raw tree and other frozen development models for comparison. Their parameters are fixed in `runs/fresh_model_study_v1/models.joblib`.
+
+Training:282 complete single-family development contracts with a verified upper bound. The fitted models use only fresh development families, not historical archive/root examples. Exact duplicate physical contracts across multiple development families are excluded from this fit. Some strategies may have common authorship or copied ancestry; a team split cannot prove independent authorship.
+
+New data: the eight `validation` teams in the previously fixed `FAMILY_SPLITS.json`. Take four most recent completed episodes from each team's best-public-score submission. Select these without inspecting episode contents. Verify full replay parity and extract only that selected team's days. Keep every rejected extraction and terminal day visible. Later `holdout_a` and `holdout_b` groups remain unopened.
+
+Freeze predictions for all successfully extracted inputs before using their reference solve outcomes. Do not retrain this candidate on this wave. After the first report, the validation wave may become development data for a new version, which needs a new untouched test wave.
+
+References: same earliest optional hire menu, three soft seconds per queried workforce, one fallback thread, independent strict replay. Preserve normalized source certificates separately and merge only strictly verified ones for physical upper bounds. UNKNOWN is not a negative feasibility label. Longer reference work must report sensitivity separately.
+
+Matched alternatives: six eligible parent contracts per validation family, selected by the same hash rule as development. Five layouts per parent: original, near, far and two fixed-seed permutations within the same ownership quadrants. Keep work, products, purchases, withdrawals and non-labor value fixed. Do not inherit source routes for changed layouts.
+
+Primary decision measures: under the same declared compilation budget per candidate, compare the best verified hire cost after selecting one, two or three candidates per pool. Report no-certificate rates and total actual CPU too. Since each pool has identical task count and source-derived search ceiling, its alternatives receive equal nominal reference-query budgets. Use deterministic hash tie breaks. UNKNOWN alternatives remain in the candidate pool; do not silently evaluate only easy feasible alternatives.
+
+Baselines: tuned task-only, fitted old geometry, raw task+MST bound, open-route packing and return-route packing. Give all methods the same analytical impossibility screen; also report the screen's separate effect. Compare the primary model to the strongest cheap baseline, not only the original untuned formula. Warm predictions may use the original layout's verified workforce; evaluate those separately from cold predictions.
+
+Supporting measures: macro-by-family worker MAE and bias; over/under fractions; underestimates by at least two workers and by at least$500; hire-cost error; high-cost thresholds; lower/upper reference gaps; crop/animal mix, land, geometry, deadlines and work-size slices. Save the worst overestimates and underestimates with their contracts and reference evidence.
+
+Provisional acceptance thresholds: at least15% lower macro workforce MAE than tuned task-only, no more than2 percentage points worse severe-underestimate rate, and at least5% lower top-one verified layout cost than the strongest cheap geometric baseline without more than2 percentage points additional no-certificate selections. Report paired family bootstrap intervals; a point estimate alone is provisional. All exported predictions must pass parity within1e-5 workers, all impossible flags must agree with every known valid witness, and mixed-input p95 feature+model latency must stay below100 us on the measured host. A failed gate remains a failed first attempt even if later tuning fixes it.
+
+Hard-case deferral: first record where the cheap formula and linear model disagree, inputs fall outside development ranges, or reference uncertainty is wide. A later learned gate must be trained from out-of-fold or separate calibration errors and evaluated on a new wave. Do not create its oracle labels from in-sample residuals or use candidate solve outcomes at inference. Current model evaluation is only about6 us; feature extraction dominates, so gating just the trees may save little.
+
+User clarification after this wave was frozen: average end-to-end search speed takes priority over a per-case latency ceiling. Preserve the100-us tier as this version's measurement, but do not reject future useful adaptive methods solely for exceeding it on hard inputs. The first frozen predictions and their accuracy/selection results remain unchanged.

@@ -1,0 +1,45 @@
+{
+  "references": [
+    {
+      "run": "holdout_b_joint_reference_v3",
+      "round": "initial_3s",
+      "expected_calls": 44023,
+      "completed_calls": 30127,
+      "status": "interrupted_by_user_finalization"
+    },
+    {
+      "run": "holdout_b_calendar_v3_h24",
+      "round": "initial_3s",
+      "expected_calls": 2541,
+      "completed_calls": 2541,
+      "status": "completed"
+    },
+    {
+      "run": "holdout_b_calendar_v3_h23",
+      "round": "explicit_deadlines_3s",
+      "expected_calls": 2943,
+      "completed_calls": 2711,
+      "status": "interrupted_by_user_finalization"
+    }
+  ],
+  "benchmarks": [
+    {
+      "run": "warm_seed_benchmark_v2",
+      "expected_child_runs": 112,
+      "completed_child_runs": 112,
+      "status": "completed"
+    },
+    {
+      "run": "warm_stage_seed_benchmark_v3",
+      "expected_child_runs": 112,
+      "completed_child_runs": 103,
+      "status": "interrupted_by_user_finalization"
+    },
+    {
+      "run": "warm_shop_benchmark_v1",
+      "expected_child_runs": 252,
+      "completed_child_runs": 40,
+      "status": "interrupted_by_user_finalization"
+    }
+  ]
+}

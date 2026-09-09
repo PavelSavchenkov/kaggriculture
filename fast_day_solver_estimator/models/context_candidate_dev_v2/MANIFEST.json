@@ -1,0 +1,28 @@
+{
+  "status": "Development export, not adopted or frozen for fresh testing.",
+  "active_hours": [
+    23,
+    24
+  ],
+  "target": "Success and CPU of a proposed cold three-second compiler call. No feasibility claim and no physical cost prediction.",
+  "cpu_target": "Exponentiated mean log CPU, a geometric-mean heuristic.",
+  "query_features": 320,
+  "models": {
+    "boost": {
+      "trees": 160,
+      "nodes": 4640
+    },
+    "cpu": {
+      "trees": 120,
+      "nodes": 3480
+    }
+  },
+  "input_sha256": {
+    "runs/context_calendar_augmented_v2/models.joblib": "ce496257ad5964dfa2a0a1f72ae14acad78ebf83cc89e08d24ecc111f98ff716",
+    "runs/context_calendar_augmented_v2/PROTOCOL.json": "1e81ae592893559137ece548f6c43f1448e1a778e3234ac3ebf50cb794151321",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/scripts/export_context_cpp.py": "08d53e7865599a8d7067ec0d1afd27487ba6446ed38663c950e3b3faebe93f00",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/scripts/export_search_cpp.py": "d00ebf5fd573c37abba93a6a1aef574b2438b31885729c00ec661aae82cc3315",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_labor_estimator/include/context_query_features.hpp": "8aa86798b9ba449141a140db54843fe57c24ca4204306e6bcb93b577b3d4f2cb"
+  },
+  "header_sha256": "b702ba2c689c67677e3aca25142c2c4f0f2c5660e657db9f72e9a652e9636088"
+}

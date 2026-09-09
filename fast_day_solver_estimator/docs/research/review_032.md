@@ -1,0 +1,13 @@
+# Review 032 - 2026-09-09 11:36 UTC
+
+The third-wave sweeps and original .02-guidance new-seed benchmark remain running. At 11:31 the reference count was 10,115/49,507. Report jobs are queued separately and will start only on completed sweeps. Models, primary scores and the running warm candidate are unchanged.
+
+Report integrity is ready: the new calendar query reader exactly reproduces all four existing 4,442-call development Brier scores. Boundary checks cover inclusive worker/cash thresholds, unknown/rejected cases, overflow markers and equal family weighting. Reapplying the original cold gate reproduces its pass. The new family-macro criterion gives a 17.87% owned-addition MAE reduction on the completed exposed physical panel, below its 20% requirement; this is a development diagnostic, not new prospective evidence.
+
+New independent profiling gives a useful direction for complete-iteration speed. The original per-day policy executes 275 catalog calls across 111 reached dawns, spending 1,140.26 CPU seconds. Failed calls consume 968.45 seconds, including 771.32 in cold fallback. The unchanged .02 whole-call deferral replay saves 24.80%, with the same recorded bills. A hindsight same-bill oracle saves 76.40%; it is only a headroom diagnostic, never an implementable policy or season-runtime result.
+
+More specific opportunity: keep reuse and repair, then decide whether to defer the cold fallback after repair fails. Among all 238 cold calls in the development catalog, seventy have verified endpoints. None with predicted success below .25 succeeds. A .10 stage threshold defers 101 calls; replay saves 42.48% CPU with no lost certificates or bill increase. A .20 threshold saves 48.59%; do not pick the largest apparent gain from this one exposed catalog.
+
+Decision: prepare a separate conservative .10 stage-deferral C++ candidate, leaving all existing candidates frozen. It uses the same model and only the policy's observed repair failure; no candidate route or cold outcome enters prediction. Retry deferred cold calls if all ordinary counts fail, without rerunning already attempted repair. Validate source changes and call decisions, then freeze before testing on another preselected unseen seed group. This is a bounded new policy branch motivated by profiling, not a general model refit. Continue the new-family addition/calendar tests and preserve the original strict compiler quality comparison.
+
+The stage replay conditions on recorded dawn states; alternative selected schedules can affect later days. Only a complete independent compiler benchmark can establish the gain. Next review 11:56:39 UTC. Deadline September 10 00:56:39 UTC.

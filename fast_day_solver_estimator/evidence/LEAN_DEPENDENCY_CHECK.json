@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "fresh_minimal_repository": "/home/pavel/Programming/kaggriculture/work/fast_day_estimator_lean_check",
+  "compiled_targets": [
+    "estimate_day",
+    "estimator_api_smoke",
+    "verify_warm_course",
+    "warm_compile_guided"
+  ],
+  "compiler_dependency_paths_checked": 2293,
+  "project_paths_outside_minimal_repository": [],
+  "shared_dependency_file_count": 11511,
+  "vendored_files_identical_before_removal": {
+    "day_solver": 10952,
+    "agents": 554
+  },
+  "archive_moved_unchanged_to": "experiments/v6/fast_day_solver_estimator/distribution_archive/checkpoint.tar.zst",
+  "backup": "experiments/v6/fast_day_solver_estimator/packaging_backup_v1",
+  "scope": "Packaging and dependency closure. No estimator or strategy change; no Git commands, commits, or pushes."
+}

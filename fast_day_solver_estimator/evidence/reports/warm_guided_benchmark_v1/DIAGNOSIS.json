@@ -1,0 +1,214 @@
+{
+  "scope": "Post hoc diagnosis of the failed development quality gate; not a replacement benchmark.",
+  "common_executed_calls": 433,
+  "same_full_problem_calls": 433,
+  "different_execution_outcomes": [
+    {
+      "pair": "r0_cow8_d15",
+      "day": 26,
+      "extra": 2,
+      "same_full_problem": true,
+      "same_physical_problem": true,
+      "original": {
+        "day": "26",
+        "extra_hires": "2",
+        "solved": "1",
+        "endpoint": "0",
+        "seconds": "0.641593"
+      },
+      "guided": {
+        "day": "26",
+        "extra_hires": "2",
+        "solved": "1",
+        "endpoint": "1",
+        "seconds": "0.250688"
+      },
+      "problem_sha256": {
+        "original": "1a6c4711206a4808ca105d8dbbfd28e110e0137ef70899e3fb6ac00cdf9d2335",
+        "guided": "1a6c4711206a4808ca105d8dbbfd28e110e0137ef70899e3fb6ac00cdf9d2335"
+      }
+    },
+    {
+      "pair": "r0_cow8_d15",
+      "day": 27,
+      "extra": 3,
+      "same_full_problem": true,
+      "same_physical_problem": true,
+      "original": {
+        "day": "27",
+        "extra_hires": "3",
+        "solved": "1",
+        "endpoint": "1",
+        "seconds": "0.757972"
+      },
+      "guided": {
+        "day": "27",
+        "extra_hires": "3",
+        "solved": "0",
+        "endpoint": "0",
+        "seconds": "5.14048"
+      },
+      "problem_sha256": {
+        "original": "091c4c3f099456dda1a7c3c3392f98c40118697a49b5a6f270c98645397bd9b9",
+        "guided": "091c4c3f099456dda1a7c3c3392f98c40118697a49b5a6f270c98645397bd9b9"
+      }
+    },
+    {
+      "pair": "r0_cow8_d15",
+      "day": 29,
+      "extra": 4,
+      "same_full_problem": true,
+      "same_physical_problem": true,
+      "original": {
+        "day": "29",
+        "extra_hires": "4",
+        "solved": "1",
+        "endpoint": "1",
+        "seconds": "0.987765"
+      },
+      "guided": {
+        "day": "29",
+        "extra_hires": "4",
+        "solved": "0",
+        "endpoint": "0",
+        "seconds": "3.00371"
+      },
+      "problem_sha256": {
+        "original": "0236a18399e5d04c800b76ee3ecb1dc9404eeaaeb0909fba375579cd4370a8ed",
+        "guided": "0236a18399e5d04c800b76ee3ecb1dc9404eeaaeb0909fba375579cd4370a8ed"
+      }
+    },
+    {
+      "pair": "r0_sheep8_d15",
+      "day": 23,
+      "extra": 2,
+      "same_full_problem": true,
+      "same_physical_problem": true,
+      "original": {
+        "day": "23",
+        "extra_hires": "2",
+        "solved": "0",
+        "endpoint": "0",
+        "seconds": "4.62439"
+      },
+      "guided": {
+        "day": "23",
+        "extra_hires": "2",
+        "solved": "1",
+        "endpoint": "1",
+        "seconds": "0.999175"
+      },
+      "problem_sha256": {
+        "original": "4d153c07fca7d3781dae239e94bc8533cc81678898fd90682c9aee6d0a12fe18",
+        "guided": "4d153c07fca7d3781dae239e94bc8533cc81678898fd90682c9aee6d0a12fe18"
+      }
+    },
+    {
+      "pair": "r0_sheep8_d15",
+      "day": 26,
+      "extra": 2,
+      "same_full_problem": true,
+      "same_physical_problem": true,
+      "original": {
+        "day": "26",
+        "extra_hires": "2",
+        "solved": "1",
+        "endpoint": "1",
+        "seconds": "0.392053"
+      },
+      "guided": {
+        "day": "26",
+        "extra_hires": "2",
+        "solved": "1",
+        "endpoint": "0",
+        "seconds": "0.642572"
+      },
+      "problem_sha256": {
+        "original": "5e2711efa3c6a6f9e252a56ee74c8bc0536fb43987fc881ab14dd5ceeab32498",
+        "guided": "5e2711efa3c6a6f9e252a56ee74c8bc0536fb43987fc881ab14dd5ceeab32498"
+      }
+    },
+    {
+      "pair": "r1_cow8_d15",
+      "day": 26,
+      "extra": 2,
+      "same_full_problem": true,
+      "same_physical_problem": true,
+      "original": {
+        "day": "26",
+        "extra_hires": "2",
+        "solved": "1",
+        "endpoint": "1",
+        "seconds": "0.346328"
+      },
+      "guided": {
+        "day": "26",
+        "extra_hires": "2",
+        "solved": "1",
+        "endpoint": "0",
+        "seconds": "0.641339"
+      },
+      "problem_sha256": {
+        "original": "1a6c4711206a4808ca105d8dbbfd28e110e0137ef70899e3fb6ac00cdf9d2335",
+        "guided": "1a6c4711206a4808ca105d8dbbfd28e110e0137ef70899e3fb6ac00cdf9d2335"
+      }
+    },
+    {
+      "pair": "r1_sheep8_d15",
+      "day": 23,
+      "extra": 2,
+      "same_full_problem": true,
+      "same_physical_problem": true,
+      "original": {
+        "day": "23",
+        "extra_hires": "2",
+        "solved": "0",
+        "endpoint": "0",
+        "seconds": "4.5675"
+      },
+      "guided": {
+        "day": "23",
+        "extra_hires": "2",
+        "solved": "1",
+        "endpoint": "1",
+        "seconds": "0.966676"
+      },
+      "problem_sha256": {
+        "original": "4d153c07fca7d3781dae239e94bc8533cc81678898fd90682c9aee6d0a12fe18",
+        "guided": "4d153c07fca7d3781dae239e94bc8533cc81678898fd90682c9aee6d0a12fe18"
+      }
+    },
+    {
+      "pair": "r1_sheep8_d15",
+      "day": 26,
+      "extra": 2,
+      "same_full_problem": true,
+      "same_physical_problem": true,
+      "original": {
+        "day": "26",
+        "extra_hires": "2",
+        "solved": "1",
+        "endpoint": "1",
+        "seconds": "0.530738"
+      },
+      "guided": {
+        "day": "26",
+        "extra_hires": "2",
+        "solved": "1",
+        "endpoint": "0",
+        "seconds": "0.642213"
+      },
+      "problem_sha256": {
+        "original": "5e2711efa3c6a6f9e252a56ee74c8bc0536fb43987fc881ab14dd5ceeab32498",
+        "guided": "5e2711efa3c6a6f9e252a56ee74c8bc0536fb43987fc881ab14dd5ceeab32498"
+      }
+    }
+  ],
+  "deferred_original_successes": [],
+  "different_full_inputs": [],
+  "interpretation": "Different success on identical executed physical inputs is not evidence that the estimator discarded that call. Four-thread repair and time limits can vary. Full-game endpoint checks can also reject one physical schedule and accept another. This diagnosis does not reverse the failed quality gate.",
+  "input_sha256": {
+    "REPORT.json": "539fd709efe650967a4e17f85a89812065c2ff83faa57fdb925cc068e3639430",
+    "script": "eda8a977aeceedd878695c096f4b03bb17aa9d768d64b70597240ee75d43e6e2"
+  }
+}

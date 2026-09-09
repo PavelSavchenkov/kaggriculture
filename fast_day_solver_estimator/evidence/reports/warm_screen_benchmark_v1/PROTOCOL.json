@@ -1,0 +1,162 @@
+{
+  "utc": "2026-09-09T07:14:58.033319+00:00",
+  "status": "completed",
+  "cases": [
+    {
+      "id": "r0_carrot12_d15",
+      "repeat": 0,
+      "spec": "data/warm_courses_v1/specs/carrot12_d15.txt",
+      "modes": [
+        "screened",
+        "original"
+      ]
+    },
+    {
+      "id": "r0_cow8_d15",
+      "repeat": 0,
+      "spec": "data/warm_courses_v1/specs/cow8_d15.txt",
+      "modes": [
+        "screened",
+        "original"
+      ]
+    },
+    {
+      "id": "r0_melon12_d12",
+      "repeat": 0,
+      "spec": "data/warm_courses_v1/specs/melon12_d12.txt",
+      "modes": [
+        "original",
+        "screened"
+      ]
+    },
+    {
+      "id": "r0_sheep8_d15",
+      "repeat": 0,
+      "spec": "data/warm_courses_v1/specs/sheep8_d15.txt",
+      "modes": [
+        "screened",
+        "original"
+      ]
+    },
+    {
+      "id": "r0_strawberry8_d12",
+      "repeat": 0,
+      "spec": "data/warm_courses_v1/specs/strawberry8_d12.txt",
+      "modes": [
+        "screened",
+        "original"
+      ]
+    },
+    {
+      "id": "r0_tomato12_d15",
+      "repeat": 0,
+      "spec": "data/warm_courses_v1/specs/tomato12_d15.txt",
+      "modes": [
+        "original",
+        "screened"
+      ]
+    },
+    {
+      "id": "r0_wheat12_d15",
+      "repeat": 0,
+      "spec": "data/warm_courses_v1/specs/wheat12_d15.txt",
+      "modes": [
+        "screened",
+        "original"
+      ]
+    },
+    {
+      "id": "r1_carrot12_d15",
+      "repeat": 1,
+      "spec": "data/warm_courses_v1/specs/carrot12_d15.txt",
+      "modes": [
+        "original",
+        "screened"
+      ]
+    },
+    {
+      "id": "r1_cow8_d15",
+      "repeat": 1,
+      "spec": "data/warm_courses_v1/specs/cow8_d15.txt",
+      "modes": [
+        "original",
+        "screened"
+      ]
+    },
+    {
+      "id": "r1_melon12_d12",
+      "repeat": 1,
+      "spec": "data/warm_courses_v1/specs/melon12_d12.txt",
+      "modes": [
+        "screened",
+        "original"
+      ]
+    },
+    {
+      "id": "r1_sheep8_d15",
+      "repeat": 1,
+      "spec": "data/warm_courses_v1/specs/sheep8_d15.txt",
+      "modes": [
+        "original",
+        "screened"
+      ]
+    },
+    {
+      "id": "r1_strawberry8_d12",
+      "repeat": 1,
+      "spec": "data/warm_courses_v1/specs/strawberry8_d12.txt",
+      "modes": [
+        "original",
+        "screened"
+      ]
+    },
+    {
+      "id": "r1_tomato12_d15",
+      "repeat": 1,
+      "spec": "data/warm_courses_v1/specs/tomato12_d15.txt",
+      "modes": [
+        "screened",
+        "original"
+      ]
+    },
+    {
+      "id": "r1_wheat12_d15",
+      "repeat": 1,
+      "spec": "data/warm_courses_v1/specs/wheat12_d15.txt",
+      "modes": [
+        "original",
+        "screened"
+      ]
+    }
+  ],
+  "jobs": 1,
+  "scope": "Exposed fixed-calendar course-compilation benchmark, not unseen online-agent search.",
+  "inputs": "All seven imported course specifications, fixed original seed/shops/source/rival, no resume prefixes, three seconds per cold fallback, unchanged warm repair.",
+  "comparison": "Original early-input compiler versus identical query order with necessary-condition skips. Two repeats reverse each course's method order.",
+  "primary": "Mean complete child CPU across all requested courses, including failures. Wall time, failure rate, hire cost, final cash and signed per-course differences are reported separately.",
+  "acceptance": "Require at least 20 percent mean CPU saving with a positive course-cluster confidence interval, no extra failed courses, and no worse mean verified hiring bill. Report individual economic and cost regressions; never turn an earlier failure into a speed gain.",
+  "verification": "Every successful course is independently replayed over all 719 real transitions. Every rejected query is recorded with its necessary-condition mask.",
+  "sha256": {
+    "build/warm_compile_early": "f190ab98abd9860809b7aeae501cf993fac1a0d06edcb12ad7631295016cb165",
+    "build/warm_compile_screened": "e0b61ff552c29daed000ea98d1b35d4329a27e120cd29de42faa767e1f18095e",
+    "build/verify_warm_course": "3fe1bcd53013b7b2f70a97fe958451b9bf8faeddd0d391e9f170db1797412135",
+    "source/warm_compile_screened.cpp": "5967bb20321bfc39f0831012a1f3387ce5692208609f1f0ea79edbd2dc863042",
+    "scripts/run_warm_compile.py": "f312489bd4c641b833656a1717028d87782d07264a848a6684008d9724799f79",
+    "scripts/benchmark_warm_screen.py": "9e8b03b83ccf8829c737f02cfeb8db6bf4cb22e72a5f662221744885091c6ef3",
+    "data/warm_courses_v1/specs/carrot12_d15.txt": "a38466d5ee242f79628673f1e6ab4e7d473dfb5971e6d79b5aa5e5c3b7c4127e",
+    "data/warm_courses_v1/specs/cow8_d15.txt": "537585e717236d924256bd2df5c0fd10aa20298f93604e321e26237f7078857d",
+    "data/warm_courses_v1/specs/melon12_d12.txt": "2ca9bff827cffed4a47cf6947def122459ce95c59bc393435888b7c9544ba6c1",
+    "data/warm_courses_v1/specs/sheep8_d15.txt": "80ace3959bcd711f46edd3a5ea14ce0f5c894e11a7a1e990f6aec2dd55c973db",
+    "data/warm_courses_v1/specs/strawberry8_d12.txt": "9ab247cab810b1762736efad26e8f9dd47fa77498c965d5a3568c7a059393246",
+    "data/warm_courses_v1/specs/tomato12_d15.txt": "aeb9cc3015b7949a12c91d63a0c0b6dccacd0f80da37f505c9dcac5af413e916",
+    "data/warm_courses_v1/specs/wheat12_d15.txt": "4e060cb43cb74dd0c450fbf03d7783e19ccbb52ec86babff7729dc6bb76c868f",
+    "include/query_screen.hpp": "cffadd53206f29e4340619697dc15da381dbff7f7e9fd1f1d36852cdd82370f8",
+    "include/planning_context.hpp": "069962dc499b54b9863276a0063f8c73586e4dc0863bf4f0f73f7679754dcc37",
+    "include/planning_features.hpp": "448e8f4e2842edc2674e9433c9c3e150db0dc4a3870110834302001eaf6f7034",
+    "include/features.hpp": "adfde66b4ba040d7bfe5321709987bf5354777d68e3d7e9399a8de033d9bc9a6",
+    "include/bounds.hpp": "17c97777796a703f0a09ed78d545461a0ae1eb4e20d91396243d83b55348e40b",
+    "include/supply_bounds.hpp": "c9b9512d9b59d8640db6c85ddd5141c7724d31f018450b1d145b5b40434fc62a",
+    "include/release_bounds.hpp": "134e3c58c85cee20cc91feb61cb7477f9f09c375738de92f4a714d2baf7d5a3f"
+  },
+  "completed_utc": "2026-09-09T08:11:41.699002+00:00"
+}

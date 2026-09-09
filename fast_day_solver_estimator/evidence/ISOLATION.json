@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "isolated_package": "/home/pavel/Programming/kaggriculture/work/fast_day_estimator_portability/package",
+  "project_dependencies_outside_isolated_package": [],
+  "compiler_dependency_paths_checked": 2041,
+  "internal_symlinks": 0,
+  "source_season_report_fields_equal": [
+    "seed",
+    "source_action_hash",
+    "rival_action_hash",
+    "source_cash",
+    "rival_cash"
+  ],
+  "source_season_files_byte_identical": 90,
+  "configuration": {
+    "FAST_ESTIMATOR_AGENT_ROOT": "<package>/vendor/repo",
+    "FAST_ESTIMATOR_DAY_SOLVER": "<package>/vendor/day_solver"
+  },
+  "scope": "Fresh relocated build; compiler dependency and linker paths, internal vendor symlinks, exact original full-course fixture parity. System compiler/OS dependencies remain required."
+}
