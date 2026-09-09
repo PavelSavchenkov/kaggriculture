@@ -1,0 +1,43 @@
+{
+  "created_utc": "2026-09-08T07:52:45.769947+00:00",
+  "variants": [
+    "cold_renewal_p0",
+    "cold_renewal_p1",
+    "cold_renewal_p2",
+    "cold_renewal_p3",
+    "cold_renewal_p14",
+    "cold_renewal_p26",
+    "cold_renewal_p38",
+    "cold_renewal_p50",
+    "cold_renewal_p98",
+    "cold_renewal_p146",
+    "cold_renewal_p157"
+  ],
+  "parent": "joint_routes_p362_m0",
+  "reference": "empty_sale_slots_m2",
+  "ideas": [
+    "Reuse temporal vacancies on existing crop tiles instead of leaving retired melon/strawberry/wheat areas empty.",
+    "Search original mixed herd, replace added geese by cows or sheep, or omit them and reuse the space.",
+    "Evaluate 4 crop renewal patterns, 4 tile limits and 3 workforce sizes before exact execution."
+  ],
+  "origins": [
+    "Original local p362 dated composition and compiler. No new external policy copied.",
+    "Larger crop renewal motivated by fresh top-player profiles and exact cold_gap_sep08_001 production comparison."
+  ],
+  "limits": [
+    "Fixed exposed opponent flows, heuristic labor/arrival times and explicit funding deficits are approximate.",
+    "The compiler may delay or miss intended births. No online shop-dependent selector or general scheduling solution is claimed.",
+    "The fixed original12-worker support before day13 retains the known early funding deficit; score penalizes it and exact games enforce solvency."
+  ],
+  "source_hashes": {
+    "runs/day_service_bank_sep08_001/discovery/service_bank_p362_m0_vs_empty_sale_slots_m2.json": "defe1701d9a757b7422baf0462604e9deec373b7d0817f0ee8d2bc9672b07d11",
+    "runs/day_service_bank_sep08_001/discovery/service_bank_p362_m0_vs_public_router.json": "56ac6e35c62aaf0f7fe27b830927080cfdbec075fce4b020decb1f905242af5f",
+    "runs/cold_renewal_sep08_001/search.cpp": "610ce45d827c89244981985503d1c053905af435bc16a159dc72053afa8721d0",
+    "runs/cold_renewal_sep08_001/prepare.py": "8c525a3f18c26e96b07c097dd74283d9b91354e468b1abfb5729878a95755269",
+    "include/estimate.hpp": "7c5e29d7ecd6779d821e721df011e19f46a028c6737dbe8d9f9910028c89db33",
+    "include/biology.hpp": "82225498387721be96a6fc0da45323086faa9f1057ff3a5607b909b23876bb23",
+    "include/economics.hpp": "1f21960648c33a05b4ff1328a1a6e2788eece11aa546bd321832cd0ce5f22171",
+    "runs/joint_day_routes_sep08_001/compiler/source/agent.hpp": "bb3c0cb3bbfbeb23e5d11434825fd816c38cc6609b020f5163edcebe054c81aa",
+    "runs/joint_day_routes_sep08_001/compiler/source/agent.cpp": "097fcb1027623568d6d2f1f1072cadbf40b1309090b5d466ab7b6021ae06c99f"
+  }
+}

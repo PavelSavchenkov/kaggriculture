@@ -1,0 +1,19 @@
+{
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "python",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+    "--agents",
+    "cold_day_tasks_control",
+    "cold_day_tasks_full",
+    "cold_day_tasks_sheep_service",
+    "cold_day_tasks_establish",
+    "public_router",
+    "observed_sale_lead_start_216",
+    "pass"
+  ],
+  "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/2522023addb40dfda020/arena"
+}

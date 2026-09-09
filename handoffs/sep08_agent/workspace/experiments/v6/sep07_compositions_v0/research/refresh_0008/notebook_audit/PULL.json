@@ -1,0 +1,47 @@
+[
+  {
+    "ref": "destbreso/x-ray-your-agent",
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "kaggle",
+      "kernels",
+      "pull",
+      "destbreso/x-ray-your-agent",
+      "-p",
+      "experiments/v6/sep07_compositions_v0/research/refresh_0008/notebook_audit/destbreso"
+    ]
+  },
+  {
+    "ref": "nagatakengo/kaggriculture",
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "kaggle",
+      "kernels",
+      "pull",
+      "nagatakengo/kaggriculture",
+      "-p",
+      "experiments/v6/sep07_compositions_v0/research/refresh_0008/notebook_audit/nagatakengo"
+    ]
+  },
+  {
+    "ref": "ashok205/top10-replay-dataset-archive",
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "kaggle",
+      "kernels",
+      "pull",
+      "ashok205/top10-replay-dataset-archive",
+      "-p",
+      "experiments/v6/sep07_compositions_v0/research/refresh_0008/notebook_audit/ashok205"
+    ]
+  }
+]

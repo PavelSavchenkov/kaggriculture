@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "name": "late_cow_initial",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::late_cow_initial::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../../../league/top_replay_library/source/agent.cpp",
+    "../../../../league/public_router/source/agent.cpp"
+  ]
+}

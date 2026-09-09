@@ -1,0 +1,86 @@
+[
+  {
+    "index": 0,
+    "type": "markdown",
+    "characters": 2471,
+    "preview": "# \ud83c\udf3e Kaggriculture: The Farm You Inherited\n### *A beginner's story in three seasons \u2014 from one melon seed to a grandmaster empire*\n\n---\n\n**The letter arrives on a Monday morning.**\n\n> *\"Dear cousin \u2014 the farm is yours now"
+  },
+  {
+    "index": 1,
+    "type": "markdown",
+    "characters": 4204,
+    "preview": "## \ud83d\udcd6 Chapter 0 \u2014 The Farmer's Almanac\n### *Four laws Uncle Robert scribbled on the back of the letter. Read them once; they're worth thousands.*\n\n> **Law 1 \u2014 Your real currency is *time*, not coins.**\n> Every worker take"
+  },
+  {
+    "index": 2,
+    "type": "code",
+    "characters": 62,
+    "preview": "%%capture\n!pip install --upgrade \"kaggle-environments>=1.32.2\""
+  },
+  {
+    "index": 3,
+    "type": "code",
+    "characters": 1365,
+    "preview": "# Chapter 0.5 \u2014 Meet the farm you inherited.\n#\n# kaggle-environments ships the whole town: the board, the market, the\n# shops, and the built-in rivals (\"random\", \"starter\", ...). Let's open\n# the gate and look around.\n\nf"
+  },
+  {
+    "index": 4,
+    "type": "markdown",
+    "characters": 1585,
+    "preview": "## \ud83c\udf48 Season 1 \u2014 The Melon Dream\n\n**You plant your first seed the way Uncle Robert did fifty years ago:** melons. One crop, one farmer, one rhythm \u2014 buy a seed, water it, harvest it, sell when the price is right. The neig"
+  },
+  {
+    "index": 5,
+    "type": "code",
+    "characters": 3985,
+    "preview": "\"\"\"AGENT 1 \u2014 Melon Maxxer (baseline, faithful clean rewrite of bovard's starter).\n\nStrategy: grow one thing, sell it above a threshold, repeat.\nKnown flaws (fixed one-by-one by the later agents):\n  1. Never hires hands o"
+  },
+  {
+    "index": 6,
+    "type": "code",
+    "characters": 387,
+    "preview": "# Season 1, harvest day: The Melon Dreamer vs the wandering random bot.\nenv = make(\"kaggriculture\", debug=True)\nenv.run([melon_maxxer, \"random\"])\n\nfor i, s in enumerate(env.steps[-1]):\n    print(f\"Player {i}: bank = ${s."
+  },
+  {
+    "index": 7,
+    "type": "markdown",
+    "characters": 1818,
+    "preview": "## \ud83e\udd55 Season 2 \u2014 The Market Lesson\n\n**Winter comes early the second year.** Your melons flood the town's stomach and the price of a fruit that sold for $250 on day one sags toward $50 while your fields sit empty. So in Se"
+  },
+  {
+    "index": 8,
+    "type": "code",
+    "characters": 7819,
+    "preview": "\"\"\"AGENT 2 \u2014 Diversified Farmer.\n\nUpgrades over the Melon Maxxer:\n  1. Multi-crop portfolio, re-scored every turn with TODAY'S prices\n     (profit per tile-day = (typical_yield x price - seed_cost) / cycle_days)\n  2. Tra"
+  },
+  {
+    "index": 9,
+    "type": "code",
+    "characters": 480,
+    "preview": "# Season 2, harvest day: the Market Gardener takes the same fields.\nenv = make(\"kaggriculture\", debug=True)\nenv.run([diversified_farmer, \"random\"])\nprint(\"A2 vs random :\", f\"${env.steps[-1][0].reward:,.0f}\", \"vs\",\n      "
+  },
+  {
+    "index": 10,
+    "type": "markdown",
+    "characters": 7538,
+    "preview": "## \ud83c\udfed Season 3 \u2014 The Empire (Farm OS)\n\n**By year three you stop gardening and start running a company.** You buy the two neighboring plots, hire half the village, and \u2014 the Almanac's best-kept secret \u2014 you discover that *"
+  },
+  {
+    "index": 11,
+    "type": "code",
+    "characters": 34050,
+    "preview": "%%writefile submission.py\nimport math\n\n# ---------------- Game tables (mirror kaggriculture.py; keeps file portable) ----------------\nCROP_META = {\n    \"WHEAT\":      {\"seed\": 10,  \"first\": 2,  \"peak\": 4,  \"max\": 6, \"ongo"
+  },
+  {
+    "index": 12,
+    "type": "code",
+    "characters": 713,
+    "preview": "# Season 3, harvest day: load the Empress straight from the submission file\n# (single source of truth: what you test here is EXACTLY what gets submitted).\nfrom submission import farm_os\n\ndef show(a, b, label):\n    env = "
+  },
+  {
+    "index": 13,
+    "type": "markdown",
+    "characters": 4414,
+    "preview": "## \ud83d\ude80 Chapter 4 \u2014 Your Name on the Ladder\n\nThe cell above wrote your whole farm into **`submission.py`** \u2014 one self-contained file, zero imports, nothing to install. Three ways to enter the town contest:\n\n1. **From this n"
+  }
+]

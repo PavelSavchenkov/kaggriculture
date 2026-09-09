@@ -1,0 +1,100 @@
+{
+  "created_utc": "2026-09-07T19:37:40.810814+00:00",
+  "candidate": "late_goose_optimized",
+  "baseline": "opening_q32_b13_v1",
+  "seed_start": 1790000,
+  "seeds": 512,
+  "seat_mode": "both",
+  "opponents": [
+    "animal_adaptive_r1_c0_b0",
+    "binghua_116",
+    "bohann_opening_v1",
+    "crop_mix_t2_wheat",
+    "crop_rotation_t2_berry",
+    "crop_value_m2_t4",
+    "investment_context_guarded_001_best",
+    "john_131",
+    "junghoon_wool_sales",
+    "king_rc4",
+    "opening_q32_b13_v1",
+    "opening_router_v4",
+    "public_capacity_router",
+    "public_router",
+    "public_router_v5",
+    "public_sixday",
+    "shop_herd_guarded_001_best",
+    "shop_herd_s6_m3_g1",
+    "teammate_shoprouter",
+    "ticket_p116_t9_i9",
+    "wheat_one_fert"
+  ],
+  "grouping": {
+    "prior_versions": [
+      "shop_herd_guarded_001_best",
+      "shop_herd_s6_m3_g1",
+      "opening_router_v4",
+      "animal_adaptive_r1_c0_b0",
+      "investment_context_guarded_001_best",
+      "crop_value_m2_t4",
+      "crop_rotation_t2_berry",
+      "wheat_one_fert",
+      "crop_mix_t2_wheat",
+      "bohann_opening_v1"
+    ],
+    "teammate": [
+      "teammate_shoprouter"
+    ],
+    "public_controllers": [
+      "king_rc4",
+      "public_router",
+      "public_capacity_router",
+      "public_sixday",
+      "public_router_v5"
+    ],
+    "top_replays": [
+      "binghua_116",
+      "junghoon_wool_sales",
+      "john_131",
+      "ticket_p116_t9_i9"
+    ]
+  },
+  "historical_grouping": {
+    "prior_versions": [
+      "shop_herd_guarded_001_best",
+      "shop_herd_s6_m3_g1",
+      "opening_router_v4"
+    ],
+    "teammate": [
+      "teammate_shoprouter"
+    ],
+    "public_controllers": [
+      "king_rc4",
+      "public_router",
+      "public_capacity_router",
+      "public_sixday"
+    ],
+    "top_replays": [
+      "binghua_116",
+      "junghoon_wool_sales",
+      "john_131",
+      "ticket_p116_t9_i9"
+    ]
+  },
+  "direct_parent_separate_from_groups": true,
+  "gates": {
+    "current_group_utility_gain_95_lower": 0,
+    "historical_group_utility_gain_95_lower": -0.0025,
+    "minimum_individual_utility_gain": -0.02,
+    "minimum_paired_mean_margin_gain": 0,
+    "direct_parent_utility": 0.5,
+    "direct_parent_mean_margin": 0
+  },
+  "scope": "Freeze first promising complete goose course; no shop threshold fitting on these seeds.",
+  "candidate_files_sha256": {
+    "runs/late_animal_schedule_001/proposals/late_goose_optimized/IMPORT.json": "e95bb73c36293bfc7625c1ae63343febb5a713dd13b7786258e0ebcf6dba198b",
+    "runs/late_animal_schedule_001/proposals/late_goose_optimized/agent.json": "4e6bdfe75212ad10c73d16a5bdf811f1529c0c5653b0d9ee14e028ecbf2b582f",
+    "runs/late_animal_schedule_001/proposals/late_goose_optimized/README.md": "f85c67391c3e953361f2e28ccfa95700c7f73f431b7ce74ca8e1053f1f702328",
+    "runs/late_animal_schedule_001/proposals/late_goose_optimized/source/agent.hpp": "4886506faff64477f784786231adae85c1691f6fff2e4bc20bc421ae1930ba78",
+    "runs/late_animal_schedule_001/proposals/late_goose_optimized/source/agent.cpp": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+  }
+}

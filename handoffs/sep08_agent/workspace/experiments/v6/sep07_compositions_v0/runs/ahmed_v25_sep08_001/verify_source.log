@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/ahmed_v25_sep08_001/verify_source.py", line 51, in <module>
+    write(dict(pair[seat]['observation'], step=step), step == 0)
+  File "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/ahmed_v25_sep08_001/verify_source.py", line 45, in write
+    if order[0] == 'PASS' or (order[0] not in ['HIRE', 'BUY_LAND'] and int(order[2]) <= 0):
+       ~~~~~^^^
+IndexError: list index out of range
+ERROR conda.cli.main_run:execute(127): `conda run python experiments/v6/sep07_compositions_v0/runs/ahmed_v25_sep08_001/verify_source.py` failed. (See above for error)

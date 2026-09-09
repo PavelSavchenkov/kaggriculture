@@ -8,6 +8,6 @@ The manifest lists only package-owned compilation units; engine and API remain r
 
 See `SOURCE_MANIFEST.json` for every original file, hash, and namespace change,
 `ORIGINAL_README.md` when present for the original policy description, and
-[the September 8 handoff](../../../handoff/sep08_agent/readme.md) for source attribution,
+[the September 8 handoff](../../../handoffs/sep08_agent/readme.md) for source attribution,
 league role, parity scope, metrics, limitations, and reproduction commands.
 External source reuse must retain attribution; this package grants no new third-party license.

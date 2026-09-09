@@ -1,0 +1,74 @@
+[
+  {
+    "index": 0,
+    "type": "code",
+    "characters": 1208,
+    "preview": "# This Python 3 environment comes with many helpful analytics libraries installed\n# It is defined by the kaggle/python Docker image: https://github.com/kaggle/docker-python\n# For example, here's several helpful packages "
+  },
+  {
+    "index": 1,
+    "type": "markdown",
+    "characters": 1274,
+    "preview": "```\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551                                                                \u2551\n\u2551     \u2593\u2588\u2580\u2580\u2580\u2593  \u2593\u2588\u2580\u2580\u2580\u2593  \u2593\u2588\u2580\u2580\u2580\u2593         \u2584\u2580\u2588 \u2588\u2584\u2591\u2588 \u2580\u2588\u2580               \u2551\n\u2551     \u2593\u2588  \u2593\u2588  \u2593\u2588"
+  },
+  {
+    "index": 2,
+    "type": "markdown",
+    "characters": 7605,
+    "preview": "# \ud83c\udf96\ufe0f O.P.A. \u2014 ANTIMODE\n\n### Silent Strike Protocol - An ANTIMODE Framework Agent for the Kaggriculture Competition*\n\n> **\"I observe when others move. I plan when others rush. I advance when others stop.  \n> Calm is my di"
+  },
+  {
+    "index": 3,
+    "type": "code",
+    "characters": 1222,
+    "preview": "##############################################################\n# BLOCK 1: Imports and Constants\n##############################################################\n\nfrom kaggle_environments import make\n\nCROPS_DATA = {\n    \"CA"
+  },
+  {
+    "index": 4,
+    "type": "code",
+    "characters": 266,
+    "preview": "##############################################################\n# BLOCK 2: State Reader\n##############################################################\n\ndef get_farm(obs):\n    return obs[\"farms\"][obs[\"player\"]]\n\ndef get_ti"
+  },
+  {
+    "index": 5,
+    "type": "code",
+    "characters": 1853,
+    "preview": "##############################################################\n# BLOCK 3: Market and Mental State\n##############################################################\n\ndef market_is_stable(history):\n    if len(history) < MARKE"
+  },
+  {
+    "index": 6,
+    "type": "code",
+    "characters": 7545,
+    "preview": "##############################################################\n# BLOCK 4: Core Agent Logic\n##############################################################\n\ndef choose_crop_for_tile(idx_in_grid, money):\n    total = len(WOR"
+  },
+  {
+    "index": 7,
+    "type": "code",
+    "characters": 733,
+    "preview": "##############################################################\n# BLOCK 5: Decisive Test Suite (random, starter, mirror)\n##############################################################\n\ndef full_run(opponent, label, seed=7"
+  },
+  {
+    "index": 8,
+    "type": "code",
+    "characters": 831,
+    "preview": "##############################################################\n# BLOCK 6: Day-by-Day Evolution Analysis\n##############################################################\n\nenv_vs_starter = make(\"kaggriculture\", configuration"
+  },
+  {
+    "index": 9,
+    "type": "markdown",
+    "characters": 2595,
+    "preview": "## \ud83c\udf96\ufe0f After-Action Report \u2014 The Anatomy of a Silent Strike\n\n*Operational analysis of the match vs `starter` (seed 7), where O.P.A. converted a -1,519 deficit into a +8,127 victory.*\n\n---\n\n### \ud83d\udcc5 Phase I \u2014 The Silent Accum"
+  },
+  {
+    "index": 10,
+    "type": "code",
+    "characters": 309,
+    "preview": "##############################################################\n# BLOCK 7: Multi-Seed Robustness Test\n##############################################################\n\nprint(\"=== Test di robustezza multi-seed vs starter ==="
+  },
+  {
+    "index": 11,
+    "type": "code",
+    "characters": 11369,
+    "preview": "##############################################################\n# GENERA FILE submission.py PER KAGGLE\n##############################################################\n\nsubmission_code = '''#################################"
+  }
+]

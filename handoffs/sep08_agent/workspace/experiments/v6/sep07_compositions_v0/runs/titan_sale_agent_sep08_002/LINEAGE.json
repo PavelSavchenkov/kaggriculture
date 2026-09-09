@@ -1,0 +1,19 @@
+{
+  "variants": [
+    "titan_lots_h0_m1",
+    "titan_lots_h8_m1",
+    "titan_contract_h8_m3",
+    "titan_contract_h4_m4",
+    "titan_contract_h8_m4"
+  ],
+  "parent": "empty_sale_slots_m2",
+  "control": "titan_lots_h8_m1",
+  "source": "runs/titan_sale_agent_sep08_001/policy.hpp",
+  "source_sha256": "6bdb84daa2659ff3884ae4e38f06975f639437c325b2b2beb0594b6ebaea04d5",
+  "diagnosis": "runs/titan_sale_agent_sep08_001/TRACE_ANALYSIS.json",
+  "hypotheses": [
+    "Closed-loop producer forecast detects stock-dependent fallback before accepting sales.",
+    "Equal final stock and retained sale deadline preserve later schedule entry and prevent indefinite rolling delay."
+  ],
+  "scope": "Local caller-contract changes; original pure TITAN lot core unchanged. Public rival supply remains a stress scenario, not private inventory."
+}

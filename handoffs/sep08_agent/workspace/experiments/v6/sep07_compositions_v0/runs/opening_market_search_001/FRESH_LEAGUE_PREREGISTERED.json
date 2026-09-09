@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-09-07T18:33:49.725939+00:00",
+  "candidate": "q32_b13_m2",
+  "reason": "Verify the fixed candidate against all 19 newly added opening choices. Discovery has no losing matchup. Earlier counterexample was an invalid across-opponent cash comparison.",
+  "independent_seeds": [
+    1770000,
+    1770511
+  ],
+  "native_seeds": [
+    1773000,
+    1773127
+  ],
+  "gates": [
+    "No other opening has greater than 52 percent utility against candidate on either fresh panel.",
+    "Candidate remains above 50 percent direct utility and positive mean margin against both Bohann and q81 hire control.",
+    "Report every matchup and any tail or draw-heavy result. Keep prior broad gates and their tradeoffs unchanged."
+  ]
+}

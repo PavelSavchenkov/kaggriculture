@@ -1,0 +1,285 @@
+{
+  "games": 40,
+  "products": [
+    "egg",
+    "milk",
+    "wool",
+    "fertilizer"
+  ],
+  "modes": [
+    "requested_births_full_service",
+    "actual_birth_survival_full_service",
+    "actual_birth_survival_feed_care_collection_daily_harvest",
+    "actual_harvested"
+  ],
+  "rows": [
+    {
+      "name": "dated_expansion_p0",
+      "outputs": [
+        [
+          0,
+          72,
+          68,
+          116
+        ],
+        [
+          0,
+          72,
+          68,
+          116
+        ],
+        [
+          0,
+          71.75,
+          67.5,
+          116
+        ],
+        [
+          0,
+          71.75,
+          67.5,
+          116
+        ]
+      ],
+      "birth_survival_gap": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "service_gap": [
+        0,
+        0.25,
+        0.5,
+        0
+      ],
+      "harvest_model_gap": [
+        0,
+        0.0,
+        0.0,
+        0
+      ]
+    },
+    {
+      "name": "dated_expansion_p355",
+      "outputs": [
+        [
+          168,
+          180,
+          172,
+          392
+        ],
+        [
+          150,
+          160.5,
+          147,
+          347.75
+        ],
+        [
+          110,
+          139.25,
+          109.25,
+          314.25
+        ],
+        [
+          109.25,
+          139.25,
+          109.25,
+          314.25
+        ]
+      ],
+      "birth_survival_gap": [
+        18,
+        19.5,
+        25,
+        44.25
+      ],
+      "service_gap": [
+        40,
+        21.25,
+        37.75,
+        33.5
+      ],
+      "harvest_model_gap": [
+        0.75,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "dated_expansion_p356",
+      "outputs": [
+        [
+          168,
+          180,
+          172,
+          392
+        ],
+        [
+          152,
+          159,
+          150,
+          351
+        ],
+        [
+          120,
+          144.25,
+          129,
+          335.5
+        ],
+        [
+          120,
+          144.25,
+          129,
+          335.5
+        ]
+      ],
+      "birth_survival_gap": [
+        16,
+        21,
+        22,
+        41
+      ],
+      "service_gap": [
+        32,
+        14.75,
+        21,
+        15.5
+      ],
+      "harvest_model_gap": [
+        0,
+        0.0,
+        0,
+        0.0
+      ]
+    },
+    {
+      "name": "dated_expansion_p361",
+      "outputs": [
+        [
+          152,
+          168,
+          172,
+          368
+        ],
+        [
+          138.5,
+          165,
+          152,
+          345.5
+        ],
+        [
+          106.25,
+          135.75,
+          125.75,
+          309.25
+        ],
+        [
+          102.75,
+          135.75,
+          125.75,
+          309.25
+        ]
+      ],
+      "birth_survival_gap": [
+        13.5,
+        3,
+        20,
+        22.5
+      ],
+      "service_gap": [
+        32.25,
+        29.25,
+        26.25,
+        36.25
+      ],
+      "harvest_model_gap": [
+        3.5,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "dated_expansion_p362",
+      "outputs": [
+        [
+          152,
+          168,
+          172,
+          368
+        ],
+        [
+          146,
+          165.75,
+          156,
+          350.5
+        ],
+        [
+          117.25,
+          147.5,
+          136,
+          339.5
+        ],
+        [
+          111.25,
+          147.5,
+          136,
+          339.5
+        ]
+      ],
+      "birth_survival_gap": [
+        6,
+        2.25,
+        16,
+        17.5
+      ],
+      "service_gap": [
+        28.75,
+        18.25,
+        20,
+        11.0
+      ],
+      "harvest_model_gap": [
+        6.0,
+        0.0,
+        0,
+        0.0
+      ]
+    }
+  ],
+  "commands": [
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "g++",
+      "-std=c++20",
+      "-O3",
+      "-DNDEBUG",
+      "-march=native",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-I",
+      "/home/pavel/Programming/kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/dated_expansion_sep08_001/animal_gap.cpp",
+      "-o",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/dated_expansion_sep08_001/animal_gap"
+    ],
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/dated_expansion_sep08_001/animal_gap",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/dated_expansion_sep08_001/animal_gap_input.txt",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/dated_expansion_sep08_001/animal_gap_outputs.json"
+    ]
+  ],
+  "limits": [
+    "Daily-harvest biology is a diagnostic potential, not an executable schedule. Its difference from actual output includes held-cap losses and any day-mask timing/model error.",
+    "Birth/survival changes can arise from cash, construction, routes, or escape. This is a decomposition, not yet a causal allocation to finance alone."
+  ]
+}

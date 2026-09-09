@@ -1,5 +1,0 @@
-{
-  "generator_before": "aff08146ffc9cd070528bc3d11bfe57072ea12813aa7682d16fce7620db9d775",
-  "generator_after": "09a5c1def90a4579154573c23367711a151393ae0d24d417edb0c819a1498a72",
-  "reason": "Initial build rejected the bare alias-template base constructor. Added explicit base template arguments in generator and four agent headers before the successful build. Failed build log preserved. No successful earlier policy build was replaced."
-}

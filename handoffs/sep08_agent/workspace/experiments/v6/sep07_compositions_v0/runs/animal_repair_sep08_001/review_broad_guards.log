@@ -1,0 +1,20 @@
+{
+  "games_in_broad_audit": 132864,
+  "trace_matchups": 74,
+  "missed_games_by_candidate": {
+    "animal_repair_premium_m2": 90,
+    "animal_repair_q24_premium_m2": 92
+  },
+  "trace_games": 302,
+  "all_misses_traced": true,
+  "passes_declared_guard_investigation_gate": false,
+  "audit_sha256": "560b9e54128897778c63571783012f90460cb4e9dcdda9f01449796d2b2cd884",
+  "diagnosis": "180 missed-guard games match the diagnosed day23 tile38 weed and later wheat-only differences. 2 games need separate interpretation; inspect unexpected before claiming complete investigation.",
+  "scope": "Checks coverage of the preregistered guard investigation. Complete acceptance requires no unexpected cases. Does not change numerical promotion gates, erase unit faults or claim that all courses execute exactly."
+}
+Traceback (most recent call last):
+  File "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_repair_sep08_001/review_broad_guards.py", line 54, in <module>
+    assert not unexpected, 'New guard differences require investigation before candidate selection.'
+           ^^^^^^^^^^^^^^
+AssertionError: New guard differences require investigation before candidate selection.
+ERROR conda.cli.main_run:execute(127): `conda run python experiments/v6/sep07_compositions_v0/runs/animal_repair_sep08_001/review_broad_guards.py` failed. (See above for error)

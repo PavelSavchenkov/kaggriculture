@@ -1,0 +1,23 @@
+{
+  "name": "cow_triple_h0_m2",
+  "problem": "market_timing_30s/cow_triple/days/29/problem_h0.json",
+  "problem_sha256": "eff1456565a8d0577e69f184a2762902f3785e0e4c6386e1dd756d25fb4aa1df",
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/build/hinted_solve_v2",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/market_timing_30s/cow_triple/days/29/problem_h0.json",
+    "1014",
+    "29",
+    "30",
+    "4",
+    "2",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/fixed_hints_30s/cow_triple_h0_m2"
+  ],
+  "returncode": 0,
+  "seconds": 1.3192454989766702
+}

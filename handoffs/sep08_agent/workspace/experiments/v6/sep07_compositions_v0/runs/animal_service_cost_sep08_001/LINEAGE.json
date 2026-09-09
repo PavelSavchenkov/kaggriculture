@@ -1,0 +1,172 @@
+{
+  "created_utc": "2026-09-08T14:07:50.969931+00:00",
+  "source": "runs/animal_group_policy_sep08_001/source/compile_flexible.cpp",
+  "source_sha256": "f91153a78e77beaa0d77b6f493ef5aefa1f5d2481b8405dd89c5385fd39e09c7",
+  "care_evidence": "runs/animal_groups_sep08_001/CARE_EQUIVALENCE.json",
+  "changes": [
+    "Omit new cow care on birth+1/+2.",
+    "Rebuild later pending-care states.",
+    "Optional one-fewer-than-source worker search; do not apply parent fixed-worker hints to the smaller workforce."
+  ],
+  "cases": [
+    {
+      "seed": 1014,
+      "spec": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/cow_triple_1014.txt",
+      "baseline": "runs/animal_groups_sep08_001/integrated_audit/cow_triple",
+      "baseline_result": {
+        "scope": "Complete719-turn fixed-calendar matched world; not deployable policy evaluation",
+        "seed": 1014,
+        "days": 15,
+        "parent_cash": 126283,
+        "parent_rival_cash": 124516,
+        "cash": 131290,
+        "rival_cash": 123894,
+        "hires": 271,
+        "hire_cost": 5044,
+        "produced0": [
+          555,
+          16,
+          0,
+          233,
+          72,
+          0,
+          237,
+          281,
+          415,
+          0,
+          0,
+          0
+        ],
+        "parent_produced0": [
+          586,
+          18,
+          0,
+          233,
+          72,
+          0,
+          192,
+          281,
+          376,
+          0,
+          0,
+          0
+        ],
+        "produced1": [
+          598,
+          9,
+          0,
+          262,
+          72,
+          0,
+          261,
+          196,
+          379,
+          0,
+          0,
+          0
+        ],
+        "parent_produced1": [
+          598,
+          9,
+          0,
+          262,
+          72,
+          0,
+          261,
+          196,
+          379,
+          0,
+          0,
+          0
+        ]
+      },
+      "source_spec": "runs/animal_groups_sep08_001/later_groups_30s/cow_triple.txt",
+      "source_spec_sha256": "8d41f0b1d331f440fffddd379875b3c8f647d4a0526adcee3e0f7f58d5fa03bc"
+    },
+    {
+      "seed": 1019,
+      "spec": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/cow_triple_1019.txt",
+      "baseline": "runs/animal_group_policy_sep08_001/contexts_audit/cow_triple_alternate",
+      "baseline_result": {
+        "scope": "Complete719-turn fixed-calendar matched world; not deployable policy evaluation",
+        "seed": 1019,
+        "days": 15,
+        "parent_cash": 103177,
+        "parent_rival_cash": 86718,
+        "cash": 98951,
+        "rival_cash": 87280,
+        "hires": 271,
+        "hire_cost": 5044,
+        "produced0": [
+          555,
+          16,
+          0,
+          233,
+          72,
+          0,
+          237,
+          281,
+          415,
+          0,
+          0,
+          0
+        ],
+        "parent_produced0": [
+          586,
+          18,
+          0,
+          233,
+          72,
+          0,
+          192,
+          281,
+          376,
+          0,
+          0,
+          0
+        ],
+        "produced1": [
+          522,
+          93,
+          0,
+          262,
+          72,
+          0,
+          207,
+          196,
+          347,
+          0,
+          0,
+          0
+        ],
+        "parent_produced1": [
+          522,
+          93,
+          0,
+          262,
+          72,
+          0,
+          207,
+          196,
+          347,
+          0,
+          0,
+          0
+        ]
+      },
+      "source_spec": "runs/animal_group_policy_sep08_001/contexts_30s/cow_triple_alternate.txt",
+      "source_spec_sha256": "8d41f0b1d331f440fffddd379875b3c8f647d4a0526adcee3e0f7f58d5fa03bc"
+    }
+  ],
+  "scope": "Offline whole-course economic/service comparison. No runtime library replacement or promotion.",
+  "pre_execution_correction": "Replaced assumed tile identifiers with verified original9/90/94 specifications before any compilation or game run.",
+  "incumbent_fix": {
+    "updated_utc": "2026-09-08T15:22:32.468932+00:00",
+    "scope": "Experimental caller only; no root solver changes or Git",
+    "source_sha256": "0540f5d8514e9fc9f7835baded5fbb9d9af2b22b5061cf9c61da61263202fa2d",
+    "previous_source_sha256": "1b2ffac641b80366e2c08f9119a73159505211e3f84f3747fc0977cd9d4d5f7b",
+    "zero_budget_results": "incumbent_zero_budget_v2/RESULTS.json",
+    "rejection_results": "invalid_incumbent/RESULTS.json",
+    "description": "INCUMBENT_FIX.md"
+  }
+}

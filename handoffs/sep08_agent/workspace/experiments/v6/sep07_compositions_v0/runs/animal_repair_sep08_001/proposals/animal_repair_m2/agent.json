@@ -1,0 +1,16 @@
+{
+  "format_version": 1,
+  "name": "animal_repair_m2",
+  "header": "source/agent.hpp",
+  "type": "compositions::animal_repair_m2::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../source/repair.cpp",
+    "../../../animal_group_policy_sep08_001/proposals/animal_groups_m2/source/agent.cpp",
+    "../../../animal_group_policy_sep08_001/source/library.cpp",
+    "../../../empty_sale_slots_sep08_001/proposals/empty_sale_slots_m2/source/agent.cpp",
+    "../../../observed_sale_lead_004/proposals/observed_sale_lead_start_216/source/agent.cpp",
+    "../../../observed_sale_lead_003/parent_source/league/top_replay_library/source/agent.cpp",
+    "../../../observed_sale_lead_003/parent_source/league/public_router/source/agent.cpp"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "pair": {
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+      "--pair",
+      "cold_day_tasks_full",
+      "public_router"
+    ],
+    "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/dbc2a929b57d056ac415/arena"
+  },
+  "debug": {
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+      "--agents",
+      "cold_day_tasks_control",
+      "cold_day_tasks_full",
+      "cold_day_tasks_sheep_service",
+      "cold_day_tasks_establish",
+      "public_router",
+      "pass",
+      "--debug"
+    ],
+    "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/fbd8273d610a07472e3b/arena"
+  }
+}

@@ -1,0 +1,137 @@
+CROP_PLAN = ["CARROT", "WHEAT", "TOMATO"]
+SELLABLE = ["CARROT", "TOMATO", "EGG", "FERTILIZER"]   # Reserve wheat for feed.
+COOP_XY = (0, 0)
+SHED_TILES = {(4, 4), (5, 4), (4, 5), (5, 5)}
+P_ANIMAL, P_HARVEST, P_WATER, P_WEED, P_PLANT = 0, 1, 2, 3, 4   # Lower values have higher priority.
+
+
+def _ripe(tile, day):
+    if tile.get("yield_units", 0) <= 0:
+        return False
+    c = CROPS[tile["crop"]]
+    return c["ongoing"] or day - tile["planted_day"] >= c["max_yield_day"]
+
+
+def _tile_job(pos, farm, private, day, inv, want_coop):
+    """Return the priority and action for a unit at `pos`, if work is available."""
+    x, y = pos
+    tile = farm["tiles"][y][x]
+    if isinstance(tile, dict):
+        kind = tile.get("kind")
+        if kind == "PLANT":
+            if _ripe(tile, day):                       return P_HARVEST, ["HARVEST"]
+            if not tile["watered_today"]:              return P_WATER, ["WATER"]
+        elif kind == "WEED":                           return P_WEED, ["DIG"]
+        elif kind in ("COOP", "PASTURE"):
+            if tile.get("animal") is None:
+                if inv.get("GOOSE", 0) > 0:            return P_ANIMAL, ["PLACE", "GOOSE"]
+            else:
+                if not tile["fed_today"] and inv.get("WHEAT", 0) > 0:
+                    return P_ANIMAL, ["FEED"]
+                if tile.get("yield_units", 0) > 0:     return P_ANIMAL, ["HARVEST"]
+                if tile.get("fertilizer_available"):   return P_ANIMAL, ["COLLECT_FERTILIZER"]
+                if not tile.get("cared_today"):        return P_ANIMAL, ["CARE"]
+    elif tile is None:
+        if want_coop and (x, y) == COOP_XY:            return P_ANIMAL, ["BUILD_COOP"]
+        for crop in CROP_PLAN:
+            if private.get("seeds", {}).get(crop, 0) > 0:
+                return P_PLANT, ["PLANT", crop]
+    return None
+
+
+def _step_toward(pos, target):
+    x, y = pos
+    tx, ty = target
+    if x < tx: return ["EAST"]
+    if x > tx: return ["WEST"]
+    if y < ty: return ["SOUTH"]
+    if y > ty: return ["NORTH"]
+    return ["PASS"]
+
+
+def make_demo_agent(batch=3):
+    """Create a demo farmer that sells up to `batch` units per product per turn."""
+
+    def agent(obs):
+        me = obs["player"]
+        farm, private = obs["farms"][me], obs["private"]
+        day, hour = obs["day"], obs["hour"]
+        shed, seeds, money = private.get("shed", {}), private.get("seeds", {}), farm["money"]
+        invs = private.get("inventories", [{}]) or [{}]
+        tiles = farm["tiles"]
+        coop = tiles[COOP_XY[1]][COOP_XY[0]]
+        coop_ready = isinstance(coop, dict) and coop.get("kind") == "COOP"
+        want_coop = not coop_ready
+        has_goose = coop_ready and coop.get("animal") == "GOOSE"
+        goose_incoming = shed.get("GOOSE", 0) > 0 or any(i.get("GOOSE", 0) for i in invs)
+        needs_feed = has_goose and not coop.get("fed_today", False)
+
+        # ---- market orders: the only channel that moves money
+        market = []
+        for crop in CROP_PLAN:
+            if seeds.get(crop, 0) < 3 and money > 300:
+                market.append(["BUY_SEED", crop, 3])
+        if coop_ready and not has_goose and not goose_incoming and money > 900:
+            market.append(["BUY_ANIMAL", "GOOSE", 1])
+        if has_goose and shed.get("WHEAT", 0) + sum(i.get("WHEAT", 0) for i in invs) < 2 and money > 200:
+            market.append(["BUY_PRODUCT", "WHEAT", 2])
+        if day in (8, 14) and hour == 2 and money > 800:
+            market.append(["BUY_PRODUCT", "FERTILIZER", 1])
+        if day >= 6 and len(farm["unlocked_quadrants"]) == 1 and money >= 2500:
+            market.append(["BUY_LAND"])
+        if 2 <= day <= 26 and hour == 0 and money > 100:
+            market.append(["HIRE"])
+        for item in SELLABLE:
+            have = shed.get(item, 0)
+            if have > 0:
+                market.append(["SELL", item, min(batch, have)])
+        market = market[:10]
+
+        # ---- unit routing
+        def act_for(idx, pos):
+            inv = invs[idx] if idx < len(invs) else {}
+            here = _tile_job(pos, farm, private, day, inv, want_coop and idx == 0)
+            if here:
+                return here[1]
+            if coop_ready and (inv.get("GOOSE", 0) > 0 or (needs_feed and inv.get("WHEAT", 0) > 0)):
+                return _step_toward(pos, COOP_XY)
+            if tuple(pos) in SHED_TILES:
+                if not has_goose and shed.get("GOOSE", 0) > 0 and inv.get("GOOSE", 0) == 0:
+                    return ["PICKUP", "GOOSE", 1]
+                if needs_feed and inv.get("WHEAT", 0) == 0 and shed.get("WHEAT", 0) > 0:
+                    return ["PICKUP", "WHEAT", 1]
+                if sum(inv.values()) > 0:
+                    return ["DROP"]
+            if not has_goose and shed.get("GOOSE", 0) > 0:
+                return _step_toward(pos, (4, 4))
+            if needs_feed and not any(i.get("WHEAT", 0) for i in invs) and shed.get("WHEAT", 0) > 0:
+                return _step_toward(pos, (4, 4))
+            if sum(inv.values()) >= 12:
+                return _step_toward(pos, (4, 4))
+            jobs = []
+            for y, row in enumerate(tiles):
+                for x, tile in enumerate(row):
+                    if tile == "LOCKED":
+                        continue
+                    job = _tile_job((x, y), farm, private, day, inv, want_coop and idx == 0)
+                    if job:
+                        jobs.append((job[0], abs(x - pos[0]) + abs(y - pos[1]), (x, y)))
+            if not jobs:
+                return _step_toward(pos, (4, 4))
+            jobs.sort(key=lambda j: (j[0], j[1]) if idx == 0 else (j[0], -j[1]))
+            return _step_toward(pos, jobs[0][2])
+
+        return {"farmer": act_for(0, farm["farmer"]),
+                "hands": [act_for(i + 1, h) for i, h in enumerate(farm.get("hands", []))],
+                "market": market}
+
+    return agent
+
+
+SEED = 3
+env = make("kaggriculture", configuration={"seed": SEED})
+env.run([make_demo_agent(), "starter"])
+episode = env.toJSON()
+
+final = episode["steps"][-1][0]["observation"]["farms"]
+print(f"demo farmer  ${final[0]['money']:,.0f}     built-in starter  ${final[1]['money']:,.0f}")

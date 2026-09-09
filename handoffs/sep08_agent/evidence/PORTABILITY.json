@@ -1,0 +1,42 @@
+{
+  "copied_files": 56787,
+  "live_experiment_absent": true,
+  "source_copy": "Repository-tracked files plus scoped handoff/catalog files; no live experiments, submissions, replays or work dependency.",
+  "deployment_sha256": "d65b8150db33becdedb4f752e8d773fe1c1b24306cb4459974104564d6bde374",
+  "typed_pair_games": 16,
+  "full_action_reward_output_parity": 16,
+  "commands": [
+    [
+      "python",
+      "/home/pavel/Programming/kaggriculture/work/sep08_handoff/clean_repo/handoff/sep08_agent/reproduce.py",
+      "rebuild-submission"
+    ],
+    [
+      "python",
+      "/home/pavel/Programming/kaggriculture/work/sep08_handoff/clean_repo/handoff/sep08_agent/tools/build_catalog.py",
+      "--pair",
+      "animal_repair_q24_premium_m2",
+      "teammate_shoprouter"
+    ],
+    [
+      "/home/pavel/Programming/kaggriculture/work/sep08_handoff/clean_repo/handoff/sep08_agent/_work/catalog/2b5a333aa1e6f1428497/bin/arena",
+      "--a",
+      "animal_repair_q24_premium_m2",
+      "--b",
+      "teammate_shoprouter",
+      "--games",
+      "8",
+      "--seed-start",
+      "2370000",
+      "--seat-mode",
+      "both",
+      "--threads",
+      "4",
+      "--native-shops",
+      "--validate",
+      "--output",
+      "/home/pavel/Programming/kaggriculture/work/sep08_handoff/clean_repo/handoff/sep08_agent/_work/clean_pair.json"
+    ]
+  ],
+  "scope": "Clean relocated repository-shaped tree. Hardlinked immutable input bytes; separate build and deployment outputs."
+}

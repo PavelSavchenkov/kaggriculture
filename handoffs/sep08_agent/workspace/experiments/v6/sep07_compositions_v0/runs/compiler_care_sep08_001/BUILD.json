@@ -1,0 +1,26 @@
+{
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "python",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+    "--agents",
+    "compiler_care_mixed_m0",
+    "compiler_care_mixed_m1",
+    "compiler_care_goose_m0",
+    "compiler_care_goose_m1",
+    "compiler_care_p4_m0",
+    "compiler_care_p4_m1",
+    "compiler_care_p55_m0",
+    "compiler_care_p55_m1",
+    "compiler_care_p4_productive_m0",
+    "compiler_care_p4_productive_m1",
+    "compiler_care_p55_productive_m0",
+    "compiler_care_p55_productive_m1",
+    "public_router",
+    "observed_sale_lead_start_216"
+  ],
+  "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/53d14766a317cff3626a/arena"
+}

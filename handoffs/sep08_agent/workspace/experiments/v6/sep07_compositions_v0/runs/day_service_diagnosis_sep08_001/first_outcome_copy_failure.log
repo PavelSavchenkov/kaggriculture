@@ -1,0 +1,36 @@
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/day_service_diagnosis_sep08_001/trace.cpp: In member function ‘void Traced<Base>::act(const kag::agent::AgentObservation&, const kag::agent::DecisionBudget&, kag::Action&)’:
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/day_service_diagnosis_sep08_001/trace.cpp:30:39: error: ‘struct kag::UnitAction’ has no member named ‘item’
+   30 |                 <<','<<int(a.units[u].item)<<','<<a.units[u].n<<','<<o.own.inv[u][kag::WHEAT]<<']';
+      |                                       ^~~~
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/day_service_diagnosis_sep08_001/trace.cpp: In instantiation of ‘void run(const std::filesystem::__cxx11::path&, const std::string&, int, int) [with Base = compositions::day_program_p362_m0::Agent; std::string = std::__cxx11::basic_string<char>]’:
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/day_service_diagnosis_sep08_001/trace.cpp:48:40:   required from here
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/day_service_diagnosis_sep08_001/trace.cpp:43:18: error: use of deleted function ‘compositions::Outcome::Outcome(const compositions::Outcome&)’
+   43 |     write_results(options,{result},0);
+      |     ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+In file included from /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/day_service_diagnosis_sep08_001/trace.cpp:1:
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/day_service_diagnosis_sep08_001/../../include/evaluation.hpp:69:8: note: ‘compositions::Outcome::Outcome(const compositions::Outcome&)’ is implicitly deleted because the default definition would be ill-formed:
+   69 | struct Outcome {
+      |        ^~~~~~~
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/day_service_diagnosis_sep08_001/../../include/evaluation.hpp:69:8: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = compositions::DetailedProfile; _Dp = std::default_delete<compositions::DetailedProfile>]’
+In file included from /usr/include/c++/13/bits/shared_ptr_base.h:59,
+                 from /usr/include/c++/13/bits/shared_ptr.h:53,
+                 from /usr/include/c++/13/chrono:49,
+                 from /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/day_service_diagnosis_sep08_001/../../include/evaluation.hpp:5:
+/usr/include/c++/13/bits/unique_ptr.h:522:7: note: declared here
+  522 |       unique_ptr(const unique_ptr&) = delete;
+      |       ^~~~~~~~~~
+In file included from /usr/include/c++/13/vector:66,
+                 from /usr/include/c++/13/chrono:47:
+/usr/include/c++/13/bits/stl_vector.h:678:43: note:   initializing argument 1 of ‘constexpr std::vector<_Tp, _Alloc>::vector(std::initializer_list<_Tp>, const allocator_type&) [with _Tp = compositions::Outcome; _Alloc = std::allocator<compositions::Outcome>; allocator_type = std::allocator<compositions::Outcome>]’
+  678 |       vector(initializer_list<value_type> __l,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/day_service_diagnosis_sep08_001/trace.cpp: In instantiation of ‘void run(const std::filesystem::__cxx11::path&, const std::string&, int, int) [with Base = compositions::day_program_p362_m3::Agent; std::string = std::__cxx11::basic_string<char>]’:
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/day_service_diagnosis_sep08_001/trace.cpp:49:40:   required from here
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/day_service_diagnosis_sep08_001/trace.cpp:43:18: error: use of deleted function ‘compositions::Outcome::Outcome(const compositions::Outcome&)’
+   43 |     write_results(options,{result},0);
+      |     ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/stl_vector.h:678:43: note:   initializing argument 1 of ‘constexpr std::vector<_Tp, _Alloc>::vector(std::initializer_list<_Tp>, const allocator_type&) [with _Tp = compositions::Outcome; _Alloc = std::allocator<compositions::Outcome>; allocator_type = std::allocator<compositions::Outcome>]’
+  678 |       vector(initializer_list<value_type> __l,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+
+ERROR conda.cli.main_run:execute(127): `conda run g++ -std=c++20 -O3 -DNDEBUG -march=native -fno-exceptions -fno-rtti -I /home/pavel/Programming/kaggriculture -I /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/include /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/day_service_diagnosis_sep08_001/trace.cpp -o /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/day_service_diagnosis_sep08_001/trace` failed. (See above for error)

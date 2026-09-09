@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "compiler_labor_goose_m0",
+  "header": "source/agent.hpp",
+  "type": "compositions::compiler_labor_goose_m0::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../compiler/source/agent.cpp"
+  ]
+}

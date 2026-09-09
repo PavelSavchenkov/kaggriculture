@@ -1,0 +1,116 @@
+{
+  "created_utc": "2026-09-07T22:14:47.812252+00:00",
+  "candidate": "rival_wool_context_v2",
+  "baseline": "wool_family_context_v2",
+  "seed_start": 1930000,
+  "seeds": 512,
+  "seat_mode": "both",
+  "opponents": [
+    "animal_adaptive_r1_c0_b0",
+    "binghua_116",
+    "bohann_opening_v1",
+    "crop_mix_t2_wheat",
+    "crop_rotation_t2_berry",
+    "crop_value_m2_t4",
+    "investment_context_guarded_001_best",
+    "john_131",
+    "junghoon_wool_sales",
+    "king_rc4",
+    "late_goose_wheat_context",
+    "late_value_s32_t0_r05",
+    "opening_q32_b13_v1",
+    "opening_router_v4",
+    "public_capacity_router",
+    "public_router",
+    "public_router_v5",
+    "public_router_v52",
+    "public_sixday",
+    "rival_wool_context_v1",
+    "shop_herd_guarded_001_best",
+    "shop_herd_s6_m3_g1",
+    "teammate_shoprouter",
+    "ticket_p116_t9_i9",
+    "wheat_one_fert",
+    "wool_family_context_v1",
+    "wool_family_context_v2"
+  ],
+  "grouping": {
+    "prior_versions": [
+      "shop_herd_guarded_001_best",
+      "shop_herd_s6_m3_g1",
+      "opening_router_v4",
+      "animal_adaptive_r1_c0_b0",
+      "investment_context_guarded_001_best",
+      "crop_value_m2_t4",
+      "crop_rotation_t2_berry",
+      "wheat_one_fert",
+      "crop_mix_t2_wheat",
+      "bohann_opening_v1"
+    ],
+    "teammate": [
+      "teammate_shoprouter"
+    ],
+    "public_controllers": [
+      "king_rc4",
+      "public_router",
+      "public_capacity_router",
+      "public_sixday",
+      "public_router_v5",
+      "public_router_v52"
+    ],
+    "top_replays": [
+      "binghua_116",
+      "junghoon_wool_sales",
+      "john_131",
+      "ticket_p116_t9_i9"
+    ]
+  },
+  "historical_grouping": {
+    "prior_versions": [
+      "shop_herd_guarded_001_best",
+      "shop_herd_s6_m3_g1",
+      "opening_router_v4"
+    ],
+    "teammate": [
+      "teammate_shoprouter"
+    ],
+    "public_controllers": [
+      "king_rc4",
+      "public_router",
+      "public_capacity_router",
+      "public_sixday"
+    ],
+    "top_replays": [
+      "binghua_116",
+      "junghoon_wool_sales",
+      "john_131",
+      "ticket_p116_t9_i9"
+    ]
+  },
+  "gates": {
+    "current_group_utility_gain_95_lower": 0,
+    "historical_group_utility_gain_95_lower": -0.0025,
+    "minimum_individual_utility_gain": -0.02,
+    "minimum_paired_mean_margin_gain": 0,
+    "direct_parent_utility": 0.5,
+    "direct_parent_mean_margin": 0
+  },
+  "scope": "Firstv1 fresh53248 games revealed John alias. Two actual256-game profiles verify30relevantYarncontexts each: John(-1wheat,+1fert), V5/2(-1wheat,0fert). All1910000 outcomes are now diagnosis.",
+  "extra_requirement": "Targeted response protocol uses paired parent-self nonregression in every game; raw losses were an incorrect comparison, because parent-self alreadyhas94W836T94L. Individual utility gain must be nonnegative for all27opponents, current grouped95%gain positive, allmeanmargins nonnegative. Freeze before1930000fresh data.",
+  "candidate_files_sha256": {
+    "runs/rival_wool_context_002/source/policy.hpp": "8fbc838945720d3859747386c9d10aaaba9aef0f01f1e47879a95575c0a2d99d",
+    "runs/rival_wool_context_002/proposals/rival_wool_context_v2/IMPORT.json": "a2619782c7dd0a4aa3550e551ba03c7429e17a340cdac57cb590f00115d5efb6",
+    "runs/rival_wool_context_002/proposals/rival_wool_context_v2/agent.json": "3677e90048b5af72686189c7b07894332beb6a271850dea2c8f2a7ada8808d23",
+    "runs/rival_wool_context_002/proposals/rival_wool_context_v2/README.md": "16ce1f362fa4f7b095abe71e4a6e7d4f2f019f918d3e8cc9dabe30b4e28693e7",
+    "runs/rival_wool_context_002/proposals/rival_wool_context_v2/source/agent.hpp": "a5fc69ca7a1a1464f03c60bcaf7e0d9af65f9b9187d91a5fef06360f94e8dabd",
+    "runs/rival_wool_context_002/proposals/rival_wool_context_v2/source/agent.cpp": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+  },
+  "targeted_response_gates": {
+    "at_least_one_strict_opponent_gain": true,
+    "individual_utility_regression_limit": 0,
+    "all_paired_mean_margins_nonnegative": true,
+    "current_group_positive_95pct": true,
+    "historical_group_noninferiority": -0.0025,
+    "direct_parent_paired_margin_nonnegative_every_game": true
+  }
+}

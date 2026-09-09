@@ -1,0 +1,36 @@
+[
+  {
+    "agent": "crop_mix_t2_wheat",
+    "opponent": "crop_rotation_t2_berry",
+    "summary": {
+      "agent_a": "crop_mix_t2_wheat",
+      "agent_b": "crop_rotation_t2_berry",
+      "seconds": 3.83632,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.685059,
+      "mean_cash": 95326.1,
+      "mean_margin": 67.4463,
+      "cash_cvar10": 58090.5,
+      "margin_cvar10": -2881.18,
+      "pass_J": 87879
+    }
+  },
+  {
+    "agent": "crop_mix_t2_wheat",
+    "opponent": "wheat_one_fert",
+    "summary": {
+      "agent_a": "crop_mix_t2_wheat",
+      "agent_b": "wheat_one_fert",
+      "seconds": 3.72482,
+      "scenario": "official_rules_independent_shop_stream",
+      "validated": true,
+      "win_utility": 0.555176,
+      "mean_cash": 95337.5,
+      "mean_margin": 161.249,
+      "cash_cvar10": 58101,
+      "margin_cvar10": -2847.42,
+      "pass_J": 87890.2
+    }
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_group_policy_sep08_001/build/compile_flexible",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/mixed_funding_sep08_001/season_30s",
+    "1008",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_group_policy_sep08_001/flexible_mixed_30s/mixed_d9.txt",
+    "30",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/mixed_funding_sep08_001/prefix"
+  ],
+  "source_sha256": {
+    "runs/animal_forecast_error_sep08_001/mixed_certificate/days/9/actions.txt": "5017626f36e52e41aba6b31c10a8be34d432e972e736b86d55f5ffdcf76bf1b2",
+    "runs/animal_forecast_error_sep08_001/mixed_certificate/days/9/problem.json": "1f6c44d379da87ed33b5e9ddcc47a576748f3e9a2f1668f98280a83c5b54daa5",
+    "runs/mixed_funding_sep08_001/day10/hour10/days/10/actions.txt": "5be5324a062e1279ffedc7e22187832f749be9babfa926c83df1e2e1fc953bbc",
+    "runs/mixed_funding_sep08_001/day10/hour10/days/10/problem.json": "50111ae72313993529b423a36a745e8295553b95e1be6ea59139ef56100f701c"
+  },
+  "compiler_sha256": "f91153a78e77beaa0d77b6f493ef5aefa1f5d2481b8405dd89c5385fd39e09c7",
+  "binary_sha256": "53ca83b13486a8190988e2fe3ede39484e4db58fd90ce422b7ce552b10f6c1f5",
+  "change": "Day9 retains the certified two-wheat late refill. Day10 splits inherited two-goose purchase across hours1/10; unchanged worker actions now complete the second placement/feed/care.",
+  "scope": "Fixed-calendar full-course construction, not runtime policy evidence."
+}

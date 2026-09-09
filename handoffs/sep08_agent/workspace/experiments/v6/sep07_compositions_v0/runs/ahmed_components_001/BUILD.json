@@ -1,0 +1,28 @@
+{
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "python",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+    "--agents",
+    "ahmed_layers_all",
+    "ahmed_no_budget",
+    "ahmed_no_clamp",
+    "ahmed_no_dead",
+    "ahmed_no_lead",
+    "ahmed_no_room",
+    "ahmed_no_terminal",
+    "ahmed_no_weed",
+    "ahmed_tape_only",
+    "ahmed_v23",
+    "junghoon_wool_sales",
+    "king_rc4",
+    "public_router",
+    "public_router_v52",
+    "rival_wool_context_v3",
+    "teammate_shoprouter"
+  ],
+  "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/3fa214a7ee8652dbe089/arena"
+}

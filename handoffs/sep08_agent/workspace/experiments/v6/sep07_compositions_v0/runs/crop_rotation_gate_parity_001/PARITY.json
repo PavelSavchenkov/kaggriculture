@@ -1,0 +1,26 @@
+{
+  "scope": "All per-game fields, including actions/cash/production/trades/faults, equal the C++ search-selected complete leaf. First4shops only.",
+  "opponents": [
+    {
+      "opponent": "investment_context_guarded_001_best",
+      "full_game_records_equal": 512
+    },
+    {
+      "opponent": "king_rc4",
+      "full_game_records_equal": 512
+    },
+    {
+      "opponent": "public_router",
+      "full_game_records_equal": 512
+    },
+    {
+      "opponent": "public_router_v5",
+      "full_game_records_equal": 512
+    },
+    {
+      "opponent": "teammate_shoprouter",
+      "full_game_records_equal": 512
+    }
+  ],
+  "total": 2560
+}

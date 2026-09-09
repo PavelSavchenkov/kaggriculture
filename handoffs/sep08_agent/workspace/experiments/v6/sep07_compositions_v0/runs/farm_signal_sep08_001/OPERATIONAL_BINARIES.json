@@ -1,0 +1,53 @@
+{
+  "pair": {
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+      "--pair",
+      "farm_signal_v52_m1",
+      "public_router_v52"
+    ],
+    "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/a52b7db244c18d88462b/arena"
+  },
+  "debug": {
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+      "--agents",
+      "farm_signal_v52_m0",
+      "farm_signal_v52_m1",
+      "public_router_v52",
+      "pass",
+      "--debug"
+    ],
+    "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/27dab4727a6cd877caeb/arena"
+  },
+  "generic": {
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+      "--agents",
+      "public_router_v52",
+      "farm_signal_v52_m0",
+      "farm_signal_v52_m1",
+      "empty_sale_slots_m2",
+      "teammate_shoprouter",
+      "public_router",
+      "ahmed_v23",
+      "pass"
+    ],
+    "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/3f7c014b2516ae80c08d/arena"
+  }
+}

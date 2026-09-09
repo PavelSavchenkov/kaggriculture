@@ -1,0 +1,376 @@
+{
+  "games": 64,
+  "columns": [
+    "win_utility",
+    "own_cash",
+    "margin"
+  ],
+  "rows": [
+    {
+      "native": false,
+      "opponent": "teammate_shoprouter",
+      "candidate_means": [
+        1.0,
+        98640.5,
+        13727.75
+      ],
+      "parent_means": [
+        1.0,
+        98633.0,
+        13710.0
+      ],
+      "gain": [
+        0.0,
+        7.5,
+        17.75
+      ],
+      "candidate_cash_margin_tail10": [
+        64401.0,
+        10848.0
+      ],
+      "parent_cash_margin_tail10": [
+        64416.0,
+        10819.0
+      ]
+    },
+    {
+      "native": false,
+      "opponent": "king_rc4",
+      "candidate_means": [
+        1.0,
+        104874.625,
+        11881.375
+      ],
+      "parent_means": [
+        1.0,
+        114293.625,
+        22861.125
+      ],
+      "gain": [
+        0.0,
+        -9419.0,
+        -10979.75
+      ],
+      "candidate_cash_margin_tail10": [
+        67519.0,
+        4606.0
+      ],
+      "parent_cash_margin_tail10": [
+        73508.0,
+        14977.0
+      ]
+    },
+    {
+      "native": true,
+      "opponent": "teammate_shoprouter",
+      "candidate_means": [
+        1.0,
+        102929.0,
+        11188.375
+      ],
+      "parent_means": [
+        1.0,
+        103116.125,
+        10921.0
+      ],
+      "gain": [
+        0.0,
+        -187.125,
+        267.375
+      ],
+      "candidate_cash_margin_tail10": [
+        77316.0,
+        6556.0
+      ],
+      "parent_cash_margin_tail10": [
+        77296.0,
+        5602.0
+      ]
+    },
+    {
+      "native": true,
+      "opponent": "king_rc4",
+      "candidate_means": [
+        0.75,
+        90364.125,
+        5793.0
+      ],
+      "parent_means": [
+        1.0,
+        109259.5,
+        11996.875
+      ],
+      "gain": [
+        -0.25,
+        -18895.375,
+        -6203.875
+      ],
+      "candidate_cash_margin_tail10": [
+        52751.0,
+        -5078.0
+      ],
+      "parent_cash_margin_tail10": [
+        78390.0,
+        3360.0
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "native": false,
+      "gain": [
+        0.0,
+        -4705.75,
+        -5481.0
+      ],
+      "gain95": [
+        [
+          0.0,
+          -5442.75,
+          -6960.875
+        ],
+        [
+          0.0,
+          -3539.25,
+          -3913.125
+        ]
+      ]
+    },
+    {
+      "native": true,
+      "gain": [
+        -0.125,
+        -9541.25,
+        -2968.25
+      ],
+      "gain95": [
+        [
+          -0.375,
+          -24029.0,
+          -9809.9375
+        ],
+        [
+          0.0,
+          4744.875,
+          2610.625
+        ]
+      ]
+    }
+  ],
+  "promoted": false,
+  "commands": [
+    [
+      "conda",
+      "run",
+      "--no-capture-output",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/handoff/sep08_agent/_work/catalog/756323f2067d879a88af/bin/arena",
+      "--a",
+      "empty_sale_slots_m2",
+      "--b",
+      "teammate_shoprouter",
+      "--games",
+      "4",
+      "--seed-start",
+      "2410000",
+      "--seat-mode",
+      "both",
+      "--threads",
+      "2",
+      "--budget-expansions",
+      "100000",
+      "--validate",
+      "--profile",
+      "--output",
+      "handoff/sep08_agent/_work/loop_smoke/fresh_empty_sale_slots_m2_vs_teammate_shoprouter.json"
+    ],
+    [
+      "conda",
+      "run",
+      "--no-capture-output",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/handoff/sep08_agent/_work/catalog/756323f2067d879a88af/bin/arena",
+      "--a",
+      "animal_repair_q24_premium_m2",
+      "--b",
+      "teammate_shoprouter",
+      "--games",
+      "4",
+      "--seed-start",
+      "2410000",
+      "--seat-mode",
+      "both",
+      "--threads",
+      "2",
+      "--budget-expansions",
+      "100000",
+      "--validate",
+      "--profile",
+      "--output",
+      "handoff/sep08_agent/_work/loop_smoke/fresh_animal_repair_q24_premium_m2_vs_teammate_shoprouter.json"
+    ],
+    [
+      "conda",
+      "run",
+      "--no-capture-output",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/handoff/sep08_agent/_work/catalog/756323f2067d879a88af/bin/arena",
+      "--a",
+      "empty_sale_slots_m2",
+      "--b",
+      "king_rc4",
+      "--games",
+      "4",
+      "--seed-start",
+      "2410000",
+      "--seat-mode",
+      "both",
+      "--threads",
+      "2",
+      "--budget-expansions",
+      "100000",
+      "--validate",
+      "--profile",
+      "--output",
+      "handoff/sep08_agent/_work/loop_smoke/fresh_empty_sale_slots_m2_vs_king_rc4.json"
+    ],
+    [
+      "conda",
+      "run",
+      "--no-capture-output",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/handoff/sep08_agent/_work/catalog/756323f2067d879a88af/bin/arena",
+      "--a",
+      "animal_repair_q24_premium_m2",
+      "--b",
+      "king_rc4",
+      "--games",
+      "4",
+      "--seed-start",
+      "2410000",
+      "--seat-mode",
+      "both",
+      "--threads",
+      "2",
+      "--budget-expansions",
+      "100000",
+      "--validate",
+      "--profile",
+      "--output",
+      "handoff/sep08_agent/_work/loop_smoke/fresh_animal_repair_q24_premium_m2_vs_king_rc4.json"
+    ],
+    [
+      "conda",
+      "run",
+      "--no-capture-output",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/handoff/sep08_agent/_work/catalog/756323f2067d879a88af/bin/arena",
+      "--a",
+      "empty_sale_slots_m2",
+      "--b",
+      "teammate_shoprouter",
+      "--games",
+      "4",
+      "--seed-start",
+      "2420000",
+      "--seat-mode",
+      "both",
+      "--threads",
+      "2",
+      "--budget-expansions",
+      "100000",
+      "--validate",
+      "--profile",
+      "--output",
+      "handoff/sep08_agent/_work/loop_smoke/native_empty_sale_slots_m2_vs_teammate_shoprouter.json",
+      "--native-shops"
+    ],
+    [
+      "conda",
+      "run",
+      "--no-capture-output",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/handoff/sep08_agent/_work/catalog/756323f2067d879a88af/bin/arena",
+      "--a",
+      "animal_repair_q24_premium_m2",
+      "--b",
+      "teammate_shoprouter",
+      "--games",
+      "4",
+      "--seed-start",
+      "2420000",
+      "--seat-mode",
+      "both",
+      "--threads",
+      "2",
+      "--budget-expansions",
+      "100000",
+      "--validate",
+      "--profile",
+      "--output",
+      "handoff/sep08_agent/_work/loop_smoke/native_animal_repair_q24_premium_m2_vs_teammate_shoprouter.json",
+      "--native-shops"
+    ],
+    [
+      "conda",
+      "run",
+      "--no-capture-output",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/handoff/sep08_agent/_work/catalog/756323f2067d879a88af/bin/arena",
+      "--a",
+      "empty_sale_slots_m2",
+      "--b",
+      "king_rc4",
+      "--games",
+      "4",
+      "--seed-start",
+      "2420000",
+      "--seat-mode",
+      "both",
+      "--threads",
+      "2",
+      "--budget-expansions",
+      "100000",
+      "--validate",
+      "--profile",
+      "--output",
+      "handoff/sep08_agent/_work/loop_smoke/native_empty_sale_slots_m2_vs_king_rc4.json",
+      "--native-shops"
+    ],
+    [
+      "conda",
+      "run",
+      "--no-capture-output",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/handoff/sep08_agent/_work/catalog/756323f2067d879a88af/bin/arena",
+      "--a",
+      "animal_repair_q24_premium_m2",
+      "--b",
+      "king_rc4",
+      "--games",
+      "4",
+      "--seed-start",
+      "2420000",
+      "--seat-mode",
+      "both",
+      "--threads",
+      "2",
+      "--budget-expansions",
+      "100000",
+      "--validate",
+      "--profile",
+      "--output",
+      "handoff/sep08_agent/_work/loop_smoke/native_animal_repair_q24_premium_m2_vs_king_rc4.json",
+      "--native-shops"
+    ]
+  ],
+  "limitations": "Does not audit every branch guard or confer promotion. Seed blocks are chosen by the caller and are not certified unused."
+}

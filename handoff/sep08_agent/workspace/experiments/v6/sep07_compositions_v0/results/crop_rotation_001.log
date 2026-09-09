@@ -1,6 +1,0 @@
-day=12 hires=0 solved=0 endpoint=0
-day=12 hires=1 solved=0 endpoint=0
-terminate called after throwing an instance of 'std::runtime_error'
-  what():  buy_schedule[9]: invalid market operation, item, or quantity
-/tmp/tmpmyei3oqo: line 3: 3676948 Aborted                 (core dumped) /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/day_scheduler/compile_crop_rotation /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/crop_rotation_001 1000 10 5.0
-ERROR conda.cli.main_run:execute(127): `conda run /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/day_scheduler/compile_crop_rotation /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/crop_rotation_001 1000 10 5.0` failed. (See above for error)

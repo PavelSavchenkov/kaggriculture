@@ -1,0 +1,7 @@
+/usr/bin/ld: /tmp/cckL5aUw.o: in function `compositions_sale_copy::shop_herd_s6_m3_g1::Agent::Agent()':
+trace.cpp:(.text._ZN22compositions_sale_copy18shop_herd_s6_m3_g15AgentC2Ev[_ZN22compositions_sale_copy18shop_herd_s6_m3_g15AgentC5Ev]+0xcf): undefined reference to `compositions_sale_copy::top_replay_library::Agent::Agent(int)'
+/usr/bin/ld: /tmp/cckL5aUw.o: in function `compositions_sale_copy::ShopHerdAgent::act(kag::agent::AgentObservation const&, kag::agent::DecisionBudget const&, kag::Action&)':
+trace.cpp:(.text._ZN22compositions_sale_copy13ShopHerdAgent3actERKN3kag5agent16AgentObservationERKNS2_14DecisionBudgetERNS1_6ActionE[_ZN22compositions_sale_copy13ShopHerdAgent3actERKN3kag5agent16AgentObservationERKNS2_14DecisionBudgetERNS1_6ActionE]+0x2eb): undefined reference to `compositions_sale_copy::top_replay_library::Agent::act(kag::agent::AgentObservation const&, kag::agent::DecisionBudget const&, kag::Action&)'
+collect2: error: ld returned 1 exit status
+
+ERROR conda.cli.main_run:execute(127): `conda run g++ -std=c++20 -O3 -DNDEBUG -march=native -fno-exceptions -fno-rtti -I /home/pavel/Programming/kaggriculture -I /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/include /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/titan_sale_agent_sep08_001/trace.cpp -o /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/titan_sale_agent_sep08_001/trace` failed. (See above for error)

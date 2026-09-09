@@ -1,9 +1,0 @@
-#pragma once
-#include <memory>
-#include <string>
-#include "evaluation.hpp"
-#include "experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/source/audit.hpp"
-#include "experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/proposals/sheep_yarn2/source/agent.hpp"
-#include "experiments/v6/sep07_compositions_v0/runs/sheep_expansion_portfolio_001/proposals/sheep_value_margin_s64/source/agent.hpp"
-using PairA=compositions::sheep_yarn2::Agent;
-using PairB=compositions::sheep_value_margin_s64::Agent;

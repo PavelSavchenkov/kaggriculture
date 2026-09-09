@@ -1,0 +1,58 @@
+{
+  "previous_validated_cohort": "research/refresh_sep08_0708",
+  "renamed_rows": [
+    {
+      "team_id": "16665237",
+      "submission_id": "56058327",
+      "episode_id": "106719685",
+      "current_team": "Ad Space Available",
+      "replay_team": "get some fries",
+      "seat": 1
+    },
+    {
+      "team_id": "16665237",
+      "submission_id": "56058327",
+      "episode_id": "106714082",
+      "current_team": "Ad Space Available",
+      "replay_team": "get some fries",
+      "seat": 1
+    },
+    {
+      "team_id": "16665237",
+      "submission_id": "56058327",
+      "episode_id": "106712073",
+      "current_team": "Ad Space Available",
+      "replay_team": "get some fries",
+      "seat": 1
+    },
+    {
+      "team_id": "16665237",
+      "submission_id": "56058327",
+      "episode_id": "106709242",
+      "current_team": "Ad Space Available",
+      "replay_team": "get some fries",
+      "seat": 0
+    },
+    {
+      "team_id": "16665237",
+      "submission_id": "56058327",
+      "episode_id": "106704698",
+      "current_team": "Ad Space Available",
+      "replay_team": "get some fries",
+      "seat": 0
+    },
+    {
+      "team_id": "16665237",
+      "submission_id": "56058327",
+      "episode_id": "106699155",
+      "current_team": "Ad Space Available",
+      "replay_team": "get some fries",
+      "seat": 0
+    }
+  ],
+  "previous_manifest_sha256": "3090f746809eceb8ddca2e8416e0a9d138f0ca22cf3186cf35f79bfca6d0a399",
+  "previous_program_sources_sha256": "cfb16014b0ca367a4bcee68e3c755b598069168d65a2566c210398fde7517a5e",
+  "original_manifest_sha256": "ea60f6b0a8a01258d1691dfd7e372a7d77183858b65a4bd8871bc52bda63c24f",
+  "normalized_manifest_sha256": "8d915aaf26ff9f44ff600280362f00c87f12c184b7fa4dff69ad66890493d776",
+  "rule": "Current name if uniquely present; otherwise exactly one historical replay name from the same team ID AND submission ID in the validated previous cohort. Fail if absent or ambiguous. Replay files are unchanged."
+}

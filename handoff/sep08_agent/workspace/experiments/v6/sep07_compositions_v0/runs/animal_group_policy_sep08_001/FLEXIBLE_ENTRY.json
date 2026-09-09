@@ -1,8 +1,0 @@
-{
-  "parent": "source/compile_land.cpp",
-  "parent_sha256": "206450fad399be3e64218cdaa13b401fe6329d5d01246e23944e4c9605ca8afd",
-  "finding": "Mixedday9/day10aborted because compiler required a natural one-shot harvest at entry; original source had already replanted wheat.",
-  "change": "Support empty/weed/crop release. Harvest only currently mature stocked crops, then DIG if crop remains; count actual work, lost future output and purchases in full-day/full-season evaluation.",
-  "scope": "Offline compiler extension; no source policy or runtime tables modified. Existing occupied animal/structure replacement still explicitly unsupported.",
-  "validation": "Build, funded entry, exact physical/day endpoints and full game pending."
-}

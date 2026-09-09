@@ -1,7 +1,0 @@
-Traceback (most recent call last):
-  File "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/check_incumbents.py", line 20, in <module>
-    subprocess.run(command, stdout=log, stderr=subprocess.STDOUT, check=True)
-  File "/home/pavel/anaconda3/envs/kaggriculture/lib/python3.12/subprocess.py", line 571, in run
-    raise CalledProcessError(retcode, process.args,
-subprocess.CalledProcessError: Command '['conda', 'run', '--no-capture-output', '-n', 'kaggriculture', '/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh', '/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/build/care_minimize', '/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/incumbent_zero_budget/1014', '1014', '/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/cow_triple_1014.txt', '0', '-', '/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/retained_incumbents/1014']' returned non-zero exit status 4.
-ERROR conda.cli.main_run:execute(127): `conda run python experiments/v6/sep07_compositions_v0/runs/animal_service_cost_sep08_001/check_incumbents.py` failed. (See above for error)

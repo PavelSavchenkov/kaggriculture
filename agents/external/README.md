@@ -59,4 +59,4 @@ not be linked into, copied into, or used as an opaque behavior block in an
 in-house candidate.
 
 The complete September 8 league, source attribution, parity evidence and continuation
-pipeline are in [the handoff](../../handoff/sep08_agent/readme.md).
+pipeline are in [the handoff](../../handoffs/sep08_agent/readme.md).

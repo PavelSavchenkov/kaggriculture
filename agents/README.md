@@ -34,7 +34,7 @@ The September 8 references are:
 - `inhouse/early_melon_b98_m1`: independent cold reference; still weak.
 - `external/teammate_shoprouter`: teammate's strongest retained benchmark.
 
-Read [the complete handoff](../handoff/sep08_agent/readme.md) for the 45-agent
+Read [the complete handoff](../handoffs/sep08_agent/readme.md) for the 45-agent
 league, lineage, exact gates, deployment rebuild and continuing optimization loop.
 Earlier Bohann and investment agents remain useful historical references.
 

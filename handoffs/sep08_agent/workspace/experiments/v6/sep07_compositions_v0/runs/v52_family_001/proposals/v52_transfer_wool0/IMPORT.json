@@ -1,0 +1,19 @@
+{
+  "parent": "late_value_s32_t0_r05",
+  "donor": "public_router_v52",
+  "source_lineage": "league/public_router_v52/IMPORT.json",
+  "source_data_sha256": "4bb154fdbc1d694011aed1bbef8c8f00cd920e545ef25769bd2a57beebe014ae",
+  "entry_observation_seed": 1005,
+  "entry_observation_seat": 0,
+  "entry_day": 6,
+  "wool_demand_minimum": 0,
+  "all_source_routes": false,
+  "changes": [
+    "Keep incumbent through day5",
+    "Match donor physical tiles from public own state",
+    "Restore missing day6 wheat and seed stock; sell excess fertilizer",
+    "Donor full suffix after entry; no later incumbent branches"
+  ],
+  "status": "Experimental; discovery and physical/output audits pending. Not promoted.",
+  "known_rating": "Unknown; no separate donor license supplied; user authorizes borrowing."
+}

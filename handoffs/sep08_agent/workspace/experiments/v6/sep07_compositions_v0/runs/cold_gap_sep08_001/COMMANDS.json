@@ -1,0 +1,29 @@
+[
+  [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "g++",
+    "-std=c++20",
+    "-O3",
+    "-DNDEBUG",
+    "-fno-exceptions",
+    "-fno-rtti",
+    "-I",
+    "/home/pavel/Programming/kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/cold_gap_sep08_001/diagnose.cpp",
+    "-o",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/cold_gap_sep08_001/diagnose"
+  ],
+  [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/cold_gap_sep08_001/diagnose",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/cold_gap_sep08_001/lifetimes.txt",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/cold_gap_sep08_001/scenarios.txt",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/cold_gap_sep08_001/MODEL.json"
+  ]
+]

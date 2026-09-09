@@ -1,3 +1,0 @@
-# cold_renewal_p1
-
-Local dated composition, herd mode1, crop renewal mode-1, at most0 reused tiles, 12 planned hands after day13. Exact lives/support in PLAN.json. Reuses unchanged original p362 compiler; no copied external schedule. Experimental, not promoted. Parent control p0 exactly reproduces original intended plan. Operational/strength evidence and all origins in ../../LINEAGE.json and run reports.

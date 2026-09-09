@@ -1,0 +1,24 @@
+mode=0 step=0 player=0 cash=3000 wheat=0 orders=4:0:32;6:0:32;4:0:13; player=1 cash=3000 wheat=0 orders=4:0:13;6:0:13;4:0:13;
+mode=0 step=1 player=0 cash=2603 wheat=13 orders=6:0:8;1:0:1;1:0:1;1:0:1;1:0:1;0:0:0;5:10:2;5:11:2; player=1 cash=2660 wheat=13 orders=6:0:13;4:0:5;1:0:0;1:0:0;1:0:0;1:0:0;1:0:0;5:10:2;5:11:2;
+mode=0 step=2 player=0 cash=1032 wheat=3 orders= player=1 cash=1084 wheat=5 orders=
+mode=0 endstep=23 cash=2 wheat=3 cowstock=0 livecows=2
+mode=0 endstep=47 cash=93 wheat=6 cowstock=0 livecows=2
+mode=0 endstep=71 cash=206 wheat=6 cowstock=0 livecows=3
+RESULT mode=0 cash=89498 rival=96638 hires=277 hire_cost=5081 hashes=13854658013219430639:1621874701355968221 produced=516,82,0,247,72,71,212,161,350,0,0,0,
+mode=1 step=0 player=0 cash=3000 wheat=0 orders=4:0:13;6:0:13;4:0:13; player=1 cash=3000 wheat=0 orders=4:0:13;6:0:13;4:0:13;
+mode=1 step=1 player=0 cash=2630 wheat=13 orders=6:0:13;4:0:5;1:0:0;1:0:0;1:0:0;1:0:0;1:0:0;5:10:2;5:11:2; player=1 cash=2630 wheat=13 orders=6:0:13;4:0:5;1:0:0;1:0:0;1:0:0;1:0:0;1:0:0;5:10:2;5:11:2;
+mode=1 step=2 player=0 cash=1000 wheat=5 orders= player=1 cash=1054 wheat=5 orders=
+mode=1 endstep=23 cash=0 wheat=5 cowstock=0 livecows=2
+mode=1 escaped step=47 cell=34 item=10 dry=
+mode=1 escaped step=47 cell=44 item=10 dry=
+mode=1 endstep=47 cash=11 wheat=7 cowstock=0 livecows=0
+mode=1 endstep=71 cash=232 wheat=7 cowstock=0 livecows=0
+RESULT mode=1 cash=72879 rival=149880 hires=275 hire_cost=5050 hashes=16126088591940600456:1621874701355968221 produced=508,82,0,143,72,71,80,87,188,0,0,0,
+mode=2 step=0 player=0 cash=3000 wheat=0 orders=4:0:13;6:0:13;4:0:13; player=1 cash=3000 wheat=0 orders=4:0:13;6:0:13;4:0:13;
+mode=2 step=1 player=0 cash=2630 wheat=13 orders=6:0:8;1:0:1;1:0:1;1:0:1;1:0:1;0:0:0;5:10:2;5:11:2; player=1 cash=2630 wheat=13 orders=6:0:13;4:0:5;1:0:0;1:0:0;1:0:0;1:0:0;1:0:0;5:10:2;5:11:2;
+mode=2 step=2 player=0 cash=1059 wheat=3 orders= player=1 cash=1054 wheat=5 orders=
+mode=2 endstep=23 cash=29 wheat=3 cowstock=0 livecows=2
+mode=2 endstep=47 cash=88 wheat=7 cowstock=0 livecows=2
+mode=2 endstep=71 cash=201 wheat=7 cowstock=0 livecows=3
+RESULT mode=2 cash=90050 rival=87126 hires=260 hire_cost=3714 hashes=3032329676972478738:1924816362269832544 produced=510,79,0,249,72,99,245,161,390,0,0,0,
+

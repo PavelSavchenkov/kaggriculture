@@ -1,0 +1,144 @@
+LEDGER_COLUMNS = ["step", "day", "player", "category", "item", "units", "cash"]
+
+
+def shed_before_market(prev_cell, action, player, board_size=10, shed_capacity=100,
+                       turns_per_day=24):
+    """Reconstruct the shed after unit actions, without changing the recorded replay.
+
+    Apply the farmer's action first, then each hand's action using the installed
+    engine. Shared tile changes matter: a hand can place an animal in a structure
+    built earlier in the same turn.
+    """
+    obs = prev_cell.get("observation") if isinstance(prev_cell, dict) else None
+    private = obs.get("private") if isinstance(obs, dict) else None
+    if not isinstance(private, dict) or any(
+            key not in private for key in ("shed", "seeds", "inventories")):
+        raise ValueError(f"Player {player}: replay is missing the full private state.")
+    farms = obs.get("farms") if isinstance(obs, dict) else None
+    farm = farms[player] if isinstance(farms, list) and player < len(farms) else None
+    if not isinstance(farm, dict) or "tiles" not in farm:
+        raise ValueError(
+            f"Player {player}: this step carries no tile grid. Unit actions are replayed "
+            "against the farm, so a replay trimmed to save space cannot be analyzed. "
+            "Re-download the full episode, or regenerate it from its seed - `info.seed` in "
+            "a downloaded replay, since `configuration.seed` is usually null - together with "
+            "the recorded actions and a matching engine version.")
+    farm = deepcopy(farm)
+    private = deepcopy(private)
+    action = action if isinstance(action, dict) else {}
+    hands = action.get("hands", [])
+    hands = hands if isinstance(hands, list) else []
+    actions = [action.get("farmer", ["PASS"]), *hands]
+
+    # The interpreter rejects all PLANT requests for a crop if seed demand
+    # exceeds the available stock, before applying any unit actions.
+    demand = defaultdict(int)
+    for act in actions:
+        if isinstance(act, list) and len(act) >= 2 and act[0] == "PLANT":
+            demand[act[1]] += 1
+    blocked = {crop for crop, count in demand.items()
+               if count > private["seeds"].get(crop, 0)}
+    for idx, act in enumerate(actions):
+        if (isinstance(act, list) and len(act) >= 2 and act[0] == "PLANT"
+                and act[1] in blocked):
+            act = ["PASS"]
+        _apply_unit_action(farm, private, idx, act, board_size, obs["day"],
+                           turns_per_day, shed_capacity)
+    return private["shed"]
+
+
+def _queues(cur, max_orders=10):
+    """Both players' market order lists for a turn, truncated the way the engine does."""
+    out = []
+    for p in (0, 1):
+        cell = cur[p] if isinstance(cur[p], dict) else {}
+        act = cell.get("action")
+        m = act.get("market") if isinstance(act, dict) else None
+        out.append(list(m)[:max_orders] if isinstance(m, list) else [])
+    return out
+
+
+def autopsy(ep):
+    """Per-turn attribution for both players, with an explicit accuracy report."""
+    steps = ep["steps"]
+    cfg = ep.get("configuration") or {}
+    params = resolve_market_params(cfg)
+    max_orders = int(cfg.get("maxMarketOrdersPerTurn") or 10)
+    capacity = int(cfg.get("shedCapacity") or 100)
+    turns_per_day = max(1, int(cfg.get("turnsPerDay", 24)))
+    board_size = int(cfg.get("boardSize") or 10)
+    hire_mult = cfg.get("farmHandCostMult")
+    hire_mult = 1 if hire_mult is None else hire_mult
+
+    rows = []
+    signed, absolute, worst = [0.0, 0.0], [0.0, 0.0], [0.0, 0.0]
+    mismatched = 0
+
+    for t in range(1, len(steps)):
+        prev, cur = steps[t - 1], steps[t]
+        o = prev[0]["observation"]
+        money_pre = [o["farms"][p]["money"] for p in (0, 1)]
+        money_obs = [cur[0]["observation"]["farms"][p]["money"] for p in (0, 1)]
+        hires = [o["farms"][p]["hires_today"] for p in (0, 1)]
+        quads = [len(o["farms"][p]["unlocked_quadrants"]) for p in (0, 1)]
+        queues = _queues(cur, max_orders)
+        sheds = [shed_before_market(
+            prev[p], (cur[p].get("action") if isinstance(cur[p], dict) else None),
+            p, board_size, capacity, turns_per_day) for p in (0, 1)]
+
+        led, _, after, _ = replay_market_turn(
+            queues, o["market"]["inventory"], money_pre, hires, quads, sheds,
+            params, capacity, hire_mult)
+
+        # Use the action day; the next observation may already be on the next day.
+        day = o["day"]
+        for p in (0, 1):
+            gap = money_obs[p] - after[p]
+            if abs(gap) > 1e-6:
+                mismatched += 1
+                signed[p] += gap
+                absolute[p] += abs(gap)
+                worst[p] = max(worst[p], abs(gap))
+            for cat, item, u, cash in led[p]:
+                rows.append({"step": t, "day": day, "player": p, "category": cat,
+                             "item": item, "units": u, "cash": cash})
+
+    report = {
+        "player_turns": 2 * (len(steps) - 1),
+        "mismatched_player_turns": mismatched,
+        "signed": signed,          # Opposite errors can cancel.
+        "absolute": absolute,      # Sum of absolute errors across turns.
+        "worst_turn": worst,
+    }
+    return pd.DataFrame(rows, columns=LEDGER_COLUMNS), report
+
+
+def analyse(ep):
+    """Collect the ledger, checks, and plotting inputs for one episode."""
+    cfg = ep.get("configuration") or {}
+    steps = ep["steps"]
+    turns_per_day = int(cfg.get("turnsPerDay") or 24)
+    ledger, report = autopsy(ep)
+    params = resolve_market_params(cfg)
+    return {
+        "episode": ep, "steps": steps, "config": cfg, "params": params,
+        "ledger": ledger, "report": report,
+        "turns_per_day": turns_per_day,
+        "last_day": (len(steps) - 1) / turns_per_day,
+        "start": [steps[0][0]["observation"]["farms"][p]["money"] for p in (0, 1)],
+        "final": [steps[-1][0]["observation"]["farms"][p]["money"] for p in (0, 1)],
+    }
+
+
+A = analyse(episode)
+report = A["report"]
+
+print(f"{len(A['ledger']):,} reconstructed ledger entries over {report['player_turns']:,} player-turns")
+for p in (0, 1):
+    print(f"  player {p}: signed ${report['signed'][p]:>10,.2f}"
+          f"   absolute ${report['absolute'][p]:>10,.2f}"
+          f"   worst single turn ${report['worst_turn'][p]:>8,.2f}")
+print(f"  player-turns that did not reconcile: {report['mismatched_player_turns']}")
+
+assert report["mismatched_player_turns"] == 0, (
+    "some turns did not reconcile - read the report above before trusting the P&L")

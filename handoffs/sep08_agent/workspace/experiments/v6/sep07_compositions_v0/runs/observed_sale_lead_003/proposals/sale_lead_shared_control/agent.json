@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "name": "sale_lead_shared_control",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::sale_lead_shared_control::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../parent_source/league/top_replay_library/source/agent.cpp",
+    "../../parent_source/league/public_router/source/agent.cpp"
+  ]
+}

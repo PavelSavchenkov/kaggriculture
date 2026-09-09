@@ -1,0 +1,77 @@
+[
+  {
+    "name": "one_fert",
+    "command": [
+      "conda",
+      "run",
+      "--no-capture-output",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/build/compile_wheat",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/one_fert",
+      "1000",
+      "22",
+      "2"
+    ],
+    "returncode": 0,
+    "started_utc": "2026-09-07T15:21:17.852845+00:00",
+    "finished_utc": "2026-09-07T15:21:25.776981+00:00"
+  },
+  {
+    "name": "one_plain",
+    "command": [
+      "conda",
+      "run",
+      "--no-capture-output",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/build/compile_wheat",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/one_plain",
+      "1000",
+      "22",
+      "2",
+      "--no-fertilizer"
+    ],
+    "returncode": 0,
+    "started_utc": "2026-09-07T15:21:17.853176+00:00",
+    "finished_utc": "2026-09-07T15:21:23.096981+00:00"
+  },
+  {
+    "name": "three_fert",
+    "command": [
+      "conda",
+      "run",
+      "--no-capture-output",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/build/compile_wheat",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/three_fert",
+      "1000",
+      "21,22,31",
+      "2"
+    ],
+    "returncode": 0,
+    "started_utc": "2026-09-07T15:21:23.097061+00:00",
+    "finished_utc": "2026-09-07T15:21:41.815040+00:00"
+  },
+  {
+    "name": "three_plain",
+    "command": [
+      "conda",
+      "run",
+      "--no-capture-output",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/build/compile_wheat",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/productive_wheat_rotation_001/three_plain",
+      "1000",
+      "21,22,31",
+      "2",
+      "--no-fertilizer"
+    ],
+    "returncode": 0,
+    "started_utc": "2026-09-07T15:21:25.777067+00:00",
+    "finished_utc": "2026-09-07T15:21:34.841578+00:00"
+  }
+]
+

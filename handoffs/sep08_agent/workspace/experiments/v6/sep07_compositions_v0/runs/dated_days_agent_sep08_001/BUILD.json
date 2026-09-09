@@ -1,0 +1,21 @@
+{
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "python",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+    "--agents",
+    "dated_days_control",
+    "dated_days_labor",
+    "dated_days_feed",
+    "dated_days_combined",
+    "dated_expansion_p362",
+    "public_router",
+    "observed_sale_lead_start_216",
+    "dated_expansion_p362",
+    "pass"
+  ],
+  "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/8a91f32b8239a2fcb50f/arena"
+}

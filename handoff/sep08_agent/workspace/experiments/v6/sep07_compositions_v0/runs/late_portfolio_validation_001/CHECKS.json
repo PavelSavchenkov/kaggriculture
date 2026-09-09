@@ -1,9 +1,0 @@
-{
-  "games": 896,
-  "generic_pair_debug_thread_all_records_equal": true,
-  "full_debug_self_play_and_pass": true,
-  "native_and_custom_shop_modes": true,
-  "instance_state": "One base policy and selection state per instance. Shared calendars are immutable; no mutable global episode state.",
-  "observation": "Selector reads day12 shops and day13 own/public state; future shops sampled independently. No seed or hidden state.",
-  "node_budget_deterministic": true
-}

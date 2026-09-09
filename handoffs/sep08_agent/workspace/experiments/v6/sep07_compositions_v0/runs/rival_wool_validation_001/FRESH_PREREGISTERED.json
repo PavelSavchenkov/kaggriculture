@@ -1,0 +1,115 @@
+{
+  "created_utc": "2026-09-07T22:05:12.967185+00:00",
+  "candidate": "rival_wool_context_v1",
+  "baseline": "wool_family_context_v2",
+  "seed_start": 1910000,
+  "seeds": 512,
+  "seat_mode": "both",
+  "opponents": [
+    "animal_adaptive_r1_c0_b0",
+    "binghua_116",
+    "bohann_opening_v1",
+    "crop_mix_t2_wheat",
+    "crop_rotation_t2_berry",
+    "crop_value_m2_t4",
+    "investment_context_guarded_001_best",
+    "john_131",
+    "junghoon_wool_sales",
+    "king_rc4",
+    "late_goose_wheat_context",
+    "late_value_s32_t0_r05",
+    "opening_q32_b13_v1",
+    "opening_router_v4",
+    "public_capacity_router",
+    "public_router",
+    "public_router_v5",
+    "public_router_v52",
+    "public_sixday",
+    "shop_herd_guarded_001_best",
+    "shop_herd_s6_m3_g1",
+    "teammate_shoprouter",
+    "ticket_p116_t9_i9",
+    "wheat_one_fert",
+    "wool_family_context_v1",
+    "wool_family_context_v2"
+  ],
+  "grouping": {
+    "prior_versions": [
+      "shop_herd_guarded_001_best",
+      "shop_herd_s6_m3_g1",
+      "opening_router_v4",
+      "animal_adaptive_r1_c0_b0",
+      "investment_context_guarded_001_best",
+      "crop_value_m2_t4",
+      "crop_rotation_t2_berry",
+      "wheat_one_fert",
+      "crop_mix_t2_wheat",
+      "bohann_opening_v1"
+    ],
+    "teammate": [
+      "teammate_shoprouter"
+    ],
+    "public_controllers": [
+      "king_rc4",
+      "public_router",
+      "public_capacity_router",
+      "public_sixday",
+      "public_router_v5",
+      "public_router_v52"
+    ],
+    "top_replays": [
+      "binghua_116",
+      "junghoon_wool_sales",
+      "john_131",
+      "ticket_p116_t9_i9"
+    ]
+  },
+  "historical_grouping": {
+    "prior_versions": [
+      "shop_herd_guarded_001_best",
+      "shop_herd_s6_m3_g1",
+      "opening_router_v4"
+    ],
+    "teammate": [
+      "teammate_shoprouter"
+    ],
+    "public_controllers": [
+      "king_rc4",
+      "public_router",
+      "public_capacity_router",
+      "public_sixday"
+    ],
+    "top_replays": [
+      "binghua_116",
+      "junghoon_wool_sales",
+      "john_131",
+      "ticket_p116_t9_i9"
+    ]
+  },
+  "gates": {
+    "current_group_utility_gain_95_lower": 0,
+    "historical_group_utility_gain_95_lower": -0.0025,
+    "minimum_individual_utility_gain": -0.02,
+    "minimum_paired_mean_margin_gain": 0,
+    "direct_parent_utility": 0.5,
+    "direct_parent_mean_margin": 0
+  },
+  "scope": "Observed-state1024games; bridge512games/255activatedexacth146physical;12288diagnosisgames separate delayed execution from expanded opponent branch.",
+  "extra_requirement": "Targeted response can tie the parent exactly while strictly improving a different opponent. Preregister exact direct-parent nonregression plus positive grouped confidence and at least one strict opponent gain. No relaxation of the already passed v2 gates; this is a distinct frozen response-extension protocol before fresh testing.",
+  "candidate_files_sha256": {
+    "runs/rival_wool_context_001/source/policy.hpp": "bde42da990dc72ae3bdfbb57c4e25098951172d874503aa8c1142f82ab7e4030",
+    "runs/rival_wool_context_001/proposals/rival_wool_context_v1/IMPORT.json": "cd6b0c68117d18c61c3a55a50fc81570f082aab5a8ecf5fff88b90828a070b8a",
+    "runs/rival_wool_context_001/proposals/rival_wool_context_v1/agent.json": "b34d35e1fcb9c617a40bc1f09cc698156e280a93fecc89519f9964acc9e43f5b",
+    "runs/rival_wool_context_001/proposals/rival_wool_context_v1/README.md": "e453b2572fce8492c76d125a93c12a258534353e3dae1cf34a1d6227826c2049",
+    "runs/rival_wool_context_001/proposals/rival_wool_context_v1/source/agent.hpp": "a947dfcf33bc244bf040c03b3d13408e77c7607aec5ad5307c7bc154c29eaea8",
+    "runs/rival_wool_context_001/proposals/rival_wool_context_v1/source/agent.cpp": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+  },
+  "targeted_response_gates": {
+    "direct_parent_nonnegative_every_game": true,
+    "at_least_one_strict_opponent_gain": true,
+    "individual_utility_regression_limit": 0,
+    "all_paired_mean_margins_nonnegative": true,
+    "current_group_positive_95pct": true,
+    "historical_group_noninferiority": -0.0025
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "selected_utc": "2026-09-08T07:27:03.124678+00:00",
+  "selected": "service_bank_p362_m2",
+  "path": "runs/day_service_bank_sep08_001/proposals/service_bank_p362_m2",
+  "parent": "day_program_p362_m3",
+  "scope": "Best validated continuation of this p362 cold farm, not a new global reference or general compiler replacement.",
+  "evidence": "runs/day_service_bank_sep08_001/FRESH_ANALYSIS.json",
+  "fresh_games": 2560,
+  "discovery_games": 640,
+  "exact_controls": 160,
+  "coverage_games": 640,
+  "operational_games": 64,
+  "mean_cash_gain": 614.40703125,
+  "cash_gain95": [
+    410.76072265625004,
+    822.2745117187501
+  ],
+  "current_reference_unchanged": "empty_sale_slots_m2"
+}

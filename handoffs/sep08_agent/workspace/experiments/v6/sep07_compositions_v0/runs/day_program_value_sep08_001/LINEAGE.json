@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-09-08T05:57:54.207638+00:00",
+  "variants": [
+    "day_value_p355_m0",
+    "day_value_p355_m1",
+    "day_value_p355_m2",
+    "day_value_p355_m3",
+    "day_value_p362_m0",
+    "day_value_p362_m1",
+    "day_value_p362_m2",
+    "day_value_p362_m3"
+  ],
+  "source": "Reuse the same twelve locally solved day programs and verified observation model. New local C++ continuation comparison; no external policy code added.",
+  "reason": "Physical reuse saved hires but sometimes lost later animal output. Compare a program with the unchanged compiler using 1-day, 3-day and remaining-season own continuations.",
+  "discovery": {
+    "seed_start": 1000,
+    "seeds": 8,
+    "seat_mode": "both",
+    "opponents": [
+      "public_router",
+      "observed_sale_lead_start_216",
+      "matching_original_compiler",
+      "pass"
+    ]
+  },
+  "limits": "Only two cold farms/days14..16. Forecast ignores rival actions, future shops and random weeds; shorter horizons omit unfinished biology. Must measure ranking and full-game outcomes, not infer strength from forecast.",
+  "source_hashes": {
+    "runs/day_program_value_sep08_001/prepare.py": "0899c38f667fdf9b3ca7ec0cab3e1dfeb9a3bd03fd525817491c027d74855cdc",
+    "runs/day_program_value_sep08_001/policy.hpp": "2e666676b15e9dc86fd1b1b502ba44d6d7ca4be476ce01e8548a1c11bb0ff4b0",
+    "runs/day_programs_sep08_001/model.hpp": "2839019cbf61b79cc57498570e3fbe5b9552b3e18dea18148814ca405f5e39b8",
+    "runs/day_programs_sep08_001/program.hpp": "599dda394eec0befc40b8033386d88cd5289f64bb8c7b642a362ebb2daea00a5",
+    "runs/day_programs_sep08_001/days.hpp": "6b124619a9fcbf6fb3f21524719460050b5369f922aaee264c27b93165fa4048",
+    "runs/joint_day_routes_sep08_001/compiler/source/agent.cpp": "097fcb1027623568d6d2f1f1072cadbf40b1309090b5d466ab7b6021ae06c99f",
+    "runs/joint_day_routes_sep08_001/compiler/source/agent.hpp": "bb3c0cb3bbfbeb23e5d11434825fd816c38cc6609b020f5163edcebe054c81aa"
+  }
+}

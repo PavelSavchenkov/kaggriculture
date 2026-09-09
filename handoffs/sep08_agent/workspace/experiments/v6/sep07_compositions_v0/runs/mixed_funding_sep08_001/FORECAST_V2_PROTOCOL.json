@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-09-08T16:59:44.260108+00:00",
+  "commands": [
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "cmake",
+      "-S",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/mixed_funding_sep08_001",
+      "-B",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/mixed_funding_sep08_001/build"
+    ],
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "cmake",
+      "--build",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/mixed_funding_sep08_001/build",
+      "--target",
+      "forecast_v2",
+      "-j",
+      "2"
+    ],
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/mixed_funding_sep08_001/build/forecast_v2",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/mixed_funding_sep08_001/FORECAST_V2.csv"
+    ]
+  ],
+  "source_sha256": {
+    "runs/mixed_funding_sep08_001/source/forecast.cpp": "a61444dc0de0e1d66581b7150f7c6c56544a344f6918adfbacde1249d07f6be0",
+    "runs/mixed_funding_sep08_001/source/forecast_v2.cpp": "d0ce5412558383f0385ab26daee991c084bf8ab8c99331072b12706a7451aa68",
+    "runs/mixed_funding_sep08_001/season_30s/days/9/problem.json": "1f6c44d379da87ed33b5e9ddcc47a576748f3e9a2f1668f98280a83c5b54daa5",
+    "include/biology.hpp": "82225498387721be96a6fc0da45323086faa9f1057ff3a5607b909b23876bb23"
+  },
+  "scope": "Offline correction of forecast input accounting. Include active crops removed before their original harvest; retain explicitly planned entry salvage, treat existing seed cost as sunk, and stop fertilizer collection on day29 like the compiler. Released fertilizer is reported separately from production."
+}

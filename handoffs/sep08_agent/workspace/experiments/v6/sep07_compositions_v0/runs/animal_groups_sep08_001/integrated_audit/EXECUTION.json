@@ -1,0 +1,131 @@
+{
+  "cases": [
+    {
+      "name": "sheep_3",
+      "seed": 1016,
+      "extra_hires": 1,
+      "command": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/build/final_audit",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/sheep_3",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/sheep_3/days/29/raw_schedule_h1.txt",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/sheep_3/days/29/problem_h1.json",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/sheep_3/days/29/orders_h1.txt",
+        "1016",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_audit/sheep_3"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "sheep_12",
+      "seed": 1016,
+      "extra_hires": 1,
+      "command": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/build/final_audit",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/sheep_12",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/sheep_12/days/29/raw_schedule_h1.txt",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/sheep_12/days/29/problem_h1.json",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/sheep_12/days/29/orders_h1.txt",
+        "1016",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_audit/sheep_12"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "sheep_13",
+      "seed": 1016,
+      "extra_hires": 0,
+      "command": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/build/final_audit",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/sheep_13",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/sheep_13/days/29/raw_schedule_h0.txt",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/sheep_13/days/29/problem_h0.json",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/sheep_13/days/29/orders_h0.txt",
+        "1016",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_audit/sheep_13"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "sheep_triple",
+      "seed": 1016,
+      "extra_hires": 1,
+      "command": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/build/final_audit",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/sheep_triple",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/sheep_triple/days/29/raw_schedule_h1.txt",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/sheep_triple/days/29/problem_h1.json",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/sheep_triple/days/29/orders_h1.txt",
+        "1016",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_audit/sheep_triple"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "cow_9",
+      "seed": 1014,
+      "extra_hires": 0,
+      "command": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/build/final_audit",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/cow_9",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/cow_9/days/29/raw_schedule_h0.txt",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/cow_9/days/29/problem_h0.json",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/cow_9/days/29/orders_h0.txt",
+        "1014",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_audit/cow_9"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "cow_triple",
+      "seed": 1014,
+      "extra_hires": 1,
+      "command": [
+        "conda",
+        "run",
+        "--no-capture-output",
+        "-n",
+        "kaggriculture",
+        "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/build/final_audit",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/cow_triple",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/cow_triple/days/29/raw_schedule_h1.txt",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/cow_triple/days/29/problem_h1.json",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_30s/cow_triple/days/29/orders_h1.txt",
+        "1014",
+        "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/integrated_audit/cow_triple"
+      ],
+      "returncode": 0
+    }
+  ],
+  "inputs_unchanged": true
+}

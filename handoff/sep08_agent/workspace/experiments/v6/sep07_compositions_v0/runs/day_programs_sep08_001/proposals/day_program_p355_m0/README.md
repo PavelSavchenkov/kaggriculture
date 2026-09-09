@@ -1,3 +1,0 @@
-# day_program_p355_m0
-
-Complete cold-farm controller with checked day14..16 programs, mode0. Mode0 original control; mode1 exact source tile/stock guard; mode2 exact tile state with current-stock forward replay; mode3 tile kind/species guard plus replay and redundant-action skipping. Models assume rival PASS and no random weeds, using only observations and public config. Actual unit counts and required physical actions are checked each turn; abandon a program to the underlying compiler if they fail. Market changes can still alter financing and full-game strength. All policy/model/counter state is per-instance. See ../../LINEAGE.json. Experimental, not promoted.

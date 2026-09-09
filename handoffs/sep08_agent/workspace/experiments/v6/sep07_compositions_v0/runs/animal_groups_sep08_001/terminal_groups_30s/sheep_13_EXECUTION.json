@@ -1,0 +1,48 @@
+{
+  "name": "sheep_13",
+  "seed": 1016,
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/build/compile_v5",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/terminal_groups_30s/sheep_13",
+    "1016",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/later_groups_30s/sheep_13.txt",
+    "30",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/later_groups_30s/sheep_13"
+  ],
+  "estimate": {
+    "seed": "1016",
+    "id": "14648",
+    "count": "1",
+    "entry_day": "20",
+    "rotations": "13:20:11",
+    "animal_cost": "500",
+    "removed_animals": "0",
+    "seeds_saved": "20",
+    "field_operations_delta": "17",
+    "source_visit_deficit": "18",
+    "mean_own_gain": "1353.31",
+    "mean_margin_gain": "1381.31",
+    "margin_sd": "39.5857",
+    "risk_score": "1361.52",
+    "estimate_seconds": "3.9171e-05"
+  },
+  "prefix_files": {
+    "later_groups_30s/sheep_13/days/20/actions.txt": "b752472f64fcfdf55f9c891a7f4f9d1067c6c21291ef581b8f57843854884613",
+    "later_groups_30s/sheep_13/days/21/actions.txt": "c50930edd0a77498ec02379206a7635c9837e807a1c51c2823f0f9283959f12d",
+    "later_groups_30s/sheep_13/days/22/actions.txt": "1e165bed0eca6ad9cf4c60ca6a88ef4355846ad3d4178ceda5f8d19c9588c002",
+    "later_groups_30s/sheep_13/days/23/actions.txt": "cd8a1f7b98d12b3863e7a354e5f87c826e8388f26cdb13d83cc0dfb4fddf1b0a",
+    "later_groups_30s/sheep_13/days/24/actions.txt": "bc429301299443a08550b335be367719bb192a6b0a5807870469d5eb4e8e529c",
+    "later_groups_30s/sheep_13/days/25/actions.txt": "bf2315531a45cec8db5251161bdcb4a0c85d8c76ccc8376e78660ebd9608ec89",
+    "later_groups_30s/sheep_13/days/26/actions.txt": "68cb3d16c9034623701de248884918f8d22d4aa20869eece666ee42fbdc8bdd9",
+    "later_groups_30s/sheep_13/days/27/actions.txt": "55efa5b3caeea75bed28ac39e9a6b2988bebbb26b83ef50085a15818f8537419",
+    "later_groups_30s/sheep_13/days/28/actions.txt": "604a615dcb2266bf0f796b3485a95bd4410f58269281466f7d477086c358c358"
+  },
+  "returncode": 4,
+  "seconds": 91.40709749504458
+}

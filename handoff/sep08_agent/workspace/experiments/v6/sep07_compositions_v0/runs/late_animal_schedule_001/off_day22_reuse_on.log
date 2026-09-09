@@ -1,9 +1,0 @@
-hour 0: unexpected market order
-hour 1: unexpected market order
-hour 1: unexpected market order
-hour 17: shed availability missing item=3 required=3 present=2
-hour 17: unexpected market order
-required_outcomes[3] metric=12 subject=3 tile=-1 through_hour=-1 value=16 bounds=[13,13]
-end_shed was not reached
-
-ERROR conda.cli.main_run:execute(127): `conda run day_solver/with_runtime.sh experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/build/reuse experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/goose_c31_d13_off_002/days/22/problem_h0.json experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/goose_c31_d13_off_002/days/22/actions.txt experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/off_day22_reuse_on 0 experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/on_day22_fixed30/actions.txt` failed. (See above for error)

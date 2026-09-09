@@ -1,0 +1,24 @@
+{
+  "name": "off_day27_fixed30",
+  "leaf": "off",
+  "day": 27,
+  "kind": "unchanged_contract",
+  "problem": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/goose_c31_d13_off_002/days/27/problem_h0.json",
+  "actions": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/goose_c31_d13_off_002/days/27/actions.txt",
+  "signature": "b10e976b67da9cc104969dad1c4d88b74c12018aa65c3487e59163a68acb4b80",
+  "alias_of": null,
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/build/retry",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/goose_c31_d13_off_002/days/27/problem_h0.json",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/goose_c31_d13_off_002/days/27/actions.txt",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/off_day27_fixed30",
+    "30"
+  ],
+  "returncode": 0,
+  "completed_utc": "2026-09-07T19:03:23.303728+00:00"
+}

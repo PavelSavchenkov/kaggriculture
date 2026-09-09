@@ -1,7 +1,0 @@
-Traceback (most recent call last):
-  File "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/analyze_replays.py", line 778, in <module>
-    main()
-  File "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/analyze_replays.py", line 538, in main
-    raise RuntimeError(f"cannot find {team} in episode {episode}: {names}")
-RuntimeError: cannot find Ad Space Available in episode 106699155: ['get some fries', 'My second life']
-ERROR conda.cli.main_run:execute(127): `conda run python /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/analyze_replays.py --research-dir /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/research/refresh_sep08_0806` failed. (See above for error)

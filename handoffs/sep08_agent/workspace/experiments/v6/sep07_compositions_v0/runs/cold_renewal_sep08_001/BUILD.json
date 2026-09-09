@@ -1,0 +1,27 @@
+{
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "python",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+    "--agents",
+    "cold_renewal_p0",
+    "cold_renewal_p1",
+    "cold_renewal_p2",
+    "cold_renewal_p3",
+    "cold_renewal_p14",
+    "cold_renewal_p26",
+    "cold_renewal_p38",
+    "cold_renewal_p50",
+    "cold_renewal_p98",
+    "cold_renewal_p146",
+    "cold_renewal_p157",
+    "joint_routes_p362_m0",
+    "empty_sale_slots_m2",
+    "public_router",
+    "service_bank_p362_m2"
+  ],
+  "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/1faf95c11c4a3d5d9cd8/arena"
+}

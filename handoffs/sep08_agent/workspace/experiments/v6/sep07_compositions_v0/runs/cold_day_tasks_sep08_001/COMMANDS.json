@@ -1,0 +1,36 @@
+[
+  [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "cmake",
+    "-S",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/cold_day_tasks_sep08_001",
+    "-B",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/cold_day_tasks_sep08_001/build",
+    "-DCMAKE_BUILD_TYPE=Release"
+  ],
+  [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "cmake",
+    "--build",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/cold_day_tasks_sep08_001/build",
+    "--target",
+    "compile_day",
+    "-j2"
+  ],
+  [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/cold_day_tasks_sep08_001/build/compile_day",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/cold_day_tasks_sep08_001/compiled",
+    "20"
+  ]
+]

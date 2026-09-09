@@ -1,0 +1,125 @@
+{
+  "created_utc": "2026-09-08T04:00:04.966117+00:00",
+  "seed_start": 2004000,
+  "seeds": 128,
+  "seat_mode": "both",
+  "jobs": [
+    [
+      "empty_sale_slots_m2",
+      "observed_sale_lead_start_216",
+      true
+    ],
+    [
+      "observed_sale_lead_start_216",
+      "observed_sale_lead_start_216",
+      true
+    ],
+    [
+      "empty_sale_slots_m2",
+      "investment_context_guarded_001_best",
+      true
+    ],
+    [
+      "observed_sale_lead_start_216",
+      "investment_context_guarded_001_best",
+      true
+    ],
+    [
+      "empty_sale_slots_m2",
+      "teammate_shoprouter",
+      true
+    ],
+    [
+      "observed_sale_lead_start_216",
+      "teammate_shoprouter",
+      true
+    ],
+    [
+      "empty_sale_slots_m2",
+      "king_rc4",
+      true
+    ],
+    [
+      "observed_sale_lead_start_216",
+      "king_rc4",
+      true
+    ],
+    [
+      "empty_sale_slots_m2",
+      "public_router",
+      true
+    ],
+    [
+      "observed_sale_lead_start_216",
+      "public_router",
+      true
+    ],
+    [
+      "empty_sale_slots_m2",
+      "public_router_v5",
+      true
+    ],
+    [
+      "observed_sale_lead_start_216",
+      "public_router_v5",
+      true
+    ],
+    [
+      "empty_sale_slots_m2",
+      "public_router_v52",
+      true
+    ],
+    [
+      "observed_sale_lead_start_216",
+      "public_router_v52",
+      true
+    ],
+    [
+      "empty_sale_slots_m2",
+      "junghoon_wool_sales",
+      true
+    ],
+    [
+      "observed_sale_lead_start_216",
+      "junghoon_wool_sales",
+      true
+    ],
+    [
+      "empty_sale_slots_m2",
+      "john_131",
+      true
+    ],
+    [
+      "observed_sale_lead_start_216",
+      "john_131",
+      true
+    ],
+    [
+      "empty_sale_slots_m2",
+      "ahmed_v23",
+      true
+    ],
+    [
+      "observed_sale_lead_start_216",
+      "ahmed_v23",
+      true
+    ],
+    [
+      "empty_sale_slots_m2",
+      "pass",
+      false
+    ],
+    [
+      "observed_sale_lead_start_216",
+      "pass",
+      false
+    ]
+  ],
+  "scope": "Frozen candidate native-stream and PASS audit; no fitting.",
+  "gates": {
+    "direct_parent_paired_margin_nonnegative_every_game": true,
+    "minimum_mean_margin_gain": 0,
+    "minimum_individual_utility_gain": 0,
+    "minimum_pass_J_gain": 0
+  }
+}

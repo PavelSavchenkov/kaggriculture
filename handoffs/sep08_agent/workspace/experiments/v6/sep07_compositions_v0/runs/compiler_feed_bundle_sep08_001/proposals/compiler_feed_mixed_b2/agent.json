@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "compiler_feed_mixed_b2",
+  "header": "source/agent.hpp",
+  "type": "compositions::compiler_feed_mixed_b2::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../compiler/source/agent.cpp"
+  ]
+}

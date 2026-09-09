@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "farm_signal_v52_m0",
+  "header": "source/agent.hpp",
+  "type": "compositions::farm_signal_v52_m0::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../../../league/public_router_v52/source/agent.cpp"
+  ]
+}

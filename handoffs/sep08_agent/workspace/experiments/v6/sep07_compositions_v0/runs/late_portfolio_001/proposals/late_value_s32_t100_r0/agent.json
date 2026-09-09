@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "name": "late_value_s32_t100_r0",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::late_value_s32_t100_r0::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../../../league/top_replay_library/source/agent.cpp",
+    "../../../../league/public_router/source/agent.cpp"
+  ]
+}

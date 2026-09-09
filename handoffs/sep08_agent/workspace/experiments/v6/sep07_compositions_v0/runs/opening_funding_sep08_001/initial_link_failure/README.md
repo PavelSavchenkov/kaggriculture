@@ -1,0 +1,1 @@
+Initial pair/debug link lacked the frozen parent translation units in wrapper manifests. Generic linked because the parent was also an opponent. Corrected each package to carry the entire parent source list; no C++ policy logic changed.

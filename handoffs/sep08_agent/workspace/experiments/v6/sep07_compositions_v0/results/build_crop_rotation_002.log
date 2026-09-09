@@ -1,0 +1,27 @@
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/src/compile_crop_rotation.cpp: In function ‘kag::Tile tile_endpoint(const kag::Sim&, int, std::vector<day_solver::TileWorkAction>&)’:
+/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/src/compile_crop_rotation.cpp:47:23: error: ‘void kag::Sim::apply_unit(kag::Farm&, int, const kag::UnitAction&, int)’ is private within this context
+   47 |         sim.apply_unit(farm,0,{job.op,uint8_t(std::max(0,int(job.arg))),1},sim.st.day);
+      |         ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/pavel/Programming/kaggriculture/agents/common/api/observation.hpp:6,
+                 from /home/pavel/Programming/kaggriculture/agents/common/api/agent_api.hpp:9,
+                 from /home/pavel/Programming/kaggriculture/agents/common/runtime/observation_builder.hpp:5,
+                 from /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/src/../include/evaluation.hpp:13,
+                 from /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/src/../include/day_contract.hpp:2,
+                 from /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/src/../include/day_compile_helpers.hpp:2,
+                 from /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/src/../include/crop_source_season.hpp:3,
+                 from /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/src/compile_crop_rotation.cpp:1:
+/home/pavel/Programming/kaggriculture/fast_game_engine/sim.hpp:924:10: note: declared private here
+  924 |     void apply_unit(Farm& f, int idx, const UnitAction& u, int day) {
+      |          ^~~~~~~~~~
+gmake[3]: *** [CMakeFiles/compile_crop_rotation.dir/build.make:76: CMakeFiles/compile_crop_rotation.dir/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/src/compile_crop_rotation.cpp.o] Error 1
+gmake[3]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/Makefile2:325: CMakeFiles/compile_crop_rotation.dir/all] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:332: CMakeFiles/compile_crop_rotation.dir/rule] Error 2
+gmake: *** [Makefile:228: compile_crop_rotation] Error 2
+
+ERROR conda.cli.main_run:execute(127): `conda run cmake --build experiments/v6/sep07_compositions_v0/build/day_scheduler --target compile_crop_rotation -j 3` failed. (See above for error)
+[ 42%] Built target day_scheduler
+[ 57%] Building CXX object CMakeFiles/compile_crop_rotation.dir/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/src/compile_crop_rotation.cpp.o
+[ 71%] Building CXX object CMakeFiles/compile_crop_rotation.dir/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.cpp.o
+[ 85%] Building CXX object CMakeFiles/compile_crop_rotation.dir/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/public_router/source/agent.cpp.o
+

@@ -1,0 +1,23 @@
+{
+  "name": "cow_h0_m0",
+  "problem": "funded_cow_pair_30s/days/10/problem_h0.json",
+  "problem_sha256": "b9364e3d5a3751c6ad21b58cefa84632129c517b7c1277b5738d0749f339efda",
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/build/hinted_solve",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/funded_cow_pair_30s/days/10/problem_h0.json",
+    "1000",
+    "10",
+    "30",
+    "4",
+    "0",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_groups_sep08_001/hint_comparison_30s/cow_h0_m0"
+  ],
+  "returncode": 0,
+  "seconds": 31.454520301078446
+}

@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "wp_c80",
+  "header": "source/agent.hpp",
+  "type": "compositions::wp_c80::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../../../league/top_replay_library/source/agent.cpp"
+  ]
+}

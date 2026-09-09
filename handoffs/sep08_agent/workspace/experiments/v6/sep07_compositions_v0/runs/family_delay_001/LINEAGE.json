@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-09-07T21:50:10.746445+00:00",
+  "source": "runs/v52_family_001/economic_probe_v2.cpp",
+  "changes": "Observe both public farms, market and rival physical state at144..150; no policy change. 64-bit hash stored as two exact32-bit fields.",
+  "question": "Can the first public hour of day6 distinguish rival continuations before the first new animal purchase?",
+  "scope": "Diagnosis only. Existing full-game baseline records can verify observation instrumentation.",
+  "hypothesis": "At h145 infer rival net wheat flow from public inventory change minus known town/shop consumption. Combine with public workforce, without reading rival inventory or agent identity.",
+  "bridge": "Current seven-hire opening plus delayed source purchases. Commute farmer north/west; seventh hire walks east to original southeast spawn. Remove one h1 hire, preserving next spawn. Expected own physical state matches original transfer at h146; verification pending.",
+  "sources_sha256": {
+    "league/public_router_v52/source/data.inc": "4bb154fdbc1d694011aed1bbef8c8f00cd920e545ef25769bd2a57beebe014ae",
+    "league/top_replay_library/source/tapes.inc": "a90688675433a879056e29e50f1795d75edfd27b5fc07781b9e4f0472ca6c94e",
+    "runs/v52_family_001/source/transfer.hpp": "0c9b8b03d6e64ad5282e990de4499dd161d16ebcc4a719293d8ee9499258d743",
+    "runs/v52_family_001/source/improved.hpp": "07d5caca6d30dcd7e25abec2f34b1ca5f5cb1dfd546415a2305bd35be506c819"
+  },
+  "limitation": "Day solver only accepts day-start states and no prefix locks. This bridge is a locally derived two-hour schedule transformation, not a general partial-day solver."
+}

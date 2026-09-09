@@ -1,0 +1,24 @@
+{
+  "ref": "souvikdbiswas/kaggriculture-v5-hybrid-agent",
+  "title": "Kaggriculture V5 Hybrid Agent",
+  "author": "Souvik_D_Biswas",
+  "lastRunTime": "2026-09-07 17:59:01.213000",
+  "totalVotes": "0",
+  "retrieved_utc": "2026-09-07T19:12:55.423823+00:00",
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "kaggle",
+    "kernels",
+    "pull",
+    "souvikdbiswas/kaggriculture-v5-hybrid-agent",
+    "-p",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/research/refresh_1902/notebooks/souvikdbiswas/kaggriculture-v5-hybrid-agent",
+    "-m"
+  ],
+  "code_bytes": 150121,
+  "code_sha256": "931f20ed3268e9159b8c9d17b9b465a79341a6d277c223a6db4fd0ea5a9f2f1e",
+  "scope": "Downloaded and extracted as text only. No notebook code executed."
+}

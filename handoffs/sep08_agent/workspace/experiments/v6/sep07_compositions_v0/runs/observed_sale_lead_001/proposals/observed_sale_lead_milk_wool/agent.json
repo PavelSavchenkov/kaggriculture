@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "name": "observed_sale_lead_milk_wool",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::observed_sale_lead_milk_wool::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../../../league/top_replay_library/source/agent.cpp",
+    "../../../../league/public_router/source/agent.cpp"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "run": "crop_rotation_002",
+      "predicted": [
+        -14,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "matched_activated_games": 46,
+      "unchanged_games": 18
+    },
+    {
+      "run": "crop_rotation_003",
+      "predicted": [
+        -36,
+        -3,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "matched_activated_games": 46,
+      "unchanged_games": 18
+    }
+  ],
+  "scope": "Frozen prior full-game output, all9products; no labor/price accuracy claim"
+}

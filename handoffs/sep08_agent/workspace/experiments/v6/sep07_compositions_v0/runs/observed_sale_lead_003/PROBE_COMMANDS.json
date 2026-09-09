@@ -1,0 +1,34 @@
+[
+  [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "g++",
+    "-std=c++20",
+    "-O3",
+    "-march=native",
+    "-DNDEBUG",
+    "-fno-exceptions",
+    "-fno-rtti",
+    "-flto",
+    "-I",
+    "/home/pavel/Programming/kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/forecast_probe.cpp",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/public_router_v52/source/agent.cpp",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/league/top_replay_library/source/agent.cpp",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/parent_source/league/public_router/source/agent.cpp",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/top_replay_library/source/agent.cpp",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/league/public_router/source/agent.cpp",
+    "-o",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/forecast_probe"
+  ],
+  [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/forecast_probe",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/observed_sale_lead_003/FORECAST_DIAGNOSTICS.json"
+  ]
+]

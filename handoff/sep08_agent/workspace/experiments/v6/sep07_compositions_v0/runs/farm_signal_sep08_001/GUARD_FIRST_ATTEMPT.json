@@ -1,6 +1,0 @@
-{
-  "status": "failed before comparison",
-  "cause": "Nested conda run without --no-capture-output supplied no stdin to the numeric C++ driver. Driver returned zero records.",
-  "actual_output_bytes": 0,
-  "correction": "Use no-capture-output for stdin; fail fast if numeric case count absent. No policy change."
-}

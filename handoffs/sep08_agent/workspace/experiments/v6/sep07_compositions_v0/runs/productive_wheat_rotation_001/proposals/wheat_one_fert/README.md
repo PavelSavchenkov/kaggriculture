@@ -1,0 +1,3 @@
+# wheat_one_fert
+
+Complete checked wheat calendar over crop_value_m2_t4. See ../../README.md for donor/source lineage, full paired metrics and limitations; ../../VALIDATION.json records operational checks. Validated primary, ready for parent registration/promotion. Fresh and native panels improve every tested opponent's mean margin and preserve target production. Six fresh games safely fall back to the parent on day28 after an unrelated weed blocks a source BUILD_COOP precondition. The parent's optional berry branch is preserved with complete day20 suffixes. No submission or shared-source changes.

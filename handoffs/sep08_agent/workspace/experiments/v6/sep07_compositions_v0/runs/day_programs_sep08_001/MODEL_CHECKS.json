@@ -1,0 +1,12 @@
+{
+  "current_own_observations_exact": 2876,
+  "daytime_solo_steps_exact": 2760,
+  "nonempty_rival_stock_excluded_cases": 2772,
+  "source_full_games_exact": 4,
+  "scope": "Observation-built own state and deterministic market timers exactly match actual-engine own actions against PASS on non-night turns. This does not predict real rival actions, private inventory, future shops or random night weeds.",
+  "source_hashes": {
+    "runs/day_programs_sep08_001/model.hpp": "2839019cbf61b79cc57498570e3fbe5b9552b3e18dea18148814ca405f5e39b8",
+    "runs/day_programs_sep08_001/verify_model.cpp": "bb8c230e8ba2c950e810c8543231b91fcb196a4b6dcafd044ac3b44c7a021be0",
+    "runs/day_programs_sep08_001/verify_model.py": "f8623d6aa8af5d0251d42a540bf26d251bad7ae6d4ca2e3c9eae465cb3f26d97"
+  }
+}

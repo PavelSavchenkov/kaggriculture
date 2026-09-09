@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "ahmed_v24",
+  "header": "source/agent.hpp",
+  "type": "compositions::ahmed_v24::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../../../league/ahmed_v23/source/agent.cpp"
+  ]
+}

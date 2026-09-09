@@ -1,0 +1,79 @@
+{
+  "pair": {
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+      "--pair",
+      "early_melon_b98_m2",
+      "early_melon_b98_m1"
+    ],
+    "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/652f201f3becd2dbdcbf/arena"
+  },
+  "debug": {
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+      "--agents",
+      "early_melon_b0_m0",
+      "early_melon_b0_m1",
+      "early_melon_b50_m0",
+      "early_melon_b50_m1",
+      "early_melon_b50_m2",
+      "early_melon_b50_m3",
+      "early_melon_b98_m0",
+      "early_melon_b98_m1",
+      "early_melon_b98_m2",
+      "early_melon_b98_m3",
+      "early_melon_b157_m0",
+      "early_melon_b157_m1",
+      "early_melon_b157_m2",
+      "early_melon_b157_m3",
+      "early_melon_b98_m1",
+      "pass",
+      "--debug"
+    ],
+    "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/580d294ee82bdc4dc5d5/arena"
+  },
+  "generic": {
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+      "--agents",
+      "early_melon_b0_m0",
+      "early_melon_b0_m1",
+      "early_melon_b50_m0",
+      "early_melon_b50_m1",
+      "early_melon_b50_m2",
+      "early_melon_b50_m3",
+      "early_melon_b98_m0",
+      "early_melon_b98_m1",
+      "early_melon_b98_m2",
+      "early_melon_b98_m3",
+      "early_melon_b157_m0",
+      "early_melon_b157_m1",
+      "early_melon_b157_m2",
+      "early_melon_b157_m3",
+      "cold_renewal_p0",
+      "cold_renewal_p50",
+      "cold_renewal_p98",
+      "cold_renewal_p157",
+      "empty_sale_slots_m2",
+      "public_router",
+      "service_bank_p362_m2",
+      "pass"
+    ],
+    "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/9b28ff57e4b5bdaf5359/arena"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "contexts": 6480,
+  "seconds": 0.326288,
+  "microseconds_per_context": 50.3531,
+  "candidate_plans": 476730,
+  "checksum": 430800,
+  "commands": [
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "g++",
+      "-std=c++20",
+      "-O3",
+      "-DNDEBUG",
+      "-march=native",
+      "-mtune=native",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-math-errno",
+      "-fno-semantic-interposition",
+      "-fno-plt",
+      "-flto",
+      "-I",
+      "/home/pavel/Programming/kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/titan_sale_lots_sep08_001/benchmark.cpp",
+      "-o",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/titan_sale_lots_sep08_001/benchmark"
+    ],
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/titan_sale_lots_sep08_001/benchmark",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/titan_sale_lots_sep08_001/cases.txt"
+    ]
+  ],
+  "scope": "Single C++ process, 30 repeats of216 verified contexts, wall time under concurrent audit load. Excludes conda startup, source-oracle and build time. No GPU used."
+}

@@ -1,0 +1,38 @@
+{
+  "tetsutani": {
+    "main.py": {
+      "sha256": "131504becf57a8ad2b7321af0e80dcb3ed292d0c54482cc09f16ee911cd7466e",
+      "equal_yusuke": false
+    },
+    "actions.json": {
+      "sha256": "171c8550addac9fdb49acb44af36f64b4eb54e34c561eb6f3d4a83e2dcc803a6",
+      "equal_yusuke": true
+    },
+    "model.json": {
+      "sha256": "e6a3a8eff5d499a1764001943c9989bfe5a8ed3da8a5ab457d53012c56f9a378",
+      "equal_yusuke": true
+    },
+    "observation.py": {
+      "sha256": "516aee86ca84550839ecc5217cff3464c896a6a69d338f91f7ccfa16fee73fa9",
+      "equal_yusuke": true
+    }
+  },
+  "ahmed": {
+    "source_sha256": "d5e3ab887e3385db76d06a96b8b2a16648fc59354b679f2faed626847b6ec7d9",
+    "byte_equal_v24": true,
+    "ast_equal_v24": true
+  },
+  "dmitrii_files": {
+    "main.py": "495bfa4825c9e58638e804aeeb62a9537826f6d4d869222815e1bbeefd84d3dc",
+    "policy.py": "e0b423f01f5ed8dbda27572251c1e0c57f5e12105e2e53ebeed8d7dd86c00ca6",
+    "terminal_planner.py": "da2c3aced8fd580f3fbc4a9dad37ee945a522d07ea518d00634006f4f503b15e",
+    "thomas_parent.py": "9f8b91f184fb0089dabd2894dd26f56b750f7757dc0ba40ae9d91f3d8c3b562b",
+    "unit_model.py": "c03e8c5cd10466c229ee0a44dece9a3943c10bff135d96a7822ffe75d6922724",
+    "LICENSE.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE.txt": "6e17a3fca90e652dd86df1f4156cc0cd761adabf51f234e5f0bb9caf29e1be5b",
+    "tapes.json": "9a96aba906401713ff876b0fb56c8f7068c2e4d846e844e559e1ee9523623a12",
+    "trees.json": "f49510c3c6d3991e884622166f562e18d47ae31854688e56fc04604c73a89665"
+  },
+  "episode_article_source_unchanged": false,
+  "notebook_code_executed": false
+}

@@ -1,0 +1,24 @@
+{
+  "name": "on_day29_no_care30",
+  "leaf": "on",
+  "day": 29,
+  "kind": "remove_terminal_care",
+  "removed_jobs": 6,
+  "problem": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/on_terminal_no_care.json",
+  "actions": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/goose_c31_d13_on_002/days/29/actions.txt",
+  "alias_of": null,
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/build/retry",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/on_terminal_no_care.json",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_rotation_001/goose_c31_d13_on_002/days/29/actions.txt",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/late_animal_schedule_001/on_day29_no_care30",
+    "30"
+  ],
+  "returncode": 3,
+  "completed_utc": "2026-09-07T19:04:00.573114+00:00"
+}

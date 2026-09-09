@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-09-08T03:33:03.574894+00:00",
+  "variants": [
+    "herd_partial_mixed_m1",
+    "herd_partial_mixed_m2",
+    "herd_partial_goose_m1",
+    "herd_partial_goose_m2",
+    "herd_partial_p355_m1",
+    "herd_partial_p355_m2",
+    "herd_partial_p362_m1",
+    "herd_partial_p362_m2"
+  ],
+  "parent": "runs/herd_routes_sep08_001",
+  "discovery": {
+    "opponents": [
+      "public_router",
+      "observed_sale_lead_start_216"
+    ],
+    "seeds": 8,
+    "seed_start": 1000,
+    "seat_mode": "both"
+  },
+  "witness": "Parent p355 seed1000 seat0 worker8 steps678-680 repeatedly reverses with one wheat; another worker consumes the remaining shed supply before its pickup. Recorded in parent coverage_results/herd_routes_p355_m1.coverage.jsonl.",
+  "change": "Allow partial load work, finish current animal services, wait at shed when empty instead of leaving and returning.",
+  "scope": "Only late crop-free routing. Does not solve mixed day18 service gap or expand the composition.",
+  "source_hashes": {
+    "runs/herd_routes_sep08_001/routes.hpp": "3bcf094c3fea3a223f6295ba2b653ba8e817c8aacab7b421e3293fcbe97f4aad",
+    "runs/herd_routes_sep08_002/routes.hpp": "726a7e095b0b2486b3f3b0c541058a3f76506c78d57513cb656e78928bdf1417",
+    "runs/herd_routes_sep08_002/prepare.py": "dc25ba80bebf3ebfe042a03433fef50e2390779f16a0e7d77d402d48a1f021f9"
+  }
+}

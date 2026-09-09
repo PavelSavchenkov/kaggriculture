@@ -1,9 +1,0 @@
-{
-  "cases": 42,
-  "all_requirements": true,
-  "all_invariants": true,
-  "all_error_lists_empty": true,
-  "correction": "Removed explicit M_SELL from the physical schedule because cumulative shed availability already executes sales. Gross executable markets remain separate.",
-  "first_attempt_preserved": "physical_source_controls",
-  "source_sha256": "4dcd52755b097e0e9626110f24e5c32cd6e50dbd6763a89255b044d67610e92f"
-}

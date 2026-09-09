@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/refresh_top_evidence.py", line 54, in <module>
+    main()
+  File "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/refresh_top_evidence.py", line 38, in main
+    commands.append(run(['python', EXP / 'scripts/pull_replays.py', '--research-dir', output, '--teams', '12', '--episodes', '6', '--workers', '6'], 'replay_download.log'))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/refresh_top_evidence.py", line 27, in run
+    subprocess.run(cmd, stdout=target, stderr=subprocess.STDOUT, check=True)
+  File "/home/pavel/anaconda3/envs/kaggriculture/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['conda', 'run', '--no-capture-output', '-n', 'kaggriculture', 'python', '/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/pull_replays.py', '--research-dir', '/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/research/refresh_1545', '--teams', '12', '--episodes', '6', '--workers', '6']' returned non-zero exit status 1.
+
+ERROR conda.cli.main_run:execute(127): `conda run python experiments/v6/sep07_compositions_v0/scripts/refresh_top_evidence.py refresh_1545 --previous refresh_1446` failed. (See above for error)

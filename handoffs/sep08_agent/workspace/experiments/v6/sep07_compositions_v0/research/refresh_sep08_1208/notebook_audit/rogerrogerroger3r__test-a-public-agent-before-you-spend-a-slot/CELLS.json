@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "type": "markdown",
+    "characters": 468,
+    "preview": "# Test a public agent before you spend a slot on it\n\nOnly your two most recent submissions are alive, so every submission you spend on an\nuntested public agent costs you a live slot for the day it takes to converge. This"
+  },
+  {
+    "index": 1,
+    "type": "markdown",
+    "characters": 901,
+    "preview": "## The measurement\n\nI took a public agent whose author sat at **rank 90** on the day, extracted its `main.py`\nwithout executing the notebook, and played it against a fixed reference agent for\n**192 games in the official "
+  },
+  {
+    "index": 2,
+    "type": "markdown",
+    "characters": 648,
+    "preview": "## Why the two can differ\n\ndestbreso [showed this directly](https://www.kaggle.com/code/destbreso/97-predictable-extracting-decision-trees):\nreplaying one author's published code turn by turn against that author's own re"
+  },
+  {
+    "index": 3,
+    "type": "markdown",
+    "characters": 563,
+    "preview": "## The test\n\nSample size first, because this is where it is easy to fool yourself. Against an opponent\nyou truly beat 55% of the time, **664 paired games** is where the expected result lands\nexactly on the p < 0.01 thres"
+  },
+  {
+    "index": 4,
+    "type": "code",
+    "characters": 1066,
+    "preview": "import math\n\ndef games_needed(true_rate, alpha=0.01, power=0.5):\n    \"\"\"Paired games needed to separate `true_rate` from 0.5.\n\n    power=0.5 is the point where the expected result lands exactly on the threshold;\n    powe"
+  },
+  {
+    "index": 5,
+    "type": "markdown",
+    "characters": 716,
+    "preview": "## Three details that decide whether the number means anything\n\n**Swap seats.** Run every seed twice with the sides exchanged, or alternate by seed\nparity. Seat asymmetry in this game is large enough to manufacture a res"
+  },
+  {
+    "index": 6,
+    "type": "code",
+    "characters": 561,
+    "preview": "# The comparison in the form worth reporting: half-point rate, sample size, z, and\n# whether the change is even on the execution path.\ndef report(label, wins, losses, draws):\n    n = wins + losses + draws\n    half = (win"
+  },
+  {
+    "index": 7,
+    "type": "markdown",
+    "characters": 723,
+    "preview": "## What I do with the result\n\nA public agent that loses everything against a reference is not worth a submission slot,\nhowever high its author sits. A public agent that wins convincingly is worth one slot -\nand then the "
+  }
+]

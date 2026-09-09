@@ -1,0 +1,37 @@
+{
+  "returncode": 0,
+  "stdout": "matched_actions=10793\n\n",
+  "stderr": "",
+  "coverage": {
+    "route0": 6697,
+    "maximum_pending": 1,
+    "route1": 3030,
+    "route2": 924,
+    "route3": 142
+  },
+  "layer_changes": {
+    "_weed_repair": 255,
+    "_sell_lead": 112
+  },
+  "python_fallbacks": {
+    "layer_fallbacks": 0,
+    "entry_fallbacks": 0,
+    "terminal_rescue_errors": 0
+  },
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "g++",
+    "-std=c++20",
+    "-O2",
+    "-I",
+    "/home/pavel/Programming/kaggriculture",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/ahmed_v25_sep08_001/source_parity/parity.cpp",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/ahmed_v25_sep08_001/proposals/ahmed_v25/source/agent.cpp",
+    "-o",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/ahmed_v25_sep08_001/source_parity/parity"
+  ],
+  "scope": "Eight recorded streams, six forced shop/egg thresholds, low-cash/full-shed stream, eight late/reset/repeated/out-of-range observations. Python source is only a fixed-observation oracle."
+}

@@ -1,0 +1,101 @@
+{
+  "created_utc": "2026-09-07T20:10:51.031970+00:00",
+  "candidate": "late_value_s32_t0_r05",
+  "baseline": "opening_q32_b13_v1",
+  "seed_start": 1850000,
+  "seeds": 2048,
+  "seat_mode": "both",
+  "opponents": [
+    "animal_adaptive_r1_c0_b0",
+    "binghua_116",
+    "bohann_opening_v1",
+    "crop_mix_t2_wheat",
+    "crop_rotation_t2_berry",
+    "crop_value_m2_t4",
+    "investment_context_guarded_001_best",
+    "john_131",
+    "junghoon_wool_sales",
+    "king_rc4",
+    "late_goose_wheat_context",
+    "opening_q32_b13_v1",
+    "opening_router_v4",
+    "public_capacity_router",
+    "public_router",
+    "public_router_v5",
+    "public_sixday",
+    "shop_herd_guarded_001_best",
+    "shop_herd_s6_m3_g1",
+    "teammate_shoprouter",
+    "ticket_p116_t9_i9",
+    "wheat_one_fert"
+  ],
+  "grouping": {
+    "prior_versions": [
+      "shop_herd_guarded_001_best",
+      "shop_herd_s6_m3_g1",
+      "opening_router_v4",
+      "animal_adaptive_r1_c0_b0",
+      "investment_context_guarded_001_best",
+      "crop_value_m2_t4",
+      "crop_rotation_t2_berry",
+      "wheat_one_fert",
+      "crop_mix_t2_wheat",
+      "bohann_opening_v1"
+    ],
+    "teammate": [
+      "teammate_shoprouter"
+    ],
+    "public_controllers": [
+      "king_rc4",
+      "public_router",
+      "public_capacity_router",
+      "public_sixday",
+      "public_router_v5"
+    ],
+    "top_replays": [
+      "binghua_116",
+      "junghoon_wool_sales",
+      "john_131",
+      "ticket_p116_t9_i9"
+    ]
+  },
+  "historical_grouping": {
+    "prior_versions": [
+      "shop_herd_guarded_001_best",
+      "shop_herd_s6_m3_g1",
+      "opening_router_v4"
+    ],
+    "teammate": [
+      "teammate_shoprouter"
+    ],
+    "public_controllers": [
+      "king_rc4",
+      "public_router",
+      "public_capacity_router",
+      "public_sixday"
+    ],
+    "top_replays": [
+      "binghua_116",
+      "junghoon_wool_sales",
+      "john_131",
+      "ticket_p116_t9_i9"
+    ]
+  },
+  "direct_parent_separate_from_groups": true,
+  "gates": {
+    "current_group_utility_gain_95_lower": 0,
+    "historical_group_utility_gain_95_lower": -0.0025,
+    "minimum_individual_utility_gain": -0.02,
+    "minimum_paired_mean_margin_gain": 0,
+    "direct_parent_utility": 0.5,
+    "direct_parent_mean_margin": 0
+  },
+  "scope": "Independent2048-seed confirmation of unchanged candidate after first512-seed panel left the current-group95%lower bound unresolved. No fitting on1830000; same gates, one new confirmation panel.",
+  "candidate_files_sha256": {
+    "runs/late_portfolio_001/proposals/late_value_s32_t0_r05/IMPORT.json": "008f01577477e5540b8ad202068451fd1c75afb6995af4d5c0588cdab54d8055",
+    "runs/late_portfolio_001/proposals/late_value_s32_t0_r05/agent.json": "98280e6cb8216db49eb62d17de356d6400906fc77a37190de2f2097ddba2b630",
+    "runs/late_portfolio_001/proposals/late_value_s32_t0_r05/README.md": "57d91f7488edc9298119abac3cb6890ae5743d25581372bd82d668c25ae5e4b4",
+    "runs/late_portfolio_001/proposals/late_value_s32_t0_r05/source/agent.hpp": "05caa770b87af6f117bdb2f51705b3a8443741bdd4428e014e6c494a3d0d6fdb",
+    "runs/late_portfolio_001/proposals/late_value_s32_t0_r05/source/agent.cpp": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950"
+  }
+}

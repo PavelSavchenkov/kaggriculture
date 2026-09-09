@@ -8,7 +8,7 @@ for checking the agents available in your checkout.
 
 ## September 8 continuation package
 
-Read `handoff/sep08_agent/readme.md` first. It contains the full restored pipeline,
+Read `handoffs/sep08_agent/readme.md` first. It contains the full restored pipeline,
 source/evidence inventory, exact deployment rebuild, working and failed ideas,
 league, promotion gates and concrete unfinished work. It supersedes September 7
 labels of “current” or “last submitted” below.
@@ -24,7 +24,7 @@ labels of “current” or “last submitted” below.
 - `agents/inhouse/early_melon_b98_m1/` is the independent cold reference and
   remains much weaker than the mainline.
 
-Use `handoff/sep08_agent/reproduce.py` and `tools/run_comparison.py` to restore
+Use `handoffs/sep08_agent/reproduce.py` and `tools/run_comparison.py` to restore
 and test the loop without the original session folder. Study all 45 listed
 comparison agents and the newer public-port evidence. Keep source provenance,
 branch activation, estimated-versus-realized errors and failed attempts.

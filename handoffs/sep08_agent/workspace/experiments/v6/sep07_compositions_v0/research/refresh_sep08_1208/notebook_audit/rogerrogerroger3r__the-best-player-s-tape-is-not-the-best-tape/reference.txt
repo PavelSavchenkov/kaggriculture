@@ -1,0 +1,226 @@
+CELL 0 markdown
+# The best player's tape is not the best tape
+
+Most of this leaderboard is replaying recorded action sequences. If you are about to
+mine one, the obvious move is to find the highest-rated player you can see and replay
+their episode. I measured that, and it is backwards: **the tapes of the strongest
+players replayed worst, and the one that won my screen came from the second-weakest
+agent in the set.**
+
+This notebook is the measurement, the two selection metrics that sent me the wrong way
+first, and the rule I use now. No agent of mine is in here, and nothing below depends on
+private data: every episode named is a public replay, and the harness is public code.
+
+CELL 1 markdown
+## The screen
+
+Sixteen tapes, extracted from public episodes of agents rated **2970 to 3074** (3074 was
+rank 1 on the day of the pull). Each tape was compiled into the same public C++ chassis
+and played **4,000 games against the same base tape, on the same seeds**. The chassis and
+the extraction tool are yhay81's, under Apache-2.0; the only thing that differs between
+runs is the recorded action sequence.
+
+The score below is the mean end-of-game money of the candidate minus the mean
+end-of-game money of the base over those 4,000 games. Positive means the candidate tape
+plays the chassis better than the tape that shipped with it.
+
+CELL 2 code
+import json
+
+# Sixteen public episodes: the rating of the agent they were recorded from, and the mean
+# money difference against a fixed base tape over 4,000 games each.
+RESULTS = json.loads('''[
+ {
+  "rating": 3074,
+  "episode": 105654650,
+  "diff": -22714.2
+ },
+ {
+  "rating": 3074,
+  "episode": 105664019,
+  "diff": -25046.9
+ },
+ {
+  "rating": 3040,
+  "episode": 105384058,
+  "diff": -28478.8
+ },
+ {
+  "rating": 3039,
+  "episode": 105534760,
+  "diff": -29784.6
+ },
+ {
+  "rating": 3006,
+  "episode": 104682897,
+  "diff": -41250.1
+ },
+ {
+  "rating": 3005,
+  "episode": 105491250,
+  "diff": -4501.8
+ },
+ {
+  "rating": 3003,
+  "episode": 105623078,
+  "diff": -4237.5
+ },
+ {
+  "rating": 3003,
+  "episode": 104680858,
+  "diff": -85931.6
+ },
+ {
+  "rating": 2998,
+  "episode": 105423461,
+  "diff": -23916.1
+ },
+ {
+  "rating": 2993,
+  "episode": 105423466,
+  "diff": -16258.8
+ },
+ {
+  "rating": 2983,
+  "episode": 105433879,
+  "diff": -1656.5
+ },
+ {
+  "rating": 2982,
+  "episode": 105423464,
+  "diff": 1995.8
+ },
+ {
+  "rating": 2977,
+  "episode": 105119866,
+  "diff": 13.4
+ },
+ {
+  "rating": 2977,
+  "episode": 105391568,
+  "diff": -2990.0
+ },
+ {
+  "rating": 2974,
+  "episode": 104665310,
+  "diff": -25884.2
+ },
+ {
+  "rating": 2970,
+  "episode": 104663138,
+  "diff": -23889.7
+ }
+]''')
+
+print(f"{'source rating':>13}  {'episode':>10}  {'mean money vs base':>19}")
+for r in RESULTS:
+    mark = '  <-- winner' if r['diff'] > 1000 else ''
+    print(f"{r['rating']:>13}  {r['episode']:>10}  {r['diff']:>19,.0f}{mark}")
+
+neg = sum(1 for r in RESULTS if r['diff'] < 0)
+print(f"\nnegative: {neg} of {len(RESULTS)}")
+
+CELL 3 markdown
+## The result
+
+**Fourteen of sixteen are negative.** Rank 1's tape costs 22,714 against the base. The
+worst of the set, from an agent rated 3003, costs 85,932. The only tape that clears
++1,000 comes from a **2982**, and the runner-up from a **2977** — the two lowest-rated
+agents in the set are the two that survive being replayed.
+
+The rank correlation between the source agent's rating and how the tape actually plays is
+**negative**: Spearman rho = -0.476. At n = 16 that is a permutation p of 0.065, so treat
+the correlation itself as suggestive rather than settled. The part that is not marginal is
+the sign of the outcome: fourteen negatives out of sixteen, and both positives sitting at
+the bottom of the rating range.
+
+CELL 4 code
+def spearman(xs, ys):
+    def ranked(v):
+        order = sorted(range(len(v)), key=lambda i: v[i])
+        out = [0] * len(v)
+        for pos, i in enumerate(order):
+            out[i] = pos + 1
+        return out
+    rx, ry = ranked(xs), ranked(ys)
+    n = len(xs)
+    mean = lambda v: sum(v) / len(v)
+    cov = sum((rx[i] - mean(rx)) * (ry[i] - mean(ry)) for i in range(n))
+    var = (sum((v - mean(rx)) ** 2 for v in rx) * sum((v - mean(ry)) ** 2 for v in ry)) ** 0.5
+    return cov / var
+
+ratings = [r['rating'] for r in RESULTS]
+diffs = [r['diff'] for r in RESULTS]
+print('Spearman rho between source rating and replay strength:', round(spearman(ratings, diffs), 3))
+
+CELL 5 code
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(7.5, 4.2))
+colors = ['#0369a1' if d > 0 else '#94a3b8' for d in diffs]
+ax.scatter(ratings, [d / 1000 for d in diffs], c=colors, s=70, zorder=3)
+ax.axhline(0, color='#334155', linewidth=1)
+ax.set_xlabel('rating of the agent the tape was recorded from')
+ax.set_ylabel('mean money vs base, thousands')
+ax.set_title('Higher-rated source, worse replay')
+for spine in ('top', 'right'):
+    ax.spines[spine].set_visible(False)
+ax.grid(axis='y', alpha=0.25, zorder=0)
+plt.tight_layout()
+plt.show()
+
+CELL 6 markdown
+## Why this happens
+
+A strong agent here is closed-loop: it reads the town, the market and the opponent, and
+decides. What you record from it is the *output* of those decisions against one particular
+opponent on one particular seed. Replay it into a different game and the decisions no
+longer match the situation that produced them, and the better the original agent was at
+reacting, the further its recording drifts from anything sensible.
+
+What survives replay is not the strongest player's recording. It is a recording that was
+already selected for standing up across scenarios. That is a property of the tape, and it
+has to be measured directly, because nothing on the leaderboard reports it.
+
+CELL 7 markdown
+## Two metrics that sent me the wrong way first
+
+**Final money in the recorded game.** My first round picked twelve tapes from wins ending
+at 185k-204k. All twelve scored within **82,685 +/- 50** against the base: different files,
+identical play. In the 2200-2350 band the public tapes have converged onto one opening,
+which is the same thing destbreso reported as *everyone is playing the same opening*. A
+high final bank is also often just the opponent having crashed to zero, which says nothing
+about the tape.
+
+**The rating you can see.** `ListEpisodes` takes a `submissionId`, and matchmaking pairs
+you with nearby ratings, so from ~2400 the episodes visible to me were all 2200-2350. The
+top of the ladder is not reachable by looking at your own games. Expanding episodes
+breadth-first, highest-rated player first, over 60 submissions surfaced **1,488 agents** and
+reached 3074. If you would rather not crawl, `ashok205/kaggriculture-top10-replay-archive`
+now publishes the daily top ten as parquet.
+
+CELL 8 markdown
+## Confirming the winner
+
+The winning tape was re-run on four independent seed groups of 4,000 games each. The four
+mean differences agree to within +/- 2, so the +1,996 is a property of the tape and not of
+the seed block it was screened on. The two tapes nearest it in the screen were re-run the
+same way and stayed where they were.
+
+CELL 9 markdown
+## The rule I use now
+
+> Screen every candidate against one fixed base tape for at least 4,000 games and keep it
+> only if the mean money difference clears +1,000. Do not rank by the source agent's
+> rating, and do not rank by what that recorded game happened to bank.
+
+Three limits worth stating. This measures replay against a single base inside a single
+chassis, so it ranks tapes rather than agents. Money is not what the leaderboard scores,
+it scores wins, so a candidate that clears this screen still has to be confirmed on a
+paired panel. And the field moves daily: a tape that screens well today is competing
+against a board that will have moved by the time it is fielded, which is an argument for
+re-mining close to the deadline rather than early.
+
+Credit to **yhay81** for the C++ environment and `episode_to_tape.py` (Apache-2.0), to
+**destbreso** for the offline simulator and the opening-convergence observation, and to
+**ashok205** for publishing the daily top-ten replay archive.

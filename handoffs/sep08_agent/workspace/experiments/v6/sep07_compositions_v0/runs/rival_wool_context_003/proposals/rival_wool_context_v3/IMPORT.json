@@ -1,0 +1,23 @@
+{
+  "parent": "wool_family_context_v2",
+  "previous_candidate": "rival_wool_context_v2",
+  "donor": "public_router_v52",
+  "donor_provenance": "league/public_router_v52/IMPORT.json",
+  "calendar_lineage": "runs/v52_family_001/DAY_LIBRARY.json",
+  "bridge": "runs/family_delay_001/BRIDGE_ANALYSIS.json",
+  "diagnosis": "runs/rival_wool_context_003/PUBLIC_SPENDING_DIAGNOSIS.json",
+  "changes": [
+    "Infer spending after observed hires and the post-buy wheat quote.",
+    "Require no other net product flow after public town/shop demand.",
+    "Preserve previous accepted early wool choices and delayed execution."
+  ],
+  "kaggle_rating": null,
+  "parity_scope": "Upstream bridge and source courses verified; this revision needs its own operational and fresh audits.",
+  "optimization_status": "Frozen experimental source; see central validation for current status.",
+  "reuse": "User authorized public code and replay borrowing; original donor restrictions remain in donor import.",
+  "limitations": [
+    "Public residual is not an identity oracle; gross offsetting trades can be ambiguous.",
+    "One observed response selects a precompiled farm; arbitrary farm construction is incomplete."
+  ],
+  "previous_source_sha256": "8fbc838945720d3859747386c9d10aaaba9aef0f01f1e47879a95575c0a2d99d"
+}

@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "name": "sheep_yarn3",
+  "header": "source/agent.hpp",
+  "type": "compositions::sheep_yarn3::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../../source/agent.cpp"
+  ]
+}

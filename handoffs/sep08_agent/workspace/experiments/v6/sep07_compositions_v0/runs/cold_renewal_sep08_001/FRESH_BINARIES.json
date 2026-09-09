@@ -1,0 +1,63 @@
+{
+  "generic": {
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+      "--agents",
+      "service_bank_p362_m2",
+      "cold_renewal_p98",
+      "cold_renewal_p157",
+      "empty_sale_slots_m2",
+      "teammate_shoprouter",
+      "public_router",
+      "public_router_v52",
+      "joint_routes_p362_m0",
+      "pass"
+    ],
+    "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/c7862a422a0932249091/arena"
+  },
+  "pair": {
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+      "--pair",
+      "cold_renewal_p98",
+      "cold_renewal_p157"
+    ],
+    "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/9062fe8ba19abf4c8660/arena"
+  },
+  "debug": {
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "python",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+      "--agents",
+      "cold_renewal_p0",
+      "cold_renewal_p1",
+      "cold_renewal_p2",
+      "cold_renewal_p3",
+      "cold_renewal_p14",
+      "cold_renewal_p26",
+      "cold_renewal_p38",
+      "cold_renewal_p50",
+      "cold_renewal_p98",
+      "cold_renewal_p146",
+      "cold_renewal_p157",
+      "public_router",
+      "pass",
+      "--debug"
+    ],
+    "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/3c5499c7f6d0034e5fdb/arena"
+  }
+}

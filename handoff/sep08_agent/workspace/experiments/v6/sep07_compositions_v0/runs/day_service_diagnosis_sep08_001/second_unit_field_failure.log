@@ -1,6 +1,0 @@
-/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/day_service_diagnosis_sep08_001/trace.cpp: In member function ‘void Traced<Base>::act(const kag::agent::AgentObservation&, const kag::agent::DecisionBudget&, kag::Action&)’:
-/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/day_service_diagnosis_sep08_001/trace.cpp:30:39: error: ‘struct kag::UnitAction’ has no member named ‘item’
-   30 |                 <<','<<int(a.units[u].item)<<','<<a.units[u].n<<','<<o.own.inv[u][kag::WHEAT]<<']';
-      |                                       ^~~~
-
-ERROR conda.cli.main_run:execute(127): `conda run g++ -std=c++20 -O3 -DNDEBUG -march=native -fno-exceptions -fno-rtti -I /home/pavel/Programming/kaggriculture -I /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/include /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/day_service_diagnosis_sep08_001/trace.cpp -o /home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/day_service_diagnosis_sep08_001/trace` failed. (See above for error)

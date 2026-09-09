@@ -1,0 +1,4 @@
+{
+  "change": "Mode2 fixes worker/hour assignments of unchanged original tile tasks. All new tile tasks remain free. This is a restricted scheduling search; failure says nothing about unrestricted feasibility.",
+  "comparison": "Original and changed final-day problems, same30seconds/4solverthreads, mode0 unrestricted vs mode2 restricted. Original full schedules provide physical witnesses."
+}

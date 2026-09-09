@@ -1,9 +1,0 @@
-# Opening market search
-
-The promoted Bohann opening improves the league and direct parent, but copies five hires and a fixed wheat residue in addition to its financial idea. Causal profiles show one to three extra workers with unchanged productive output on ordinary opponents. Search the short opening market plan while preserving current worker routes and, in a separate control, the current planned wheat residue and non-wheat orders.
-
-Borrowed source: Bohann Wang episode106497007 seat0, submission56071218, first two market sequences. Reuse crop_mix_t2_wheat as the unchanged worker/adaptive policy base. Compare complete policies with the newly promoted bohann_opening_v1. Every exact game includes resulting funding, public opponent responses, later composition choices, hires, production, sales and discarded stock.
-
-Parameters are a round-trip wheat quantity, initial wheat buffer and whether to retain the parent non-wheat orders and net starting wheat obligation. They belong in the market planning module, not a new crop lifecycle representation. The original source control must reproduce the promoted policy exactly; the zero-round-trip original-buffer control must reproduce crop_mix before interpreting other effects. Mode1 only prepends the round trip; mode2 also adjusts the buffer and next sale to preserve the parent's net planned starting wheat.
-
-Discovery uses1000..1063both against six opponents. Exact C++ execution is cheap at this scope; no detailed day solve is required because existing worker courses are retained and the full result is checked. Report output and stock differences to detect failed reuse. Any selected stronger complete policy needs separate unused1760000+evidence and operational/native checks. Keep final900000unused. This focused market module work does not replace cold construction, larger composition changes or continuing replay learning.

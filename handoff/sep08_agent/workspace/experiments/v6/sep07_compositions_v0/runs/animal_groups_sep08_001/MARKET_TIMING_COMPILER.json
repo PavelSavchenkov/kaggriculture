@@ -1,7 +1,0 @@
-{
-  "source_sha256": "e8e99b314587b4487fc00d183aec521a3ff8a30e3be44fcee9167cc7b7b926d7",
-  "new_sha256": "89e4d2bff15ce43e05aa955b9b9a542f8f88d7b6d739887f0052c83e3f295759",
-  "trigger": "Cow9 seed1014 day28 starts with2carrots but inherited cumulative sales require3 by hour2. Missing carry was previously removed from latest sales only.",
-  "change": "Cancel earliest non-input sales against missing opening stock. Later new output is sold separately. Keep raw trade and full endpoint certification.",
-  "validation": "Pending. Add day28/29 exact-source physical controls for four exposed seeds."
-}

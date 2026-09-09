@@ -1,0 +1,102 @@
+[
+  {
+    "opponent": "late_value_s32_t0_r05",
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/family_delay_001/build/probe",
+      "--a",
+      "baseline",
+      "--b",
+      "late_value_s32_t0_r05",
+      "--games",
+      "128",
+      "--seed-start",
+      "1000",
+      "--seat-mode",
+      "both",
+      "--threads",
+      "4",
+      "--validate",
+      "--output",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/family_delay_001/observations/late_value_s32_t0_r05.json"
+    ]
+  },
+  {
+    "opponent": "public_router_v52",
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/family_delay_001/build/probe",
+      "--a",
+      "baseline",
+      "--b",
+      "public_router_v52",
+      "--games",
+      "128",
+      "--seed-start",
+      "1000",
+      "--seat-mode",
+      "both",
+      "--threads",
+      "4",
+      "--validate",
+      "--output",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/family_delay_001/observations/public_router_v52.json"
+    ]
+  },
+  {
+    "opponent": "public_router",
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/family_delay_001/build/probe",
+      "--a",
+      "baseline",
+      "--b",
+      "public_router",
+      "--games",
+      "128",
+      "--seed-start",
+      "1000",
+      "--seat-mode",
+      "both",
+      "--threads",
+      "4",
+      "--validate",
+      "--output",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/family_delay_001/observations/public_router.json"
+    ]
+  },
+  {
+    "opponent": "junghoon_wool_sales",
+    "command": [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/family_delay_001/build/probe",
+      "--a",
+      "baseline",
+      "--b",
+      "junghoon_wool_sales",
+      "--games",
+      "128",
+      "--seed-start",
+      "1000",
+      "--seat-mode",
+      "both",
+      "--threads",
+      "4",
+      "--validate",
+      "--output",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/family_delay_001/observations/junghoon_wool_sales.json"
+    ]
+  }
+]

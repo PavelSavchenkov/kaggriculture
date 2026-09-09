@@ -1,0 +1,16 @@
+{
+  "original_sha256": "cc463e24c76a76b3e008f2ba67f2e73b0f2c8f0210da7345054ff3fb7e399c12",
+  "new_sha256": "e8e99b314587b4487fc00d183aec521a3ff8a30e3be44fcee9167cc7b7b926d7",
+  "changes": [
+    "When lost non-input output exceeds same-day sales, reduce its terminal inventory and carry the deficit forward to future sales.",
+    "Omit final-day fertilizer collection on changed animal tiles; retain useful product harvest.",
+    "Optional reuse of earlier certified complete days, each revalidated in the full live-opponent engine."
+  ],
+  "origins": [
+    "Continuation inventory conservation from the failed day27 carrot target.",
+    "Prior late_animal_schedule_001 final-day fertilizer omission; no new external component."
+  ],
+  "scope": "Compiler repair and bounded service alternative. Full-season and deployable-policy validation remain required.",
+  "pre_compile_fix_sha256": "f5571100a96ae0f9e12662983edae70f21a3aa5bcdc2069bc356c3ed7d21f436",
+  "compile_fix": "Explicit int64_t comparison against int64_t end_shed quantity; before first successful build or execution."
+}

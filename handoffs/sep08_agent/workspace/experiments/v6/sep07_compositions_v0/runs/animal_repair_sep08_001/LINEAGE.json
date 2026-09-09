@@ -1,0 +1,66 @@
+{
+  "created_utc": "2026-09-08T13:40:40.853137+00:00",
+  "inputs": {
+    "runs/animal_group_policy_sep08_001/source/policy.hpp": "6f9e59872909206f5c6733a8cc5c7017c4687ccb37157827b8a2a8276a7a2d23",
+    "runs/animal_group_policy_sep08_001/source/library.hpp": "5ec7da8cbf535f040594c5805a57e95573541bbfad53de4d2b3d3049b2be0c55",
+    "runs/animal_group_policy_sep08_001/LIBRARY_LINEAGE.json": "bd98a04ff8da1b4d9adacb40f58c8776562e4d234aed036380ccdb4d2e8c9719",
+    "runs/animal_group_policy_sep08_001/weed38_repair_30s/h0/guard.txt": "ea97ef28b13647c1b1472697686b262d31cc5ea6eb53a3fc2e6c7b8115f1b640",
+    "runs/animal_group_policy_sep08_001/weed38_repair_30s/h0/actions.txt": "934ed6f8277a31a0b5fa97d208ea89ca77c66ee9b075657884461d3b0bb34939",
+    "runs/animal_group_policy_sep08_001/weed38_repair_30s/h0/problem.json": "dcfddf94b2c150ea6d04e8824d5d1ff857b4569d167423f0b0f38c70e6940b4e",
+    "runs/animal_group_policy_sep08_001/weed38_repair_30s/RESULTS.csv": "f5fad1b1ba727f0a5e69e75400923a24e9bc99c2e2597751c4de2eea69fc9ed1",
+    "runs/premium_sales_sep08_001/source/policy.hpp": "3fc954f3e2242a1dfab0647a7daaa9ebe93f9b5be2c5e18f9fc61213ca84617c",
+    "runs/opening_funding_sep08_001/source/policy.hpp": "2e7daa29cad8de3dda250230051d7d11a5ccd22edbb57374b3947138e254eddd"
+  },
+  "packages": [
+    [
+      "animal_repair_m1",
+      "animal_groups_m1",
+      1,
+      false,
+      false
+    ],
+    [
+      "animal_repair_m2",
+      "animal_groups_m2",
+      2,
+      false,
+      false
+    ],
+    [
+      "animal_repair_premium_m2",
+      "animal_premium_m2",
+      2,
+      true,
+      false
+    ],
+    [
+      "animal_repair_q24_premium_m2",
+      "animal_premium_m2",
+      2,
+      true,
+      true
+    ],
+    [
+      "premium_q24_s216",
+      "premium_sales_s216",
+      0,
+      true,
+      true
+    ]
+  ],
+  "repair": {
+    "extra_hires": "0",
+    "physical": "1",
+    "endpoint": "1",
+    "turns": "719",
+    "cash": "133774",
+    "rival_cash": "83714",
+    "own_gain": "152",
+    "margin_gain": "172",
+    "wheat_gain": "6",
+    "matched_days": "1065320448",
+    "missed_days": "8388608"
+  },
+  "scope": "Local day-solver repair and quantity24 composition of existing verified components. Original policy source remains unchanged. No source-world seed or future shops enter the runtime table.",
+  "limits": "One exact day23 repair, not general runtime scheduling. Full field and native validation pending."
+}

@@ -1,9 +1,0 @@
-#pragma once
-#include <memory>
-#include <string>
-#include "evaluation.hpp"
-#include "experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/source/audit.hpp"
-#include "experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_demand/source/agent.hpp"
-#include "experiments/v6/sep07_compositions_v0/runs/atakan_portfolio_001/proposals/atakan_value_margin/source/agent.hpp"
-using PairA=compositions::atakan_demand::Agent;
-using PairB=compositions::atakan_value_margin::Agent;

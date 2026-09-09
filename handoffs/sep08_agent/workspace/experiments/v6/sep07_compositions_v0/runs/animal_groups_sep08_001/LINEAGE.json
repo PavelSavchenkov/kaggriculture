@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-09-08T09:29:37.697467+00:00",
+  "parent": {
+    "name": "empty_sale_slots_m2",
+    "path": "runs/empty_sale_slots_sep08_001/proposals/empty_sale_slots_m2",
+    "promoted_utc": "2026-09-08T06:27:53.831028+00:00",
+    "report": "results/empty_sale_slots_m2_population_validation.json",
+    "previous": "observed_sale_lead_start_216",
+    "committed_catalog": "agents/external/bohann_opening_v1",
+    "last_submission": "investment_context_guarded_001_best"
+  },
+  "copied_sources": {
+    "runs/late_animal_rotation_001/source/season.hpp": "ee5ba253326e1721d27100b609bb8fa6b6d7ccb2e664c5d52297e4b51df0801b",
+    "runs/late_animal_rotation_001/source/compile.cpp": "9de2987fd946fab05a3a0411e1c5b44e64ad8ec43c3b92aa06bb35c06ca2b5d9"
+  },
+  "changes": [
+    "Extract actual strongest-agent calendars at the normal 100000 expansion budget.",
+    "Compile multiple dated animal additions; preserve original jobs before each addition.",
+    "Retain solver certificates and full live-opponent physical endpoint checks.",
+    "Remove old unguarded cross-scenario sequence evaluation: semantic branch handling remains required."
+  ],
+  "limitations": [
+    "Source calendar is retrospective and can contain future branch choices.",
+    "Initial estimator omits added labor cost; its score is an optimistic screen, not expected realized profit.",
+    "Fixed recorded trades can lose the parent market policy adaptivity.",
+    "No new deployable agent or promotion is claimed by this offline study."
+  ]
+}

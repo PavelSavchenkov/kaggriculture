@@ -1,0 +1,22 @@
+{
+  "command": [
+    "conda",
+    "run",
+    "-n",
+    "kaggriculture",
+    "python",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+    "--agents",
+    "service_bank_p362_m2",
+    "early_melon_b98_m1",
+    "shop_branch_m2",
+    "empty_sale_slots_m2",
+    "teammate_shoprouter",
+    "public_router",
+    "public_router_v52",
+    "joint_routes_p362_m0",
+    "cold_renewal_p98",
+    "pass"
+  ],
+  "binary": "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/build/5175b2cdc490e7996b4a/arena"
+}

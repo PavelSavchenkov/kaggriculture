@@ -1,0 +1,39 @@
+{
+  "commands": [
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "cmake",
+      "-S",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_forecast_error_sep08_001",
+      "-B",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_forecast_error_sep08_001/build"
+    ],
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "cmake",
+      "--build",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_forecast_error_sep08_001/build",
+      "--target",
+      "mixed",
+      "-j",
+      "2"
+    ],
+    [
+      "conda",
+      "run",
+      "-n",
+      "kaggriculture",
+      "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_forecast_error_sep08_001/build/mixed",
+      "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_forecast_error_sep08_001/mixed_trace"
+    ]
+  ],
+  "source_sha256": "f1809f977c383402848ff887d14505346543d8b24af6677ac212e867912a0241",
+  "scope": "Source prefix plus saved day9 plan. Compare actual input buys with requests; test a two-wheat hour23 order. This alone does not validate a full mixed season."
+}

@@ -1,0 +1,8 @@
+cliff = pd.DataFrame([{
+    "product": item,
+    "base": MARKET_PARAMS[item]["base"],
+    "units to half price": next((i + 1 for i, p in enumerate(marginal_curve(item, 1500))
+                                 if p <= MARKET_PARAMS[item]["base"] / 2), None),
+    "units to $1": next((i + 1 for i, p in enumerate(marginal_curve(item, 1500)) if p <= 1), None),
+} for item in order]).sort_values("units to half price").reset_index(drop=True)
+cliff.fillna("> 1500")

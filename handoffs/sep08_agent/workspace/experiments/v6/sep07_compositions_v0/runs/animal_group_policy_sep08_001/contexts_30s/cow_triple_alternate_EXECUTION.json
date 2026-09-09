@@ -1,0 +1,20 @@
+{
+  "name": "cow_triple_alternate",
+  "seed": 1019,
+  "opponent": "public",
+  "command": [
+    "conda",
+    "run",
+    "--no-capture-output",
+    "-n",
+    "kaggriculture",
+    "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_group_policy_sep08_001/build/compile_public",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_group_policy_sep08_001/contexts_30s/cow_triple_alternate",
+    "1019",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep07_compositions_v0/runs/animal_group_policy_sep08_001/contexts_30s/cow_triple_alternate.txt",
+    "30"
+  ],
+  "returncode": 0,
+  "seconds": 336.153516966966
+}

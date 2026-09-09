@@ -1,0 +1,228 @@
+{
+  "games": 256,
+  "instrumentation_full_records_equal": 256,
+  "equal_physical_starts": {
+    "0": 256,
+    "1": 256,
+    "24": 254
+  },
+  "mismatch_examples": {
+    "72": {
+      "seed": 1000,
+      "seat": 0,
+      "v52_cash": 143,
+      "portfolio_cash": 200,
+      "v52_animals": [
+        0,
+        3,
+        2
+      ],
+      "portfolio_animals": [
+        0,
+        3,
+        2
+      ],
+      "n_different_fields": 2,
+      "first_fields_v52": [
+        1,
+        1,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        4,
+        4
+      ],
+      "first_fields_portfolio": [
+        1,
+        1,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        4
+      ]
+    },
+    "144": {
+      "seed": 1000,
+      "seat": 0,
+      "v52_cash": 212,
+      "portfolio_cash": 802,
+      "v52_animals": [
+        0,
+        4,
+        2
+      ],
+      "portfolio_animals": [
+        0,
+        4,
+        2
+      ],
+      "n_different_fields": 5,
+      "first_fields_v52": [
+        1,
+        1,
+        0,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        9,
+        3,
+        0,
+        4,
+        0,
+        4,
+        4
+      ],
+      "first_fields_portfolio": [
+        1,
+        1,
+        0,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        4
+      ]
+    }
+  },
+  "routes": [
+    {
+      "route": 0,
+      "games": 68,
+      "wins": 8,
+      "mean_margin": -3286.0588235294117,
+      "day12_herds": [
+        [
+          [
+            5,
+            6,
+            6
+          ],
+          68
+        ]
+      ],
+      "representative_seed": 1004
+    },
+    {
+      "route": 1,
+      "games": 58,
+      "wins": 43,
+      "mean_margin": 2083.9310344827586,
+      "day12_herds": [
+        [
+          [
+            0,
+            6,
+            11
+          ],
+          47
+        ],
+        [
+          [
+            0,
+            6,
+            10
+          ],
+          10
+        ],
+        [
+          [
+            0,
+            5,
+            11
+          ],
+          1
+        ]
+      ],
+      "representative_seed": 1005
+    },
+    {
+      "route": 3,
+      "games": 16,
+      "wins": 0,
+      "mean_margin": -4831.0625,
+      "day12_herds": [
+        [
+          [
+            3,
+            9,
+            5
+          ],
+          16
+        ]
+      ],
+      "representative_seed": 1006
+    },
+    {
+      "route": 4,
+      "games": 114,
+      "wins": 12,
+      "mean_margin": -4390.649122807017,
+      "day12_herds": [
+        [
+          [
+            3,
+            9,
+            5
+          ],
+          114
+        ]
+      ],
+      "representative_seed": 1000
+    }
+  ],
+  "scope": "Same head-to-head games, comparing each side own physical state. Cash and market excluded from physical equality; all tile keys including weeds included."
+}
