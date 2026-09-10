@@ -1,0 +1,7 @@
+__pycache__/
+out/*.log
+# Scratch probe outputs from throughput tuning; the ranking artifacts stay.
+out/probe.json
+out/pp.json
+out/p1.json
+out/t.json
