@@ -1,0 +1,36 @@
+{
+  "purpose": "Frozen financial-calendar boundary and immediate-goods baseline; no runtime dependency on another experiment",
+  "copied_utc": "2026-09-10T02:40:00Z",
+  "files": [
+    {
+      "file": "market.hpp",
+      "source": "experiments/v6/sep09_sales_planner/include/market.hpp",
+      "sha256": "5b3edad452db7797097e8262f5525186cd9f62653bd50c2bd12c781d632e21d8"
+    },
+    {
+      "file": "calendar.hpp",
+      "source": "experiments/v6/sep09_sales_planner/include/calendar.hpp",
+      "sha256": "3caf74d973f88dd04fe29e7101df5df19bd19ddebcef6e8da20b3e9b62c5f7a1"
+    },
+    {
+      "file": "own_world.hpp",
+      "source": "experiments/v6/sep09_sales_planner/include/own_world.hpp",
+      "sha256": "1f939c91a73bd2637cf9704e24e2bb5dab1e7632e4ee6493a913a14ca7065860"
+    },
+    {
+      "file": "project_resources.hpp",
+      "source": "experiments/v6/sep09_sales_planner/include/project_resources.hpp",
+      "sha256": "01107f0f5ccee632d3396534fb0b77c6a55d0a4c868bf360737a960469632634"
+    },
+    {
+      "file": "compile_calendar.hpp",
+      "source": "experiments/v6/sep09_sales_planner/include/compile_calendar.hpp",
+      "sha256": "1a7f7d0acb5c8e410bb7e0047af681e1621a9516ca99eb224a2eba90c731af91"
+    },
+    {
+      "file": "immediate_sales.hpp",
+      "source": "experiments/v6/sep09_sales_planner/include/immediate_sales.hpp",
+      "sha256": "9c12f01abd0d012d5941efcbef7e746956987c1dfb1566845e38bd013478ec50"
+    }
+  ]
+}

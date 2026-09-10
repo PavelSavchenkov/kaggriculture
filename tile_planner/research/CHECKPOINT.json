@@ -1,0 +1,16 @@
+{
+  "source_root": "experiments/v6/sep10_tiles_placement",
+  "index": "research/EXISTING_DATA.json.gz",
+  "index_sha256": "d237d780c99179d16dff6d4193d67df792558d7a57c9e5805d2e2abc7a4ee6af",
+  "index_bytes": 3572233,
+  "referenced_files": 179350,
+  "referenced_bytes": 6904391695,
+  "excluded": [
+    "build",
+    "runs/component_clean_build_001",
+    "__pycache__ directories",
+    "symlinks; shared root dependencies are separately indexed"
+  ],
+  "payload_copied": false,
+  "scope": "complete existing session evidence except reproducible build output and the redundant staged package build; includes raw replays, courses, frozen tools, scripts, reports and failures"
+}

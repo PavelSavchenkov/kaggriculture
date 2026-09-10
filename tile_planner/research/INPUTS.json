@@ -1,0 +1,490 @@
+{
+  "scope": "75 original oracle/cache-check inputs; 61 distinct plan contents; stored in the existing experiment instead of duplicated here; financial sources and actual continuations are separate requirements",
+  "inputs": [
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107262209_1/INPUT.plan",
+      "sha256": "ca1fdaa10be930683c6494afab7bacd5570c05ca7880ad8f5b9cbf7f2c692223",
+      "bytes": 61889,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107262209_1/assignment.txt",
+      "assignment_sha256": "fe0c5f155e0602575bf0f2e0bc45b39105b2a30353f1955f10b1155b29c4f515"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107264054_0/INPUT.plan",
+      "sha256": "78a3115befc1a5a8a9138142911ccad134df8dc6a32e9fd8a1801918faa26cbd",
+      "bytes": 41582,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107264054_0/assignment.txt",
+      "assignment_sha256": "c2c362adf1b0d5a218f733c832c2c7c540580ee0e6108f9cb4384865a0b48888"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107266032_0/INPUT.plan",
+      "sha256": "7604305882d97965ce944f47ccfbfbe06b0180508f86bcd7d5512b2c217c47ea",
+      "bytes": 67152,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107266032_0/assignment.txt",
+      "assignment_sha256": "a8a35024b87bc566fd6a35faba329c4289a9a095b5582d9f1a78858d89f458f1"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107267875_0/INPUT.plan",
+      "sha256": "2260954a04c5cb53ae3210818f35138f8de294976af9e2d2fb711acf49a1d01c",
+      "bytes": 51814,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107267875_0/assignment.txt",
+      "assignment_sha256": "bf75274d0a41b62ccdf0cc90ab1525b0137f423e8b113dd9be764e47aec71822"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107269880_1/INPUT.plan",
+      "sha256": "8f057bcdef676530c14f3ab2d98670cc1e209a8e05e9628aa9fa8adde5825a1c",
+      "bytes": 50555,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107269880_1/assignment.txt",
+      "assignment_sha256": "17c8c6ee086a66bd0a7cbdbc57cbef6da339264d0edd1da05a5960ad07c86e4a"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107269904_1/INPUT.plan",
+      "sha256": "3fd47f9daa19ca8c3f64027ae7c3d72f56be31381bc6805e151b653d3290c2f1",
+      "bytes": 52537,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107269904_1/assignment.txt",
+      "assignment_sha256": "d7eff61c6923af8c3cb64fabc745f0c532cb2d8db3f658b2f172ec2d0113e66a"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107270694_0/INPUT.plan",
+      "sha256": "4a200c4e1521855166cfd1a879d9471729e1afbc5b4d0f1e58f732bb00501acd",
+      "bytes": 50608,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107270694_0/assignment.txt",
+      "assignment_sha256": "d00267d4cf2505cd31cc9cab110ef2a98c85fddaaebafb9c61e2cf2c663900cb"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107271699_1/INPUT.plan",
+      "sha256": "0bdd645b46398db9201095698279c5e04b3453b0b53b77f94dc9824824726baa",
+      "bytes": 39066,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107271699_1/assignment.txt",
+      "assignment_sha256": "ddcc14f5388a966ceade974c828288561350590d1a999ab3208035f2d694aae7"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107271700_1/INPUT.plan",
+      "sha256": "063a9e8a7fd80d5235127bb742da0131d3d968451e09dea6ff1e2cb9a0a3d2f1",
+      "bytes": 42522,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107271700_1/assignment.txt",
+      "assignment_sha256": "332451fec046e6e708aeac519cb64f29ef2e6e57e83039fbb2054a4146703639"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107273599_0/INPUT.plan",
+      "sha256": "8f057bcdef676530c14f3ab2d98670cc1e209a8e05e9628aa9fa8adde5825a1c",
+      "bytes": 50555,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107273599_0/assignment.txt",
+      "assignment_sha256": "17c8c6ee086a66bd0a7cbdbc57cbef6da339264d0edd1da05a5960ad07c86e4a"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107273696_1/INPUT.plan",
+      "sha256": "8cf1468413dce4f6f3b1413520a79ef6ea649ae4180f0a4a31a5f3ac92be4685",
+      "bytes": 47722,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107273696_1/assignment.txt",
+      "assignment_sha256": "edb019211aa01ec339ad8cdbbb564842a9c716eae2ae919f7113717a7c0a99a2"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107273702_0/INPUT.plan",
+      "sha256": "90f94fd3b34e815bd7aed64cfc336541af257a34072522060668595a1babba62",
+      "bytes": 43506,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107273702_0/assignment.txt",
+      "assignment_sha256": "624dcb9193019b745da0787f692626be9e884c986c68f874381cecea63e8bd24"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107274572_1/INPUT.plan",
+      "sha256": "4a200c4e1521855166cfd1a879d9471729e1afbc5b4d0f1e58f732bb00501acd",
+      "bytes": 50608,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107274572_1/assignment.txt",
+      "assignment_sha256": "d00267d4cf2505cd31cc9cab110ef2a98c85fddaaebafb9c61e2cf2c663900cb"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107275573_0/INPUT.plan",
+      "sha256": "8f057bcdef676530c14f3ab2d98670cc1e209a8e05e9628aa9fa8adde5825a1c",
+      "bytes": 50555,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107275573_0/assignment.txt",
+      "assignment_sha256": "17c8c6ee086a66bd0a7cbdbc57cbef6da339264d0edd1da05a5960ad07c86e4a"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107275573_1/INPUT.plan",
+      "sha256": "2d13e4af581f9f7e8434d5cedb24e386658c0237119e039146684afb3f3a68d1",
+      "bytes": 45043,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107275573_1/assignment.txt",
+      "assignment_sha256": "4e6ae6ffe3157245a88d7cb8739233230308c08cb4b68ee6ad61639a715aed1c"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107277532_0/INPUT.plan",
+      "sha256": "590d350a11ad47b24d6a9a10dd2cf94857c3130c3d91f623cee3a30694101d53",
+      "bytes": 63514,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107277532_0/assignment.txt",
+      "assignment_sha256": "5d1b007e71566f0782fe84b17e2bd1dca33a995428629c685f4a0f951776594b"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107277555_0/INPUT.plan",
+      "sha256": "ebe6fb48dc68e57f9c31cc227747451d62b1ad9243810440f21b524393f804b4",
+      "bytes": 36583,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107277555_0/assignment.txt",
+      "assignment_sha256": "b6ab8a80f907b172490adf0100ab08d762240acf09a4397bd2d37c77931acfcf"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107277555_1/INPUT.plan",
+      "sha256": "1c26a33333297ed6cc14eda26398b27df45fe14c875d5109142164b73dd784f3",
+      "bytes": 79784,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107277555_1/assignment.txt",
+      "assignment_sha256": "c10f3ed164d3f5fe73ca3e059d20833a445b8db19dcfeeb4cb3b27202f9405c1"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107278407_1/INPUT.plan",
+      "sha256": "4a200c4e1521855166cfd1a879d9471729e1afbc5b4d0f1e58f732bb00501acd",
+      "bytes": 50608,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107278407_1/assignment.txt",
+      "assignment_sha256": "d00267d4cf2505cd31cc9cab110ef2a98c85fddaaebafb9c61e2cf2c663900cb"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107279087_1/INPUT.plan",
+      "sha256": "498d0d9f8f2f98ff384a3ad00b7c397bd02b5a1efba4ec2b7039701449e32779",
+      "bytes": 48244,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107279087_1/assignment.txt",
+      "assignment_sha256": "5c06115b7443eaf8252b6c7dd5479694425e59072948475406138ac9b00992b7"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107279416_0/INPUT.plan",
+      "sha256": "9ea94cec58fd12817ada23d2d7f6619732ae713cfb2df51c41615ba7bba18e21",
+      "bytes": 47625,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107279416_0/assignment.txt",
+      "assignment_sha256": "b99e6cd28086bb2dfc80104620fad47db27bdced246080fad577d6edfd890920"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107279416_1/INPUT.plan",
+      "sha256": "ef93b50dd73e6d6d15755a585c22f4e93d37c8070d20174a01436ff928e88b23",
+      "bytes": 44209,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107279416_1/assignment.txt",
+      "assignment_sha256": "317499ab9e23f7d26ce5ad770f08a202e2a594ab92f339d4b7b81d0a6aa6141d"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107279427_0/INPUT.plan",
+      "sha256": "8f057bcdef676530c14f3ab2d98670cc1e209a8e05e9628aa9fa8adde5825a1c",
+      "bytes": 50555,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107279427_0/assignment.txt",
+      "assignment_sha256": "17c8c6ee086a66bd0a7cbdbc57cbef6da339264d0edd1da05a5960ad07c86e4a"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107281392_0/INPUT.plan",
+      "sha256": "e93398f494f304b9302561c1192e6f4f1a89ee452072141764fc39f09697d20a",
+      "bytes": 49938,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107281392_0/assignment.txt",
+      "assignment_sha256": "3be85aadfd5f18dec7fde23c661ac6eec560791bc078bc9a7f478bf9b56186f5"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107281413_0/INPUT.plan",
+      "sha256": "7f9d1e11407aef18ea5b816803430f3859462048fa870aa404845d91132abc43",
+      "bytes": 59173,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107281413_0/assignment.txt",
+      "assignment_sha256": "a56161a4d7466435ab71527761428427d7ad70d06efd6dc02197355999753bd1"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107282298_1/INPUT.plan",
+      "sha256": "4a200c4e1521855166cfd1a879d9471729e1afbc5b4d0f1e58f732bb00501acd",
+      "bytes": 50608,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107282298_1/assignment.txt",
+      "assignment_sha256": "d00267d4cf2505cd31cc9cab110ef2a98c85fddaaebafb9c61e2cf2c663900cb"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107282484_1/INPUT.plan",
+      "sha256": "91d965c77fd6ddff4918c5be0c2353519e7e6c1d39965c67333e1f14ad48d4e3",
+      "bytes": 53078,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107282484_1/assignment.txt",
+      "assignment_sha256": "01bd754f4a90b1877529979e6b6da1b21df85db10b0fd2314482490d33af6ebd"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107282486_0/INPUT.plan",
+      "sha256": "8f057bcdef676530c14f3ab2d98670cc1e209a8e05e9628aa9fa8adde5825a1c",
+      "bytes": 50555,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107282486_0/assignment.txt",
+      "assignment_sha256": "17c8c6ee086a66bd0a7cbdbc57cbef6da339264d0edd1da05a5960ad07c86e4a"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107283283_1/INPUT.plan",
+      "sha256": "dd5e5bbe14d45479d7dbfed5fe8f16629e686412ba75337d9da217d1085bcd99",
+      "bytes": 40448,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107283283_1/assignment.txt",
+      "assignment_sha256": "2c87e8199ae101f8dd617ece931dd9b2d9a34744e43f7c62f8b4320980effc95"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107283291_0/INPUT.plan",
+      "sha256": "abb776b71ab44e1181a7b9a392faefe2ae674f18cf9601bdc80ec76bc7c42fdd",
+      "bytes": 44824,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107283291_0/assignment.txt",
+      "assignment_sha256": "f5ec860e59a6608835126b9e80a171092bb583260d11969305044ad564a9b10a"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107283291_1/INPUT.plan",
+      "sha256": "62df6fdf38af134b4afce4a7025b047a2ed81f6df17e21661c39ade9aae827b3",
+      "bytes": 48266,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107283291_1/assignment.txt",
+      "assignment_sha256": "1933958bb324fd80f008d19ba3d88e168e03e5f39c4e2a28c19bc9fbe918eb87"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107284282_0/INPUT.plan",
+      "sha256": "4a200c4e1521855166cfd1a879d9471729e1afbc5b4d0f1e58f732bb00501acd",
+      "bytes": 50608,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107284282_0/assignment.txt",
+      "assignment_sha256": "d00267d4cf2505cd31cc9cab110ef2a98c85fddaaebafb9c61e2cf2c663900cb"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107284892_0/INPUT.plan",
+      "sha256": "8f057bcdef676530c14f3ab2d98670cc1e209a8e05e9628aa9fa8adde5825a1c",
+      "bytes": 50555,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107284892_0/assignment.txt",
+      "assignment_sha256": "17c8c6ee086a66bd0a7cbdbc57cbef6da339264d0edd1da05a5960ad07c86e4a"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107285194_0/INPUT.plan",
+      "sha256": "08cd9d7906f70646b1154fce238025ee643a22a600d09169c54eee2da7738ce2",
+      "bytes": 46950,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107285194_0/assignment.txt",
+      "assignment_sha256": "94e2793a601d95581321828d4cc1110bd4cf12a7c06667e2d21c73ac848ce9d5"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107285207_1/INPUT.plan",
+      "sha256": "cf5f26b6746680307264e98d8ae00aac48d551a2f1b3963e0ca0d48616619261",
+      "bytes": 52016,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107285207_1/assignment.txt",
+      "assignment_sha256": "fb8fd184c28a25c856a8e3f309195b7dcede8d4f95cf3e03c39c488c59e50b3b"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107285238_0/INPUT.plan",
+      "sha256": "cad6f4c9169d8b2188e4b8caef352830be29c01a1548f859721aaedb711a996b",
+      "bytes": 59654,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107285238_0/assignment.txt",
+      "assignment_sha256": "5c3d1dda438a05dbc7b577810bd9f04bfdddbd1a33f90c1d8c987e6bfd7f03f7"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107287081_1/INPUT.plan",
+      "sha256": "4a200c4e1521855166cfd1a879d9471729e1afbc5b4d0f1e58f732bb00501acd",
+      "bytes": 50608,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107287081_1/assignment.txt",
+      "assignment_sha256": "d00267d4cf2505cd31cc9cab110ef2a98c85fddaaebafb9c61e2cf2c663900cb"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107287100_1/INPUT.plan",
+      "sha256": "ecd4e4d87c0c61fdb5cf5892912290435a863c59126ec062e7dfc671ceaa4480",
+      "bytes": 46020,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107287100_1/assignment.txt",
+      "assignment_sha256": "97ccfe86b4a2b6de97dac49430ea63ff3b4a3b372fba41b565f0db6192f4ebe0"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107287104_0/INPUT.plan",
+      "sha256": "7b8deb0e476b19bfb5f26a91e45830da9d593f898a590f77d350040650728c8e",
+      "bytes": 47070,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107287104_0/assignment.txt",
+      "assignment_sha256": "35bb79b76171ddee18d96e197a7529cf7a9a0de808bd10d14f29e56d203b95cf"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107288328_0/INPUT.plan",
+      "sha256": "95d3c35fb6e22941657d47b36fab79743228d62d3bf6dd8baa9339e07ddfa99b",
+      "bytes": 50548,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107288328_0/assignment.txt",
+      "assignment_sha256": "17c8c6ee086a66bd0a7cbdbc57cbef6da339264d0edd1da05a5960ad07c86e4a"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107288951_0/INPUT.plan",
+      "sha256": "a991e71cb164256ff80b540fd57a6524b8dff22b270df06fb8bc0d1316a5b397",
+      "bytes": 45244,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107288951_0/assignment.txt",
+      "assignment_sha256": "fed010c9f34c0fd5c91f7b0f927fe4da09093162d10cae073830e4c191c1913e"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107289135_0/INPUT.plan",
+      "sha256": "08d7d9ca385dc0520c69bd802dadf82e99f7e647fbdf4b9a255ff4fc955ced15",
+      "bytes": 45893,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107289135_0/assignment.txt",
+      "assignment_sha256": "1a9a59537454d10cb2b28250a3ff4c0d9321f72d0a5f14e925ac42cb65566638"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107289135_1/INPUT.plan",
+      "sha256": "831d6ff6a48dec2ee2d400c47dd7e820ee643cc4bedca80ea9b17aad4c1c7aec",
+      "bytes": 49868,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107289135_1/assignment.txt",
+      "assignment_sha256": "66a1e7d411a9d15f0a0e699ce3824b8b6219cc93f8568e04adbe7227c6c0004b"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107290178_1/INPUT.plan",
+      "sha256": "89953a81a7cb93344e3e1cd8b266b1eb14d160747ba08f0613513ad3d0d5eb31",
+      "bytes": 50316,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107290178_1/assignment.txt",
+      "assignment_sha256": "d1e93ed13f7fb5f675904a36c1eaffd9db53d783d80e24043d520ef54c5a036c"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107291076_1/INPUT.plan",
+      "sha256": "4a200c4e1521855166cfd1a879d9471729e1afbc5b4d0f1e58f732bb00501acd",
+      "bytes": 50608,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107291076_1/assignment.txt",
+      "assignment_sha256": "d00267d4cf2505cd31cc9cab110ef2a98c85fddaaebafb9c61e2cf2c663900cb"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107291088_1/INPUT.plan",
+      "sha256": "088365d1b997dea9223a714b758387846b8cecd08c1cc12e42f1910bb4250cea",
+      "bytes": 45518,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107291088_1/assignment.txt",
+      "assignment_sha256": "88ececdfeac2076989fc77d014d1aedb5eb5a53ae1a30d4617e555a4ffa5fad5"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107292082_0/INPUT.plan",
+      "sha256": "8f057bcdef676530c14f3ab2d98670cc1e209a8e05e9628aa9fa8adde5825a1c",
+      "bytes": 50555,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/replay_lives_002/107292082_0/assignment.txt",
+      "assignment_sha256": "17c8c6ee086a66bd0a7cbdbc57cbef6da339264d0edd1da05a5960ad07c86e4a"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/new_inputs_001/carrot10.plan",
+      "sha256": "21a6d09a1bf11a6ea2faf594d988229cc445ff9efab3f2dd41520f8ff480a677",
+      "bytes": 16182
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/new_inputs_001/expanding32.plan",
+      "sha256": "2fc2c7ee864ec5d9881268b837666e459730a91de287954724508ab9c87f26f6",
+      "bytes": 27730
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/new_inputs_001/geese6.plan",
+      "sha256": "beb1a8dadc8d58d3db769fa4152d6c6403fb7852adb944ba1505f2d0d8bdbe3f",
+      "bytes": 16850
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/new_inputs_001/melon_wheat.plan",
+      "sha256": "7d39ab73fe0297e9fb3d2a059c176db96cab3502dd327f363feab38d12921fd2",
+      "bytes": 11874
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/new_inputs_001/mixed_delayed.plan",
+      "sha256": "60deab189bcc8a92946152ce88a0f7374217ddfeda8732aac6ab19a31e120997",
+      "bytes": 12181
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/new_inputs_001/mixed_low_care.plan",
+      "sha256": "aa5b958a84e4577044b047d3a98a7d15eb693883cfcb153143933ccbdd29fa00",
+      "bytes": 12176
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/new_inputs_001/staggered_wheat.plan",
+      "sha256": "b5b7f45e52dcfd68868cfab367e8c92650c9cf5c56734930bbd086e592fccfdb",
+      "bytes": 22662
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/new_inputs_001/strawberry_rotation.plan",
+      "sha256": "2c60b2a683f211c922ece8aa651bfe7ab6981784eb67a729409c5ac91a5d57b3",
+      "bytes": 9625
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/new_inputs_001/tomato_rotation.plan",
+      "sha256": "a88b81fa229343084cad2afdbe36b1293d01fc0aed5f514edd954973120ae8f0",
+      "bytes": 9956
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/new_inputs_001/wheat17.plan",
+      "sha256": "ec6da52abd0631f46469cfc61d2c840a62fd5dc4b06dd48c0c202a0c05e7cd3a",
+      "bytes": 19241
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/new_inputs_001/wheat23.plan",
+      "sha256": "e34a1348b67a0fd79e53ff77a22e6405585dd5a513af66a29bfe76af496e21ac",
+      "bytes": 26003
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/new_inputs_001/wheat9.plan",
+      "sha256": "35d9159d96c4f6af1d5679b8fcf342e6ee6c942529a1169199b81a9df5094b78",
+      "bytes": 10224
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/service_inputs_001/fertilized_wheat14.plan",
+      "sha256": "69cc1ae7722bf3a6a064ee2ba54196a1e39dcbba1a3456960102c2de6f081023",
+      "bytes": 16542
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/service_inputs_001/fertilized_wheat20.plan",
+      "sha256": "0f5e1eb5138926476e57f3d4a9a47b8091a099f7508ed4faf93b1cd64ff4a71e",
+      "bytes": 23454
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/service_inputs_001/fertilized_wheat8.plan",
+      "sha256": "797e54cdda34bc50049aed5be32fc38e142b31e729dfccb779527a718fb56281",
+      "bytes": 9629
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/service_inputs_001/sparse_crop0.plan",
+      "sha256": "d1057a43c1e15e08f8804e339b5bbb33033793d56234bebe961774fe3ab14080",
+      "bytes": 15411
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/service_inputs_001/sparse_crop1.plan",
+      "sha256": "c0b6d70eb1907f38a0f5145fc9f13a65d1436a0ca019bfe72cd3541f521a39f2",
+      "bytes": 19668
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/service_inputs_001/sparse_crop4.plan",
+      "sha256": "b2eb5ec00dfb7a0e213ec0683bd05bbe36c4ba39eb8257b3be099b483cfa533b",
+      "bytes": 4491
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/service_inputs_001/sparse_tomato_aligned.plan",
+      "sha256": "8c707c7b45a98294051f52bbc457152817ad144b184b9672512d24cc1ea346b0",
+      "bytes": 12999
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/service_inputs_001/sparse_tomato_stagger.plan",
+      "sha256": "ee69a183546c62c7eb5c392dc2433e1ca6cf995f609731db44ade72467276cf5",
+      "bytes": 12999
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/final_panel_001/107370210_0/lives/INPUT.plan",
+      "sha256": "95cd2ae96f0199309aa6b0aa749253be30eecfa2574aa31975041cd432fcafea",
+      "bytes": 50138,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/final_panel_001/107370210_0/lives/assignment.txt",
+      "assignment_sha256": "02c80fba3a49c89a864f66912820fd88f13be2b08e7ae2692e6961197dffc5ec"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/final_panel_001/107371249_1/lives/INPUT.plan",
+      "sha256": "4a200c4e1521855166cfd1a879d9471729e1afbc5b4d0f1e58f732bb00501acd",
+      "bytes": 50608,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/final_panel_001/107371249_1/lives/assignment.txt",
+      "assignment_sha256": "d00267d4cf2505cd31cc9cab110ef2a98c85fddaaebafb9c61e2cf2c663900cb"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/final_panel_001/107372696_1/lives/INPUT.plan",
+      "sha256": "ffae7597a178e2b3dcf5774945f07cf118dcae9e101e77b9748d345c76fd2ee3",
+      "bytes": 50796,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/final_panel_001/107372696_1/lives/assignment.txt",
+      "assignment_sha256": "d00267d4cf2505cd31cc9cab110ef2a98c85fddaaebafb9c61e2cf2c663900cb"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/final_panel_001/107374257_0/lives/INPUT.plan",
+      "sha256": "96b512365dfb6969faab9edba53a498505d4dc10760ae07e8ace1d6b93d6d66a",
+      "bytes": 50566,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/final_panel_001/107374257_0/lives/assignment.txt",
+      "assignment_sha256": "d00267d4cf2505cd31cc9cab110ef2a98c85fddaaebafb9c61e2cf2c663900cb"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/final_panel_001/107374327_0/lives/INPUT.plan",
+      "sha256": "4a200c4e1521855166cfd1a879d9471729e1afbc5b4d0f1e58f732bb00501acd",
+      "bytes": 50608,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/final_panel_001/107374327_0/lives/assignment.txt",
+      "assignment_sha256": "d00267d4cf2505cd31cc9cab110ef2a98c85fddaaebafb9c61e2cf2c663900cb"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/final_panel_001/corrected_107375112_1/lives/INPUT.plan",
+      "sha256": "f0324a0c5cfe2e61356236baef1e8b0b552ee4333cb18c10f9ef9ba684fed0ce",
+      "bytes": 50543,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/final_panel_001/corrected_107375112_1/lives/assignment.txt",
+      "assignment_sha256": "d00267d4cf2505cd31cc9cab110ef2a98c85fddaaebafb9c61e2cf2c663900cb"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/repeated_lives_001_107369606_1/INPUT.plan",
+      "sha256": "da0a3846fea7228def2484ceb64370d37938e52ee0c9d09223f0dbb73fe48e88",
+      "bytes": 49468,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/repeated_lives_001_107369606_1/assignment.txt",
+      "assignment_sha256": "f141d8c180fca6e72bddc59157a8df2031be5c88c6a5bacdb1f28439eb7e8ff7"
+    },
+    {
+      "plan": "experiments/v6/sep10_tiles_placement/runs/repeated_lives_001_107375473_0/INPUT.plan",
+      "sha256": "d04975a5d4560e4ecc54687f8e07f5aa0b04b6f83e9cbac491acb731bc4f43d1",
+      "bytes": 47613,
+      "assignment": "experiments/v6/sep10_tiles_placement/runs/repeated_lives_001_107375473_0/assignment.txt",
+      "assignment_sha256": "19e585a2b9ef9d2475bd1ccd64be1f979b6dca5d276cd6f797a27b71a829db9b"
+    }
+  ]
+}

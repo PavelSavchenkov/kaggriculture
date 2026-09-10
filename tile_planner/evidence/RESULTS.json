@@ -1,0 +1,1318 @@
+{
+  "scope": "preserved development, reserved and separately labeled post-freeze results; no broad placement-quality promotion",
+  "bounded": {
+    "synthetic_development_180": {
+      "source": "runs/bounded_panel_002/SUMMARY.json",
+      "cases": [
+        {
+          "case": "expanding36",
+          "fixed_gain": 0,
+          "search_gain": 1803,
+          "search_minus_fixed_cash": 1803,
+          "fixed_bill": 1876,
+          "search_bill": 1698,
+          "both_inputs_reverified": true
+        },
+        {
+          "case": "expanding32",
+          "fixed_gain": 650,
+          "search_gain": 650,
+          "search_minus_fixed_cash": 0,
+          "fixed_bill": 1122,
+          "search_bill": 1122,
+          "both_inputs_reverified": true
+        },
+        {
+          "case": "wheat23",
+          "fixed_gain": 0,
+          "search_gain": 0,
+          "search_minus_fixed_cash": 0,
+          "fixed_bill": 122,
+          "search_bill": 122,
+          "both_inputs_reverified": true
+        },
+        {
+          "case": "mixed_delayed",
+          "fixed_gain": 0,
+          "search_gain": 0,
+          "search_minus_fixed_cash": 0,
+          "fixed_bill": 54,
+          "search_bill": 54,
+          "both_inputs_reverified": true
+        },
+        {
+          "case": "mixed_low_care",
+          "fixed_gain": 1,
+          "search_gain": 1,
+          "search_minus_fixed_cash": 0,
+          "fixed_bill": 46,
+          "search_bill": 46,
+          "both_inputs_reverified": true
+        },
+        {
+          "case": "carrot10",
+          "fixed_gain": 0,
+          "search_gain": 0,
+          "search_minus_fixed_cash": 0,
+          "fixed_bill": 20,
+          "search_bill": 20,
+          "both_inputs_reverified": true
+        }
+      ],
+      "wins_ties_losses": [
+        1,
+        5,
+        0
+      ],
+      "maximum_internal_overrun_seconds": 0.0034404339967295527
+    },
+    "replay_development_180": {
+      "source": "runs/real_bounded_panel_002/SUMMARY.json",
+      "cases": [
+        {
+          "case": "107262209",
+          "fixed_gain": 0,
+          "search_gain": 0,
+          "search_minus_fixed_cash": 0,
+          "fixed_bill": 2413,
+          "search_bill": 2413,
+          "both_inputs_reverified": true
+        },
+        {
+          "case": "107264054",
+          "fixed_gain": 0,
+          "search_gain": 0,
+          "search_minus_fixed_cash": 0,
+          "fixed_bill": 12453,
+          "search_bill": 12453,
+          "both_inputs_reverified": true
+        },
+        {
+          "case": "107269880",
+          "fixed_gain": 0,
+          "search_gain": 0,
+          "search_minus_fixed_cash": 0,
+          "fixed_bill": 3227,
+          "search_bill": 3227,
+          "both_inputs_reverified": true
+        },
+        {
+          "case": "107270694",
+          "fixed_gain": 0,
+          "search_gain": 0,
+          "search_minus_fixed_cash": 0,
+          "fixed_bill": 3361,
+          "search_bill": 3361,
+          "both_inputs_reverified": true
+        },
+        {
+          "case": "107273696",
+          "fixed_gain": 432,
+          "search_gain": 288,
+          "search_minus_fixed_cash": -144,
+          "fixed_bill": 4166,
+          "search_bill": 4310,
+          "both_inputs_reverified": true
+        }
+      ],
+      "wins_ties_losses": [
+        0,
+        4,
+        1
+      ],
+      "maximum_internal_overrun_seconds": 0
+    },
+    "frozen_final_180": {
+      "source": "runs/final_panel_001/BOUNDED.json",
+      "cases": [
+        {
+          "case": "107370210",
+          "fixed_gain": 0,
+          "search_gain": 0,
+          "search_minus_fixed_cash": 0,
+          "fixed_bill": 3416,
+          "search_bill": 3416,
+          "both_inputs_reverified": true
+        },
+        {
+          "case": "107371249",
+          "fixed_gain": 0,
+          "search_gain": 0,
+          "search_minus_fixed_cash": 0,
+          "fixed_bill": 3536,
+          "search_bill": 3536,
+          "both_inputs_reverified": true
+        },
+        {
+          "case": "107372696",
+          "fixed_gain": 0,
+          "search_gain": 0,
+          "search_minus_fixed_cash": 0,
+          "fixed_bill": 3484,
+          "search_bill": 3484,
+          "both_inputs_reverified": true
+        },
+        {
+          "case": "107374257",
+          "fixed_gain": 0,
+          "search_gain": 0,
+          "search_minus_fixed_cash": 0,
+          "fixed_bill": 3196,
+          "search_bill": 3196,
+          "both_inputs_reverified": true
+        },
+        {
+          "case": "107374327",
+          "fixed_gain": 0,
+          "search_gain": 0,
+          "search_minus_fixed_cash": 0,
+          "fixed_bill": 3557,
+          "search_bill": 3557,
+          "both_inputs_reverified": true
+        },
+        {
+          "case": "107375112",
+          "fixed_gain": 0,
+          "search_gain": 0,
+          "search_minus_fixed_cash": 0,
+          "fixed_bill": 3612,
+          "search_bill": 3612,
+          "both_inputs_reverified": true
+        }
+      ],
+      "wins_ties_losses": [
+        0,
+        6,
+        0
+      ],
+      "maximum_internal_overrun_seconds": 0
+    },
+    "distinct_family_extension_180": {
+      "source": "runs/distinct_bounded_panel_001/SUMMARY.json",
+      "cases": [
+        {
+          "case": "107369606_1/recorded_0.1",
+          "fixed_gain": 650,
+          "search_gain": 362,
+          "search_minus_fixed_cash": -288,
+          "fixed_bill": 4661,
+          "search_bill": 4949,
+          "both_inputs_reverified": true
+        },
+        {
+          "case": "107375473_0/public_router_9",
+          "fixed_gain": 89,
+          "search_gain": 0,
+          "search_minus_fixed_cash": -89,
+          "fixed_bill": 2404,
+          "search_bill": 2493,
+          "both_inputs_reverified": true
+        }
+      ],
+      "wins_ties_losses": [
+        0,
+        0,
+        2
+      ],
+      "maximum_internal_overrun_seconds": 0.006735810005920939
+    }
+  },
+  "frozen_final_coverage": {
+    "selected_inputs": 8,
+    "biological_inputs_supported": 6,
+    "compile_attempts_supported_inputs": 24,
+    "engine_complete": 16,
+    "original_calendar_verified": 15,
+    "rows": [
+      {
+        "episode": 107370210,
+        "seat": 0,
+        "method": "recorded_0.1",
+        "returncode": 1,
+        "complete": false,
+        "calendar_verified": null,
+        "hire_bill": 102,
+        "cash": 67,
+        "failure": "failed_action_day_8_hour_16",
+        "output": "runs/final_panel_001/107370210_0/recorded_0.1"
+      },
+      {
+        "episode": 107370210,
+        "seat": 0,
+        "method": "recorded_9",
+        "returncode": 1,
+        "complete": false,
+        "calendar_verified": null,
+        "hire_bill": 79,
+        "cash": 90,
+        "failure": "failed_action_day_8_hour_16",
+        "output": "runs/final_panel_001/107370210_0/recorded_9"
+      },
+      {
+        "episode": 107370210,
+        "seat": 0,
+        "method": "public_router_0.1",
+        "returncode": 0,
+        "complete": true,
+        "calendar_verified": true,
+        "hire_bill": 5337,
+        "cash": 69417,
+        "failure": "",
+        "output": "runs/final_panel_001/107370210_0/public_router_0.1"
+      },
+      {
+        "episode": 107370210,
+        "seat": 0,
+        "method": "public_router_9",
+        "returncode": 0,
+        "complete": true,
+        "calendar_verified": true,
+        "hire_bill": 3416,
+        "cash": 71338,
+        "failure": "",
+        "output": "runs/final_panel_001/107370210_0/public_router_9"
+      },
+      {
+        "episode": 107371249,
+        "seat": 1,
+        "method": "recorded_0.1",
+        "returncode": 0,
+        "complete": true,
+        "calendar_verified": true,
+        "hire_bill": 3536,
+        "cash": 144612,
+        "failure": "",
+        "output": "runs/final_panel_001/107371249_1/recorded_0.1"
+      },
+      {
+        "episode": 107371249,
+        "seat": 1,
+        "method": "recorded_9",
+        "returncode": 2,
+        "complete": null,
+        "calendar_verified": null,
+        "hire_bill": null,
+        "cash": null,
+        "failure": null,
+        "output": "runs/final_panel_001/107371249_1/recorded_9"
+      },
+      {
+        "episode": 107371249,
+        "seat": 1,
+        "method": "public_router_0.1",
+        "returncode": 0,
+        "complete": true,
+        "calendar_verified": true,
+        "hire_bill": 3536,
+        "cash": 95348,
+        "failure": "",
+        "output": "runs/final_panel_001/107371249_1/public_router_0.1"
+      },
+      {
+        "episode": 107371249,
+        "seat": 1,
+        "method": "public_router_9",
+        "returncode": 2,
+        "complete": null,
+        "calendar_verified": null,
+        "hire_bill": null,
+        "cash": null,
+        "failure": null,
+        "output": "runs/final_panel_001/107371249_1/public_router_9"
+      },
+      {
+        "episode": 107372696,
+        "seat": 1,
+        "method": "recorded_0.1",
+        "returncode": 0,
+        "complete": true,
+        "calendar_verified": true,
+        "hire_bill": 3981,
+        "cash": 85828,
+        "failure": "",
+        "output": "runs/final_panel_001/107372696_1/recorded_0.1"
+      },
+      {
+        "episode": 107372696,
+        "seat": 1,
+        "method": "recorded_9",
+        "returncode": 0,
+        "complete": true,
+        "calendar_verified": true,
+        "hire_bill": 3484,
+        "cash": 86325,
+        "failure": "",
+        "output": "runs/final_panel_001/107372696_1/recorded_9"
+      },
+      {
+        "episode": 107372696,
+        "seat": 1,
+        "method": "public_router_0.1",
+        "returncode": 0,
+        "complete": true,
+        "calendar_verified": true,
+        "hire_bill": 3981,
+        "cash": 90786,
+        "failure": "",
+        "output": "runs/final_panel_001/107372696_1/public_router_0.1"
+      },
+      {
+        "episode": 107372696,
+        "seat": 1,
+        "method": "public_router_9",
+        "returncode": 0,
+        "complete": true,
+        "calendar_verified": true,
+        "hire_bill": 3484,
+        "cash": 91283,
+        "failure": "",
+        "output": "runs/final_panel_001/107372696_1/public_router_9"
+      },
+      {
+        "episode": 107374257,
+        "seat": 0,
+        "method": "recorded_0.1",
+        "returncode": 0,
+        "complete": true,
+        "calendar_verified": true,
+        "hire_bill": 3591,
+        "cash": 117627,
+        "failure": "",
+        "output": "runs/final_panel_001/107374257_0/recorded_0.1"
+      },
+      {
+        "episode": 107374257,
+        "seat": 0,
+        "method": "recorded_9",
+        "returncode": 0,
+        "complete": true,
+        "calendar_verified": true,
+        "hire_bill": 3175,
+        "cash": 118043,
+        "failure": "",
+        "output": "runs/final_panel_001/107374257_0/recorded_9"
+      },
+      {
+        "episode": 107374257,
+        "seat": 0,
+        "method": "public_router_0.1",
+        "returncode": 0,
+        "complete": true,
+        "calendar_verified": true,
+        "hire_bill": 3591,
+        "cash": 140102,
+        "failure": "",
+        "output": "runs/final_panel_001/107374257_0/public_router_0.1"
+      },
+      {
+        "episode": 107374257,
+        "seat": 0,
+        "method": "public_router_9",
+        "returncode": 0,
+        "complete": true,
+        "calendar_verified": true,
+        "hire_bill": 3196,
+        "cash": 140497,
+        "failure": "",
+        "output": "runs/final_panel_001/107374257_0/public_router_9"
+      },
+      {
+        "episode": 107374327,
+        "seat": 0,
+        "method": "recorded_0.1",
+        "returncode": 0,
+        "complete": true,
+        "calendar_verified": true,
+        "hire_bill": 3557,
+        "cash": 136567,
+        "failure": "",
+        "output": "runs/final_panel_001/107374327_0/recorded_0.1"
+      },
+      {
+        "episode": 107374327,
+        "seat": 0,
+        "method": "recorded_9",
+        "returncode": 2,
+        "complete": null,
+        "calendar_verified": null,
+        "hire_bill": null,
+        "cash": null,
+        "failure": null,
+        "output": "runs/final_panel_001/107374327_0/recorded_9"
+      },
+      {
+        "episode": 107374327,
+        "seat": 0,
+        "method": "public_router_0.1",
+        "returncode": 0,
+        "complete": true,
+        "calendar_verified": true,
+        "hire_bill": 3557,
+        "cash": 132237,
+        "failure": "",
+        "output": "runs/final_panel_001/107374327_0/public_router_0.1"
+      },
+      {
+        "episode": 107374327,
+        "seat": 0,
+        "method": "public_router_9",
+        "returncode": 2,
+        "complete": null,
+        "calendar_verified": null,
+        "hire_bill": null,
+        "cash": null,
+        "failure": null,
+        "output": "runs/final_panel_001/107374327_0/public_router_9"
+      },
+      {
+        "episode": 107375112,
+        "seat": 1,
+        "method": "recorded_0.1",
+        "returncode": 0,
+        "complete": true,
+        "calendar_verified": false,
+        "hire_bill": 3612,
+        "cash": 143843,
+        "failure": "",
+        "output": "runs/final_panel_001/corrected_107375112_1/recorded_0.1"
+      },
+      {
+        "episode": 107375112,
+        "seat": 1,
+        "method": "recorded_9",
+        "returncode": 2,
+        "complete": null,
+        "calendar_verified": null,
+        "hire_bill": null,
+        "cash": null,
+        "failure": null,
+        "output": "runs/final_panel_001/corrected_107375112_1/recorded_9"
+      },
+      {
+        "episode": 107375112,
+        "seat": 1,
+        "method": "public_router_0.1",
+        "returncode": 0,
+        "complete": true,
+        "calendar_verified": true,
+        "hire_bill": 3612,
+        "cash": 144518,
+        "failure": "",
+        "output": "runs/final_panel_001/corrected_107375112_1/public_router_0.1"
+      },
+      {
+        "episode": 107375112,
+        "seat": 1,
+        "method": "public_router_9",
+        "returncode": 2,
+        "complete": null,
+        "calendar_verified": null,
+        "hire_bill": null,
+        "cash": null,
+        "failure": null,
+        "output": "runs/final_panel_001/corrected_107375112_1/public_router_9"
+      }
+    ]
+  },
+  "repeated_service_extension": {
+    "inputs": 2,
+    "attempts": 8,
+    "verified_complete": 5,
+    "rows": [
+      {
+        "episode": 107369606,
+        "method": "recorded_0.1",
+        "complete": true,
+        "hire_bill": 5311,
+        "cash": 101679,
+        "failure": "",
+        "output": "runs/repeated_service_panel_001/107369606_1/recorded_0.1"
+      },
+      {
+        "episode": 107369606,
+        "method": "recorded_9",
+        "complete": false,
+        "hire_bill": 1203,
+        "cash": 40510,
+        "failure": "failed_action_day_19_hour_0",
+        "output": "runs/repeated_service_panel_001/107369606_1/recorded_9"
+      },
+      {
+        "episode": 107369606,
+        "method": "public_router_0.1",
+        "complete": false,
+        "hire_bill": 100,
+        "cash": 205,
+        "failure": "failed_action_day_5_hour_14",
+        "output": "runs/repeated_service_panel_001/107369606_1/public_router_0.1"
+      },
+      {
+        "episode": 107369606,
+        "method": "public_router_9",
+        "complete": false,
+        "hire_bill": 1292,
+        "cash": 34953,
+        "failure": "failed_action_day_19_hour_0",
+        "output": "runs/repeated_service_panel_001/107369606_1/public_router_9"
+      },
+      {
+        "episode": 107375473,
+        "method": "recorded_0.1",
+        "complete": true,
+        "hire_bill": 5345,
+        "cash": 101932,
+        "failure": "",
+        "output": "runs/repeated_service_panel_001/107375473_0/recorded_0.1"
+      },
+      {
+        "episode": 107375473,
+        "method": "recorded_9",
+        "complete": true,
+        "hire_bill": 2493,
+        "cash": 104784,
+        "failure": "",
+        "output": "runs/repeated_service_panel_001/107375473_0/recorded_9"
+      },
+      {
+        "episode": 107375473,
+        "method": "public_router_0.1",
+        "complete": true,
+        "hire_bill": 5339,
+        "cash": 126551,
+        "failure": "",
+        "output": "runs/repeated_service_panel_001/107375473_0/public_router_0.1"
+      },
+      {
+        "episode": 107375473,
+        "method": "public_router_9",
+        "complete": true,
+        "hire_bill": 2493,
+        "cash": 129397,
+        "failure": "",
+        "output": "runs/repeated_service_panel_001/107375473_0/public_router_9"
+      }
+    ]
+  },
+  "cache": {
+    "synthetic_18": {
+      "assignments": 4608,
+      "bit_exact": true,
+      "uncached_seconds": 10.0508,
+      "cached_seconds": 5.32917,
+      "time_reduction_fraction": 0.469776535201178,
+      "sources": [
+        "runs/life_day_cache_001.json"
+      ]
+    },
+    "development_fixed_finance_6": {
+      "assignments": 1536,
+      "bit_exact": true,
+      "uncached_seconds": 11.3975,
+      "cached_seconds": 8.7116,
+      "time_reduction_fraction": 0.23565694231191048,
+      "sources": [
+        "runs/replay_life_day_cache_fixed_002.json"
+      ]
+    },
+    "frozen_final_6": {
+      "assignments": 1536,
+      "bit_exact": true,
+      "uncached_seconds": 10.06486,
+      "cached_seconds": 6.86373,
+      "time_reduction_fraction": 0.31805012687707523,
+      "sources": [
+        "runs/final_panel_001/CACHE.json",
+        "runs/final_panel_001/corrected_107375112_1/CACHE.json"
+      ]
+    },
+    "repeated_extension_2": {
+      "assignments": 512,
+      "bit_exact": true,
+      "uncached_seconds": 2.85878,
+      "cached_seconds": 2.19956,
+      "time_reduction_fraction": 0.23059486913998273,
+      "sources": [
+        "runs/repeated_service_panel_001/CACHE.json"
+      ]
+    }
+  },
+  "packed_bank": {
+    "runs": 36,
+    "pairs": 18,
+    "outcomes_exact": true,
+    "engine_complete": 36,
+    "process_seconds": {
+      "txt": {
+        "n": 18,
+        "sum": 12.430795,
+        "mean": 0.6905997222222222,
+        "median": 0.73756,
+        "p95": 0.84792905,
+        "max": 0.852253
+      },
+      "bin": {
+        "n": 18,
+        "sum": 1.0263841,
+        "mean": 0.05702133888888889,
+        "median": 0.05240465,
+        "p95": 0.10238542499999996,
+        "max": 0.125318
+      }
+    },
+    "prior_construction_included": false,
+    "separate_financial_check": {
+      "checked": 36,
+      "all_verified": true
+    }
+  },
+  "real_small_bank_format": {
+    "all_complete_verified": true,
+    "paired_actions_and_outcomes_identical": true,
+    "variants": {
+      "txt": {
+        "runs": 24,
+        "compile_seconds": {
+          "n": 24,
+          "sum": 3.4425170980248367,
+          "mean": 0.14343821241770152,
+          "median": 0.1640166220095125,
+          "p95": 0.1651982996452716,
+          "max": 0.16581676599162165
+        },
+        "total_seconds": {
+          "n": 24,
+          "sum": 3.8814912860107142,
+          "mean": 0.16172880358377975,
+          "median": 0.17950969500088831,
+          "p95": 0.18879940774131682,
+          "max": 0.18956212798366323
+        },
+        "compile_cpu_seconds": 2.52,
+        "max_rss_kib": 30348
+      },
+      "bin": {
+        "runs": 24,
+        "compile_seconds": {
+          "n": 24,
+          "sum": 2.8393159799888963,
+          "mean": 0.11830483249953734,
+          "median": 0.11404042099457001,
+          "p95": 0.15676671489927674,
+          "max": 0.1659395710012177
+        },
+        "total_seconds": {
+          "n": 24,
+          "sum": 3.257337601011386,
+          "mean": 0.1357224000421411,
+          "median": 0.1312761080043856,
+          "p95": 0.1718756487054633,
+          "max": 0.18238989400560968
+        },
+        "compile_cpu_seconds": 2.15,
+        "max_rss_kib": 30516
+      }
+    }
+  },
+  "real_lifetime_compile_reuse": {
+    "all_complete_verified": true,
+    "paired_actions_and_outcomes_identical": true,
+    "variants": {
+      "old_txt": {
+        "runs": 40,
+        "compile_seconds": {
+          "n": 40,
+          "sum": 4.561627417031559,
+          "mean": 0.11404068542578898,
+          "median": 0.11315240050316788,
+          "p95": 0.12138836750964399,
+          "max": 0.15698643900395837
+        },
+        "total_seconds": {
+          "n": 40,
+          "sum": 5.275924283007043,
+          "mean": 0.13189810707517607,
+          "median": 0.13151400900096633,
+          "p95": 0.14308307193714426,
+          "max": 0.17018256700248457
+        },
+        "compile_cpu_seconds": 4.11,
+        "max_rss_kib": 30460
+      },
+      "new_bin": {
+        "runs": 40,
+        "compile_seconds": {
+          "n": 40,
+          "sum": 3.6072620740596903,
+          "mean": 0.09018155185149226,
+          "median": 0.08933119950233959,
+          "p95": 0.1028940479089215,
+          "max": 0.10707171200192533
+        },
+        "total_seconds": {
+          "n": 40,
+          "sum": 4.261937875038711,
+          "mean": 0.10654844687596779,
+          "median": 0.10606495599495247,
+          "p95": 0.1243703249398095,
+          "max": 0.13017921600840054
+        },
+        "compile_cpu_seconds": 3.16,
+        "max_rss_kib": 30084
+      },
+      "old_bin": {
+        "runs": 40,
+        "compile_seconds": {
+          "n": 40,
+          "sum": 4.060929735991522,
+          "mean": 0.10152324339978805,
+          "median": 0.09908066799107473,
+          "p95": 0.11191017090313835,
+          "max": 0.11608499501016922
+        },
+        "total_seconds": {
+          "n": 40,
+          "sum": 4.687551720024203,
+          "mean": 0.11718879300060507,
+          "median": 0.11553426850878168,
+          "p95": 0.12761615440467722,
+          "max": 0.13872224700753577
+        },
+        "compile_cpu_seconds": 3.57,
+        "max_rss_kib": 30324
+      }
+    }
+  },
+  "lifetime_oracle_reuse_check": {
+    "plans": 75,
+    "lifetimes": 15715,
+    "days": 471450,
+    "all_states_and_work_exact": true,
+    "unique_specs": 5430
+  },
+  "bank_amortization": {
+    "summaries": [
+      {
+        "name": "rotation_9",
+        "entries": 9,
+        "bytes": 7676,
+        "mean_pack_and_validate_wall_seconds": 0.027977882666164078,
+        "mean_load_saving_seconds": 0.010633786333333332,
+        "load_only_break_even_uses": 3,
+        "max_rss_kib": 5956
+      },
+      {
+        "name": "real_30",
+        "entries": 30,
+        "bytes": 101614,
+        "mean_pack_and_validate_wall_seconds": 0.04667400833568536,
+        "mean_load_saving_seconds": 0.016177645333333334,
+        "load_only_break_even_uses": 3,
+        "max_rss_kib": 7124
+      },
+      {
+        "name": "synthetic_269",
+        "entries": 269,
+        "bytes": 422757,
+        "mean_pack_and_validate_wall_seconds": 0.6609706650003014,
+        "mean_load_saving_seconds": 0.47637090666666665,
+        "load_only_break_even_uses": 2,
+        "max_rss_kib": 13324
+      },
+      {
+        "name": "development_1212",
+        "entries": 1212,
+        "bytes": 3977383,
+        "mean_pack_and_validate_wall_seconds": 2.2899895016647256,
+        "mean_load_saving_seconds": 1.0818695,
+        "load_only_break_even_uses": 3,
+        "max_rss_kib": 47808
+      }
+    ],
+    "all_packed_bytes_identical": true,
+    "break_even_scope": "ceiling of measured pack-plus-validation wall time divided by internal per-load time saving; approximate, includes different process overhead scopes and excludes discovery of source schedules"
+  },
+  "refinement_curve": {
+    "0": {
+      "inputs": 6,
+      "verified_complete": 4,
+      "all_attempt_cpu_seconds": 78.5,
+      "max_rss_kib": 87068,
+      "process_seconds": {
+        "n": 6,
+        "sum": 78.4680626,
+        "mean": 13.078010433333334,
+        "median": 0.1388395,
+        "p95": 40.27645,
+        "max": 41.5505
+      },
+      "rows": [
+        {
+          "team": "SpaTaro",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 3235,
+          "cash": 80940,
+          "failure": "",
+          "process_seconds": 0.153187,
+          "verification_seconds": 0.019256461004260927,
+          "output": "runs/refinement_curve_001/107262209_1_warm_0"
+        },
+        {
+          "team": "Otter Vibe",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 12691,
+          "cash": 108868,
+          "failure": "",
+          "process_seconds": 0.124492,
+          "verification_seconds": 0.02420554899435956,
+          "output": "runs/refinement_curve_001/107264054_0_warm_0"
+        },
+        {
+          "team": "DeeperNet",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 3588,
+          "cash": 115059,
+          "failure": "",
+          "process_seconds": 36.4543,
+          "verification_seconds": 0.023593407997395843,
+          "output": "runs/refinement_curve_001/107269880_1_warm_0"
+        },
+        {
+          "team": "mtmr_s1",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 3596,
+          "cash": 85324,
+          "failure": "",
+          "process_seconds": 41.5505,
+          "verification_seconds": 0.02295598800992593,
+          "output": "runs/refinement_curve_001/107270694_0_warm_0"
+        },
+        {
+          "team": "Mengfei Li",
+          "complete": false,
+          "calendar_verified": null,
+          "hire_bill": 57,
+          "cash": 5,
+          "failure": "failed_action_day_6_hour_12",
+          "process_seconds": 0.0980196,
+          "verification_seconds": null,
+          "output": "runs/refinement_curve_001/107271700_1_warm_0"
+        },
+        {
+          "team": "binghua",
+          "complete": false,
+          "calendar_verified": null,
+          "hire_bill": 436,
+          "cash": 2447,
+          "failure": "failed_action_day_9_hour_1",
+          "process_seconds": 0.087564,
+          "verification_seconds": null,
+          "output": "runs/refinement_curve_001/107273696_1_warm_0"
+        }
+      ]
+    },
+    "0.1": {
+      "inputs": 6,
+      "verified_complete": 4,
+      "all_attempt_cpu_seconds": 111.65,
+      "max_rss_kib": 88580,
+      "process_seconds": {
+        "n": 6,
+        "sum": 111.60808,
+        "mean": 18.601346666666668,
+        "median": 11.43595,
+        "p95": 42.965575,
+        "max": 43.9794
+      },
+      "rows": [
+        {
+          "team": "SpaTaro",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 2927,
+          "cash": 81248,
+          "failure": "",
+          "process_seconds": 3.61463,
+          "verification_seconds": 0.02217641699826345,
+          "output": "runs/refinement_curve_001/107262209_1_warm_0p1"
+        },
+        {
+          "team": "Otter Vibe",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 12686,
+          "cash": 108873,
+          "failure": "",
+          "process_seconds": 3.8555,
+          "verification_seconds": 0.024153239995939657,
+          "output": "runs/refinement_curve_001/107264054_0_warm_0p1"
+        },
+        {
+          "team": "DeeperNet",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 3583,
+          "cash": 115064,
+          "failure": "",
+          "process_seconds": 39.9241,
+          "verification_seconds": 0.019469024002319202,
+          "output": "runs/refinement_curve_001/107269880_1_warm_0p1"
+        },
+        {
+          "team": "mtmr_s1",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 3591,
+          "cash": 85329,
+          "failure": "",
+          "process_seconds": 43.9794,
+          "verification_seconds": 0.02312584400351625,
+          "output": "runs/refinement_curve_001/107270694_0_warm_0p1"
+        },
+        {
+          "team": "Mengfei Li",
+          "complete": false,
+          "calendar_verified": null,
+          "hire_bill": 133,
+          "cash": 291,
+          "failure": "unknown_day_8",
+          "process_seconds": 19.0164,
+          "verification_seconds": null,
+          "output": "runs/refinement_curve_001/107271700_1_warm_0p1"
+        },
+        {
+          "team": "binghua",
+          "complete": false,
+          "calendar_verified": null,
+          "hire_bill": 331,
+          "cash": 2552,
+          "failure": "failed_action_day_9_hour_1",
+          "process_seconds": 1.21805,
+          "verification_seconds": null,
+          "output": "runs/refinement_curve_001/107273696_1_warm_0p1"
+        }
+      ]
+    },
+    "0.5": {
+      "inputs": 6,
+      "verified_complete": 4,
+      "all_attempt_cpu_seconds": 166.21,
+      "max_rss_kib": 90664,
+      "process_seconds": {
+        "n": 6,
+        "sum": 166.18839,
+        "mean": 27.698065,
+        "median": 19.152050000000003,
+        "p95": 54.482175,
+        "max": 55.4917
+      },
+      "rows": [
+        {
+          "team": "SpaTaro",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 2523,
+          "cash": 81652,
+          "failure": "",
+          "process_seconds": 16.0466,
+          "verification_seconds": 0.015316449993406422,
+          "output": "runs/refinement_curve_001/107262209_1_warm_0p5"
+        },
+        {
+          "team": "Otter Vibe",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 12453,
+          "cash": 109106,
+          "failure": "",
+          "process_seconds": 17.2938,
+          "verification_seconds": 0.021103084000060335,
+          "output": "runs/refinement_curve_001/107264054_0_warm_0p5"
+        },
+        {
+          "team": "DeeperNet",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 3425,
+          "cash": 115222,
+          "failure": "",
+          "process_seconds": 51.4536,
+          "verification_seconds": 0.013768355012871325,
+          "output": "runs/refinement_curve_001/107269880_1_warm_0p5"
+        },
+        {
+          "team": "mtmr_s1",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 3436,
+          "cash": 85484,
+          "failure": "",
+          "process_seconds": 55.4917,
+          "verification_seconds": 0.017900862003443763,
+          "output": "runs/refinement_curve_001/107270694_0_warm_0p5"
+        },
+        {
+          "team": "Mengfei Li",
+          "complete": false,
+          "calendar_verified": null,
+          "hire_bill": 94,
+          "cash": 330,
+          "failure": "unknown_day_8",
+          "process_seconds": 21.0103,
+          "verification_seconds": null,
+          "output": "runs/refinement_curve_001/107271700_1_warm_0p5"
+        },
+        {
+          "team": "binghua",
+          "complete": false,
+          "calendar_verified": null,
+          "hire_bill": 218,
+          "cash": 22,
+          "failure": "failed_action_day_9_hour_5",
+          "process_seconds": 4.89239,
+          "verification_seconds": null,
+          "output": "runs/refinement_curve_001/107273696_1_warm_0p5"
+        }
+      ]
+    },
+    "2": {
+      "inputs": 6,
+      "verified_complete": 5,
+      "all_attempt_cpu_seconds": 495.46,
+      "max_rss_kib": 116872,
+      "process_seconds": {
+        "n": 6,
+        "sum": 495.4523,
+        "mean": 82.57538333333333,
+        "median": 82.43155,
+        "p95": 116.273,
+        "max": 117.874
+      },
+      "rows": [
+        {
+          "team": "SpaTaro",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 2358,
+          "cash": 81817,
+          "failure": "",
+          "process_seconds": 89.7223,
+          "verification_seconds": 0.022391612001229078,
+          "output": "runs/refinement_curve_001/107262209_1_warm_2"
+        },
+        {
+          "team": "Otter Vibe",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 12453,
+          "cash": 109106,
+          "failure": "",
+          "process_seconds": 75.1408,
+          "verification_seconds": 0.015085371007444337,
+          "output": "runs/refinement_curve_001/107264054_0_warm_2"
+        },
+        {
+          "team": "DeeperNet",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 3321,
+          "cash": 115326,
+          "failure": "",
+          "process_seconds": 111.47,
+          "verification_seconds": 0.01832682400709018,
+          "output": "runs/refinement_curve_001/107269880_1_warm_2"
+        },
+        {
+          "team": "mtmr_s1",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 3345,
+          "cash": 85575,
+          "failure": "",
+          "process_seconds": 117.874,
+          "verification_seconds": 0.023023844987619668,
+          "output": "runs/refinement_curve_001/107270694_0_warm_2"
+        },
+        {
+          "team": "Mengfei Li",
+          "complete": false,
+          "calendar_verified": null,
+          "hire_bill": 91,
+          "cash": 333,
+          "failure": "unknown_day_8",
+          "process_seconds": 32.9336,
+          "verification_seconds": null,
+          "output": "runs/refinement_curve_001/107271700_1_warm_2"
+        },
+        {
+          "team": "binghua",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 5564,
+          "cash": 71575,
+          "failure": "",
+          "process_seconds": 68.3116,
+          "verification_seconds": 0.01753435400314629,
+          "output": "runs/refinement_curve_001/107273696_1_warm_2"
+        }
+      ]
+    },
+    "9": {
+      "inputs": 6,
+      "verified_complete": 5,
+      "all_attempt_cpu_seconds": 1239.05,
+      "max_rss_kib": 120704,
+      "process_seconds": {
+        "n": 6,
+        "sum": 1239.1093,
+        "mean": 206.51821666666666,
+        "median": 239.94549999999998,
+        "p95": 244.364,
+        "max": 244.369
+      },
+      "rows": [
+        {
+          "team": "SpaTaro",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 2324,
+          "cash": 81851,
+          "failure": "",
+          "process_seconds": 223.105,
+          "verification_seconds": 0.016825211991090328,
+          "output": "runs/refinement_curve_001/107262209_1_warm_9"
+        },
+        {
+          "team": "Otter Vibe",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 12453,
+          "cash": 109106,
+          "failure": "",
+          "process_seconds": 240.426,
+          "verification_seconds": 0.024253712996141985,
+          "output": "runs/refinement_curve_001/107264054_0_warm_9"
+        },
+        {
+          "team": "DeeperNet",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 3227,
+          "cash": 115420,
+          "failure": "",
+          "process_seconds": 244.369,
+          "verification_seconds": 0.015558785991743207,
+          "output": "runs/refinement_curve_001/107269880_1_warm_9"
+        },
+        {
+          "team": "mtmr_s1",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 3340,
+          "cash": 85580,
+          "failure": "",
+          "process_seconds": 244.349,
+          "verification_seconds": 0.0212270790070761,
+          "output": "runs/refinement_curve_001/107270694_0_warm_9"
+        },
+        {
+          "team": "Mengfei Li",
+          "complete": false,
+          "calendar_verified": null,
+          "hire_bill": 89,
+          "cash": 335,
+          "failure": "unknown_day_8",
+          "process_seconds": 47.3953,
+          "verification_seconds": null,
+          "output": "runs/refinement_curve_001/107271700_1_warm_9"
+        },
+        {
+          "team": "binghua",
+          "complete": true,
+          "calendar_verified": true,
+          "hire_bill": 4509,
+          "cash": 72630,
+          "failure": "",
+          "process_seconds": 239.465,
+          "verification_seconds": 0.014655218998086639,
+          "output": "runs/refinement_curve_001/107273696_1_warm_9"
+        }
+      ]
+    }
+  },
+  "deeper_postfreeze_diagnostic": {
+    "scope": "larger-query diagnosis; does not revise the frozen method",
+    "point_queries": {
+      "candidate": {
+        "queries": 14,
+        "feasible": 1
+      },
+      "control": {
+        "queries": 7,
+        "feasible": 1
+      }
+    },
+    "courses": [
+      {
+        "method": "candidate",
+        "complete": true,
+        "calendar_verified": true,
+        "hire_bill": 2671,
+        "cash": 129219,
+        "queries": 42,
+        "process_seconds": 105.607
+      },
+      {
+        "method": "control",
+        "complete": true,
+        "calendar_verified": true,
+        "hire_bill": 2404,
+        "cash": 129486,
+        "queries": 0,
+        "process_seconds": 0.0840648
+      }
+    ]
+  },
+  "source_handoff": {
+    "archive": "artifacts/placement_component_source.tar.gz",
+    "archive_sha256": "4d3864621c5027008849e0f24b16bca6c786836cfad55a813ba680fbda2735b9",
+    "build_from_archive": true,
+    "all_packaged_files_unchanged": true,
+    "example_complete": true,
+    "independent_calendar": {
+      "schedule_certified": true,
+      "verified_transitions": 719,
+      "cash": 14246,
+      "events": 176
+    },
+    "zero_budget_keeps_incumbent": true,
+    "five_second_input_reverified": true
+  },
+  "source_sha256": {
+    "runs/bounded_panel_002/SUMMARY.json": "3510f16603b3a3705fbf84e0d2b63456345452a77444ac9381caf09c844fa74f",
+    "runs/real_bounded_panel_002/SUMMARY.json": "07e59301405d3fd3a4960db184437cc3d3574dc9d67d17bdc7276415b00e114e",
+    "runs/final_panel_001/BOUNDED.json": "a9d962eb60adb3e571792fa27aee7f48e8df907e4aaf1f25090c5cf332e6224c",
+    "runs/distinct_bounded_panel_001/SUMMARY.json": "f78c76a966cbdd48a2044c8db8f65ebe892e9d1c760ad8189ca76a12b9fbb8af",
+    "runs/final_panel_001/IMPORTS.json": "f7775761552213a5f268fc3c5048ab3921cb27efffd4dc02fb4c48754856971f",
+    "runs/final_panel_001/COMPILES.json": "bdf3e9a973e22747d3f2acb1657e5c5f7369fe2a9baef931d5b5d713c425bdc2",
+    "runs/repeated_service_panel_001/SUMMARY.json": "8dfb679e10336ff8b538e875bdc83d71fa8dc7d1fa996e58e591eda7d464b8e4",
+    "runs/life_day_cache_001.json": "ecf2b3b0fd56938a10e09b1c36b05f93af6162914b530e122dc57506eafa1114",
+    "runs/replay_life_day_cache_fixed_002.json": "aa6ab37fef7a1787fa8f46e85ca21751fe2386c868bb540a24d669629d9b8bba",
+    "runs/final_panel_001/CACHE.json": "70f0ef58246963bfeaad5cc6034f9fc0df6801b8d684c52fd91b4a758c9b98d8",
+    "runs/final_panel_001/corrected_107375112_1/CACHE.json": "20731d113de83bb42b102b6c6e482bce2cefc89a067867080d46203c0a14a720",
+    "runs/repeated_service_panel_001/CACHE.json": "e456891460edd43aea0a4dd5008a12a58b9244c7829551ad885c67158bc9ea7c",
+    "runs/bank_format_benchmark_001/SUMMARY.json": "85b2f8f39c12890062b6dab0382c8f8c4387fb15ae7539cdd24752742423898c",
+    "runs/bank_format_benchmark_001/POSTCHECK.json": "5aea12fd44bdc4d059506e43c66f547ae9dede9081108f536e574afbae477c33",
+    "runs/real_bank_format_001/SUMMARY.json": "bcdbcf25d7f9520826e6ef8d0e5b20ee11a041f35365b051bd0773682d194027",
+    "runs/life_compile_reuse_benchmark_001/SUMMARY.json": "d14d706403d8e33edcb89c73d67f8610b23656a616bf6d4dce1b5d24ff317a64",
+    "runs/life_compile_reuse_001/CHECK.json": "34a3d4f5a05046920f371737136956dda008c331b6a60b38d086e3fd7431fe96",
+    "runs/bank_amortization_001/SUMMARY.json": "98ab74f57b3e917178163087b77d7970c359218b05a98e9b5b8ed6939689c676",
+    "runs/refinement_curve_001/SUMMARY.json": "024e3ae6fced42b426c116fa65dc26f54a0a4dc633397236adcc8f03feacad3f",
+    "runs/final_deeper_points_001/SUMMARY.json": "3f33ddfb80a55b7b5213b93e935559f644af5d8afa3576a3cd12fcde0a7bbd0f",
+    "runs/final_deeper_course_001/SUMMARY.json": "96bec69fa8dae639f1e3ec4b29d904361ace8bbb0a63d2d07e43da2c5b59ff80",
+    "artifacts/CLEAN_BUILD_CHECK.json": "4ac780ffe0ad983a21f7f2d86a903d25a82d6b5f0c6e508c958b5afbd4c9e118"
+  }
+}

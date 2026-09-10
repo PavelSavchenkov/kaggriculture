@@ -1,0 +1,180 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-09-10T11:26:02.227888+00:00",
+  "scope": "relocation check: byte-identical example actions/outcomes, independent 719-transition financial replay, existing stock/service/preparation/cache checks and zero/five-second bounded calls; no experiment data used",
+  "example": {
+    "complete": true,
+    "days": 30,
+    "hire_bill": 14,
+    "cash": 14246,
+    "opponent_cash": 160534,
+    "queries": 0
+  },
+  "actions_sha256": "bbab05b41e24833fe2469fd267d208a4574cd8519aa9b546bf8a7042373f5efd",
+  "calendar": {
+    "schedule_certified": true,
+    "verified_transitions": 719,
+    "cash": 14246,
+    "events": 176
+  },
+  "oracle_reuse": {
+    "cases": [
+      {
+        "path": "/home/pavel/Programming/kaggriculture/tile_planner/examples/rotation/INPUT.plan",
+        "lives": 59,
+        "oracle_calls": 9
+      }
+    ],
+    "checked_lives": 59,
+    "checked_days": 1770,
+    "all_states_and_work_exact": true
+  },
+  "day_cache": {
+    "cases": [
+      {
+        "name": "/home/pavel/Programming/kaggriculture/tile_planner/examples/rotation/INPUT.plan",
+        "assignments": 256,
+        "slow_seconds": 0.480275,
+        "fast_seconds": 0.263297,
+        "day_queries": 4325,
+        "day_hits": 3355,
+        "evictions": 0
+      }
+    ],
+    "checked": 256,
+    "bit_exact": true,
+    "fixed_finance": false,
+    "slow_seconds": 0.480275,
+    "fast_seconds": 0.263297
+  },
+  "preparation": {
+    "checks": 13,
+    "passed": true,
+    "scope": "insert/remove preparation, terminal deadline, impossible output and identity"
+  },
+  "optimizer": {
+    "0": {
+      "best": "incumbent",
+      "cash": 14246,
+      "hire_bill": 14,
+      "input_reverified": false,
+      "elapsed_seconds": 0.03221509902505204,
+      "termination_reason": "budget_before_input_recheck"
+    },
+    "5": {
+      "best": "incumbent",
+      "cash": 14246,
+      "hire_bill": 14,
+      "input_reverified": true,
+      "elapsed_seconds": 4.982487948000198,
+      "termination_reason": "budget_or_search_exhausted"
+    }
+  },
+  "commands": [
+    [
+      "/home/pavel/Programming/kaggriculture/tile_planner/build/compile_cold",
+      "/home/pavel/Programming/kaggriculture/tile_planner/examples/rotation/INPUT.plan",
+      "/home/pavel/Programming/kaggriculture/work/sep10_tile_planner_delivery/package_check/rotation",
+      "/home/pavel/Programming/kaggriculture/tile_planner/examples/rotation/assignment.txt",
+      "0",
+      "0",
+      "4001",
+      "0.005",
+      "--opponent",
+      "public_router",
+      "--shop_seed",
+      "5003",
+      "--bank",
+      "/home/pavel/Programming/kaggriculture/tile_planner/examples/rotation/BANK.bin",
+      "--warm_seconds",
+      "0"
+    ],
+    [
+      "/home/pavel/Programming/kaggriculture/tile_planner/build/export_calendar",
+      "/home/pavel/Programming/kaggriculture/work/sep10_tile_planner_delivery/package_check/rotation",
+      "4001",
+      "0.005",
+      "0",
+      "/home/pavel/Programming/kaggriculture/work/sep10_tile_planner_delivery/package_check/rotation/calendar"
+    ],
+    [
+      "/home/pavel/Programming/kaggriculture/tile_planner/build/check_ordered_stock"
+    ],
+    [
+      "/home/pavel/Programming/kaggriculture/tile_planner/build/check_repeated_service",
+      "/home/pavel/Programming/kaggriculture/work/sep10_tile_planner_delivery/package_check/repeated_services"
+    ],
+    [
+      "/home/pavel/Programming/kaggriculture/tile_planner/build/check_preparation_repair",
+      "/home/pavel/Programming/kaggriculture/work/sep10_tile_planner_delivery/package_check/preparation.json"
+    ],
+    [
+      "/home/pavel/Programming/kaggriculture/tile_planner/build/check_life_compile_reuse",
+      "/home/pavel/Programming/kaggriculture/work/sep10_tile_planner_delivery/package_check/plans.txt",
+      "/home/pavel/Programming/kaggriculture/work/sep10_tile_planner_delivery/package_check/oracle.json"
+    ],
+    [
+      "/home/pavel/Programming/kaggriculture/tile_planner/build/check_life_day_cache",
+      "/home/pavel/Programming/kaggriculture/work/sep10_tile_planner_delivery/package_check/plans.txt",
+      "/home/pavel/Programming/kaggriculture/work/sep10_tile_planner_delivery/package_check/cache.json"
+    ],
+    [
+      "/home/pavel/anaconda3/envs/kaggriculture/bin/python",
+      "/home/pavel/Programming/kaggriculture/tile_planner/tools/optimize_placement.py",
+      "/home/pavel/Programming/kaggriculture/work/sep10_tile_planner_delivery/package_check/rotation",
+      "/home/pavel/Programming/kaggriculture/work/sep10_tile_planner_delivery/package_check/optimize_0",
+      "--tools",
+      "/home/pavel/Programming/kaggriculture/tile_planner/build",
+      "--seconds",
+      "0",
+      "--mode",
+      "search",
+      "--objective",
+      "cash"
+    ],
+    [
+      "/home/pavel/anaconda3/envs/kaggriculture/bin/python",
+      "/home/pavel/Programming/kaggriculture/tile_planner/tools/optimize_placement.py",
+      "/home/pavel/Programming/kaggriculture/work/sep10_tile_planner_delivery/package_check/rotation",
+      "/home/pavel/Programming/kaggriculture/work/sep10_tile_planner_delivery/package_check/optimize_5",
+      "--tools",
+      "/home/pavel/Programming/kaggriculture/tile_planner/build",
+      "--seconds",
+      "5",
+      "--mode",
+      "search",
+      "--objective",
+      "cash"
+    ]
+  ],
+  "build": {
+    "configuration": "Release, GNU C++ 13.3.0, C++20",
+    "parallel_jobs": 2,
+    "shared_repository_roots": [
+      "agents",
+      "day_solver",
+      "fast_day_solver_estimator",
+      "fast_game_engine"
+    ],
+    "experiment_dependencies": []
+  },
+  "research_restoration": {
+    "reports": 465,
+    "input_entries": 75,
+    "all_extracted_bytes_hash_checked": true
+  },
+  "delivery": {
+    "logic_files_unchanged_from_session": 59,
+    "checked_document_links": 42,
+    "broken_document_links": [],
+    "existing_evidence_files_verified": 179350,
+    "existing_evidence_failures": [],
+    "compiled_binaries_in_commit_payload": 0,
+    "generated_directories_ignored": [
+      "build*/",
+      "runs/",
+      "research/restored*/",
+      "__pycache__/"
+    ]
+  }
+}

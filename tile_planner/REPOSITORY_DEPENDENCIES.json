@@ -1,0 +1,730 @@
+{
+  "scope": "shared source/runtime versions for the relocated package; source dependencies read from its new build plus shared CMake files; runtime versions agree with the checked session",
+  "source_sha256": {
+    "agents/common/api/agent_api.hpp": "c441308471aa746d7c3d6e668688d39d1f77249ccd56b15fed3368d11c5aa3d8",
+    "agents/common/api/observation.hpp": "5287df4bb141c2112059c86786e5030956f317e61a572595c91d0e8b8edeba87",
+    "agents/common/runtime/observation_builder.hpp": "4ef231815a587f899540aadbeaf3cef9f7083cd343f893f6524fc2551ac09d4f",
+    "agents/external/public_router/source/agent.hpp": "c0b67e7b745f3e5fc4d3071ae4dc23b9c6898032c89905e9956c253f5cb2244b",
+    "agents/external/public_router/source/deps/league/public_router/source/agent.cpp": "25c9128c9791cc6ea10a00d1467eaf42e1f1338ea625b50c5e32b58ac78ad23f",
+    "agents/external/public_router/source/deps/league/public_router/source/agent.hpp": "ef354ed97f3dc2b0f82e5eae8aa317e33ff2d4b9322e06da1b02ca13bb1a44b0",
+    "agents/external/public_router/source/deps/league/public_router/source/routes.inc": "c46d6efc86a9407d09715e752f445a8f6042cb62a7aaca68a656e4a1bd067fd0",
+    "day_solver/CMakeLists.txt": "80043c99fce47f942c2be5fe3b6ebca9cac0cf56c765b276d958018c53c5d28d",
+    "day_solver/include/day_solver/io.hpp": "e0397987df86f2f88ed85662e5f604d05c407c4649d9c5af2eee81a3af97209a",
+    "day_solver/include/day_solver/scheduler.hpp": "018b9688de75884cf309e6a657cce47209f8d87c3886909880c188cd16a90f3b",
+    "day_solver/include/fast_game_engine/pyrandom.hpp": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
+    "day_solver/include/fast_game_engine/sim.hpp": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
+    "day_solver/src/components/native_early_completion/completion.hpp": "ac12ba63904cf089dfdd91bc8cf5d78e7a6baefc4d80d9b0044fb4f71837284d",
+    "day_solver/src/components/native_public_portfolio/portfolio.hpp": "af9ad8dada30bb31dc5ed5919c79692a6a742ee79877fb8a2b9d669da4958d97",
+    "day_solver/src/components/native_quick_portfolio_v30/quick.hpp": "e8f9558ac49fc07ee13c7a668030776ba88980d19ef388652e27600337048966",
+    "day_solver/src/components/native_semantic_candidates/candidates.hpp": "93e663136b474efe8199eb2b5de4b73b1d35cc480d0843ed42e3a967ffaeb110",
+    "day_solver/src/components/native_semantic_context/context.hpp": "3117f70f07cdfd8e305cf43d3b5030fe8f5fb32eb82525606b5bc1655c72b712",
+    "day_solver/src/components/native_semantic_control_v2/controller.hpp": "3e4da569a18f1bc32285edf02cd506e9fab9634a0588f31aa56e57ea5d92e689",
+    "day_solver/src/components/native_solver_api/exact.hpp": "07fc650937211e33076e69910b7fab21a18b40e5008ec56c4f16a79e65597cfb",
+    "day_solver/src/components/native_solver_api/internal_hint.hpp": "a0d933a43e0403ac5bc3bf0b6dff0405d12dafb523b01a46688fd1e7f120518a",
+    "day_solver/src/components/native_solver_api_coarse/screen.hpp": "46e8a3f344622204557a845af6d530bed2fb6babc95638de28625c93f7af5973",
+    "day_solver/src/components/resource_portfolio_order_v2/solver/include/baseline_json.hpp": "24807d871d85725e6b4bfdc952ea32cf245f7ca631f04997c093eaef2033184e",
+    "day_solver/src/components/resource_portfolio_order_v2/solver/include/day_solver_api.hpp": "eb9ddf63b3daafd36fd527b768a8f703e65c2e00552417c97d129e8a5fe767fc",
+    "day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_json.hpp": "aecce64fec12e660ecc70719231796eab3bc3f7cee3b9926f63e6975e9cd580e",
+    "day_solver/src/components/resource_portfolio_order_v2/solver/include/problem_validation.hpp": "ea9bd5f5766767487df1392d44a25f10ca94bef7492e6294d47f7fc26d590940",
+    "day_solver/src/components/resource_portfolio_order_v2/solver/include/replay.hpp": "65232aa464f0f20d5397504311d06f983fee50fb55379067b23d76e5b07be5a3",
+    "day_solver/src/prepare_problem.cpp": "b1abb8a20cfc4eabbbb6da54476184274ae6418f7f96925980e8f2d50c9599b7",
+    "day_solver/src/scheduler.cpp": "da060c7dd1efb109a283656509c3eef879388a93335911c9a877198c2ef23996",
+    "day_solver/vendor/include/absl/algorithm/algorithm.h": "28dbb3c76247037cd74f54a952b060cdb6b36dc19dd2ebb24d18c8a81133a370",
+    "day_solver/vendor/include/absl/algorithm/container.h": "00af016317c982cfeba331fe30666092106649ab12f0e5486f98700e5c8251d9",
+    "day_solver/vendor/include/absl/base/attributes.h": "260ffe946f1a16acf2251aabe7e4af9159a56d056c6e00ad8e9f6aa649ad734a",
+    "day_solver/vendor/include/absl/base/call_once.h": "9f65cf0aa3632a53eb3c162ebe1badc89b86d3d33fab3bc05da93853fa911e4f",
+    "day_solver/vendor/include/absl/base/casts.h": "417efb2fa58a9700031884ac205f55ff2077326db4343a0af0ab13af5456e745",
+    "day_solver/vendor/include/absl/base/config.h": "116215415196861538316ec3881d68d4dbe2a8cede66703364bf16f7577c95e6",
+    "day_solver/vendor/include/absl/base/const_init.h": "570a004baf8b9657bb4d6eaa3ca3b7122d0c03e086a7a52a58e739319694679a",
+    "day_solver/vendor/include/absl/base/dynamic_annotations.h": "a3496b81361bae203aa9e836f132d83781c3a43127a0606d675cb46df07b01a7",
+    "day_solver/vendor/include/absl/base/internal/atomic_hook.h": "49fdbb61be568af48ba4cb460dc38b508e751197674495f58f58ea2693caf293",
+    "day_solver/vendor/include/absl/base/internal/dynamic_annotations.h": "e7d13740b5e834dabe914f2fd74a09c6ad56f9b37dcb1980027d8f5c3da267bf",
+    "day_solver/vendor/include/absl/base/internal/endian.h": "f3fb5c3eafc6c84614b9f46f23bef48eefdeb6ee6a52de45dfcd8c2a529a93cf",
+    "day_solver/vendor/include/absl/base/internal/errno_saver.h": "01d6842cdb906e98426c03b7fbe24f0deff53c97c449c9aef53ace66079c20fb",
+    "day_solver/vendor/include/absl/base/internal/identity.h": "a7fa9a60c6699555a1535026bcc0684a0408faeaa4e524076c2c2558339d08ed",
+    "day_solver/vendor/include/absl/base/internal/iterator_traits.h": "5dbf7c61029bb766959af050b964789cd6a16a44dad635ac9afef5e7e1704bef",
+    "day_solver/vendor/include/absl/base/internal/low_level_alloc.h": "0f7dd074b79f49b57c2491987e722dbc0301018937e2a0573e10b3df8afe0649",
+    "day_solver/vendor/include/absl/base/internal/low_level_scheduling.h": "81c291becefdfdfa55adc782a4b53bb1e133e5deee1dcf22c2759e0a89e303c6",
+    "day_solver/vendor/include/absl/base/internal/per_thread_tls.h": "e22d04465943f60511e1957fb47e570dd5ff53eb1e3385f084047d3881dcf3a3",
+    "day_solver/vendor/include/absl/base/internal/raw_logging.h": "90e01dac7375efc520f5df65c9a03e5c5dc723e5d96fafea4df07c8d8255c510",
+    "day_solver/vendor/include/absl/base/internal/scheduling_mode.h": "dd30f104eb676a1c75dde910d991792b8516a4dc83a6f008e8f2ff13a646077b",
+    "day_solver/vendor/include/absl/base/internal/spinlock.h": "9b5f402989b93ec4cbde56c0edd145bc7a4975d3e952c42587924755e961e70d",
+    "day_solver/vendor/include/absl/base/internal/spinlock_wait.h": "0e3013e9da116026a283f881583f767dae9cc8547e8cbe7cb57acc9f2a659048",
+    "day_solver/vendor/include/absl/base/internal/thread_identity.h": "4ab0597e24501f9ef77d55afdeb2b227ad787cee41773ab2a1e9a34240e3fc20",
+    "day_solver/vendor/include/absl/base/internal/throw_delegate.h": "262387ec0241ee1ccabaf7c77e2dd3c420435e40e2c3b5573bc09ea82dac5bab",
+    "day_solver/vendor/include/absl/base/internal/tsan_mutex_interface.h": "99a9eef2a559df697297db9682fd873fa8c18d6c27c309f49d081af1a550eaa9",
+    "day_solver/vendor/include/absl/base/internal/unaligned_access.h": "1987b24054656ebf285c6d04a954791671bf9d8f453dfbf23e836631dca2fc6b",
+    "day_solver/vendor/include/absl/base/log_severity.h": "4de7b421b2b2780416a6e37e7472f68d9e70fff3a96c2318921ae98c2870b6c4",
+    "day_solver/vendor/include/absl/base/macros.h": "c5dc1f42f1ab3fb27e241b6e1369acb0e2c60fbc82f502b5cd315d7162bf2f21",
+    "day_solver/vendor/include/absl/base/nullability.h": "5408c740af93c976fe60704aa5fc617834d0e999f42bbf1a26a15b7137f3bfce",
+    "day_solver/vendor/include/absl/base/optimization.h": "4486b874676e7676644332af42a19a92e35001a6f6968c3e7b880f143e1dfda8",
+    "day_solver/vendor/include/absl/base/options.h": "dfd1a55e81284112bb32a018e3bd8b8ff52de40a9c31cc3fa88c742fb89d2f9e",
+    "day_solver/vendor/include/absl/base/policy_checks.h": "6148c6dc7e98624ddc57b6e2dfe160f530706e407f4aa2e2132da9fbe4d64407",
+    "day_solver/vendor/include/absl/base/port.h": "6d2a30c81a0b65ece88ce16086d9402913c5ed1cb8e42e28f508fcd1ba954d93",
+    "day_solver/vendor/include/absl/base/prefetch.h": "6b7e3ad48183f659ff7a11a226d6c9a3a9081a2632e41ce4b1ef11d025dcbfe4",
+    "day_solver/vendor/include/absl/base/thread_annotations.h": "9d67d4e81e058bdf59c775c5a507e20937b573223493932574036161341b2344",
+    "day_solver/vendor/include/absl/container/btree_map.h": "48736f8cba18711ad7abc74cafd6e78803ded8406555709d52471b17b056e3ae",
+    "day_solver/vendor/include/absl/container/fixed_array.h": "1b30f1e45d2202d0b513cdf94d795b4208c94528bc4f8ce47caf9bbd6a6cb2a9",
+    "day_solver/vendor/include/absl/container/flat_hash_map.h": "77190905ee44f1cde57c96633ab57192482e077990b10a9e26ab513589d9dcde",
+    "day_solver/vendor/include/absl/container/hash_container_defaults.h": "e50b8895bf8b311951a9eb3664b48e966952257760873101f3dcf370c3db4df5",
+    "day_solver/vendor/include/absl/container/inlined_vector.h": "b905c94bf34d4b6e6d1c446e189aecea8234ce68beb06a0c3994f4f6e01bed60",
+    "day_solver/vendor/include/absl/container/internal/btree.h": "40547146572673e633953c1f85bf75ea8cdd6e9beca7b1d959b0dddd859e4c62",
+    "day_solver/vendor/include/absl/container/internal/btree_container.h": "c642eb0a0888708a4265853421d639bdf062197f2566f16f2abc61baece4f78d",
+    "day_solver/vendor/include/absl/container/internal/common.h": "a2c818cbe6d139e844734b6bcabe5eb34337f71c87e17de9769657c4bf857b81",
+    "day_solver/vendor/include/absl/container/internal/common_policy_traits.h": "1fb892663d0cf98cf7c5a6674caf3f30c17fad99542cbf5a384637617cceb4d0",
+    "day_solver/vendor/include/absl/container/internal/compressed_tuple.h": "d6279e4d5b95357893458c7910a7de429aca64f72f7dda21afdaedd6559267a6",
+    "day_solver/vendor/include/absl/container/internal/container_memory.h": "18cb31bdb53d4adeff31230a31512a10276dc109fb9d247b081080d4820eba75",
+    "day_solver/vendor/include/absl/container/internal/hash_function_defaults.h": "7257743a5462a0f11ebed36670799883cff1a6eb5a931db475af086a77a1edc4",
+    "day_solver/vendor/include/absl/container/internal/hash_policy_traits.h": "b4c06b14ed7eeccea73c74eef1af698bd94b730dd3ec02b24198b9bf0573089b",
+    "day_solver/vendor/include/absl/container/internal/hashtable_control_bytes.h": "40ad7cb02f9922c476f66560e11ab705836e8d1dd78bade8dd4782d9c5a286aa",
+    "day_solver/vendor/include/absl/container/internal/hashtable_debug_hooks.h": "5057778a79e6675919aa11652a2de71ff76674f0fe0bd26ee43be87046b9772a",
+    "day_solver/vendor/include/absl/container/internal/hashtablez_sampler.h": "986f87d4a7fcc9b0461cb63ea6e889411881ebd16420c872d86fdd6f7fee799b",
+    "day_solver/vendor/include/absl/container/internal/inlined_vector.h": "655546c3102ca792b6da8e1941cc6b8e775e32419711e04710cf1d38571eb1c8",
+    "day_solver/vendor/include/absl/container/internal/layout.h": "81e6c5a64b4ae904f238ef8b7f50479702c69bf580e3fa3ce8699922ebcae268",
+    "day_solver/vendor/include/absl/container/internal/raw_hash_map.h": "5fd8221e4a3336156435a5135308429b552f559d98000ff963ea6f2b6c36a634",
+    "day_solver/vendor/include/absl/container/internal/raw_hash_set.h": "664a2991e24a3b879d7ba75a36039a01a1a31739807904576d6dcd2a90cad2e2",
+    "day_solver/vendor/include/absl/crc/crc32c.h": "531e1af627386e9a0ce09e14140076941d61ca336bdf4a01bad6a9d81361ac4a",
+    "day_solver/vendor/include/absl/crc/internal/crc32_x86_arm_combined_simd.h": "a7644987cc72a49d2d971a858561a0bcb361a0e04a0ab39f119c1afb3f7c7945",
+    "day_solver/vendor/include/absl/crc/internal/crc32c_inline.h": "5c6b58971ccd25ea76025fd19acb2458f96f259c97121371911c61a91a64db84",
+    "day_solver/vendor/include/absl/crc/internal/crc_cord_state.h": "3d6abd21c8c1192af6a524362de757ee09a8f2c6b6d9229f755dc3848349d255",
+    "day_solver/vendor/include/absl/debugging/internal/demangle.h": "9fb0c694d02f262efb81f4f310a2f318a516cc7939e2da275e9070a50929135c",
+    "day_solver/vendor/include/absl/functional/any_invocable.h": "30e5d2abda2da0b4d4bd820c91159d5d3f7c437cae340a744521c35b7c0052e0",
+    "day_solver/vendor/include/absl/functional/function_ref.h": "51f40157d90dab401c05fc021744934219557cae29db7fd5b70f1ce1a1b6a6d6",
+    "day_solver/vendor/include/absl/functional/internal/any_invocable.h": "c0a371cc6d3563c22538689bd646424bebd1b4027108f17b60df93e6cc325c1d",
+    "day_solver/vendor/include/absl/functional/internal/function_ref.h": "f4b2b00b15aff3690a593c0311d29890744f08d1c4171262a44d8da30cf21e61",
+    "day_solver/vendor/include/absl/hash/hash.h": "32e9baa333c51bc677105849f26e34fbe4e99ac882ebe8f759fc75251d969125",
+    "day_solver/vendor/include/absl/hash/internal/city.h": "e2cb4e6364f594daa0264510989a1d7827e0af247b9a5be64dc6a7f9180d8be2",
+    "day_solver/vendor/include/absl/hash/internal/hash.h": "4caf885c90c977da17d65775bdbd8ca8bbc4581987685f1ead0589df24861376",
+    "day_solver/vendor/include/absl/hash/internal/weakly_mixed_integer.h": "5a6c4b178fb2245ba0d6de82d0c4c903f615b74f24fadc1b955d3dfa60e2c246",
+    "day_solver/vendor/include/absl/log/absl_check.h": "ff8ff6bf90de07dd7d3d223b3fafa888c88c9efb9698e475e29f1aec5cd2c702",
+    "day_solver/vendor/include/absl/log/absl_log.h": "7836b9ba7a9e470bd825ecfdb21b3fe7e3052877107a39762e438d291cd7966a",
+    "day_solver/vendor/include/absl/log/absl_vlog_is_on.h": "88253408608b2c42bbb348f2c6739a336b82f7a595a3ec53ef733e0190022fe7",
+    "day_solver/vendor/include/absl/log/internal/check_impl.h": "2878bed4d9ffc01f56f8780c1bb04b2ceb7769b34c7ec44c1782716d2b1b22a6",
+    "day_solver/vendor/include/absl/log/internal/check_op.h": "07d0ded2db38342377d5514972ec38b2f52b2ec8ec73b8e35b521d38606bd445",
+    "day_solver/vendor/include/absl/log/internal/conditions.h": "e4c12622cb1fc6ef8ca787ec09bb58f75543ce14a0f75dca5d55efa888c16c8f",
+    "day_solver/vendor/include/absl/log/internal/config.h": "e5e06a681876c7d42d134f3d3e525313d32309bcce1f831a4705652b4ad98a52",
+    "day_solver/vendor/include/absl/log/internal/log_impl.h": "ac190093cb5c0ddda83ab4be4c3032415601c7094cec5d36bc66511afd920fcc",
+    "day_solver/vendor/include/absl/log/internal/log_message.h": "1151e54094d1c966ba3f97e0ee8258c0e45ff878c6b6aa90a66736954d1d901b",
+    "day_solver/vendor/include/absl/log/internal/nullguard.h": "577210940b709666de6ea95f86d285cef80c1ae93b6ab956f798b11175ae117e",
+    "day_solver/vendor/include/absl/log/internal/nullstream.h": "e9e5e906cd10d08572ac5719c307ee324e76e3c4d56b2381eaa211f5a5467a04",
+    "day_solver/vendor/include/absl/log/internal/proto.h": "c4478378039534ab1a6312000f843cfe51c74a9187d8eea6649d5832e62c4879",
+    "day_solver/vendor/include/absl/log/internal/strip.h": "eccbc51bd12d4075ad071c6621d689fbc7bc59a693eedd83854853b14483222a",
+    "day_solver/vendor/include/absl/log/internal/structured_proto.h": "4630d63cfaecc6112ecbfe092a8dfc9c79ebeec56fd64bbdf69bcdaf7f2408b3",
+    "day_solver/vendor/include/absl/log/internal/vlog_config.h": "eac8eecd5801c5aab5cecd65b77516f5d22d62f20e4ed277935e2475d12d2a5a",
+    "day_solver/vendor/include/absl/log/internal/voidify.h": "ff43956815217aff155e0a159e012e72b6871caa9e1173256ba50d2a1dbeac4e",
+    "day_solver/vendor/include/absl/log/log_entry.h": "d810e66ed7de822080ca6e4a7eae8cab9eedaaca7ae5794c34b9c6ce9e2f978b",
+    "day_solver/vendor/include/absl/log/log_sink.h": "ec965ecac10708f5ac7f79d724d89ec2abdf50e74b3d9f7197587a5f000886a9",
+    "day_solver/vendor/include/absl/memory/memory.h": "92e9ac99b4db0ed44b04b79ff509255c9fea321bda665f85e26fd2c13130ef0d",
+    "day_solver/vendor/include/absl/meta/type_traits.h": "5dd13146de9e1ca0cf37e379af0ce4efd7ae1911c042281c39a5837d848c3e3a",
+    "day_solver/vendor/include/absl/numeric/bits.h": "c4b22990d346b8dd344cddc62b42d2e348793c59d603dededa2626ecc99c72ea",
+    "day_solver/vendor/include/absl/numeric/int128.h": "447148279a375eeabd719c65a989d2004b94375b245ecfbef5184eca78929a75",
+    "day_solver/vendor/include/absl/numeric/int128_have_intrinsic.inc": "c21b660263888c8c14c15c25cbba12cf9e8838a690a6ccfaf2926fc32a076bc2",
+    "day_solver/vendor/include/absl/numeric/internal/bits.h": "83ea6d1ba44c35a822abde1f161c9c23e7454d12049e9f6ad0694b85070cc76d",
+    "day_solver/vendor/include/absl/profiling/internal/sample_recorder.h": "540cb99e8907101a7c48c75845649f811c04b3d8302d4f5f4907810149835095",
+    "day_solver/vendor/include/absl/strings/cord.h": "8667a794814dd7e85abe3251472ee1445b69389128112541db6f4b9a640daac0",
+    "day_solver/vendor/include/absl/strings/cord_analysis.h": "3dd5dc0cd1aff4e433878042b1d5442cea7b8390240085005323b54c75809d76",
+    "day_solver/vendor/include/absl/strings/cord_buffer.h": "c322a7b6529f8c7f36e0da03eff34705deb17f66562d27832544b29061cf6916",
+    "day_solver/vendor/include/absl/strings/has_absl_stringify.h": "9c385e0a0f92efa6ac0445528fdd35966ff5dcf0efccee3cfe8e7ee4299beb58",
+    "day_solver/vendor/include/absl/strings/has_ostream_operator.h": "8ce0a95a2a542a59df1e67e90c8fdbf2d7f77bbcecb2526d6a9238d38bec098d",
+    "day_solver/vendor/include/absl/strings/internal/cord_data_edge.h": "a702428c024dea0917dfd744a744282716c72a17432418f1a7e5d6ed8910ec08",
+    "day_solver/vendor/include/absl/strings/internal/cord_internal.h": "03a737e7eaa26ce31a1ff20fde6ef01d318e818334869e2727f7844a94a10338",
+    "day_solver/vendor/include/absl/strings/internal/cord_rep_btree.h": "8fedd566a009ca2c0f37ad3de24066db8a8c7173e945387322b0a328662d1b07",
+    "day_solver/vendor/include/absl/strings/internal/cord_rep_btree_navigator.h": "dc1b79a7b4a8dc5c21c46b442473af4e35898016e2822a6a7e5a738601d0bfc1",
+    "day_solver/vendor/include/absl/strings/internal/cord_rep_btree_reader.h": "913265d50edfe74bd6ff3202d73fac4d93dc813a8c3a1262d6064626cd8b98c4",
+    "day_solver/vendor/include/absl/strings/internal/cord_rep_crc.h": "abf52010f2e23ca0ba2451a52587c9c7782f56c8cfcb6bc47cca78e7379632eb",
+    "day_solver/vendor/include/absl/strings/internal/cord_rep_flat.h": "edb57250ddc315c9b7a9f2e213f32b3f6d82dc250630d87fc771c696654c2292",
+    "day_solver/vendor/include/absl/strings/internal/cordz_functions.h": "c66c913ca89fcfa0bdfee706edfde6f435eb617b216835cd0e5f548aca075af7",
+    "day_solver/vendor/include/absl/strings/internal/cordz_handle.h": "8cd9f156b2e44f9e95548bc015c6e1e30a0e1e9f02658a27f785ad4f5de49b9d",
+    "day_solver/vendor/include/absl/strings/internal/cordz_info.h": "54382dcd41eca797b95181e3638df34cdd1ac6310f910f95935d25829daecd3c",
+    "day_solver/vendor/include/absl/strings/internal/cordz_statistics.h": "4108fc55b83dcce1d525e1135a946d4488a6be4d2399c01f38da05a80ecfcd21",
+    "day_solver/vendor/include/absl/strings/internal/cordz_update_scope.h": "65439da7de0ca3c79e89eeb2e890e4b12db97037d6059738d05533cca68fabbe",
+    "day_solver/vendor/include/absl/strings/internal/cordz_update_tracker.h": "94562ed349ae1d48e0eb422d6462cda32a782bd355fcb1594453c4fd84d69af3",
+    "day_solver/vendor/include/absl/strings/internal/resize_uninitialized.h": "8f49086ff3834bd14931c2aa4421ef70f5fa57e5e4c306d37f2d869e2d715836",
+    "day_solver/vendor/include/absl/strings/internal/str_format/arg.h": "59aab2f06e122ce38f009f516d3d1bd9e3a7af4658e20640818ecbd08541bf0f",
+    "day_solver/vendor/include/absl/strings/internal/str_format/bind.h": "327b87fe2af9965f57812e8ef7aa1fcdff6dc3b11adf42c1c459f5836e29d391",
+    "day_solver/vendor/include/absl/strings/internal/str_format/checker.h": "5212731c07bd7757d5f2ae1d3b9c590430ecad7555bd978ad4f4e79a0683a014",
+    "day_solver/vendor/include/absl/strings/internal/str_format/constexpr_parser.h": "22be968eef75bffe59f3c6ee629b7910fa8039768c39fb47960b4090eda0b6e9",
+    "day_solver/vendor/include/absl/strings/internal/str_format/extension.h": "e6d59a10dd31968bee26d48f52e1fd5a7bbe3ec0b39e8a9a3e9132fc62985704",
+    "day_solver/vendor/include/absl/strings/internal/str_format/output.h": "a8c72004a2280585d696dbd5a5f60954fd7b201b87b90723e930188936fb465c",
+    "day_solver/vendor/include/absl/strings/internal/str_format/parser.h": "e3970242669350c2ba43836dbf616e173a9427b16b8b8dc7749319793f05f4be",
+    "day_solver/vendor/include/absl/strings/internal/string_constant.h": "c10000a12e17d17b1d2afa69e85eaecae6ec7d3da8d90ce1815f88b2c98ec46a",
+    "day_solver/vendor/include/absl/strings/internal/stringify_sink.h": "585bf8dc88079babb7aeca873df8c61cbbd59ddd5bc5ec8354d8a1fef445696f",
+    "day_solver/vendor/include/absl/strings/numbers.h": "fa1df761baa8cb3786f10894acccd90c293e0db3036c2d8ff0d459a246d37230",
+    "day_solver/vendor/include/absl/strings/str_cat.h": "4b2354a406c6bd04f65448c99dd9774885e784763942e82261f9bfba038c522a",
+    "day_solver/vendor/include/absl/strings/str_format.h": "fcd54077f7487f3398952b6137319ee181b790f0bf1fc518c25dd1d993f93610",
+    "day_solver/vendor/include/absl/strings/string_view.h": "177edefc35152e738a3b7f4dc53897f7077a7502324d78bb5b7f61a55dacc5ab",
+    "day_solver/vendor/include/absl/synchronization/internal/create_thread_identity.h": "97d4b58dc2fc67ffb3388380499f421bbbea070d1d9f92c28a7d60fdb51827b3",
+    "day_solver/vendor/include/absl/synchronization/internal/kernel_timeout.h": "157e8288a2675431a39486876c2295ac66a12f958f0c785b7fc19485f2c1e426",
+    "day_solver/vendor/include/absl/synchronization/internal/per_thread_sem.h": "10725664afc1d045cb521263d46c1654dc64c91d2b15e4f1e2db18707d25be93",
+    "day_solver/vendor/include/absl/synchronization/mutex.h": "d9cad27e464965a8c85a69e15846884cb6a8b4d0aae6640451318264c5d07b19",
+    "day_solver/vendor/include/absl/time/civil_time.h": "e76d12f5d9a14c8447d439e47e8239446a01d82fa7000f930b372e46d5ca2417",
+    "day_solver/vendor/include/absl/time/clock.h": "9cfc354efc18837f4f7b02a8f289465e7fd1f52e9f6230faeb3ade872d9b38fc",
+    "day_solver/vendor/include/absl/time/internal/cctz/include/cctz/civil_time.h": "68f9179c20d49aff1a1e7f78476b83151e927c2a6ca1191fdf0a48345a156fe2",
+    "day_solver/vendor/include/absl/time/internal/cctz/include/cctz/civil_time_detail.h": "32f4a93948a852cf1be123ac82f85d4b55f215bcfe4461b1bb1dde803789dff0",
+    "day_solver/vendor/include/absl/time/internal/cctz/include/cctz/time_zone.h": "64643d54ac307640b17937d108012577e2153dae141092f17078001563867565",
+    "day_solver/vendor/include/absl/time/time.h": "71b69477b788c417a778ce4edebba8e09607a817c7bb05f5c07e01042d163a5f",
+    "day_solver/vendor/include/absl/types/compare.h": "cd370e78dd2addbbd867400189d6a36d4f1866185314b690e6d2707984c9d8f6",
+    "day_solver/vendor/include/absl/types/internal/span.h": "60baa1039fce223d3d144147780db3ef97742838a79cb70b61af8b8e8ce61e14",
+    "day_solver/vendor/include/absl/types/optional.h": "da1141eca6db66739191fb8a1c542347db78553c13ee884be6f61f155e79fb79",
+    "day_solver/vendor/include/absl/types/span.h": "e046f29278e283674660add073cb28b0c9bced424733c43f5057b523b133ee12",
+    "day_solver/vendor/include/absl/types/variant.h": "10af88c42f94e2e66846383f090a02aefa7349e510b7b0a1c6e8e6eeaa4689cd",
+    "day_solver/vendor/include/absl/utility/utility.h": "350b98f17d3589f946d88788000d064dd144aaea3c7cc11a65f4003ecf66ea46",
+    "day_solver/vendor/include/google/protobuf/any.h": "4a163b62a637fc6187eb344f495ebc20cd3078891b6dc64741fdbb42e05041d6",
+    "day_solver/vendor/include/google/protobuf/arena.h": "729b8c036bf160a3817c287bc0a66c573b8097be09a51a5b2cbbf9524656825e",
+    "day_solver/vendor/include/google/protobuf/arena_align.h": "23c5047721fe471725933ec4487a199baa943f0af558a48f8675f25224aa63eb",
+    "day_solver/vendor/include/google/protobuf/arena_allocation_policy.h": "30bbe9bdae47abb76ed8989b685bf260b7e49bb6e4e752c9408ef78781881ec9",
+    "day_solver/vendor/include/google/protobuf/arena_cleanup.h": "e073a4f05b51e846ad502c05b908f33b49d20ff77e6ead0a26c88176fe5b9b84",
+    "day_solver/vendor/include/google/protobuf/arenastring.h": "a480fc9864372fe858ee00e67f1bfb7c48697aac17cb81d34c04cde0342595d1",
+    "day_solver/vendor/include/google/protobuf/arenaz_sampler.h": "791b527c1c78145e77ab3acdcef7f21df041b96abab511b84c9cf41a57eabbbd",
+    "day_solver/vendor/include/google/protobuf/descriptor.h": "fffef4c21667432bbba6344d24664284a3d6173659bfec237044d501bf932e2d",
+    "day_solver/vendor/include/google/protobuf/descriptor_lite.h": "700591f9bc5a8c752fd1a7ec46b52e12277d8c28f989c42833acde6b7023032f",
+    "day_solver/vendor/include/google/protobuf/endian.h": "37f8dc47598ff1a012614e9b438f1f53024b5e11432abaa338bc221cdb4bf23d",
+    "day_solver/vendor/include/google/protobuf/explicitly_constructed.h": "414e762d0dd1a5ceb853b4e506689a3e0e5090de823b61e166ef8fdcedd2cf3c",
+    "day_solver/vendor/include/google/protobuf/extension_set.h": "b11c00210ce602654f62e8a1f811dc09c15cd2f70182d2c72177c28c1704232c",
+    "day_solver/vendor/include/google/protobuf/generated_enum_reflection.h": "f826e6f374bb72eacce5debc5a0a4cf70d1cce616ace428a63047aedde28ec6a",
+    "day_solver/vendor/include/google/protobuf/generated_enum_util.h": "1b6401585f7c42520de57a42c5e4d019d3da53815cf4374c51783c1dbe06ab87",
+    "day_solver/vendor/include/google/protobuf/generated_message_reflection.h": "ecf11d23ed440aaa441bd6951b67835958911d7e03ece49266aa054f7e7dd44d",
+    "day_solver/vendor/include/google/protobuf/generated_message_tctable_decl.h": "e64b65969594671f2a155bc9b04d98b5c3b2022a5271179c2491bdfde8f60114",
+    "day_solver/vendor/include/google/protobuf/generated_message_util.h": "3bed77116949111dfa41877afc105b23eee441ff215969761b24cab820ffe07a",
+    "day_solver/vendor/include/google/protobuf/has_bits.h": "979c94ea0eaeec416872d60e60fc2554870a5201b1ff6f0683f5273fbee8b9a7",
+    "day_solver/vendor/include/google/protobuf/implicit_weak_message.h": "706b7169e2e6914407fe196f934c5ab041f4c8ff1f49dea45cff6c088cb2cc83",
+    "day_solver/vendor/include/google/protobuf/inlined_string_field.h": "15e18960ba05d6a3a602173de8def112b7c3f92787885c4512ed236c189253bf",
+    "day_solver/vendor/include/google/protobuf/internal_visibility.h": "585b17575b69a2f2911e9fc7d4427ddfb858f8defbd9626e89abffde4b90e310",
+    "day_solver/vendor/include/google/protobuf/io/coded_stream.h": "c1bac7e89aedf6048e1d41a23c31bf2b7c3fa734399234b2dcaec55917e841d0",
+    "day_solver/vendor/include/google/protobuf/io/zero_copy_stream.h": "2d64ee0cb0acb006f071f0c5feb6ebc655873bf8ae9db584f317d6c86e6619ba",
+    "day_solver/vendor/include/google/protobuf/io/zero_copy_stream_impl_lite.h": "9c11e09cc928a18efdd06618a5de1cf040a7a8aca629376046b918e6ae7346c9",
+    "day_solver/vendor/include/google/protobuf/map.h": "ca0fb12dd6ccc65e5139730c6210298e73b1d3f3391f7f808b4366ab5cba1313",
+    "day_solver/vendor/include/google/protobuf/message.h": "08f866f357476e39cbe1fc1ded0ff4d34c0ea9031fc4a35186a049b6dbbb1b9d",
+    "day_solver/vendor/include/google/protobuf/message_lite.h": "7b994661b2a75dcf40bd90603ea445c9a88faa0d0f79eccf8b4726168d8c6ec9",
+    "day_solver/vendor/include/google/protobuf/metadata_lite.h": "69dee4e3231463df0ce7a6204364d9677886f452c2e09b1c04a7182fb0c637ad",
+    "day_solver/vendor/include/google/protobuf/micro_string.h": "a3bf19c8653b493fc43e54c57319cc89e3d19fbc0937043cdece57b7e57f113b",
+    "day_solver/vendor/include/google/protobuf/os_macros_restore.inc": "d2c776f60a6cf0696cfcecd09e33610e0796680e187e95bb2f0b2d7625b68b8e",
+    "day_solver/vendor/include/google/protobuf/os_macros_undef.inc": "e72447a2027295106828b4f2453929d3f12e1f937e37df760dfb7f766aa4d70d",
+    "day_solver/vendor/include/google/protobuf/parse_context.h": "59609e66f47ab1e0d4e85280858149f38d13dd0a85f97e82f9c1ee8119e34460",
+    "day_solver/vendor/include/google/protobuf/port.h": "97db6d2824c0fd2d0ec0e3cebcc69b5b46c58605889747ff14682b9d97e9eaec",
+    "day_solver/vendor/include/google/protobuf/port_def.inc": "a7fd5f5114506a07748508180dfc1c2dc9e8f308825fd5022dafc1238dc2e073",
+    "day_solver/vendor/include/google/protobuf/port_undef.inc": "b4f47699fdeb7bced7b1162fc7fd5b4a64e2c97c3bc55742bd6de4611e78421d",
+    "day_solver/vendor/include/google/protobuf/reflection.h": "3e212b414438ab836ad562d1df6700b1c386b486a2ddf79527e4ccc9fcbaad5a",
+    "day_solver/vendor/include/google/protobuf/repeated_field.h": "824069910eae43c4e45d8ae4e58ccc96d3acfe468bf8e01706530416f612844d",
+    "day_solver/vendor/include/google/protobuf/repeated_ptr_field.h": "987635f6ce8eab34fe56f02373e49b274151e5ed8984dcd1d2d9af52ec5e1036",
+    "day_solver/vendor/include/google/protobuf/runtime_version.h": "deabc067a066e240dbc26e2a55b149a36e9c8f9a3fc7cf59cb205f420766e85f",
+    "day_solver/vendor/include/google/protobuf/serial_arena.h": "4f144630b9829512d832d304b8956f7af31267effe1ec09806df362b9f0628d1",
+    "day_solver/vendor/include/google/protobuf/string_block.h": "b81e38ff07d96135ca690f5c3f2a23ecee88f6d95360d1e05a0cb582fdba9ba9",
+    "day_solver/vendor/include/google/protobuf/stubs/common.h": "0106f65a4317dfa5445d56b3476b03afdcdec914e051b38ecbc3086ac5ba1908",
+    "day_solver/vendor/include/google/protobuf/stubs/platform_macros.h": "4b8f13aa85f568933b29bbf780b3496e9a8a22b181951a2e78afdaa3227fd483",
+    "day_solver/vendor/include/google/protobuf/stubs/port.h": "4e57cae0b33be9037681851ce5bc9541e4b9597e23042ca4b4c62ea3115350da",
+    "day_solver/vendor/include/google/protobuf/thread_safe_arena.h": "f01cd6dba8e8f8d446f74aac17ac1fd024beb49d5687dfac9d0174f368d0966e",
+    "day_solver/vendor/include/google/protobuf/unknown_field_set.h": "78241fb4730b1af3ac99089d63e99386019ae61109454819b2371a8972d05cd9",
+    "day_solver/vendor/include/google/protobuf/wire_format_lite.h": "317020845dbf2709b8bba63e5f7a947af364df37daa495bb2b7828ff5f220db7",
+    "day_solver/vendor/include/ortools/sat/cp_model.pb.h": "8e1c42edcb257cc6b29424a5525ce4c29aa4847b89f1b818add376851ab16a93",
+    "day_solver/vendor/include/utf8_range.h": "2c965fa98ce06f423d51661c822e9bf3cf6b87e1b9fd0f2f0203f7839e1ab52a",
+    "day_solver/vendor/include/utf8_validity.h": "aa4778e2456b804f7ed5a42f127be60e5d1e6f737e4b94076ae9c3fccf69e972",
+    "fast_day_solver_estimator/CMakeLists.txt": "4182bf8ad44409d74c8d2c746726d6652300baa054ff4ff1df2cdb07b0a84392",
+    "fast_day_solver_estimator/include/actions.hpp": "92661fd70bcc57bde94e2393ce543f3f980c31b219a713f8ca59605b736964e9",
+    "fast_day_solver_estimator/include/bounds.hpp": "17c97777796a703f0a09ed78d545461a0ae1eb4e20d91396243d83b55348e40b",
+    "fast_day_solver_estimator/include/context_query_features.hpp": "8aa86798b9ba449141a140db54843fe57c24ca4204306e6bcb93b577b3d4f2cb",
+    "fast_day_solver_estimator/include/extract_contract.hpp": "b88f99c4645f662ce79f43a5f961bffe1a6c5c28421b4719667bcfa0f04b629f",
+    "fast_day_solver_estimator/include/fast_day_solver_estimator/estimator.hpp": "159947378a53cad6593f602b8ae598f940d383eb94eb052646ac2bd3a92ecb01",
+    "fast_day_solver_estimator/include/features.hpp": "adfde66b4ba040d7bfe5321709987bf5354777d68e3d7e9399a8de033d9bc9a6",
+    "fast_day_solver_estimator/include/original_labor.hpp": "64538277c85e8b28ec037528e2d90eaa842a9b06a7fd73579d115e206fbd2e77",
+    "fast_day_solver_estimator/include/planning_context.hpp": "069962dc499b54b9863276a0063f8c73586e4dc0863bf4f0f73f7679754dcc37",
+    "fast_day_solver_estimator/include/planning_estimator.hpp": "5fd812c8216467814cd9cfdf20f88d04cf1a86d55a37e8514cefae5ae9d01ffc",
+    "fast_day_solver_estimator/include/planning_features.hpp": "448e8f4e2842edc2674e9433c9c3e150db0dc4a3870110834302001eaf6f7034",
+    "fast_day_solver_estimator/include/query_policy.hpp": "c08cdf1a3760972f4f45b77b05d985db26c0d4163aeadce0657f9dc135ff1516",
+    "fast_day_solver_estimator/include/release_bounds.hpp": "134e3c58c85cee20cc91feb61cb7477f9f09c375738de92f4a714d2baf7d5a3f",
+    "fast_day_solver_estimator/include/replay_trace.hpp": "e14f44d259ce290fe9efcefd30f0fa287392e007175477c6e9741d1ff4526e43",
+    "fast_day_solver_estimator/include/supply_bounds.hpp": "c9b9512d9b59d8640db6c85ddd5141c7724d31f018450b1d145b5b40434fc62a",
+    "fast_day_solver_estimator/include/terminal_deadlines.hpp": "87a113f4628de8f7a87d20a5b94c9b77e6d8631f4d158c283be4ebebc73bfef2",
+    "fast_day_solver_estimator/models/context_candidate_dev_v2/context_model.hpp": "b702ba2c689c67677e3aca25142c2c4f0f2c5660e657db9f72e9a652e9636088",
+    "fast_day_solver_estimator/models/search_candidate_dev_v2/search_model.hpp": "7986167ce90f5259deaaa83d35b28feb0352528c4442cc8d81367b2ab87d5761",
+    "fast_game_engine/pyrandom.hpp": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
+    "fast_game_engine/sim.hpp": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a"
+  },
+  "runtime_libraries": {
+    "day_solver/runtime/lib/libcandidate_scoring.so": {
+      "sha256": "f7e32f94ba42140c792571c737c4d54d528aeaa2249bd0fef4f10117b476822d",
+      "bytes": 38456,
+      "mtime_ns": 1788660865781942368
+    },
+    "day_solver/runtime/lib/libroute_scoring.so": {
+      "sha256": "390274521a7a07b3aa0762548fa641c11d884c6e2004b146da2ec5cf7789eca3",
+      "bytes": 21096,
+      "mtime_ns": 1788660865157224732
+    },
+    "day_solver/runtime/lib/libroute_propagation.so": {
+      "sha256": "f599860a3ecd4347803a3f35672e4ab4b756d96c38c4ca9354d5184353662d01",
+      "bytes": 20624,
+      "mtime_ns": 1788660865116134631
+    },
+    "day_solver/runtime/lib/libstrong_deadline.so": {
+      "sha256": "358bfa26ae759391ced28b2472858646c1d976ee88e9f5829b13a9d8964db524",
+      "bytes": 53728,
+      "mtime_ns": 1788666379842348903
+    },
+    "day_solver/runtime/lib/libortools.so.9": {
+      "sha256": "041073a361c1624792dc1caf1025aa3731199c0fc9e77e03c1e69e1058d3ef8b",
+      "bytes": 33130600,
+      "mtime_ns": 1768003313000000000
+    },
+    "day_solver/runtime/lib/libprotobuf.so.33.1.0": {
+      "sha256": "d2184f8c53994577a6164495a11a5fe19485e3f5981a1889e33801a9d2ac8dd8",
+      "bytes": 4264040,
+      "mtime_ns": 1768002554000000000
+    },
+    "day_solver/runtime/lib/libstdc++.so.6": {
+      "sha256": "e3549df69430b452252a93f037e7bb382ae1011ba247f39cf570e0927a3b3af0",
+      "bytes": 23874544,
+      "mtime_ns": 1787618703694466114
+    },
+    "day_solver/runtime/lib/libgcc_s.so.1": {
+      "sha256": "7cd19c412b9fbe2c5900f052ab78aaaaa54c03adcc61c80555b6a264133287a6",
+      "bytes": 922624,
+      "mtime_ns": 1787618679578951358
+    },
+    "day_solver/runtime/lib/libbz2.so.1": {
+      "sha256": "1d832c02d5082d180185d61e55b0b58d5880d1148cb1643171b59bb5f5d2702c",
+      "bytes": 107928,
+      "mtime_ns": 1768002287000000000
+    },
+    "day_solver/runtime/lib/libabsl_flags_parse.so.2508.0.0": {
+      "sha256": "70232996131d948d931e0f209aa78bba29479f405b4a130eb0cf4b478009522f",
+      "bytes": 99816,
+      "mtime_ns": 1768002465000000000
+    },
+    "day_solver/runtime/lib/libabsl_flags_usage.so.2508.0.0": {
+      "sha256": "5343818ee3e4fdf423791ce60354bcfaf39c362b417cdcdc4a7f27ee74aac7e3",
+      "bytes": 17184,
+      "mtime_ns": 1768002459000000000
+    },
+    "day_solver/runtime/lib/libre2.so.11": {
+      "sha256": "c251ea0fb2191b65b16dfbbb029bb4b6bd7d2060848ce34fb00bc767aebb54a3",
+      "bytes": 605104,
+      "mtime_ns": 1768002467000000000
+    },
+    "day_solver/runtime/lib/libCbcSolver.so.2": {
+      "sha256": "4683758de2efcaf0f1a2ccb9a89ac9cf9381d9d3d6c778d90ba4f5f58cf59707",
+      "bytes": 1182288,
+      "mtime_ns": 1768002652000000000
+    },
+    "day_solver/runtime/lib/libhighs.so.1": {
+      "sha256": "c1f20e36b27e358dc479e2c0537e15dd3b0b36074278ea07fee4ba88247300c9",
+      "bytes": 4983504,
+      "mtime_ns": 1768002425000000000
+    },
+    "day_solver/runtime/lib/libscip.so.10.0": {
+      "sha256": "52c4e987b2d87a2b2c537fa75bcb301ad0a4bf105f58bfb103f8d50d27b9bef6",
+      "bytes": 13907544,
+      "mtime_ns": 1768002975000000000
+    },
+    "day_solver/runtime/lib/libabsl_die_if_null.so.2508.0.0": {
+      "sha256": "987e10eecc7d086124962123081b87190e0106cac75f7ced861baeaa09aa6bc9",
+      "bytes": 16624,
+      "mtime_ns": 1768002416000000000
+    },
+    "day_solver/runtime/lib/libabsl_log_initialize.so.2508.0.0": {
+      "sha256": "ada35165af73c7cb86eb57d47c89403a65167a101eb4336faffb7f0e920dbdb9",
+      "bytes": 15576,
+      "mtime_ns": 1768002395000000000
+    },
+    "day_solver/runtime/lib/libabsl_random_internal_entropy_pool.so.2508.0.0": {
+      "sha256": "4102d5199043c762115def38990d107cf669d4bc66dbb90f3e26dbbc346d3869",
+      "bytes": 17912,
+      "mtime_ns": 1768002383000000000
+    },
+    "day_solver/runtime/lib/libabsl_random_internal_randen.so.2508.0.0": {
+      "sha256": "e7e4951d756868223664ad96500adc479058aca32d4903940282706d571d538b",
+      "bytes": 16656,
+      "mtime_ns": 1768002299000000000
+    },
+    "day_solver/runtime/lib/libabsl_random_internal_randen_hwaes_impl.so.2508.0.0": {
+      "sha256": "cbe427eba6bde23a9d89f5bd1b24506dbe4eb93feaacf79613058b3d391dc63e",
+      "bytes": 15992,
+      "mtime_ns": 1768002291000000000
+    },
+    "day_solver/runtime/lib/libabsl_random_internal_randen_slow.so.2508.0.0": {
+      "sha256": "1214262fb7ed08d90ff83b34e815b4c3097efc5a072bf6e0fdb2ae555c6765b5",
+      "bytes": 19792,
+      "mtime_ns": 1768002292000000000
+    },
+    "day_solver/runtime/lib/libabsl_random_internal_seed_material.so.2508.0.0": {
+      "sha256": "9285f351cc96045f151e7b5a526a22c5130eda4443f376a4527a01d9a9be847a",
+      "bytes": 16944,
+      "mtime_ns": 1768002337000000000
+    },
+    "day_solver/runtime/lib/libabsl_statusor.so.2508.0.0": {
+      "sha256": "cfe1f3bba5f0e6f9368794640cc6db1be77021afea31e2be81c6502e3777a22c",
+      "bytes": 23624,
+      "mtime_ns": 1768002414000000000
+    },
+    "day_solver/runtime/lib/libabsl_status.so.2508.0.0": {
+      "sha256": "e015f3e8c2b34c1108e2abfa3c966e211bc6593cbf81462abcf110bdf60b1527",
+      "bytes": 52160,
+      "mtime_ns": 1768002408000000000
+    },
+    "day_solver/runtime/lib/libabsl_random_distributions.so.2508.0.0": {
+      "sha256": "aee40e7f88caf0ef92b14b9535a1ce6383beb575d0b6521c45b49225f3807daa",
+      "bytes": 16792,
+      "mtime_ns": 1768002336000000000
+    },
+    "day_solver/runtime/lib/libabsl_log_internal_check_op.so.2508.0.0": {
+      "sha256": "bbf79de725403d0cfee1ecd534e831563b410a204b38f4ca3aeaeec2e243e24b",
+      "bytes": 38720,
+      "mtime_ns": 1768002416000000000
+    },
+    "day_solver/runtime/lib/libabsl_leak_check.so.2508.0.0": {
+      "sha256": "e081b74059417e5aeba417df3d377cd017fb6cde60ef2d0521befd684ec0f2b8",
+      "bytes": 15720,
+      "mtime_ns": 1768002281000000000
+    },
+    "day_solver/runtime/lib/libabsl_log_internal_conditions.so.2508.0.0": {
+      "sha256": "ae78617c765f0ba774155cc535555c8a8251d4aade0a4f97d0801ecb7bf433b5",
+      "bytes": 15864,
+      "mtime_ns": 1768002312000000000
+    },
+    "day_solver/runtime/lib/libabsl_log_internal_message.so.2508.0.0": {
+      "sha256": "eb2c04f941a7f16dd142f840d49dd17c61d9ee77e5177ac24d84af4c3b41bcaa",
+      "bytes": 74880,
+      "mtime_ns": 1768002412000000000
+    },
+    "day_solver/runtime/lib/libabsl_log_internal_nullguard.so.2508.0.0": {
+      "sha256": "b11fb12b1898d7c2dbcc706ab411edde3e74a5ad1917c3ca44de55245da0a6b0",
+      "bytes": 15264,
+      "mtime_ns": 1768002281000000000
+    },
+    "day_solver/runtime/lib/libabsl_log_globals.so.2508.0.0": {
+      "sha256": "1ac9dc660fa8fef4af41f6f991b0331846564edf2d75c164e801a881104094fe",
+      "bytes": 23856,
+      "mtime_ns": 1768002386000000000
+    },
+    "day_solver/runtime/lib/libabsl_vlog_config_internal.so.2508.0.0": {
+      "sha256": "5131bd4297343c5f9dea0dc1cad243923d8a4a6b13890bfef17e738576760abd",
+      "bytes": 37824,
+      "mtime_ns": 1768002383000000000
+    },
+    "day_solver/runtime/lib/libabsl_flags_reflection.so.2508.0.0": {
+      "sha256": "05730880a07cd0dc1b56ba0224dcde640cfe609b7aeb98a2ee199d9bf1b8ea67",
+      "bytes": 60120,
+      "mtime_ns": 1768002424000000000
+    },
+    "day_solver/runtime/lib/libabsl_flags_internal.so.2508.0.0": {
+      "sha256": "c85b8eeebbb3ee1c49d43df574613bc89dcf7a01c5ab98e8a564ce10025bee28",
+      "bytes": 55936,
+      "mtime_ns": 1768002390000000000
+    },
+    "day_solver/runtime/lib/libabsl_flags_marshalling.so.2508.0.0": {
+      "sha256": "5538441f8642f8b42004e8d88db0911ff944dd8e234df5f4fb3967a46c8f7bf6",
+      "bytes": 50024,
+      "mtime_ns": 1768002344000000000
+    },
+    "day_solver/runtime/lib/libabsl_raw_hash_set.so.2508.0.0": {
+      "sha256": "ee8c2e81d4ec883fda2ec54d1ae638b275bb192649d3e4b49262a4c63ba4d1bd",
+      "bytes": 45880,
+      "mtime_ns": 1768002414000000000
+    },
+    "day_solver/runtime/lib/libabsl_synchronization.so.2508.0.0": {
+      "sha256": "fe4b5f1413cb1988e9f31599e62b615f5f1c829c2be6e6bcd7f2a6b34ed7210f",
+      "bytes": 79928,
+      "mtime_ns": 1768002376000000000
+    },
+    "day_solver/runtime/lib/libabsl_kernel_timeout_internal.so.2508.0.0": {
+      "sha256": "bc791e7e1e4e02796af2d3ba559b86b9f4ee36fb1e9e3a44c6f16e7437d921e7",
+      "bytes": 17704,
+      "mtime_ns": 1768002340000000000
+    },
+    "day_solver/runtime/lib/libabsl_time.so.2508.0.0": {
+      "sha256": "61d8eeebda5603f0871d3ff40a7b3d6630dd67c7573b2cbe3e423b49151437aa",
+      "bytes": 110352,
+      "mtime_ns": 1768002333000000000
+    },
+    "day_solver/runtime/lib/libabsl_time_zone.so.2508.0.0": {
+      "sha256": "1c5ce7835c34b750fadff513e17976ef7d46166b8fe364d3a6557c6ad8c65f42",
+      "bytes": 160256,
+      "mtime_ns": 1768002288000000000
+    },
+    "day_solver/runtime/lib/libabsl_tracing_internal.so.2508.0.0": {
+      "sha256": "ddf6a50f5e8393f97a4b08e0a3ff76ea068028cb805a7b288e4212ff04a828fe",
+      "bytes": 15328,
+      "mtime_ns": 1768002307000000000
+    },
+    "day_solver/runtime/lib/libabsl_str_format_internal.so.2508.0.0": {
+      "sha256": "c48afe1e66fa1346e8b014ccae4a99256d0d540fcd3ceede332ecc649a94fa45",
+      "bytes": 152032,
+      "mtime_ns": 1768002332000000000
+    },
+    "day_solver/runtime/lib/libabsl_hash.so.2508.0.0": {
+      "sha256": "016bb672047398c3f4dd39d8f3f87962b9633bd292cd71f7dd641a711158e82a",
+      "bytes": 16080,
+      "mtime_ns": 1768002330000000000
+    },
+    "day_solver/runtime/lib/libabsl_strings.so.2508.0.0": {
+      "sha256": "1a8b918b6c1c8b8af0fcacc0209be1bbc3b76a5bcdd571259b387ade3fc99b47",
+      "bytes": 175456,
+      "mtime_ns": 1768002325000000000
+    },
+    "day_solver/runtime/lib/libabsl_int128.so.2508.0.0": {
+      "sha256": "3121cfa3b08e26ba5db23f1c7fd2916961f2daa0f01bcbf1d6601a75929ea038",
+      "bytes": 27344,
+      "mtime_ns": 1768002306000000000
+    },
+    "day_solver/runtime/lib/libabsl_strings_internal.so.2508.0.0": {
+      "sha256": "5fe47cf1abb3dc88dd342d202b71afca2a99ce829b396036e44f2561bfc4b1f8",
+      "bytes": 23528,
+      "mtime_ns": 1768002301000000000
+    },
+    "day_solver/runtime/lib/libabsl_spinlock_wait.so.2508.0.0": {
+      "sha256": "a681623bf912ad037b25f589f6647617174f4803fbccf651bcc815db9ff0bef7",
+      "bytes": 15960,
+      "mtime_ns": 1768002281000000000
+    },
+    "day_solver/runtime/lib/libabsl_throw_delegate.so.2508.0.0": {
+      "sha256": "8c6c3688e2285c822be19c23d3001dd9648eb7b7e40bfa23c4b7ccab6f95d99d",
+      "bytes": 25360,
+      "mtime_ns": 1768002295000000000
+    },
+    "day_solver/runtime/lib/libCbc.so.2": {
+      "sha256": "d5d56f57096fb39845f28fbc2904a331f335603c6ff40f13c42e5c2fbd193b8d",
+      "bytes": 1447520,
+      "mtime_ns": 1768002569000000000
+    },
+    "day_solver/runtime/lib/libOsiClp.so.1": {
+      "sha256": "4a40ce0ca4933bb545a6ba35dad6668c4e1c1a7568e8b67f393866197bddf1f2",
+      "bytes": 434600,
+      "mtime_ns": 1768002433000000000
+    },
+    "day_solver/runtime/lib/libClp.so.1": {
+      "sha256": "d12b0de76d24ec73575ff195f4d6f7ccaa7ecd463ae7f1198bd87f81276e88d0",
+      "bytes": 2088224,
+      "mtime_ns": 1768002419000000000
+    },
+    "day_solver/runtime/lib/libCoinUtils.so.2": {
+      "sha256": "afc0b004dc23b4d026956ca93b3a636c84129627daadd1cdf77f2159765e9cc5",
+      "bytes": 1525824,
+      "mtime_ns": 1768002330000000000
+    },
+    "day_solver/runtime/lib/libz.so.1": {
+      "sha256": "ba8051872cc5ca928d8496f048b71e8f8cfa73cbc6d505e0729feb543315571b",
+      "bytes": 125624,
+      "mtime_ns": 1768002286000000000
+    },
+    "day_solver/runtime/lib/libutf8_validity.so.33.1.0": {
+      "sha256": "004ea45ebcfc051d9cb7b72ee3d1e970d586011fcfc2473285b0a3764d5cd62d",
+      "bytes": 15224,
+      "mtime_ns": 1768002326000000000
+    },
+    "day_solver/runtime/lib/libabsl_cord.so.2508.0.0": {
+      "sha256": "8ba7d1cc74d0bfa5446a98a56755a254a64c8b32ef16133457efb4b09201ae77",
+      "bytes": 153576,
+      "mtime_ns": 1768002392000000000
+    },
+    "day_solver/runtime/lib/libabsl_cordz_info.so.2508.0.0": {
+      "sha256": "b961f17063a9f7363c07ef37697a3ef82d401b24b2df7bf5a1b1677a5466f438",
+      "bytes": 28616,
+      "mtime_ns": 1768002385000000000
+    },
+    "day_solver/runtime/lib/libabsl_cord_internal.so.2508.0.0": {
+      "sha256": "3ca7548d5c7eaaeaaf7995241b0fe84b6d9901ce1245375cef864e8d8cd42025",
+      "bytes": 91720,
+      "mtime_ns": 1768002380000000000
+    },
+    "day_solver/runtime/lib/libabsl_flags_usage_internal.so.2508.0.0": {
+      "sha256": "f2775144fccea332608e08964a924ff8b85b5497e8d847fa8b5719d4736f0dc8",
+      "bytes": 66656,
+      "mtime_ns": 1768002432000000000
+    },
+    "day_solver/runtime/lib/libabsl_flags_config.so.2508.0.0": {
+      "sha256": "ed0b1edeb076bc98ff493510dfa5eb598878cb0aaebf3ee29438e8c33eb427b8",
+      "bytes": 29352,
+      "mtime_ns": 1768002385000000000
+    },
+    "day_solver/runtime/lib/libabsl_flags_program_name.so.2508.0.0": {
+      "sha256": "dc1e823256d59560beaa0ff4e4392f270bd59d3b92396a1b94171c85d953175b",
+      "bytes": 17528,
+      "mtime_ns": 1768002381000000000
+    },
+    "day_solver/runtime/lib/libabsl_flags_private_handle_accessor.so.2508.0.0": {
+      "sha256": "1d906bd494f07d9febde59bce95beb6de1251eeeea36f4f12b07c008dccdcf0e",
+      "bytes": 16528,
+      "mtime_ns": 1768002342000000000
+    },
+    "day_solver/runtime/lib/libabsl_raw_logging_internal.so.2508.0.0": {
+      "sha256": "1457ca372c2528cedfb7cf2acdbf5938e3e8b8531754a9057d8b62dd78b0096c",
+      "bytes": 17576,
+      "mtime_ns": 1768002290000000000
+    },
+    "day_solver/runtime/lib/libCgl.so.0": {
+      "sha256": "e0589e3b7370ee92cbabe95683494b189035dc4297b1ce1264423c4c9459cf13",
+      "bytes": 1315056,
+      "mtime_ns": 1768002502000000000
+    },
+    "day_solver/runtime/lib/libOsi.so.0": {
+      "sha256": "70eaeff5cc97ce83b1b1e4418bb69b87ecd95a24a8a02aadf7f3b6652e1545c0",
+      "bytes": 438344,
+      "mtime_ns": 1768002344000000000
+    },
+    "day_solver/runtime/lib/libabsl_log_internal_globals.so.2508.0.0": {
+      "sha256": "0eed345c28864c71729ae286316ad55e9181865979765578a1d1f20abe97e694",
+      "bytes": 17464,
+      "mtime_ns": 1768002343000000000
+    },
+    "day_solver/runtime/lib/libabsl_random_seed_gen_exception.so.2508.0.0": {
+      "sha256": "12d45137168dd692fdefcea51b2d8ba1a0efc25ea157f44a0d09c80f12c10689",
+      "bytes": 16552,
+      "mtime_ns": 1768002298000000000
+    },
+    "day_solver/runtime/lib/libabsl_base.so.2508.0.0": {
+      "sha256": "47f40589ca1efd026a8a582b22eb514767695ccd628bad1adca976ef87993690",
+      "bytes": 29840,
+      "mtime_ns": 1768002297000000000
+    },
+    "day_solver/runtime/lib/libabsl_random_internal_randen_hwaes.so.2508.0.0": {
+      "sha256": "1731d35ac6265d144594758d32d22d41e75fef627502c0b8efa507c06713dda1",
+      "bytes": 15176,
+      "mtime_ns": 1768002292000000000
+    },
+    "day_solver/runtime/lib/libabsl_random_internal_platform.so.2508.0.0": {
+      "sha256": "17e1a32b6374f1da4a94779ec69427a0aacc4b03a0642d1b7e954d5dab5661a8",
+      "bytes": 19304,
+      "mtime_ns": 1768002281000000000
+    },
+    "day_solver/runtime/lib/libabsl_strerror.so.2508.0.0": {
+      "sha256": "2a2c803700987829906207aed2db470c7e852cae832d53e898019ea60112021f",
+      "bytes": 16904,
+      "mtime_ns": 1768002281000000000
+    },
+    "day_solver/runtime/lib/libabsl_examine_stack.so.2508.0.0": {
+      "sha256": "6fc257e04106e3aa4878343720da18eb069262bf97ed585a09de49aeca977c11",
+      "bytes": 16616,
+      "mtime_ns": 1768002342000000000
+    },
+    "day_solver/runtime/lib/libabsl_log_internal_format.so.2508.0.0": {
+      "sha256": "38d91311f3da04660e5c3633d04a15885b92266dad7273b0161d50a9d4b14cc7",
+      "bytes": 17576,
+      "mtime_ns": 1768002372000000000
+    },
+    "day_solver/runtime/lib/libabsl_log_internal_structured_proto.so.2508.0.0": {
+      "sha256": "1b78b7cd69c93457e056573136504e47a101cbc4f806e834ed878296281bee12",
+      "bytes": 15848,
+      "mtime_ns": 1768002344000000000
+    },
+    "day_solver/runtime/lib/libabsl_log_internal_log_sink_set.so.2508.0.0": {
+      "sha256": "bb99320cf2055e5b7539d9c39e248a4ed75a0f822cd0dfaa6aa39bea9cf8da8b",
+      "bytes": 29576,
+      "mtime_ns": 1768002395000000000
+    },
+    "day_solver/runtime/lib/libabsl_log_internal_proto.so.2508.0.0": {
+      "sha256": "7a10f53b3c6fafe8f29ceb7cd6e6336da2739cf1d546ee230c0114116e4de79e",
+      "bytes": 16224,
+      "mtime_ns": 1768002334000000000
+    },
+    "day_solver/runtime/lib/libabsl_log_internal_fnmatch.so.2508.0.0": {
+      "sha256": "aedd1eeb9eebcd0e7af0e9960c646bd1ec3933fb7199f2f608ce46b9ed474e9e",
+      "bytes": 15616,
+      "mtime_ns": 1768002334000000000
+    },
+    "day_solver/runtime/lib/libabsl_flags_commandlineflag.so.2508.0.0": {
+      "sha256": "3e8dfd113848baa66b86eead8a309c172fc9d26b967666487665867e1e8caafe",
+      "bytes": 16032,
+      "mtime_ns": 1768002332000000000
+    },
+    "day_solver/runtime/lib/libabsl_flags_commandlineflag_internal.so.2508.0.0": {
+      "sha256": "9ee484136ff7f30b1efaeb97bf8b10b22577a66019780b6eea5607e962a01fbc",
+      "bytes": 16248,
+      "mtime_ns": 1768002281000000000
+    },
+    "day_solver/runtime/lib/libabsl_hashtablez_sampler.so.2508.0.0": {
+      "sha256": "e59a7c4e0a88eebdbf3154d33e967d4089fe071804cd1371c8aab35c7ab8b199",
+      "bytes": 24504,
+      "mtime_ns": 1768002380000000000
+    },
+    "day_solver/runtime/lib/libabsl_stacktrace.so.2508.0.0": {
+      "sha256": "a9ee1d001749ffee2d5f765ebcf63645672c9db40da09cdb230aa107dce7a2df",
+      "bytes": 21392,
+      "mtime_ns": 1768002317000000000
+    },
+    "day_solver/runtime/lib/libabsl_malloc_internal.so.2508.0.0": {
+      "sha256": "06ba64ca00029a01018cdf16a22d4ef7e0d2e99376f47c7b08254e102e040f03",
+      "bytes": 27464,
+      "mtime_ns": 1768002308000000000
+    },
+    "day_solver/runtime/lib/libabsl_city.so.2508.0.0": {
+      "sha256": "5c5d6346c1279851d2b17219185ce7b00f57686504e925ea3329e87ce578fb94",
+      "bytes": 15576,
+      "mtime_ns": 1768002311000000000
+    },
+    "day_solver/runtime/lib/libabsl_crc_cord_state.so.2508.0.0": {
+      "sha256": "697f544de77ae2e519e1746a2f1a53065e5be8d717c0a4731d8f011ed0948eac",
+      "bytes": 32352,
+      "mtime_ns": 1768002370000000000
+    },
+    "day_solver/runtime/lib/libabsl_cordz_functions.so.2508.0.0": {
+      "sha256": "961d6a50f8c9d3fa2c4730bfdb17f4663f321f5e32f6726a1464765c8598535d",
+      "bytes": 16496,
+      "mtime_ns": 1768002297000000000
+    },
+    "day_solver/runtime/lib/libabsl_cordz_handle.so.2508.0.0": {
+      "sha256": "22c7737c0ce23a06cf7a3a2b7b8bddbed2c8c006f4ed0fc8bd9a48ebbe95931c",
+      "bytes": 22760,
+      "mtime_ns": 1768002381000000000
+    },
+    "day_solver/runtime/lib/libabsl_symbolize.so.2508.0.0": {
+      "sha256": "a1339a5ebb10f48605f8e94d5fdaeea23930c4b5cc2939ef34a7f7177812902e",
+      "bytes": 43680,
+      "mtime_ns": 1768002328000000000
+    },
+    "day_solver/runtime/lib/libabsl_log_sink.so.2508.0.0": {
+      "sha256": "f269675c08b3bdd4b2a4c3abf57d1a33a14ed86d0add7922393be62eb0713a87",
+      "bytes": 15824,
+      "mtime_ns": 1768002372000000000
+    },
+    "day_solver/runtime/lib/libabsl_debugging_internal.so.2508.0.0": {
+      "sha256": "e1ba440e9987e05ab35be4b4f41cc881af7ad6641adf44e01510b83b781adaa9",
+      "bytes": 28504,
+      "mtime_ns": 1768002297000000000
+    },
+    "day_solver/runtime/lib/libabsl_crc32c.so.2508.0.0": {
+      "sha256": "083362d6b41963577c69839507bed8fc1b422faf7339e6b452fa23071264c6e2",
+      "bytes": 24960,
+      "mtime_ns": 1768002343000000000
+    },
+    "day_solver/runtime/lib/libabsl_exponential_biased.so.2508.0.0": {
+      "sha256": "17945182259a9559a3c16eee6bd83f3d2d3557044b66243a3650033c9b2e45c7",
+      "bytes": 15944,
+      "mtime_ns": 1768002281000000000
+    },
+    "day_solver/runtime/lib/libabsl_demangle_internal.so.2508.0.0": {
+      "sha256": "ad17e0b9c342db1111853b863734e394a71b78fe5951ab9dec071b1110c4ada5",
+      "bytes": 72784,
+      "mtime_ns": 1768002324000000000
+    },
+    "day_solver/runtime/lib/libabsl_crc_internal.so.2508.0.0": {
+      "sha256": "4dec72cb44061e6870ecf2e5a0a9cde10a2c8d3f8e48c3c0853139437fa60945",
+      "bytes": 27592,
+      "mtime_ns": 1768002321000000000
+    },
+    "day_solver/runtime/lib/libabsl_demangle_rust.so.2508.0.0": {
+      "sha256": "9a1ca80e4d4a3a232de08bd01a92f8372a8ab7d41e0ab26745bd6ded49445fdd",
+      "bytes": 24296,
+      "mtime_ns": 1768002319000000000
+    },
+    "day_solver/runtime/lib/libabsl_decode_rust_punycode.so.2508.0.0": {
+      "sha256": "abf01bbe0ce647b880d431cbc59e7a100031d95791413278bb3abfb4d30b46be",
+      "bytes": 15840,
+      "mtime_ns": 1768002310000000000
+    },
+    "day_solver/runtime/lib/libabsl_utf8_for_code_point.so.2508.0.0": {
+      "sha256": "28024ba23809b42406ba70a5f9da7554ad11368170728afa1b6d19bd41c6230a",
+      "bytes": 15344,
+      "mtime_ns": 1768002281000000000
+    }
+  },
+  "root_directories": [
+    "agents",
+    "day_solver",
+    "fast_day_solver_estimator",
+    "fast_game_engine"
+  ],
+  "historical_dependency_manifest": {
+    "path": "experiments/v6/sep10_tiles_placement/COMPONENT_MANIFEST.json",
+    "sha256": "4e36cbee6953227ff950b8d94bfc58eb45f6de6121ebdb9e9059f80f4ab4c226"
+  }
+}

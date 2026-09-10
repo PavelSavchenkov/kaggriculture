@@ -1,0 +1,307 @@
+{
+  "source_experiment": "experiments/v6/sep10_tiles_placement",
+  "source_session_final_state_sha256": "79dba4fb7e3327e06919dc161511336e8e0790ce9a6a3f74174559c3685aba8e",
+  "scope": "root-package extraction; C++ logic unchanged; paths/build/docs adapted; general placement-quality and repair gates remain unpassed",
+  "copied_files": {
+    "include/bank_binary.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/bank_binary.hpp",
+      "source_sha256": "c61c8b3ab6a529da1dfd25825572ce47108b9a27ebd12aa184750d5ce99ed4d9"
+    },
+    "include/certify.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/certify.hpp",
+      "source_sha256": "4a03b1be0b28261f88bebba67195fb228a4a6694ad5bec3b07d020d3ef860cf9"
+    },
+    "include/cold_cases.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/cold_cases.hpp",
+      "source_sha256": "ea855e18f32693a8843c37feb8e575c79557e39710439b7097fd4c5c5b3cebcb"
+    },
+    "include/course.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/course.hpp",
+      "source_sha256": "bd589936a925245f6b716f1174b4258961e15be58895baea0f3465d2efc27141"
+    },
+    "include/finance_snapshot/PROVENANCE.json": {
+      "source": "experiments/v6/sep10_tiles_placement/include/finance_snapshot/PROVENANCE.json",
+      "source_sha256": "2a3ecd1f51aa5e5cb1119e94a4df7c985f969fac1ed0a16d91835deb27132bf1"
+    },
+    "include/finance_snapshot/calendar.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/finance_snapshot/calendar.hpp",
+      "source_sha256": "3caf74d973f88dd04fe29e7101df5df19bd19ddebcef6e8da20b3e9b62c5f7a1"
+    },
+    "include/finance_snapshot/compile_calendar.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/finance_snapshot/compile_calendar.hpp",
+      "source_sha256": "1a7f7d0acb5c8e410bb7e0047af681e1621a9516ca99eb224a2eba90c731af91"
+    },
+    "include/finance_snapshot/immediate_sales.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/finance_snapshot/immediate_sales.hpp",
+      "source_sha256": "9c12f01abd0d012d5941efcbef7e746956987c1dfb1566845e38bd013478ec50"
+    },
+    "include/finance_snapshot/market.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/finance_snapshot/market.hpp",
+      "source_sha256": "5b3edad452db7797097e8262f5525186cd9f62653bd50c2bd12c781d632e21d8"
+    },
+    "include/finance_snapshot/own_world.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/finance_snapshot/own_world.hpp",
+      "source_sha256": "1f939c91a73bd2637cf9704e24e2bb5dab1e7632e4ee6493a913a14ca7065860"
+    },
+    "include/finance_snapshot/project_resources.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/finance_snapshot/project_resources.hpp",
+      "source_sha256": "01107f0f5ccee632d3396534fb0b77c6a55d0a4c868bf360737a960469632634"
+    },
+    "include/fixed_finance.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/fixed_finance.hpp",
+      "source_sha256": "c040bf081d184e82fdb893f30160c12939643681e10307bc2e5abd6624beecda"
+    },
+    "include/life_route_repair.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/life_route_repair.hpp",
+      "source_sha256": "6c16b7defb82e3886b6028e8bb5b22f92a4a550b64bfc6b315291c695f656a49"
+    },
+    "include/life_search.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/life_search.hpp",
+      "source_sha256": "ebbd7cb12f95cf9c02056cf24b178284cbc02a06aea79a33f86e6ddfdaa38845"
+    },
+    "include/lifetimes.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/lifetimes.hpp",
+      "source_sha256": "911e55c7befa6d2884a33882b85d9ff24806ae4cca53a9a2332a6c9eabbeba98"
+    },
+    "include/population.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/population.hpp",
+      "source_sha256": "b99fe495ebe47c06d02bd1b878bc57ccf0b7ac9a02c93183f10948973f1271f9"
+    },
+    "include/preparation_repair.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/preparation_repair.hpp",
+      "source_sha256": "c6527cebba032c7c04b9cd1232f148ed79fe502c3a0ff1f6f61e54909bb8a99e"
+    },
+    "include/recorded_actions.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/recorded_actions.hpp",
+      "source_sha256": "5daa228be6f062687258ed4ce044b82e92d68ca6fd6990774e572583d80e2531"
+    },
+    "include/repairs.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/repairs.hpp",
+      "source_sha256": "e22100976bd64ef938bc6764229873043dfa8158da41c66a243000447625cade"
+    },
+    "include/route_geometry.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/route_geometry.hpp",
+      "source_sha256": "a85a96722a6975ed4dccb79e778e976b15ad9fb35169e536eab5db93c3b9f818"
+    },
+    "include/route_repair.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/route_repair.hpp",
+      "source_sha256": "74d5fcd0f6c8df2111d54e2a5b50fbe5659d5fbb4424cfddda1ac2aa817a9572"
+    },
+    "include/schedule_bank.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/schedule_bank.hpp",
+      "source_sha256": "78a9e6ecd2ab81c91f33f1fb9017682d4fb9f0350caa55b26ced99182488fcfc"
+    },
+    "include/search.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/search.hpp",
+      "source_sha256": "d58f6c7c7a1f93b020ff3beb810f531b9a654373cd423270228e623182dc37e2"
+    },
+    "include/shop_scenario.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/shop_scenario.hpp",
+      "source_sha256": "0687c5f5e28f61d0e6ce681c7bce8263eb7f927a74a157f2c8a8c646d2599720"
+    },
+    "include/solve_contract.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/solve_contract.hpp",
+      "source_sha256": "23ef0e2606ad621bdd9b689b464a7f59ee0cc66b5b246dcec80fcde568826017"
+    },
+    "include/timeline.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/timeline.hpp",
+      "source_sha256": "3a60c4fed7a4f95c1e9f1370835e53e3b42ac622398fc8e93f31fad7edd30461"
+    },
+    "include/timeline_search.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/timeline_search.hpp",
+      "source_sha256": "77d3bd88208427b554e9bc8fbc37a022c2268a6e71d40ed53aad73d3f44f786d"
+    },
+    "include/weed_schedule_repair.hpp": {
+      "source": "experiments/v6/sep10_tiles_placement/include/weed_schedule_repair.hpp",
+      "source_sha256": "d418b1d59bebac5db9d64dbf822d07e3b666acc4f5809e15714196a3cbe52b44"
+    },
+    "source/benchmark_repairs.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/benchmark_repairs.cpp",
+      "source_sha256": "71f14f6641b15499fb46235d2051c65c81de71be47de053e15d6f8487af94492"
+    },
+    "source/certify_course.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/certify_course.cpp",
+      "source_sha256": "77d2d08418299cab5b30ae67baff390c8fa6d00aab3ffbf51ac70af29ad03279"
+    },
+    "source/check_bank_fallback.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/check_bank_fallback.cpp",
+      "source_sha256": "4530ff9c6ae9a463ee000843ebeff997f1d6afc2d8cde432a52e05b4a4e1e87e"
+    },
+    "source/check_estimator_cache.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/check_estimator_cache.cpp",
+      "source_sha256": "be4e7559fa8d885b85a0bcacc304985e7fb5a9b0315557c08543495022cfad44"
+    },
+    "source/check_life_compile_reuse.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/check_life_compile_reuse.cpp",
+      "source_sha256": "9d4f25cd3a111b9b7e7e71dc5c495b2d27048605a61b7254f4a5ead79d37ce74"
+    },
+    "source/check_life_day_cache.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/check_life_day_cache.cpp",
+      "source_sha256": "4e773e6d19e6e67805501ef659dea5a9a1bd5ef7bd6890a9c2dd6f7f6275fb06"
+    },
+    "source/check_life_equivalence.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/check_life_equivalence.cpp",
+      "source_sha256": "034142b53504963660238b4a5d00b2126245b98b73307ffbe747991498240c01"
+    },
+    "source/check_ordered_stock.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/check_ordered_stock.cpp",
+      "source_sha256": "e15b0e802648c6df77e463719a05c146f2e9c7c1039457bc06021ea8a993cf4d"
+    },
+    "source/check_preparation_repair.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/check_preparation_repair.cpp",
+      "source_sha256": "75ce79d23f3f195041bbb563ee480fc50f869138824f64d0baa4d8eb6f0e4ef1"
+    },
+    "source/check_repeated_service.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/check_repeated_service.cpp",
+      "source_sha256": "98213e49fd485c42a87b0d6d406b3e5fe47bbffd5bdc34f54bcba87a1895c14e"
+    },
+    "source/check_timeline.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/check_timeline.cpp",
+      "source_sha256": "c422082e3cd166fef75e55d60846e0da9f1a3db6adb63521f044aa781a54a785"
+    },
+    "source/compile_cold.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/compile_cold.cpp",
+      "source_sha256": "0c4f10fce275ec9d19406e3d721670c987346ad47cbdef14e02415e19928c357"
+    },
+    "source/export_calendar.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/export_calendar.cpp",
+      "source_sha256": "6b80eeb14bff1841cc648f98f8d0309cdbeb2a9fa4af252e54e5d7be959716a2"
+    },
+    "source/extract_course.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/extract_course.cpp",
+      "source_sha256": "885899e205bb25d143b65af09f06fc2db686d921d399061e453f0910bd9eb06d"
+    },
+    "source/generate_cases.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/generate_cases.cpp",
+      "source_sha256": "a0e71591db83305d4e9b773dd739ec009e5cc5e411422c0047d73de54322ba8b"
+    },
+    "source/import_lives.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/import_lives.cpp",
+      "source_sha256": "b55f5cdcf3aa8c95e2b6386486b86ccf76aa65f612b36a210435c8eb4a6b8da9"
+    },
+    "source/inspect_layout.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/inspect_layout.cpp",
+      "source_sha256": "78b6094e514daf01d3de3c4de06ddbf10e58a401afb165c75c78e351ba15f52d"
+    },
+    "source/pack_bank.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/pack_bank.cpp",
+      "source_sha256": "918de625bc127932dc045eccb7ad59a0ba0e134c63482a9c471bc623bb48d02b"
+    },
+    "source/probe_lives.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/probe_lives.cpp",
+      "source_sha256": "f1a625e20c28871e0780ac46cff4f35bd46de51b7eaf882e685b7ec36c644068"
+    },
+    "source/probe_swaps.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/probe_swaps.cpp",
+      "source_sha256": "6dcc424491b9cacdc1de0d3478f29c5083b6922733aa594897a5541c236abf7a"
+    },
+    "source/profile_input_loading.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/profile_input_loading.cpp",
+      "source_sha256": "004d106b597d7700444c98af92ab2fcc74906eefac48e5e0aaa3f233a1d69c1e"
+    },
+    "source/profile_schedule.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/profile_schedule.cpp",
+      "source_sha256": "54d263e607a66334d19b5a27a9b20e21200b6d3a3eb2d77b6976b04393f23251"
+    },
+    "source/profile_trace.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/profile_trace.cpp",
+      "source_sha256": "8e15e8c29ea1b8caacda63847463368ff6666549d6ac8dc83cc97db97ccf0da6"
+    },
+    "source/replay_course.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/replay_course.cpp",
+      "source_sha256": "212ae25a28c751d8759583fc947f3fd287f54df018e7afe5ab822f153c43e000"
+    },
+    "source/search_constrained.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/search_constrained.cpp",
+      "source_sha256": "617b494b81e308121b990c477c15d919b1201c1f58e6c904f86f696f3c9e0ad9"
+    },
+    "source/search_course.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/search_course.cpp",
+      "source_sha256": "f14ea88a6752b86fd6b7d8293bcb7e90c620d836156adc8387432b341a9ead1c"
+    },
+    "source/search_lives.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/search_lives.cpp",
+      "source_sha256": "2e7dd421c738b3f6905b3067b80b6913b3bc9f36389ac76364692e7d80ef1b69"
+    },
+    "source/search_portfolio.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/search_portfolio.cpp",
+      "source_sha256": "c1b69a1889c875f37bbc811487329e2f52d20c51c33c22aa16c4150658a29cdf"
+    },
+    "source/search_route_geometry.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/search_route_geometry.cpp",
+      "source_sha256": "f62e3455e8d989083031e1a0c430eee4d721a52dab9d6a2e2717a0333769bb03"
+    },
+    "source/solve_point.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/solve_point.cpp",
+      "source_sha256": "59fcb038dd669fa01ee5b68aedb68fce762423484c069efaf496d03ea7a73ff5"
+    },
+    "source/transfer_certificates.cpp": {
+      "source": "experiments/v6/sep10_tiles_placement/source/transfer_certificates.cpp",
+      "source_sha256": "d448ed207f7f738b556738b32b11bc1a0d80cf709021f6ccc1b18d5692d01da8"
+    },
+    "tools/optimize_placement.py": {
+      "source": "experiments/v6/sep10_tiles_placement/scripts/optimize_placement.py",
+      "source_sha256": "0975f341b9d54bc195c491898132a1ce096224a55411318d2412f61abb4e8c14"
+    },
+    "evidence/RESULTS.json": {
+      "source": "experiments/v6/sep10_tiles_placement/RESULTS.json",
+      "source_sha256": "dfbe492c9196465dad70780710eef20e1ad9f7ae1c53d252271d45b13e3dd08d"
+    },
+    "evidence/quality_time.png": {
+      "source": "experiments/v6/sep10_tiles_placement/research/refinement_curve_001/quality_time.png",
+      "source_sha256": "432506375299f1675dd0d8a1626607535bd9c388839ee1d75c193df295664468"
+    },
+    "examples/rotation/INPUT.plan": {
+      "source": "experiments/v6/sep10_tiles_placement/examples/rotation/INPUT.plan",
+      "source_sha256": "2c60b2a683f211c922ece8aa651bfe7ab6981784eb67a729409c5ac91a5d57b3"
+    },
+    "examples/rotation/assignment.txt": {
+      "source": "experiments/v6/sep10_tiles_placement/examples/rotation/assignment.txt",
+      "source_sha256": "3693b327649351bdc5d6227ff189ca913c99dd83979db7fa17da847f3741ffcb"
+    },
+    "examples/rotation/BANK.bin": {
+      "source": "experiments/v6/sep10_tiles_placement/examples/rotation/BANK.bin",
+      "source_sha256": "1f93917a4311c41b60d9f430ca65f3d9418bb3bde73a230f10a61b3e9bce19a8"
+    },
+    "docs/DESIGN.md": {
+      "source": "experiments/v6/sep10_tiles_placement/DESIGN.md",
+      "source_sha256": "64d892e3c1fb058f10cc8511e6077a8071812c79e2ac26cb34c9e26295897c63"
+    },
+    "docs/API.md": {
+      "source": "experiments/v6/sep10_tiles_placement/API.md",
+      "source_sha256": "11f601b6594aeffe7e75d570ae5f938fff2ac94767f4bfd0008c89a84de34e88"
+    },
+    "docs/HANDOFF.md": {
+      "source": "experiments/v6/sep10_tiles_placement/HANDOFF.md",
+      "source_sha256": "042d0087321093ddb4c74c5377a4ffe85b53248cb79c11a589567ae6e13cd84c"
+    },
+    "docs/RESULTS.md": {
+      "source": "experiments/v6/sep10_tiles_placement/RESULTS.md",
+      "source_sha256": "fe3e04b9b9fd1700e0ce94eea7b7f8d56397a85858a60165af496425f9708532"
+    },
+    "docs/PROTOCOL.md": {
+      "source": "experiments/v6/sep10_tiles_placement/PROTOCOL.md",
+      "source_sha256": "d43fcfdab82ee5b2028fe5b6e0ae102b6d4d56b4999617368a26e1ba76e009a3"
+    },
+    "docs/GATE_DECISION.md": {
+      "source": "experiments/v6/sep10_tiles_placement/GATE_DECISION.md",
+      "source_sha256": "6867de81bb31b75e314fa8ba523b4796f8ca549d5ff26b50af25c96af9330193"
+    },
+    "docs/SEARCH_COVERAGE.md": {
+      "source": "experiments/v6/sep10_tiles_placement/SEARCH_COVERAGE.md",
+      "source_sha256": "4de3a71603cc63bcf3c3c436943fd64d4f1f17abb015738f2c835c31a69322e6"
+    },
+    "docs/LEARNINGS.md": {
+      "source": "experiments/v6/sep10_tiles_placement/LEARNINGS.md",
+      "source_sha256": "050637ac0c7d2ba3d330d7efc0bc39d2813f6903ef7dcbd208fc7f1bd593df78"
+    },
+    "docs/PROFILING.md": {
+      "source": "experiments/v6/sep10_tiles_placement/PROFILING.md",
+      "source_sha256": "6e33527d516187241cbb88eabde162db894ea54d044d9aaf05c90d728f6d8a45"
+    },
+    "docs/IDEAS.md": {
+      "source": "experiments/v6/sep10_tiles_placement/IDEAS.md",
+      "source_sha256": "41e58bc4ba81603c1c18f570aa48d452684e3fd9b3eb3b0c07cd84183d7facef"
+    }
+  }
+}
