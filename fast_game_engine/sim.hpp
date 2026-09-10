@@ -635,6 +635,162 @@ public:
         return result;
     }
 
+    // Return joint actions with every ineffective operation removed and every
+    // market quantity clipped to the number actually committed. Unlike the
+    // solo sanitizer below, this preserves active-opponent order lockstep,
+    // shared quotes, player commit order, and market-line positions. Stepping
+    // the returned pair from this state is parity-equivalent to stepping the
+    // requested pair (town/day-end effects included by the eventual step).
+    std::array<Action, 2> sanitize_joint_actions(
+        const Action& first, const Action& second) const {
+        Sim copy = *this;
+        const Action* requested[2] = {&first, &second};
+        std::array<Action, 2> result;
+        for (int player = 0; player < 2; ++player) {
+            result[player].clear();
+            result[player].n_units = copy.st.farms[player].n_units;
+            for (int unit = 0; unit < result[player].n_units; ++unit)
+                result[player].units[unit] = {};
+
+            const Farm& farm = copy.st.farms[player];
+            int demand[N_CROPS] = {0};
+            for (int unit = 0; unit < requested[player]->n_units; ++unit)
+                if (requested[player]->units[unit].op == OP_PLANT &&
+                    requested[player]->units[unit].arg < N_CROPS)
+                    ++demand[requested[player]->units[unit].arg];
+            bool blocked[N_CROPS];
+            for (int crop = 0; crop < N_CROPS; ++crop)
+                blocked[crop] = demand[crop] > farm.seeds[crop];
+
+            const int units = std::min(requested[player]->n_units,
+                                       farm.n_units);
+            Farm& mutable_farm = copy.st.farms[player];
+            for (int unit = 0; unit < units; ++unit) {
+                const UnitAction& value = requested[player]->units[unit];
+                if (value.op == OP_PASS ||
+                    (value.op == OP_PLANT && value.arg < N_CROPS &&
+                     blocked[value.arg]))
+                    continue;
+                const uint64_t before = copy.parity_hash();
+                const int before_item = value.arg < N_ITEMS ?
+                    mutable_farm.inv[unit][value.arg] : 0;
+                copy.apply_unit(mutable_farm, unit, value, copy.st.day);
+                if (copy.parity_hash() == before) continue;
+
+                UnitAction canonical{value.op, 0, 1};
+                if (value.op == OP_PLANT) canonical.arg = value.arg;
+                if (value.op == OP_PICKUP) {
+                    canonical.arg = value.arg;
+                    canonical.n = mutable_farm.inv[unit][value.arg] -
+                                  before_item;
+                } else if (value.op == OP_PLACE) {
+                    canonical.arg = value.arg;
+                    canonical.n = is_animal(value.arg) ? 1 :
+                        before_item - mutable_farm.inv[unit][value.arg];
+                }
+                result[player].units[unit] = canonical;
+            }
+            result[player].finalize();
+            result[player].n_orders = std::min(requested[player]->n_orders,
+                                               copy.cfg.max_orders);
+            for (int index = 0; index < result[player].n_orders; ++index)
+                result[player].orders[index] = {};
+        }
+
+        struct CanonicalOrder {
+            uint8_t type = M_NONE;
+            uint8_t item = 0;
+            int32_t remaining = 0;
+            bool live = false;
+        };
+        const int max_orders = std::max(result[0].n_orders,
+                                        result[1].n_orders);
+        for (int index = 0; index < max_orders; ++index) {
+            CanonicalOrder orders[2];
+            for (int player = 0; player < 2; ++player) {
+                if (index >= result[player].n_orders) continue;
+                const Order& order = requested[player]->orders[index];
+                if (order.op == M_HIRE || order.op == M_BUY_LAND) {
+                    orders[player] = {order.op, 0, 1, true};
+                } else if (order.op != M_NONE && order.n > 0) {
+                    orders[player] = {order.op, order.item, order.n, true};
+                }
+            }
+
+            for (int player = 0; player < 2; ++player) {
+                if (!orders[player].live) continue;
+                Farm& farm = copy.st.farms[player];
+                if (orders[player].type == M_HIRE) {
+                    const int before = farm.n_units;
+                    copy.do_hire(farm);
+                    if (farm.n_units != before)
+                        result[player].orders[index] = {M_HIRE, 0, 1};
+                    orders[player].live = false;
+                } else if (orders[player].type == M_BUY_LAND) {
+                    const int before = farm.n_quadrants;
+                    copy.do_buy_land(farm);
+                    if (farm.n_quadrants != before)
+                        result[player].orders[index] = {M_BUY_LAND, 0, 1};
+                    orders[player].live = false;
+                }
+            }
+
+            int accepted[2] = {0, 0};
+            for (;;) {
+                struct Quote {
+                    bool valid = false;
+                    uint8_t type = M_NONE;
+                    uint8_t item = 0;
+                    int price = 0;
+                } quotes[2];
+                for (int player = 0; player < 2; ++player) {
+                    if (!orders[player].live || orders[player].remaining <= 0)
+                        continue;
+                    const uint8_t type = orders[player].type;
+                    const uint8_t item = orders[player].item;
+                    if (type == M_SELL && is_product(item)) {
+                        quotes[player] = {true, type, item, market_price(
+                            item, copy.st.market.inventory[item])};
+                    } else if (type == M_BUY_PRODUCT &&
+                               (item == WHEAT || item == FERTILIZER)) {
+                        quotes[player] = {true, type, item, market_price(
+                            item, copy.st.market.inventory[item] - 1)};
+                    } else if (type == M_BUY_SEED && is_crop(item)) {
+                        quotes[player] = {true, type, item,
+                                          CROPS[item].seed};
+                    } else if (type == M_BUY_ANIMAL && is_animal(item)) {
+                        quotes[player] = {true, type, item,
+                            ANIMALS[item - GOOSE].cost};
+                    } else {
+                        orders[player].live = false;
+                    }
+                }
+                if (!quotes[0].valid && !quotes[1].valid) break;
+                bool committed = false;
+                for (int player = 0; player < 2; ++player) {
+                    const Quote& quote = quotes[player];
+                    if (!quote.valid) continue;
+                    if (copy.commit_unit(quote.type, quote.item, quote.price,
+                                         copy.st.farms[player])) {
+                        --orders[player].remaining;
+                        ++accepted[player];
+                        committed = true;
+                    } else {
+                        orders[player].live = false;
+                    }
+                }
+                if (!committed) break;
+            }
+            for (int player = 0; player < 2; ++player)
+                if (accepted[player] > 0)
+                    result[player].orders[index] = {
+                        orders[player].type, orders[player].item,
+                        accepted[player]};
+            copy.refresh_prices();
+        }
+        return result;
+    }
+
     // Return the largest order-preserving subset that succeeds against a PASS
     // opponent from the current state. This is a read-only policy helper; it
     // does not alter the simulator or relax active-opponent diagnostics.
