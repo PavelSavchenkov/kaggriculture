@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-09-09T23:45:00Z",
+  "opponents": [
+    "parent",
+    "ahmed_v25",
+    "nanare",
+    "king_rc4",
+    "public_router_v52"
+  ],
+  "seed_start": 202609100000,
+  "seeds_per_opponent": 128,
+  "seat_mode": "both",
+  "shop_panel": "independent",
+  "scenario_cases": [
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107183828.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107192763.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107198350.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107200449.calendar"
+  ],
+  "binary": "experiments/v6/sep09_sales_planner/build/e913a04f8c8b73c47b5a/arena",
+  "objective": "Independent seed-block replication of unchanged three-plan continuation selector, same five exposed opponents. Primary comparison: existing old_model; secondary: demand. Freeze selection rule and eight source scenarios before results. Report confidence by whole seed; do not promote solely on the small first-screen demand gain.",
+  "decision": "Require useful improvement over old_model with credible seed uncertainty before integrating the selector. If inconclusive or worse, profile prediction errors and scenario feasibility."
+}

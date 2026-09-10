@@ -1,0 +1,35 @@
+{
+  "source_archive_read_only": true,
+  "imports": [
+    {
+      "source": "experiments/v6/sep07_compositions_v0/scripts/pull_replays.py",
+      "source_sha256": "f238a6b29f3d4c36e6425554340a7063d4cd0502531ffbc40ff08da5e353aeca",
+      "local": "scripts/pull_replays.py",
+      "local_sha256": "f238a6b29f3d4c36e6425554340a7063d4cd0502531ffbc40ff08da5e353aeca"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/scripts/build_arena.py",
+      "source_sha256": "8f5119e0acea1a8d87ebd20723e4ad68c51b2a3116c9eb670c284bc0dbe7074f",
+      "local": "scripts/build_arena.py",
+      "local_sha256": "bb99af5458b5a35a95f3e275f360a0fc2d9b3b9a01b513cbf1c5e44ea702e56b"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/src/arena.cpp",
+      "source_sha256": "8645ba4a4bb409af105451ede58e5a708a5b65200a706c49afc5aeaa561762db",
+      "local": "source/arena.cpp",
+      "local_sha256": "8645ba4a4bb409af105451ede58e5a708a5b65200a706c49afc5aeaa561762db"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/include/evaluation.hpp",
+      "source_sha256": "3a2821900ef5cbe2094ff25be19a8cf48d41e5aa7b4d83d9528221b5fa692b3e",
+      "local": "include/evaluation.hpp",
+      "local_sha256": "3a2821900ef5cbe2094ff25be19a8cf48d41e5aa7b4d83d9528221b5fa692b3e"
+    },
+    {
+      "source": "experiments/v6/sep07_compositions_v0/include/profile.hpp",
+      "source_sha256": "ee9a5305aa3778dca3e6272b1f4d38afd0f4a806b3c5c5414367626a34e70724",
+      "local": "include/profile.hpp",
+      "local_sha256": "ee9a5305aa3778dca3e6272b1f4d38afd0f4a806b3c5c5414367626a34e70724"
+    }
+  ]
+}

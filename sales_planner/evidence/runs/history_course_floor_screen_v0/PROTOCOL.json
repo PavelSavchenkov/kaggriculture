@@ -1,0 +1,27 @@
+{
+  "frozen_utc": "2026-09-10T01:37:59.940905+00:00",
+  "seed_start": 2026091010000,
+  "seeds_per_opponent_panel": 128,
+  "opponents": [
+    "atakan_demand",
+    "ahmed_v25",
+    "nanare",
+    "public_router_v52",
+    "sale_priority",
+    "king_rc4"
+  ],
+  "shop_panels": [
+    "independent",
+    "native"
+  ],
+  "parallel_batches": 4,
+  "candidate": "Same history rule plus exact equality of projected shared market inventory after the two-turn edit.",
+  "reference": "Same course, same compiler, same purchase repair; no timing changes.",
+  "primary": "Paired final full-game cash margin against reacting opponents; no tuning on outcome. Report own cash, league utility, worst decile, every physical difference and stock/fault/production change.",
+  "contract": "Agent uses only legal observations, historical public stock bound and its own compiled fixed course. Hidden state is evaluator-only. Compilation uses fixed sampled future weeds, not actual seed.",
+  "promotion": "Measure full margin and loss prevention versus both controls. Repeat with fresh seeds before any promotion claim; keep all prior negative cases.",
+  "cost": "Complete own act calls including observation construction and course compilation; report per-game total and compilation separately.",
+  "inventory_guard": true,
+  "role": "Diagnostic repeat on the used 128-seed history confirmation; not fresh confirmation. Compare with both purchase repair and frozen prior history results.",
+  "known_failure": "At turn384, delay8wool gains70 immediately but leaves3extra market inventory. Next wool sale at409 loses260; unrelated later melon wait gains15, total\u2212175. Both seats same seed/course/opponent."
+}

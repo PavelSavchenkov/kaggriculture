@@ -1,0 +1,55 @@
+{
+  "frozen_utc": "2026-09-10T03:48:16.773402+00:00",
+  "cases": [
+    "research/calendars_confirmation0345/107334263.calendar",
+    "research/calendars_confirmation0345/107334750.calendar",
+    "research/calendars_confirmation0345/107334802.calendar",
+    "research/calendars_confirmation0345/107335315.calendar",
+    "research/calendars_confirmation0345/107335459.calendar",
+    "research/calendars_confirmation0345/107335780.calendar",
+    "research/calendars_confirmation0345/107336224.calendar",
+    "research/calendars_confirmation0345/107337223.calendar",
+    "research/calendars_confirmation0345/107337581.calendar",
+    "research/calendars_confirmation0345/107337584.calendar",
+    "research/calendars_confirmation0345/107337594.calendar",
+    "research/calendars_confirmation0345/107337635.calendar",
+    "research/calendars_confirmation0345/107337639.calendar",
+    "research/calendars_confirmation0345/107337640.calendar",
+    "research/calendars_confirmation0345/107337734.calendar",
+    "research/calendars_confirmation0345/107338192.calendar",
+    "research/calendars_confirmation0345/107338484.calendar",
+    "research/calendars_confirmation0345/107338629.calendar",
+    "research/calendars_confirmation0345/107338630.calendar",
+    "research/calendars_confirmation0345/107339134.calendar",
+    "research/calendars_confirmation0345/107339225.calendar",
+    "research/calendars_confirmation0345/107339239.calendar",
+    "research/calendars_confirmation0345/107340105.calendar",
+    "research/calendars_confirmation0345/107340193.calendar",
+    "research/calendars_confirmation0345/107340204.calendar",
+    "research/calendars_confirmation0345/107340495.calendar",
+    "research/calendars_confirmation0345/107341094.calendar",
+    "research/calendars_confirmation0345/107341148.calendar",
+    "research/calendars_confirmation0345/107341185.calendar",
+    "research/calendars_confirmation0345/107341189.calendar",
+    "research/calendars_confirmation0345/107341280.calendar",
+    "research/calendars_confirmation0345/107341502.calendar"
+  ],
+  "reference": "wait_delivery_witness",
+  "variants": {
+    "wait_delivery_witness": [
+      "--delivery-bound",
+      "--purchase-witness"
+    ],
+    "wait_delivery_multiple_witness": [
+      "--delivery-bound",
+      "--purchase-witness",
+      "--multiple-sales"
+    ]
+  },
+  "role": "Prospective public confirmation of unchanged multiple-sale rule against one-edit timing, after the live confirmation. All new episodes and both seats retained.",
+  "primary": "Complete margin over one-edit control; no checked state changes, all failures and prediction gaps retained. Do not count more requested edits as a gain.",
+  "hypothesis": "The single-edit restriction may discard profitable sales when multiple products have a safe window.",
+  "information": "Future purchase quantities are explicitly part of the supplied plan witness. They are obtained from source execution for this conditional benchmark, not claimed to be predicted from live observations. No actual future rival actions or private state enter the sale rule.",
+  "binary": "build/89c409f576d9046d81d7/replay_timing",
+  "binary_sha256": "a572052a9b5a6c0b05edc6f859ac033ae894c2037c8c8de9484694e5f9f1218b"
+}

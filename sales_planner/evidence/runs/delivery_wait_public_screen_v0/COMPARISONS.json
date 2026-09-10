@@ -1,0 +1,37 @@
+[
+  {
+    "variant": "wait_delivery_history",
+    "reference": "wait_day_history",
+    "cases": 80,
+    "episode_clusters": 40,
+    "positive": 59,
+    "negative": 0,
+    "zero": 21,
+    "worst_margin": 0,
+    "best_margin": 3307,
+    "changed_state": 0,
+    "history_underestimates": 0,
+    "decisions": 815,
+    "margin_gain": {
+      "mean": 138.775,
+      "ci95": [
+        70.1625,
+        240.2503125
+      ]
+    },
+    "cash_gain": {
+      "mean": 138.775,
+      "ci95": [
+        70.1625,
+        240.2503125
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 1.25,
+      "ci95": [
+        0.0,
+        3.75
+      ]
+    }
+  }
+]

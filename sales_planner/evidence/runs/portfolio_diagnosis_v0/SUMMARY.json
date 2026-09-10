@@ -1,0 +1,16 @@
+{
+  "forecast_side_rows": 1920,
+  "own_missing": 56,
+  "rival_missing": 402,
+  "commitment_errors": 0,
+  "first_rival_missing": {
+    "(254, 9)": 36,
+    "(252, 11)": 144,
+    "(230, 0)": 18,
+    "(234, 0)": 36,
+    "(236, 0)": 18,
+    "(235, 0)": 24,
+    "(238, 0)": 126
+  },
+  "interpretation": "In these exposed trace cases the failures are missing physical inputs, not extra/missing hires. Rival source initial cash is overwritten by public current cash from a different farm; several source animal purchases then fail. cash_at_short_order is after the whole market phase of that turn, not before the specific order."
+}

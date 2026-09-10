@@ -1,0 +1,28 @@
+{
+  "frozen_utc": "2026-09-10T01:23:01.386073+00:00",
+  "seed_start": 2026091010000,
+  "seeds_per_opponent_panel": 128,
+  "opponents": [
+    "atakan_demand",
+    "ahmed_v25",
+    "nanare",
+    "public_router_v52",
+    "sale_priority",
+    "king_rc4"
+  ],
+  "shop_panels": [
+    "independent",
+    "native"
+  ],
+  "parallel_batches": 4,
+  "candidate": "Unchanged one-turn history rule on fixed Atakan courses 0,1,2, after turn 226; compiled own calendar and purchase repair.",
+  "reference": "Same course, same compiler, same purchase repair; no timing changes.",
+  "primary": "Paired final full-game cash margin against reacting opponents; no tuning on outcome. Report own cash, league utility, worst decile, every physical difference and stock/fault/production change.",
+  "contract": "Agent uses only legal observations, historical public stock bound and its own compiled fixed course. Hidden state is evaluator-only. Compilation uses fixed sampled future weeds, not actual seed.",
+  "promotion": "Require positive margin interval and useful coverage without new own physical failures before confirmation. Zero-coverage or material adverse physical changes trigger diagnosis, not threshold tuning. Report all failed jobs. Does not by itself establish better plan selection.",
+  "cost": "Complete own act calls including observation construction and course compilation; report per-game total and compilation separately.",
+  "role": "Confirmation on new environment seeds; same six exposed opponents and same three farm courses. No independent farm-family claim.",
+  "binary": "build/2085091d70020301c1bf/arena",
+  "binary_sha256": "7eb61d45db8f494aa08d68246104fdada22237cd44d5a0711de9eb993c14198f",
+  "known_screen": "1152 paired games: +$32.283 margin, 850 gains, zero losses, no noncash changes. Added about 0.42ms own act time per game."
+}

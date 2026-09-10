@@ -1,0 +1,9 @@
+# Seed prebuys: more opportunities, no demonstrated policy gain
+
+The control fills an available slot in a crowded order list with an already scheduled next-turn output sale, when the public bound permits a competing rival sale by that original time. It otherwise retains multiple-sale timing and supplied funded purchase quantities. On 394 exposed plans, slot filling adds $3.75 average margin over retained timing (95% episode interval $1.07–8.26), with 41 gains and eight losses, unchanged checked state. This is development evidence, not live promotion.
+
+Adding seed prebuys moves 192 purchases, totaling 1,300 seeds, one turn earlier. Sale advances rise from 76 orders / 286 output units to 239 / 1,702. No quantity is added to the supplied purchase plan. The 37 physical-state differences are all intended earlier seed availability: other work, production, faults, terminal seeds and terminal stock match in every case.
+
+The extra freedom does not establish a better policy. Prebuying adds -$3.34 mean margin over the identical slot-fill control (95% interval -$14.35 to $9.60), with nine gains, 17 losses and 368 unchanged. Own cash decreases $9.11 on average (interval -$18.17 to -$0.43). Worst margin change is -$854; best is +$1,792. Both players' cash is recomputed. EXTREME_EXAMPLES.json keeps concrete positive and negative cases.
+
+Pause seed prebuying as a policy recommendation. It is feasible and creates sale choices in this sample, but a rule that always uses the freed slot on possible competition does not select those choices well. The public earliest-sale bound rules out some competing sales; reaching that bound does not predict that a sale will happen. A future purchase optimizer should price the resulting options, not optimize the count of freed slots. Keep all prediction gaps and intended seed differences visible; do not relabel this as a fixed-date purchase benchmark.

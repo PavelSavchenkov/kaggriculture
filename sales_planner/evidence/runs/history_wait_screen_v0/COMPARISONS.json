@@ -1,0 +1,218 @@
+[
+  {
+    "variant": "wait_history_recent",
+    "reference": "wait_output_recent",
+    "source": "all",
+    "cases": 186,
+    "episode_clusters": 93,
+    "positive": 68,
+    "negative": 97,
+    "zero": 21,
+    "worst_margin": -564,
+    "best_margin": 826,
+    "changed_state": 1,
+    "history_underestimates": 0,
+    "decisions": 368,
+    "margin_gain": {
+      "mean": 1.032258064516129,
+      "ci95": [
+        -14.952150537634408,
+        18.44099462365591
+      ]
+    },
+    "cash_gain": {
+      "mean": -0.553763440860215,
+      "ci95": [
+        -12.46787634408602,
+        11.790322580645162
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "variant": "wait_history_recent",
+    "reference": "wait_output_recent",
+    "source": "old",
+    "cases": 144,
+    "episode_clusters": 72,
+    "positive": 59,
+    "negative": 72,
+    "zero": 13,
+    "worst_margin": -564,
+    "best_margin": 529,
+    "changed_state": 1,
+    "history_underestimates": 0,
+    "decisions": 269,
+    "margin_gain": {
+      "mean": 4.034722222222222,
+      "ci95": [
+        -12.951909722222222,
+        22.104861111111102
+      ]
+    },
+    "cash_gain": {
+      "mean": 3.2777777777777777,
+      "ci95": [
+        -8.534895833333332,
+        15.097222222222221
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "variant": "wait_history_recent",
+    "reference": "wait_output_recent",
+    "source": "fresh",
+    "cases": 42,
+    "episode_clusters": 21,
+    "positive": 9,
+    "negative": 25,
+    "zero": 8,
+    "worst_margin": -172,
+    "best_margin": 826,
+    "changed_state": 0,
+    "history_underestimates": 0,
+    "decisions": 99,
+    "margin_gain": {
+      "mean": -9.261904761904763,
+      "ci95": [
+        -46.26190476190476,
+        41.95297619047618
+      ]
+    },
+    "cash_gain": {
+      "mean": -13.69047619047619,
+      "ci95": [
+        -45.714285714285715,
+        26.33690476190471
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "variant": "wait_history",
+    "reference": "wait_output_recent",
+    "source": "all",
+    "cases": 186,
+    "episode_clusters": 93,
+    "positive": 71,
+    "negative": 96,
+    "zero": 19,
+    "worst_margin": -564,
+    "best_margin": 826,
+    "changed_state": 1,
+    "history_underestimates": 0,
+    "decisions": 373,
+    "margin_gain": {
+      "mean": 1.5,
+      "ci95": [
+        -14.494758064516128,
+        18.957123655913975
+      ]
+    },
+    "cash_gain": {
+      "mean": -0.08602150537634409,
+      "ci95": [
+        -12.021639784946236,
+        12.274462365591393
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "variant": "wait_history",
+    "reference": "wait_output_recent",
+    "source": "old",
+    "cases": 144,
+    "episode_clusters": 72,
+    "positive": 62,
+    "negative": 71,
+    "zero": 11,
+    "worst_margin": -564,
+    "best_margin": 529,
+    "changed_state": 1,
+    "history_underestimates": 0,
+    "decisions": 274,
+    "margin_gain": {
+      "mean": 4.638888888888889,
+      "ci95": [
+        -12.396527777777777,
+        22.67499999999998
+      ]
+    },
+    "cash_gain": {
+      "mean": 3.8819444444444446,
+      "ci95": [
+        -7.8890625000000005,
+        15.701562499999998
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "variant": "wait_history",
+    "reference": "wait_output_recent",
+    "source": "fresh",
+    "cases": 42,
+    "episode_clusters": 21,
+    "positive": 9,
+    "negative": 25,
+    "zero": 8,
+    "worst_margin": -172,
+    "best_margin": 826,
+    "changed_state": 0,
+    "history_underestimates": 0,
+    "decisions": 99,
+    "margin_gain": {
+      "mean": -9.261904761904763,
+      "ci95": [
+        -46.26190476190476,
+        41.95297619047618
+      ]
+    },
+    "cash_gain": {
+      "mean": -13.69047619047619,
+      "ci95": [
+        -45.714285714285715,
+        26.33690476190471
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

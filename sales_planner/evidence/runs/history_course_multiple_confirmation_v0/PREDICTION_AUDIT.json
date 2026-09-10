@@ -1,0 +1,78 @@
+{
+  "own_prediction_errors": [
+    {
+      "seed": 2026091062031,
+      "seat": 0,
+      "branch": 1,
+      "panel": "independent",
+      "opponent": "salem_sep08_m3",
+      "prediction_error": 11
+    },
+    {
+      "seed": 2026091062060,
+      "seat": 0,
+      "branch": 1,
+      "panel": "native",
+      "opponent": "king_rc4",
+      "prediction_error": -2
+    },
+    {
+      "seed": 2026091062060,
+      "seat": 1,
+      "branch": 1,
+      "panel": "native",
+      "opponent": "king_rc4",
+      "prediction_error": -2
+    }
+  ],
+  "rival_action_changes": [
+    {
+      "seed": 2026091062017,
+      "seat": 0,
+      "branch": 1,
+      "panel": "independent",
+      "opponent": "titan_frontier",
+      "rival_cash_change": 0
+    },
+    {
+      "seed": 2026091062017,
+      "seat": 1,
+      "branch": 1,
+      "panel": "independent",
+      "opponent": "titan_frontier",
+      "rival_cash_change": 0
+    },
+    {
+      "seed": 2026091062060,
+      "seat": 0,
+      "branch": 1,
+      "panel": "native",
+      "opponent": "king_rc4",
+      "rival_cash_change": -13
+    },
+    {
+      "seed": 2026091062060,
+      "seat": 1,
+      "branch": 1,
+      "panel": "native",
+      "opponent": "king_rc4",
+      "rival_cash_change": -13
+    },
+    {
+      "seed": 2026091062036,
+      "seat": 0,
+      "branch": 1,
+      "panel": "native",
+      "opponent": "titan_frontier",
+      "rival_cash_change": 0
+    },
+    {
+      "seed": 2026091062036,
+      "seat": 1,
+      "branch": 1,
+      "panel": "native",
+      "opponent": "titan_frontier",
+      "rival_cash_change": 0
+    }
+  ]
+}

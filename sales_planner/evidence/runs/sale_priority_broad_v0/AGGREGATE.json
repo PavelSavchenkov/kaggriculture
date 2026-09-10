@@ -1,0 +1,30 @@
+{
+  "paired_comparisons": 3072,
+  "seed_clusters": 64,
+  "mean": {
+    "margin": 50.15852864583332,
+    "win_utility_pp": 1.6601562500000002,
+    "own_cash": 19.397786458333332
+  },
+  "ci95": {
+    "margin": [
+      33.91036783854167,
+      66.17131347656246
+    ],
+    "win_utility_pp": [
+      1.073404947916667,
+      2.2786458333333335
+    ],
+    "own_cash": [
+      10.857340494791668,
+      27.854207356770836
+    ]
+  },
+  "positive": 1302,
+  "negative": 969,
+  "worst_gain": -752,
+  "production_changes": 0,
+  "labor_changes": 0,
+  "extra_fault_cases": 0,
+  "scope": "Equal-weight fixed12-opponent development panel. Cluster each seed across bothseats,panels,opponents;10000 bootstrap draws. Related opponent versions are not independent families."
+}

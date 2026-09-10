@@ -1,0 +1,14 @@
+{
+  "command": [
+    "experiments/v6/sep09_sales_planner/build/b182313db00d80aaf885/check_continuation_resume",
+    "experiments/v6/sep09_sales_planner/research/calendars_confirmation0425/107342138.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_confirmation0425/107350972.calendar"
+  ],
+  "binary_sha256": "0c96fc9a7eb2320e1d0c1c9c5fe8ce81b7f01be7728ac46729ab3426031f66f8",
+  "returncode": 0,
+  "seconds": 0.4451485799945658,
+  "flags": [
+    "-fsanitize=address,undefined"
+  ],
+  "scope": "Two complete source episodes, both seats, 94 cuts and both order-compaction modes."
+}

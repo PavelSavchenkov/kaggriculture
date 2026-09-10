@@ -1,0 +1,169 @@
+{
+  "command": [
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_sales_planner/build/9ee2db447869efcb9e92/benchmark_baselines",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107183828.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107184297.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107184941.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107185882.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107185985.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107186119.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107186596.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107188828.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107190617.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107191809.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107192763.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107192803.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107193734.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107194801.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107195583.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107195631.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107195843.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107196584.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107197409.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107197581.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107197803.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107198350.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107198501.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107198576.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107198733.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107199339.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107199449.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107199534.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107199565.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107200273.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107200327.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107200426.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107200449.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107201238.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107201289.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107201398.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107201424.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107202048.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107202280.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107202365.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107202381.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107203061.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107203233.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107203528.calendar"
+  ],
+  "summary": [
+    {
+      "policy": "cold1",
+      "cases": 88,
+      "own_feasible": 3,
+      "both_feasible": 3,
+      "conditional_mean_margin_gain": 10516.333333333334,
+      "mean_ms": 0.31920013636363637,
+      "median_ms": 0.3180185
+    },
+    {
+      "policy": "cold2",
+      "cases": 88,
+      "own_feasible": 83,
+      "both_feasible": 69,
+      "conditional_mean_margin_gain": -342.5217391304348,
+      "mean_ms": 0.38864554545454544,
+      "median_ms": 0.39143700000000003
+    },
+    {
+      "policy": "cold24",
+      "cases": 88,
+      "own_feasible": 29,
+      "both_feasible": 23,
+      "conditional_mean_margin_gain": 1160.8695652173913,
+      "mean_ms": 0.8273751136363636,
+      "median_ms": 0.8357060000000001
+    },
+    {
+      "policy": "cold24_bridge",
+      "cases": 88,
+      "own_feasible": 60,
+      "both_feasible": 51,
+      "conditional_mean_margin_gain": -168.49019607843138,
+      "mean_ms": 0.9680292613636364,
+      "median_ms": 0.974622
+    },
+    {
+      "policy": "cold2_keep",
+      "cases": 88,
+      "own_feasible": 83,
+      "both_feasible": 69,
+      "conditional_mean_margin_gain": -368.3188405797101,
+      "mean_ms": 0.9179278977272728,
+      "median_ms": 0.9241670000000001
+    },
+    {
+      "policy": "cold2_priority",
+      "cases": 88,
+      "own_feasible": 83,
+      "both_feasible": 69,
+      "conditional_mean_margin_gain": -351.2173913043478,
+      "mean_ms": 0.4435482840909091,
+      "median_ms": 0.44675849999999995
+    },
+    {
+      "policy": "cold4",
+      "cases": 88,
+      "own_feasible": 84,
+      "both_feasible": 70,
+      "conditional_mean_margin_gain": -440.6857142857143,
+      "mean_ms": 0.4788033636363636,
+      "median_ms": 0.4831675
+    },
+    {
+      "policy": "cold4_keep",
+      "cases": 88,
+      "own_feasible": 83,
+      "both_feasible": 69,
+      "conditional_mean_margin_gain": -424.5507246376812,
+      "mean_ms": 0.9965598522727274,
+      "median_ms": 1.007067
+    },
+    {
+      "policy": "cold4_priority",
+      "cases": 88,
+      "own_feasible": 84,
+      "both_feasible": 70,
+      "conditional_mean_margin_gain": -440.6857142857143,
+      "mean_ms": 0.5381043977272727,
+      "median_ms": 0.5356105
+    },
+    {
+      "policy": "cold8",
+      "cases": 88,
+      "own_feasible": 35,
+      "both_feasible": 32,
+      "conditional_mean_margin_gain": 370.03125,
+      "mean_ms": 0.5853980795454545,
+      "median_ms": 0.58748
+    },
+    {
+      "policy": "cold8_bridge",
+      "cases": 88,
+      "own_feasible": 46,
+      "both_feasible": 38,
+      "conditional_mean_margin_gain": 407.5263157894737,
+      "mean_ms": 0.7210559431818182,
+      "median_ms": 0.726945
+    },
+    {
+      "policy": "original",
+      "cases": 88,
+      "own_feasible": 88,
+      "both_feasible": 88,
+      "conditional_mean_margin_gain": 0,
+      "mean_ms": 0.08869669318181818,
+      "median_ms": 0.08691850000000001
+    },
+    {
+      "policy": "warm_sales24",
+      "cases": 88,
+      "own_feasible": 4,
+      "both_feasible": 4,
+      "conditional_mean_margin_gain": -4.25,
+      "mean_ms": 0.7763000795454545,
+      "median_ms": 0.7815915000000001
+    }
+  ],
+  "scope": "Exposed development calendars, original market worlds, fixed rival orders. Conditional gains are descriptive survivor subsets, not promotion evidence; all failures retained."
+}

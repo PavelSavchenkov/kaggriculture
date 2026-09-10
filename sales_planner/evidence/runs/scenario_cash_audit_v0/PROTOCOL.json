@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-09-10T04:01:29.799125+00:00",
+  "opponents": [
+    "parent",
+    "ahmed_v25",
+    "nanare",
+    "king_rc4",
+    "public_router_v52"
+  ],
+  "seed_start": 202609100500,
+  "seeds_per_opponent": 128,
+  "seat_mode": "both",
+  "shop_panel": "independent",
+  "scenario_cases": [
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107183828.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107192763.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107198350.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107200449.calendar"
+  ],
+  "objective": "Attribution audit on the already exposed 128-seed own-repair confirmation cohort. Vary only the source of rival starting cash. Compare forecast failures, branch choices and the same actual branch outcomes. No new-seed or current-opponent compatibility claim.",
+  "decision": "Report every remaining failure and paired choice loss. Historical cash is a separate stress case, not credit added to the observed rival. A lower failure count does not establish valid current-state forecasts or pipeline promotion.",
+  "variants": [
+    "current_cash",
+    "historical_cash"
+  ],
+  "implementation": "Unchanged fixed courses, own purchase repair, eight historical source calendars, and original selector. Default cash-splice control retained. No sale-rule changes or source-purchase normalization in this audit.",
+  "variant_flags": {
+    "current_cash": [
+      "--repair-own",
+      "--trace"
+    ],
+    "historical_cash": [
+      "--repair-own",
+      "--trace",
+      "--historical-rival-cash"
+    ]
+  },
+  "binary": "experiments/v6/sep09_sales_planner/build/cc64f6e7d4ce68dcf370/arena",
+  "binary_sha256": "81d800e3cc8afac568eaa98238d3ba58f0726815e45d148e23226ae16ed81f34"
+}

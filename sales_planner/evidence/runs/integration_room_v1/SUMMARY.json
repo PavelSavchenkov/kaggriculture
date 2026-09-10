@@ -1,0 +1,77 @@
+{
+  "determinism": "identical complete game records across1/4threads",
+  "comparisons": [
+    {
+      "panel": "independent",
+      "opponent": "pass",
+      "margin_gain": 71,
+      "cash_gain": 71,
+      "utility_gain": 0,
+      "tail_gain": 70,
+      "changed_action_games": 77,
+      "more_fault_games": 0,
+      "production_changed_games": 0,
+      "labor_changed_games": 0
+    },
+    {
+      "panel": "independent",
+      "opponent": "nanare",
+      "margin_gain": 9.0,
+      "cash_gain": 8,
+      "utility_gain": 0.0,
+      "tail_gain": 1.3899999999998727,
+      "changed_action_games": 51,
+      "more_fault_games": 0,
+      "production_changed_games": 0,
+      "labor_changed_games": 0
+    },
+    {
+      "panel": "independent",
+      "opponent": "ahmed_v25",
+      "margin_gain": 15.690000000000055,
+      "cash_gain": 14,
+      "utility_gain": 0.0,
+      "tail_gain": 6.0,
+      "changed_action_games": 53,
+      "more_fault_games": 0,
+      "production_changed_games": 0,
+      "labor_changed_games": 0
+    },
+    {
+      "panel": "native",
+      "opponent": "pass",
+      "margin_gain": 77,
+      "cash_gain": 77,
+      "utility_gain": 0,
+      "tail_gain": 63,
+      "changed_action_games": 85,
+      "more_fault_games": 0,
+      "production_changed_games": 0,
+      "labor_changed_games": 0
+    },
+    {
+      "panel": "native",
+      "opponent": "nanare",
+      "margin_gain": 7.5,
+      "cash_gain": 6.599999999991269,
+      "utility_gain": 0.0,
+      "tail_gain": 0.923099999999998,
+      "changed_action_games": 37,
+      "more_fault_games": 0,
+      "production_changed_games": 0,
+      "labor_changed_games": 0
+    },
+    {
+      "panel": "native",
+      "opponent": "ahmed_v25",
+      "margin_gain": 14.8900000000001,
+      "cash_gain": 13.80000000000291,
+      "utility_gain": 0.0,
+      "tail_gain": 26.159999999999854,
+      "changed_action_games": 45,
+      "more_fault_games": 0,
+      "production_changed_games": 0,
+      "labor_changed_games": 0
+    }
+  ]
+}

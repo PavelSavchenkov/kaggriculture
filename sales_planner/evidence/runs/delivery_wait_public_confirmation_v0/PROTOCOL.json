@@ -1,0 +1,50 @@
+{
+  "frozen_utc": "2026-09-10T02:36:00.325868+00:00",
+  "cases": [
+    "research/calendars_confirmation0235/107316357.calendar",
+    "research/calendars_confirmation0235/107317175.calendar",
+    "research/calendars_confirmation0235/107317346.calendar",
+    "research/calendars_confirmation0235/107319028.calendar",
+    "research/calendars_confirmation0235/107319039.calendar",
+    "research/calendars_confirmation0235/107319042.calendar",
+    "research/calendars_confirmation0235/107319048.calendar",
+    "research/calendars_confirmation0235/107319049.calendar",
+    "research/calendars_confirmation0235/107319078.calendar",
+    "research/calendars_confirmation0235/107319226.calendar",
+    "research/calendars_confirmation0235/107319298.calendar",
+    "research/calendars_confirmation0235/107319300.calendar",
+    "research/calendars_confirmation0235/107319783.calendar",
+    "research/calendars_confirmation0235/107320011.calendar",
+    "research/calendars_confirmation0235/107320110.calendar",
+    "research/calendars_confirmation0235/107320257.calendar",
+    "research/calendars_confirmation0235/107320681.calendar",
+    "research/calendars_confirmation0235/107320909.calendar",
+    "research/calendars_confirmation0235/107321071.calendar",
+    "research/calendars_confirmation0235/107321299.calendar",
+    "research/calendars_confirmation0235/107322779.calendar",
+    "research/calendars_confirmation0235/107323153.calendar",
+    "research/calendars_confirmation0235/107323156.calendar",
+    "research/calendars_confirmation0235/107323161.calendar",
+    "research/calendars_confirmation0235/107323162.calendar",
+    "research/calendars_confirmation0235/107323706.calendar",
+    "research/calendars_confirmation0235/107323879.calendar",
+    "research/calendars_confirmation0235/107323935.calendar",
+    "research/calendars_confirmation0235/107323936.calendar",
+    "research/calendars_confirmation0235/107324165.calendar",
+    "research/calendars_confirmation0235/107325132.calendar"
+  ],
+  "reference": "wait_day_history",
+  "variants": {
+    "wait_day_history": [
+      "--day-hold"
+    ],
+    "wait_delivery_history": [
+      "--delivery-bound"
+    ]
+  },
+  "binary": "build/05671cce7298a4a8b1b4/replay_timing",
+  "binary_sha256": "80ef283aba36c96c685d8aaca9f5a8b3dcbb7cf9dafa3a11adb5e81b77d5cc53",
+  "role": "31unopened episodes reserved before action inspection, unchanged day and delivery policies. All supplied plans, both seats; fixed historical rival actions.",
+  "primary": "Full-game margin vs original and day control; all failures,state changes and prediction errors. No tuning on these cases.",
+  "limitation": "Latest episodes do not prove independent source families."
+}

@@ -1,0 +1,16 @@
+{
+  "status": "development screening, not promotion",
+  "candidate": "compact_sales",
+  "control": "parent (early_structure_cow)",
+  "opponents": ["pass", "nanare", "ahmed_v25"],
+  "panels": ["independent shops", "native shops"],
+  "games_per_panel_opponent_policy": 256,
+  "seeds_per_panel": 128,
+  "seed_start": 2026090900,
+  "seats": "both",
+  "budget_expansions": 100000,
+  "validation": "all action contracts and joint unit-fault diagnostics",
+  "comparison": "paired margin, cash, utility, worst-decile margin and production/labor/overflow; no silent failed-game exclusion",
+  "operations": "self/PASS, deterministic thread-count comparison, generic/pair exact hashes and cash; debug build checks before promotion",
+  "decision": "Reject any unexplained new execution failure or material group regression. Complete planned screening; do not stop on a favorable partial result."
+}

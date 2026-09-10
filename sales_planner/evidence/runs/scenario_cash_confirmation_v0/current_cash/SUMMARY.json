@@ -1,0 +1,600 @@
+[
+  {
+    "opponent": "all",
+    "cases": 3072,
+    "modes": {
+      "chosen": {
+        "margin": 5081.4853515625,
+        "utility": 0.65625,
+        "regret": 1546.2418619791667,
+        "branch_counts": {
+          "0": 934,
+          "1": 1027,
+          "2": 1111
+        }
+      },
+      "demand": {
+        "margin": 4757.247395833333,
+        "utility": 0.6555989583333334,
+        "regret": 1870.4798177083333,
+        "branch_counts": {
+          "0": 672,
+          "2": 1176,
+          "1": 1224
+        }
+      },
+      "old_model": {
+        "margin": 4330.55078125,
+        "utility": 0.6318359375,
+        "regret": 2297.1764322916665,
+        "branch_counts": {
+          "2": 1688,
+          "1": 1116,
+          "0": 268
+        }
+      },
+      "cash_chosen": {
+        "margin": 5121.805338541667,
+        "utility": 0.66015625,
+        "regret": 1505.921875,
+        "branch_counts": {
+          "0": 793,
+          "2": 1231,
+          "1": 1048
+        }
+      }
+    }
+  },
+  {
+    "opponent": "parent",
+    "cases": 256,
+    "modes": {
+      "chosen": {
+        "margin": -2735.984375,
+        "utility": 0.3671875,
+        "regret": 1640.1640625,
+        "branch_counts": {
+          "0": 101,
+          "1": 76,
+          "2": 79
+        }
+      },
+      "demand": {
+        "margin": -3170.98046875,
+        "utility": 0.41015625,
+        "regret": 2075.16015625,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      },
+      "old_model": {
+        "margin": -3478.5078125,
+        "utility": 0.4140625,
+        "regret": 2382.6875,
+        "branch_counts": {
+          "2": 142,
+          "1": 94,
+          "0": 20
+        }
+      },
+      "cash_chosen": {
+        "margin": -2684.3515625,
+        "utility": 0.390625,
+        "regret": 1588.53125,
+        "branch_counts": {
+          "0": 73,
+          "2": 111,
+          "1": 72
+        }
+      }
+    }
+  },
+  {
+    "opponent": "ahmed_v25",
+    "cases": 256,
+    "modes": {
+      "chosen": {
+        "margin": -3385.2734375,
+        "utility": 0.33203125,
+        "regret": 1667.09765625,
+        "branch_counts": {
+          "0": 100,
+          "1": 78,
+          "2": 78
+        }
+      },
+      "demand": {
+        "margin": -3394.4921875,
+        "utility": 0.3515625,
+        "regret": 1676.31640625,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      },
+      "old_model": {
+        "margin": -3590.41015625,
+        "utility": 0.37890625,
+        "regret": 1872.234375,
+        "branch_counts": {
+          "2": 142,
+          "1": 94,
+          "0": 20
+        }
+      },
+      "cash_chosen": {
+        "margin": -3203.20703125,
+        "utility": 0.34765625,
+        "regret": 1485.03125,
+        "branch_counts": {
+          "0": 71,
+          "2": 113,
+          "1": 72
+        }
+      }
+    }
+  },
+  {
+    "opponent": "nanare",
+    "cases": 256,
+    "modes": {
+      "chosen": {
+        "margin": 9275.65625,
+        "utility": 0.921875,
+        "regret": 1797.25390625,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      },
+      "demand": {
+        "margin": 9275.65625,
+        "utility": 0.921875,
+        "regret": 1797.25390625,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      },
+      "old_model": {
+        "margin": 8397.7578125,
+        "utility": 0.8359375,
+        "regret": 2675.15234375,
+        "branch_counts": {
+          "2": 142,
+          "1": 100,
+          "0": 14
+        }
+      },
+      "cash_chosen": {
+        "margin": 9275.65625,
+        "utility": 0.921875,
+        "regret": 1797.25390625,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      }
+    }
+  },
+  {
+    "opponent": "king_rc4",
+    "cases": 256,
+    "modes": {
+      "chosen": {
+        "margin": 14328.2265625,
+        "utility": 0.8828125,
+        "regret": 1901.47265625,
+        "branch_counts": {
+          "0": 58,
+          "2": 98,
+          "1": 100
+        }
+      },
+      "demand": {
+        "margin": 14305.265625,
+        "utility": 0.8828125,
+        "regret": 1924.43359375,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      },
+      "old_model": {
+        "margin": 13219.6171875,
+        "utility": 0.90625,
+        "regret": 3010.08203125,
+        "branch_counts": {
+          "2": 142,
+          "1": 94,
+          "0": 20
+        }
+      },
+      "cash_chosen": {
+        "margin": 14328.2265625,
+        "utility": 0.8828125,
+        "regret": 1901.47265625,
+        "branch_counts": {
+          "0": 58,
+          "2": 98,
+          "1": 100
+        }
+      }
+    }
+  },
+  {
+    "opponent": "public_router_v52",
+    "cases": 256,
+    "modes": {
+      "chosen": {
+        "margin": -1164.1171875,
+        "utility": 0.53125,
+        "regret": 1422.765625,
+        "branch_counts": {
+          "0": 76,
+          "2": 105,
+          "1": 75
+        }
+      },
+      "demand": {
+        "margin": -1688.22265625,
+        "utility": 0.5234375,
+        "regret": 1946.87109375,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      },
+      "old_model": {
+        "margin": -1904.2421875,
+        "utility": 0.4453125,
+        "regret": 2162.890625,
+        "branch_counts": {
+          "2": 140,
+          "1": 88,
+          "0": 28
+        }
+      },
+      "cash_chosen": {
+        "margin": -942.3125,
+        "utility": 0.53125,
+        "regret": 1200.9609375,
+        "branch_counts": {
+          "0": 74,
+          "2": 98,
+          "1": 84
+        }
+      }
+    }
+  },
+  {
+    "opponent": "atakan_demand",
+    "cases": 256,
+    "modes": {
+      "chosen": {
+        "margin": 13.71484375,
+        "utility": 0.5,
+        "regret": 1402.890625,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      },
+      "demand": {
+        "margin": 13.71484375,
+        "utility": 0.5,
+        "regret": 1402.890625,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      },
+      "old_model": {
+        "margin": -426.4453125,
+        "utility": 0.4609375,
+        "regret": 1843.05078125,
+        "branch_counts": {
+          "2": 142,
+          "1": 102,
+          "0": 12
+        }
+      },
+      "cash_chosen": {
+        "margin": 13.71484375,
+        "utility": 0.5,
+        "regret": 1402.890625,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      }
+    }
+  },
+  {
+    "opponent": "junghoon_wool_sales",
+    "cases": 256,
+    "modes": {
+      "chosen": {
+        "margin": 12690.328125,
+        "utility": 0.79296875,
+        "regret": 885.2265625,
+        "branch_counts": {
+          "0": 104,
+          "1": 59,
+          "2": 93
+        }
+      },
+      "demand": {
+        "margin": 11435.35546875,
+        "utility": 0.75390625,
+        "regret": 2140.19921875,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      },
+      "old_model": {
+        "margin": 11398.80859375,
+        "utility": 0.77734375,
+        "regret": 2176.74609375,
+        "branch_counts": {
+          "2": 134,
+          "1": 94,
+          "0": 28
+        }
+      },
+      "cash_chosen": {
+        "margin": 12683.15234375,
+        "utility": 0.79296875,
+        "regret": 892.40234375,
+        "branch_counts": {
+          "0": 69,
+          "2": 115,
+          "1": 72
+        }
+      }
+    }
+  },
+  {
+    "opponent": "yusuke_sep08_m2",
+    "cases": 256,
+    "modes": {
+      "chosen": {
+        "margin": -2435.50390625,
+        "utility": 0.37109375,
+        "regret": 1253.97265625,
+        "branch_counts": {
+          "0": 74,
+          "2": 98,
+          "1": 84
+        }
+      },
+      "demand": {
+        "margin": -2866.9609375,
+        "utility": 0.36328125,
+        "regret": 1685.4296875,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      },
+      "old_model": {
+        "margin": -3127.33203125,
+        "utility": 0.38671875,
+        "regret": 1945.80078125,
+        "branch_counts": {
+          "2": 142,
+          "1": 94,
+          "0": 20
+        }
+      },
+      "cash_chosen": {
+        "margin": -2435.50390625,
+        "utility": 0.37109375,
+        "regret": 1253.97265625,
+        "branch_counts": {
+          "0": 74,
+          "2": 98,
+          "1": 84
+        }
+      }
+    }
+  },
+  {
+    "opponent": "salem_sep08_m3",
+    "cases": 256,
+    "modes": {
+      "chosen": {
+        "margin": 18838.69140625,
+        "utility": 0.9921875,
+        "regret": 1204.37109375,
+        "branch_counts": {
+          "0": 121,
+          "1": 72,
+          "2": 63
+        }
+      },
+      "demand": {
+        "margin": 18173.2421875,
+        "utility": 0.984375,
+        "regret": 1869.8203125,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      },
+      "old_model": {
+        "margin": 17547.38671875,
+        "utility": 0.9765625,
+        "regret": 2495.67578125,
+        "branch_counts": {
+          "2": 140,
+          "1": 84,
+          "0": 32
+        }
+      },
+      "cash_chosen": {
+        "margin": 18656.5390625,
+        "utility": 1.0,
+        "regret": 1386.5234375,
+        "branch_counts": {
+          "0": 76,
+          "2": 108,
+          "1": 72
+        }
+      }
+    }
+  },
+  {
+    "opponent": "public_capacity_router",
+    "cases": 256,
+    "modes": {
+      "chosen": {
+        "margin": 2308.41015625,
+        "utility": 0.7421875,
+        "regret": 1667.9296875,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      },
+      "demand": {
+        "margin": 2308.41015625,
+        "utility": 0.7421875,
+        "regret": 1667.9296875,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      },
+      "old_model": {
+        "margin": 1315.58984375,
+        "utility": 0.6328125,
+        "regret": 2660.75,
+        "branch_counts": {
+          "2": 142,
+          "1": 102,
+          "0": 12
+        }
+      },
+      "cash_chosen": {
+        "margin": 2308.41015625,
+        "utility": 0.7421875,
+        "regret": 1667.9296875,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      }
+    }
+  },
+  {
+    "opponent": "titan_frontier",
+    "cases": 256,
+    "modes": {
+      "chosen": {
+        "margin": 14624.42578125,
+        "utility": 0.9140625,
+        "regret": 2279.0234375,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      },
+      "demand": {
+        "margin": 14624.42578125,
+        "utility": 0.9140625,
+        "regret": 2279.0234375,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      },
+      "old_model": {
+        "margin": 14748.71484375,
+        "utility": 0.921875,
+        "regret": 2154.734375,
+        "branch_counts": {
+          "2": 140,
+          "1": 82,
+          "0": 34
+        }
+      },
+      "cash_chosen": {
+        "margin": 14624.42578125,
+        "utility": 0.9140625,
+        "regret": 2279.0234375,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      }
+    }
+  },
+  {
+    "opponent": "ahmed_v24",
+    "cases": 256,
+    "modes": {
+      "chosen": {
+        "margin": -1380.75,
+        "utility": 0.52734375,
+        "regret": 1432.734375,
+        "branch_counts": {
+          "0": 76,
+          "2": 105,
+          "1": 75
+        }
+      },
+      "demand": {
+        "margin": -1928.4453125,
+        "utility": 0.51953125,
+        "regret": 1980.4296875,
+        "branch_counts": {
+          "0": 56,
+          "2": 98,
+          "1": 102
+        }
+      },
+      "old_model": {
+        "margin": -2134.328125,
+        "utility": 0.4453125,
+        "regret": 2186.3125,
+        "branch_counts": {
+          "2": 140,
+          "1": 88,
+          "0": 28
+        }
+      },
+      "cash_chosen": {
+        "margin": -1163.0859375,
+        "utility": 0.52734375,
+        "regret": 1215.0703125,
+        "branch_counts": {
+          "0": 74,
+          "2": 98,
+          "1": 84
+        }
+      }
+    }
+  }
+]

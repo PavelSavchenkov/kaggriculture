@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/home/pavel/Programming/kaggriculture/sales_planner/build/16fdfe32a3d00f573348/arena",
+    "atakan_demand",
+    "2026091062000",
+    "1",
+    "/home/pavel/Programming/kaggriculture/sales_planner/runs/course_package_check/games.jsonl",
+    "--multiple-sales"
+  ],
+  "binary_sha256": "2142529c5d154ebfae44a7f43e5d4703fc96f4fb591657fc422cb21295a4a240",
+  "pairs": 6,
+  "exact_rows_vs_confirmation": 12,
+  "source": "experiments/v6/sep09_sales_planner/runs/history_course_multiple_confirmation_v0/independent_atakan_demand.jsonl",
+  "source_sha256": "529e5cb111d57f296da8e4874330dc0ad8ae6c01e11b0c684e8ea12a22ab328a",
+  "excluded_elapsed_fields": [
+    "compile_seconds",
+    "act_seconds",
+    "pair_seconds"
+  ],
+  "added_inactive_counters": [
+    "holding_exchange",
+    "holding_exchanges"
+  ],
+  "scope": "Same three supplied courses and two seats on one already exposed seed; packaging parity, not new confirmation."
+}

@@ -1,0 +1,12 @@
+{
+  "frozen_utc": "2026-09-10T00:53:05.595700+00:00",
+  "purpose": "Validate public-history output inventory bounds across all72 old exposed episodes before using them in sale timing.",
+  "inputs": "Consecutive legal own observations, own post-worker output stock and own submitted orders; public game rules. No rival private stock/actions or future input.",
+  "primary_checks": [
+    "No underestimated collected output or total carried+shed output compared with engine truth.",
+    "Exact rival sale quantities when the market phase stayed above floor; valid lower bounds otherwise.",
+    "Own accepted output-sale quantities agree with engine."
+  ],
+  "secondary": "How often it proves absence of stored product; frequency of conservative false risk; runtime. No policy performance claim from bound accuracy.",
+  "scope": "Carrot,tomato,strawberry,melon,egg,milk,wool only. History begins at standard empty-stock game start. Day-end deposits cap per-product possible stock at shed capacity. Ambiguous destruction counts as possible harvest."
+}

@@ -1,0 +1,43 @@
+{
+  "frozen_utc": "2026-09-10T00:18:24.690833+00:00",
+  "question": "Does a one-turn delay across known demand improve Otter original replay orders?",
+  "cases": [
+    {
+      "episode": 107267875,
+      "seat": 0,
+      "teams": [
+        "Otter Vibe",
+        "automatylicza"
+      ],
+      "calendar": "research/calendars_top2315/107267875.calendar"
+    },
+    {
+      "episode": 107271699,
+      "seat": 1,
+      "teams": [
+        "Claudex - An",
+        "Otter Vibe"
+      ],
+      "calendar": "research/calendars_top2315/107271699.calendar"
+    },
+    {
+      "episode": 107275573,
+      "seat": 1,
+      "teams": [
+        "DeeperNet",
+        "Otter Vibe"
+      ],
+      "calendar": "research/calendars_top2315/107275573.calendar"
+    }
+  ],
+  "policies": [
+    "original",
+    "wait_demand",
+    "wait_no_ready"
+  ],
+  "primary": "Paired final cash margin, recomputing both players trades. Also own cash.",
+  "constraints": "Original worker actions and market commitments; no extra missing resources/commitment mismatch; full-engine production, labor and faults unchanged for fixed-plan claims.",
+  "forecast": "Known current shops and public ready product; future rival orders unavailable to decision. Original own next-turn orders and resource calendar are given plan input.",
+  "scope": "Three exposed replay plans and fixed rival orders; not unseen scenarios and not an adaptive Otter agent. Existing untuned one-turn rule may have limited coverage.",
+  "promotion": "No general promotion from this cohort. Require new scenarios, diverse farm plans and reacting opponents."
+}

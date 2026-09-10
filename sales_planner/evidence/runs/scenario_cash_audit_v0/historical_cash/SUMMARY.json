@@ -1,0 +1,278 @@
+[
+  {
+    "opponent": "all",
+    "cases": 1280,
+    "modes": {
+      "chosen": {
+        "margin": 3833.6859375,
+        "utility": 0.6359375,
+        "regret": 1261.63984375,
+        "branch_counts": {
+          "2": 545,
+          "0": 473,
+          "1": 262
+        }
+      },
+      "demand": {
+        "margin": 2978.0546875,
+        "utility": 0.61171875,
+        "regret": 2117.27109375,
+        "branch_counts": {
+          "2": 580,
+          "1": 440,
+          "0": 260
+        }
+      },
+      "old_model": {
+        "margin": 3191.48046875,
+        "utility": 0.6109375,
+        "regret": 1903.8453125,
+        "branch_counts": {
+          "2": 744,
+          "1": 396,
+          "0": 140
+        }
+      },
+      "cash_chosen": {
+        "margin": 4042.98125,
+        "utility": 0.64296875,
+        "regret": 1052.34453125,
+        "branch_counts": {
+          "2": 630,
+          "1": 320,
+          "0": 330
+        }
+      }
+    }
+  },
+  {
+    "opponent": "parent",
+    "cases": 256,
+    "modes": {
+      "chosen": {
+        "margin": -2878.6640625,
+        "utility": 0.3828125,
+        "regret": 1628.41015625,
+        "branch_counts": {
+          "2": 107,
+          "0": 97,
+          "1": 52
+        }
+      },
+      "demand": {
+        "margin": -3061.6484375,
+        "utility": 0.40234375,
+        "regret": 1811.39453125,
+        "branch_counts": {
+          "2": 116,
+          "1": 88,
+          "0": 52
+        }
+      },
+      "old_model": {
+        "margin": -2861.63671875,
+        "utility": 0.4140625,
+        "regret": 1611.3828125,
+        "branch_counts": {
+          "2": 148,
+          "1": 80,
+          "0": 28
+        }
+      },
+      "cash_chosen": {
+        "margin": -2381.3359375,
+        "utility": 0.3984375,
+        "regret": 1131.08203125,
+        "branch_counts": {
+          "2": 126,
+          "1": 64,
+          "0": 66
+        }
+      }
+    }
+  },
+  {
+    "opponent": "ahmed_v25",
+    "cases": 256,
+    "modes": {
+      "chosen": {
+        "margin": -3121.65234375,
+        "utility": 0.296875,
+        "regret": 1421.13671875,
+        "branch_counts": {
+          "2": 110,
+          "0": 90,
+          "1": 56
+        }
+      },
+      "demand": {
+        "margin": -3682.3046875,
+        "utility": 0.3046875,
+        "regret": 1981.7890625,
+        "branch_counts": {
+          "2": 116,
+          "1": 88,
+          "0": 52
+        }
+      },
+      "old_model": {
+        "margin": -3124.94921875,
+        "utility": 0.3203125,
+        "regret": 1424.43359375,
+        "branch_counts": {
+          "2": 148,
+          "1": 80,
+          "0": 28
+        }
+      },
+      "cash_chosen": {
+        "margin": -2798.01171875,
+        "utility": 0.30859375,
+        "regret": 1097.49609375,
+        "branch_counts": {
+          "2": 126,
+          "1": 64,
+          "0": 66
+        }
+      }
+    }
+  },
+  {
+    "opponent": "nanare",
+    "cases": 256,
+    "modes": {
+      "chosen": {
+        "margin": 9218.86328125,
+        "utility": 0.94140625,
+        "regret": 1121.734375,
+        "branch_counts": {
+          "2": 110,
+          "0": 94,
+          "1": 52
+        }
+      },
+      "demand": {
+        "margin": 8125.59375,
+        "utility": 0.8671875,
+        "regret": 2215.00390625,
+        "branch_counts": {
+          "2": 116,
+          "1": 88,
+          "0": 52
+        }
+      },
+      "old_model": {
+        "margin": 7873.25,
+        "utility": 0.83203125,
+        "regret": 2467.34765625,
+        "branch_counts": {
+          "2": 146,
+          "1": 86,
+          "0": 24
+        }
+      },
+      "cash_chosen": {
+        "margin": 9380.4453125,
+        "utility": 0.921875,
+        "regret": 960.15234375,
+        "branch_counts": {
+          "2": 126,
+          "1": 64,
+          "0": 66
+        }
+      }
+    }
+  },
+  {
+    "opponent": "king_rc4",
+    "cases": 256,
+    "modes": {
+      "chosen": {
+        "margin": 16236.74609375,
+        "utility": 0.95703125,
+        "regret": 999.34765625,
+        "branch_counts": {
+          "2": 108,
+          "0": 96,
+          "1": 52
+        }
+      },
+      "demand": {
+        "margin": 14798.703125,
+        "utility": 0.90234375,
+        "regret": 2437.390625,
+        "branch_counts": {
+          "2": 116,
+          "1": 88,
+          "0": 52
+        }
+      },
+      "old_model": {
+        "margin": 15226.35546875,
+        "utility": 0.93359375,
+        "regret": 2009.73828125,
+        "branch_counts": {
+          "2": 152,
+          "1": 72,
+          "0": 32
+        }
+      },
+      "cash_chosen": {
+        "margin": 16180.7421875,
+        "utility": 0.94140625,
+        "regret": 1055.3515625,
+        "branch_counts": {
+          "2": 126,
+          "1": 64,
+          "0": 66
+        }
+      }
+    }
+  },
+  {
+    "opponent": "public_router_v52",
+    "cases": 256,
+    "modes": {
+      "chosen": {
+        "margin": -286.86328125,
+        "utility": 0.6015625,
+        "regret": 1137.5703125,
+        "branch_counts": {
+          "2": 110,
+          "0": 96,
+          "1": 50
+        }
+      },
+      "demand": {
+        "margin": -1290.0703125,
+        "utility": 0.58203125,
+        "regret": 2140.77734375,
+        "branch_counts": {
+          "2": 116,
+          "1": 88,
+          "0": 52
+        }
+      },
+      "old_model": {
+        "margin": -1155.6171875,
+        "utility": 0.5546875,
+        "regret": 2006.32421875,
+        "branch_counts": {
+          "2": 150,
+          "1": 78,
+          "0": 28
+        }
+      },
+      "cash_chosen": {
+        "margin": -166.93359375,
+        "utility": 0.64453125,
+        "regret": 1017.640625,
+        "branch_counts": {
+          "2": 126,
+          "1": 64,
+          "0": 66
+        }
+      }
+    }
+  }
+]

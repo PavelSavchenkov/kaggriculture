@@ -1,0 +1,19 @@
+{
+  "candidate": "room_keep",
+  "baseline": "compact_sales",
+  "opponents": [
+    "pass",
+    "nanare",
+    "ahmed_v25"
+  ],
+  "seed_start": 2026090915,
+  "seeds_per_panel": 64,
+  "seats": "both",
+  "shops": [
+    "independent",
+    "native"
+  ],
+  "budget_expansions": 100000,
+  "validation": "Every action and joint unit-success diagnostics; self-play plus serial/parallel exact records.",
+  "scope": "Development screening only. Complete worker actions from unchanged strong parent; storage rule compared against already accepted local compaction. No submission or broad promotion."
+}

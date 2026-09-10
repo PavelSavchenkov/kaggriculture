@@ -1,0 +1,380 @@
+[
+  {
+    "agent": "room_keep",
+    "games": 48,
+    "premium_arrivals_by_hour": {
+      "0": 20991,
+      "2": 315,
+      "3": 195,
+      "4": 858,
+      "5": 987,
+      "6": 1068,
+      "7": 675,
+      "8": 951,
+      "9": 594,
+      "10": 1704,
+      "11": 1089,
+      "12": 879,
+      "13": 1332,
+      "14": 423,
+      "15": 1995,
+      "16": 243,
+      "17": 738,
+      "18": 1611,
+      "19": 1917,
+      "20": 897,
+      "21": 1530,
+      "22": 933,
+      "23": 942
+    },
+    "premium_sold_by_hour": {
+      "0": 2889,
+      "1": 7830,
+      "2": 441,
+      "3": 144,
+      "4": 720,
+      "5": 792,
+      "6": 1200,
+      "7": 144,
+      "8": 0,
+      "9": 1626,
+      "10": 1557,
+      "11": 735,
+      "12": 384,
+      "13": 3630,
+      "14": 717,
+      "15": 1290,
+      "16": 282,
+      "17": 3126,
+      "18": 1674,
+      "19": 2028,
+      "20": 252,
+      "21": 6273,
+      "22": 3860,
+      "23": 1255
+    },
+    "hour0_arrival_fraction": 0.4896773742039331,
+    "hour0_sale_fraction": 0.06742281033396345,
+    "arrival_at_full_accepted_order_without_same_product_sale": {
+      "events": 1302,
+      "units": 11682
+    },
+    "mean": {
+      "full_accepted_order_turns": 11.9375,
+      "shed_max": 100,
+      "shed_ge90": 9.3125,
+      "premium_discarded": 0,
+      "fertilizer_discarded": 0.5,
+      "premium_produced": 896.6875,
+      "premium_sold": 892.6875,
+      "moves": 2827.4791666666665,
+      "successful_actions": 6236.75
+    },
+    "games_with_premium_discard": 0,
+    "lifetime_tile_distance": {
+      "wheat": {
+        "lifetimes": 7623,
+        "mean_distance": 5.645021645021645,
+        "max_distance": 8
+      },
+      "carrot": {
+        "lifetimes": 1467,
+        "mean_distance": 5.433537832310838,
+        "max_distance": 8
+      },
+      "tomato": {
+        "lifetimes": 45,
+        "mean_distance": 4,
+        "max_distance": 4
+      },
+      "strawberry": {
+        "lifetimes": 1584,
+        "mean_distance": 3.909090909090909,
+        "max_distance": 7
+      },
+      "melon": {
+        "lifetimes": 576,
+        "mean_distance": 3.9166666666666665,
+        "max_distance": 5
+      },
+      "goose": {
+        "lifetimes": 150,
+        "mean_distance": 3.12,
+        "max_distance": 4
+      },
+      "cow": {
+        "lifetimes": 390,
+        "mean_distance": 1.1538461538461537,
+        "max_distance": 3
+      },
+      "sheep": {
+        "lifetimes": 294,
+        "mean_distance": 2.183673469387755,
+        "max_distance": 3
+      }
+    },
+    "common_animal_tiles": [
+      {
+        "item": "sheep",
+        "x": 3,
+        "y": 4,
+        "occurrences": 48
+      },
+      {
+        "item": "cow",
+        "x": 4,
+        "y": 4,
+        "occurrences": 48
+      },
+      {
+        "item": "sheep",
+        "x": 3,
+        "y": 3,
+        "occurrences": 48
+      },
+      {
+        "item": "cow",
+        "x": 4,
+        "y": 3,
+        "occurrences": 48
+      },
+      {
+        "item": "cow",
+        "x": 4,
+        "y": 2,
+        "occurrences": 48
+      },
+      {
+        "item": "cow",
+        "x": 2,
+        "y": 4,
+        "occurrences": 48
+      },
+      {
+        "item": "cow",
+        "x": 5,
+        "y": 4,
+        "occurrences": 48
+      },
+      {
+        "item": "cow",
+        "x": 5,
+        "y": 3,
+        "occurrences": 48
+      },
+      {
+        "item": "cow",
+        "x": 6,
+        "y": 4,
+        "occurrences": 48
+      },
+      {
+        "item": "cow",
+        "x": 5,
+        "y": 2,
+        "occurrences": 48
+      },
+      {
+        "item": "sheep",
+        "x": 7,
+        "y": 4,
+        "occurrences": 48
+      },
+      {
+        "item": "sheep",
+        "x": 6,
+        "y": 3,
+        "occurrences": 48
+      }
+    ]
+  },
+  {
+    "agent": "sale_priority",
+    "games": 48,
+    "premium_arrivals_by_hour": {
+      "0": 20991,
+      "2": 315,
+      "3": 195,
+      "4": 858,
+      "5": 987,
+      "6": 1068,
+      "7": 675,
+      "8": 951,
+      "9": 594,
+      "10": 1704,
+      "11": 1089,
+      "12": 879,
+      "13": 1332,
+      "14": 423,
+      "15": 1995,
+      "16": 243,
+      "17": 738,
+      "18": 1611,
+      "19": 1917,
+      "20": 897,
+      "21": 1530,
+      "22": 933,
+      "23": 942
+    },
+    "premium_sold_by_hour": {
+      "0": 2889,
+      "1": 7830,
+      "2": 441,
+      "3": 144,
+      "4": 720,
+      "5": 792,
+      "6": 1200,
+      "7": 144,
+      "8": 0,
+      "9": 1626,
+      "10": 1557,
+      "11": 735,
+      "12": 384,
+      "13": 3630,
+      "14": 717,
+      "15": 1290,
+      "16": 282,
+      "17": 3114,
+      "18": 1686,
+      "19": 2028,
+      "20": 252,
+      "21": 6273,
+      "22": 3882,
+      "23": 1233
+    },
+    "hour0_arrival_fraction": 0.4896773742039331,
+    "hour0_sale_fraction": 0.06742281033396345,
+    "arrival_at_full_accepted_order_without_same_product_sale": {
+      "events": 1302,
+      "units": 11682
+    },
+    "mean": {
+      "full_accepted_order_turns": 11.9375,
+      "shed_max": 100,
+      "shed_ge90": 9.3125,
+      "premium_discarded": 0,
+      "fertilizer_discarded": 0.5,
+      "premium_produced": 896.6875,
+      "premium_sold": 892.6875,
+      "moves": 2827.4791666666665,
+      "successful_actions": 6236.75
+    },
+    "games_with_premium_discard": 0,
+    "lifetime_tile_distance": {
+      "wheat": {
+        "lifetimes": 7623,
+        "mean_distance": 5.645021645021645,
+        "max_distance": 8
+      },
+      "carrot": {
+        "lifetimes": 1467,
+        "mean_distance": 5.433537832310838,
+        "max_distance": 8
+      },
+      "tomato": {
+        "lifetimes": 45,
+        "mean_distance": 4,
+        "max_distance": 4
+      },
+      "strawberry": {
+        "lifetimes": 1584,
+        "mean_distance": 3.909090909090909,
+        "max_distance": 7
+      },
+      "melon": {
+        "lifetimes": 576,
+        "mean_distance": 3.9166666666666665,
+        "max_distance": 5
+      },
+      "goose": {
+        "lifetimes": 150,
+        "mean_distance": 3.12,
+        "max_distance": 4
+      },
+      "cow": {
+        "lifetimes": 390,
+        "mean_distance": 1.1538461538461537,
+        "max_distance": 3
+      },
+      "sheep": {
+        "lifetimes": 294,
+        "mean_distance": 2.183673469387755,
+        "max_distance": 3
+      }
+    },
+    "common_animal_tiles": [
+      {
+        "item": "sheep",
+        "x": 3,
+        "y": 4,
+        "occurrences": 48
+      },
+      {
+        "item": "cow",
+        "x": 4,
+        "y": 4,
+        "occurrences": 48
+      },
+      {
+        "item": "sheep",
+        "x": 3,
+        "y": 3,
+        "occurrences": 48
+      },
+      {
+        "item": "cow",
+        "x": 4,
+        "y": 3,
+        "occurrences": 48
+      },
+      {
+        "item": "cow",
+        "x": 4,
+        "y": 2,
+        "occurrences": 48
+      },
+      {
+        "item": "cow",
+        "x": 2,
+        "y": 4,
+        "occurrences": 48
+      },
+      {
+        "item": "cow",
+        "x": 5,
+        "y": 4,
+        "occurrences": 48
+      },
+      {
+        "item": "cow",
+        "x": 5,
+        "y": 3,
+        "occurrences": 48
+      },
+      {
+        "item": "cow",
+        "x": 6,
+        "y": 4,
+        "occurrences": 48
+      },
+      {
+        "item": "cow",
+        "x": 5,
+        "y": 2,
+        "occurrences": 48
+      },
+      {
+        "item": "sheep",
+        "x": 7,
+        "y": 4,
+        "occurrences": 48
+      },
+      {
+        "item": "sheep",
+        "x": 6,
+        "y": 3,
+        "occurrences": 48
+      }
+    ]
+  }
+]

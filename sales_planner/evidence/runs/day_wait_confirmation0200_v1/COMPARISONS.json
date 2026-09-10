@@ -1,0 +1,37 @@
+[
+  {
+    "variant": "wait_day_history",
+    "reference": "wait_history_floor",
+    "cases": 42,
+    "episode_clusters": 21,
+    "positive": 34,
+    "negative": 0,
+    "zero": 8,
+    "worst_margin": 0,
+    "best_margin": 610,
+    "changed_state": 0,
+    "history_underestimates": 0,
+    "decisions": 238,
+    "margin_gain": {
+      "mean": 124.66666666666667,
+      "ci95": [
+        76.54583333333333,
+        176.26309523809522
+      ]
+    },
+    "cash_gain": {
+      "mean": 124.66666666666667,
+      "ci95": [
+        76.54583333333333,
+        176.26309523809522
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 2.380952380952381,
+      "ci95": [
+        0.0,
+        7.142857142857143
+      ]
+    }
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "cases": 394,
+  "episode_clusters": 197,
+  "positive": 9,
+  "negative": 17,
+  "zero": 368,
+  "worst_margin": -854,
+  "best_margin": 1792,
+  "changed_state": 37,
+  "history_underestimates": 0,
+  "decisions": 4242,
+  "margin_gain": {
+    "mean": -3.3375634517766497,
+    "ci95": [
+      -14.347969543147208,
+      9.60184010152284
+    ]
+  },
+  "cash_gain": {
+    "mean": -9.111675126903553,
+    "ci95": [
+      -18.17005076142132,
+      -0.4289340101522843
+    ]
+  },
+  "utility_gain_pp": {
+    "mean": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  }
+}

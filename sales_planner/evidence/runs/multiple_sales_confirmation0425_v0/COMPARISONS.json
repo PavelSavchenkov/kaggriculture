@@ -1,0 +1,37 @@
+[
+  {
+    "variant": "wait_delivery_multiple_witness",
+    "reference": "wait_delivery_witness",
+    "cases": 68,
+    "episode_clusters": 34,
+    "positive": 20,
+    "negative": 0,
+    "zero": 48,
+    "worst_margin": 0,
+    "best_margin": 203,
+    "changed_state": 0,
+    "history_underestimates": 0,
+    "decisions": 745,
+    "margin_gain": {
+      "mean": 12.0,
+      "ci95": [
+        5.573161764705882,
+        20.22132352941175
+      ]
+    },
+    "cash_gain": {
+      "mean": 12.0,
+      "ci95": [
+        5.573161764705882,
+        20.22132352941175
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

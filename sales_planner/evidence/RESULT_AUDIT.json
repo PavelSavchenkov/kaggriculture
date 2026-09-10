@@ -1,0 +1,47 @@
+{
+  "original_baseline": {
+    "pairs": 6144,
+    "mean_margin_gain": 24.224609375,
+    "negative": 4,
+    "source": "runs/broad_room_v0/AGGREGATE.json"
+  },
+  "fixed_course_multiple_vs_repair": {
+    "pairs": 9216,
+    "mean_margin_gain": 574.9329427083334,
+    "negative": 0,
+    "source": "runs/history_course_multiple_confirmation_v0/SUMMARY.json"
+  },
+  "latest_public_multiple_vs_original": {
+    "pairs": 68,
+    "mean_margin_gain": 269.5,
+    "negative": 0,
+    "source": "runs/multiple_sales_confirmation0425_v0/SUMMARY.json"
+  },
+  "historical_cash_selector_vs_previous": {
+    "pairs": 3072,
+    "mean_margin_gain": 87.4716796875,
+    "margin_ci95": [
+      -245.15847981770833,
+      426.8408040364583
+    ],
+    "negative": 218,
+    "promoted": false,
+    "source": "runs/scenario_cash_confirmation_v0/SELECTION_AUDIT.json"
+  },
+  "continuation_result": {
+    "episodes": 297,
+    "splits": 111672,
+    "returncode": 0,
+    "source": "runs/continuation_resume_v0/SUMMARY.json"
+  },
+  "reserved_future_episodes": 25,
+  "local_document_links_exist": true,
+  "recorded_utc": "2026-09-10T04:53:27.884774+00:00",
+  "source_hashes": {
+    "runs/broad_room_v0/AGGREGATE.json": "ddf534ad7439c4269cb842f9c0c7a1837f612b531ccd24e2caa2c102ffa4f988",
+    "runs/history_course_multiple_confirmation_v0/SUMMARY.json": "b0608d21205ae2e1a6b985426608ed84e88f588631d2b38adbdbb29383781416",
+    "runs/multiple_sales_confirmation0425_v0/SUMMARY.json": "f04737b22fa565dfb2fb40f831064468fc15f5239fe90f494b72daa03d31cb75",
+    "runs/scenario_cash_confirmation_v0/SELECTION_AUDIT.json": "3300fe70cb021cf082d71e068e203653cf461eae479bc7529371359c58ddb906",
+    "runs/continuation_resume_v0/SUMMARY.json": "82abf417f0c66b26bf115fb92294b1abd0e2bdd312a6231b3b040246514b7815"
+  }
+}

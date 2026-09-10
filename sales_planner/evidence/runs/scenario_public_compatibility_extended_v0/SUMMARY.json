@@ -1,0 +1,176 @@
+{
+  "all": {
+    "source_current_pairs": 10240,
+    "decisions": 1280,
+    "matching_pairs": {
+      "counts_equal": 1653,
+      "placement_equal": 1553,
+      "workers_equal": 3880,
+      "positions_equal": 2279,
+      "land_equal": 8960,
+      "tile_state_equal": 1488,
+      "worker_order_equal": 2279,
+      "hiring_equal": 3880
+    },
+    "all_features_matching_pairs": 1488,
+    "decisions_with_any_matching_source": {
+      "counts_equal": 462,
+      "placement_equal": 437,
+      "workers_equal": 1280,
+      "positions_equal": 520,
+      "land_equal": 1280,
+      "tile_state_equal": 372,
+      "worker_order_equal": 520,
+      "hiring_equal": 1280
+    },
+    "decisions_with_any_all_features_matching_source": 372,
+    "cash_matching_pairs": 10,
+    "all_public_fields_including_cash_matching_pairs": 0,
+    "decisions_with_any_complete_public_match": 0
+  },
+  "parent": {
+    "source_current_pairs": 2048,
+    "decisions": 256,
+    "matching_pairs": {
+      "counts_equal": 744,
+      "placement_equal": 744,
+      "workers_equal": 1262,
+      "positions_equal": 1117,
+      "land_equal": 1792,
+      "tile_state_equal": 744,
+      "worker_order_equal": 1117,
+      "hiring_equal": 1262
+    },
+    "all_features_matching_pairs": 744,
+    "decisions_with_any_matching_source": {
+      "counts_equal": 186,
+      "placement_equal": 186,
+      "workers_equal": 256,
+      "positions_equal": 224,
+      "land_equal": 256,
+      "tile_state_equal": 186,
+      "worker_order_equal": 224,
+      "hiring_equal": 256
+    },
+    "decisions_with_any_all_features_matching_source": 186,
+    "cash_matching_pairs": 0,
+    "all_public_fields_including_cash_matching_pairs": 0,
+    "decisions_with_any_complete_public_match": 0
+  },
+  "ahmed_v25": {
+    "source_current_pairs": 2048,
+    "decisions": 256,
+    "matching_pairs": {
+      "counts_equal": 809,
+      "placement_equal": 809,
+      "workers_equal": 1082,
+      "positions_equal": 950,
+      "land_equal": 1792,
+      "tile_state_equal": 744,
+      "worker_order_equal": 950,
+      "hiring_equal": 1082
+    },
+    "all_features_matching_pairs": 744,
+    "decisions_with_any_matching_source": {
+      "counts_equal": 251,
+      "placement_equal": 251,
+      "workers_equal": 256,
+      "positions_equal": 190,
+      "land_equal": 256,
+      "tile_state_equal": 186,
+      "worker_order_equal": 190,
+      "hiring_equal": 256
+    },
+    "decisions_with_any_all_features_matching_source": 186,
+    "cash_matching_pairs": 0,
+    "all_public_fields_including_cash_matching_pairs": 0,
+    "decisions_with_any_complete_public_match": 0
+  },
+  "nanare": {
+    "source_current_pairs": 2048,
+    "decisions": 256,
+    "matching_pairs": {
+      "counts_equal": 100,
+      "placement_equal": 0,
+      "workers_equal": 512,
+      "positions_equal": 0,
+      "land_equal": 1792,
+      "tile_state_equal": 0,
+      "worker_order_equal": 0,
+      "hiring_equal": 512
+    },
+    "all_features_matching_pairs": 0,
+    "decisions_with_any_matching_source": {
+      "counts_equal": 25,
+      "placement_equal": 0,
+      "workers_equal": 256,
+      "positions_equal": 0,
+      "land_equal": 256,
+      "tile_state_equal": 0,
+      "worker_order_equal": 0,
+      "hiring_equal": 256
+    },
+    "decisions_with_any_all_features_matching_source": 0,
+    "cash_matching_pairs": 0,
+    "all_public_fields_including_cash_matching_pairs": 0,
+    "decisions_with_any_complete_public_match": 0
+  },
+  "king_rc4": {
+    "source_current_pairs": 2048,
+    "decisions": 256,
+    "matching_pairs": {
+      "counts_equal": 0,
+      "placement_equal": 0,
+      "workers_equal": 512,
+      "positions_equal": 80,
+      "land_equal": 1792,
+      "tile_state_equal": 0,
+      "worker_order_equal": 80,
+      "hiring_equal": 512
+    },
+    "all_features_matching_pairs": 0,
+    "decisions_with_any_matching_source": {
+      "counts_equal": 0,
+      "placement_equal": 0,
+      "workers_equal": 256,
+      "positions_equal": 40,
+      "land_equal": 256,
+      "tile_state_equal": 0,
+      "worker_order_equal": 40,
+      "hiring_equal": 256
+    },
+    "decisions_with_any_all_features_matching_source": 0,
+    "cash_matching_pairs": 10,
+    "all_public_fields_including_cash_matching_pairs": 0,
+    "decisions_with_any_complete_public_match": 0
+  },
+  "public_router_v52": {
+    "source_current_pairs": 2048,
+    "decisions": 256,
+    "matching_pairs": {
+      "counts_equal": 0,
+      "placement_equal": 0,
+      "workers_equal": 512,
+      "positions_equal": 132,
+      "land_equal": 1792,
+      "tile_state_equal": 0,
+      "worker_order_equal": 132,
+      "hiring_equal": 512
+    },
+    "all_features_matching_pairs": 0,
+    "decisions_with_any_matching_source": {
+      "counts_equal": 0,
+      "placement_equal": 0,
+      "workers_equal": 256,
+      "positions_equal": 66,
+      "land_equal": 256,
+      "tile_state_equal": 0,
+      "worker_order_equal": 66,
+      "hiring_equal": 256
+    },
+    "decisions_with_any_all_features_matching_source": 0,
+    "cash_matching_pairs": 0,
+    "all_public_fields_including_cash_matching_pairs": 0,
+    "decisions_with_any_complete_public_match": 0
+  }
+}

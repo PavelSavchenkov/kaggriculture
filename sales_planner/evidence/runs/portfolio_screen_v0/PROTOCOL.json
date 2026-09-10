@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-09-09T23:41:00Z",
+  "opponents": [
+    "parent",
+    "ahmed_v25",
+    "nanare",
+    "king_rc4",
+    "public_router_v52"
+  ],
+  "seed_start": 202609092341,
+  "seeds_per_opponent": 32,
+  "seat_mode": "both",
+  "shop_panel": "independent",
+  "scenario_cases": [
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107183828.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107192763.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107198350.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107200449.calendar"
+  ],
+  "binary": "experiments/v6/sep09_sales_planner/build/e913a04f8c8b73c47b5a/arena",
+  "objective": "Test reusable three-plan financial ranking against existing demand and old-model choices. Each of3 branches executes a complete game. Report realized margin and utility of chosen branch, regret vs best of3, predicted-vs-realized branch differences, feasibility, and runtime. No actual future information enters predictions. Exposed development opponents; new seeds.",
+  "decision": "If no aggregate improvement, attribute forecast errors before optimizing planner search. No promotion based on the single negative smoke seed."
+}

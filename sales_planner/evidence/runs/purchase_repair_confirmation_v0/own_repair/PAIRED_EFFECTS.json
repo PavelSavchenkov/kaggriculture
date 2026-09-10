@@ -1,0 +1,815 @@
+{
+  "all_fixed_branches": {
+    "games": 3840,
+    "seed_clusters": 128,
+    "margin": {
+      "mean": 91.540625,
+      "ci95": [
+        67.60048828125001,
+        117.25053385416665
+      ]
+    },
+    "cash": {
+      "mean": 21.577083333333334,
+      "ci95": [
+        12.393984375,
+        31.947942708333333
+      ]
+    },
+    "rival_cash": {
+      "mean": -69.96354166666667,
+      "ci95": [
+        -90.50358072916667,
+        -51.596569010416665
+      ]
+    },
+    "utility_pp": {
+      "mean": 0.078125,
+      "ci95": [
+        0.0,
+        0.20833333333333334
+      ]
+    },
+    "own_faults": {
+      "mean": -1.890625,
+      "ci95": [
+        -2.33802734375,
+        -1.4676692708333339
+      ]
+    },
+    "positive": 252,
+    "negative": 112,
+    "zero": 3476,
+    "worst_margin": -102,
+    "best_margin": 8638,
+    "worst_cash": -654,
+    "repair_games": 364,
+    "worker_days_changed": 0,
+    "production_changed": 364,
+    "any_product_decreased": 13,
+    "own_faults_improved": 364,
+    "own_faults_worse": 0,
+    "control_margin_cvar10": -29528.046875,
+    "candidate_margin_cvar10": -29408.2890625
+  },
+  "by_opponent": {
+    "parent": {
+      "games": 768,
+      "seed_clusters": 128,
+      "margin": {
+        "mean": 122.2265625,
+        "ci95": [
+          87.57259114583334,
+          159.4585286458333
+        ]
+      },
+      "cash": {
+        "mean": 18.091145833333332,
+        "ci95": [
+          8.229134114583333,
+          28.51858723958333
+        ]
+      },
+      "rival_cash": {
+        "mean": -104.13541666666667,
+        "ci95": [
+          -136.15514322916667,
+          -74.39667968750001
+        ]
+      },
+      "utility_pp": {
+        "mean": 0.2604166666666667,
+        "ci95": [
+          0.0,
+          0.78125
+        ]
+      },
+      "own_faults": {
+        "mean": -3.0885416666666665,
+        "ci95": [
+          -3.8776041666666665,
+          -2.3372395833333335
+        ]
+      },
+      "positive": 89,
+      "negative": 25,
+      "zero": 654,
+      "worst_margin": -102,
+      "best_margin": 4131,
+      "worst_cash": -497,
+      "repair_games": 114,
+      "worker_days_changed": 0,
+      "production_changed": 114,
+      "any_product_decreased": 9,
+      "own_faults_improved": 114,
+      "own_faults_worse": 0,
+      "control_margin_cvar10": -31747.20779220779,
+      "candidate_margin_cvar10": -31686.090909090908
+    },
+    "ahmed_v25": {
+      "games": 768,
+      "seed_clusters": 128,
+      "margin": {
+        "mean": 307.6875,
+        "ci95": [
+          210.72737630208334,
+          412.7532877604167
+        ]
+      },
+      "cash": {
+        "mean": 86.05338541666667,
+        "ci95": [
+          47.78782552083334,
+          128.71455078124995
+        ]
+      },
+      "rival_cash": {
+        "mean": -221.63411458333334,
+        "ci95": [
+          -302.33082682291666,
+          -150.7336588541667
+        ]
+      },
+      "utility_pp": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "own_faults": {
+        "mean": -5.5,
+        "ci95": [
+          -7.02216796875,
+          -4.072884114583334
+        ]
+      },
+      "positive": 101,
+      "negative": 29,
+      "zero": 638,
+      "worst_margin": -95,
+      "best_margin": 8638,
+      "worst_cash": -654,
+      "repair_games": 130,
+      "worker_days_changed": 0,
+      "production_changed": 130,
+      "any_product_decreased": 1,
+      "own_faults_improved": 130,
+      "own_faults_worse": 0,
+      "control_margin_cvar10": -30517.16883116883,
+      "candidate_margin_cvar10": -30227.285714285714
+    },
+    "nanare": {
+      "games": 768,
+      "seed_clusters": 128,
+      "margin": {
+        "mean": 10.330729166666666,
+        "ci95": [
+          4.143196614583333,
+          17.32194010416666
+        ]
+      },
+      "cash": {
+        "mean": 0.09635416666666667,
+        "ci95": [
+          -2.606803385416667,
+          3.742220052083333
+        ]
+      },
+      "rival_cash": {
+        "mean": -10.234375,
+        "ci95": [
+          -16.475325520833334,
+          -4.738248697916667
+        ]
+      },
+      "utility_pp": {
+        "mean": 0.13020833333333334,
+        "ci95": [
+          0.0,
+          0.390625
+        ]
+      },
+      "own_faults": {
+        "mean": -0.2565104166666667,
+        "ci95": [
+          -0.4830729166666667,
+          -0.09114583333333333
+        ]
+      },
+      "positive": 23,
+      "negative": 28,
+      "zero": 717,
+      "worst_margin": -43,
+      "best_margin": 1466,
+      "worst_cash": -125,
+      "repair_games": 51,
+      "worker_days_changed": 0,
+      "production_changed": 51,
+      "any_product_decreased": 1,
+      "own_faults_improved": 51,
+      "own_faults_worse": 0,
+      "control_margin_cvar10": -22411.727272727272,
+      "candidate_margin_cvar10": -22377.31168831169
+    },
+    "king_rc4": {
+      "games": 768,
+      "seed_clusters": 128,
+      "margin": {
+        "mean": 7.006510416666667,
+        "ci95": [
+          0.75,
+          15.408170572916658
+        ]
+      },
+      "cash": {
+        "mean": 4.03515625,
+        "ci95": [
+          -0.8515625,
+          10.34375
+        ]
+      },
+      "rival_cash": {
+        "mean": -2.9713541666666665,
+        "ci95": [
+          -6.983072916666667,
+          0.015625
+        ]
+      },
+      "utility_pp": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "own_faults": {
+        "mean": -0.3359375,
+        "ci95": [
+          -0.7643229166666666,
+          -0.016927083333333332
+        ]
+      },
+      "positive": 5,
+      "negative": 1,
+      "zero": 762,
+      "worst_margin": -40,
+      "best_margin": 1939,
+      "worst_cash": -591,
+      "repair_games": 6,
+      "worker_days_changed": 0,
+      "production_changed": 6,
+      "any_product_decreased": 1,
+      "own_faults_improved": 6,
+      "own_faults_worse": 0,
+      "control_margin_cvar10": -16194.116883116883,
+      "candidate_margin_cvar10": -16194.116883116883
+    },
+    "public_router_v52": {
+      "games": 768,
+      "seed_clusters": 128,
+      "margin": {
+        "mean": 10.451822916666666,
+        "ci95": [
+          4.387727864583333,
+          17.21497395833333
+        ]
+      },
+      "cash": {
+        "mean": -0.390625,
+        "ci95": [
+          -3.1523763020833333,
+          3.1954752604166643
+        ]
+      },
+      "rival_cash": {
+        "mean": -10.842447916666666,
+        "ci95": [
+          -16.8671875,
+          -5.5703125
+        ]
+      },
+      "utility_pp": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "own_faults": {
+        "mean": -0.2721354166666667,
+        "ci95": [
+          -0.4973958333333333,
+          -0.10677083333333333
+        ]
+      },
+      "positive": 34,
+      "negative": 29,
+      "zero": 705,
+      "worst_margin": -45,
+      "best_margin": 1396,
+      "worst_cash": -255,
+      "repair_games": 63,
+      "worker_days_changed": 0,
+      "production_changed": 63,
+      "any_product_decreased": 1,
+      "own_faults_improved": 63,
+      "own_faults_worse": 0,
+      "control_margin_cvar10": -33019.12987012987,
+      "candidate_margin_cvar10": -33019.12987012987
+    }
+  },
+  "by_branch": {
+    "0": {
+      "games": 1280,
+      "seed_clusters": 128,
+      "margin": {
+        "mean": 6.4046875,
+        "ci95": [
+          0.0,
+          15.6953125
+        ]
+      },
+      "cash": {
+        "mean": 1.35625,
+        "ci95": [
+          -3.7953125,
+          7.2515625
+        ]
+      },
+      "rival_cash": {
+        "mean": -5.0484375,
+        "ci95": [
+          -11.71875,
+          0.0
+        ]
+      },
+      "utility_pp": {
+        "mean": 0.078125,
+        "ci95": [
+          0.0,
+          0.234375
+        ]
+      },
+      "own_faults": {
+        "mean": -0.41640625,
+        "ci95": [
+          -1.00078125,
+          0.0
+        ]
+      },
+      "positive": 13,
+      "negative": 1,
+      "zero": 1266,
+      "worst_margin": -76,
+      "best_margin": 1466,
+      "worst_cash": -591,
+      "repair_games": 14,
+      "worker_days_changed": 0,
+      "production_changed": 14,
+      "any_product_decreased": 5,
+      "own_faults_improved": 14,
+      "own_faults_worse": 0,
+      "control_margin_cvar10": -25642.1796875,
+      "candidate_margin_cvar10": -25642.1796875
+    },
+    "1": {
+      "games": 1280,
+      "seed_clusters": 128,
+      "margin": {
+        "mean": 264.1875,
+        "ci95": [
+          193.09482421875,
+          341.65337890625
+        ]
+      },
+      "cash": {
+        "mean": 60.271875,
+        "ci95": [
+          33.5306640625,
+          90.01345703125
+        ]
+      },
+      "rival_cash": {
+        "mean": -203.915625,
+        "ci95": [
+          -265.8396875,
+          -148.63404296875
+        ]
+      },
+      "utility_pp": {
+        "mean": 0.15625,
+        "ci95": [
+          0.0,
+          0.46875
+        ]
+      },
+      "own_faults": {
+        "mean": -5.09609375,
+        "ci95": [
+          -6.3266015625,
+          -3.930351562500002
+        ]
+      },
+      "positive": 233,
+      "negative": 111,
+      "zero": 936,
+      "worst_margin": -102,
+      "best_margin": 8638,
+      "worst_cash": -654,
+      "repair_games": 344,
+      "worker_days_changed": 0,
+      "production_changed": 344,
+      "any_product_decreased": 8,
+      "own_faults_improved": 344,
+      "own_faults_worse": 0,
+      "control_margin_cvar10": -31505.9140625,
+      "candidate_margin_cvar10": -31148.359375
+    },
+    "2": {
+      "games": 1280,
+      "seed_clusters": 128,
+      "margin": {
+        "mean": 4.0296875,
+        "ci95": [
+          0.0,
+          9.28984375
+        ]
+      },
+      "cash": {
+        "mean": 3.103125,
+        "ci95": [
+          0.0,
+          7.18671875
+        ]
+      },
+      "rival_cash": {
+        "mean": -0.9265625,
+        "ci95": [
+          -2.271875,
+          0.0
+        ]
+      },
+      "utility_pp": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "own_faults": {
+        "mean": -0.159375,
+        "ci95": [
+          -0.39375,
+          0.0
+        ]
+      },
+      "positive": 6,
+      "negative": 0,
+      "zero": 1274,
+      "worst_margin": 0,
+      "best_margin": 1939,
+      "worst_cash": 0,
+      "repair_games": 6,
+      "worker_days_changed": 0,
+      "production_changed": 6,
+      "any_product_decreased": 0,
+      "own_faults_improved": 6,
+      "own_faults_worse": 0,
+      "control_margin_cvar10": -30370.9921875,
+      "candidate_margin_cvar10": -30370.9921875
+    }
+  },
+  "selection": {
+    "candidate_chosen_vs_control_chosen": {
+      "games": 1280,
+      "seed_clusters": 128,
+      "margin": {
+        "mean": 113.115625,
+        "ci95": [
+          5.9792578125,
+          284.5708203125
+        ]
+      },
+      "cash": {
+        "mean": 105.8203125,
+        "ci95": [
+          4.1565234375000015,
+          272.091953125
+        ]
+      },
+      "rival_cash": {
+        "mean": -7.2953125,
+        "ci95": [
+          -57.25501953125,
+          40.512734375
+        ]
+      },
+      "utility_pp": {
+        "mean": 0.703125,
+        "ci95": [
+          0.0,
+          1.640625
+        ]
+      },
+      "own_faults": {
+        "mean": -0.36484375,
+        "ci95": [
+          -1.35236328125,
+          0.6031640624999994
+        ]
+      },
+      "positive": 24,
+      "negative": 3,
+      "zero": 1253,
+      "worst_margin": -127,
+      "best_margin": 21719,
+      "worst_cash": -591,
+      "repair_games": 15,
+      "worker_days_changed": 12,
+      "production_changed": 27,
+      "any_product_decreased": 12,
+      "own_faults_improved": 19,
+      "own_faults_worse": 8,
+      "control_margin_cvar10": -14399.1953125,
+      "candidate_margin_cvar10": -14261.1015625
+    },
+    "candidate_chosen_vs_control_demand": {
+      "games": 1280,
+      "seed_clusters": 128,
+      "margin": {
+        "mean": 324.01328125,
+        "ci95": [
+          -82.3355859375,
+          754.6663085937498
+        ]
+      },
+      "cash": {
+        "mean": 114.3265625,
+        "ci95": [
+          -327.93876953125,
+          577.2000781249998
+        ]
+      },
+      "rival_cash": {
+        "mean": -209.68671875,
+        "ci95": [
+          -502.993046875,
+          48.72796874999994
+        ]
+      },
+      "utility_pp": {
+        "mean": 0.15625,
+        "ci95": [
+          -1.09375,
+          1.25
+        ]
+      },
+      "own_faults": {
+        "mean": -0.7921875,
+        "ci95": [
+          -1.76095703125,
+          0.08597656249999944
+        ]
+      },
+      "positive": 87,
+      "negative": 55,
+      "zero": 1138,
+      "worst_margin": -22228,
+      "best_margin": 22948,
+      "worst_cash": -20734,
+      "repair_games": 15,
+      "worker_days_changed": 127,
+      "production_changed": 142,
+      "any_product_decreased": 127,
+      "own_faults_improved": 46,
+      "own_faults_worse": 6,
+      "control_margin_cvar10": -17237.171875,
+      "candidate_margin_cvar10": -14261.1015625
+    },
+    "candidate_chosen_vs_control_old_model": {
+      "games": 1280,
+      "seed_clusters": 128,
+      "margin": {
+        "mean": 122.71015625,
+        "ci95": [
+          -658.8844531249999,
+          903.0985937499997
+        ]
+      },
+      "cash": {
+        "mean": -1005.0375,
+        "ci95": [
+          -1639.8016601562501,
+          -390.49591796875023
+        ]
+      },
+      "rival_cash": {
+        "mean": -1127.74765625,
+        "ci95": [
+          -1945.233359375,
+          -370.96179687500035
+        ]
+      },
+      "utility_pp": {
+        "mean": 0.15625,
+        "ci95": [
+          -3.28125,
+          3.59375
+        ]
+      },
+      "own_faults": {
+        "mean": 1.76640625,
+        "ci95": [
+          -3.01642578125,
+          6.364199218749998
+        ]
+      },
+      "positive": 190,
+      "negative": 157,
+      "zero": 933,
+      "worst_margin": -26055,
+      "best_margin": 29242,
+      "worst_cash": -23041,
+      "repair_games": 15,
+      "worker_days_changed": 341,
+      "production_changed": 347,
+      "any_product_decreased": 341,
+      "own_faults_improved": 171,
+      "own_faults_worse": 90,
+      "control_margin_cvar10": -15942.0703125,
+      "candidate_margin_cvar10": -14261.1015625
+    }
+  },
+  "repair_touched": {
+    "games": 364,
+    "seed_clusters": 64,
+    "margin": {
+      "mean": 965.7032967032967,
+      "ci95": [
+        770.1267276021081,
+        1160.3825371271635
+      ]
+    },
+    "cash": {
+      "mean": 227.62637362637363,
+      "ci95": [
+        138.1692007321323,
+        321.37216872110935
+      ]
+    },
+    "rival_cash": {
+      "mean": -738.0769230769231,
+      "ci95": [
+        -901.09349058995,
+        -586.5141960708138
+      ]
+    },
+    "utility_pp": {
+      "mean": 0.8241758241758241,
+      "ci95": [
+        0.0,
+        2.201322833827121
+      ]
+    },
+    "own_faults": {
+      "mean": -19.945054945054945,
+      "ci95": [
+        -22.82794793483382,
+        -17.097694518125554
+      ]
+    },
+    "positive": 252,
+    "negative": 112,
+    "zero": 0,
+    "worst_margin": -102,
+    "best_margin": 8638,
+    "worst_cash": -654,
+    "repair_games": 364,
+    "worker_days_changed": 0,
+    "production_changed": 364,
+    "any_product_decreased": 13,
+    "own_faults_improved": 364,
+    "own_faults_worse": 0,
+    "control_margin_cvar10": -26081.135135135137,
+    "candidate_margin_cvar10": -24566.324324324323
+  },
+  "control_own_forecast_feasible": {
+    "games": 3454,
+    "seed_clusters": 128,
+    "margin": {
+      "mean": 4.045744064852345,
+      "ci95": [
+        0.8113632034655595,
+        8.244961479269246
+      ]
+    },
+    "cash": {
+      "mean": 1.5819339895773017,
+      "ci95": [
+        -0.6998400232693426,
+        4.265372294700008
+      ]
+    },
+    "rival_cash": {
+      "mean": -2.4638100752750436,
+      "ci95": [
+        -5.050544391284777,
+        -0.5291180844979789
+      ]
+    },
+    "utility_pp": {
+      "mean": 0.02895193977996526,
+      "ci95": [
+        0.0,
+        0.08795139238155665
+      ]
+    },
+    "own_faults": {
+      "mean": -0.21569195136074118,
+      "ci95": [
+        -0.4505245251680434,
+        -0.03923324696593386
+      ]
+    },
+    "positive": 21,
+    "negative": 3,
+    "zero": 3430,
+    "worst_margin": -76,
+    "best_margin": 1939,
+    "worst_cash": -591,
+    "repair_games": 24,
+    "worker_days_changed": 0,
+    "production_changed": 24,
+    "any_product_decreased": 5,
+    "own_faults_improved": 24,
+    "own_faults_worse": 0,
+    "control_margin_cvar10": -29785.257225433525,
+    "candidate_margin_cvar10": -29785.257225433525
+  },
+  "control_own_forecast_failed": {
+    "games": 386,
+    "seed_clusters": 74,
+    "margin": {
+      "mean": 874.4611398963731,
+      "ci95": [
+        682.2445927078209,
+        1063.255180799938
+      ]
+    },
+    "cash": {
+      "mean": 200.49740932642487,
+      "ci95": [
+        119.24230302804158,
+        284.6982794254065
+      ]
+    },
+    "rival_cash": {
+      "mean": -673.9637305699482,
+      "ci95": [
+        -829.9767518789034,
+        -524.4152782466437
+      ]
+    },
+    "utility_pp": {
+      "mean": 0.5181347150259067,
+      "ci95": [
+        0.0,
+        1.6348773841961852
+      ]
+    },
+    "own_faults": {
+      "mean": -16.878238341968913,
+      "ci95": [
+        -19.359393415545696,
+        -14.261930751507567
+      ]
+    },
+    "positive": 231,
+    "negative": 109,
+    "zero": 46,
+    "worst_margin": -102,
+    "best_margin": 8638,
+    "worst_cash": -654,
+    "repair_games": 340,
+    "worker_days_changed": 0,
+    "production_changed": 340,
+    "any_product_decreased": 8,
+    "own_faults_improved": 340,
+    "own_faults_worse": 0,
+    "control_margin_cvar10": -26979.94871794872,
+    "candidate_margin_cvar10": -25661.74358974359
+  },
+  "coverage": {
+    "control": {
+      "own_failed_branches": 386,
+      "rival_failed_branches": 2019,
+      "mean_course_seconds": 0.004016549637760417
+    },
+    "own_repair": {
+      "own_failed_branches": 0,
+      "rival_failed_branches": 2019,
+      "mean_course_seconds": 0.004334523016145834
+    }
+  }
+}

@@ -1,0 +1,2847 @@
+{
+  "archive": "experiments/v6/sep09_sales_planner",
+  "imports": [
+    {
+      "source": "experiments/v6/sep09_sales_planner/DESIGN.md",
+      "source_sha256": "855a9991659b454e2b509365768584bd8eea565b4baf01b13719433d68000060",
+      "file": "DESIGN.md",
+      "packaged_sha256": "855a9991659b454e2b509365768584bd8eea565b4baf01b13719433d68000060",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/FARM_RECOMMENDATIONS.md",
+      "source_sha256": "7f83796a1cdb8e63c3c01a2153544b2728e5c237100a107f2942e526c4d3dde3",
+      "file": "FARM_RECOMMENDATIONS.md",
+      "packaged_sha256": "7f83796a1cdb8e63c3c01a2153544b2728e5c237100a107f2942e526c4d3dde3",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/IDEAS.md",
+      "source_sha256": "b2d22a84a9ec042d7f53e53521399282175df5c09535baf1a2bda04bb6c67e12",
+      "file": "IDEAS.md",
+      "packaged_sha256": "b2d22a84a9ec042d7f53e53521399282175df5c09535baf1a2bda04bb6c67e12",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/LEARNINGS.md",
+      "source_sha256": "bd31201bd4b03d25acc2c5a1d526388e29070828531a0300bd44fc8b00fdf2a1",
+      "file": "LEARNINGS.md",
+      "packaged_sha256": "bd31201bd4b03d25acc2c5a1d526388e29070828531a0300bd44fc8b00fdf2a1",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/PROFILING.md",
+      "source_sha256": "550938214a6f6ce1708d81909386d492625d8bdf6805fb074939c156ef22fb90",
+      "file": "PROFILING.md",
+      "packaged_sha256": "550938214a6f6ce1708d81909386d492625d8bdf6805fb074939c156ef22fb90",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/PROTOCOL.md",
+      "source_sha256": "f6dbdaa30e0d5b5387dcf175d3190bf379264297eb6beeab80b9522a57c994fb",
+      "file": "PROTOCOL.md",
+      "packaged_sha256": "d9e9c3ede14ca7499b2d3908ae5576593d83f331b55bfedbc9ff6448f75b3b26",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/RESULTS.md",
+      "source_sha256": "9249a01c6f60d133da0b122d433b5a4c3867c4e98b49f9aad9e6a493ab3a6bdc",
+      "file": "RESULTS.md",
+      "packaged_sha256": "f877065dba92d6a8d95ab457155cce65254edee7f5f22f4e691207fbb145657f",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/REUSE.md",
+      "source_sha256": "8becf9ebcfc65931fe4c20ea09a630bfc9afac2a0f30a4a28a5d2e252911b276",
+      "file": "REUSE.md",
+      "packaged_sha256": "8becf9ebcfc65931fe4c20ea09a630bfc9afac2a0f30a4a28a5d2e252911b276",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/compact_sales/README.md",
+      "source_sha256": "881df8b0433a0a713874e5a2eccfaead73fad8a76c2d720fc8a73a323f940a99",
+      "file": "agents/compact_sales/README.md",
+      "packaged_sha256": "881df8b0433a0a713874e5a2eccfaead73fad8a76c2d720fc8a73a323f940a99",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/compact_sales/agent.json",
+      "source_sha256": "1e0065f32b3a2a5843f7861cf0da9adcbd89f62cbf4d4cd28c01a7f4f187ac43",
+      "file": "agents/compact_sales/agent.json",
+      "packaged_sha256": "54703706b0fe64ada3ff47852e4b5f2e33d75ff6065c76e9452476aa5636699a",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/compact_sales/source/agent.cpp",
+      "source_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "file": "agents/compact_sales/source/agent.cpp",
+      "packaged_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/compact_sales/source/agent.hpp",
+      "source_sha256": "921d9a2d2a5c39ea84f25e29fb4959f67bf3768d6d9cb91930b9a61b7622a9ed",
+      "file": "agents/compact_sales/source/agent.hpp",
+      "packaged_sha256": "921d9a2d2a5c39ea84f25e29fb4959f67bf3768d6d9cb91930b9a61b7622a9ed",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course/README.md",
+      "source_sha256": "c0703a9730a53188729823bc66d8e0409ab0a51f9c98b57daee75b6aa69d24d9",
+      "file": "agents/history_course/README.md",
+      "packaged_sha256": "c0703a9730a53188729823bc66d8e0409ab0a51f9c98b57daee75b6aa69d24d9",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course/agent.json",
+      "source_sha256": "a1c8b5098b3d1d3289dce5561ce6fe64d5fb14a39ef1947a1bf6f33548aabbed",
+      "file": "agents/history_course/agent.json",
+      "packaged_sha256": "0978b0ea83e42dcf0c85de5694ce4f41ae9e9a777ab05d6c1dd10aa819a63aa7",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course/source/agent.cpp",
+      "source_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "file": "agents/history_course/source/agent.cpp",
+      "packaged_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course/source/agent.hpp",
+      "source_sha256": "b0b5dc22c2122c4e3de3f0cfac6f4260f4e0447354b92fc4bed94e19e0cfa335",
+      "file": "agents/history_course/source/agent.hpp",
+      "packaged_sha256": "b0b5dc22c2122c4e3de3f0cfac6f4260f4e0447354b92fc4bed94e19e0cfa335",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_day/README.md",
+      "source_sha256": "3889ffe046cee2cefab255efc5f8f412feb49a524d5e559dde2d06a372ea0330",
+      "file": "agents/history_course_day/README.md",
+      "packaged_sha256": "3889ffe046cee2cefab255efc5f8f412feb49a524d5e559dde2d06a372ea0330",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_day/agent.json",
+      "source_sha256": "8faf772db43a62f860a1b16dd2e9361b706c2821667f9fff8bdfd2edac24397d",
+      "file": "agents/history_course_day/agent.json",
+      "packaged_sha256": "0709e06278412a78f0f5022a0c6a5fe1e007bfb08281e6f87b8c99186aa9cafb",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_day/source/agent.cpp",
+      "source_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "file": "agents/history_course_day/source/agent.cpp",
+      "packaged_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_day/source/agent.hpp",
+      "source_sha256": "04180819bf97e2f14a6aea5a52f97a23cf32158452897bb814ebb73709f057b8",
+      "file": "agents/history_course_day/source/agent.hpp",
+      "packaged_sha256": "af3260b925d200471faec9b2ed82e4b130cb1383942e396d818fdbe84114e889",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_delivery/README.md",
+      "source_sha256": "5ac47838f7920776cf26b118d3f15a07fbfbbe484ccef162ba281b8f06d5b0f8",
+      "file": "agents/history_course_delivery/README.md",
+      "packaged_sha256": "5ac47838f7920776cf26b118d3f15a07fbfbbe484ccef162ba281b8f06d5b0f8",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_delivery/agent.json",
+      "source_sha256": "498f13fe286fd4be4474779bcc612d170b502c6d255d5fee11462045daca005a",
+      "file": "agents/history_course_delivery/agent.json",
+      "packaged_sha256": "7b918bbea9b70a876a758cc728c06486228c7759e36e3c9a06e426f1f624e866",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_delivery/source/agent.cpp",
+      "source_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "file": "agents/history_course_delivery/source/agent.cpp",
+      "packaged_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_delivery/source/agent.hpp",
+      "source_sha256": "1bd0b1b9cbd885000270ee5c42df6c077bf3ebcd2da58a0f4303de035688d4b9",
+      "file": "agents/history_course_delivery/source/agent.hpp",
+      "packaged_sha256": "b63edd6b0210da6f1d29047bbd041695f563f9ad1fdc4ed46e4c8b53e4811932",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_exchange/README.md",
+      "source_sha256": "75186758b77b5ca671862e2bf119e1836718b214ca01662c0c4ba69b517927db",
+      "file": "agents/history_course_exchange/README.md",
+      "packaged_sha256": "75186758b77b5ca671862e2bf119e1836718b214ca01662c0c4ba69b517927db",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_exchange/agent.json",
+      "source_sha256": "94d99b3b504f1d21d79187466d5ddd94d9d385faa5bcd27aab7108629b8e5fa2",
+      "file": "agents/history_course_exchange/agent.json",
+      "packaged_sha256": "1271a01ba5430f57922634e5e9f1ee44389db571ebf8bb81c8055926e0c40a47",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_exchange/source/agent.cpp",
+      "source_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "file": "agents/history_course_exchange/source/agent.cpp",
+      "packaged_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_exchange/source/agent.hpp",
+      "source_sha256": "cdeac70f05d5ef31aaec1002b2f043229acad0bad3c783208d1d2d51618ffb12",
+      "file": "agents/history_course_exchange/source/agent.hpp",
+      "packaged_sha256": "f8f1150cfc48b7afccd181c1e65f627e1b5077ccb2c59ecd4038dd67293adec2",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_floor/README.md",
+      "source_sha256": "25fb6616542bd23eb7aa150a1109aa9d47c0898370fe43995077ad6a5a742203",
+      "file": "agents/history_course_floor/README.md",
+      "packaged_sha256": "25fb6616542bd23eb7aa150a1109aa9d47c0898370fe43995077ad6a5a742203",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_floor/agent.json",
+      "source_sha256": "ac905cd65ab22c92cb59c76a0845f683b9abc0bb8b869e0fbd3d4d794345aeb6",
+      "file": "agents/history_course_floor/agent.json",
+      "packaged_sha256": "df29f858c03d410749ecf0f5130aa9fe8a14f74f8bd6554800c29b9292953748",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_floor/source/agent.cpp",
+      "source_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "file": "agents/history_course_floor/source/agent.cpp",
+      "packaged_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_floor/source/agent.hpp",
+      "source_sha256": "1769246d3008c4bd73502727445596521e14c698a2e4bc1d6c1f977a3d2d38b7",
+      "file": "agents/history_course_floor/source/agent.hpp",
+      "packaged_sha256": "ccc7282851b95314e2b3e13b69b65271245dbaff33ca81452fba496f3885e05c",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_multiple/README.md",
+      "source_sha256": "cbf2020fa0b1a86900cc5dee3f8ba69c4902a43e516fa78b6a82f9c54e29f1f5",
+      "file": "agents/history_course_multiple/README.md",
+      "packaged_sha256": "cbf2020fa0b1a86900cc5dee3f8ba69c4902a43e516fa78b6a82f9c54e29f1f5",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_multiple/agent.json",
+      "source_sha256": "98e9098546e7364ccfb7a2d442633e6055ebf54380e2f838a15a32e13d540943",
+      "file": "agents/history_course_multiple/agent.json",
+      "packaged_sha256": "3c3a948b05241147661543185c7fe3bf1a54cfeb2957cf4a314ed18f50d44787",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_multiple/source/agent.cpp",
+      "source_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "file": "agents/history_course_multiple/source/agent.cpp",
+      "packaged_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/history_course_multiple/source/agent.hpp",
+      "source_sha256": "cc7ff8433a3c032b4bbe8e84a63fced1caca124d191ac598e7f899b919126dd1",
+      "file": "agents/history_course_multiple/source/agent.hpp",
+      "packaged_sha256": "cef84ebab0012be7917be60d10583542ed0e38b50fa681aaf5de68d027810eba",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/immediate_all/README.md",
+      "source_sha256": "6e66051eb6efe9997659b696833048db9dea122f25482510a9e93b830b6828ca",
+      "file": "agents/immediate_all/README.md",
+      "packaged_sha256": "6e66051eb6efe9997659b696833048db9dea122f25482510a9e93b830b6828ca",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/immediate_all/agent.json",
+      "source_sha256": "a1fc233d6de0374ebe7f03b8eccf3d42afbace130c2b0ab48abc8357229b119b",
+      "file": "agents/immediate_all/agent.json",
+      "packaged_sha256": "482c1fd63ef183be49d2d70539b6397bf3b877929cc428c4ce5d2d223bcfdf8e",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/immediate_all/source/agent.cpp",
+      "source_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "file": "agents/immediate_all/source/agent.cpp",
+      "packaged_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/immediate_all/source/agent.hpp",
+      "source_sha256": "4e297f104627316a33e358dd2c07bb39ad30d505b890269013c1ab0a9eee0c5d",
+      "file": "agents/immediate_all/source/agent.hpp",
+      "packaged_sha256": "2e6a4d41a0ebcf0d4fa8605a44631da297532a68b887dc877fa0de94abdbce30",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/immediate_sales/README.md",
+      "source_sha256": "237af82c2df1fa19fde8b0103ea86a280c7726bb96cc1947f9e3f6379b4ebbbd",
+      "file": "agents/immediate_sales/README.md",
+      "packaged_sha256": "237af82c2df1fa19fde8b0103ea86a280c7726bb96cc1947f9e3f6379b4ebbbd",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/immediate_sales/agent.json",
+      "source_sha256": "be7bb0ff5763a311fb76f7ed2863765e446f8f95a916a4ee1474748d6ad93ef6",
+      "file": "agents/immediate_sales/agent.json",
+      "packaged_sha256": "2de3990fa35c9edf4944170e00d0a987220a9a265f17a938277fdb945e95370d",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/immediate_sales/source/agent.cpp",
+      "source_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "file": "agents/immediate_sales/source/agent.cpp",
+      "packaged_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/immediate_sales/source/agent.hpp",
+      "source_sha256": "baaac568bdbf0bcb9cdf7b400d7b44f2032e8867da27d30d9ab7c4eb54913336",
+      "file": "agents/immediate_sales/source/agent.hpp",
+      "packaged_sha256": "3180297916658201ac3595cccdbb2fb1520f6819511669fcea729d4a0eba1f4e",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/room_keep/README.md",
+      "source_sha256": "c5bf9cbe42f29f6f7d02d9e80ce0b299516e7086bf513385b8e400e3f90d78e8",
+      "file": "agents/room_keep/README.md",
+      "packaged_sha256": "c5bf9cbe42f29f6f7d02d9e80ce0b299516e7086bf513385b8e400e3f90d78e8",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/room_keep/agent.json",
+      "source_sha256": "b09f167d1419a3220b1bf2080a89119bd86197eba8dd9cef53d8f16e7af387e8",
+      "file": "agents/room_keep/agent.json",
+      "packaged_sha256": "88060468fce652c378bb43786d7c8c8417c000295b53b2765cabc6c963d9cc73",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/room_keep/source/agent.cpp",
+      "source_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "file": "agents/room_keep/source/agent.cpp",
+      "packaged_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/room_keep/source/agent.hpp",
+      "source_sha256": "0b3af386d1826f8e08c62d538fb30c644e94dacf7920a6052339e97e77679d05",
+      "file": "agents/room_keep/source/agent.hpp",
+      "packaged_sha256": "0b3af386d1826f8e08c62d538fb30c644e94dacf7920a6052339e97e77679d05",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/sale_priority/README.md",
+      "source_sha256": "00d9be07fdc0b9406071cfe0444240f6395dc0aea99523ff1aafb2b19b2a0354",
+      "file": "agents/sale_priority/README.md",
+      "packaged_sha256": "00d9be07fdc0b9406071cfe0444240f6395dc0aea99523ff1aafb2b19b2a0354",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/sale_priority/agent.json",
+      "source_sha256": "d707276ea4355d59505942fdc30a4570433478825bd456c86b86a818fa8cb6ff",
+      "file": "agents/sale_priority/agent.json",
+      "packaged_sha256": "379bc3ba74e4d5edca3500a0c99a6de225078e58902bb9f9104f684d17a26bf6",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/sale_priority/source/agent.cpp",
+      "source_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "file": "agents/sale_priority/source/agent.cpp",
+      "packaged_sha256": "b4a3f9f5224c3ba23d0138bc5a0377c956675304c7aabbbcedffdb67fa178950",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/agents/sale_priority/source/agent.hpp",
+      "source_sha256": "14a158a4265cc5af543494664a48b0a9e934e6540756069791a47a66936aedfb",
+      "file": "agents/sale_priority/source/agent.hpp",
+      "packaged_sha256": "10d43286bd5ddc8ad20157d61aeaff47199d00c113ee3cf45e40da42fdc8cb7f",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/configs/league.json",
+      "source_sha256": "85283e355e67d6b286eca6670c31d04661954045dc26e1dc1dfb28718d45c1bf",
+      "file": "configs/league.json",
+      "packaged_sha256": "c2c524caedc3965b3b4f40c2ec0404f8e1491c278cf567f1db628c0b43296fe0",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/research/IMPORTED_SOURCES.json",
+      "source_sha256": "3ac1afcbd55b47efc171288dfd227378b39b7b4d3ccd69d8cbe0904245838ae4",
+      "file": "evidence/ORIGINAL_IMPORTS.json",
+      "packaged_sha256": "3ac1afcbd55b47efc171288dfd227378b39b7b4d3ccd69d8cbe0904245838ae4",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/RESULT_AUDIT.json",
+      "source_sha256": "f42cebfed4a7bf4f1a630207b3b1c24a06cb417316e3cccd64f3ffceac43921b",
+      "file": "evidence/RESULT_AUDIT.json",
+      "packaged_sha256": "f42cebfed4a7bf4f1a630207b3b1c24a06cb417316e3cccd64f3ffceac43921b",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/baselines_v0/SUMMARY.json",
+      "source_sha256": "1db80f018d79ac2248c9d844659060cf92127a9274be05744eeb627c56d4f00a",
+      "file": "evidence/runs/baselines_v0/SUMMARY.json",
+      "packaged_sha256": "1db80f018d79ac2248c9d844659060cf92127a9274be05744eeb627c56d4f00a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/baselines_v1/SUMMARY.json",
+      "source_sha256": "368674e8aa1e2326d3685ffb4be888b68e4238bbb5278f0f06ec532810debd89",
+      "file": "evidence/runs/baselines_v1/SUMMARY.json",
+      "packaged_sha256": "368674e8aa1e2326d3685ffb4be888b68e4238bbb5278f0f06ec532810debd89",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/baselines_v2/SUMMARY.json",
+      "source_sha256": "d07c96d3b867b0f8df301c2c722421b2f6d372eb1854e8517bf150dac79e68a5",
+      "file": "evidence/runs/baselines_v2/SUMMARY.json",
+      "packaged_sha256": "d07c96d3b867b0f8df301c2c722421b2f6d372eb1854e8517bf150dac79e68a5",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/baselines_v3/SUMMARY.json",
+      "source_sha256": "f8c0f3b62870b39df97596d3663edc1811260588b4752d8683f32c2fabc6c93c",
+      "file": "evidence/runs/baselines_v3/SUMMARY.json",
+      "packaged_sha256": "f8c0f3b62870b39df97596d3663edc1811260588b4752d8683f32c2fabc6c93c",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/baselines_v4/SUMMARY.json",
+      "source_sha256": "b02222d749a78351e7105c00dbd1ed734df7e7b6c1c52a06016365c039d128de",
+      "file": "evidence/runs/baselines_v4/SUMMARY.json",
+      "packaged_sha256": "b02222d749a78351e7105c00dbd1ed734df7e7b6c1c52a06016365c039d128de",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/broad_room_v0/AGGREGATE.json",
+      "source_sha256": "ddf534ad7439c4269cb842f9c0c7a1837f612b531ccd24e2caa2c102ffa4f988",
+      "file": "evidence/runs/broad_room_v0/AGGREGATE.json",
+      "packaged_sha256": "ddf534ad7439c4269cb842f9c0c7a1837f612b531ccd24e2caa2c102ffa4f988",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/broad_room_v0/AGGREGATE_UNCERTAINTY.json",
+      "source_sha256": "554cadeae027b109c3a7f4961472b648fea9004a399f1e12b6d794878568bd1b",
+      "file": "evidence/runs/broad_room_v0/AGGREGATE_UNCERTAINTY.json",
+      "packaged_sha256": "554cadeae027b109c3a7f4961472b648fea9004a399f1e12b6d794878568bd1b",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/broad_room_v0/PROTOCOL.json",
+      "source_sha256": "c3d7981ce96223d273b5ea6d8723cb24b8d8607c7a5e0bb6d926811d8c90ca80",
+      "file": "evidence/runs/broad_room_v0/PROTOCOL.json",
+      "packaged_sha256": "c3d7981ce96223d273b5ea6d8723cb24b8d8607c7a5e0bb6d926811d8c90ca80",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/broad_room_v0/SUMMARY.json",
+      "source_sha256": "4ac7a60a69968b6437d00cac7deacf1954d6bb2561e75fe13a64fc04a076bd3d",
+      "file": "evidence/runs/broad_room_v0/SUMMARY.json",
+      "packaged_sha256": "4ac7a60a69968b6437d00cac7deacf1954d6bb2561e75fe13a64fc04a076bd3d",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/compact_v0/SUMMARY.json",
+      "source_sha256": "59f71fbba43f8b2a37a5c5747ece2c24ee1388419712a8b254cb8b51c01c2c50",
+      "file": "evidence/runs/compact_v0/SUMMARY.json",
+      "packaged_sha256": "59f71fbba43f8b2a37a5c5747ece2c24ee1388419712a8b254cb8b51c01c2c50",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/compact_v1/SUMMARY.json",
+      "source_sha256": "9e43b3d9a59137757697ee94aa6e5b340801d7601e116e4c56e813e8c6ff09e7",
+      "file": "evidence/runs/compact_v1/SUMMARY.json",
+      "packaged_sha256": "9e43b3d9a59137757697ee94aa6e5b340801d7601e116e4c56e813e8c6ff09e7",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/continuation_resume_v0/CONTROL_SOURCE.json",
+      "source_sha256": "bafae0cdb122e4ea249c9b8a3bccb0f66e5853d9c9a3acccb038d4919d385200",
+      "file": "evidence/runs/continuation_resume_v0/CONTROL_SOURCE.json",
+      "packaged_sha256": "bafae0cdb122e4ea249c9b8a3bccb0f66e5853d9c9a3acccb038d4919d385200",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/continuation_resume_v0/LONG_PERFORMANCE.json",
+      "source_sha256": "601a7c8b11aeb94b77234e0bf85014c46a5cb77fc62734a6cce64b8e55631026",
+      "file": "evidence/runs/continuation_resume_v0/LONG_PERFORMANCE.json",
+      "packaged_sha256": "601a7c8b11aeb94b77234e0bf85014c46a5cb77fc62734a6cce64b8e55631026",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/continuation_resume_v0/PERFORMANCE.json",
+      "source_sha256": "19f86d132e7d3e3592911ee427a910b19b729019a2521c4bd4df5eb0eb227a5b",
+      "file": "evidence/runs/continuation_resume_v0/PERFORMANCE.json",
+      "packaged_sha256": "19f86d132e7d3e3592911ee427a910b19b729019a2521c4bd4df5eb0eb227a5b",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/continuation_resume_v0/PROTOCOL.json",
+      "source_sha256": "bac202e84f48bcdbd81cf3b041c95006d77e03c85653d4ee1b894e7cbdf0729b",
+      "file": "evidence/runs/continuation_resume_v0/PROTOCOL.json",
+      "packaged_sha256": "bac202e84f48bcdbd81cf3b041c95006d77e03c85653d4ee1b894e7cbdf0729b",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/continuation_resume_v0/QUIET_PERFORMANCE.json",
+      "source_sha256": "ebfee61ebad6f9194e49582823dcd10ca5f6d198d59814c4fb601842c98330bb",
+      "file": "evidence/runs/continuation_resume_v0/QUIET_PERFORMANCE.json",
+      "packaged_sha256": "ebfee61ebad6f9194e49582823dcd10ca5f6d198d59814c4fb601842c98330bb",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/continuation_resume_v0/SANITIZER_STATUS.json",
+      "source_sha256": "e2d457a4c64767cfc03e949a347b02fe5f5434320aaa864ddc23550a199fde85",
+      "file": "evidence/runs/continuation_resume_v0/SANITIZER_STATUS.json",
+      "packaged_sha256": "e2d457a4c64767cfc03e949a347b02fe5f5434320aaa864ddc23550a199fde85",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/continuation_resume_v0/SUMMARY.json",
+      "source_sha256": "82abf417f0c66b26bf115fb92294b1abd0e2bdd312a6231b3b040246514b7815",
+      "file": "evidence/runs/continuation_resume_v0/SUMMARY.json",
+      "packaged_sha256": "82abf417f0c66b26bf115fb92294b1abd0e2bdd312a6231b3b040246514b7815",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/continuation_resume_v0/SUMMARY.md",
+      "source_sha256": "8d2248e6d5168e2fdfc08962f9a62ca25b03690d10a9b1d7640d0eedba230141",
+      "file": "evidence/runs/continuation_resume_v0/SUMMARY.md",
+      "packaged_sha256": "8d2248e6d5168e2fdfc08962f9a62ca25b03690d10a9b1d7640d0eedba230141",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/day_wait_confirmation0200_v1/COMPARISONS.json",
+      "source_sha256": "514bb3a737796a6f49681af6ac8b16dde83f56c313db4bc5515f39de984b04f0",
+      "file": "evidence/runs/day_wait_confirmation0200_v1/COMPARISONS.json",
+      "packaged_sha256": "514bb3a737796a6f49681af6ac8b16dde83f56c313db4bc5515f39de984b04f0",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/day_wait_confirmation0200_v1/PROTOCOL.json",
+      "source_sha256": "b1c8483ef6d4fb1a69be16bcf0894ed232754bce869b00a876db3692541fd0a2",
+      "file": "evidence/runs/day_wait_confirmation0200_v1/PROTOCOL.json",
+      "packaged_sha256": "b1c8483ef6d4fb1a69be16bcf0894ed232754bce869b00a876db3692541fd0a2",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/day_wait_confirmation0200_v1/SUMMARY.json",
+      "source_sha256": "87bc81ee6256fcc81531c90bda003a50a0a0d1091cfe1524cdebdd36dc989010",
+      "file": "evidence/runs/day_wait_confirmation0200_v1/SUMMARY.json",
+      "packaged_sha256": "87bc81ee6256fcc81531c90bda003a50a0a0d1091cfe1524cdebdd36dc989010",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/day_wait_confirmation0200_v1/SUMMARY.md",
+      "source_sha256": "0733d8aa8cdd1378edeb96d711f7970828d52971aa0ec7f4ddf5f7bc34623835",
+      "file": "evidence/runs/day_wait_confirmation0200_v1/SUMMARY.md",
+      "packaged_sha256": "0733d8aa8cdd1378edeb96d711f7970828d52971aa0ec7f4ddf5f7bc34623835",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/day_wait_discovery0200_v1/COMPARISONS.json",
+      "source_sha256": "8491252020d5fbcfa00f3edb9060818659262b0dccef68df786250ec0ff80873",
+      "file": "evidence/runs/day_wait_discovery0200_v1/COMPARISONS.json",
+      "packaged_sha256": "8491252020d5fbcfa00f3edb9060818659262b0dccef68df786250ec0ff80873",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/day_wait_discovery0200_v1/PROTOCOL.json",
+      "source_sha256": "63189168567d83a96ebda60ddee38142c61f1133004f17d0f1f68e4252c300ef",
+      "file": "evidence/runs/day_wait_discovery0200_v1/PROTOCOL.json",
+      "packaged_sha256": "63189168567d83a96ebda60ddee38142c61f1133004f17d0f1f68e4252c300ef",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/day_wait_discovery0200_v1/SUMMARY.json",
+      "source_sha256": "4de4e380bb17f3192fb526fd608e44c13b732da91804046c0c902c0777baa1a1",
+      "file": "evidence/runs/day_wait_discovery0200_v1/SUMMARY.json",
+      "packaged_sha256": "4de4e380bb17f3192fb526fd608e44c13b732da91804046c0c902c0777baa1a1",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/day_wait_discovery0200_v1/SUMMARY.md",
+      "source_sha256": "bb66621377078ffe6bc510dd09bcd4cf99b341accd6f95b44d963a4381f37ef9",
+      "file": "evidence/runs/day_wait_discovery0200_v1/SUMMARY.md",
+      "packaged_sha256": "bb66621377078ffe6bc510dd09bcd4cf99b341accd6f95b44d963a4381f37ef9",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/delivery_wait_public_confirmation_v0/COMPARISONS.json",
+      "source_sha256": "2372c0b5350df80d3bcac8283ef66d50680a119f6908667285ff2e46f42e95e6",
+      "file": "evidence/runs/delivery_wait_public_confirmation_v0/COMPARISONS.json",
+      "packaged_sha256": "2372c0b5350df80d3bcac8283ef66d50680a119f6908667285ff2e46f42e95e6",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/delivery_wait_public_confirmation_v0/PROTOCOL.json",
+      "source_sha256": "e7f34c5e2d50ded4a62374854b4ea07c3cac21d3f9285b65d961e0fdc54c6672",
+      "file": "evidence/runs/delivery_wait_public_confirmation_v0/PROTOCOL.json",
+      "packaged_sha256": "e7f34c5e2d50ded4a62374854b4ea07c3cac21d3f9285b65d961e0fdc54c6672",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/delivery_wait_public_confirmation_v0/SUMMARY.json",
+      "source_sha256": "62399477917de0dcda378675333c83681b29e00c7410fea2f383ceab3a13bf3b",
+      "file": "evidence/runs/delivery_wait_public_confirmation_v0/SUMMARY.json",
+      "packaged_sha256": "62399477917de0dcda378675333c83681b29e00c7410fea2f383ceab3a13bf3b",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/delivery_wait_public_confirmation_v0/SUMMARY.md",
+      "source_sha256": "59db175ab4d7f729a2de6a6d1f02a975fe023a6b7b36475b75a3564c4e1de821",
+      "file": "evidence/runs/delivery_wait_public_confirmation_v0/SUMMARY.md",
+      "packaged_sha256": "59db175ab4d7f729a2de6a6d1f02a975fe023a6b7b36475b75a3564c4e1de821",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/delivery_wait_public_screen_v0/COMPARISONS.json",
+      "source_sha256": "6b17f5512c947d71dc69ae2d888db26e842f7646b8ef461c8c3e50b884a6efe3",
+      "file": "evidence/runs/delivery_wait_public_screen_v0/COMPARISONS.json",
+      "packaged_sha256": "6b17f5512c947d71dc69ae2d888db26e842f7646b8ef461c8c3e50b884a6efe3",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/delivery_wait_public_screen_v0/PROTOCOL.json",
+      "source_sha256": "8ee48b1ea9c1f4ae4a6b5450994b5cf3b954b8138c2f65ba0e070ec62ce9077d",
+      "file": "evidence/runs/delivery_wait_public_screen_v0/PROTOCOL.json",
+      "packaged_sha256": "8ee48b1ea9c1f4ae4a6b5450994b5cf3b954b8138c2f65ba0e070ec62ce9077d",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/delivery_wait_public_screen_v0/SUMMARY.json",
+      "source_sha256": "bc558589925ebb02e1ebfe8ccb35e124dbec30a52384a6f1914f77c145f3d0f8",
+      "file": "evidence/runs/delivery_wait_public_screen_v0/SUMMARY.json",
+      "packaged_sha256": "bc558589925ebb02e1ebfe8ccb35e124dbec30a52384a6f1914f77c145f3d0f8",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_checks_v0/FLOOR_DIAGNOSIS.json",
+      "source_sha256": "9c38e28cded6052b746ad8638ae36bcdf2a9ed8ebf15b596f7ca5adf755e0233",
+      "file": "evidence/runs/history_course_checks_v0/FLOOR_DIAGNOSIS.json",
+      "packaged_sha256": "9c38e28cded6052b746ad8638ae36bcdf2a9ed8ebf15b596f7ca5adf755e0233",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_checks_v0/MULTIPLE_CHECKS.json",
+      "source_sha256": "c7cc96bd462403e3bf3561e453cbd5aba84886de3267e0b24520958f6cbe34ba",
+      "file": "evidence/runs/history_course_checks_v0/MULTIPLE_CHECKS.json",
+      "packaged_sha256": "c7cc96bd462403e3bf3561e453cbd5aba84886de3267e0b24520958f6cbe34ba",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_confirmation_v0/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_confirmation_v0/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_confirmation_v0/PROTOCOL.json",
+      "source_sha256": "99aba61fae530d0ec84a1737c47d0249bfba7f45403af032eebbd788bd9f6250",
+      "file": "evidence/runs/history_course_confirmation_v0/PROTOCOL.json",
+      "packaged_sha256": "99aba61fae530d0ec84a1737c47d0249bfba7f45403af032eebbd788bd9f6250",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_confirmation_v0/SUMMARY.json",
+      "source_sha256": "3046bafe48e7359b39d146fa2502ab22ef1b51ac60803a7a3302ce9afc3ca9fc",
+      "file": "evidence/runs/history_course_confirmation_v0/SUMMARY.json",
+      "packaged_sha256": "3046bafe48e7359b39d146fa2502ab22ef1b51ac60803a7a3302ce9afc3ca9fc",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_confirmation_v0/SUMMARY.md",
+      "source_sha256": "71310f37d70a153a58cefa1fc3c01abbfa2ff6682a1456771d7d8f8e3d997ea4",
+      "file": "evidence/runs/history_course_confirmation_v0/SUMMARY.md",
+      "packaged_sha256": "71310f37d70a153a58cefa1fc3c01abbfa2ff6682a1456771d7d8f8e3d997ea4",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_confirmation_v1/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_day_confirmation_v1/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_confirmation_v1/PREDICTION_AUDIT.json",
+      "source_sha256": "cf00ef24b14cb17efff41601784ae90b4e920d6f8887ed4eb61bab52487c2a32",
+      "file": "evidence/runs/history_course_day_confirmation_v1/PREDICTION_AUDIT.json",
+      "packaged_sha256": "cf00ef24b14cb17efff41601784ae90b4e920d6f8887ed4eb61bab52487c2a32",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_confirmation_v1/PROTOCOL.json",
+      "source_sha256": "58fe576c445d1a7b20c9171dccdbf0142048a2a333e12d603cf4c02827d2a1a6",
+      "file": "evidence/runs/history_course_day_confirmation_v1/PROTOCOL.json",
+      "packaged_sha256": "58fe576c445d1a7b20c9171dccdbf0142048a2a333e12d603cf4c02827d2a1a6",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_confirmation_v1/SUMMARY.json",
+      "source_sha256": "ee82fb44d011d528422714ec020fb9c92c847c0fe7b89822f8c5c0e718a4f653",
+      "file": "evidence/runs/history_course_day_confirmation_v1/SUMMARY.json",
+      "packaged_sha256": "ee82fb44d011d528422714ec020fb9c92c847c0fe7b89822f8c5c0e718a4f653",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_confirmation_v1/SUMMARY.md",
+      "source_sha256": "d76d03e22c547e61a3dd57d47be3d5718a25fc751e8e6620bef155a18c01ba75",
+      "file": "evidence/runs/history_course_day_confirmation_v1/SUMMARY.md",
+      "packaged_sha256": "d76d03e22c547e61a3dd57d47be3d5718a25fc751e8e6620bef155a18c01ba75",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_confirmation_v1/VS_REFERENCE.json",
+      "source_sha256": "7edace9e6f30755120f8491cabda36c423e02ba89eadd14a218d7a572ed9969a",
+      "file": "evidence/runs/history_course_day_confirmation_v1/VS_REFERENCE.json",
+      "packaged_sha256": "7edace9e6f30755120f8491cabda36c423e02ba89eadd14a218d7a572ed9969a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_delivery_confirmation_control_v0/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_day_delivery_confirmation_control_v0/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_delivery_confirmation_control_v0/PROTOCOL.json",
+      "source_sha256": "2d76f10fe3af20c8d81f01bf18758b8da2554b85c19693e4e799224eaf295495",
+      "file": "evidence/runs/history_course_day_delivery_confirmation_control_v0/PROTOCOL.json",
+      "packaged_sha256": "2d76f10fe3af20c8d81f01bf18758b8da2554b85c19693e4e799224eaf295495",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_delivery_confirmation_control_v0/SUMMARY.json",
+      "source_sha256": "a64a31dc263e91c3d2ce7d85f08c5b96fa7f62893e02c833a61d0e26ec224977",
+      "file": "evidence/runs/history_course_day_delivery_confirmation_control_v0/SUMMARY.json",
+      "packaged_sha256": "a64a31dc263e91c3d2ce7d85f08c5b96fa7f62893e02c833a61d0e26ec224977",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_delivery_control_v0/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_day_delivery_control_v0/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_delivery_control_v0/PROTOCOL.json",
+      "source_sha256": "c5263987eb409a0f2f2d9a79e910f9b72c9224180ed647d9637f4138b0a1b06d",
+      "file": "evidence/runs/history_course_day_delivery_control_v0/PROTOCOL.json",
+      "packaged_sha256": "c5263987eb409a0f2f2d9a79e910f9b72c9224180ed647d9637f4138b0a1b06d",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_delivery_control_v0/SUMMARY.json",
+      "source_sha256": "c71ba3b338c1077d9ebd4386a9a1fbf6ea78f0ed8452c034ba33d426380ce9dc",
+      "file": "evidence/runs/history_course_day_delivery_control_v0/SUMMARY.json",
+      "packaged_sha256": "c71ba3b338c1077d9ebd4386a9a1fbf6ea78f0ed8452c034ba33d426380ce9dc",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_delivery_screen_control_v0/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_day_delivery_screen_control_v0/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_delivery_screen_control_v0/PROTOCOL.json",
+      "source_sha256": "7301a057307b13db2385b36884646856cf355c673023814c3512ec4b1c2ea08d",
+      "file": "evidence/runs/history_course_day_delivery_screen_control_v0/PROTOCOL.json",
+      "packaged_sha256": "7301a057307b13db2385b36884646856cf355c673023814c3512ec4b1c2ea08d",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_delivery_screen_control_v0/SUMMARY.json",
+      "source_sha256": "680e3dc10bbf5c873d1cf99d2c96a3e77be9c8e9fb82afd8f1a8439515885d98",
+      "file": "evidence/runs/history_course_day_delivery_screen_control_v0/SUMMARY.json",
+      "packaged_sha256": "680e3dc10bbf5c873d1cf99d2c96a3e77be9c8e9fb82afd8f1a8439515885d98",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_screen_v1/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_day_screen_v1/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_screen_v1/PROTOCOL.json",
+      "source_sha256": "78e619840386369613ba2d23ca7e3013683598f416c5f8d4a21708bc480557a5",
+      "file": "evidence/runs/history_course_day_screen_v1/PROTOCOL.json",
+      "packaged_sha256": "78e619840386369613ba2d23ca7e3013683598f416c5f8d4a21708bc480557a5",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_screen_v1/SUMMARY.json",
+      "source_sha256": "6bad8bf0c91e94dcbb44d6faf12cd362995600b3deac8cb06e5ff22b66dda0b4",
+      "file": "evidence/runs/history_course_day_screen_v1/SUMMARY.json",
+      "packaged_sha256": "6bad8bf0c91e94dcbb44d6faf12cd362995600b3deac8cb06e5ff22b66dda0b4",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_screen_v1/SUMMARY.md",
+      "source_sha256": "95960b78406710e8f39a015d48439146359ca04c242b831d4ba43b72e76497e1",
+      "file": "evidence/runs/history_course_day_screen_v1/SUMMARY.md",
+      "packaged_sha256": "95960b78406710e8f39a015d48439146359ca04c242b831d4ba43b72e76497e1",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_screen_v1/VS_REFERENCE.json",
+      "source_sha256": "a8ae97755b27f982bcf04c6847cad8f503f1a1ea105c0206b7ecd9e5cae695f4",
+      "file": "evidence/runs/history_course_day_screen_v1/VS_REFERENCE.json",
+      "packaged_sha256": "a8ae97755b27f982bcf04c6847cad8f503f1a1ea105c0206b7ecd9e5cae695f4",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_smoke_v0/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_day_smoke_v0/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_smoke_v0/PROTOCOL.json",
+      "source_sha256": "adbd7fa5d7c232c67589087b8a7a5072a49ed4622326fbf1950eb779ffff2608",
+      "file": "evidence/runs/history_course_day_smoke_v0/PROTOCOL.json",
+      "packaged_sha256": "adbd7fa5d7c232c67589087b8a7a5072a49ed4622326fbf1950eb779ffff2608",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_smoke_v0/SUMMARY.json",
+      "source_sha256": "0c04e3189e3b049408f036d0691e839ae12908b4a6741aacbfcd00f2e8b210e7",
+      "file": "evidence/runs/history_course_day_smoke_v0/SUMMARY.json",
+      "packaged_sha256": "0c04e3189e3b049408f036d0691e839ae12908b4a6741aacbfcd00f2e8b210e7",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_smoke_v1/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_day_smoke_v1/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_smoke_v1/PROTOCOL.json",
+      "source_sha256": "7eec3c5827b2e678b8d5b1c739d3a6ad350efb51564734cdcd54847f44858642",
+      "file": "evidence/runs/history_course_day_smoke_v1/PROTOCOL.json",
+      "packaged_sha256": "7eec3c5827b2e678b8d5b1c739d3a6ad350efb51564734cdcd54847f44858642",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_day_smoke_v1/SUMMARY.json",
+      "source_sha256": "dc60f7a938ede87bfdbaf11e5a49093b745e396633323f29ad09d21787681333",
+      "file": "evidence/runs/history_course_day_smoke_v1/SUMMARY.json",
+      "packaged_sha256": "dc60f7a938ede87bfdbaf11e5a49093b745e396633323f29ad09d21787681333",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_confirmation_v0/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_delivery_confirmation_v0/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_confirmation_v0/PREDICTION_AUDIT.json",
+      "source_sha256": "3d1c0d23e9849e4c6fd20eea6167aa58c3531b8774a58adffa7126b14e239bf5",
+      "file": "evidence/runs/history_course_delivery_confirmation_v0/PREDICTION_AUDIT.json",
+      "packaged_sha256": "3d1c0d23e9849e4c6fd20eea6167aa58c3531b8774a58adffa7126b14e239bf5",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_confirmation_v0/PROTOCOL.json",
+      "source_sha256": "c48032ac1dd88dd53bb132af1a119b2e30fe1d0ea7bcdf5af8599cfa4ad577f1",
+      "file": "evidence/runs/history_course_delivery_confirmation_v0/PROTOCOL.json",
+      "packaged_sha256": "c48032ac1dd88dd53bb132af1a119b2e30fe1d0ea7bcdf5af8599cfa4ad577f1",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_confirmation_v0/SUMMARY.json",
+      "source_sha256": "6a6ce487a84ed2c949b4d5521b308c050e294ded7db158309f6dba638e79f184",
+      "file": "evidence/runs/history_course_delivery_confirmation_v0/SUMMARY.json",
+      "packaged_sha256": "6a6ce487a84ed2c949b4d5521b308c050e294ded7db158309f6dba638e79f184",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_confirmation_v0/SUMMARY.md",
+      "source_sha256": "c63ce6f5cb10fcf59230fccc1042223ee0814358d549fb1845508475c074e549",
+      "file": "evidence/runs/history_course_delivery_confirmation_v0/SUMMARY.md",
+      "packaged_sha256": "c63ce6f5cb10fcf59230fccc1042223ee0814358d549fb1845508475c074e549",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_confirmation_v0/VS_REFERENCE.json",
+      "source_sha256": "cca7fd6e74da296bc451bcf3d6ce4804c95d42aebeefcc54704f0e308324d088",
+      "file": "evidence/runs/history_course_delivery_confirmation_v0/VS_REFERENCE.json",
+      "packaged_sha256": "cca7fd6e74da296bc451bcf3d6ce4804c95d42aebeefcc54704f0e308324d088",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_multiple_confirmation_control_v0/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_delivery_multiple_confirmation_control_v0/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_multiple_confirmation_control_v0/PROTOCOL.json",
+      "source_sha256": "ecaaa78ac41d24412523be4a51efc098a60ba10feaa4277ded5a8a8742cdf0ef",
+      "file": "evidence/runs/history_course_delivery_multiple_confirmation_control_v0/PROTOCOL.json",
+      "packaged_sha256": "ecaaa78ac41d24412523be4a51efc098a60ba10feaa4277ded5a8a8742cdf0ef",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_multiple_confirmation_control_v0/SUMMARY.json",
+      "source_sha256": "ebf6cdfa1ffa46f71331a1c8194e4f4bb0e829f5b8413a6ddd90d6af54695adb",
+      "file": "evidence/runs/history_course_delivery_multiple_confirmation_control_v0/SUMMARY.json",
+      "packaged_sha256": "ebf6cdfa1ffa46f71331a1c8194e4f4bb0e829f5b8413a6ddd90d6af54695adb",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_multiple_control_v0/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_delivery_multiple_control_v0/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_multiple_control_v0/PROTOCOL.json",
+      "source_sha256": "569bf1552e5ce6f6281f1ce99560d2def7fd1f8d60193dbe19923f6d4983f091",
+      "file": "evidence/runs/history_course_delivery_multiple_control_v0/PROTOCOL.json",
+      "packaged_sha256": "569bf1552e5ce6f6281f1ce99560d2def7fd1f8d60193dbe19923f6d4983f091",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_multiple_control_v0/SUMMARY.json",
+      "source_sha256": "db42ccaf4047e28abae64a4c9e4dc084c671167682921a9be4057b0340207716",
+      "file": "evidence/runs/history_course_delivery_multiple_control_v0/SUMMARY.json",
+      "packaged_sha256": "db42ccaf4047e28abae64a4c9e4dc084c671167682921a9be4057b0340207716",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_screen_v0/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_delivery_screen_v0/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_screen_v0/PROTOCOL.json",
+      "source_sha256": "e5558e67ca57b0e1e3b3d159673e8e877002b2ff88fd9cf0f652849c8907f322",
+      "file": "evidence/runs/history_course_delivery_screen_v0/PROTOCOL.json",
+      "packaged_sha256": "e5558e67ca57b0e1e3b3d159673e8e877002b2ff88fd9cf0f652849c8907f322",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_screen_v0/SUMMARY.json",
+      "source_sha256": "5c52a32d4916712ee10a9958e37a92134a56d053cda176147f708708aca69a91",
+      "file": "evidence/runs/history_course_delivery_screen_v0/SUMMARY.json",
+      "packaged_sha256": "5c52a32d4916712ee10a9958e37a92134a56d053cda176147f708708aca69a91",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_screen_v0/SUMMARY.md",
+      "source_sha256": "4164718f5c808511bc28895b608d230348be5525913247e69dafa4415924ff16",
+      "file": "evidence/runs/history_course_delivery_screen_v0/SUMMARY.md",
+      "packaged_sha256": "4164718f5c808511bc28895b608d230348be5525913247e69dafa4415924ff16",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_screen_v0/VS_REFERENCE.json",
+      "source_sha256": "61bf0779f93586108036695faded5b3b7952d2c6f4bf242d789b8d6d5a7d1bfc",
+      "file": "evidence/runs/history_course_delivery_screen_v0/VS_REFERENCE.json",
+      "packaged_sha256": "61bf0779f93586108036695faded5b3b7952d2c6f4bf242d789b8d6d5a7d1bfc",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_smoke_v0/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_delivery_smoke_v0/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_smoke_v0/PROTOCOL.json",
+      "source_sha256": "ea799135d57c6cf08ae1e19410aedc58808b0610758de2dddaad2d6ad64262c9",
+      "file": "evidence/runs/history_course_delivery_smoke_v0/PROTOCOL.json",
+      "packaged_sha256": "ea799135d57c6cf08ae1e19410aedc58808b0610758de2dddaad2d6ad64262c9",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_smoke_v0/SUMMARY.json",
+      "source_sha256": "3cf62466e5364b01a987378290a1882a59f78853b222d5753fe4ffcf235d2e5e",
+      "file": "evidence/runs/history_course_delivery_smoke_v0/SUMMARY.json",
+      "packaged_sha256": "3cf62466e5364b01a987378290a1882a59f78853b222d5753fe4ffcf235d2e5e",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_delivery_smoke_v0/VS_REFERENCE.json",
+      "source_sha256": "1b8444d238736b3cb97ee168d7587d0993911642a4505440d7c9f073ee5da55b",
+      "file": "evidence/runs/history_course_delivery_smoke_v0/VS_REFERENCE.json",
+      "packaged_sha256": "1b8444d238736b3cb97ee168d7587d0993911642a4505440d7c9f073ee5da55b",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_exchange_screen_v0/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_exchange_screen_v0/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_exchange_screen_v0/PREDICTION_AUDIT.json",
+      "source_sha256": "b46dd7c7bd39fcb90610bbcc335842ca9034c50784ec4557e3ea790f9f32c5dd",
+      "file": "evidence/runs/history_course_exchange_screen_v0/PREDICTION_AUDIT.json",
+      "packaged_sha256": "b46dd7c7bd39fcb90610bbcc335842ca9034c50784ec4557e3ea790f9f32c5dd",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_exchange_screen_v0/PROMOTION_AUDIT.json",
+      "source_sha256": "2a2418cb65ff761ed77a1efab83a2362b1152cf359ce955ef79e87b71ab65b2b",
+      "file": "evidence/runs/history_course_exchange_screen_v0/PROMOTION_AUDIT.json",
+      "packaged_sha256": "2a2418cb65ff761ed77a1efab83a2362b1152cf359ce955ef79e87b71ab65b2b",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_exchange_screen_v0/PROTOCOL.json",
+      "source_sha256": "ace860a5ed6b821988c8d7b5384ad63ced4e7d74713a3d5aec56bea5d17f2b37",
+      "file": "evidence/runs/history_course_exchange_screen_v0/PROTOCOL.json",
+      "packaged_sha256": "ace860a5ed6b821988c8d7b5384ad63ced4e7d74713a3d5aec56bea5d17f2b37",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_exchange_screen_v0/SUMMARY.json",
+      "source_sha256": "a07365bf5fc6497883401922f8eccc58004b9cc089a77ac589ea2f980134d13a",
+      "file": "evidence/runs/history_course_exchange_screen_v0/SUMMARY.json",
+      "packaged_sha256": "a07365bf5fc6497883401922f8eccc58004b9cc089a77ac589ea2f980134d13a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_exchange_screen_v0/SUMMARY.md",
+      "source_sha256": "a9e96583e08308ab593330d02ab085732a47eaabf46ca5dc23e88e88fe3857f1",
+      "file": "evidence/runs/history_course_exchange_screen_v0/SUMMARY.md",
+      "packaged_sha256": "a9e96583e08308ab593330d02ab085732a47eaabf46ca5dc23e88e88fe3857f1",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_exchange_screen_v0/VS_REFERENCE.json",
+      "source_sha256": "f31b99fc3808e6a32d76bf68904a6e0a1e4348e81ffa79800e5c2a85460c3a66",
+      "file": "evidence/runs/history_course_exchange_screen_v0/VS_REFERENCE.json",
+      "packaged_sha256": "f31b99fc3808e6a32d76bf68904a6e0a1e4348e81ffa79800e5c2a85460c3a66",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_floor_confirmation_v0/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_floor_confirmation_v0/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_floor_confirmation_v0/PROTOCOL.json",
+      "source_sha256": "f2cc299f10a0cfa5faaf3e2a2e732f10f2498d711d43b85f8a48625eacd33254",
+      "file": "evidence/runs/history_course_floor_confirmation_v0/PROTOCOL.json",
+      "packaged_sha256": "f2cc299f10a0cfa5faaf3e2a2e732f10f2498d711d43b85f8a48625eacd33254",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_floor_confirmation_v0/SUMMARY.json",
+      "source_sha256": "644997f14a011c80ed943f77a1411d923ad7a40be0449ad0f16dc2d412a6e221",
+      "file": "evidence/runs/history_course_floor_confirmation_v0/SUMMARY.json",
+      "packaged_sha256": "644997f14a011c80ed943f77a1411d923ad7a40be0449ad0f16dc2d412a6e221",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_floor_confirmation_v0/SUMMARY.md",
+      "source_sha256": "0eb5565d694e0f4d0625427f70198cbafd19ed5e8bc9890d7bab50bc7ad5d8e2",
+      "file": "evidence/runs/history_course_floor_confirmation_v0/SUMMARY.md",
+      "packaged_sha256": "0eb5565d694e0f4d0625427f70198cbafd19ed5e8bc9890d7bab50bc7ad5d8e2",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_floor_day_confirmation_control_v1/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_floor_day_confirmation_control_v1/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_floor_day_confirmation_control_v1/PROTOCOL.json",
+      "source_sha256": "e851297102768470aeeb02a1e76f78ff2760a3f0028c74ce03fda297fab64c7f",
+      "file": "evidence/runs/history_course_floor_day_confirmation_control_v1/PROTOCOL.json",
+      "packaged_sha256": "e851297102768470aeeb02a1e76f78ff2760a3f0028c74ce03fda297fab64c7f",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_floor_day_confirmation_control_v1/SUMMARY.json",
+      "source_sha256": "073d21cfe1cc68fc5bb7c71f98a318853a32346d3921d167fc8ca6dc9f42fb26",
+      "file": "evidence/runs/history_course_floor_day_confirmation_control_v1/SUMMARY.json",
+      "packaged_sha256": "073d21cfe1cc68fc5bb7c71f98a318853a32346d3921d167fc8ca6dc9f42fb26",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_floor_day_control_v1/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_floor_day_control_v1/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_floor_day_control_v1/PROTOCOL.json",
+      "source_sha256": "cf124953ccba41216045ec837084a2145134b2a90bf0a744f9761d5c3f547f3d",
+      "file": "evidence/runs/history_course_floor_day_control_v1/PROTOCOL.json",
+      "packaged_sha256": "cf124953ccba41216045ec837084a2145134b2a90bf0a744f9761d5c3f547f3d",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_floor_day_control_v1/SUMMARY.json",
+      "source_sha256": "e75dd9424697818e50e481359ad2dbecdf87debffab1064d1f584003409ca88a",
+      "file": "evidence/runs/history_course_floor_day_control_v1/SUMMARY.json",
+      "packaged_sha256": "e75dd9424697818e50e481359ad2dbecdf87debffab1064d1f584003409ca88a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_floor_screen_v0/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_floor_screen_v0/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_floor_screen_v0/PROTOCOL.json",
+      "source_sha256": "3ecd8ff2e8b7fd9164b27fb7794452e3267941ff9b4fe5f7d0afc50d10c955ab",
+      "file": "evidence/runs/history_course_floor_screen_v0/PROTOCOL.json",
+      "packaged_sha256": "3ecd8ff2e8b7fd9164b27fb7794452e3267941ff9b4fe5f7d0afc50d10c955ab",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_floor_screen_v0/SUMMARY.json",
+      "source_sha256": "9085a39df4c1667d55f48d5036e356ef6d3256f77755ed4149d2b23d1cb89630",
+      "file": "evidence/runs/history_course_floor_screen_v0/SUMMARY.json",
+      "packaged_sha256": "9085a39df4c1667d55f48d5036e356ef6d3256f77755ed4149d2b23d1cb89630",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_floor_screen_v0/SUMMARY.md",
+      "source_sha256": "3486848cacaad884f07e098a9d4f54cb150ca7e23b635104dd8dd7fdb37a014d",
+      "file": "evidence/runs/history_course_floor_screen_v0/SUMMARY.md",
+      "packaged_sha256": "3486848cacaad884f07e098a9d4f54cb150ca7e23b635104dd8dd7fdb37a014d",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_multiple_confirmation_v0/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_multiple_confirmation_v0/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_multiple_confirmation_v0/NEGATIVE_VS_ONE_EDIT.json",
+      "source_sha256": "ea74055a9247bb3d405a747982ad77a23c40e5d7179ed03b73398b775bbdc4bd",
+      "file": "evidence/runs/history_course_multiple_confirmation_v0/NEGATIVE_VS_ONE_EDIT.json",
+      "packaged_sha256": "ea74055a9247bb3d405a747982ad77a23c40e5d7179ed03b73398b775bbdc4bd",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_multiple_confirmation_v0/PREDICTION_AUDIT.json",
+      "source_sha256": "b074b3319c656fcbed8048e2e3aea339731d180fb7d78ab96d7a47d572934f07",
+      "file": "evidence/runs/history_course_multiple_confirmation_v0/PREDICTION_AUDIT.json",
+      "packaged_sha256": "b074b3319c656fcbed8048e2e3aea339731d180fb7d78ab96d7a47d572934f07",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_multiple_confirmation_v0/PROMOTION_AUDIT.json",
+      "source_sha256": "50f311087e81d8c1d220bfd97ab17d872d17737d5edb67d1a557c87a230fef50",
+      "file": "evidence/runs/history_course_multiple_confirmation_v0/PROMOTION_AUDIT.json",
+      "packaged_sha256": "50f311087e81d8c1d220bfd97ab17d872d17737d5edb67d1a557c87a230fef50",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_multiple_confirmation_v0/PROTOCOL.json",
+      "source_sha256": "a6a351f6a3d5778a316b3ee0c85bc064f404fef49755ef04e876aaf38f049acf",
+      "file": "evidence/runs/history_course_multiple_confirmation_v0/PROTOCOL.json",
+      "packaged_sha256": "a6a351f6a3d5778a316b3ee0c85bc064f404fef49755ef04e876aaf38f049acf",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_multiple_confirmation_v0/SUMMARY.json",
+      "source_sha256": "b0608d21205ae2e1a6b985426608ed84e88f588631d2b38adbdbb29383781416",
+      "file": "evidence/runs/history_course_multiple_confirmation_v0/SUMMARY.json",
+      "packaged_sha256": "b0608d21205ae2e1a6b985426608ed84e88f588631d2b38adbdbb29383781416",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_multiple_confirmation_v0/SUMMARY.md",
+      "source_sha256": "62079e8e5932b42b3eca2552a4be93afd4fbd59e5b371beac70008b9971b011f",
+      "file": "evidence/runs/history_course_multiple_confirmation_v0/SUMMARY.md",
+      "packaged_sha256": "62079e8e5932b42b3eca2552a4be93afd4fbd59e5b371beac70008b9971b011f",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_multiple_confirmation_v0/VS_REFERENCE.json",
+      "source_sha256": "e43a489efbeab6e9db629a1b7eb133f60345b9e0861cdd78442c2c817048c19d",
+      "file": "evidence/runs/history_course_multiple_confirmation_v0/VS_REFERENCE.json",
+      "packaged_sha256": "e43a489efbeab6e9db629a1b7eb133f60345b9e0861cdd78442c2c817048c19d",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_multiple_screen_v0/CAPACITY_DIAGNOSIS.json",
+      "source_sha256": "a418ba4483e4e4977a68e67da979d96583f1635d39d853bfeb11ff7a861a26d1",
+      "file": "evidence/runs/history_course_multiple_screen_v0/CAPACITY_DIAGNOSIS.json",
+      "packaged_sha256": "a418ba4483e4e4977a68e67da979d96583f1635d39d853bfeb11ff7a861a26d1",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_multiple_screen_v0/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_multiple_screen_v0/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_multiple_screen_v0/NEGATIVE_VS_ONE_EDIT.json",
+      "source_sha256": "01eb977fa0cad409c90c07980ec98ed39f16fd06dd70c8f296720a19ca89f8c0",
+      "file": "evidence/runs/history_course_multiple_screen_v0/NEGATIVE_VS_ONE_EDIT.json",
+      "packaged_sha256": "01eb977fa0cad409c90c07980ec98ed39f16fd06dd70c8f296720a19ca89f8c0",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_multiple_screen_v0/PREDICTION_AUDIT.json",
+      "source_sha256": "97a368f9cb396b69c06c4cae77f11fac54507199cf4d6c1ebe05676a8751013a",
+      "file": "evidence/runs/history_course_multiple_screen_v0/PREDICTION_AUDIT.json",
+      "packaged_sha256": "97a368f9cb396b69c06c4cae77f11fac54507199cf4d6c1ebe05676a8751013a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_multiple_screen_v0/PROTOCOL.json",
+      "source_sha256": "7e0bf2ba5a7b78000c99fd683bfd5bba7a9f69208aa46435272dfb41a1774282",
+      "file": "evidence/runs/history_course_multiple_screen_v0/PROTOCOL.json",
+      "packaged_sha256": "7e0bf2ba5a7b78000c99fd683bfd5bba7a9f69208aa46435272dfb41a1774282",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_multiple_screen_v0/SUMMARY.json",
+      "source_sha256": "503e5b00bb26cf7723bffba808f11a1bdf9bb251797e88b625fe7379935b4003",
+      "file": "evidence/runs/history_course_multiple_screen_v0/SUMMARY.json",
+      "packaged_sha256": "503e5b00bb26cf7723bffba808f11a1bdf9bb251797e88b625fe7379935b4003",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_multiple_screen_v0/VS_REFERENCE.json",
+      "source_sha256": "0677df8045e83dd9aa7d94d452516c1136fa30b19d973c992c1a157b5a7d1cce",
+      "file": "evidence/runs/history_course_multiple_screen_v0/VS_REFERENCE.json",
+      "packaged_sha256": "0677df8045e83dd9aa7d94d452516c1136fa30b19d973c992c1a157b5a7d1cce",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_screen_v0/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_course_screen_v0/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_screen_v0/PROTOCOL.json",
+      "source_sha256": "c022f3916e0820040ec4cef620f4ce43d1c0f7b4206d83a0543cf2241b94df91",
+      "file": "evidence/runs/history_course_screen_v0/PROTOCOL.json",
+      "packaged_sha256": "c022f3916e0820040ec4cef620f4ce43d1c0f7b4206d83a0543cf2241b94df91",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_screen_v0/SUMMARY.json",
+      "source_sha256": "8142b4adf44b49df67fdfe3dcfb4f41249994fab2d145cccdc2e1aee4ba4d328",
+      "file": "evidence/runs/history_course_screen_v0/SUMMARY.json",
+      "packaged_sha256": "8142b4adf44b49df67fdfe3dcfb4f41249994fab2d145cccdc2e1aee4ba4d328",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_course_screen_v0/SUMMARY.md",
+      "source_sha256": "6c3decfb25904c155a6480e78c383e815dec55440299fb0e8fdf170e53587aa5",
+      "file": "evidence/runs/history_course_screen_v0/SUMMARY.md",
+      "packaged_sha256": "6c3decfb25904c155a6480e78c383e815dec55440299fb0e8fdf170e53587aa5",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_wait_confirmation_v0/COMPARISONS.json",
+      "source_sha256": "cd1f7b225c5813629905f1df3edcc48b15b25a51b38eaad24c03a56521764419",
+      "file": "evidence/runs/history_wait_confirmation_v0/COMPARISONS.json",
+      "packaged_sha256": "cd1f7b225c5813629905f1df3edcc48b15b25a51b38eaad24c03a56521764419",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_wait_confirmation_v0/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_wait_confirmation_v0/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_wait_confirmation_v0/PROTOCOL.json",
+      "source_sha256": "4dea7b6d096da2e1687b1a81fd49c2a29fe12b3f35ecc74ddc161a7e7f76b2f7",
+      "file": "evidence/runs/history_wait_confirmation_v0/PROTOCOL.json",
+      "packaged_sha256": "4dea7b6d096da2e1687b1a81fd49c2a29fe12b3f35ecc74ddc161a7e7f76b2f7",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_wait_confirmation_v0/SUMMARY.json",
+      "source_sha256": "31869e7792a0695eacc1519530b96f516e4727f719e3988d14deabd447ad0b60",
+      "file": "evidence/runs/history_wait_confirmation_v0/SUMMARY.json",
+      "packaged_sha256": "31869e7792a0695eacc1519530b96f516e4727f719e3988d14deabd447ad0b60",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_wait_confirmation_v0/SUMMARY.md",
+      "source_sha256": "78ed582d598bd1fcb824be40af8247920db4b02b8f9c4b034bd0f553c9439198",
+      "file": "evidence/runs/history_wait_confirmation_v0/SUMMARY.md",
+      "packaged_sha256": "78ed582d598bd1fcb824be40af8247920db4b02b8f9c4b034bd0f553c9439198",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_wait_screen_v0/COMPARISONS.json",
+      "source_sha256": "15150c7f03ebb04faa5ed9c0611005f3c923a974f7cad8327a56911afb1a4c2a",
+      "file": "evidence/runs/history_wait_screen_v0/COMPARISONS.json",
+      "packaged_sha256": "15150c7f03ebb04faa5ed9c0611005f3c923a974f7cad8327a56911afb1a4c2a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_wait_screen_v0/FAILURES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/history_wait_screen_v0/FAILURES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_wait_screen_v0/PROTOCOL.json",
+      "source_sha256": "b4e20f99954056397421b5bba186181aedde5532eaf3a987d109b104eb28e2b7",
+      "file": "evidence/runs/history_wait_screen_v0/PROTOCOL.json",
+      "packaged_sha256": "b4e20f99954056397421b5bba186181aedde5532eaf3a987d109b104eb28e2b7",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_wait_screen_v0/SUMMARY.json",
+      "source_sha256": "326deaedf1bc816246073fa77b45c3939d73ba527297c54b74b84018e7b02c15",
+      "file": "evidence/runs/history_wait_screen_v0/SUMMARY.json",
+      "packaged_sha256": "326deaedf1bc816246073fa77b45c3939d73ba527297c54b74b84018e7b02c15",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/history_wait_screen_v0/SUMMARY.md",
+      "source_sha256": "78856a516df82367f06be16c9757fadb248c831139bdd4d981203db98b985f27",
+      "file": "evidence/runs/history_wait_screen_v0/SUMMARY.md",
+      "packaged_sha256": "78856a516df82367f06be16c9757fadb248c831139bdd4d981203db98b985f27",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/holding_exchange_screen_v0/COMPARISONS.json",
+      "source_sha256": "f44771d87b076e01fca1eb1afc0648077d8cbf5d7bf40360732a07e1ac4629f5",
+      "file": "evidence/runs/holding_exchange_screen_v0/COMPARISONS.json",
+      "packaged_sha256": "f44771d87b076e01fca1eb1afc0648077d8cbf5d7bf40360732a07e1ac4629f5",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/holding_exchange_screen_v0/PROTOCOL.json",
+      "source_sha256": "18c458aaee27e173249de965c35767addd8d6f201c3e8e24141eab13c46f73b7",
+      "file": "evidence/runs/holding_exchange_screen_v0/PROTOCOL.json",
+      "packaged_sha256": "18c458aaee27e173249de965c35767addd8d6f201c3e8e24141eab13c46f73b7",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/holding_exchange_screen_v0/SUMMARY.json",
+      "source_sha256": "e0284ffb5e554228e1916b7307ea737d1e67ccaa3ea77dea4ea13d172aab9a17",
+      "file": "evidence/runs/holding_exchange_screen_v0/SUMMARY.json",
+      "packaged_sha256": "e0284ffb5e554228e1916b7307ea737d1e67ccaa3ea77dea4ea13d172aab9a17",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/immediate_all_screen_v0/AGGREGATE.json",
+      "source_sha256": "04e21fd2344e2160dcc279ad67466c2394c2ae7658580d49e30aef967ef2b125",
+      "file": "evidence/runs/immediate_all_screen_v0/AGGREGATE.json",
+      "packaged_sha256": "04e21fd2344e2160dcc279ad67466c2394c2ae7658580d49e30aef967ef2b125",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/immediate_all_screen_v0/PROTOCOL.json",
+      "source_sha256": "5d01b1753c3d6eca49558c829621866ccbd15914887a66c07f79436253fc6d2a",
+      "file": "evidence/runs/immediate_all_screen_v0/PROTOCOL.json",
+      "packaged_sha256": "5d01b1753c3d6eca49558c829621866ccbd15914887a66c07f79436253fc6d2a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/immediate_all_screen_v0/SUMMARY.json",
+      "source_sha256": "232f5b1790dd69c5689534d69ab28162eff52f111824f2e46103c6c18ee0d3e5",
+      "file": "evidence/runs/immediate_all_screen_v0/SUMMARY.json",
+      "packaged_sha256": "232f5b1790dd69c5689534d69ab28162eff52f111824f2e46103c6c18ee0d3e5",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/immediate_sales_screen_v0/AGGREGATE.json",
+      "source_sha256": "7d44b928d197f1b2c23fbdc990aec85128df1405f66beb5a25beba7b50a8f874",
+      "file": "evidence/runs/immediate_sales_screen_v0/AGGREGATE.json",
+      "packaged_sha256": "7d44b928d197f1b2c23fbdc990aec85128df1405f66beb5a25beba7b50a8f874",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/immediate_sales_screen_v0/PROTOCOL.json",
+      "source_sha256": "c6e561eddb19e673be4600309fe7e88da7a9c34a61e46c51c83105e7f90f941a",
+      "file": "evidence/runs/immediate_sales_screen_v0/PROTOCOL.json",
+      "packaged_sha256": "c6e561eddb19e673be4600309fe7e88da7a9c34a61e46c51c83105e7f90f941a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/immediate_sales_screen_v0/SUMMARY.json",
+      "source_sha256": "db17d7136e82758e4a52f106302b6a4fb190f711d0ec78cff20e1cdbb1aea414",
+      "file": "evidence/runs/immediate_sales_screen_v0/SUMMARY.json",
+      "packaged_sha256": "db17d7136e82758e4a52f106302b6a4fb190f711d0ec78cff20e1cdbb1aea414",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/integration_room_v1/PROTOCOL.json",
+      "source_sha256": "91a2c8da443ab2986419fe147d1dfbc177a0305cfa9e5c6b54392efb13ee1b60",
+      "file": "evidence/runs/integration_room_v1/PROTOCOL.json",
+      "packaged_sha256": "91a2c8da443ab2986419fe147d1dfbc177a0305cfa9e5c6b54392efb13ee1b60",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/integration_room_v1/SUMMARY.json",
+      "source_sha256": "f35198619444156dd4c1a763685c848c0a06f924803b905dd8e2886ba7f885bd",
+      "file": "evidence/runs/integration_room_v1/SUMMARY.json",
+      "packaged_sha256": "f35198619444156dd4c1a763685c848c0a06f924803b905dd8e2886ba7f885bd",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/integration_v0/PROTOCOL.json",
+      "source_sha256": "45a99f6aa5bf2910755e587f660ab0b18fb34b944e0e36d8cdfcd548358e3897",
+      "file": "evidence/runs/integration_v0/PROTOCOL.json",
+      "packaged_sha256": "45a99f6aa5bf2910755e587f660ab0b18fb34b944e0e36d8cdfcd548358e3897",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/integration_v0/SUMMARY.json",
+      "source_sha256": "d8a03dde6a449e320d69ce01c56f35f99c27bd53fd0eaff6dc3eed2b444224ee",
+      "file": "evidence/runs/integration_v0/SUMMARY.json",
+      "packaged_sha256": "d8a03dde6a449e320d69ce01c56f35f99c27bd53fd0eaff6dc3eed2b444224ee",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/multiple_sales_confirmation0345_v0/COMPARISONS.json",
+      "source_sha256": "7cb5b8b2e446f562e79edcc014e59d6d69d04d4c13e8a3354dff7b8a2cd100b7",
+      "file": "evidence/runs/multiple_sales_confirmation0345_v0/COMPARISONS.json",
+      "packaged_sha256": "7cb5b8b2e446f562e79edcc014e59d6d69d04d4c13e8a3354dff7b8a2cd100b7",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/multiple_sales_confirmation0345_v0/PROTOCOL.json",
+      "source_sha256": "ac233a9388dbab9883b92a76aa3fb0f5841b6cfcb2884750f4b4fb302a594510",
+      "file": "evidence/runs/multiple_sales_confirmation0345_v0/PROTOCOL.json",
+      "packaged_sha256": "ac233a9388dbab9883b92a76aa3fb0f5841b6cfcb2884750f4b4fb302a594510",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/multiple_sales_confirmation0345_v0/SUMMARY.json",
+      "source_sha256": "1cd6c2af8f72fc3316f8f31514bda6cd6deb33126c63a1adbf9b35b9d77244ed",
+      "file": "evidence/runs/multiple_sales_confirmation0345_v0/SUMMARY.json",
+      "packaged_sha256": "1cd6c2af8f72fc3316f8f31514bda6cd6deb33126c63a1adbf9b35b9d77244ed",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/multiple_sales_confirmation0345_v0/SUMMARY.md",
+      "source_sha256": "39ebce87fa8a025fffca2e014e1f0cec44f701add3ae82b3f613e968bf6b984b",
+      "file": "evidence/runs/multiple_sales_confirmation0345_v0/SUMMARY.md",
+      "packaged_sha256": "39ebce87fa8a025fffca2e014e1f0cec44f701add3ae82b3f613e968bf6b984b",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/multiple_sales_confirmation0425_v0/COMPARISONS.json",
+      "source_sha256": "fd0ee3d357ccab13a4e5028554f426325b3724be43c39d19cff2a9a59efdb33a",
+      "file": "evidence/runs/multiple_sales_confirmation0425_v0/COMPARISONS.json",
+      "packaged_sha256": "fd0ee3d357ccab13a4e5028554f426325b3724be43c39d19cff2a9a59efdb33a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/multiple_sales_confirmation0425_v0/PROTOCOL.json",
+      "source_sha256": "789be811fd88d6eb8966ae77af5a22ec4aedaffc4232b843340e030998dad276",
+      "file": "evidence/runs/multiple_sales_confirmation0425_v0/PROTOCOL.json",
+      "packaged_sha256": "789be811fd88d6eb8966ae77af5a22ec4aedaffc4232b843340e030998dad276",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/multiple_sales_confirmation0425_v0/SUMMARY.json",
+      "source_sha256": "f04737b22fa565dfb2fb40f831064468fc15f5239fe90f494b72daa03d31cb75",
+      "file": "evidence/runs/multiple_sales_confirmation0425_v0/SUMMARY.json",
+      "packaged_sha256": "f04737b22fa565dfb2fb40f831064468fc15f5239fe90f494b72daa03d31cb75",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/multiple_sales_confirmation0425_v0/SUMMARY.md",
+      "source_sha256": "8a3b3b92a04b39ec8ec8f778d2cd2e59eab8cc6177e4281bd6529dacfbe3faf5",
+      "file": "evidence/runs/multiple_sales_confirmation0425_v0/SUMMARY.md",
+      "packaged_sha256": "8a3b3b92a04b39ec8ec8f778d2cd2e59eab8cc6177e4281bd6529dacfbe3faf5",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/multiple_sales_screen_v0/COMPARISONS.json",
+      "source_sha256": "217a31e6b24696402ed2d749a8bd6b23e2b96d4e8fed7af962e7ee2f785df20e",
+      "file": "evidence/runs/multiple_sales_screen_v0/COMPARISONS.json",
+      "packaged_sha256": "217a31e6b24696402ed2d749a8bd6b23e2b96d4e8fed7af962e7ee2f785df20e",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/multiple_sales_screen_v0/PROTOCOL.json",
+      "source_sha256": "6eb539aabfb1f34aa182951768e56e2c723117674a1db2163f2c00ec3cb522bd",
+      "file": "evidence/runs/multiple_sales_screen_v0/PROTOCOL.json",
+      "packaged_sha256": "6eb539aabfb1f34aa182951768e56e2c723117674a1db2163f2c00ec3cb522bd",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/multiple_sales_screen_v0/SUMMARY.json",
+      "source_sha256": "149549735f551c55d104ab1a134f0141d559e45de60589a462df89c19cd330a0",
+      "file": "evidence/runs/multiple_sales_screen_v0/SUMMARY.json",
+      "packaged_sha256": "149549735f551c55d104ab1a134f0141d559e45de60589a462df89c19cd330a0",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/multiple_sales_screen_v0/SUMMARY.md",
+      "source_sha256": "c38049b790975e9f3ec1cc08a235788e7886fea1d9fc880c00d157fe4c90e51d",
+      "file": "evidence/runs/multiple_sales_screen_v0/SUMMARY.md",
+      "packaged_sha256": "c38049b790975e9f3ec1cc08a235788e7886fea1d9fc880c00d157fe4c90e51d",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/otter_wait_mixed_v0/PROTOCOL.json",
+      "source_sha256": "89babee7217531de4e10e1edb6d308824c488d59ea2f9822754eb9a36afa9062",
+      "file": "evidence/runs/otter_wait_mixed_v0/PROTOCOL.json",
+      "packaged_sha256": "89babee7217531de4e10e1edb6d308824c488d59ea2f9822754eb9a36afa9062",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/otter_wait_mixed_v0/SUMMARY.md",
+      "source_sha256": "e224c42487ef26488fdbe0f2cbd3a94b264cb5efcd9a80f81b3024f1641c8d2c",
+      "file": "evidence/runs/otter_wait_mixed_v0/SUMMARY.md",
+      "packaged_sha256": "e224c42487ef26488fdbe0f2cbd3a94b264cb5efcd9a80f81b3024f1641c8d2c",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/otter_wait_v0/PROTOCOL.json",
+      "source_sha256": "dbd03ab8aad1c47474381afc663f882f9160095772b3b9087dc1fd0fa0ee133c",
+      "file": "evidence/runs/otter_wait_v0/PROTOCOL.json",
+      "packaged_sha256": "dbd03ab8aad1c47474381afc663f882f9160095772b3b9087dc1fd0fa0ee133c",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/otter_wait_v0/SUMMARY.md",
+      "source_sha256": "56d0ccc091063986c285f062f87b3a403a740e767a6b44b5575c95c0fbb8435d",
+      "file": "evidence/runs/otter_wait_v0/SUMMARY.md",
+      "packaged_sha256": "56d0ccc091063986c285f062f87b3a403a740e767a6b44b5575c95c0fbb8435d",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/own_market_structure_v0/PROTOCOL.json",
+      "source_sha256": "eb18c734a3988fe242eeb2f44e81aa2a2d4f6cf4a5e34ecb44e3e061ab4fb21c",
+      "file": "evidence/runs/own_market_structure_v0/PROTOCOL.json",
+      "packaged_sha256": "eb18c734a3988fe242eeb2f44e81aa2a2d4f6cf4a5e34ecb44e3e061ab4fb21c",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/own_market_structure_v0/SUMMARY.json",
+      "source_sha256": "582387bf03669822ee204a8ba9272d57b9aca969b140443500edb72db9c555fc",
+      "file": "evidence/runs/own_market_structure_v0/SUMMARY.json",
+      "packaged_sha256": "582387bf03669822ee204a8ba9272d57b9aca969b140443500edb72db9c555fc",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/portfolio_diagnosis_v0/PROTOCOL.json",
+      "source_sha256": "3d94303b444649f2c607a750fbf9b97cc35f0df8cfb92bbf47e0bd463c03d50d",
+      "file": "evidence/runs/portfolio_diagnosis_v0/PROTOCOL.json",
+      "packaged_sha256": "3d94303b444649f2c607a750fbf9b97cc35f0df8cfb92bbf47e0bd463c03d50d",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/portfolio_diagnosis_v0/SUMMARY.json",
+      "source_sha256": "1f6399f6ada7f17d88c4cece909b8dd9b3bb9124ceb58fb052f51654225ad9c2",
+      "file": "evidence/runs/portfolio_diagnosis_v0/SUMMARY.json",
+      "packaged_sha256": "1f6399f6ada7f17d88c4cece909b8dd9b3bb9124ceb58fb052f51654225ad9c2",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/portfolio_replication_v0/PROTOCOL.json",
+      "source_sha256": "3702e488da65ba1a2464f376b2c41670ef7b6da376705c2dd239cf945bdd95a8",
+      "file": "evidence/runs/portfolio_replication_v0/PROTOCOL.json",
+      "packaged_sha256": "3702e488da65ba1a2464f376b2c41670ef7b6da376705c2dd239cf945bdd95a8",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/portfolio_replication_v0/SUMMARY.json",
+      "source_sha256": "9efcce7f6ee7cebe299d2cec7c32da137c3461e33b35977f0fcf57d95e03a26f",
+      "file": "evidence/runs/portfolio_replication_v0/SUMMARY.json",
+      "packaged_sha256": "9efcce7f6ee7cebe299d2cec7c32da137c3461e33b35977f0fcf57d95e03a26f",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/portfolio_screen_v0/PROTOCOL.json",
+      "source_sha256": "a05b18075f52a856d0004fc52bad93245cb1c33cf1c4dee799202cbb2470970e",
+      "file": "evidence/runs/portfolio_screen_v0/PROTOCOL.json",
+      "packaged_sha256": "a05b18075f52a856d0004fc52bad93245cb1c33cf1c4dee799202cbb2470970e",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/portfolio_screen_v0/SUMMARY.json",
+      "source_sha256": "9da3ce2c6b6bb568beb57022c1ab3f9bb423ec55b923c46921d1bf8ea6b520fa",
+      "file": "evidence/runs/portfolio_screen_v0/SUMMARY.json",
+      "packaged_sha256": "9da3ce2c6b6bb568beb57022c1ab3f9bb423ec55b923c46921d1bf8ea6b520fa",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/purchase_repair_confirmation_v0/PROTOCOL.json",
+      "source_sha256": "f1347332641239b8cdc3959ad57c28c909f284c19a8e74e6155a11c01d64bd89",
+      "file": "evidence/runs/purchase_repair_confirmation_v0/PROTOCOL.json",
+      "packaged_sha256": "f1347332641239b8cdc3959ad57c28c909f284c19a8e74e6155a11c01d64bd89",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/purchase_repair_confirmation_v0/SUMMARY.md",
+      "source_sha256": "b3c893dcc9c41fa5e37c804cec3a41e09c4806593e3847aa8c4f71fa41691596",
+      "file": "evidence/runs/purchase_repair_confirmation_v0/SUMMARY.md",
+      "packaged_sha256": "b3c893dcc9c41fa5e37c804cec3a41e09c4806593e3847aa8c4f71fa41691596",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/purchase_repair_confirmation_v0/control/PROTOCOL.json",
+      "source_sha256": "3acdb89f5709b00d8ed58988ede2411aff2c7789effa52ea5b8acd968c11a170",
+      "file": "evidence/runs/purchase_repair_confirmation_v0/control/PROTOCOL.json",
+      "packaged_sha256": "3acdb89f5709b00d8ed58988ede2411aff2c7789effa52ea5b8acd968c11a170",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/purchase_repair_confirmation_v0/own_repair/PAIRED_EFFECTS.json",
+      "source_sha256": "f26874a9c2e846519a73e1febf50054696cfcecb16177d90072f4b059b227ba1",
+      "file": "evidence/runs/purchase_repair_confirmation_v0/own_repair/PAIRED_EFFECTS.json",
+      "packaged_sha256": "f26874a9c2e846519a73e1febf50054696cfcecb16177d90072f4b059b227ba1",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/purchase_repair_confirmation_v0/own_repair/PROTOCOL.json",
+      "source_sha256": "5b71cd15df5169cd6c8be486e5ed3c04b47214e1bf5f787cac7cf9b93adc4aa0",
+      "file": "evidence/runs/purchase_repair_confirmation_v0/own_repair/PROTOCOL.json",
+      "packaged_sha256": "5b71cd15df5169cd6c8be486e5ed3c04b47214e1bf5f787cac7cf9b93adc4aa0",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/purchase_repair_screen_v0/PROTOCOL.json",
+      "source_sha256": "fc7596f661162b74aa1cfbce983b85496095ffaab75dbede89aa0004f8c42962",
+      "file": "evidence/runs/purchase_repair_screen_v0/PROTOCOL.json",
+      "packaged_sha256": "fc7596f661162b74aa1cfbce983b85496095ffaab75dbede89aa0004f8c42962",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/purchase_repair_screen_v0/both_repair/PROTOCOL.json",
+      "source_sha256": "500e99a053f6ec3aa543588c2840587aa9e5d284ff393a3ec2e680a88d2c12cd",
+      "file": "evidence/runs/purchase_repair_screen_v0/both_repair/PROTOCOL.json",
+      "packaged_sha256": "500e99a053f6ec3aa543588c2840587aa9e5d284ff393a3ec2e680a88d2c12cd",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/purchase_repair_screen_v0/control/PROTOCOL.json",
+      "source_sha256": "52859b13f0aee103fa41e3793e97d5668aa711df15f967d90d863dade4cd9e4a",
+      "file": "evidence/runs/purchase_repair_screen_v0/control/PROTOCOL.json",
+      "packaged_sha256": "52859b13f0aee103fa41e3793e97d5668aa711df15f967d90d863dade4cd9e4a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/purchase_repair_screen_v0/own_repair/PROTOCOL.json",
+      "source_sha256": "61e87b6e20a7d7850ebbc90088367d4ec7ff35155d1625a8c7a288bdc9a4734a",
+      "file": "evidence/runs/purchase_repair_screen_v0/own_repair/PROTOCOL.json",
+      "packaged_sha256": "61e87b6e20a7d7850ebbc90088367d4ec7ff35155d1625a8c7a288bdc9a4734a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/purchase_witness_confirmation0315_v0/COMPARISONS.json",
+      "source_sha256": "28c7d152307cd69dc5549de1e55896c99c1cf0df0661bcc5d7458c4582c81fad",
+      "file": "evidence/runs/purchase_witness_confirmation0315_v0/COMPARISONS.json",
+      "packaged_sha256": "28c7d152307cd69dc5549de1e55896c99c1cf0df0661bcc5d7458c4582c81fad",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/purchase_witness_confirmation0315_v0/PROTOCOL.json",
+      "source_sha256": "603a0637bd2b83f39badbe4cee8ebeabdaea38d12d93bfb1a774aefd9a5aea24",
+      "file": "evidence/runs/purchase_witness_confirmation0315_v0/PROTOCOL.json",
+      "packaged_sha256": "603a0637bd2b83f39badbe4cee8ebeabdaea38d12d93bfb1a774aefd9a5aea24",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/purchase_witness_confirmation0315_v0/SUMMARY.json",
+      "source_sha256": "c56302cc82d67cadbdf84abea7d03e6413fce1a610170d15c2b548909be86004",
+      "file": "evidence/runs/purchase_witness_confirmation0315_v0/SUMMARY.json",
+      "packaged_sha256": "c56302cc82d67cadbdf84abea7d03e6413fce1a610170d15c2b548909be86004",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/purchase_witness_confirmation0315_v0/SUMMARY.md",
+      "source_sha256": "d6987217963a1f260350e5e18f7132858798cec593160df425824046672680fd",
+      "file": "evidence/runs/purchase_witness_confirmation0315_v0/SUMMARY.md",
+      "packaged_sha256": "d6987217963a1f260350e5e18f7132858798cec593160df425824046672680fd",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/purchase_witness_screen_v0/COMPARISONS.json",
+      "source_sha256": "a85ef9a0011d85eea7ef509fac600563f7107d453ef20f8319c3bd92a59b3018",
+      "file": "evidence/runs/purchase_witness_screen_v0/COMPARISONS.json",
+      "packaged_sha256": "a85ef9a0011d85eea7ef509fac600563f7107d453ef20f8319c3bd92a59b3018",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/purchase_witness_screen_v0/PROTOCOL.json",
+      "source_sha256": "5ff64bc432c4806668bb9b2f43318fcb4cad63e18d9df0036655ca4884230c39",
+      "file": "evidence/runs/purchase_witness_screen_v0/PROTOCOL.json",
+      "packaged_sha256": "5ff64bc432c4806668bb9b2f43318fcb4cad63e18d9df0036655ca4884230c39",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/purchase_witness_screen_v0/SUMMARY.json",
+      "source_sha256": "903b01cae285eabd54f5d8d6336f675b63fb9a2c9606276380a94dbcab96de10",
+      "file": "evidence/runs/purchase_witness_screen_v0/SUMMARY.json",
+      "packaged_sha256": "903b01cae285eabd54f5d8d6336f675b63fb9a2c9606276380a94dbcab96de10",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/purchase_witness_screen_v0/SUMMARY.md",
+      "source_sha256": "0a25c1077d5c2e4a68a2a7d9d74d0b1dffd17c362f630272c78f24970ca26cf1",
+      "file": "evidence/runs/purchase_witness_screen_v0/SUMMARY.md",
+      "packaged_sha256": "0a25c1077d5c2e4a68a2a7d9d74d0b1dffd17c362f630272c78f24970ca26cf1",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/rival_delivery_audit_v0/PROTOCOL.json",
+      "source_sha256": "39808ce55f8e7a365c686b81bc47a28858d7219006627f81edfffbf5318cf6b6",
+      "file": "evidence/runs/rival_delivery_audit_v0/PROTOCOL.json",
+      "packaged_sha256": "39808ce55f8e7a365c686b81bc47a28858d7219006627f81edfffbf5318cf6b6",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/rival_delivery_audit_v0/SUMMARY.json",
+      "source_sha256": "6c1e1b9e20cc9f1f95d1a3ecfccd64c5696fadee2874bb528e366c1acbf3fe39",
+      "file": "evidence/runs/rival_delivery_audit_v0/SUMMARY.json",
+      "packaged_sha256": "6c1e1b9e20cc9f1f95d1a3ecfccd64c5696fadee2874bb528e366c1acbf3fe39",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/rival_delivery_audit_v0/SUMMARY.md",
+      "source_sha256": "1fa122ad2506acf747eb1f1344dee22c2d3de27cf5f59c0b55e1e31a768175f8",
+      "file": "evidence/runs/rival_delivery_audit_v0/SUMMARY.md",
+      "packaged_sha256": "1fa122ad2506acf747eb1f1344dee22c2d3de27cf5f59c0b55e1e31a768175f8",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/rival_stock_audit_discovery0045_v0/PROTOCOL.json",
+      "source_sha256": "2c38857e69b6ed53a5bd3682839224b20973811a7c03f28e63111a2aed3f8c82",
+      "file": "evidence/runs/rival_stock_audit_discovery0045_v0/PROTOCOL.json",
+      "packaged_sha256": "2c38857e69b6ed53a5bd3682839224b20973811a7c03f28e63111a2aed3f8c82",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/rival_stock_audit_discovery0045_v0/SUMMARY.json",
+      "source_sha256": "ec5555dbf58d86de4cd9695ac1526892a665b3c7f1b418a07b78565b3752766d",
+      "file": "evidence/runs/rival_stock_audit_discovery0045_v0/SUMMARY.json",
+      "packaged_sha256": "ec5555dbf58d86de4cd9695ac1526892a665b3c7f1b418a07b78565b3752766d",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/rival_stock_audit_v0/PROTOCOL.json",
+      "source_sha256": "a368e017ae815871fa5606f5fcbb36178c9ef89537de295571b5bd17f9ec06ca",
+      "file": "evidence/runs/rival_stock_audit_v0/PROTOCOL.json",
+      "packaged_sha256": "a368e017ae815871fa5606f5fcbb36178c9ef89537de295571b5bd17f9ec06ca",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/rival_stock_audit_v0/SUMMARY.json",
+      "source_sha256": "536df0c9377d7df7c6205786adf271323b0fa2dffda7a1eef870641fa5cfb842",
+      "file": "evidence/runs/rival_stock_audit_v0/SUMMARY.json",
+      "packaged_sha256": "536df0c9377d7df7c6205786adf271323b0fa2dffda7a1eef870641fa5cfb842",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/sale_priority_broad_v0/AGGREGATE.json",
+      "source_sha256": "06a004b0327c7528ba50cdd0a043a66392bd053478119255ac2d36b207114a22",
+      "file": "evidence/runs/sale_priority_broad_v0/AGGREGATE.json",
+      "packaged_sha256": "06a004b0327c7528ba50cdd0a043a66392bd053478119255ac2d36b207114a22",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/sale_priority_broad_v0/PROTOCOL.json",
+      "source_sha256": "f595529275d1b35dc63faf1f99ed1161ae73ba307292fdd4b877a0d4eca3ba51",
+      "file": "evidence/runs/sale_priority_broad_v0/PROTOCOL.json",
+      "packaged_sha256": "f595529275d1b35dc63faf1f99ed1161ae73ba307292fdd4b877a0d4eca3ba51",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/sale_priority_broad_v0/SUMMARY.json",
+      "source_sha256": "ef8559837ecd542916524f7c6de372d1b41882f7995f8992c9b0cb9e2d9e7787",
+      "file": "evidence/runs/sale_priority_broad_v0/SUMMARY.json",
+      "packaged_sha256": "ef8559837ecd542916524f7c6de372d1b41882f7995f8992c9b0cb9e2d9e7787",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/sale_priority_screen_v0/AGGREGATE.json",
+      "source_sha256": "0f5a184692808bfd48967ec14e54d18c66f15b79c31045fa663cffe3451605ef",
+      "file": "evidence/runs/sale_priority_screen_v0/AGGREGATE.json",
+      "packaged_sha256": "0f5a184692808bfd48967ec14e54d18c66f15b79c31045fa663cffe3451605ef",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/sale_priority_screen_v0/PROTOCOL.json",
+      "source_sha256": "65a48a6f01cb4a81dc5b98033c1dc0a4cb55ec6ac601f229ce2c0a2660d0fbfb",
+      "file": "evidence/runs/sale_priority_screen_v0/PROTOCOL.json",
+      "packaged_sha256": "65a48a6f01cb4a81dc5b98033c1dc0a4cb55ec6ac601f229ce2c0a2660d0fbfb",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/sale_priority_screen_v0/SUMMARY.json",
+      "source_sha256": "781cc3d722783ace0a99907cd095f1b47042939c929a3ed4ce137074f7538d8d",
+      "file": "evidence/runs/sale_priority_screen_v0/SUMMARY.json",
+      "packaged_sha256": "781cc3d722783ace0a99907cd095f1b47042939c929a3ed4ce137074f7538d8d",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_cash_audit_v0/PROTOCOL.json",
+      "source_sha256": "1e4ae50b9a3fbdb4c28fd6e3d61fa28e710c6d0fcf2bfb8d5c661d3368ac4342",
+      "file": "evidence/runs/scenario_cash_audit_v0/PROTOCOL.json",
+      "packaged_sha256": "1e4ae50b9a3fbdb4c28fd6e3d61fa28e710c6d0fcf2bfb8d5c661d3368ac4342",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_cash_audit_v0/RANK_ATTRIBUTION.json",
+      "source_sha256": "be184e623d4eaec13832cfef4edf4a47c53f2c030505005ef2bf76f71c665cf4",
+      "file": "evidence/runs/scenario_cash_audit_v0/RANK_ATTRIBUTION.json",
+      "packaged_sha256": "be184e623d4eaec13832cfef4edf4a47c53f2c030505005ef2bf76f71c665cf4",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_cash_audit_v0/SELECTION_AUDIT.json",
+      "source_sha256": "21845b093b0a0f9eea4e38bc6f20ecba39b4501d29d5d69e90eb7fb6238aa21d",
+      "file": "evidence/runs/scenario_cash_audit_v0/SELECTION_AUDIT.json",
+      "packaged_sha256": "21845b093b0a0f9eea4e38bc6f20ecba39b4501d29d5d69e90eb7fb6238aa21d",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_cash_audit_v0/SUMMARY.md",
+      "source_sha256": "9bc16b443f2efd646451d2a23977725628a66be9463504a0c910f23190680ef0",
+      "file": "evidence/runs/scenario_cash_audit_v0/SUMMARY.md",
+      "packaged_sha256": "9bc16b443f2efd646451d2a23977725628a66be9463504a0c910f23190680ef0",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_cash_audit_v0/current_cash/PROTOCOL.json",
+      "source_sha256": "7e560e3858761b32d0dd3cadcd7261fb36e951f3cec8fff1c6974df54cbf2e76",
+      "file": "evidence/runs/scenario_cash_audit_v0/current_cash/PROTOCOL.json",
+      "packaged_sha256": "7e560e3858761b32d0dd3cadcd7261fb36e951f3cec8fff1c6974df54cbf2e76",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_cash_audit_v0/current_cash/SUMMARY.json",
+      "source_sha256": "511283e20ad4b6501b0fe32d68600de2f3b09b838ace4f2a6031e03de212d130",
+      "file": "evidence/runs/scenario_cash_audit_v0/current_cash/SUMMARY.json",
+      "packaged_sha256": "511283e20ad4b6501b0fe32d68600de2f3b09b838ace4f2a6031e03de212d130",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_cash_audit_v0/historical_cash/PAIRED_EFFECTS.json",
+      "source_sha256": "22670283ccb022dfd19914cb79705d213a48819904d8c54455d5114ac641eca5",
+      "file": "evidence/runs/scenario_cash_audit_v0/historical_cash/PAIRED_EFFECTS.json",
+      "packaged_sha256": "22670283ccb022dfd19914cb79705d213a48819904d8c54455d5114ac641eca5",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_cash_audit_v0/historical_cash/PROTOCOL.json",
+      "source_sha256": "ac0a66c25b2a775ebe29b4b71003d3f523f9e3bab9277da23f636c47da4bb1e7",
+      "file": "evidence/runs/scenario_cash_audit_v0/historical_cash/PROTOCOL.json",
+      "packaged_sha256": "ac0a66c25b2a775ebe29b4b71003d3f523f9e3bab9277da23f636c47da4bb1e7",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_cash_audit_v0/historical_cash/SUMMARY.json",
+      "source_sha256": "f6b44dae1d10fd5eaad1f2bf385c98992bb1637c9e307d61892cf6691e881102",
+      "file": "evidence/runs/scenario_cash_audit_v0/historical_cash/SUMMARY.json",
+      "packaged_sha256": "f6b44dae1d10fd5eaad1f2bf385c98992bb1637c9e307d61892cf6691e881102",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_cash_confirmation_v0/PROTOCOL.json",
+      "source_sha256": "03196e156bf9fcd81d5c597990b01cd8efa382d9c9c3a34c609ce404ff736a0c",
+      "file": "evidence/runs/scenario_cash_confirmation_v0/PROTOCOL.json",
+      "packaged_sha256": "03196e156bf9fcd81d5c597990b01cd8efa382d9c9c3a34c609ce404ff736a0c",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_cash_confirmation_v0/RANK_ATTRIBUTION.json",
+      "source_sha256": "3a827e61c34940370fce6fa3aebd0e949d408d1f9a2247d2069e68d1ee2c3362",
+      "file": "evidence/runs/scenario_cash_confirmation_v0/RANK_ATTRIBUTION.json",
+      "packaged_sha256": "3a827e61c34940370fce6fa3aebd0e949d408d1f9a2247d2069e68d1ee2c3362",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_cash_confirmation_v0/SELECTION_AUDIT.json",
+      "source_sha256": "3300fe70cb021cf082d71e068e203653cf461eae479bc7529371359c58ddb906",
+      "file": "evidence/runs/scenario_cash_confirmation_v0/SELECTION_AUDIT.json",
+      "packaged_sha256": "3300fe70cb021cf082d71e068e203653cf461eae479bc7529371359c58ddb906",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_cash_confirmation_v0/SUMMARY.md",
+      "source_sha256": "701e3a55d7a1ebffb9d50f17e9e8822ce738c19735c13b92be98b63a52999062",
+      "file": "evidence/runs/scenario_cash_confirmation_v0/SUMMARY.md",
+      "packaged_sha256": "701e3a55d7a1ebffb9d50f17e9e8822ce738c19735c13b92be98b63a52999062",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_cash_confirmation_v0/current_cash/PROTOCOL.json",
+      "source_sha256": "8ddebb3c832e17cc8206e6c0859fa0408c2a9df85e60e5cf7acdde32d0261a32",
+      "file": "evidence/runs/scenario_cash_confirmation_v0/current_cash/PROTOCOL.json",
+      "packaged_sha256": "8ddebb3c832e17cc8206e6c0859fa0408c2a9df85e60e5cf7acdde32d0261a32",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_cash_confirmation_v0/current_cash/SUMMARY.json",
+      "source_sha256": "a4e55e096d751429459a95d8e98412d36a7e359b332ccdcfe57caf6bfa5c2016",
+      "file": "evidence/runs/scenario_cash_confirmation_v0/current_cash/SUMMARY.json",
+      "packaged_sha256": "a4e55e096d751429459a95d8e98412d36a7e359b332ccdcfe57caf6bfa5c2016",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_cash_confirmation_v0/historical_cash/PAIRED_EFFECTS.json",
+      "source_sha256": "c00662816e433231e69bc1c71ee9f8231dc9db8e72acdd76222129e0430fd657",
+      "file": "evidence/runs/scenario_cash_confirmation_v0/historical_cash/PAIRED_EFFECTS.json",
+      "packaged_sha256": "c00662816e433231e69bc1c71ee9f8231dc9db8e72acdd76222129e0430fd657",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_cash_confirmation_v0/historical_cash/PROTOCOL.json",
+      "source_sha256": "0fde82fc3f20989086285a8d5d2615e69a8523355d9838f40d734ddbc3f3adf4",
+      "file": "evidence/runs/scenario_cash_confirmation_v0/historical_cash/PROTOCOL.json",
+      "packaged_sha256": "0fde82fc3f20989086285a8d5d2615e69a8523355d9838f40d734ddbc3f3adf4",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_cash_confirmation_v0/historical_cash/SUMMARY.json",
+      "source_sha256": "78420885272d3dbcdb2ed153ec590a405493b8b7ad1d6c14b8eb0ab66e058307",
+      "file": "evidence/runs/scenario_cash_confirmation_v0/historical_cash/SUMMARY.json",
+      "packaged_sha256": "78420885272d3dbcdb2ed153ec590a405493b8b7ad1d6c14b8eb0ab66e058307",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_public_compatibility_extended_v0/PROTOCOL.json",
+      "source_sha256": "48dcde46bc630ad60387b4c8f7ceb581b3679d1337d7f8d5957e1f6c47ffda56",
+      "file": "evidence/runs/scenario_public_compatibility_extended_v0/PROTOCOL.json",
+      "packaged_sha256": "48dcde46bc630ad60387b4c8f7ceb581b3679d1337d7f8d5957e1f6c47ffda56",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_public_compatibility_extended_v0/SUMMARY.json",
+      "source_sha256": "69e4a0c2bb24a1fc98124021dda84b7227e5d0ff12c65b57ff9663530f076dcd",
+      "file": "evidence/runs/scenario_public_compatibility_extended_v0/SUMMARY.json",
+      "packaged_sha256": "69e4a0c2bb24a1fc98124021dda84b7227e5d0ff12c65b57ff9663530f076dcd",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_public_compatibility_extended_v0/SUMMARY.md",
+      "source_sha256": "e511fd6558f0ae9827da4922a377fd91fb35cc325327fb0657644987a02df7e2",
+      "file": "evidence/runs/scenario_public_compatibility_extended_v0/SUMMARY.md",
+      "packaged_sha256": "e511fd6558f0ae9827da4922a377fd91fb35cc325327fb0657644987a02df7e2",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_public_compatibility_v0/PROTOCOL.json",
+      "source_sha256": "b2520f5e1e7f44ff7e0248ff1fac4500968898a6f669b157591a3df86beeea72",
+      "file": "evidence/runs/scenario_public_compatibility_v0/PROTOCOL.json",
+      "packaged_sha256": "b2520f5e1e7f44ff7e0248ff1fac4500968898a6f669b157591a3df86beeea72",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_public_compatibility_v0/SUMMARY.json",
+      "source_sha256": "c19650699d2f88a231c94c95db84ce4dabc2770ee04f3dd14f31a10902ce9718",
+      "file": "evidence/runs/scenario_public_compatibility_v0/SUMMARY.json",
+      "packaged_sha256": "c19650699d2f88a231c94c95db84ce4dabc2770ee04f3dd14f31a10902ce9718",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/scenario_public_compatibility_v0/SUMMARY.md",
+      "source_sha256": "d11437807a8b0e54b3e733a8bfa2ba77ca14df2c54319b3b6301e32f7a010783",
+      "file": "evidence/runs/scenario_public_compatibility_v0/SUMMARY.md",
+      "packaged_sha256": "d11437807a8b0e54b3e733a8bfa2ba77ca14df2c54319b3b6301e32f7a010783",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/seed_budget_screen_v0/COMPARISONS.json",
+      "source_sha256": "11fb5c3ccbcee4292a6f9d73e9764f792975317902a45cd0dbb1c523f4ef81cf",
+      "file": "evidence/runs/seed_budget_screen_v0/COMPARISONS.json",
+      "packaged_sha256": "11fb5c3ccbcee4292a6f9d73e9764f792975317902a45cd0dbb1c523f4ef81cf",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/seed_budget_screen_v0/PROTOCOL.json",
+      "source_sha256": "bfc7cc9c1b728a9308d0c41814b93d0006abe84fecd94e74b80656a2bab6aa1d",
+      "file": "evidence/runs/seed_budget_screen_v0/PROTOCOL.json",
+      "packaged_sha256": "bfc7cc9c1b728a9308d0c41814b93d0006abe84fecd94e74b80656a2bab6aa1d",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/seed_budget_screen_v0/SUMMARY.json",
+      "source_sha256": "c95022244ef82383afa30b10a693a69394508d28c52e1043a799385a02588318",
+      "file": "evidence/runs/seed_budget_screen_v0/SUMMARY.json",
+      "packaged_sha256": "c95022244ef82383afa30b10a693a69394508d28c52e1043a799385a02588318",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/seed_budget_screen_v0/SUMMARY.md",
+      "source_sha256": "105aef35a385eb4d20948f408cb7efbe25b130e4c0c9b4a9eccc3b4aab426614",
+      "file": "evidence/runs/seed_budget_screen_v0/SUMMARY.md",
+      "packaged_sha256": "105aef35a385eb4d20948f408cb7efbe25b130e4c0c9b4a9eccc3b4aab426614",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/seed_prebuy_screen_v0/COMPARISONS.json",
+      "source_sha256": "2b51a5e1ff63ff78fc74cd238ad5508bc6818ab291984f26c51ad240a95c6c89",
+      "file": "evidence/runs/seed_prebuy_screen_v0/COMPARISONS.json",
+      "packaged_sha256": "2b51a5e1ff63ff78fc74cd238ad5508bc6818ab291984f26c51ad240a95c6c89",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/seed_prebuy_screen_v0/EXTREME_EXAMPLES.json",
+      "source_sha256": "2769d536f28510b7cabfee9d8f22a35d4a33974467fb041b386a879e20fbab0b",
+      "file": "evidence/runs/seed_prebuy_screen_v0/EXTREME_EXAMPLES.json",
+      "packaged_sha256": "2769d536f28510b7cabfee9d8f22a35d4a33974467fb041b386a879e20fbab0b",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/seed_prebuy_screen_v0/PREBUY_VS_SLOTFILL.json",
+      "source_sha256": "f02b33b0a6ed9eccd943a0c06de1bb91c0cbe7369f7deab202def84b5ff0fda4",
+      "file": "evidence/runs/seed_prebuy_screen_v0/PREBUY_VS_SLOTFILL.json",
+      "packaged_sha256": "f02b33b0a6ed9eccd943a0c06de1bb91c0cbe7369f7deab202def84b5ff0fda4",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/seed_prebuy_screen_v0/PROTOCOL.json",
+      "source_sha256": "2a44a7509d5cc6c946678443d3acb70fe9e0d216b9f732ca7d35d0cbea2b583c",
+      "file": "evidence/runs/seed_prebuy_screen_v0/PROTOCOL.json",
+      "packaged_sha256": "2a44a7509d5cc6c946678443d3acb70fe9e0d216b9f732ca7d35d0cbea2b583c",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/seed_prebuy_screen_v0/SUMMARY.json",
+      "source_sha256": "b72513f06143f4c1ce9722a271dcff6a6980415c3e80f24165ec494f98c43ded",
+      "file": "evidence/runs/seed_prebuy_screen_v0/SUMMARY.json",
+      "packaged_sha256": "b72513f06143f4c1ce9722a271dcff6a6980415c3e80f24165ec494f98c43ded",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/seed_prebuy_screen_v0/SUMMARY.md",
+      "source_sha256": "e6395008e1634dd516805ba9b1cbdd9c258f4b6d0f18c5bbd526ad6977e71d79",
+      "file": "evidence/runs/seed_prebuy_screen_v0/SUMMARY.md",
+      "packaged_sha256": "e6395008e1634dd516805ba9b1cbdd9c258f4b6d0f18c5bbd526ad6977e71d79",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/seed_prebuy_screen_v0/UNEXPECTED_STATE_CHANGES.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "file": "evidence/runs/seed_prebuy_screen_v0/UNEXPECTED_STATE_CHANGES.json",
+      "packaged_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/seed_restock_screen_v0/COMPARISONS.json",
+      "source_sha256": "533ebcb12066d66c9072069950fa3baa14a221b0d50398bd2e05d2394aff36fd",
+      "file": "evidence/runs/seed_restock_screen_v0/COMPARISONS.json",
+      "packaged_sha256": "533ebcb12066d66c9072069950fa3baa14a221b0d50398bd2e05d2394aff36fd",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/seed_restock_screen_v0/PROTOCOL.json",
+      "source_sha256": "944dbe0aaafa20030904d27cb6ed5aeb1dc5314d993eba343e473ab29057a827",
+      "file": "evidence/runs/seed_restock_screen_v0/PROTOCOL.json",
+      "packaged_sha256": "944dbe0aaafa20030904d27cb6ed5aeb1dc5314d993eba343e473ab29057a827",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/seed_restock_screen_v0/SUMMARY.json",
+      "source_sha256": "188e2a6d595c26a0cdba100f2c162c786a06f4ce6d7be694034f2838d0cb6145",
+      "file": "evidence/runs/seed_restock_screen_v0/SUMMARY.json",
+      "packaged_sha256": "188e2a6d595c26a0cdba100f2c162c786a06f4ce6d7be694034f2838d0cb6145",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/seed_restock_screen_v0/SUMMARY.md",
+      "source_sha256": "dc0d83bdec24ab65c2d1d233ef7ac24052791ac865ae4d32c331168d8cfc101c",
+      "file": "evidence/runs/seed_restock_screen_v0/SUMMARY.md",
+      "packaged_sha256": "dc0d83bdec24ab65c2d1d233ef7ac24052791ac865ae4d32c331168d8cfc101c",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/storage_engine_v1/PROTOCOL.json",
+      "source_sha256": "bd8dd96c1e899bd657de9fda2c3724c528eb790fd65209ebb64cf1e6cc9cea35",
+      "file": "evidence/runs/storage_engine_v1/PROTOCOL.json",
+      "packaged_sha256": "bd8dd96c1e899bd657de9fda2c3724c528eb790fd65209ebb64cf1e6cc9cea35",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/storage_engine_v1/SUMMARY.json",
+      "source_sha256": "a3b6db73da987594ba253a4a33da230d8080ec87e00270f2d8eb82056b9ff02c",
+      "file": "evidence/runs/storage_engine_v1/SUMMARY.json",
+      "packaged_sha256": "a3b6db73da987594ba253a4a33da230d8080ec87e00270f2d8eb82056b9ff02c",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/storage_headroom_v0/PROTOCOL.json",
+      "source_sha256": "c895b0400e47a13c27350159d66ded2b7011372391b1d812b1e6f0384f3ed8e6",
+      "file": "evidence/runs/storage_headroom_v0/PROTOCOL.json",
+      "packaged_sha256": "c895b0400e47a13c27350159d66ded2b7011372391b1d812b1e6f0384f3ed8e6",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/storage_refresh1855_v1/SUMMARY.json",
+      "source_sha256": "2fe4264c11f611488c1322f7b73c76792c8e7691e7c05592fb0e03dd3fd77c5a",
+      "file": "evidence/runs/storage_refresh1855_v1/SUMMARY.json",
+      "packaged_sha256": "2fe4264c11f611488c1322f7b73c76792c8e7691e7c05592fb0e03dd3fd77c5a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/storage_v0/SUMMARY.json",
+      "source_sha256": "2e220446e819fa2a815e5954744b157d273ff3daef0706191ccf3a53d4e575b0",
+      "file": "evidence/runs/storage_v0/SUMMARY.json",
+      "packaged_sha256": "2e220446e819fa2a815e5954744b157d273ff3daef0706191ccf3a53d4e575b0",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/storage_v1/SUMMARY.json",
+      "source_sha256": "3bbd86973eb3c0a613e52308c56d1ab6f33d864b6500e7f3b52080d44033f5c4",
+      "file": "evidence/runs/storage_v1/SUMMARY.json",
+      "packaged_sha256": "3bbd86973eb3c0a613e52308c56d1ab6f33d864b6500e7f3b52080d44033f5c4",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/storage_value_engine_v0/PROTOCOL.json",
+      "source_sha256": "e541d40802ed148cd9667458ee4d1dffd1d98c5f2ac75df92b1be95caa67c3fd",
+      "file": "evidence/runs/storage_value_engine_v0/PROTOCOL.json",
+      "packaged_sha256": "e541d40802ed148cd9667458ee4d1dffd1d98c5f2ac75df92b1be95caa67c3fd",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/storage_value_engine_v0/SUMMARY.json",
+      "source_sha256": "bf148c9f710ab3680cc7c1f307deba691ec667ba9f78ed5e2944dde0be4a98e2",
+      "file": "evidence/runs/storage_value_engine_v0/SUMMARY.json",
+      "packaged_sha256": "bf148c9f710ab3680cc7c1f307deba691ec667ba9f78ed5e2944dde0be4a98e2",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/storage_value_quiet_refresh1855_v0/SUMMARY.json",
+      "source_sha256": "65243b5c9b55a5e767e6fbc6395e577164f785ad090efef188a49263204462da",
+      "file": "evidence/runs/storage_value_quiet_refresh1855_v0/SUMMARY.json",
+      "packaged_sha256": "65243b5c9b55a5e767e6fbc6395e577164f785ad090efef188a49263204462da",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/storage_value_quiet_v0/SUMMARY.json",
+      "source_sha256": "3b6e2f555e88aa5ac47ba7de7e20a8f3eda0e9f3ad72237e748f47a83bd0645f",
+      "file": "evidence/runs/storage_value_quiet_v0/SUMMARY.json",
+      "packaged_sha256": "3b6e2f555e88aa5ac47ba7de7e20a8f3eda0e9f3ad72237e748f47a83bd0645f",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/storage_value_scenarios_refresh1855_v0/SUMMARY.json",
+      "source_sha256": "f1dbed0eabb051aa5ef56608f79a0d12130b29b64527dd4b4cf70bb8d4d4013e",
+      "file": "evidence/runs/storage_value_scenarios_refresh1855_v0/SUMMARY.json",
+      "packaged_sha256": "f1dbed0eabb051aa5ef56608f79a0d12130b29b64527dd4b4cf70bb8d4d4013e",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/storage_value_scenarios_v0/SUMMARY.json",
+      "source_sha256": "ddf2f6f2e1a034dd876c3790f197739984ce1608686951d29d2faf787a1b1de6",
+      "file": "evidence/runs/storage_value_scenarios_v0/SUMMARY.json",
+      "packaged_sha256": "ddf2f6f2e1a034dd876c3790f197739984ce1608686951d29d2faf787a1b1de6",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/top_patterns0045_v0/PROTOCOL.json",
+      "source_sha256": "bc1689bb2abd21dee1d749a0d0c10b6d124f21ff79318ce8ace17b00313c7098",
+      "file": "evidence/runs/top_patterns0045_v0/PROTOCOL.json",
+      "packaged_sha256": "bc1689bb2abd21dee1d749a0d0c10b6d124f21ff79318ce8ace17b00313c7098",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/top_patterns0045_v0/SUMMARY.md",
+      "source_sha256": "8e474240789d2bb2548d8f594d3ad0eeb9fb8b2e84d9e83f56b953b67d71ef17",
+      "file": "evidence/runs/top_patterns0045_v0/SUMMARY.md",
+      "packaged_sha256": "8e474240789d2bb2548d8f594d3ad0eeb9fb8b2e84d9e83f56b953b67d71ef17",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/top_patterns0200_v0/PROTOCOL.json",
+      "source_sha256": "1438ac2aa5818a99766b7e000c0c8f320b29b9c1010a4101ddc80354133b11f3",
+      "file": "evidence/runs/top_patterns0200_v0/PROTOCOL.json",
+      "packaged_sha256": "1438ac2aa5818a99766b7e000c0c8f320b29b9c1010a4101ddc80354133b11f3",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/top_patterns0200_v0/SUMMARY.md",
+      "source_sha256": "55ba5247b3dbccad3b6009d27905b29fdb8886c4bb7a5fd167270c07caa1d1a0",
+      "file": "evidence/runs/top_patterns0200_v0/SUMMARY.md",
+      "packaged_sha256": "55ba5247b3dbccad3b6009d27905b29fdb8886c4bb7a5fd167270c07caa1d1a0",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/top_patterns0315_v0/PROTOCOL.json",
+      "source_sha256": "eefe856cf983b3b2ea32af6aff09ecfbffd2d13b44acebdd97fa9e62f340071b",
+      "file": "evidence/runs/top_patterns0315_v0/PROTOCOL.json",
+      "packaged_sha256": "eefe856cf983b3b2ea32af6aff09ecfbffd2d13b44acebdd97fa9e62f340071b",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/top_patterns0315_v0/SUMMARY.md",
+      "source_sha256": "b5d7ceb912f61d941be3386defe50cc659f04b374e0189c8dbf401a2a7e1d5a7",
+      "file": "evidence/runs/top_patterns0315_v0/SUMMARY.md",
+      "packaged_sha256": "b5d7ceb912f61d941be3386defe50cc659f04b374e0189c8dbf401a2a7e1d5a7",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/top_patterns0345_v0/PROTOCOL.json",
+      "source_sha256": "b8436b3c91574c6a53226c9c9b423e3e75cabc0f909523c3bf8015b4a366c9f5",
+      "file": "evidence/runs/top_patterns0345_v0/PROTOCOL.json",
+      "packaged_sha256": "b8436b3c91574c6a53226c9c9b423e3e75cabc0f909523c3bf8015b4a366c9f5",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/top_patterns0345_v0/SUMMARY.md",
+      "source_sha256": "0f7eafdbd1e235d9774291165733edb6d89a429db440a222837422e76723ce5c",
+      "file": "evidence/runs/top_patterns0345_v0/SUMMARY.md",
+      "packaged_sha256": "0f7eafdbd1e235d9774291165733edb6d89a429db440a222837422e76723ce5c",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/top_patterns0425_v0/PROTOCOL.json",
+      "source_sha256": "b63811fd748553d9634baed169073a7cda44ab82a198831e29089fe28f0852cc",
+      "file": "evidence/runs/top_patterns0425_v0/PROTOCOL.json",
+      "packaged_sha256": "b63811fd748553d9634baed169073a7cda44ab82a198831e29089fe28f0852cc",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/top_patterns0425_v0/SUMMARY.md",
+      "source_sha256": "1e589ebeff6b4cf3d243286c4d5abb3106c0bd5608327a00d1d6998040e0c406",
+      "file": "evidence/runs/top_patterns0425_v0/SUMMARY.md",
+      "packaged_sha256": "1e589ebeff6b4cf3d243286c4d5abb3106c0bd5608327a00d1d6998040e0c406",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/top_patterns2315_v0/PROTOCOL.json",
+      "source_sha256": "81bff4f7c467ccd8306cb9fc7c64c0abf47d2a6fe49fb37267ed558f6d1b6d50",
+      "file": "evidence/runs/top_patterns2315_v0/PROTOCOL.json",
+      "packaged_sha256": "81bff4f7c467ccd8306cb9fc7c64c0abf47d2a6fe49fb37267ed558f6d1b6d50",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/top_patterns_fixed_v0/PROTOCOL.json",
+      "source_sha256": "b6e6e3b0f68dbe189b708639089d7e45dfbb61a66db1a915b9e0c2cd43d6291d",
+      "file": "evidence/runs/top_patterns_fixed_v0/PROTOCOL.json",
+      "packaged_sha256": "b6e6e3b0f68dbe189b708639089d7e45dfbb61a66db1a915b9e0c2cd43d6291d",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/top_patterns_fixed_v0/SUMMARY.json",
+      "source_sha256": "614781c49f72620b9d12de4de746e3416c4ab935a8be2bc1e06adca25dd3bb8a",
+      "file": "evidence/runs/top_patterns_fixed_v0/SUMMARY.json",
+      "packaged_sha256": "614781c49f72620b9d12de4de746e3416c4ab935a8be2bc1e06adca25dd3bb8a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/wait_demand_v0/SUMMARY.json",
+      "source_sha256": "1978ee278cb13050e64d8540909578404e2c02fd0b24d2c22c14edf1c206d208",
+      "file": "evidence/runs/wait_demand_v0/SUMMARY.json",
+      "packaged_sha256": "1978ee278cb13050e64d8540909578404e2c02fd0b24d2c22c14edf1c206d208",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/wait_mixed_transfer_v0/PROTOCOL.json",
+      "source_sha256": "f2c8f8ded49d2ce72077b900d2b0ddf26dbc750ba429e6b1a8c14c509a60c526",
+      "file": "evidence/runs/wait_mixed_transfer_v0/PROTOCOL.json",
+      "packaged_sha256": "f2c8f8ded49d2ce72077b900d2b0ddf26dbc750ba429e6b1a8c14c509a60c526",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/wait_mixed_transfer_v0/SUMMARY.json",
+      "source_sha256": "e99c32208470f2efcce42c289a90d9e82896592b717aa08cdc53d4b65fd25df4",
+      "file": "evidence/runs/wait_mixed_transfer_v0/SUMMARY.json",
+      "packaged_sha256": "e99c32208470f2efcce42c289a90d9e82896592b717aa08cdc53d4b65fd25df4",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/runs/wait_mixed_transfer_v0/SUMMARY.md",
+      "source_sha256": "3accbccf294eca80d5ddb6341bbb78762d076785395dba24c7c654058f3cb867",
+      "file": "evidence/runs/wait_mixed_transfer_v0/SUMMARY.md",
+      "packaged_sha256": "3accbccf294eca80d5ddb6341bbb78762d076785395dba24c7c654058f3cb867",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/baseline.hpp",
+      "source_sha256": "0c5a544d67453756d8b00095800a22ab5076d1ea1c6ec6bb184c2b41bf846b4e",
+      "file": "include/baseline.hpp",
+      "packaged_sha256": "0c5a544d67453756d8b00095800a22ab5076d1ea1c6ec6bb184c2b41bf846b4e",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/calendar.hpp",
+      "source_sha256": "3caf74d973f88dd04fe29e7101df5df19bd19ddebcef6e8da20b3e9b62c5f7a1",
+      "file": "include/calendar.hpp",
+      "packaged_sha256": "3caf74d973f88dd04fe29e7101df5df19bd19ddebcef6e8da20b3e9b62c5f7a1",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/case.hpp",
+      "source_sha256": "705715c2156ccf44909d395b840529ca3013ed98e9ffb804a9382e84eb649f9d",
+      "file": "include/case.hpp",
+      "packaged_sha256": "705715c2156ccf44909d395b840529ca3013ed98e9ffb804a9382e84eb649f9d",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/compact.hpp",
+      "source_sha256": "8e463f70c08ffb0f47bf28db7d8bfe0710137f957192daec8ec9495d726f13a4",
+      "file": "include/compact.hpp",
+      "packaged_sha256": "8e463f70c08ffb0f47bf28db7d8bfe0710137f957192daec8ec9495d726f13a4",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/compile_calendar.hpp",
+      "source_sha256": "1a7f7d0acb5c8e410bb7e0047af681e1621a9516ca99eb224a2eba90c731af91",
+      "file": "include/compile_calendar.hpp",
+      "packaged_sha256": "1a7f7d0acb5c8e410bb7e0047af681e1621a9516ca99eb224a2eba90c731af91",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/continuation.hpp",
+      "source_sha256": "457d540f6edefaaea3f27e56dc712d7ad1c8f2d5ffc30649d1a3781f7db4a788",
+      "file": "include/continuation.hpp",
+      "packaged_sha256": "457d540f6edefaaea3f27e56dc712d7ad1c8f2d5ffc30649d1a3781f7db4a788",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/day_timing.hpp",
+      "source_sha256": "dcb4daa4de94b40f435d822a053d8aee8eb3e3aa67abe7562a862d4e6a657553",
+      "file": "include/day_timing.hpp",
+      "packaged_sha256": "dcb4daa4de94b40f435d822a053d8aee8eb3e3aa67abe7562a862d4e6a657553",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/evaluation.hpp",
+      "source_sha256": "3a2821900ef5cbe2094ff25be19a8cf48d41e5aa7b4d83d9528221b5fa692b3e",
+      "file": "include/evaluation.hpp",
+      "packaged_sha256": "3a2821900ef5cbe2094ff25be19a8cf48d41e5aa7b4d83d9528221b5fa692b3e",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/forecast_library.hpp",
+      "source_sha256": "d46401650e1571f234ac94678acdbb25f562404064bcc389576942402c91178a",
+      "file": "include/forecast_library.hpp",
+      "packaged_sha256": "d46401650e1571f234ac94678acdbb25f562404064bcc389576942402c91178a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/holding_exchange.hpp",
+      "source_sha256": "c8c08ffc6a7cce1a21e842b9b9a017689bf64f93c61de15f371f00fd0fa4cd28",
+      "file": "include/holding_exchange.hpp",
+      "packaged_sha256": "c8c08ffc6a7cce1a21e842b9b9a017689bf64f93c61de15f371f00fd0fa4cd28",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/immediate_sales.hpp",
+      "source_sha256": "9c12f01abd0d012d5941efcbef7e746956987c1dfb1566845e38bd013478ec50",
+      "file": "include/immediate_sales.hpp",
+      "packaged_sha256": "9c12f01abd0d012d5941efcbef7e746956987c1dfb1566845e38bd013478ec50",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/market.hpp",
+      "source_sha256": "5b3edad452db7797097e8262f5525186cd9f62653bd50c2bd12c781d632e21d8",
+      "file": "include/market.hpp",
+      "packaged_sha256": "5b3edad452db7797097e8262f5525186cd9f62653bd50c2bd12c781d632e21d8",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/own_world.hpp",
+      "source_sha256": "1f939c91a73bd2637cf9704e24e2bb5dab1e7632e4ee6493a913a14ca7065860",
+      "file": "include/own_world.hpp",
+      "packaged_sha256": "1f939c91a73bd2637cf9704e24e2bb5dab1e7632e4ee6493a913a14ca7065860",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/physical_state.hpp",
+      "source_sha256": "d126f79c23623dbd2ff5ea4dbe29c896ba36caa2d7adce42d5a583b2a1daf467",
+      "file": "include/physical_state.hpp",
+      "packaged_sha256": "d126f79c23623dbd2ff5ea4dbe29c896ba36caa2d7adce42d5a583b2a1daf467",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/profile.hpp",
+      "source_sha256": "ee9a5305aa3778dca3e6272b1f4d38afd0f4a806b3c5c5414367626a34e70724",
+      "file": "include/profile.hpp",
+      "packaged_sha256": "ee9a5305aa3778dca3e6272b1f4d38afd0f4a806b3c5c5414367626a34e70724",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/project_resources.hpp",
+      "source_sha256": "01107f0f5ccee632d3396534fb0b77c6a55d0a4c868bf360737a960469632634",
+      "file": "include/project_resources.hpp",
+      "packaged_sha256": "01107f0f5ccee632d3396534fb0b77c6a55d0a4c868bf360737a960469632634",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/project_stock.hpp",
+      "source_sha256": "fec638691f349f2fef3c7d655cdbb76aac675a3438a9c62c8cd457c381e85f0f",
+      "file": "include/project_stock.hpp",
+      "packaged_sha256": "fec638691f349f2fef3c7d655cdbb76aac675a3438a9c62c8cd457c381e85f0f",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/purchase_repair.hpp",
+      "source_sha256": "4228e357033c8dcbc854e91824df65f63eefc585b47007c2e1c247eb838f611a",
+      "file": "include/purchase_repair.hpp",
+      "packaged_sha256": "4228e357033c8dcbc854e91824df65f63eefc585b47007c2e1c247eb838f611a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/rival_delivery.hpp",
+      "source_sha256": "06831758e2ea9c3a26a5afc568bb6712170d6c881b347796795baf300c5ae86a",
+      "file": "include/rival_delivery.hpp",
+      "packaged_sha256": "06831758e2ea9c3a26a5afc568bb6712170d6c881b347796795baf300c5ae86a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/rival_stock.hpp",
+      "source_sha256": "ceed9ee51fe1ceec31cd2e2f88bef1065f6f190b4af908c3b88bf698dd684598",
+      "file": "include/rival_stock.hpp",
+      "packaged_sha256": "ceed9ee51fe1ceec31cd2e2f88bef1065f6f190b4af908c3b88bf698dd684598",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/sale_priority.hpp",
+      "source_sha256": "5e3b1d1348a33d93b36d53dd5f42a26c8f2c40fb2dd52924a658e8882f6fbe53",
+      "file": "include/sale_priority.hpp",
+      "packaged_sha256": "5e3b1d1348a33d93b36d53dd5f42a26c8f2c40fb2dd52924a658e8882f6fbe53",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/seed_budget.hpp",
+      "source_sha256": "92c7b0664fcc0944395ba2364075ecb0854469df928215c97a1b6b9a22b24972",
+      "file": "include/seed_budget.hpp",
+      "packaged_sha256": "92c7b0664fcc0944395ba2364075ecb0854469df928215c97a1b6b9a22b24972",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/seed_prebuy.hpp",
+      "source_sha256": "a2c8d1773a8b5c6579bdaf3bdffb83afdd850b49788837ffc91f3a728ebc3992",
+      "file": "include/seed_prebuy.hpp",
+      "packaged_sha256": "a2c8d1773a8b5c6579bdaf3bdffb83afdd850b49788837ffc91f3a728ebc3992",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/storage.hpp",
+      "source_sha256": "eaee4388402cb70cd66bf30b16616282149cdc6272231c0cae2a64573334a843",
+      "file": "include/storage.hpp",
+      "packaged_sha256": "eaee4388402cb70cd66bf30b16616282149cdc6272231c0cae2a64573334a843",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/timing.hpp",
+      "source_sha256": "a97098bd289926f9d04f74b5f1a6ff47c759cfec9d05c0618adbe9ea8e2759ec",
+      "file": "include/timing.hpp",
+      "packaged_sha256": "a97098bd289926f9d04f74b5f1a6ff47c759cfec9d05c0618adbe9ea8e2759ec",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/include/value_storage.hpp",
+      "source_sha256": "7a46e2adf356e77dd95e0674d1589f013ddb973172e04ff04c3dfab739b2d789",
+      "file": "include/value_storage.hpp",
+      "packaged_sha256": "7a46e2adf356e77dd95e0674d1589f013ddb973172e04ff04c3dfab739b2d789",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/audit_component.py",
+      "source_sha256": "bfe7b98ce253dd690642c700e87ed2efb6626f5940fd275f4866154c1d943dd4",
+      "file": "scripts/audit_component.py",
+      "packaged_sha256": "bfe7b98ce253dd690642c700e87ed2efb6626f5940fd275f4866154c1d943dd4",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/audit_portfolio_choices.py",
+      "source_sha256": "42b41012306dc3eff110302a0c5413476a3f4befe59bedbd0b1cd938942159c5",
+      "file": "scripts/audit_portfolio_choices.py",
+      "packaged_sha256": "42b41012306dc3eff110302a0c5413476a3f4befe59bedbd0b1cd938942159c5",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/audit_scenario_compatibility.py",
+      "source_sha256": "6512a3206ddb11fa243e4b33aeb5e808e28d73b5aeb12a0610dc0af80e69f5e5",
+      "file": "scripts/audit_scenario_compatibility.py",
+      "packaged_sha256": "6512a3206ddb11fa243e4b33aeb5e808e28d73b5aeb12a0610dc0af80e69f5e5",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/benchmark_baselines.py",
+      "source_sha256": "3fa478ad70832e2420de2d3700c047fd694781f38266657f136f84f9307ca8ea",
+      "file": "scripts/benchmark_baselines.py",
+      "packaged_sha256": "3fa478ad70832e2420de2d3700c047fd694781f38266657f136f84f9307ca8ea",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/build.py",
+      "source_sha256": "346c52cac4367fe9cae18e7450a0cd948e4db5663e0c771ae17467a4d8744779",
+      "file": "scripts/build.py",
+      "packaged_sha256": "67c45bbc082de41116abef85a231062c2b9f2cb8eb5fe25c80840eac2491a942",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/build_arena.py",
+      "source_sha256": "46daf32f15c21346a93273d6cd8ae19757c2d2b2ba8df214e19099c77401a314",
+      "file": "scripts/build_arena.py",
+      "packaged_sha256": "e66727a48f6b0412fe3cd8f1779e4dd95f205d5ef05306126018d54359853829",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/check_calendars.py",
+      "source_sha256": "5b0145089a49984bee117d3fc3e871f5fd9ca3e9b8403570da5fdff77f5c2965",
+      "file": "scripts/check_calendars.py",
+      "packaged_sha256": "5b0145089a49984bee117d3fc3e871f5fd9ca3e9b8403570da5fdff77f5c2965",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/check_market.py",
+      "source_sha256": "dc8a7991b2bdc75f2be2ab9e164a996557f802556d1cb83f8af6cf8b88ee72ac",
+      "file": "scripts/check_market.py",
+      "packaged_sha256": "dc8a7991b2bdc75f2be2ab9e164a996557f802556d1cb83f8af6cf8b88ee72ac",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/compare_course_timing.py",
+      "source_sha256": "cc9910afee5a027398e9db5b2a54fd2012b615cd76c1158bf6098867d1644ad9",
+      "file": "scripts/compare_course_timing.py",
+      "packaged_sha256": "cc9910afee5a027398e9db5b2a54fd2012b615cd76c1158bf6098867d1644ad9",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/compare_portfolio_variants.py",
+      "source_sha256": "b4d9629c5f99e15f49071854c55f0184c6907ac4366d0af00faee468126b3304",
+      "file": "scripts/compare_portfolio_variants.py",
+      "packaged_sha256": "b4d9629c5f99e15f49071854c55f0184c6907ac4366d0af00faee468126b3304",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/extract_calendars.py",
+      "source_sha256": "6cf7929432315fe1878a8ccf39dbd7039307f2381d9fa9f4ce806fb64220172f",
+      "file": "scripts/extract_calendars.py",
+      "packaged_sha256": "9e6fa8b2d54f9dbfb2eeceb1fdd5b9fbf9cc1d6a9889da58d401f619a55b4b1c",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/integration_statistics.py",
+      "source_sha256": "d5b7d247db2c701ee79bca8c730ddf686fd688a490336d0bfbad23edd6622c44",
+      "file": "scripts/integration_statistics.py",
+      "packaged_sha256": "d5b7d247db2c701ee79bca8c730ddf686fd688a490336d0bfbad23edd6622c44",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/measure_continuation_cost.py",
+      "source_sha256": "c8958f0e7175ffedb67ba0e01f58cd53b477d8ac5a3a10b6e9c9121ec279164d",
+      "file": "scripts/measure_continuation_cost.py",
+      "packaged_sha256": "c8958f0e7175ffedb67ba0e01f58cd53b477d8ac5a3a10b6e9c9121ec279164d",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/pull_replays.py",
+      "source_sha256": "f238a6b29f3d4c36e6425554340a7063d4cd0502531ffbc40ff08da5e353aeca",
+      "file": "scripts/pull_replays.py",
+      "packaged_sha256": "f238a6b29f3d4c36e6425554340a7063d4cd0502531ffbc40ff08da5e353aeca",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/refresh_public.py",
+      "source_sha256": "5311bde363d01b8df14e67d96043d59513a2a441e281f4c9455b7b83f622799c",
+      "file": "scripts/refresh_public.py",
+      "packaged_sha256": "5311bde363d01b8df14e67d96043d59513a2a441e281f4c9455b7b83f622799c",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/report_patterns.py",
+      "source_sha256": "b0e785fe4aeac29a3ab6022ce612b75843037134bf31261d06b473a573bd6990",
+      "file": "scripts/report_patterns.py",
+      "packaged_sha256": "b0e785fe4aeac29a3ab6022ce612b75843037134bf31261d06b473a573bd6990",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/report_public_patterns.py",
+      "source_sha256": "f8d3c1475deee9f0d4fadf62202626e2df6a9fef67030139b9998d85f139d19e",
+      "file": "scripts/report_public_patterns.py",
+      "packaged_sha256": "f8d3c1475deee9f0d4fadf62202626e2df6a9fef67030139b9998d85f139d19e",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/run_broad.py",
+      "source_sha256": "b62fbe06120ef96598f955f0f53baba3b4014d43530b9cad7adc55696b5fb981",
+      "file": "scripts/run_broad.py",
+      "packaged_sha256": "b62fbe06120ef96598f955f0f53baba3b4014d43530b9cad7adc55696b5fb981",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/run_course_timing.py",
+      "source_sha256": "667b5f3436d5e65ade4ea6a396f8c9bfebe217948cf329b1b586f78ac4c28628",
+      "file": "scripts/run_course_timing.py",
+      "packaged_sha256": "667b5f3436d5e65ade4ea6a396f8c9bfebe217948cf329b1b586f78ac4c28628",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/run_integration.py",
+      "source_sha256": "66af2a1c02f13a36985d74ee331731d0467499fec76bf1f2d7c5475288c92985",
+      "file": "scripts/run_integration.py",
+      "packaged_sha256": "66af2a1c02f13a36985d74ee331731d0467499fec76bf1f2d7c5475288c92985",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/run_portfolio_variants.py",
+      "source_sha256": "1b8ec6017b40ab1361f69ca89f80587d7d59620752fc8541b49be97db857dcf8",
+      "file": "scripts/run_portfolio_variants.py",
+      "packaged_sha256": "1b8ec6017b40ab1361f69ca89f80587d7d59620752fc8541b49be97db857dcf8",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/run_replay_timing_batch.py",
+      "source_sha256": "ce35e69fa8de15b96fbb6035998090ae3a45bcbb94076e1f0797066f0a87966d",
+      "file": "scripts/run_replay_timing_batch.py",
+      "packaged_sha256": "ce35e69fa8de15b96fbb6035998090ae3a45bcbb94076e1f0797066f0a87966d",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/run_timing_variants.py",
+      "source_sha256": "4aecdd12075b7ff9388a2673d8827d1a5cd14a82c593f69d32be4c1ef749d809",
+      "file": "scripts/run_timing_variants.py",
+      "packaged_sha256": "4aecdd12075b7ff9388a2673d8827d1a5cd14a82c593f69d32be4c1ef749d809",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/summarize_course_timing.py",
+      "source_sha256": "2d3edec42708e13a0c98b0d58acd9b8a01770b471ddadfffdfb89b8404760560",
+      "file": "scripts/summarize_course_timing.py",
+      "packaged_sha256": "2d3edec42708e13a0c98b0d58acd9b8a01770b471ddadfffdfb89b8404760560",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/summarize_patterns.py",
+      "source_sha256": "ad4cefaa456211c950ff90b6206df80f3dbbe539d67d33cae4a5947add15c5d7",
+      "file": "scripts/summarize_patterns.py",
+      "packaged_sha256": "ad4cefaa456211c950ff90b6206df80f3dbbe539d67d33cae4a5947add15c5d7",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/summarize_portfolio.py",
+      "source_sha256": "47417fd9aaf0f186fd1c03840a9d8ec91bed5d4d757f9366ea3146f807ddf58a",
+      "file": "scripts/summarize_portfolio.py",
+      "packaged_sha256": "47417fd9aaf0f186fd1c03840a9d8ec91bed5d4d757f9366ea3146f807ddf58a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/summarize_timing.py",
+      "source_sha256": "d33e67278437abcb3d124fe9dd2fcbd9fa7a10b7fff73d53d8be0ea7a4825a91",
+      "file": "scripts/summarize_timing.py",
+      "packaged_sha256": "d33e67278437abcb3d124fe9dd2fcbd9fa7a10b7fff73d53d8be0ea7a4825a91",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/scripts/summarize_timing_variants.py",
+      "source_sha256": "c0ceb09151f833129c55f8575b452ad2399280ed160c6c135bfe862f11819c6a",
+      "file": "scripts/summarize_timing_variants.py",
+      "packaged_sha256": "c0ceb09151f833129c55f8575b452ad2399280ed160c6c135bfe862f11819c6a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/arena.cpp",
+      "source_sha256": "8645ba4a4bb409af105451ede58e5a708a5b65200a706c49afc5aeaa561762db",
+      "file": "source/arena.cpp",
+      "packaged_sha256": "8645ba4a4bb409af105451ede58e5a708a5b65200a706c49afc5aeaa561762db",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/audit_scenario_start.cpp",
+      "source_sha256": "7b901305f89a1f997bf4be815d44bf072b7475abf32c48b6940ab88f08aa125a",
+      "file": "source/audit_scenario_start.cpp",
+      "packaged_sha256": "7b901305f89a1f997bf4be815d44bf072b7475abf32c48b6940ab88f08aa125a",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/benchmark_baselines.cpp",
+      "source_sha256": "f2e9d239720f883e7808264c70bcae741412a5e9d65b714a8ec80b467aa3ebfd",
+      "file": "source/benchmark_baselines.cpp",
+      "packaged_sha256": "f2e9d239720f883e7808264c70bcae741412a5e9d65b714a8ec80b467aa3ebfd",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/benchmark_continuation.cpp",
+      "source_sha256": "ab1c11b229323b0ade126bd79ea38bfd84420b1af0127f405339ca14c32d3d53",
+      "file": "source/benchmark_continuation.cpp",
+      "packaged_sha256": "ab1c11b229323b0ade126bd79ea38bfd84420b1af0127f405339ca14c32d3d53",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/check_calendars.cpp",
+      "source_sha256": "d58024428ea5007180ecfcc0ad4d3484fe9fa87478e13dfd40a12a1aa4b48a32",
+      "file": "source/check_calendars.cpp",
+      "packaged_sha256": "d58024428ea5007180ecfcc0ad4d3484fe9fa87478e13dfd40a12a1aa4b48a32",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/check_compile.cpp",
+      "source_sha256": "547d15e0996d603a2f7a91f86a86f7bb94472b4e86e81c8128d04e42052cf3cf",
+      "file": "source/check_compile.cpp",
+      "packaged_sha256": "547d15e0996d603a2f7a91f86a86f7bb94472b4e86e81c8128d04e42052cf3cf",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/check_continuation.cpp",
+      "source_sha256": "7c909bd3bc44c2fd541cdd2f4b06931a48db68f5bd3e7313545fd86b59c6e37b",
+      "file": "source/check_continuation.cpp",
+      "packaged_sha256": "7c909bd3bc44c2fd541cdd2f4b06931a48db68f5bd3e7313545fd86b59c6e37b",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/check_continuation_resume.cpp",
+      "source_sha256": "8d946316828e8cb5f80f20c42974ce6d93b57e7670551392111b9ac922cf81e2",
+      "file": "source/check_continuation_resume.cpp",
+      "packaged_sha256": "8d946316828e8cb5f80f20c42974ce6d93b57e7670551392111b9ac922cf81e2",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/check_market.cpp",
+      "source_sha256": "7c58ea81ccb1f24ef1cb441331a120dfc13fde3dd2db74a99380aa01cb9c8330",
+      "file": "source/check_market.cpp",
+      "packaged_sha256": "7c58ea81ccb1f24ef1cb441331a120dfc13fde3dd2db74a99380aa01cb9c8330",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/check_projection.cpp",
+      "source_sha256": "23429883964ffe47777d92b10fc99ad07068c47f3ffedd47226f2fca2bae5ea1",
+      "file": "source/check_projection.cpp",
+      "packaged_sha256": "23429883964ffe47777d92b10fc99ad07068c47f3ffedd47226f2fca2bae5ea1",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/check_purchase_repair.cpp",
+      "source_sha256": "5af4b876658742050794d2373f2dfbfa431711ad7acd010ed25eeff2ff77ba81",
+      "file": "source/check_purchase_repair.cpp",
+      "packaged_sha256": "5af4b876658742050794d2373f2dfbfa431711ad7acd010ed25eeff2ff77ba81",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/check_purchase_witness.cpp",
+      "source_sha256": "a0250001e129c8a5aaf6f1627452ccd98cce3ba5b54626a786b488a463c43861",
+      "file": "source/check_purchase_witness.cpp",
+      "packaged_sha256": "a0250001e129c8a5aaf6f1627452ccd98cce3ba5b54626a786b488a463c43861",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/check_resources.cpp",
+      "source_sha256": "505cfe59fc1a287d316581b8a33ee62b4e2c322368f6ae8e1b7a0b5832fdb94f",
+      "file": "source/check_resources.cpp",
+      "packaged_sha256": "505cfe59fc1a287d316581b8a33ee62b4e2c322368f6ae8e1b7a0b5832fdb94f",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/check_rival_delivery.cpp",
+      "source_sha256": "51247c2f856fc2b5546ee22995405f6d500ed8e71775eab6952448fcccf63d80",
+      "file": "source/check_rival_delivery.cpp",
+      "packaged_sha256": "51247c2f856fc2b5546ee22995405f6d500ed8e71775eab6952448fcccf63d80",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/check_rival_stock.cpp",
+      "source_sha256": "3e8c19b2bc3d9d1c91596631763cbb58b8a7cf8f749b69c968f8aeb836def97f",
+      "file": "source/check_rival_stock.cpp",
+      "packaged_sha256": "3e8c19b2bc3d9d1c91596631763cbb58b8a7cf8f749b69c968f8aeb836def97f",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/course_timing.cpp",
+      "source_sha256": "fa88a9d444867ea81b0c59b5bad967539b0fc27342699166d794b6378b74fd26",
+      "file": "source/course_timing.cpp",
+      "packaged_sha256": "4cccfb863facbf3c3cf3925935d9b49b36f32d28026803b9c48e1fce05fcace9",
+      "changed_from_source": true
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/inspect_case.cpp",
+      "source_sha256": "f180adfda53077d71ef00790a5684f1ec81b782f61049d6f425263fc23308e1c",
+      "file": "source/inspect_case.cpp",
+      "packaged_sha256": "f180adfda53077d71ef00790a5684f1ec81b782f61049d6f425263fc23308e1c",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/mine_trades.cpp",
+      "source_sha256": "08f7a0765369ef54711a867ad509b7d8d3936f4f5a45a720de799daa2fa7fb37",
+      "file": "source/mine_trades.cpp",
+      "packaged_sha256": "08f7a0765369ef54711a867ad509b7d8d3936f4f5a45a720de799daa2fa7fb37",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/portfolio.cpp",
+      "source_sha256": "0dfb33c7332d3689b02075bda6e2caa193d000a0af81ae9fe425dacccc345567",
+      "file": "source/portfolio.cpp",
+      "packaged_sha256": "0dfb33c7332d3689b02075bda6e2caa193d000a0af81ae9fe425dacccc345567",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/replay_storage.cpp",
+      "source_sha256": "f5422c4fa68d4992b3617e17209ab5ef188c053a6aee86192426508fe76608d7",
+      "file": "source/replay_storage.cpp",
+      "packaged_sha256": "f5422c4fa68d4992b3617e17209ab5ef188c053a6aee86192426508fe76608d7",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/replay_timing.cpp",
+      "source_sha256": "7c51558c796a9f898ca99b38fb17af99184802400d4e861595056ec00aa6aa47",
+      "file": "source/replay_timing.cpp",
+      "packaged_sha256": "7c51558c796a9f898ca99b38fb17af99184802400d4e861595056ec00aa6aa47",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/storage_headroom.cpp",
+      "source_sha256": "6f02ca5638457e7a1c490af4c99326ede6979266f6e90566a46761fe0229a3bd",
+      "file": "source/storage_headroom.cpp",
+      "packaged_sha256": "6f02ca5638457e7a1c490af4c99326ede6979266f6e90566a46761fe0229a3bd",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/trace_finance.cpp",
+      "source_sha256": "290bf43f453e7e9181cba0efd197642398565c158e9748f986dc0bf925f93a8e",
+      "file": "source/trace_finance.cpp",
+      "packaged_sha256": "290bf43f453e7e9181cba0efd197642398565c158e9748f986dc0bf925f93a8e",
+      "changed_from_source": false
+    },
+    {
+      "source": "experiments/v6/sep09_sales_planner/source/trace_single_wait.cpp",
+      "source_sha256": "b142184fb5a39bf2aeeefa004106a3618faf457e5be026034c0377eb975d260b",
+      "file": "source/trace_single_wait.cpp",
+      "packaged_sha256": "b142184fb5a39bf2aeeefa004106a3618faf457e5be026034c0377eb975d260b",
+      "changed_from_source": false
+    }
+  ],
+  "adaptations": [
+    "Relocated experiment includes, repository-root discovery, agent manifest source paths and league paths.",
+    "Build cache keys include common API/runtime headers, direct course dependencies and all local wrapper sources.",
+    "Added archive-independent bundled-data restoration, hash checks and regression verification.",
+    "Data manifest retains exposed/reserved IDs and corrected calendar versions; large raw data stays outside the package.",
+    "Preserved small historical reports verbatim; rewired document links and removed the expired timed-run instruction."
+  ]
+}

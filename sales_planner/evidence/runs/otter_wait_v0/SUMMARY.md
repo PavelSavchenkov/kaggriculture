@@ -1,0 +1,13 @@
+# Delaying Otter sales: three recorded farm plans
+
+The existing guarded one-turn delay improves final cash margin by $12, $9 and $3 in episodes 107267875, 107271699 and 107275573. The rival’s final cash is unchanged in all three. Therefore immediate selling is not optimal for these exact recorded plans and rival order sequences. The gains are small and do not establish that a broad holding strategy would be strong.
+
+The rule only considers sale-only turns immediately before known consumption. It delays at most one product per eligible turn, requires its exact own two-turn projection to preserve stock, seeds, workers, land, carried goods, missing inputs and discards, and excludes products visibly ready on the opponent farm now or in the last four turns. It uses the supplied own calendar and next orders; it does not see the actual future opponent orders. These three plans trigger only five guarded decisions in total. This is a narrow coverage limit, not a bound on possible timing improvement.
+
+Without the opponent-ready guard, paired margins are +$25, -$20 and -$48. Example: episode 107275573, turn 448, holding six milk predicts +$26 own cash under the no-rival projection. Actual trades over the two turns give own -$19 and rival +$30, a $49 margin loss. The hidden rival orders are evaluated after the decision; they are not fed to the rule. This illustrates why known demand alone is insufficient.
+
+All 18 full-engine checks (both players in three games, original and two rules) match the financial simulator’s cash and timing decisions exactly. Original engine cash agrees with every recorded turn. Every action passes structural validation. Both players’ tiles, live worker positions and carried stock, seed stock, hiring and land state match the original after every turn. Production, discards, requested work, failed work, final shed stock and shop history are unchanged. Only the selected Otter seats are used for the result above.
+
+Scope: fixed replay work and fixed rival orders, three exposed games. The live Otter policy could react to changed cash or shed stock, and no unseen opponent or scenario test has been made. We cannot infer why its author chose immediate sales or whether a better holding policy was tried.
+
+Evidence: PROTOCOL.json, financial.jsonl, engine.jsonl, OTTER_RESULTS.json and OTTER_EVENTS.json. Full-engine driver: source/replay_timing.cpp; binary build/1d55c85680b8d29090a1/replay_timing. Next cheap test: permit mixed purchase/hiring turns only with explicit preservation of current hiring/land and input obligations, because the present rule skips many Otter sales.

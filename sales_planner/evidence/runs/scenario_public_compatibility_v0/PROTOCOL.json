@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-09-10T04:22:12.336662+00:00",
+  "binary": "experiments/v6/sep09_sales_planner/build/d668307183113c193695/arena",
+  "binary_sha256": "e7ece8dbdf7ff135b3b708582abcebca50e7c33fd450b3c9df85107b3fddc2b0",
+  "step": 226,
+  "purpose": "Necessary public-state compatibility checks; matching does not establish full compatibility.",
+  "opponents": [
+    "parent",
+    "ahmed_v25",
+    "nanare",
+    "king_rc4",
+    "public_router_v52"
+  ],
+  "seed_start": 202609100500,
+  "seeds_per_opponent": 128,
+  "seat_mode": "both",
+  "shop_panel": "independent",
+  "scenario_cases": [
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107183828.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107192763.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107198350.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107200449.calendar"
+  ],
+  "extended_public_fields": false
+}

@@ -1,0 +1,25 @@
+{
+  "seed": 2026091010078,
+  "branch": 1,
+  "opponent": "public_router_v52",
+  "panel": "independent",
+  "seats": [
+    0,
+    1
+  ],
+  "delay_turn": 384,
+  "delayed_product": "wool",
+  "quantity": 8,
+  "starting_quote": 11,
+  "after_delay_turn_cash_change": -22,
+  "after_sale_turn": 385,
+  "two_turn_cash_gain": 70,
+  "after_sale_extra_market_inventory": 3,
+  "later_sale_turn": 409,
+  "later_incremental_cash_change": -260,
+  "later_cumulative_cash_change": -190,
+  "independent_melon_wait_gain": 15,
+  "final_cash_and_margin_gain": -175,
+  "source": "negative_trace.jsonl.trace.jsonl",
+  "mechanism": "Some original wool units sell at the $1 floor and add no market inventory. Delaying across demand lifts more units above the floor, adding more inventory. The next wool batch consequently sells for less. An initial quote above $1 does not exclude this effect."
+}

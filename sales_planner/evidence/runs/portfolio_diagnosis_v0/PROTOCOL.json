@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-09-09T23:54:00Z",
+  "role": "Explain already-exposed forecast failures. Four consecutive seeds for each of5opponents starting with a known failure; no performance claim or outcome filtering for promotion. Trace must reproduce old predictions and actual cash exactly.",
+  "seed_starts": {
+    "parent": 202609100057,
+    "ahmed_v25": 202609100001,
+    "nanare": 202609100000,
+    "king_rc4": 202609100001,
+    "public_router_v52": 202609100002
+  },
+  "games_each": 4,
+  "binary": "experiments/v6/sep09_sales_planner/build/57557d136839b89f9f46/arena",
+  "scenarios": [
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107183828.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107192763.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107198350.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107200449.calendar"
+  ]
+}

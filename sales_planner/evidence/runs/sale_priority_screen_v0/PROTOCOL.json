@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-09-09T23:31:00Z",
+  "candidate": "sale_priority",
+  "baseline": "room_keep",
+  "opponents": [
+    "pass",
+    "ahmed_v25",
+    "nanare",
+    "king_rc4",
+    "public_router_v52"
+  ],
+  "seed_start": 202609092328,
+  "seeds_per_opponent_panel": 32,
+  "seat_mode": "both",
+  "shop_panels": [
+    "independent",
+    "native"
+  ],
+  "max_expansions": 100000,
+  "threads_per_batch": 4,
+  "parallel_batches": 2,
+  "role": "Prospective development screen of sale order priority. Same development seeds for comparison with rejected liquidation. Require positive mean margin, report utility and tails and production/labor/fault changes before larger seed screen.",
+  "hypothesis": "Reorder existing sales by available quantity times current price. Preserve their turns and quantities; preserve all non-sale turns. Isolates observed rank-1 priority from immediate liquidation."
+}

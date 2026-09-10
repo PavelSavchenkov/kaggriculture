@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-09-09T23:36:00Z",
+  "candidate": "sale_priority",
+  "baseline": "room_keep",
+  "opponents": [
+    "ahmed_v23",
+    "ahmed_v24",
+    "ahmed_v25",
+    "nanare",
+    "king_rc4",
+    "junghoon_wool_sales",
+    "yusuke_sep08_m2",
+    "salem_sep08_m3",
+    "public_router_v52",
+    "public_capacity_router",
+    "titan_frontier",
+    "atakan_demand"
+  ],
+  "seed_start": 202609092336,
+  "seeds_per_opponent_panel": 64,
+  "seat_mode": "both",
+  "shop_panels": [
+    "independent",
+    "native"
+  ],
+  "max_expansions": 100000,
+  "threads_per_batch": 4,
+  "parallel_batches": 2,
+  "primary_groups": [
+    "ahmed_v23",
+    "ahmed_v24",
+    "ahmed_v25",
+    "king_rc4",
+    "junghoon_wool_sales",
+    "yusuke_sep08_m2",
+    "salem_sep08_m3",
+    "public_router_v52"
+  ],
+  "role": "Prospective wider development test of sales-only quantity-times-price ordering. Twelve exposed opponents including related versions, two shop panels, new seeds. Report mean margin, utility, per-opponent/tails and production/labor/fault changes. This tests transfer beyond the sole clearly positive opponent in the first five-opponent screen. Require broader evidence before retaining; no new family holdout claim.",
+  "compute_purpose": "Resolve whether order priority gain transfers beyond Ahmed."
+}

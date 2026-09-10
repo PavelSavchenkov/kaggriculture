@@ -1,0 +1,37 @@
+[
+  {
+    "variant": "wait_delivery_seedcap",
+    "reference": "wait_delivery_history",
+    "cases": 394,
+    "episode_clusters": 197,
+    "positive": 3,
+    "negative": 0,
+    "zero": 391,
+    "worst_margin": 0,
+    "best_margin": 20,
+    "changed_state": 3,
+    "history_underestimates": 0,
+    "decisions": 3796,
+    "margin_gain": {
+      "mean": 0.10152284263959391,
+      "ci95": [
+        0.0,
+        0.22842639593908629
+      ]
+    },
+    "cash_gain": {
+      "mean": 0.10152284263959391,
+      "ci95": [
+        0.0,
+        0.22842639593908629
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

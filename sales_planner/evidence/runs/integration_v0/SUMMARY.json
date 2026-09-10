@@ -1,0 +1,77 @@
+{
+  "determinism": "identical complete game records across1/4threads",
+  "comparisons": [
+    {
+      "panel": "independent",
+      "opponent": "pass",
+      "margin_gain": 0,
+      "cash_gain": 0,
+      "utility_gain": 0,
+      "tail_gain": 0,
+      "changed_action_games": 256,
+      "more_fault_games": 0,
+      "production_changed_games": 0,
+      "labor_changed_games": 0
+    },
+    {
+      "panel": "independent",
+      "opponent": "nanare",
+      "margin_gain": 0.7999999999992724,
+      "cash_gain": 0.5,
+      "utility_gain": 0.0,
+      "tail_gain": 0.0,
+      "changed_action_games": 256,
+      "more_fault_games": 0,
+      "production_changed_games": 0,
+      "labor_changed_games": 0
+    },
+    {
+      "panel": "independent",
+      "opponent": "ahmed_v25",
+      "margin_gain": 55.94100000000003,
+      "cash_gain": 25.69999999999709,
+      "utility_gain": 0.015625,
+      "tail_gain": 76.0,
+      "changed_action_games": 256,
+      "more_fault_games": 0,
+      "production_changed_games": 0,
+      "labor_changed_games": 0
+    },
+    {
+      "panel": "native",
+      "opponent": "pass",
+      "margin_gain": 0,
+      "cash_gain": 0,
+      "utility_gain": 0,
+      "tail_gain": 0,
+      "changed_action_games": 256,
+      "more_fault_games": 0,
+      "production_changed_games": 0,
+      "labor_changed_games": 0
+    },
+    {
+      "panel": "native",
+      "opponent": "nanare",
+      "margin_gain": 1.6999999999989086,
+      "cash_gain": 1.0,
+      "utility_gain": 0.0,
+      "tail_gain": 0,
+      "changed_action_games": 256,
+      "more_fault_games": 0,
+      "production_changed_games": 0,
+      "labor_changed_games": 0
+    },
+    {
+      "panel": "native",
+      "opponent": "ahmed_v25",
+      "margin_gain": 52.78099999999995,
+      "cash_gain": 24.59999999999127,
+      "utility_gain": 0.03125,
+      "tail_gain": 97.80999999999995,
+      "changed_action_games": 256,
+      "more_fault_games": 0,
+      "production_changed_games": 0,
+      "labor_changed_games": 0
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "checked_utc": "2026-09-10T11:36:11.522369+00:00",
+  "episodes": 3,
+  "checks": {
+    "check_market": {
+      "binary_sha256": "43c48c3652906461efc22ae5a0bce4ba0391b72538c46f8974ca5b831604e666",
+      "result": [
+        {
+          "games": 16,
+          "transitions": 11504,
+          "accepted_units": 21298,
+          "kernel_seconds": 0.001826,
+          "engine_seconds": 0.00369,
+          "kernel_us_per_turn": 0.158697,
+          "status": "pass"
+        }
+      ]
+    },
+    "check_continuation_resume": {
+      "binary_sha256": "4729a7bbf12fd307242fd618543366c3fb6ca52661929fea0f52e692f7af7451",
+      "result": [
+        {
+          "episode": 107273702,
+          "splits": 376,
+          "checked_prefixes": 188,
+          "feasible_whole": 4,
+          "seconds": 0.03065
+        },
+        {
+          "episode": 107323879,
+          "splits": 376,
+          "checked_prefixes": 188,
+          "feasible_whole": 4,
+          "seconds": 0.0239
+        },
+        {
+          "episode": 107342138,
+          "splits": 376,
+          "checked_prefixes": 188,
+          "feasible_whole": 4,
+          "seconds": 0.026719
+        }
+      ]
+    },
+    "check_purchase_witness": {
+      "binary_sha256": "2197866ef05ee12c19f278587ecbef8bb812a299d7e63406e44ca127ba460148",
+      "result": [
+        {
+          "episode": 107273702,
+          "checked_turns": 1438,
+          "changed_order_requests": 294
+        },
+        {
+          "episode": 107323879,
+          "checked_turns": 1438,
+          "changed_order_requests": 7
+        },
+        {
+          "episode": 107342138,
+          "checked_turns": 1438,
+          "changed_order_requests": 4
+        }
+      ]
+    },
+    "check_rival_delivery": {
+      "binary_sha256": "edbe2e40053f75def16aa8147b9bd700ecc97457ff4b83c835a8389e3cdd0df2",
+      "result": [
+        {
+          "episode": 107273702,
+          "observations": 10066,
+          "sale_events": 317,
+          "violations": 0,
+          "stock_under": 0,
+          "extra_windows": 537,
+          "extra_window_turns": 2633,
+          "microseconds_per_call": 0.1461
+        },
+        {
+          "episode": 107323879,
+          "observations": 10066,
+          "sale_events": 239,
+          "violations": 0,
+          "stock_under": 0,
+          "extra_windows": 305,
+          "extra_window_turns": 1447,
+          "microseconds_per_call": 0.1431
+        },
+        {
+          "episode": 107342138,
+          "observations": 10066,
+          "sale_events": 333,
+          "violations": 0,
+          "stock_under": 0,
+          "extra_windows": 492,
+          "extra_window_turns": 2213,
+          "microseconds_per_call": 0.1521
+        }
+      ]
+    },
+    "frozen_replay": {
+      "exact_rows": 12,
+      "binary_sha256": "c2ea35f94ec8f91a8d817f3c7d4382fe93e5299d483404787f338b38ea522cdb"
+    },
+    "live": {
+      "exact_generic_pair_games": 4,
+      "selfplay_games": 4,
+      "zero_budget_games": 4,
+      "room_keep_games": 4,
+      "exact_frozen_games": 4,
+      "baseline_unit_faults": [
+        12,
+        12,
+        12,
+        197
+      ]
+    }
+  },
+  "scope": "Packaging regression checks, not a rerun of full confirmation or a new strategy promotion. Reserved action data was not read."
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "variant": "wait_delivery_slotfill_witness",
+    "reference": "wait_delivery_multiple_witness",
+    "cases": 394,
+    "episode_clusters": 197,
+    "positive": 41,
+    "negative": 8,
+    "zero": 345,
+    "worst_margin": -65,
+    "best_margin": 801,
+    "changed_state": 0,
+    "history_underestimates": 0,
+    "decisions": 4255,
+    "margin_gain": {
+      "mean": 3.753807106598985,
+      "ci95": [
+        1.0685279187817258,
+        8.25907360406091
+      ]
+    },
+    "cash_gain": {
+      "mean": 1.1472081218274113,
+      "ci95": [
+        -0.2436548223350254,
+        3.048286802030456
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "variant": "wait_delivery_seedprebuy_witness",
+    "reference": "wait_delivery_multiple_witness",
+    "cases": 394,
+    "episode_clusters": 197,
+    "positive": 50,
+    "negative": 25,
+    "zero": 319,
+    "worst_margin": -854,
+    "best_margin": 1792,
+    "changed_state": 37,
+    "history_underestimates": 0,
+    "decisions": 4242,
+    "margin_gain": {
+      "mean": 0.41624365482233505,
+      "ci95": [
+        -11.238832487309645,
+        13.84359137055836
+      ]
+    },
+    "cash_gain": {
+      "mean": -7.964467005076142,
+      "ci95": [
+        -17.25901015228426,
+        0.9139593908629404
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

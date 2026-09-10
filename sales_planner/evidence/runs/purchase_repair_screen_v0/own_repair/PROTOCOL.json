@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-09-10T00:02:00Z",
+  "opponents": [
+    "parent",
+    "ahmed_v25",
+    "nanare",
+    "king_rc4",
+    "public_router_v52"
+  ],
+  "seed_start": 202609092341,
+  "seeds_per_opponent": 32,
+  "seat_mode": "both",
+  "shop_panel": "independent",
+  "scenario_cases": [
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107183828.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107192763.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107198350.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107200449.calendar"
+  ],
+  "binary": "experiments/v6/sep09_sales_planner/build/e9a12ed2b6f640754fd1/arena",
+  "objective": "Development test of deadline purchase repair on three fixed courses. Primary: own repair versus unchanged control, by identical branch and full game; report restored input feasibility, production/fault/labor changes and cash margin. Secondary: whether applying the explicit repair assumption to historical rivals reduces impossible forecast worlds and improves plan ranking. The both-repair variant changes the forecast rival policy only; actual opponents remain unchanged.",
+  "decision": "Retain only if repair funds useful previously unfunded plans without unexplained degradation of baseline-funded plans. Forecast feasibility is not proof of predictive validity. Use unused seed confirmation after development; preserve every failed case.",
+  "variants": [
+    "control",
+    "own_repair",
+    "both_repair"
+  ],
+  "implementation": "One-turn required resource horizon. Append only after original market orders. Repair only the input shortfall that remains even if every current requested purchase fills completely. No reliance on predicting a current purchase failure; no speculative inputs. Exact own short projection checks funding and capacity; exact two-player execution remains judge.",
+  "before_first_run_refinement": "Static course inspection showed a small planned wheat purchase on313, insufficient to replace the earlier failed buy. Replaced blanket same-input skip with an upper-bound stock calculation before running any candidate evaluation.",
+  "variant": "own_repair"
+}

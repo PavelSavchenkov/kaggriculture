@@ -1,0 +1,76 @@
+[
+  {
+    "variant": "wait_delivery_seedcap",
+    "expected_cases": 394,
+    "incomplete_cases": 0,
+    "scope": "All-case promotion requires complete execution and the declared noncash checks.",
+    "cases": 394,
+    "episode_clusters": 197,
+    "positive": 336,
+    "negative": 0,
+    "zero": 58,
+    "worst_margin": 0,
+    "best_margin": 3898,
+    "changed_state": 3,
+    "history_underestimates": 0,
+    "decisions": 3796,
+    "margin_gain": {
+      "mean": 255.17005076142132,
+      "ci95": [
+        209.84670050761423,
+        303.5942893401015
+      ]
+    },
+    "cash_gain": {
+      "mean": 259.5456852791878,
+      "ci95": [
+        212.94092639593907,
+        308.14213197969536
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 1.2690355329949239,
+      "ci95": [
+        0.25380710659898476,
+        2.5380710659898478
+      ]
+    }
+  },
+  {
+    "variant": "wait_delivery_restock",
+    "expected_cases": 394,
+    "incomplete_cases": 316,
+    "scope": "All-case promotion requires complete execution and the declared noncash checks.",
+    "cases": 78,
+    "episode_clusters": 39,
+    "positive": 62,
+    "negative": 0,
+    "zero": 16,
+    "worst_margin": 0,
+    "best_margin": 9860,
+    "changed_state": 12,
+    "history_underestimates": 0,
+    "decisions": 695,
+    "margin_gain": {
+      "mean": 356.2307692307692,
+      "ci95": [
+        147.51282051282053,
+        659.8903846153845
+      ]
+    },
+    "cash_gain": {
+      "mean": 90.23076923076923,
+      "ci95": [
+        -18.308974358974357,
+        188.8102564102564
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

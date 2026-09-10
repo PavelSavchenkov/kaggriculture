@@ -1,0 +1,97 @@
+{
+  "summary": [
+    {
+      "policy": "original",
+      "cases": 120,
+      "mean_gain_vs_compact": -89.53333333333333,
+      "positive": 1,
+      "negative": 77,
+      "worst_gain": -1451,
+      "own_production_changes": 0,
+      "rival_production_changes": 0,
+      "extra_own_fault_cases": 0,
+      "extra_rival_fault_cases": 0
+    },
+    {
+      "policy": "compact_sales",
+      "cases": 120,
+      "mean_gain_vs_compact": 0,
+      "positive": 0,
+      "negative": 0,
+      "worst_gain": 0,
+      "own_production_changes": 0,
+      "rival_production_changes": 0,
+      "extra_own_fault_cases": 0,
+      "extra_rival_fault_cases": 0
+    },
+    {
+      "policy": "room_keep",
+      "cases": 120,
+      "mean_gain_vs_compact": 75.55833333333334,
+      "positive": 18,
+      "negative": 1,
+      "worst_gain": -293,
+      "own_production_changes": 0,
+      "rival_production_changes": 0,
+      "extra_own_fault_cases": 0,
+      "extra_rival_fault_cases": 0
+    },
+    {
+      "policy": "room_all",
+      "cases": 120,
+      "mean_gain_vs_compact": 436.675,
+      "positive": 46,
+      "negative": 25,
+      "worst_gain": -149,
+      "own_production_changes": 5,
+      "rival_production_changes": 0,
+      "extra_own_fault_cases": 0,
+      "extra_rival_fault_cases": 0
+    }
+  ],
+  "financial_mismatches": [
+    {
+      "episode": 107198501,
+      "seat": 1,
+      "policy": "room_all",
+      "predicted_margin": -86875,
+      "actual_margin": -84159
+    },
+    {
+      "episode": 107199565,
+      "seat": 0,
+      "policy": "room_all",
+      "predicted_margin": -71899,
+      "actual_margin": -69795
+    },
+    {
+      "episode": 107201398,
+      "seat": 1,
+      "policy": "room_all",
+      "predicted_margin": -57118,
+      "actual_margin": -56742
+    },
+    {
+      "episode": 107202365,
+      "seat": 0,
+      "policy": "room_all",
+      "predicted_margin": -59084,
+      "actual_margin": -56986
+    },
+    {
+      "episode": 107208184,
+      "seat": 1,
+      "policy": "room_all",
+      "predicted_margin": -5069,
+      "actual_margin": -5111
+    },
+    {
+      "episode": 107209852,
+      "seat": 0,
+      "policy": "room_all",
+      "predicted_margin": -4057,
+      "actual_margin": -4155
+    }
+  ],
+  "scope": "120 source calendars, full engine with fixed rival action tapes; original-world conditional check, not live reacting-opponent promotion."
+}

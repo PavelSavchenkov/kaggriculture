@@ -1,0 +1,76 @@
+[
+  {
+    "variant": "wait_delivery_witness",
+    "expected_cases": 68,
+    "incomplete_cases": 0,
+    "scope": "All-case promotion requires complete execution and the declared noncash checks.",
+    "cases": 68,
+    "episode_clusters": 34,
+    "positive": 62,
+    "negative": 0,
+    "zero": 6,
+    "worst_margin": 0,
+    "best_margin": 1698,
+    "changed_state": 0,
+    "history_underestimates": 0,
+    "decisions": 660,
+    "margin_gain": {
+      "mean": 257.5,
+      "ci95": [
+        173.6172794117647,
+        359.04889705882346
+      ]
+    },
+    "cash_gain": {
+      "mean": 257.5,
+      "ci95": [
+        173.6172794117647,
+        359.04889705882346
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 1.4705882352941178,
+      "ci95": [
+        0.0,
+        4.411764705882353
+      ]
+    }
+  },
+  {
+    "variant": "wait_delivery_multiple_witness",
+    "expected_cases": 68,
+    "incomplete_cases": 0,
+    "scope": "All-case promotion requires complete execution and the declared noncash checks.",
+    "cases": 68,
+    "episode_clusters": 34,
+    "positive": 62,
+    "negative": 0,
+    "zero": 6,
+    "worst_margin": 0,
+    "best_margin": 1699,
+    "changed_state": 0,
+    "history_underestimates": 0,
+    "decisions": 745,
+    "margin_gain": {
+      "mean": 269.5,
+      "ci95": [
+        183.07132352941176,
+        371.75294117647053
+      ]
+    },
+    "cash_gain": {
+      "mean": 269.5,
+      "ci95": [
+        183.07132352941176,
+        371.75294117647053
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 1.4705882352941178,
+      "ci95": [
+        0.0,
+        4.411764705882353
+      ]
+    }
+  }
+]

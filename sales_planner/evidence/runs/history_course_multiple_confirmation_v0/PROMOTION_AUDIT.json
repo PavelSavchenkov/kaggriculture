@@ -1,0 +1,179 @@
+{
+  "reference": "history_course_delivery_multiple_confirmation_control_v0",
+  "candidate": "history_course_multiple_confirmation_v0",
+  "scope": "Declared numerical gates on this fixed live panel only. This does not establish unfamiliar source-family transfer or better plan selection.",
+  "threshold_source": "PROTOCOL.md; utility thresholds converted from fractions to percentage points.",
+  "global_checks": {
+    "mean_margin_nonnegative": true,
+    "mean_utility_at_least_minus_quarter_point": true,
+    "worst_decile_margin_loss_at_most_50": true,
+    "physical_states_match": true,
+    "no_added_faults": true,
+    "no_production_stock_discard_changes": true,
+    "all_calendars_compiled": true,
+    "positive_margin_lower_bound": true,
+    "utility_lower_bound_at_least_minus_quarter_point": true,
+    "no_failed_jobs": true
+  },
+  "critical_groups": {
+    "opponent:ahmed_v24": {
+      "mean_margin_nonnegative": true,
+      "mean_utility_at_least_minus_quarter_point": true,
+      "worst_decile_margin_loss_at_most_50": true,
+      "physical_states_match": true,
+      "no_added_faults": true,
+      "no_production_stock_discard_changes": true,
+      "all_calendars_compiled": true
+    },
+    "opponent:ahmed_v25": {
+      "mean_margin_nonnegative": true,
+      "mean_utility_at_least_minus_quarter_point": true,
+      "worst_decile_margin_loss_at_most_50": true,
+      "physical_states_match": true,
+      "no_added_faults": true,
+      "no_production_stock_discard_changes": true,
+      "all_calendars_compiled": true
+    },
+    "opponent:atakan_demand": {
+      "mean_margin_nonnegative": true,
+      "mean_utility_at_least_minus_quarter_point": true,
+      "worst_decile_margin_loss_at_most_50": true,
+      "physical_states_match": true,
+      "no_added_faults": true,
+      "no_production_stock_discard_changes": true,
+      "all_calendars_compiled": true
+    },
+    "opponent:junghoon_wool_sales": {
+      "mean_margin_nonnegative": true,
+      "mean_utility_at_least_minus_quarter_point": true,
+      "worst_decile_margin_loss_at_most_50": true,
+      "physical_states_match": true,
+      "no_added_faults": true,
+      "no_production_stock_discard_changes": true,
+      "all_calendars_compiled": true
+    },
+    "opponent:king_rc4": {
+      "mean_margin_nonnegative": true,
+      "mean_utility_at_least_minus_quarter_point": true,
+      "worst_decile_margin_loss_at_most_50": true,
+      "physical_states_match": true,
+      "no_added_faults": true,
+      "no_production_stock_discard_changes": true,
+      "all_calendars_compiled": true
+    },
+    "opponent:nanare": {
+      "mean_margin_nonnegative": true,
+      "mean_utility_at_least_minus_quarter_point": true,
+      "worst_decile_margin_loss_at_most_50": true,
+      "physical_states_match": true,
+      "no_added_faults": true,
+      "no_production_stock_discard_changes": true,
+      "all_calendars_compiled": true
+    },
+    "opponent:public_capacity_router": {
+      "mean_margin_nonnegative": true,
+      "mean_utility_at_least_minus_quarter_point": true,
+      "worst_decile_margin_loss_at_most_50": true,
+      "physical_states_match": true,
+      "no_added_faults": true,
+      "no_production_stock_discard_changes": true,
+      "all_calendars_compiled": true
+    },
+    "opponent:public_router_v52": {
+      "mean_margin_nonnegative": true,
+      "mean_utility_at_least_minus_quarter_point": true,
+      "worst_decile_margin_loss_at_most_50": true,
+      "physical_states_match": true,
+      "no_added_faults": true,
+      "no_production_stock_discard_changes": true,
+      "all_calendars_compiled": true
+    },
+    "opponent:sale_priority": {
+      "mean_margin_nonnegative": true,
+      "mean_utility_at_least_minus_quarter_point": true,
+      "worst_decile_margin_loss_at_most_50": true,
+      "physical_states_match": true,
+      "no_added_faults": true,
+      "no_production_stock_discard_changes": true,
+      "all_calendars_compiled": true
+    },
+    "opponent:salem_sep08_m3": {
+      "mean_margin_nonnegative": true,
+      "mean_utility_at_least_minus_quarter_point": true,
+      "worst_decile_margin_loss_at_most_50": true,
+      "physical_states_match": true,
+      "no_added_faults": true,
+      "no_production_stock_discard_changes": true,
+      "all_calendars_compiled": true
+    },
+    "opponent:titan_frontier": {
+      "mean_margin_nonnegative": true,
+      "mean_utility_at_least_minus_quarter_point": true,
+      "worst_decile_margin_loss_at_most_50": true,
+      "physical_states_match": true,
+      "no_added_faults": true,
+      "no_production_stock_discard_changes": true,
+      "all_calendars_compiled": true
+    },
+    "opponent:yusuke_sep08_m2": {
+      "mean_margin_nonnegative": true,
+      "mean_utility_at_least_minus_quarter_point": true,
+      "worst_decile_margin_loss_at_most_50": true,
+      "physical_states_match": true,
+      "no_added_faults": true,
+      "no_production_stock_discard_changes": true,
+      "all_calendars_compiled": true
+    },
+    "branch:0": {
+      "mean_margin_nonnegative": true,
+      "mean_utility_at_least_minus_quarter_point": true,
+      "worst_decile_margin_loss_at_most_50": true,
+      "physical_states_match": true,
+      "no_added_faults": true,
+      "no_production_stock_discard_changes": true,
+      "all_calendars_compiled": true
+    },
+    "branch:1": {
+      "mean_margin_nonnegative": true,
+      "mean_utility_at_least_minus_quarter_point": true,
+      "worst_decile_margin_loss_at_most_50": true,
+      "physical_states_match": true,
+      "no_added_faults": true,
+      "no_production_stock_discard_changes": true,
+      "all_calendars_compiled": true
+    },
+    "branch:2": {
+      "mean_margin_nonnegative": true,
+      "mean_utility_at_least_minus_quarter_point": true,
+      "worst_decile_margin_loss_at_most_50": true,
+      "physical_states_match": true,
+      "no_added_faults": true,
+      "no_production_stock_discard_changes": true,
+      "all_calendars_compiled": true
+    },
+    "panel:independent": {
+      "mean_margin_nonnegative": true,
+      "mean_utility_at_least_minus_quarter_point": true,
+      "worst_decile_margin_loss_at_most_50": true,
+      "physical_states_match": true,
+      "no_added_faults": true,
+      "no_production_stock_discard_changes": true,
+      "all_calendars_compiled": true
+    },
+    "panel:native": {
+      "mean_margin_nonnegative": true,
+      "mean_utility_at_least_minus_quarter_point": true,
+      "worst_decile_margin_loss_at_most_50": true,
+      "physical_states_match": true,
+      "no_added_faults": true,
+      "no_production_stock_discard_changes": true,
+      "all_calendars_compiled": true
+    }
+  },
+  "failed_groups": {},
+  "numerical_component_gates_pass": true,
+  "additional_policy_ms_over_paired_repair": 0.9586966904296874,
+  "remaining_judgment": "Review prediction exceptions, complete compute cost and practical value. Fresh-seed status comes from the frozen run protocol.",
+  "pipeline_promotion": false,
+  "pipeline_limit": "Improved composition/plan selection and physically compatible opponent scenarios remain unproved."
+}

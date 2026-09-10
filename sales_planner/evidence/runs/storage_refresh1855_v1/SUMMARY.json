@@ -1,0 +1,70 @@
+{
+  "command": [
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_sales_planner/build/589b05119ff4391cbe5d/benchmark_baselines",
+    "--storage",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107204358.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107204390.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107206401.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107208184.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107208199.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107208317.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107209852.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107209987.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107210826.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107212753.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107212960.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107213028.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107213582.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107213750.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107214547.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107214636.calendar"
+  ],
+  "summary": [
+    {
+      "policy": "compact_sales",
+      "cases": 32,
+      "own_feasible": 32,
+      "both_feasible": 32,
+      "conditional_mean_margin_gain": 86.9375,
+      "mean_ms": 0.1245168125,
+      "median_ms": 0.12239599999999999
+    },
+    {
+      "policy": "original",
+      "cases": 32,
+      "own_feasible": 32,
+      "both_feasible": 32,
+      "conditional_mean_margin_gain": 0,
+      "mean_ms": 0.09137665625,
+      "median_ms": 0.0901745
+    },
+    {
+      "policy": "room4",
+      "cases": 32,
+      "own_feasible": 32,
+      "both_feasible": 32,
+      "conditional_mean_margin_gain": 175.5,
+      "mean_ms": 0.1115696875,
+      "median_ms": 0.111329
+    },
+    {
+      "policy": "room_all",
+      "cases": 32,
+      "own_feasible": 32,
+      "both_feasible": 32,
+      "conditional_mean_margin_gain": 175.5,
+      "mean_ms": 0.110185625,
+      "median_ms": 0.11032
+    },
+    {
+      "policy": "room_keep",
+      "cases": 32,
+      "own_feasible": 32,
+      "both_feasible": 32,
+      "conditional_mean_margin_gain": 88.78125,
+      "mean_ms": 0.117750625,
+      "median_ms": 0.1181135
+    }
+  ],
+  "scope": "Exposed development calendars, original market worlds, fixed rival orders. Conditional gains are descriptive survivor subsets, not promotion evidence; all failures retained."
+}

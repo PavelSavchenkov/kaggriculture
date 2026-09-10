@@ -1,0 +1,164 @@
+[
+  {
+    "variant": "wait_output_recent",
+    "source": "all",
+    "failed": 0,
+    "quality_scope": "Completed cases only; not an all-case promotion result if failures or state changes exist.",
+    "cases": 34,
+    "episode_clusters": 17,
+    "positive": 21,
+    "negative": 12,
+    "zero": 1,
+    "worst_margin": -236,
+    "best_margin": 340,
+    "changed_state": 0,
+    "history_underestimates": 0,
+    "decisions": 133,
+    "margin_gain": {
+      "mean": 30.235294117647058,
+      "ci95": [
+        -4.29485294117647,
+        64.55882352941177
+      ]
+    },
+    "cash_gain": {
+      "mean": 19.764705882352942,
+      "ci95": [
+        -33.38235294117647,
+        65.85367647058823
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "variant": "wait_output_recent",
+    "source": "old",
+    "failed": 0,
+    "quality_scope": "Completed cases only; not an all-case promotion result if failures or state changes exist.",
+    "cases": 0
+  },
+  {
+    "variant": "wait_output_recent",
+    "source": "fresh",
+    "failed": 0,
+    "quality_scope": "Completed cases only; not an all-case promotion result if failures or state changes exist.",
+    "cases": 34,
+    "episode_clusters": 17,
+    "positive": 21,
+    "negative": 12,
+    "zero": 1,
+    "worst_margin": -236,
+    "best_margin": 340,
+    "changed_state": 0,
+    "history_underestimates": 0,
+    "decisions": 133,
+    "margin_gain": {
+      "mean": 30.235294117647058,
+      "ci95": [
+        -4.29485294117647,
+        64.55882352941177
+      ]
+    },
+    "cash_gain": {
+      "mean": 19.764705882352942,
+      "ci95": [
+        -33.38235294117647,
+        65.85367647058823
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "variant": "wait_history",
+    "source": "all",
+    "failed": 0,
+    "quality_scope": "Completed cases only; not an all-case promotion result if failures or state changes exist.",
+    "cases": 34,
+    "episode_clusters": 17,
+    "positive": 15,
+    "negative": 0,
+    "zero": 19,
+    "worst_margin": 0,
+    "best_margin": 143,
+    "changed_state": 0,
+    "history_underestimates": 0,
+    "decisions": 45,
+    "margin_gain": {
+      "mean": 17.11764705882353,
+      "ci95": [
+        7.147058823529412,
+        28.91176470588235
+      ]
+    },
+    "cash_gain": {
+      "mean": 17.11764705882353,
+      "ci95": [
+        7.147058823529412,
+        28.91176470588235
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 2.9411764705882355,
+      "ci95": [
+        0.0,
+        8.823529411764707
+      ]
+    }
+  },
+  {
+    "variant": "wait_history",
+    "source": "old",
+    "failed": 0,
+    "quality_scope": "Completed cases only; not an all-case promotion result if failures or state changes exist.",
+    "cases": 0
+  },
+  {
+    "variant": "wait_history",
+    "source": "fresh",
+    "failed": 0,
+    "quality_scope": "Completed cases only; not an all-case promotion result if failures or state changes exist.",
+    "cases": 34,
+    "episode_clusters": 17,
+    "positive": 15,
+    "negative": 0,
+    "zero": 19,
+    "worst_margin": 0,
+    "best_margin": 143,
+    "changed_state": 0,
+    "history_underestimates": 0,
+    "decisions": 45,
+    "margin_gain": {
+      "mean": 17.11764705882353,
+      "ci95": [
+        7.147058823529412,
+        28.91176470588235
+      ]
+    },
+    "cash_gain": {
+      "mean": 17.11764705882353,
+      "ci95": [
+        7.147058823529412,
+        28.91176470588235
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 2.9411764705882355,
+      "ci95": [
+        0.0,
+        8.823529411764707
+      ]
+    }
+  }
+]

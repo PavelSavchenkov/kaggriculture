@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-09-10T04:06:54.221455+00:00",
+  "opponents": [
+    "parent",
+    "ahmed_v25",
+    "nanare",
+    "king_rc4",
+    "public_router_v52",
+    "atakan_demand",
+    "junghoon_wool_sales",
+    "yusuke_sep08_m2",
+    "salem_sep08_m3",
+    "public_capacity_router",
+    "titan_frontier",
+    "ahmed_v24"
+  ],
+  "seed_start": 2026091070000,
+  "seeds_per_opponent": 128,
+  "seat_mode": "both",
+  "shop_panel": "independent",
+  "scenario_cases": [
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107183828.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107192763.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107198350.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107200449.calendar"
+  ],
+  "objective": "Frozen new-seed broader check of the unchanged cash-source ablation and selector, on 12 opponent packages. Report branch financial failures and realized choice quality against the cash-splice selector, demand and old_model. This does not establish conditional compatibility with the observed rival farm.",
+  "decision": "Keep all losses and uncompiled/unfunded cases. A positive result against the cash-splice selector alone is insufficient for broader pipeline promotion; compare the existing demand and old_model choices and declared tail/group limits.",
+  "variants": [
+    "current_cash",
+    "historical_cash"
+  ],
+  "implementation": "Same own purchase repair and original three-course chooser. The only valuation change is retaining source rival cash instead of splicing observed current rival cash into historical resources. Historical worlds are explicit stress cases; no extra cash is given to actual played opponents.",
+  "variant_flags": {
+    "current_cash": [
+      "--repair-own"
+    ],
+    "historical_cash": [
+      "--repair-own",
+      "--historical-rival-cash"
+    ]
+  },
+  "binary": "experiments/v6/sep09_sales_planner/build/e97f832151321899cfdb/arena",
+  "binary_sha256": "30d46830086e08047e103778e2b9eab2c5cbc5d377a6093cb02bcbf1052428b0",
+  "variant": "current_cash"
+}

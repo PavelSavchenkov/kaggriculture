@@ -1,0 +1,45 @@
+{
+  "frozen_utc": "2026-09-10T00:25:17.385605+00:00",
+  "question": "Does allowing the existing one-turn wait on mixed hiring/purchase turns expose additional profitable Otter timing?",
+  "cases": [
+    {
+      "episode": 107267875,
+      "seat": 0,
+      "teams": [
+        "Otter Vibe",
+        "automatylicza"
+      ],
+      "calendar": "research/calendars_top2315/107267875.calendar"
+    },
+    {
+      "episode": 107271699,
+      "seat": 1,
+      "teams": [
+        "Claudex - An",
+        "Otter Vibe"
+      ],
+      "calendar": "research/calendars_top2315/107271699.calendar"
+    },
+    {
+      "episode": 107275573,
+      "seat": 1,
+      "teams": [
+        "DeeperNet",
+        "Otter Vibe"
+      ],
+      "calendar": "research/calendars_top2315/107275573.calendar"
+    }
+  ],
+  "policies": [
+    "original",
+    "wait_mixed_demand",
+    "wait_mixed_no_ready"
+  ],
+  "primary": "Paired final cash margin, recomputing both players trades. Also own cash.",
+  "constraints": "Original worker actions and market commitments; no extra missing resources/commitment mismatch; full-engine production, labor and faults unchanged for fixed-plan claims.",
+  "forecast": "Known current shops and public ready product; future rival orders unavailable to decision. Original own next-turn orders and resource calendar are given plan input.",
+  "scope": "Three exposed replay plans and fixed rival orders; not unseen scenarios and not an adaptive Otter agent. Existing untuned one-turn rule may have limited coverage.",
+  "promotion": "No general promotion from this cohort. Require new scenarios, diverse farm plans and reacting opponents.",
+  "change": "Remove sale-only precondition, preserve existing non-sale slots, and require identical hires/workers/land after current trading in addition to existing two-turn input/end-state checks. No tuned thresholds or rival futures. Existing max one delayed product and known-demand boundary unchanged.",
+  "comparison": "Compare with original and the previous sale-only results. Retain any failures; do not filter them into a success-only mean."
+}

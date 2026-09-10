@@ -1,0 +1,467 @@
+{
+  "all": {
+    "cases": 48,
+    "seed_clusters": 2,
+    "margin_gain": {
+      "mean": 2063.3333333333335,
+      "ci95": [
+        1176.9166666666667,
+        2949.75
+      ]
+    },
+    "cash_gain": {
+      "mean": 2063.3333333333335,
+      "ci95": [
+        1176.9166666666667,
+        2949.75
+      ]
+    },
+    "utility_gain_pp": {
+      "mean": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "positive": 48,
+    "negative": 0,
+    "zero": 0,
+    "worst_margin_gain": 50,
+    "best_margin_gain": 9133,
+    "decisions": 1162,
+    "history_underestimates": 0,
+    "own_state_changed": 0,
+    "rival_state_changed": 0,
+    "extra_own_faults": 0,
+    "extra_rival_faults": 0,
+    "produced_changes": 0,
+    "rival_produced_changes": 0,
+    "stock_changes": 0,
+    "rival_stock_changes": 0,
+    "discarded_changes": 0,
+    "rival_discarded_changes": 0,
+    "worker_days_changes": 0,
+    "repair": {
+      "mean_margin": 76384.25,
+      "worst_decile_margin": -21258.4,
+      "mean_act_ms_per_game": 5.752832583333333,
+      "mean_compile_ms": 4.7845413125,
+      "incomplete_calendars": 0
+    },
+    "history": {
+      "mean_margin": 78447.58333333333,
+      "worst_decile_margin": -21089.6,
+      "mean_act_ms_per_game": 6.629064416666667,
+      "mean_compile_ms": 4.777536166666667,
+      "incomplete_calendars": 0
+    }
+  },
+  "failed_jobs": 0,
+  "by": {
+    "panel": {
+      "independent": {
+        "cases": 24,
+        "seed_clusters": 2,
+        "margin_gain": {
+          "mean": 1245.0833333333333,
+          "ci95": [
+            1181.6666666666667,
+            1308.5
+          ]
+        },
+        "cash_gain": {
+          "mean": 1245.0833333333333,
+          "ci95": [
+            1181.6666666666667,
+            1308.5
+          ]
+        },
+        "utility_gain_pp": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "positive": 24,
+        "negative": 0,
+        "zero": 0,
+        "worst_margin_gain": 55,
+        "best_margin_gain": 3144,
+        "decisions": 602,
+        "history_underestimates": 0,
+        "own_state_changed": 0,
+        "rival_state_changed": 0,
+        "extra_own_faults": 0,
+        "extra_rival_faults": 0,
+        "produced_changes": 0,
+        "rival_produced_changes": 0,
+        "stock_changes": 0,
+        "rival_stock_changes": 0,
+        "discarded_changes": 0,
+        "rival_discarded_changes": 0,
+        "worker_days_changes": 0,
+        "repair": {
+          "mean_margin": 78131,
+          "worst_decile_margin": -21333.333333333332,
+          "mean_act_ms_per_game": 6.899897416666667,
+          "mean_compile_ms": 5.766573041666667,
+          "incomplete_calendars": 0
+        },
+        "history": {
+          "mean_margin": 79376.08333333333,
+          "worst_decile_margin": -21194.666666666668,
+          "mean_act_ms_per_game": 7.954986875,
+          "mean_compile_ms": 5.751396833333334,
+          "incomplete_calendars": 0
+        }
+      },
+      "native": {
+        "cases": 24,
+        "seed_clusters": 2,
+        "margin_gain": {
+          "mean": 2881.5833333333335,
+          "ci95": [
+            1172.1666666666667,
+            4591.0
+          ]
+        },
+        "cash_gain": {
+          "mean": 2881.5833333333335,
+          "ci95": [
+            1172.1666666666667,
+            4591.0
+          ]
+        },
+        "utility_gain_pp": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "positive": 24,
+        "negative": 0,
+        "zero": 0,
+        "worst_margin_gain": 50,
+        "best_margin_gain": 9133,
+        "decisions": 560,
+        "history_underestimates": 0,
+        "own_state_changed": 0,
+        "rival_state_changed": 0,
+        "extra_own_faults": 0,
+        "extra_rival_faults": 0,
+        "produced_changes": 0,
+        "rival_produced_changes": 0,
+        "stock_changes": 0,
+        "rival_stock_changes": 0,
+        "discarded_changes": 0,
+        "rival_discarded_changes": 0,
+        "worker_days_changes": 0,
+        "repair": {
+          "mean_margin": 74637.5,
+          "worst_decile_margin": -18295,
+          "mean_act_ms_per_game": 4.60576775,
+          "mean_compile_ms": 3.8025095833333333,
+          "incomplete_calendars": 0
+        },
+        "history": {
+          "mean_margin": 77519.08333333333,
+          "worst_decile_margin": -17977.666666666668,
+          "mean_act_ms_per_game": 5.303141958333334,
+          "mean_compile_ms": 3.8036755,
+          "incomplete_calendars": 0
+        }
+      }
+    },
+    "opponent": {
+      "pass": {
+        "cases": 24,
+        "seed_clusters": 2,
+        "margin_gain": {
+          "mean": 3927.9166666666665,
+          "ci95": [
+            2135.6666666666665,
+            5720.166666666667
+          ]
+        },
+        "cash_gain": {
+          "mean": 3927.9166666666665,
+          "ci95": [
+            2135.6666666666665,
+            5720.166666666667
+          ]
+        },
+        "utility_gain_pp": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "positive": 24,
+        "negative": 0,
+        "zero": 0,
+        "worst_margin_gain": 1505,
+        "best_margin_gain": 9133,
+        "decisions": 902,
+        "history_underestimates": 0,
+        "own_state_changed": 0,
+        "rival_state_changed": 0,
+        "extra_own_faults": 0,
+        "extra_rival_faults": 0,
+        "produced_changes": 0,
+        "rival_produced_changes": 0,
+        "stock_changes": 0,
+        "rival_stock_changes": 0,
+        "discarded_changes": 0,
+        "rival_discarded_changes": 0,
+        "worker_days_changes": 0,
+        "repair": {
+          "mean_margin": 161492,
+          "worst_decile_margin": 135622,
+          "mean_act_ms_per_game": 5.293939625,
+          "mean_compile_ms": 4.397931291666667,
+          "incomplete_calendars": 0
+        },
+        "history": {
+          "mean_margin": 165419.91666666666,
+          "worst_decile_margin": 138277.66666666666,
+          "mean_act_ms_per_game": 6.2855161666666675,
+          "mean_compile_ms": 4.388320208333333,
+          "incomplete_calendars": 0
+        }
+      },
+      "public_router_v52": {
+        "cases": 24,
+        "seed_clusters": 2,
+        "margin_gain": {
+          "mean": 198.75,
+          "ci95": [
+            179.33333333333334,
+            218.16666666666666
+          ]
+        },
+        "cash_gain": {
+          "mean": 198.75,
+          "ci95": [
+            179.33333333333334,
+            218.16666666666666
+          ]
+        },
+        "utility_gain_pp": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "positive": 24,
+        "negative": 0,
+        "zero": 0,
+        "worst_margin_gain": 50,
+        "best_margin_gain": 524,
+        "decisions": 260,
+        "history_underestimates": 0,
+        "own_state_changed": 0,
+        "rival_state_changed": 0,
+        "extra_own_faults": 0,
+        "extra_rival_faults": 0,
+        "produced_changes": 0,
+        "rival_produced_changes": 0,
+        "stock_changes": 0,
+        "rival_stock_changes": 0,
+        "discarded_changes": 0,
+        "rival_discarded_changes": 0,
+        "worker_days_changes": 0,
+        "repair": {
+          "mean_margin": -8723.5,
+          "worst_decile_margin": -23527.333333333332,
+          "mean_act_ms_per_game": 6.211725541666667,
+          "mean_compile_ms": 5.1711513333333325,
+          "incomplete_calendars": 0
+        },
+        "history": {
+          "mean_margin": -8524.75,
+          "worst_decile_margin": -23357.333333333332,
+          "mean_act_ms_per_game": 6.972612666666667,
+          "mean_compile_ms": 5.166752125,
+          "incomplete_calendars": 0
+        }
+      }
+    },
+    "branch": {
+      "0": {
+        "cases": 16,
+        "seed_clusters": 2,
+        "margin_gain": {
+          "mean": 2226.5,
+          "ci95": [
+            1391.5,
+            3061.5
+          ]
+        },
+        "cash_gain": {
+          "mean": 2226.5,
+          "ci95": [
+            1391.5,
+            3061.5
+          ]
+        },
+        "utility_gain_pp": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "positive": 16,
+        "negative": 0,
+        "zero": 0,
+        "worst_margin_gain": 50,
+        "best_margin_gain": 8896,
+        "decisions": 336,
+        "history_underestimates": 0,
+        "own_state_changed": 0,
+        "rival_state_changed": 0,
+        "extra_own_faults": 0,
+        "extra_rival_faults": 0,
+        "produced_changes": 0,
+        "rival_produced_changes": 0,
+        "stock_changes": 0,
+        "rival_stock_changes": 0,
+        "discarded_changes": 0,
+        "rival_discarded_changes": 0,
+        "worker_days_changes": 0,
+        "repair": {
+          "mean_margin": 84706.125,
+          "worst_decile_margin": -10496,
+          "mean_act_ms_per_game": 6.0178693125,
+          "mean_compile_ms": 5.013788562499999,
+          "incomplete_calendars": 0
+        },
+        "history": {
+          "mean_margin": 86932.625,
+          "worst_decile_margin": -10446,
+          "mean_act_ms_per_game": 6.8425695625000005,
+          "mean_compile_ms": 5.01228975,
+          "incomplete_calendars": 0
+        }
+      },
+      "1": {
+        "cases": 16,
+        "seed_clusters": 2,
+        "margin_gain": {
+          "mean": 1927.625,
+          "ci95": [
+            977.0,
+            2878.25
+          ]
+        },
+        "cash_gain": {
+          "mean": 1927.625,
+          "ci95": [
+            977.0,
+            2878.25
+          ]
+        },
+        "utility_gain_pp": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "positive": 16,
+        "negative": 0,
+        "zero": 0,
+        "worst_margin_gain": 120,
+        "best_margin_gain": 9133,
+        "decisions": 390,
+        "history_underestimates": 0,
+        "own_state_changed": 0,
+        "rival_state_changed": 0,
+        "extra_own_faults": 0,
+        "extra_rival_faults": 0,
+        "produced_changes": 0,
+        "rival_produced_changes": 0,
+        "stock_changes": 0,
+        "rival_stock_changes": 0,
+        "discarded_changes": 0,
+        "rival_discarded_changes": 0,
+        "worker_days_changes": 0,
+        "repair": {
+          "mean_margin": 68786.125,
+          "worst_decile_margin": -21146,
+          "mean_act_ms_per_game": 5.6740088125,
+          "mean_compile_ms": 4.7031938125,
+          "incomplete_calendars": 0
+        },
+        "history": {
+          "mean_margin": 70713.75,
+          "worst_decile_margin": -20932,
+          "mean_act_ms_per_game": 6.532941625,
+          "mean_compile_ms": 4.6689218125,
+          "incomplete_calendars": 0
+        }
+      },
+      "2": {
+        "cases": 16,
+        "seed_clusters": 2,
+        "margin_gain": {
+          "mean": 2035.875,
+          "ci95": [
+            1162.25,
+            2909.5
+          ]
+        },
+        "cash_gain": {
+          "mean": 2035.875,
+          "ci95": [
+            1162.25,
+            2909.5
+          ]
+        },
+        "utility_gain_pp": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "positive": 16,
+        "negative": 0,
+        "zero": 0,
+        "worst_margin_gain": 148,
+        "best_margin_gain": 9080,
+        "decisions": 436,
+        "history_underestimates": 0,
+        "own_state_changed": 0,
+        "rival_state_changed": 0,
+        "extra_own_faults": 0,
+        "extra_rival_faults": 0,
+        "produced_changes": 0,
+        "rival_produced_changes": 0,
+        "stock_changes": 0,
+        "rival_stock_changes": 0,
+        "discarded_changes": 0,
+        "rival_discarded_changes": 0,
+        "worker_days_changes": 0,
+        "repair": {
+          "mean_margin": 75660.5,
+          "worst_decile_margin": -24718,
+          "mean_act_ms_per_game": 5.5666196249999995,
+          "mean_compile_ms": 4.6366415625,
+          "incomplete_calendars": 0
+        },
+        "history": {
+          "mean_margin": 77696.375,
+          "worst_decile_margin": -24570,
+          "mean_act_ms_per_game": 6.5116820625,
+          "mean_compile_ms": 4.6513969374999995,
+          "incomplete_calendars": 0
+        }
+      }
+    }
+  }
+}

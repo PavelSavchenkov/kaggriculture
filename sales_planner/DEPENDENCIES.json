@@ -1,0 +1,102 @@
+{
+  "scope": "Existing repository dependencies; no source copied into this folder.",
+  "hash_recipe": "Sort relative POSIX paths for .hpp/.h/.cpp/.inc/.json files; concatenate each UTF-8 path, NUL, and raw 32-byte file SHA256; SHA256 that stream.",
+  "dependencies": [
+    {
+      "path": "agents/common/api",
+      "code_files": 2,
+      "sha256": "e7e924668bb3e96f0234387ea2ace678684401f32f3201108451ff56a0054c8f",
+      "manifest_sha256": null
+    },
+    {
+      "path": "agents/common/runtime",
+      "code_files": 1,
+      "sha256": "03c1df79573c78835301db40606f44e0296bad8bf645f3fe3ad71b22492b9343",
+      "manifest_sha256": null
+    },
+    {
+      "path": "agents/external/ahmed_v23",
+      "code_files": 11,
+      "sha256": "7a016841832a03bd2821b864a268e3eed7ad6dfda46a1b64ed8efd776583350e",
+      "manifest_sha256": "da60c3f716c460ad570dd6025e04e4849fbe6058e055671649a29cb597f23a06"
+    },
+    {
+      "path": "agents/external/ahmed_v24",
+      "code_files": 14,
+      "sha256": "8d9ca724fe778a8440ba87a8a507703f50983e36c56b8206fe0d964b27541e43",
+      "manifest_sha256": "49db43346dc260ba749a0b63d75baeaf5e9f2834fab35aa5699ccc165a7401e2"
+    },
+    {
+      "path": "agents/external/ahmed_v25",
+      "code_files": 11,
+      "sha256": "c941690fa1b7b66f64346edd86991aefb2928c4219497c69c4e85bc5eca8e30e",
+      "manifest_sha256": "712cdfd4980197e3e640337ad00f6dd93b99ac351ca24f5d50e706d4bb675eef"
+    },
+    {
+      "path": "agents/external/atakan_demand",
+      "code_files": 8,
+      "sha256": "af7c5530b6f034d0d59160a73018ff0ded3104b12e85be3b108383020b97c879",
+      "manifest_sha256": "bb332e3624fda23626f56c910d4247a8d28e86f7e8e6a3675d128454c9b34375"
+    },
+    {
+      "path": "agents/external/early_structure_cow",
+      "code_files": 271,
+      "sha256": "1ed4aca257dd306317e0c58ffa3d6558c5810450d5660094980d1434f7bbf841",
+      "manifest_sha256": "eb9eda717669469402b810d3b2b63ca708b84231d6b085dcc61017e0ca23ec57"
+    },
+    {
+      "path": "agents/external/junghoon_wool_sales",
+      "code_files": 15,
+      "sha256": "56c193236c54de5e98438a6be3ecf87db89342d71f526224b0cebaae28251259",
+      "manifest_sha256": "584b48fd1ad63392f408f7f19f5f2fca9f702f65a6c8629c233a8cab4602b586"
+    },
+    {
+      "path": "agents/external/king_rc4",
+      "code_files": 10,
+      "sha256": "c5d6aed1e210e15b27b44691f0f8e7abc4e5097c035991c848d94ada0668631d",
+      "manifest_sha256": "61ee84a3c221c289d11133bf3dac2c900bab562ea0ee36ace1de2d377c15bd85"
+    },
+    {
+      "path": "agents/external/nanare_four_quadrant_course",
+      "code_files": 8,
+      "sha256": "9df5cfaa075dd6cb2efeed9aea9655c9e7b1a6efb49f462f34978e4290d90417",
+      "manifest_sha256": "9e5bcdcb178fd0af2fa8bfb830bac6c918d99ba0ab38f83f2e7caa1bab57f986"
+    },
+    {
+      "path": "agents/external/public_capacity_router",
+      "code_files": 11,
+      "sha256": "f9f64f639d20b96992dac7fb2b37bd4600e328f995d5f5b57fa9cd5e7ad8362e",
+      "manifest_sha256": "0216df836f50848dee85918e72592f6a36a0b3d8e50faca75824e07b418928a2"
+    },
+    {
+      "path": "agents/external/public_router_v52",
+      "code_files": 11,
+      "sha256": "e17f822ec20b1a96e4e2e301a3f460fb3b80fba7a4d25d7d088b0ff72c1bf01c",
+      "manifest_sha256": "f6d75557b38859ad9a48ad6e2d93f9f41f49f21d0a1a1ae8279e747b687b462e"
+    },
+    {
+      "path": "agents/external/salem_sep08_m3",
+      "code_files": 13,
+      "sha256": "9400dde06040647ce3ca9f99f126047c19c40781b48419a11d64974e3280075f",
+      "manifest_sha256": "45bd7a19ac53e904b216a9260466e168bfc0b1bd62101f7f38ac8dabf6f9ba6b"
+    },
+    {
+      "path": "agents/external/titan_frontier",
+      "code_files": 6,
+      "sha256": "577010db67cca223946531ea8e2cb4b7ccf0d97a62f985e07584ba50a1a981cf",
+      "manifest_sha256": "2f8e0430d03d95a7e53ee9cbcd6f4b6f2b4966c67e81bf66d8ee36afc481c2ca"
+    },
+    {
+      "path": "agents/external/yusuke_sep08_m2",
+      "code_files": 13,
+      "sha256": "c5b3d88b9ee7292c55ae9cad0710b138d3a47e99876fddf2dc4804add2fd0cf3",
+      "manifest_sha256": "b2f2aef9d8c909a8457dc8dc2ce48447a74493c6255165bda44aee8d49821e87"
+    },
+    {
+      "path": "fast_game_engine",
+      "code_files": 7,
+      "sha256": "654c6dd5a7c974ba069a124fc7b941a9e452f8c5ca6ab8a886d9b8618b98bc55",
+      "manifest_sha256": null
+    }
+  ]
+}

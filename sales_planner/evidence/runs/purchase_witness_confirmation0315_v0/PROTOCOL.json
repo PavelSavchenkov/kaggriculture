@@ -1,0 +1,55 @@
+{
+  "frozen_utc": "2026-09-10T03:13:02.656933+00:00",
+  "cases": [
+    "research/calendars_confirmation0315/107325515.calendar",
+    "research/calendars_confirmation0315/107325828.calendar",
+    "research/calendars_confirmation0315/107326460.calendar",
+    "research/calendars_confirmation0315/107327860.calendar",
+    "research/calendars_confirmation0315/107327863.calendar",
+    "research/calendars_confirmation0315/107327865.calendar",
+    "research/calendars_confirmation0315/107327873.calendar",
+    "research/calendars_confirmation0315/107327874.calendar",
+    "research/calendars_confirmation0315/107328060.calendar",
+    "research/calendars_confirmation0315/107328828.calendar",
+    "research/calendars_confirmation0315/107328965.calendar",
+    "research/calendars_confirmation0315/107329394.calendar",
+    "research/calendars_confirmation0315/107329779.calendar",
+    "research/calendars_confirmation0315/107329905.calendar",
+    "research/calendars_confirmation0315/107329979.calendar",
+    "research/calendars_confirmation0315/107330876.calendar",
+    "research/calendars_confirmation0315/107330897.calendar",
+    "research/calendars_confirmation0315/107331339.calendar",
+    "research/calendars_confirmation0315/107332231.calendar",
+    "research/calendars_confirmation0315/107332285.calendar",
+    "research/calendars_confirmation0315/107332412.calendar",
+    "research/calendars_confirmation0315/107332673.calendar",
+    "research/calendars_confirmation0315/107332694.calendar",
+    "research/calendars_confirmation0315/107332804.calendar",
+    "research/calendars_confirmation0315/107332820.calendar",
+    "research/calendars_confirmation0315/107332828.calendar",
+    "research/calendars_confirmation0315/107332888.calendar",
+    "research/calendars_confirmation0315/107332907.calendar",
+    "research/calendars_confirmation0315/107333206.calendar",
+    "research/calendars_confirmation0315/107333255.calendar",
+    "research/calendars_confirmation0315/107333277.calendar",
+    "research/calendars_confirmation0315/107333375.calendar",
+    "research/calendars_confirmation0315/107333615.calendar",
+    "research/calendars_confirmation0315/107333616.calendar"
+  ],
+  "reference": "wait_delivery_history",
+  "variants": {
+    "wait_delivery_history": [
+      "--delivery-bound"
+    ],
+    "wait_delivery_witness": [
+      "--delivery-bound",
+      "--purchase-witness"
+    ]
+  },
+  "role": "Prospective confirmation of unchanged funded-purchase input contract on newly selected public episodes; all cases and both seats retained.",
+  "primary": "Complete margin and full resource/state parity, all endpoint and execution failures. Retain broad-contract control and all cases.",
+  "hypothesis": "A supplied fixed purchase quantity should not expand just because a sale earns more cash.",
+  "information": "Future purchase quantities are explicitly part of the supplied plan witness. They are obtained from source execution for this conditional benchmark, not claimed to be predicted from live observations. No actual future rival actions or private state enter the sale rule.",
+  "binary": "build/64a030750be418795dbb/replay_timing",
+  "binary_sha256": "5a507d1ea88fd34bfc59b8d51146d4cd98fa2eb8045915cb81e473761b00d73a"
+}

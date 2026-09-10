@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-09-10T00:12:00Z",
+  "opponents": [
+    "parent",
+    "ahmed_v25",
+    "nanare",
+    "king_rc4",
+    "public_router_v52"
+  ],
+  "seed_start": 202609100500,
+  "seeds_per_opponent": 128,
+  "seat_mode": "both",
+  "shop_panel": "independent",
+  "scenario_cases": [
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107183828.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107192763.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107198350.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_development/107200449.calendar"
+  ],
+  "binary": "experiments/v6/sep09_sales_planner/build/73d46c1261fd45072952/arena",
+  "objective": "Frozen new-seed test of unchanged own deadline purchase repair on the same three fixed courses. Primary: full fixed-branch financial and execution effects, with grouped seed uncertainty. Report benefit only for previously unfunded plans separately from already feasible calendars. Secondary: unchanged-selector plan-choice effects vscontrol chosen,demand,old_model. Five exposed opponents are not a family holdout.",
+  "decision": "Require actual useful funded plans and no unexplained worsening of baseline-feasible work; do not use positive mean over invalid baseline plans as sole promotion evidence. Keep every negative case and all candidate failures. Both-repair forecast assumption is not included: it reduced infeasibility without changing first-screen choices.",
+  "variants": [
+    "control",
+    "own_repair"
+  ],
+  "implementation": "One-turn required resource horizon. Append only after original market orders. Repair only the input shortfall that remains even if every current requested purchase fills completely. No reliance on predicting a current purchase failure; no speculative inputs. Exact own short projection checks funding and capacity; exact two-player execution remains judge.",
+  "variant": "control"
+}

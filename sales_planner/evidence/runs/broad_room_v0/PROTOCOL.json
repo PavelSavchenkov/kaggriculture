@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-09-09T19:31:00Z",
+  "candidate": "room_keep",
+  "baseline": "parent",
+  "opponents": [
+    "ahmed_v23",
+    "ahmed_v24",
+    "ahmed_v25",
+    "nanare",
+    "king_rc4",
+    "junghoon_wool_sales",
+    "yusuke_sep08_m2",
+    "salem_sep08_m3",
+    "public_router_v52",
+    "public_capacity_router",
+    "titan_frontier",
+    "atakan_demand"
+  ],
+  "seed_start": 2026093100,
+  "seeds_per_opponent_panel": 128,
+  "seat_mode": "both",
+  "shop_panels": [
+    "independent",
+    "native"
+  ],
+  "max_expansions": 100000,
+  "threads_per_batch": 4,
+  "parallel_batches": 2,
+  "primary_groups": [
+    "ahmed_v23",
+    "ahmed_v24",
+    "ahmed_v25",
+    "king_rc4",
+    "junghoon_wool_sales",
+    "yusuke_sep08_m2",
+    "salem_sep08_m3",
+    "public_router_v52"
+  ],
+  "role": "Broader development screen of compaction plus strict storage on current strong parent; individual opponent/tail/utility results determine next work. Repeated public families are not independent statistical clusters. Source/family holdout and complete plan-search integration still required.",
+  "compute_purpose": "New opponents and prices test the previously unresolved transfer risk of the simple rules. No deployment or Kaggle submission."
+}

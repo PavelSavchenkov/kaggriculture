@@ -1,0 +1,27 @@
+{
+  "seed": 2026091060015,
+  "seats": [
+    0,
+    1
+  ],
+  "branch": 1,
+  "opponent": "salem_sep08_m3",
+  "panel": "independent",
+  "one_edit_gain": 1311,
+  "multiple_gain": 1257,
+  "difference": -54,
+  "prediction_errors": 0,
+  "state_changes": 0,
+  "mechanism": "Previously delayed tomatoes use capacity needed for a later wool wait. Extra small gains total 17; the skipped eight-wool wait was worth 71.",
+  "stock_at_717": {
+    "one_edit": 91,
+    "multiple": 97,
+    "multiple_if_eight_more_wool_held": 105,
+    "capacity": 100
+  },
+  "source_traces": [
+    "NEGATIVE_ONE_EDIT_STOCK.jsonl.trace.jsonl",
+    "NEGATIVE_MULTIPLE_STOCK.jsonl.trace.jsonl"
+  ],
+  "inference_limit": "Stock arithmetic and the selected orders identify the capacity conflict; a replacement policy has not been tested."
+}

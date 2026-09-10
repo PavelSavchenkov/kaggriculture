@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "name": "history_course_floor",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::history_course_floor::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "../history_course/source/agent.cpp",
+    "../../../agents/external/atakan_demand/source/base/agent.cpp"
+  ]
+}

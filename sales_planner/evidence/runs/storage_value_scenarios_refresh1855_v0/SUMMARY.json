@@ -1,0 +1,84 @@
+{
+  "command": [
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_sales_planner/build/18b80dfa53442f42b43e/benchmark_baselines",
+    "--scenarios",
+    "4",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_sales_planner/research/calendars_development/107183828.calendar",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_sales_planner/research/calendars_development/107192763.calendar",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_sales_planner/research/calendars_development/107198350.calendar",
+    "/home/pavel/Programming/kaggriculture/experiments/v6/sep09_sales_planner/research/calendars_development/107200449.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107204358.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107204390.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107206401.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107208184.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107208199.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107208317.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107209852.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107209987.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107210826.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107212753.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107212960.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107213028.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107213582.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107213750.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107214547.calendar",
+    "experiments/v6/sep09_sales_planner/research/calendars_refresh1855/107214636.calendar"
+  ],
+  "summary": [
+    {
+      "policy": "compact_sales",
+      "cases": 32,
+      "own_feasible": 32,
+      "both_feasible": 32,
+      "conditional_mean_margin_gain": 86.9375,
+      "mean_ms": 0.11576600000000001,
+      "median_ms": 0.1128285
+    },
+    {
+      "policy": "original",
+      "cases": 32,
+      "own_feasible": 32,
+      "both_feasible": 32,
+      "conditional_mean_margin_gain": 0,
+      "mean_ms": 0.0879354375,
+      "median_ms": 0.0869785
+    },
+    {
+      "policy": "room_keep",
+      "cases": 32,
+      "own_feasible": 32,
+      "both_feasible": 32,
+      "conditional_mean_margin_gain": 88.78125,
+      "mean_ms": 0.11100818750000001,
+      "median_ms": 0.10951999999999999
+    },
+    {
+      "policy": "room_value_all_gains",
+      "cases": 32,
+      "own_feasible": 32,
+      "both_feasible": 32,
+      "conditional_mean_margin_gain": 97.9375,
+      "mean_ms": 0.14993325,
+      "median_ms": 0.103285
+    },
+    {
+      "policy": "room_value_quiet",
+      "cases": 32,
+      "own_feasible": 32,
+      "both_feasible": 32,
+      "conditional_mean_margin_gain": 97.9375,
+      "mean_ms": 0.13486053125,
+      "median_ms": 0.12869150000000001
+    },
+    {
+      "policy": "room_value_scenarios",
+      "cases": 32,
+      "own_feasible": 32,
+      "both_feasible": 32,
+      "conditional_mean_margin_gain": 97.9375,
+      "mean_ms": 0.16788243749999998,
+      "median_ms": 0.1074445
+    }
+  ],
+  "scope": "Exposed development calendars, original market worlds, fixed rival orders. Conditional gains are descriptive survivor subsets, not promotion evidence; all failures retained."
+}
