@@ -109,6 +109,13 @@ games with seat swaps. A forfeit invalidates the evaluation. The atomic
 against the corresponding parent. It can be rerun separately after an
 interrupted arena without repeating training.
 
+`evaluate_selfplay_one.sh` is the early-screening entry point while later
+lineages train. With no argument it selects the first completed lineage; an
+optional parent ID or output directory selects one explicitly. It exports and
+validates `best.pt`, then uses the arena's challenger-only mode against the active
+LocalLB field plus the parent, avoiding unrelated field-vs-field games while
+retaining full 720-step seat swaps and pair-level progress.
+
 Evidence: 18 tests pass, including a real short-engine rollout and PPO parameter
 update. A complete RTX PRO 6000 integration traversed all 719 decisions for two
 games at about 102 vector steps/s with finite log probabilities. A full-horizon

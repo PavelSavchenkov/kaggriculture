@@ -128,6 +128,8 @@ def main() -> int:
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--lb-root", default=str(Path.home() / "Kaggle/kaggriculture-localLB"))
     ap.add_argument("--agents", nargs="*", help="default: every directory under agents/")
+    ap.add_argument("--challenger",
+                    help="only play this agent against the rest of --agents")
     ap.add_argument("--seeds-per-pair", type=int, default=20)
     ap.add_argument("--seed-base", type=int, default=1000)
     ap.add_argument("--episode-steps", type=int, default=720)
@@ -141,8 +143,14 @@ def main() -> int:
     lb_root = Path(args.lb_root)
     ids = sorted(args.agents) if args.agents else sorted(
         p.name for p in (lb_root / "agents").iterdir() if (p / "main.py").exists())
-    pairs = list(itertools.combinations(ids, 2))
-    jobs = [(i, *sorted((a, b)), args.seeds_per_pair, args.seed_base, True)
+    if args.challenger:
+        if args.challenger not in ids:
+            ap.error("--challenger must also be present in --agents")
+        pairs = [(args.challenger, opponent)
+                 for opponent in ids if opponent != args.challenger]
+    else:
+        pairs = list(itertools.combinations(ids, 2))
+    jobs = [(i, a, b, args.seeds_per_pair, args.seed_base, True)
             for i, (a, b) in enumerate(pairs)]
     per_pair = args.seeds_per_pair * 2
     print(f"{len(ids)} agents, {len(pairs)} pairs, {len(pairs) * per_pair} games, "

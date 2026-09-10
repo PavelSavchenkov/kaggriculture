@@ -142,6 +142,17 @@ The final evaluation is independently rerunnable without retraining:
 ./reinforcement_learning/evaluate_selfplay.sh
 ```
 
+While later lineages are still training, export and test the first completed
+descendant against the active LocalLB field plus its parent with one command:
+
+```bash
+./reinforcement_learning/evaluate_selfplay_one.sh
+```
+
+Pass a promoted parent agent ID or a self-play output directory to select a
+specific completed lineage. The launcher uses challenger-only arena mode, so it
+does not replay unrelated LocalLB-vs-LocalLB pairs.
+
 It defaults to 20 fresh seeds per pair. Use `LOCAL_LB_SEEDS_PER_PAIR` to change
 that number, or `RUN_FINAL_EVALUATION=0` to intentionally omit the automatic
 post-training tournament.
