@@ -38,13 +38,9 @@ inline ConstructorResult construct(const ds::DayProblem& problem, ConstructorOpt
     Search search(data, options.routing.seed);
     SearchOptions search_options;
     search_options.iterations = options.iterations > 0 ? options.iterations : std::numeric_limits<int>::max() - 1;
-    std::optional<std::chrono::steady_clock::time_point> search_started;
-    std::function<bool()> stop;
-    if (options.iterations == 0) stop = [&] {
-        // PyVRP MaxRuntime starts on its first call, after initial search.
-        if (!search_started) search_started = std::chrono::steady_clock::now();
-        return std::chrono::duration<double>(std::chrono::steady_clock::now() - *search_started).count() > options.seconds;
-    };
+    // Iteration and time limits both apply. Include setup and the initial
+    // local search in the budget; a search iteration is not interruptible.
+    const auto stop = [&] { return elapsed() >= options.seconds; };
     const auto solution = search.run(search_options, {}, stop);
     ConstructorResult result;
     result.iterations = search.iterations_run;

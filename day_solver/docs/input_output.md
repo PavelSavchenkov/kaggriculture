@@ -3,7 +3,7 @@
 The native parser and validator are authoritative. The
 [JSON Schema](../schemas/day_problem_v3.schema.json) checks structure and simple
 ranges; replay additionally checks the game, sequencing, inventories and exact
-endpoints. All fields listed below are required in JSON. Unknown fields are
+endpoints. Top-level fields listed below are required in JSON. Unknown fields are
 rejected, including routes, owner hints, cash, sales and original schedules.
 
 ## Public v3 input
@@ -12,7 +12,7 @@ rejected, including routes, owner hints, cash, sales and original schedules.
 | --- | --- | --- |
 | `format_version` | integer, exactly 3 | Fixed schema version |
 | `worker_count` | integer, 1–40 | Exact total workers including the farmer and all hires |
-| `start` | object | `managed_tiles`, `shed[12]`, `seeds[5]` |
+| `start` | object | `managed_tiles`, `shed[12]`, `seeds[5]`, optional `shed_capacity` |
 | `end_tiles` | array | Exactly one `{tile, state}` for every managed tile |
 | `tile_work` | array | `{tile, actions}` for each tile requiring work; omit idle tiles |
 | `buy_schedule` | array | Fixed purchases and hires, each with hour and order slot |
@@ -25,6 +25,14 @@ arithmetic uses signed 64-bit counts. Hours run from 0 through 23. The farmer
 starts at `(4,4)` with empty cargo. There are no hired workers at hour 0; they
 appear through the fixed hire orders. This is a day-start solver, not an
 arbitrary mid-day-state scheduler.
+
+Optional `start.shed_capacity` is an integer from 0 through 32766. Use 100 for
+the standard game. Omission preserves unlimited storage for historical inputs.
+With explicit capacity, `end_shed` is the exact retained inventory after losses,
+not production plus purchases minus consumption and sales. PLACE retains
+excess cargo; DROP and automatic night transfer destroy overflow in game order.
+The solver validates every returned schedule against this contract. Capacity
+handling can still return UNKNOWN within its soft search budget.
 
 Item indices are fixed:
 

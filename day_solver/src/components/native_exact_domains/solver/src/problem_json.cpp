@@ -269,7 +269,9 @@ json::object write_tile(const ManagedTile& tile) {
 
 PhysicalState read_start(const json::value& value) {
     const auto& input = object(value, "start");
-    exact_keys(input, {"managed_tiles", "shed", "seeds"}, "start");
+    if (input.contains("shed_capacity"))
+        exact_keys(input, {"managed_tiles", "shed", "seeds", "shed_capacity"}, "start");
+    else exact_keys(input, {"managed_tiles", "shed", "seeds"}, "start");
     PhysicalState result;
     const auto& tiles = array(input.at("managed_tiles"), "start.managed_tiles");
     result.managed_tiles.reserve(tiles.size());
@@ -279,6 +281,12 @@ PhysicalState read_start(const json::value& value) {
     result.shed = read_inventory<kag::N_ITEMS>(input.at("shed"), "start.shed");
     result.seeds = read_inventory<kag::N_CROPS>(input.at("seeds"), "start.seeds");
     result.shed_capacity = std::numeric_limits<int16_t>::max();
+    if (input.contains("shed_capacity")) {
+        const auto capacity = integer(input.at("shed_capacity"), "start.shed_capacity");
+        if (capacity < 0 || capacity >= std::numeric_limits<int16_t>::max())
+            throw std::runtime_error("start.shed_capacity must be between 0 and 32766; omit it for unlimited storage");
+        result.shed_capacity = static_cast<int16_t>(capacity);
+    }
     result.cash = 0;
     return result;
 }
@@ -288,9 +296,12 @@ json::object write_start(const PhysicalState& start) {
     tiles.reserve(start.managed_tiles.size());
     for (const auto& tile : start.managed_tiles)
         tiles.push_back(write_tile(tile));
-    return {{"managed_tiles", std::move(tiles)},
+    json::object result{{"managed_tiles", std::move(tiles)},
             {"shed", write_fixed_array(start.shed)},
             {"seeds", write_fixed_array(start.seeds)}};
+    if (start.shed_capacity != std::numeric_limits<int16_t>::max())
+        result["shed_capacity"] = start.shed_capacity;
+    return result;
 }
 
 OutcomeKey read_key(const json::value& value, const std::string& path) {

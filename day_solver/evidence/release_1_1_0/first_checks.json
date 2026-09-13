@@ -1,0 +1,44 @@
+[
+  {
+    "name": "root_tests",
+    "command": [
+      "taskset",
+      "-c",
+      "14",
+      "ctest",
+      "--test-dir",
+      "day_solver/build",
+      "--output-on-failure"
+    ],
+    "exit_code": 0,
+    "seconds": 33.13167270895792
+  },
+  {
+    "name": "source_build",
+    "command": [
+      "taskset",
+      "-c",
+      "0,2",
+      "cmake",
+      "--build",
+      "day_solver/build-source",
+      "-j2"
+    ],
+    "exit_code": 0,
+    "seconds": 90.74910793401068
+  },
+  {
+    "name": "source_tests",
+    "command": [
+      "taskset",
+      "-c",
+      "14",
+      "ctest",
+      "--test-dir",
+      "day_solver/build-source",
+      "--output-on-failure"
+    ],
+    "exit_code": 8,
+    "seconds": 41.46245456300676
+  }
+]

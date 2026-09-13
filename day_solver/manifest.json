@@ -1,9 +1,9 @@
 {
-  "format_version": 1,
+  "format_version": 2,
   "name": "kaggriculture-day-solver",
-  "package_version": "1.0.0",
-  "created_at_utc": "2026-09-07T00:00:53.154143+00:00",
-  "backend": "native_quick_portfolio_v30",
+  "package_version": "1.2.0",
+  "created_at_utc": "2026-09-13T19:55:24.478435+00:00",
+  "backend": "capacity_aware_portfolio",
   "reference_backend": "native_quick_portfolio_v20",
   "input_schema": "schemas/day_problem_v3.schema.json",
   "contract": "objective.md",
@@ -13,29 +13,27 @@
   "trained_model": false,
   "original_route_input": false,
   "options": {
-    "iterations": 64,
-    "variants": 8,
-    "rounds": 2,
-    "fallback": true,
-    "compact": true,
-    "exact_tuning": 2,
-    "screen_tuning": 2,
-    "route_seconds": 0.15,
-    "completion_seconds": 1.5,
-    "screen_seconds": 0.9,
-    "retry_seconds": 4,
-    "geometry_seconds": 1,
-    "geometry_after": 2,
-    "modern_fallback": true,
-    "materialize": true,
+    "default_search": "portfolio",
     "soft_time_limit_seconds": 900,
-    "fallback_threads": 8
+    "fallback_threads": 8,
+    "public_searches": [
+      "portfolio",
+      "regret",
+      "regret-deferred",
+      "regret-fast"
+    ]
   },
-  "source_binary_sha256": "534cdccea9bdfd52b48d8b3fe57c65e048bc360fc6e8a347eee404dc39b28289",
+  "source_binary_sha256": "624ddf71bf7016c4384d628fae51dd28ba54bc1ad8376e049e2686e96f42c6a3",
   "reference_binary_sha256": "feff9c17485e44a644ec85872105cc0e16f576636fdfed008c59a10171b9be18",
-  "objective_sha256": "5b7f5ad4859e49b28ab32bf1c5226555e3789c9b7a04d9b34a1944afbb61907a",
+  "cli_binary": "runtime/day_solver_cli",
+  "audit_binary": "runtime/day_solver_audit",
+  "audit_binary_sha256": "4a24d58f6acf162fb395a55820f8b9b4468aa550ccd84c5396ccfed128593fb5",
+  "historical_v30_binary_sha256": "534cdccea9bdfd52b48d8b3fe57c65e048bc360fc6e8a347eee404dc39b28289",
+  "source_hashes": "evidence/release_1_2_0/source_hashes.json",
+  "objective_sha256": "97576629eebcb904d98a9c9c8fa05fd3520fe9f35378e10164bfc8a7b49228f7",
+  "historical_objective_sha256": "5b7f5ad4859e49b28ab32bf1c5226555e3789c9b7a04d9b34a1944afbb61907a",
   "engine_headers": {
-    "sim.hpp": "56715eaef9ac43d20e5470edb6547eff691b66e02e04980848e2fba0bb80902a",
+    "sim.hpp": "c136c8a8ba74804cc43e5016e5aaae5fd7de15ff43138a5e1790e7f9a11ce5bb",
     "pyrandom.hpp": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09"
   },
   "platform": {
@@ -53,18 +51,15 @@
       10,
       10
     ],
-    "shed_capacity_ignored": true,
+    "shed_capacity_ignored": false,
+    "omitted_shed_capacity_is_unlimited": true,
     "random_night_weeds_excluded": true,
     "budget_is_soft": true,
     "economic_feasibility_external": true,
-    "v30_new_unseen_validation": false,
-    "unresolved_replay_days": [
-      "106126272_p0_d16",
-      "106139776_p1_d16"
-    ]
+    "search_is_incomplete": true
   },
-  "benchmarks": "benchmarks/cases.json",
-  "verification": "evidence/verification/package_checks.json",
+  "benchmarks": "docs/benchmarks.md",
+  "verification": "evidence/release_1_2_0/checks.json",
   "frozen_files": "SHA256SUMS",
   "excluded": [
     "/build*/",
@@ -80,5 +75,5 @@
     "Documentation, schema and exposed benchmark inputs",
     "Standard-library inventory task extractor, checked against saved ledgers"
   ],
-  "solver_algorithm_changes": false
+  "solver_algorithm_changes": true
 }

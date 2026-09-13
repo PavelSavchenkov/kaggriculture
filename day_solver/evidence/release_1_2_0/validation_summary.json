@@ -1,0 +1,21 @@
+{
+  "regression_groups_per_build": 7,
+  "ordinary_passed": 7,
+  "rebuilt_core_passed": 7,
+  "relocated_passed": 7,
+  "public_cli_policies_passed": 4,
+  "full_engine_schedules": 6,
+  "full_engine_hours": 144,
+  "overflow_control_passed": true,
+  "zero_and_invalid_options_passed": true,
+  "binary_sha256": "624ddf71bf7016c4384d628fae51dd28ba54bc1ad8376e049e2686e96f42c6a3",
+  "source_library_sha256": "054882018e49b542712c44ed04ec45b2e765a3b45f07eb6a500ad1a58c3db93d",
+  "upstream_header_validation": {
+    "upstream_commit": "5a618799cc",
+    "binaries_identical": true,
+    "first_suite_passed": 5,
+    "first_suite_total": 7,
+    "timing_recheck_passed": 2,
+    "automatic_git_packing_paused_for_recheck": true
+  }
+}

@@ -1,0 +1,267 @@
+Internal ctest changing into directory: /home/pavel/Programming/kaggriculture/day_solver/build-source
+Test project /home/pavel/Programming/kaggriculture/day_solver/build-source
+    Start 1: day_solver_constructor_budget
+1/6 Test #1: day_solver_constructor_budget ....   Passed    0.03 sec
+    Start 2: day_solver_materialized_stock
+2/6 Test #2: day_solver_materialized_stock ....   Passed    7.69 sec
+    Start 3: day_solver_storage
+3/6 Test #3: day_solver_storage ...............   Passed    1.59 sec
+    Start 4: day_solver_cold
+4/6 Test #4: day_solver_cold ..................Subprocess aborted***Exception:  22.00 sec
+/home/pavel/Programming/kaggriculture/day_solver/tests/cold/early_milk_handoff.json strict 0.809692
+/home/pavel/Programming/kaggriculture/day_solver/tests/cold/staged_seed_and_animal_purchases.json strict 1.38053
+/home/pavel/Programming/kaggriculture/day_solver/tests/cold/unpolished_completion.json strict 0.499088
+/home/pavel/Programming/kaggriculture/day_solver/tests/cold/third_day14.json strict 2.10054
+/home/pavel/Programming/kaggriculture/day_solver/tests/cold/regret_third_day15.json strict 3.97263
+capacity/fixed_stock/build	variables=928	0.000439083
+capacity/fixed_stock/search	INFEASIBLE	0.0113799
+capacity/candidate	REJECTED	0.0297938
+capacity/fixed_stock/build	variables=732	0.0003976
+capacity/fixed_stock/search	INFEASIBLE	0.00382417
+capacity/candidate	REJECTED	0.0194244
+capacity/fixed_stock/build	variables=874	0.000427703
+capacity/fixed_stock/search	INFEASIBLE	0.00808058
+capacity/candidate	REJECTED	0.0212028
+capacity/fixed_stock/build	variables=1189	0.000789821
+capacity/fixed_stock/search	INFEASIBLE	0.0601144
+capacity/candidate	REJECTED	0.0866113
+proposal/quick/r0/v0/construct	FEASIBLE	0.194314
+proposal/quick/r0/v0/complete	UNKNOWN	0.0343605
+proposal/quick/r0/v0/complete/screen	INFEASIBLE	0.032961
+proposal/quick/r0/v1/construct	FEASIBLE	0.184226
+proposal/quick/r0/v1/complete	FEASIBLE	0.173127
+proposal/quick/r0/v1/complete/direct_schedule	FEASIBLE	0.000228577
+proposal/quick/r0/v1/complete/screen	OPTIMAL	0.142032
+proposal/quick/r0/v1/complete/exact	FEASIBLE	0
+proposal/jobs/job_beam/build	UNKNOWN	0.00150242
+proposal/jobs/job_beam/build/detail	jobs=62	0
+proposal/jobs/job_beam/v0/search	UNKNOWN	0.0590387
+proposal/jobs/job_beam/v0/search/detail	depth=62 candidates=82345	0
+proposal/jobs/job_beam/v0/polish	UNKNOWN	0.0870341
+proposal/jobs/job_beam/v0/polish/detail	221678.200000 -> 1562.800000	0
+proposal/jobs/job_beam/v0/candidate0	UNKNOWN	0
+proposal/jobs/job_beam/v0/candidate0/detail	cost=1562.800000 overtime=0 late=0 wheat=15 fertilizer=6	0
+proposal/jobs/job_beam/v0/complete0	UNKNOWN	0.400868
+proposal/jobs/job_beam/v0/complete0/detail	INFEASIBLE	0
+proposal/jobs/job_beam/v0/profile0	UNKNOWN	0
+proposal/jobs/job_beam/v0/profile0/detail	build=0.007094 solve=0.393726 materialize=0.000000 branches=12111 conflicts=554	0
+proposal/jobs/job_beam/v0/candidate1	UNKNOWN	0
+proposal/jobs/job_beam/v0/candidate1/detail	cost=221678.200000 overtime=2 late=2 wheat=15 fertilizer=5	0
+proposal/jobs/job_beam/v0/complete1	UNKNOWN	0.0796305
+proposal/jobs/job_beam/v0/complete1/detail	INFEASIBLE	0
+proposal/jobs/job_beam/v0/profile1	UNKNOWN	0
+proposal/jobs/job_beam/v0/profile1/detail	build=0.007447 solve=0.072151 materialize=0.000000 branches=0 conflicts=0	0
+proposal/jobs/job_beam/v2/search	UNKNOWN	0.0581396
+proposal/jobs/job_beam/v2/search/detail	depth=62 candidates=164965	0
+proposal/jobs/job_beam/v2/polish	UNKNOWN	0.095148
+proposal/jobs/job_beam/v2/polish/detail	761700.200000 -> 1604.200000	0
+proposal/jobs/job_beam/v2/candidate0	UNKNOWN	0
+proposal/jobs/job_beam/v2/candidate0/detail	cost=1604.200000 overtime=0 late=0 wheat=15 fertilizer=2	0
+proposal/jobs/job_beam/v2/complete0	UNKNOWN	0.375354
+proposal/jobs/job_beam/v2/complete0/detail	INFEASIBLE	0
+proposal/jobs/job_beam/v2/profile0	UNKNOWN	0
+proposal/jobs/job_beam/v2/profile0/detail	build=0.005630 solve=0.369685 materialize=0.000000 branches=7888 conflicts=305	0
+proposal/jobs/job_beam/v2/candidate1	UNKNOWN	0
+proposal/jobs/job_beam/v2/candidate1/detail	cost=761700.200000 overtime=5 late=6 wheat=15 fertilizer=0	0
+proposal/jobs/job_beam/v2/complete1	UNKNOWN	0.0122231
+proposal/jobs/job_beam/v2/complete1/detail	INFEASIBLE	0
+proposal/jobs/job_beam/v2/profile1	UNKNOWN	0
+proposal/jobs/job_beam/v2/profile1/detail	build=0.005306 solve=0.006902 materialize=0.000000 branches=0 conflicts=0	0
+proposal/jobs/job_beam/v1/search	UNKNOWN	0.0621687
+proposal/jobs/job_beam/v1/search/detail	depth=62 candidates=247291	0
+proposal/jobs/job_beam/v1/polish	UNKNOWN	0.0653915
+proposal/jobs/job_beam/v1/polish/detail	111669.800000 -> 111609.600000	0
+proposal/jobs/job_beam/v1/candidate0	UNKNOWN	0
+proposal/jobs/job_beam/v1/candidate0/detail	cost=111609.600000 overtime=1 late=1 wheat=15 fertilizer=3	0
+proposal/jobs/job_beam/v1/complete0	UNKNOWN	0.0533367
+proposal/jobs/job_beam/v1/complete0/detail	INFEASIBLE	0
+proposal/jobs/job_beam/v1/profile0	UNKNOWN	0
+proposal/jobs/job_beam/v1/profile0/detail	build=0.006415 solve=0.046894 materialize=0.000000 branches=0 conflicts=0	0
+proposal/jobs/job_beam/v1/candidate1	UNKNOWN	0
+proposal/jobs/job_beam/v1/candidate1/detail	cost=111669.800000 overtime=1 late=1 wheat=15 fertilizer=3	0
+proposal/jobs/job_beam/v1/complete1	UNKNOWN	0.0518039
+proposal/jobs/job_beam/v1/complete1/detail	INFEASIBLE	0
+proposal/jobs/job_beam/v1/profile1	UNKNOWN	0
+proposal/jobs/job_beam/v1/profile1/detail	build=0.006094 solve=0.045687 materialize=0.000000 branches=0 conflicts=0	0
+proposal/jobs/job_beam/v3/search	UNKNOWN	0.0579974
+proposal/jobs/job_beam/v3/search/detail	depth=62 candidates=329911	0
+proposal/jobs/job_beam/v3/polish	UNKNOWN	0.0968904
+proposal/jobs/job_beam/v3/polish/detail	761700.200000 -> 1604.200000	0
+proposal/job_resource/job_beam/build	UNKNOWN	0.00153226
+proposal/job_resource/job_beam/build/detail	jobs=62	0
+proposal/job_resource/job_beam/v2/search	UNKNOWN	0.0579445
+proposal/job_resource/job_beam/v2/search/detail	depth=62 candidates=82450	0
+proposal/job_resource/job_beam/v2/polish	UNKNOWN	0.104902
+proposal/job_resource/job_beam/v2/polish/detail	1611.600000 -> 1433.400000	0
+proposal/job_resource/job_beam/v2/candidate0	UNKNOWN	0
+proposal/job_resource/job_beam/v2/candidate0/detail	cost=1433.400000 overtime=0 late=0 wheat=15 fertilizer=2	0
+proposal/job_resource/job_beam/v2/complete0	UNKNOWN	0.398931
+proposal/job_resource/job_beam/v2/complete0/detail	INFEASIBLE	0
+proposal/job_resource/job_beam/v2/profile0	UNKNOWN	0
+proposal/job_resource/job_beam/v2/profile0/detail	build=0.005838 solve=0.393055 materialize=0.000000 branches=9947 conflicts=627	0
+proposal/job_regret/job_beam/build	UNKNOWN	0.00149701
+proposal/job_regret/job_beam/build/detail	jobs=62	0
+proposal/job_regret/job_beam/v0/search	UNKNOWN	0.0333102
+proposal/job_regret/job_beam/v0/search/detail	depth=62 candidates=63072	0
+proposal/job_regret/job_beam/v0/polish	UNKNOWN	0.0572561
+proposal/job_regret/job_beam/v0/polish/detail	951580.600000 -> 1592.600000	0
+proposal/job_regret/job_beam/v0/candidate0	UNKNOWN	0
+proposal/job_regret/job_beam/v0/candidate0/detail	cost=1592.600000 overtime=0 late=0 wheat=15 fertilizer=3	0
+proposal/job_regret/job_beam/v0/complete0	UNKNOWN	0.157533
+proposal/job_regret/job_beam/v0/complete0/detail	INFEASIBLE	0
+proposal/job_regret/job_beam/v0/profile0	UNKNOWN	0
+proposal/job_regret/job_beam/v0/profile0/detail	build=0.005926 solve=0.151570 materialize=0.000000 branches=853 conflicts=37	0
+proposal/job_regret/job_beam/v0/candidate1	UNKNOWN	0
+proposal/job_regret/job_beam/v0/candidate1/detail	cost=951580.600000 overtime=3 late=5 wheat=15 fertilizer=3	0
+proposal/job_regret/job_beam/v0/complete1	UNKNOWN	0.0441925
+proposal/job_regret/job_beam/v0/complete1/detail	INFEASIBLE	0
+proposal/job_regret/job_beam/v0/profile1	UNKNOWN	0
+proposal/job_regret/job_beam/v0/profile1/detail	build=0.005475 solve=0.038692 materialize=0.000000 branches=0 conflicts=0	0
+proposal/job_regret/job_beam/v2/search	UNKNOWN	0.0362559
+proposal/job_regret/job_beam/v2/search/detail	depth=62 candidates=125945	0
+proposal/job_regret/job_beam/v2/polish	UNKNOWN	0.110439
+proposal/job_regret/job_beam/v2/polish/detail	2101556.800000 -> 1516.000000	0
+proposal/job_regret/job_beam/v2/candidate0	UNKNOWN	0
+proposal/job_regret/job_beam/v2/candidate0/detail	cost=1516.000000 overtime=0 late=0 wheat=15 fertilizer=6	0
+proposal/job_regret/job_beam/v2/complete0	UNKNOWN	0.647344
+proposal/job_regret/job_beam/v2/complete0/detail	INFEASIBLE	0
+proposal/job_regret/job_beam/v2/profile0	UNKNOWN	0
+proposal/job_regret/job_beam/v2/profile0/detail	build=0.007026 solve=0.640270 materialize=0.000000 branches=13048 conflicts=1017	0
+proposal/job_regret/job_beam/v2/candidate1	UNKNOWN	0
+proposal/job_regret/job_beam/v2/candidate1/detail	cost=2101556.800000 overtime=6 late=10 wheat=15 fertilizer=5	0
+proposal/job_regret/job_beam/v2/complete1	UNKNOWN	0.0606862
+proposal/job_regret/job_beam/v2/complete1/detail	INFEASIBLE	0
+proposal/job_regret/job_beam/v2/profile1	UNKNOWN	0
+proposal/job_regret/job_beam/v2/profile1/detail	build=0.006919 solve=0.053734 materialize=0.000000 branches=0 conflicts=0	0
+proposal/job_regret/job_beam/v1/search	UNKNOWN	0.0377872
+proposal/job_regret/job_beam/v1/search/detail	depth=62 candidates=189017	0
+proposal/job_regret/job_beam/v1/polish	UNKNOWN	0.0580037
+proposal/job_regret/job_beam/v1/polish/detail	951580.600000 -> 1592.600000	0
+proposal/job_regret/job_beam/v3/search	UNKNOWN	0.0356545
+proposal/job_regret/job_beam/v3/search/detail	depth=62 candidates=251890	0
+proposal/job_regret/job_beam/v3/polish	UNKNOWN	0.108445
+proposal/job_regret/job_beam/v3/polish/detail	2101556.800000 -> 1516.000000	0
+proposal/job_regret/job_beam/retry_v2/rebuild	UNKNOWN	0.500032
+proposal/job_regret/job_beam/retry_v2/rebuild/detail	alternatives=8	0
+proposal/job_regret/job_beam/retry_v2/candidate0	UNKNOWN	0
+proposal/job_regret/job_beam/retry_v2/candidate0/detail	cost=1459.800000 overtime=0 late=0 wheat=15 fertilizer=5	0
+proposal/job_regret/job_beam/retry_v2/complete0	UNKNOWN	0.114761
+proposal/job_regret/job_beam/retry_v2/complete0/detail	UNKNOWN	0
+proposal/job_regret/job_beam/retry_v2/profile0	UNKNOWN	0
+proposal/job_regret/job_beam/retry_v2/profile0/detail	build=0.006976 solve=0.107756 materialize=0.000000 branches=0 conflicts=0	0
+proposal/job_regret/job_beam/cache	UNKNOWN	0
+proposal/job_regret/job_beam/cache/detail	hits=1161653 misses=222712 entries=9720 resets=13	0
+proposal/quick/r0/v2/construct	FEASIBLE	0.192419
+proposal/quick/r0/v2/complete	UNKNOWN	0.0336855
+proposal/quick/r0/v2/complete/screen	INFEASIBLE	0.0324352
+proposal/quick/r0/v3/construct	UNKNOWN	0.0326229
+proposal/quick/r0/v4/construct	UNKNOWN	0.0320978
+proposal/quick/r0/v5/construct	FEASIBLE	0.182697
+proposal/quick/r0/v5/complete	FEASIBLE	0.170539
+proposal/quick/r0/v5/complete/direct_schedule	FEASIBLE	0.000231744
+proposal/quick/r0/v5/complete/screen	OPTIMAL	0.149731
+proposal/quick/r0/v5/complete/exact	FEASIBLE	0
+proposal/quick/r0/v6/construct	UNKNOWN	0.0321916
+proposal/quick/r0/v7/construct	FEASIBLE	0.185507
+proposal/quick/r0/v7/complete	FEASIBLE	0.140887
+proposal/quick/r0/v7/complete/direct_schedule	FEASIBLE	0.000232886
+proposal/quick/r0/v7/complete/screen	OPTIMAL	0.118312
+proposal/quick/r0/v7/complete/exact	FEASIBLE	0
+proposal/job_fragments/job_beam/build	UNKNOWN	0.00150823
+proposal/job_fragments/job_beam/build/detail	jobs=91	0
+proposal/job_fragments/job_beam/v0/search	UNKNOWN	0.134356
+proposal/job_fragments/job_beam/v0/search/detail	depth=91 candidates=161886	0
+proposal/job_fragments/job_beam/v0/polish	UNKNOWN	0.502023
+proposal/job_fragments/job_beam/v0/polish/detail	661775.600000 -> 1574.800000	0
+proposal/job_fragments/job_beam/v0/candidate0	UNKNOWN	0
+proposal/job_fragments/job_beam/v0/candidate0/detail	cost=1574.800000 overtime=0 late=0 wheat=15 fertilizer=7	0
+proposal/job_fragments/job_beam/v0/complete0	UNKNOWN	0.476719
+proposal/job_fragments/job_beam/v0/complete0/detail	INFEASIBLE	0
+proposal/job_fragments/job_beam/v0/profile0	UNKNOWN	0
+proposal/job_fragments/job_beam/v0/profile0/detail	build=0.006778 solve=0.469895 materialize=0.000000 branches=10693 conflicts=445	0
+proposal/job_fragments/job_beam/v0/candidate1	UNKNOWN	0
+proposal/job_fragments/job_beam/v0/candidate1/detail	cost=661775.600000 overtime=4 late=5 wheat=15 fertilizer=6	0
+proposal/job_fragments/job_beam/v0/complete1	UNKNOWN	0.0526887
+proposal/job_fragments/job_beam/v0/complete1/detail	INFEASIBLE	0
+proposal/job_fragments/job_beam/v0/profile1	UNKNOWN	0
+proposal/job_fragments/job_beam/v0/profile1/detail	build=0.006617 solve=0.046046 materialize=0.000000 branches=0 conflicts=0	0
+proposal/job_fragments/job_beam/v1/search	UNKNOWN	0.134487
+proposal/job_fragments/job_beam/v1/search/detail	depth=91 candidates=323772	0
+proposal/job_fragments/job_beam/v1/polish	UNKNOWN	0.500263
+proposal/job_fragments/job_beam/v1/polish/detail	661775.600000 -> 1574.800000	0
+proposal/job_fragments/job_beam/v2/search	UNKNOWN	0.134347
+proposal/job_fragments/job_beam/v2/search/detail	depth=91 candidates=485046	0
+proposal/job_fragments/job_beam/v2/polish	UNKNOWN	0.224424
+proposal/job_fragments/job_beam/v2/polish/detail	101730.200000 -> 1520.400000	0
+proposal/job_fragments/job_beam/v2/candidate0	UNKNOWN	0
+proposal/job_fragments/job_beam/v2/candidate0/detail	cost=1520.400000 overtime=0 late=0 wheat=15 fertilizer=3	0
+proposal/job_fragments/job_beam/v2/complete0	UNKNOWN	0.631644
+proposal/job_fragments/job_beam/v2/complete0/detail	INFEASIBLE	0
+proposal/job_fragments/job_beam/v2/profile0	UNKNOWN	0
+proposal/job_fragments/job_beam/v2/profile0/detail	build=0.009758 solve=0.621837 materialize=0.000000 branches=9708 conflicts=711	0
+proposal/job_fragments/job_beam/v2/candidate1	UNKNOWN	0
+proposal/job_fragments/job_beam/v2/candidate1/detail	cost=101730.200000 overtime=0 late=0 wheat=15 fertilizer=3	0
+proposal/job_fragments/job_beam/v2/complete1	UNKNOWN	0.0484683
+proposal/job_fragments/job_beam/v2/complete1/detail	INFEASIBLE	0
+proposal/job_fragments/job_beam/v2/profile1	UNKNOWN	0
+proposal/job_fragments/job_beam/v2/profile1/detail	build=0.005882 solve=0.042557 materialize=0.000000 branches=0 conflicts=0	0
+proposal/job_fragments/job_beam/v3/search	UNKNOWN	0.0766773
+proposal/job_fragments/job_beam/v3/search/detail	depth=68 candidates=580341	0
+proposal/job_rebuild/job_beam/build	UNKNOWN	0.00154244
+proposal/job_rebuild/job_beam/build/detail	jobs=62	0
+proposal/job_rebuild/job_beam/v2/search	UNKNOWN	0.035917
+proposal/job_rebuild/job_beam/v2/search/detail	depth=62 candidates=62847	0
+proposal/job_rebuild/job_beam/v2/polish	UNKNOWN	0.0118535
+proposal/job_rebuild/job_beam/v2/polish/detail	1484.200000 -> 1484.200000	0
+proposal/job_rebuild/job_beam/v2/rebuild	UNKNOWN	0.500242
+proposal/job_rebuild/job_beam/v2/rebuild/detail	alternatives=8	0
+proposal/job_rebuild/job_beam/v2/candidate0	UNKNOWN	0
+proposal/job_rebuild/job_beam/v2/candidate0/detail	cost=1484.200000 overtime=0 late=0 wheat=15 fertilizer=4	0
+proposal/job_rebuild/job_beam/v2/complete0	UNKNOWN	0.499891
+proposal/job_rebuild/job_beam/v2/complete0/detail	UNKNOWN	0
+proposal/job_rebuild/job_beam/v2/profile0	UNKNOWN	0
+proposal/job_rebuild/job_beam/v2/profile0/detail	build=0.091272 solve=0.408550 materialize=0.000000 branches=0 conflicts=0	0
+proposal/job_rebuild/job_beam/v2/candidate1	UNKNOWN	0
+proposal/job_rebuild/job_beam/v2/candidate1/detail	cost=1395.600000 overtime=0 late=0 wheat=15 fertilizer=0	0
+proposal/job_rebuild/job_beam/v2/complete1	UNKNOWN	0.412507
+proposal/job_rebuild/job_beam/v2/complete1/detail	UNKNOWN	0
+proposal/job_rebuild/job_beam/v2/profile1	UNKNOWN	0
+proposal/job_rebuild/job_beam/v2/profile1/detail	build=0.009764 solve=0.402675 materialize=0.000000 branches=7515 conflicts=108	0
+proposal/job_rebuild/job_beam/v2/candidate2	UNKNOWN	0
+proposal/job_rebuild/job_beam/v2/candidate2/detail	cost=1398.000000 overtime=0 late=0 wheat=15 fertilizer=0	0
+proposal/job_rebuild/job_beam/v2/complete2	UNKNOWN	0.413476
+proposal/job_rebuild/job_beam/v2/complete2/detail	UNKNOWN	0
+proposal/job_rebuild/job_beam/v2/profile2	UNKNOWN	0
+proposal/job_rebuild/job_beam/v2/profile2/detail	build=0.010024 solve=0.403381 materialize=0.000000 branches=7585 conflicts=111	0
+proposal/job_rebuild/job_beam/v2/candidate3	UNKNOWN	0
+proposal/job_rebuild/job_beam/v2/candidate3/detail	cost=1408.600000 overtime=0 late=0 wheat=15 fertilizer=2	0
+proposal/job_rebuild/job_beam/v2/complete3	UNKNOWN	0.125695
+proposal/job_rebuild/job_beam/v2/complete3/detail	UNKNOWN	0
+proposal/job_rebuild/job_beam/v2/profile3	UNKNOWN	0
+proposal/job_rebuild/job_beam/v2/profile3/detail	build=0.009953 solve=0.115680 materialize=0.000000 branches=0 conflicts=0	0
+proposal/job_rebuild/job_beam/cache	UNKNOWN	0
+proposal/job_rebuild/job_beam/cache/detail	hits=527298 misses=129811 entries=15123 resets=7	0
+proposal/quick/r1/v0/construct	FEASIBLE	0.406659
+proposal/quick/r1/v0/complete	UNKNOWN	0.0172743
+proposal/quick/r1/v0/complete/screen	INFEASIBLE	0.0148528
+proposal/quick/r1/v1/construct	FEASIBLE	0.307624
+proposal/quick/r1/v1/complete	FEASIBLE	0.355915
+proposal/quick/r1/v1/complete/direct_schedule	FEASIBLE	0.00033305
+proposal/quick/r1/v1/complete/screen	OPTIMAL	0.265688
+proposal/quick/r1/v1/complete/exact	FEASIBLE	0
+proposal/quick/r1/v2/construct	FEASIBLE	0.225476
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  /home/pavel/Programming/kaggriculture/day_solver/tests/cold/rebuilt_unknown_day25.json: cold contract returned UNKNOWN
+
+    Start 5: day_solver_api
+5/6 Test #5: day_solver_api ...................   Passed    7.92 sec
+    Start 6: day_solver_problem_builder
+6/6 Test #6: day_solver_problem_builder .......   Passed    2.21 sec
+
+83% tests passed, 1 tests failed out of 6
+
+Total Test time (real) =  41.44 sec
+
+The following tests FAILED:
+	  4 - day_solver_cold (Subprocess aborted)
+Errors while running CTest

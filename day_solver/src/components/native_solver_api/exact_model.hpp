@@ -183,6 +183,9 @@ struct ExactModel {
         for (const auto& event : purchases)
             if (event.market_op == kag::M_BUY_PRODUCT || event.market_op == kag::M_BUY_ANIMAL)
                 max_stock[event.item] += event.quantity;
+        if (bounded_storage())
+            for (int item = 0; item < items; ++item)
+                max_cargo[item] = std::max(max_cargo[item], max_stock[item]);
         for (int worker = 0; worker < workers; ++worker)
             for (int hour = 0; hour <= hours; ++hour) x[worker][hour] = integer(0, 9, name("x", {worker, hour}));
         for (int worker = 0; worker < workers; ++worker)
@@ -291,18 +294,19 @@ struct ExactModel {
             for (int hour = releases[worker]; hour < hours; ++hour) {
                 std::vector<BoolVar> inventory;
                 for (int item = 0; item < items; ++item) {
-                    if (!total_input[item]) continue;
+                    const Count limit = bounded_storage() ? max_stock[item] : total_input[item];
+                    if (!limit) continue;
                     const int key = inventory_index(worker, hour, item);
                     const auto literal = boolean(name("pickup", {worker, hour, item}));
-                    const auto amount = integer(0, total_input[item], name("pickup_quantity", {worker, hour, item}));
+                    const auto amount = integer(0, std::min(limit, ds::MAX_INPUT_COUNT), name("pickup_quantity", {worker, hour, item}));
                     model.AddGreaterOrEqual(amount, literal);
-                    model.AddLessOrEqual(amount, literal * total_input[item]);
+                    model.AddLessOrEqual(amount, literal * limit);
                     at_shed(worker, hour, literal);
                     pickup[key] = literal; pickup_quantity[key] = amount;
                     inventory.push_back(literal);
                 }
                 for (int item = 0; item < items; ++item) {
-                    if (!total_output[item]) continue;
+                    if (!(bounded_storage() ? max_cargo[item] : total_output[item])) continue;
                     const int key = inventory_index(worker, hour, item);
                     const auto literal = boolean(name("place", {worker, hour, item}));
                     // UnitAction.n is signed32; larger cargo can be returned with DROP.
@@ -345,7 +349,14 @@ struct ExactModel {
             }
     }
 
+    bool bounded_storage() const {
+        return problem.start.shed_capacity != std::numeric_limits<int16_t>::max();
+    }
+
+#include "bounded_shed.hpp"
+
     void add_shed() {
+        if (bounded_storage()) { add_bounded_shed(); return; }
         std::array<LinearExpr, items> shed;
         for (int item = 0; item < items; ++item) shed[item] = problem.start.shed[item];
         for (int hour = 0; hour < hours; ++hour) {

@@ -1,0 +1,379 @@
+{
+  "profiles": [
+    {
+      "name": "main4",
+      "solver": "main",
+      "seconds": 4.0,
+      "by_extra": {
+        "0": {
+          "requested": 29,
+          "exact": 29,
+          "within_limit": 29,
+          "fraction_within_limit": 1.0,
+          "mean_seconds": 0.3902271517241379,
+          "max_seconds": 1.87926
+        },
+        "1": {
+          "requested": 29,
+          "exact": 29,
+          "within_limit": 29,
+          "fraction_within_limit": 1.0,
+          "mean_seconds": 0.39219495862068965,
+          "max_seconds": 1.62675
+        },
+        "2": {
+          "requested": 29,
+          "exact": 29,
+          "within_limit": 29,
+          "fraction_within_limit": 1.0,
+          "mean_seconds": 0.39269101379310345,
+          "max_seconds": 1.5449
+        },
+        "3": {
+          "requested": 29,
+          "exact": 29,
+          "within_limit": 29,
+          "fraction_within_limit": 1.0,
+          "mean_seconds": 0.3858141172413793,
+          "max_seconds": 1.463
+        }
+      },
+      "by_player": {
+        "Unknown Mother-Goose": {
+          "0": {
+            "requested": 29,
+            "exact": 29,
+            "within_limit": 29,
+            "fraction_within_limit": 1.0,
+            "mean_seconds": 0.3902271517241379,
+            "max_seconds": 1.87926
+          },
+          "1": {
+            "requested": 29,
+            "exact": 29,
+            "within_limit": 29,
+            "fraction_within_limit": 1.0,
+            "mean_seconds": 0.39219495862068965,
+            "max_seconds": 1.62675
+          },
+          "2": {
+            "requested": 29,
+            "exact": 29,
+            "within_limit": 29,
+            "fraction_within_limit": 1.0,
+            "mean_seconds": 0.39269101379310345,
+            "max_seconds": 1.5449
+          },
+          "3": {
+            "requested": 29,
+            "exact": 29,
+            "within_limit": 29,
+            "fraction_within_limit": 1.0,
+            "mean_seconds": 0.3858141172413793,
+            "max_seconds": 1.463
+          }
+        }
+      }
+    },
+    {
+      "name": "main12",
+      "solver": "main",
+      "seconds": 12.0,
+      "by_extra": {
+        "0": {
+          "requested": 29,
+          "exact": 29,
+          "within_limit": 29,
+          "fraction_within_limit": 1.0,
+          "mean_seconds": 0.43146313103448275,
+          "max_seconds": 2.17264
+        },
+        "1": {
+          "requested": 29,
+          "exact": 29,
+          "within_limit": 29,
+          "fraction_within_limit": 1.0,
+          "mean_seconds": 0.39515064137931033,
+          "max_seconds": 1.62569
+        },
+        "2": {
+          "requested": 29,
+          "exact": 29,
+          "within_limit": 29,
+          "fraction_within_limit": 1.0,
+          "mean_seconds": 0.3904337620689655,
+          "max_seconds": 1.48799
+        },
+        "3": {
+          "requested": 29,
+          "exact": 29,
+          "within_limit": 29,
+          "fraction_within_limit": 1.0,
+          "mean_seconds": 0.3809622896551724,
+          "max_seconds": 1.46924
+        }
+      },
+      "by_player": {
+        "Unknown Mother-Goose": {
+          "0": {
+            "requested": 29,
+            "exact": 29,
+            "within_limit": 29,
+            "fraction_within_limit": 1.0,
+            "mean_seconds": 0.43146313103448275,
+            "max_seconds": 2.17264
+          },
+          "1": {
+            "requested": 29,
+            "exact": 29,
+            "within_limit": 29,
+            "fraction_within_limit": 1.0,
+            "mean_seconds": 0.39515064137931033,
+            "max_seconds": 1.62569
+          },
+          "2": {
+            "requested": 29,
+            "exact": 29,
+            "within_limit": 29,
+            "fraction_within_limit": 1.0,
+            "mean_seconds": 0.3904337620689655,
+            "max_seconds": 1.48799
+          },
+          "3": {
+            "requested": 29,
+            "exact": 29,
+            "within_limit": 29,
+            "fraction_within_limit": 1.0,
+            "mean_seconds": 0.3809622896551724,
+            "max_seconds": 1.46924
+          }
+        }
+      }
+    },
+    {
+      "name": "deferred500",
+      "solver": "regret_deferred",
+      "seconds": 0.5,
+      "by_extra": {
+        "0": {
+          "requested": 29,
+          "exact": 24,
+          "within_limit": 24,
+          "fraction_within_limit": 0.8275862068965517,
+          "mean_seconds": 0.20586614827586208,
+          "max_seconds": 0.551187
+        },
+        "1": {
+          "requested": 29,
+          "exact": 26,
+          "within_limit": 26,
+          "fraction_within_limit": 0.896551724137931,
+          "mean_seconds": 0.19010900689655172,
+          "max_seconds": 0.533414
+        },
+        "2": {
+          "requested": 29,
+          "exact": 25,
+          "within_limit": 24,
+          "fraction_within_limit": 0.8275862068965517,
+          "mean_seconds": 0.22271786896551724,
+          "max_seconds": 0.535795
+        },
+        "3": {
+          "requested": 29,
+          "exact": 24,
+          "within_limit": 24,
+          "fraction_within_limit": 0.8275862068965517,
+          "mean_seconds": 0.22566779655172414,
+          "max_seconds": 0.518235
+        }
+      },
+      "by_player": {
+        "Unknown Mother-Goose": {
+          "0": {
+            "requested": 29,
+            "exact": 24,
+            "within_limit": 24,
+            "fraction_within_limit": 0.8275862068965517,
+            "mean_seconds": 0.20586614827586208,
+            "max_seconds": 0.551187
+          },
+          "1": {
+            "requested": 29,
+            "exact": 26,
+            "within_limit": 26,
+            "fraction_within_limit": 0.896551724137931,
+            "mean_seconds": 0.19010900689655172,
+            "max_seconds": 0.533414
+          },
+          "2": {
+            "requested": 29,
+            "exact": 25,
+            "within_limit": 24,
+            "fraction_within_limit": 0.8275862068965517,
+            "mean_seconds": 0.22271786896551724,
+            "max_seconds": 0.535795
+          },
+          "3": {
+            "requested": 29,
+            "exact": 24,
+            "within_limit": 24,
+            "fraction_within_limit": 0.8275862068965517,
+            "mean_seconds": 0.22566779655172414,
+            "max_seconds": 0.518235
+          }
+        }
+      }
+    },
+    {
+      "name": "raw90_500",
+      "solver": "beam1_regret_cache_polish_rawfirst_rawtimed_night_urgent_seeds_pickups_alternate_long_defer_raw90",
+      "seconds": 0.5,
+      "by_extra": {
+        "0": {
+          "requested": 29,
+          "exact": 24,
+          "within_limit": 24,
+          "fraction_within_limit": 0.8275862068965517,
+          "mean_seconds": 0.2031592620689655,
+          "max_seconds": 0.531272
+        },
+        "1": {
+          "requested": 29,
+          "exact": 26,
+          "within_limit": 26,
+          "fraction_within_limit": 0.896551724137931,
+          "mean_seconds": 0.18846484827586207,
+          "max_seconds": 0.526431
+        },
+        "2": {
+          "requested": 29,
+          "exact": 26,
+          "within_limit": 25,
+          "fraction_within_limit": 0.8620689655172413,
+          "mean_seconds": 0.2162671827586207,
+          "max_seconds": 0.51546
+        },
+        "3": {
+          "requested": 29,
+          "exact": 25,
+          "within_limit": 25,
+          "fraction_within_limit": 0.8620689655172413,
+          "mean_seconds": 0.2196677,
+          "max_seconds": 0.503865
+        }
+      },
+      "by_player": {
+        "Unknown Mother-Goose": {
+          "0": {
+            "requested": 29,
+            "exact": 24,
+            "within_limit": 24,
+            "fraction_within_limit": 0.8275862068965517,
+            "mean_seconds": 0.2031592620689655,
+            "max_seconds": 0.531272
+          },
+          "1": {
+            "requested": 29,
+            "exact": 26,
+            "within_limit": 26,
+            "fraction_within_limit": 0.896551724137931,
+            "mean_seconds": 0.18846484827586207,
+            "max_seconds": 0.526431
+          },
+          "2": {
+            "requested": 29,
+            "exact": 26,
+            "within_limit": 25,
+            "fraction_within_limit": 0.8620689655172413,
+            "mean_seconds": 0.2162671827586207,
+            "max_seconds": 0.51546
+          },
+          "3": {
+            "requested": 29,
+            "exact": 25,
+            "within_limit": 25,
+            "fraction_within_limit": 0.8620689655172413,
+            "mean_seconds": 0.2196677,
+            "max_seconds": 0.503865
+          }
+        }
+      }
+    },
+    {
+      "name": "polish50_500",
+      "solver": "beam1_regret_cache_polish50_rawfirst_rawtimed_night_urgent_seeds_pickups_alternate_long_defer_raw90",
+      "seconds": 0.5,
+      "by_extra": {
+        "0": {
+          "requested": 29,
+          "exact": 25,
+          "within_limit": 25,
+          "fraction_within_limit": 0.8620689655172413,
+          "mean_seconds": 0.19896603793103448,
+          "max_seconds": 0.523327
+        },
+        "1": {
+          "requested": 29,
+          "exact": 26,
+          "within_limit": 26,
+          "fraction_within_limit": 0.896551724137931,
+          "mean_seconds": 0.18759096896551725,
+          "max_seconds": 0.52641
+        },
+        "2": {
+          "requested": 29,
+          "exact": 26,
+          "within_limit": 25,
+          "fraction_within_limit": 0.8620689655172413,
+          "mean_seconds": 0.20786877241379312,
+          "max_seconds": 0.508093
+        },
+        "3": {
+          "requested": 29,
+          "exact": 25,
+          "within_limit": 25,
+          "fraction_within_limit": 0.8620689655172413,
+          "mean_seconds": 0.21280789310344828,
+          "max_seconds": 0.503402
+        }
+      },
+      "by_player": {
+        "Unknown Mother-Goose": {
+          "0": {
+            "requested": 29,
+            "exact": 25,
+            "within_limit": 25,
+            "fraction_within_limit": 0.8620689655172413,
+            "mean_seconds": 0.19896603793103448,
+            "max_seconds": 0.523327
+          },
+          "1": {
+            "requested": 29,
+            "exact": 26,
+            "within_limit": 26,
+            "fraction_within_limit": 0.896551724137931,
+            "mean_seconds": 0.18759096896551725,
+            "max_seconds": 0.52641
+          },
+          "2": {
+            "requested": 29,
+            "exact": 26,
+            "within_limit": 25,
+            "fraction_within_limit": 0.8620689655172413,
+            "mean_seconds": 0.20786877241379312,
+            "max_seconds": 0.508093
+          },
+          "3": {
+            "requested": 29,
+            "exact": 25,
+            "within_limit": 25,
+            "fraction_within_limit": 0.8620689655172413,
+            "mean_seconds": 0.21280789310344828,
+            "max_seconds": 0.503402
+          }
+        }
+      }
+    }
+  ]
+}

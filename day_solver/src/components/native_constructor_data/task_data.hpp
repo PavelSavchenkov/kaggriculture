@@ -189,7 +189,8 @@ struct TaskData {
         for (const auto& task : tasks) require(early[task.id] <= late[task.id], "inconsistent task windows");
     }
 
-    explicit TaskData(const ds::DayProblem& supplied) : problem(supplied) {
+    explicit TaskData(const ds::DayProblem& supplied) : TaskData(supplied, true) {}
+    TaskData(const ds::DayProblem& supplied, bool tighten_delivery_windows) : problem(supplied) {
         require(problem.format_version == 3 && ds::validate_problem(problem).empty(), "valid v3 input required");
         for (const auto& event : problem.market_plan) if (event.market_op == kag::M_HIRE) hires.push_back(event.hour);
         std::sort(hires.begin(), hires.end());
@@ -209,7 +210,7 @@ struct TaskData {
         task_windows();
         // Constructor windows include return deadlines; the coarse checker
         // deliberately omits these hard assignments in its relaxation.
-        for (const auto& [id, deadline] : fixed_deadline) {
+        if (tighten_delivery_windows) for (const auto& [id, deadline] : fixed_deadline) {
             const int last = deadline - tail(tasks[id].point) - 1;
             for (int task = id; task >= 0; task = tasks[task].predecessor)
                 late[task] = std::min(late[task], last);

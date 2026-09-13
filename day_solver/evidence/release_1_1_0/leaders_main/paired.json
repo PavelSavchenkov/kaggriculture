@@ -1,0 +1,47 @@
+{
+  "baseline": "experiments/v7/sep12_composition_to_schedule/results/strict_v510_stock_repair_leaders/baseline",
+  "candidate": "experiments/v7/sep12_composition_to_schedule/results/strict_v510_stock_repair_leaders/candidate",
+  "matched_contracts": 580,
+  "ignored_tile_list_order": false,
+  "by_extra_workers": {
+    "0": {
+      "cases": 145,
+      "baseline_exact": 123,
+      "candidate_exact": 123,
+      "baseline_mean_seconds": 1.0974642337931035,
+      "candidate_mean_seconds": 1.0964501551724137,
+      "gains": [],
+      "losses": []
+    },
+    "1": {
+      "cases": 145,
+      "baseline_exact": 141,
+      "candidate_exact": 143,
+      "baseline_mean_seconds": 0.7332573772413793,
+      "candidate_mean_seconds": 0.7229507524137931,
+      "gains": [
+        "108264640_p0_d24_extra1",
+        "108281702_p1_d25_extra1"
+      ],
+      "losses": []
+    },
+    "2": {
+      "cases": 145,
+      "baseline_exact": 139,
+      "candidate_exact": 139,
+      "baseline_mean_seconds": 0.7547134634482758,
+      "candidate_mean_seconds": 0.7572278641379311,
+      "gains": [],
+      "losses": []
+    },
+    "3": {
+      "cases": 145,
+      "baseline_exact": 140,
+      "candidate_exact": 140,
+      "baseline_mean_seconds": 0.7099169006896552,
+      "candidate_mean_seconds": 0.7124737848275862,
+      "gains": [],
+      "losses": []
+    }
+  }
+}

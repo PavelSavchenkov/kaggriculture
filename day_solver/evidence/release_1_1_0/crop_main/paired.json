@@ -1,0 +1,19 @@
+{
+  "baseline": "experiments/v7/sep12_composition_to_schedule/results/strict_v511_stock_repair_crop/baseline",
+  "candidate": "experiments/v7/sep12_composition_to_schedule/results/strict_v511_stock_repair_crop/candidate",
+  "matched_contracts": 1943,
+  "ignored_tile_list_order": false,
+  "by_extra_workers": {
+    "0": {
+      "cases": 1943,
+      "baseline_exact": 1921,
+      "candidate_exact": 1922,
+      "baseline_mean_seconds": 0.3111560958826557,
+      "candidate_mean_seconds": 0.3068736277920741,
+      "gains": [
+        "105451842_p1_d28_extra0"
+      ],
+      "losses": []
+    }
+  }
+}

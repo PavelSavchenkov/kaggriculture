@@ -1,0 +1,58 @@
+[  3%] Building CXX object CMakeFiles/day_scheduler.dir/src/prepare_problem.cpp.o
+[  6%] Building CXX object CMakeFiles/day_scheduler.dir/src/scheduler.cpp.o
+[ 10%] Building CXX object CMakeFiles/day_scheduler.dir/src/storage.cpp.o
+[ 13%] Building CXX object CMakeFiles/day_scheduler.dir/src/fast_routes.cpp.o
+[ 16%] Building CXX object CMakeFiles/day_scheduler.dir/src/repair_partition.cpp.o
+[ 20%] Building CXX object CMakeFiles/day_scheduler.dir/src/event_routes.cpp.o
+[ 23%] Building CXX object CMakeFiles/day_scheduler.dir/src/job_beam.cpp.o
+[ 26%] Building CXX object CMakeFiles/day_scheduler.dir/src/components/native_quick_portfolio_v30/quick.cpp.o
+[ 30%] Building CXX object CMakeFiles/day_scheduler.dir/src/components/native_materialized_screen/screen.cpp.o
+[ 33%] Building CXX object CMakeFiles/day_scheduler.dir/src/components/native_solver_api/exact.cpp.o
+[ 36%] Building CXX object CMakeFiles/day_scheduler.dir/src/components/native_exact_domains/solver/src/tile_graph.cpp.o
+[ 40%] Building CXX object CMakeFiles/day_scheduler.dir/src/components/native_exact_domains/solver/src/problem_json.cpp.o
+/home/pavel/Programming/kaggriculture/day_solver/src/components/native_exact_domains/solver/src/problem_json.cpp:368:14: warning: ‘boost::json::object day_solver::{anonymous}::write_sale_target(const day_solver::SaleTarget&)’ defined but not used [-Wunused-function]
+  368 | json::object write_sale_target(const SaleTarget& value) {
+      |              ^~~~~~~~~~~~~~~~~
+/home/pavel/Programming/kaggriculture/day_solver/src/components/native_exact_domains/solver/src/problem_json.cpp:357:12: warning: ‘day_solver::SaleTarget day_solver::{anonymous}::read_sale_target(const boost::json::value&, const std::string&)’ defined but not used [-Wunused-function]
+  357 | SaleTarget read_sale_target(const json::value& value,
+      |            ^~~~~~~~~~~~~~~~
+/home/pavel/Programming/kaggriculture/day_solver/src/components/native_exact_domains/solver/src/problem_json.cpp:331:14: warning: ‘boost::json::object day_solver::{anonymous}::write_bound(const day_solver::OutcomeBound&)’ defined but not used [-Wunused-function]
+  331 | json::object write_bound(const OutcomeBound& bound) {
+      |              ^~~~~~~~~~~
+/home/pavel/Programming/kaggriculture/day_solver/src/components/native_exact_domains/solver/src/problem_json.cpp:323:14: warning: ‘day_solver::OutcomeBound day_solver::{anonymous}::read_bound(const boost::json::value&, const std::string&)’ defined but not used [-Wunused-function]
+  323 | OutcomeBound read_bound(const json::value& value, const std::string& path) {
+      |              ^~~~~~~~~~
+/home/pavel/Programming/kaggriculture/day_solver/src/components/native_exact_domains/solver/src/problem_json.cpp:58:10: warning: ‘uint64_t day_solver::{anonymous}::unsigned_integer(const boost::json::value&, std::string_view)’ defined but not used [-Wunused-function]
+   58 | uint64_t unsigned_integer(const json::value& value, std::string_view path) {
+      |          ^~~~~~~~~~~~~~~~
+[ 43%] Building CXX object CMakeFiles/day_scheduler.dir/src/components/native_exact_domains/solver/src/problem_validation.cpp.o
+[ 46%] Linking CXX static library libday_scheduler.a
+[ 46%] Built target day_scheduler
+[ 50%] Building CXX object CMakeFiles/day_solver_cli.dir/src/solve_cli.cpp.o
+[ 53%] Building CXX object CMakeFiles/day_solver_example.dir/examples/cpp/main.cpp.o
+[ 56%] Linking CXX executable day_solver_example
+[ 60%] Linking CXX executable day_solver_cli
+[ 60%] Built target day_solver_example
+[ 63%] Building CXX object CMakeFiles/test_constructor_budget.dir/tests/test_constructor_budget.cpp.o
+[ 63%] Built target day_solver_cli
+[ 66%] Building CXX object CMakeFiles/test_materialized_stock.dir/tests/test_materialized_stock.cpp.o
+[ 70%] Linking CXX executable test_materialized_stock
+[ 70%] Built target test_materialized_stock
+[ 73%] Building CXX object CMakeFiles/test_day_storage.dir/tests/test_storage.cpp.o
+[ 76%] Linking CXX executable test_day_storage
+[ 76%] Built target test_day_storage
+[ 80%] Building CXX object CMakeFiles/test_day_scheduler.dir/tests/test_scheduler.cpp.o
+[ 83%] Linking CXX executable test_day_scheduler
+[ 86%] Linking CXX executable test_constructor_budget
+[ 86%] Built target test_constructor_budget
+[ 90%] Building CXX object CMakeFiles/test_cold_day.dir/tests/test_cold_day.cpp.o
+[ 90%] Built target test_day_scheduler
+[ 93%] Building CXX object CMakeFiles/test_problem_builder.dir/tests/test_problem_builder.cpp.o
+[ 96%] Linking CXX executable test_cold_day
+[100%] Linking CXX executable test_problem_builder
+[100%] Built target test_cold_day
+[100%] Built target test_problem_builder
+[ 87%] Built target day_scheduler
+[ 93%] Building CXX object CMakeFiles/day_solver_audit.dir/src/components/native_exact_domains/solver/src/audit_baseline.cpp.o
+[100%] Linking CXX executable day_solver_audit
+[100%] Built target day_solver_audit

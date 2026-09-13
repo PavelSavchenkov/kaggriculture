@@ -96,3 +96,180 @@ wording, including earlier “unselected” labels. This package's manifest and
 documentation describe the later decision to ship V30. No retraining or
 algorithm change took place during packaging. A typed preparation helper,
 standalone build interface and benchmark adapter were added for reuse and tested.
+
+## Working-source changes, September 12–13
+
+The packaged V30 results above remain frozen. Current source adds bounded shed
+capacity and exact cargo-order handling, spare-stock pickups for purchase space,
+and useful-job routing with selective fragmentation for urgent same-hour handoffs.
+Every returned result still passes strict replay. Required trades and retained
+inventory are preserved; no replay paths enter cold search.
+
+The useful-job constructor branches between farm jobs using Manhattan travel.
+It scores route duration, local wheat/fertilizer reuse, delivery needs and staged
+purchases. A complementary regret constructor assigns jobs with few good worker
+choices first. At a 12-second limit, the selected leader hard set now passes
+8/9 at original replay workers and 9/9 at each of +1/+2/+3. The added original
+success is Third108281701 day15. This deliberately difficult set is not a
+representative leaderboard coverage estimate.
+
+The first unused M&M replay (108286242) was evaluated with the preceding frozen
+build: 16/28/29/29 of29 ordinary days at a 4-second limit, and18/29/29/29 at12s,
+for original/+1/+2/+3 workers. All207 returned schedules passed the full engine.
+Its failures are now development data. Subsequent fixes must not be reported as
+first-attempt held-out results.
+
+The completed 145-day exposed comparison with plain regret integration solves
+132/142/143/144 days at original/+1/+2/+3, averaging 1.745/1.022/0.945/0.725s.
+All 561 returned schedules pass the full engine. Trying these worker counts in
+sequence solves all 145 days at a mean total time of 2.471s and 0.124 extra
+workers. Against the earlier 12s main, original-worker coverage gains seven
+days without losses; two individual higher-worker cases regress. This is a
+development comparison, not a fresh held-out result or an optimality proof.
+
+Current source also removes and reconstructs a few jobs after ordinary regret
+search fails. A separate two-second reconstruction attempt follows the fragment
+retry. These additions preserve hard-set coverage and solve selected M&M days
+and UnknownMother108286602 day25 at original workers. Timing close to the total
+deadline remains sensitive to CPU load; preserve first failed runs.
+
+The earlier complete passing Crop control (v357) has 81/81 schedules with 1,944
+independent hourly inventory checks, median 156ms and mean 331ms. All six root
+test groups passed on that source. The newer completion-budget experiment ran
+under heavy CPU contention: Crop v384 gives 80/81, and the cold root test times
+out before reaching the changed code. Those failures are preserved; the latest
+source's failed Crop case then passes in 1.667s, and its cold test group passes
+in 21.85s after the load ends. This selected repeat does not replace the 80/81
+broad aggregate. A later, broader current-main audit v403 passes all 323 real
+development cases: 7,752 independent hours, median 206ms, mean 314ms, max 3.044s.
+The same build solves 239/242 previously slow cases at a 12s limit, with three
+timeouts. Two of those solve around 11.9s on a later repeat; one remains UNKNOWN
+at 45s. Preserve the original broad counts. Optional larger route exchanges
+and depot-return scoring did not add residual-case coverage. Adaptive
+reconstruction remains disabled by default.
+
+The replay extractor historically ordered tile groups by their first accepted
+source visit. Cold solvers did not receive worker paths, but tie-breaks could use
+this list order. Future evaluations sort groups by coordinates, preserving each
+tile's action sequence. On the complete sorted 145-day cohort, main 12s v374
+solves 132/144/143/144 at original/+1/+2/+3, mean 1.999/0.826/0.931/0.851s.
+Sequential escalation covers all 145 in 2.348s mean, with 0.103 extra workers.
+Public regret 2s v375 solves 116/131/135/136, mean 444/457/462/476ms; sequential
+coverage is 141/145 in 719ms mean, with 0.220 extra workers among successes.
+All returned schedules pass full replay. These are exposed development cases.
+
+On the canonical 145-day cohort, the same frozen main at a four-second limit
+finds one-worker reductions on 74/145 days and two-worker reductions on 49/144.
+At twelve seconds, these become 82/145 and 54/144. One original two-worker day
+cannot request two fewer workers, so it is excluded from that denominator.
+All two-worker reductions are within the one-worker successes. At twelve
+seconds, the best found schedules save 1.659 workers and $99.43 on average among
+the 82 improved days. All returned schedules pass full replay. These results
+predate the latest constructor-priority change and do not prove minimum workers.
+
+Conditional earlier use of the strong constructor recovers ymg108270468 day24
+and M&M108295517 day14 originals in 7.01/7.48s on selected controls. The latest
+hard audit remains 8/9 at original and all 9 at each higher workforce; six root
+test groups pass in 34.23s. The full Crop v395 still has the recurring day25
+timeout (80/81). Alternating old/current binaries on the same CPU gives four
+passes in 1.57–1.58s; this does not erase the broad failure or prove it fixed.
+
+A same-binary, same-CPU alternating cache comparison on all 580 canonical
+contracts reduces mean runtime by 4–5% with no lost solutions. It gains one case
+at +2 and one at +3. This is stronger evidence for the cache than the earlier
+non-interleaved run. The cache is now enabled in public regret and main's
+regret/reconstruction stages. Five selected main regressions/gains remain solved,
+all six root tests pass, and the paired canonical hard set loses no solutions.
+Main whole-job and resource-first stages keep their previous settings. A frozen
+eight-profile canonical frontier run is measuring the combined policy.
+
+Frozen binaries, contracts, first attempts and the 30-minute reviews are under
+`experiments/v7/sep12_composition_to_schedule/`. The main solver has no runtime
+dependency on that experiment.
+
+### Full replay comparison and input assignment (September 13)
+
+The comparable Crop archive now covers all 1,943 ordinary days from 67
+historically examined replays, with real shed capacity, timed market slots and
+canonical tile order. Retained main at four seconds returns 1,921 exact schedules
+(98.9%), averaging 311ms across all calls; regret at two seconds returns 1,883
+(96.9%), averaging 254ms. The old packaged unlimited-capacity controls remain
+compatibility checks, not directly comparable success rates.
+
+At an actual 500ms cutoff on 145 exposed leader days, retained regret returns
+89/145 originals, 109/145 at +1 and 100/145 at +2. Main returns 77/82/90.
+Each worker count is a separate cold call. Successful overruns are excluded;
+all outputs, trade slots and retained inventory are checked. More workers can
+change heuristic assignments and reduce finite-budget search success.
+
+The 754-day minus-one panel exposed eight main crashes from an internal input
+assignment: late purchased wheat was reserved for an animal whose fertilizer
+was required earlier, despite enough initial wheat for that animal. The
+constructor now rematches input readiness to task deadlines when its original
+assignment creates an empty window. Main also skips partial-route reconstruction
+when the same constructor model failed to build. On all eight selected crash
+cases it returns normally; five exact reductions solve in 25ms, and three
+return UNKNOWN at 500ms. Six root test groups pass in 33.99s, including the new
+early-fertilizer/late-wheat cold regression. The full main payroll panel is
+being rerun before a broad quality claim.
+
+Optional M&M imitation and serial/event route construction remain outside main
+defaults. Next-job imitation improved held-episode prediction but underperformed
+main exact-day success. Remaining-work lookahead recovers one of two event-beam
+training controls; it is not yet a replacement or a validated frontier point.
+
+### Deferred polish and the next unused game
+
+Public `Search::RegretDeferred` postpones local polish when the raw routes qualify
+for first completion. On the matched 145-day family at 500ms, it finds 89/110/102
+exact schedules at original/+1/+2 workers, against 88/108/100 for Regret. Mean
+runtime becomes 267/252/264ms from 287/282/295ms, with no paired losses in that
+family. Six root tests pass; Portfolio remains the default.
+
+A frozen evaluation on previously unopened game108290604 covers all 58 ordinary
+days of its two leader seats. RegretDeferred at500ms succeeds38/41/43/39 at
+original through+3, versus Regret37/41/43/38; there are three paired gains and one
+loss. Main at12s succeeds48/54/53/53. These are separate results from development.
+The deferred loss is a raw completion interrupted by its75% budget share; old
+Regret finishes the same route in401ms. Preserve this first result when tuning.
+
+The completed post-fix main minus-one panel has no process crashes:152/754 exact
+within200ms and274/754 within500ms. Earlier first-run losses remain recorded;
+selected matched repeats solve all three lost cases, one28microseconds beyond
+200ms. This does not replace the original broad measurements.
+
+### Retained fixed-path inventory completion
+
+A new stock model holds worker paths and work times fixed and chooses quantities
+on existing pickups/deposits, plus optional transfers during idle shed visits.
+It tracks cargo insertion order, DROP, daytime capacity and automatic night
+transfer. Every accepted result must pass strict replay.
+
+On a cold Crop Dusta day whose original main solve timed out at12s, a saved
+proposal overfilled the shed before required carrot deposits. The new model
+repairs it in132ms. Main integration solves the day cold in450ms, with exact
+full-game outputs, trades and inventory. Six other selected failures remain
+unresolved. Six root test groups pass, including the new rejected-proposal
+regression. Main allows at most200ms of this model across rejected proposals;
+the public Regret policies are unchanged.
+
+The complete alternating main4 comparisons retain this change. Across145leader
+days at original through+3, successes are123/143/139/140 versus123/141/139/140
+before, with no paired losses. Mean times are1.096/.723/.757/.712s versus
+1.097/.733/.755/.710s. The two +1 gains include one direct stock-model repair;
+the other also passes in baseline on a selected repeat. Preserve the first
+complete family as measured, without attributing both gains directly to repair.
+
+Across all1943ordinary Crop archive days, the same frozen comparison improves
+1921 to1922 exact successes within4s, with no paired losses. The gain is the
+daytime-overflow case above. Mean runtime is307ms versus311ms. Both cohorts keep
+exact outputs, accepted trade slots and retained state, with identical physical
+inputs and all calls accounted for. Evidence: experiment results v510/v511;
+selected leader gain repeat v520. Regret and RegretDeferred do not use this path.
+
+An adaptive route-pool prototype allowed uncovered jobs in a small master and
+increased their rewards in subsequent serial rollouts. It solved1/4 training
+probes against2/4 for the static pool and was slower on the shared success.
+Diagnostics confirm the master produced feedback but still left1–3 jobs out.
+The unsuccessful prototype is archived in experiment v512/v514 and removed
+from live route search. Six root test groups passed33.35s during that audit.

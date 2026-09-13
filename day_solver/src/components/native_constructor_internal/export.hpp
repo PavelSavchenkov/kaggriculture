@@ -97,7 +97,8 @@ inline RouteProposal repair_and_export(const Bundles& bundles, RepairOptions opt
                                       const std::function<double()>& remaining_seconds) {
     RepairContext coarse_context(bundles, false);
     RouteProposal result;
-    result.repaired = Repair(coarse_context, options).run(coarse_context.initial);
+    auto stop = [&] { return remaining_seconds() <= 0; };
+    result.repaired = Repair(coarse_context, options).run(coarse_context.initial, stop);
     if (!bundles.seed_supply.empty()) {
         RepairContext seed_context(bundles, true);
         result.initial_seed_deficits = proposal_seed_deficits(seed_context, result.repaired.routes);
@@ -114,7 +115,7 @@ inline RouteProposal repair_and_export(const Bundles& bundles, RepairOptions opt
             options.seconds = options.seconds > 0 ? std::min(options.seconds, remaining) : remaining;
             result.seed_seconds = options.seconds;
             if (options.seconds == 0) options.iterations = 0;
-            result.repaired = Repair(seed_context, options).run(std::move(routes));
+            result.repaired = Repair(seed_context, options).run(std::move(routes), stop);
         }
     }
     export_workers(coarse_context, result);

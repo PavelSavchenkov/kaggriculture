@@ -194,16 +194,17 @@ public:
                 "invalid repair settings");
         require(options.strong || options.iterations == 0, "legacy non-strong repair loop not yet ported");
     }
-    RepairResult run(BundlePlan routes) {
+    RepairResult run(BundlePlan routes, const std::function<bool()>& stop = {}) {
         if (options_.seconds > 0) deadline_ = std::chrono::steady_clock::now() +
             std::chrono::duration_cast<std::chrono::steady_clock::duration>(std::chrono::duration<double>(options_.seconds));
         std::erase_if(routes, [](const auto& route) { return route.empty(); });
-        if (options_.strong && options_.iterations) {
+        if (options_.strong && options_.iterations && !(stop && stop())) {
             routes = strong_search(routes);
-            while (int(routes.size()) < options_.target_routes) {
+            while (int(routes.size()) < options_.target_routes && !(stop && stop())) {
                 std::optional<std::tuple<RepairScore, int, Count, int, int>> best_key;
                 BundlePlan best;
                 for (int source = 0; source < int(routes.size()); ++source) for (int cut = 1; cut < int(routes[source].size()); ++cut) {
+                    if (stop && stop()) break;
                     auto candidate = routes;
                     candidate[source] = BundleRoute(routes[source].begin(), routes[source].begin() + cut);
                     candidate.emplace_back(routes[source].begin() + cut, routes[source].end());
@@ -216,7 +217,7 @@ public:
                 routes = std::move(best);
                 ++stats_.forced_splits;
             }
-            if (options_.optimize_balance && !expired()) routes = strong_search(routes);
+            if (options_.optimize_balance && !expired() && !(stop && stop())) routes = strong_search(routes);
         }
         const auto score = violation(routes);
         const auto bounds = context_.propagate(routes);

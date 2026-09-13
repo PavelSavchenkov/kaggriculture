@@ -1,0 +1,20 @@
+Internal ctest changing into directory: /home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/relocated/day_solver/build
+Test project /home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/relocated/day_solver/build
+    Start 1: day_solver_constructor_budget
+1/7 Test #1: day_solver_constructor_budget ....   Passed    0.03 sec
+    Start 2: day_solver_materialized_stock
+2/7 Test #2: day_solver_materialized_stock ....   Passed    7.86 sec
+    Start 3: day_solver_storage
+3/7 Test #3: day_solver_storage ...............   Passed    1.60 sec
+    Start 4: day_solver_cold
+4/7 Test #4: day_solver_cold ..................   Passed   19.30 sec
+    Start 5: day_solver_search_regressions
+5/7 Test #5: day_solver_search_regressions ....   Passed    2.80 sec
+    Start 6: day_solver_api
+6/7 Test #6: day_solver_api ...................   Passed    4.09 sec
+    Start 7: day_solver_problem_builder
+7/7 Test #7: day_solver_problem_builder .......   Passed    1.01 sec
+
+100% tests passed, 0 tests failed out of 7
+
+Total Test time (real) =  36.70 sec

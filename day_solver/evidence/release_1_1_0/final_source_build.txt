@@ -1,0 +1,35 @@
+-- Configuring done (0.0s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/pavel/Programming/kaggriculture/day_solver/build-source
+[  1%] Building CXX object CMakeFiles/day_solver_core.dir/src/components/native_quick_portfolio_v30/quick.cpp.o
+[  3%] Linking CXX static library libday_solver_core.a
+[ 46%] Built target day_solver_core
+[ 48%] Building CXX object CMakeFiles/day_scheduler.dir/src/scheduler.cpp.o
+[ 50%] Building CXX object CMakeFiles/day_scheduler.dir/src/prepare_problem.cpp.o
+[ 51%] Building CXX object CMakeFiles/day_scheduler.dir/src/fast_routes.cpp.o
+[ 53%] Building CXX object CMakeFiles/day_scheduler.dir/src/repair_partition.cpp.o
+[ 55%] Building CXX object CMakeFiles/day_scheduler.dir/src/event_routes.cpp.o
+[ 57%] Building CXX object CMakeFiles/day_scheduler.dir/src/job_beam.cpp.o
+[ 59%] Building CXX object CMakeFiles/day_scheduler.dir/src/components/native_quick_portfolio_v30/quick.cpp.o
+[ 61%] Linking CXX static library libday_scheduler.a
+[ 73%] Built target day_scheduler
+[ 75%] Building CXX object CMakeFiles/day_solver_cli.dir/src/solve_cli.cpp.o
+[ 76%] Linking CXX executable test_constructor_budget
+[ 78%] Built target test_constructor_budget
+[ 80%] Building CXX object CMakeFiles/test_materialized_stock.dir/tests/test_materialized_stock.cpp.o
+[ 82%] Linking CXX executable day_solver_cli
+[ 82%] Built target day_solver_cli
+[ 84%] Building CXX object CMakeFiles/test_day_storage.dir/tests/test_storage.cpp.o
+[ 86%] Linking CXX executable test_materialized_stock
+[ 86%] Built target test_materialized_stock
+[ 88%] Building CXX object CMakeFiles/test_day_scheduler.dir/tests/test_scheduler.cpp.o
+[ 90%] Linking CXX executable test_day_scheduler
+[ 90%] Built target test_day_scheduler
+[ 92%] Building CXX object CMakeFiles/test_cold_day.dir/tests/test_cold_day.cpp.o
+[ 94%] Linking CXX executable test_cold_day
+[ 96%] Linking CXX executable test_day_storage
+[ 96%] Built target test_cold_day
+[ 98%] Building CXX object CMakeFiles/test_problem_builder.dir/tests/test_problem_builder.cpp.o
+[ 98%] Built target test_day_storage
+[100%] Linking CXX executable test_problem_builder
+[100%] Built target test_problem_builder

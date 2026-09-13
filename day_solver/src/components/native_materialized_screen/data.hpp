@@ -24,16 +24,16 @@ using Key = std::pair<int, int>;
 constexpr int hours = 24, items = kag::N_ITEMS, crops = kag::N_CROPS;
 constexpr std::array<Point, 4> shed{{{4, 4}, {5, 4}, {4, 5}, {5, 5}}};
 
-void require(bool condition, const std::string& reason) {
+inline void require(bool condition, const std::string& reason) {
     if (!condition) throw std::runtime_error(reason);
 }
-int distance(Point a, Point b) { return std::abs(a[0] - b[0]) + std::abs(a[1] - b[1]); }
-int tail(Point point) {
+inline int distance(Point a, Point b) { return std::abs(a[0] - b[0]) + std::abs(a[1] - b[1]); }
+inline int tail(Point point) {
     int best = 20;
     for (auto access : shed) best = std::min(best, distance(point, access));
     return best;
 }
-std::string name(const std::string& prefix, std::initializer_list<int> indices) {
+inline std::string name(const std::string& prefix, std::initializer_list<int> indices) {
     std::string result = prefix + "[";
     for (int index : indices) {
         if (result.back() != '[') result += ',';
@@ -41,8 +41,42 @@ std::string name(const std::string& prefix, std::initializer_list<int> indices) 
     }
     return result + ']';
 }
-std::string point_name(Point point) { return "(" + std::to_string(point[0]) + ", " + std::to_string(point[1]) + ")"; }
+inline std::string point_name(Point point) { return "(" + std::to_string(point[0]) + ", " + std::to_string(point[1]) + ")"; }
 struct Assignment { int task, worker, hour; };
+
+inline Count purchase_pressure(const ds::DayProblem& problem) {
+    auto stock = problem.start.shed;
+    Count pressure = 0;
+    for (int hour = 0; hour < hours; ++hour) {
+        for (const auto& event : problem.market_plan)
+            if (event.hour == hour && (event.market_op == kag::M_BUY_PRODUCT || event.market_op == kag::M_BUY_ANIMAL))
+                stock[event.item] += event.quantity;
+        // Selling newly produced goods does not remove the other items that
+        // were already in storage. Their balances cannot offset each other.
+        Count remaining = 0;
+        for (int item = 0; item < items; ++item)
+            remaining += std::max(Count(0), stock[item] - problem.shed_availability[hour][item]);
+        pressure = std::max(pressure, remaining - problem.start.shed_capacity);
+    }
+    return pressure;
+}
+
+inline Count discarded_goods(const ds::DayProblem& problem) {
+    auto stock = problem.start.shed;
+    for (const auto& event : problem.market_plan)
+        if (event.market_op == kag::M_BUY_PRODUCT || event.market_op == kag::M_BUY_ANIMAL)
+            stock[event.item] += event.quantity;
+    for (const auto& work : problem.tile_work) for (const auto& action : work.actions) {
+        if (action.output_item >= 0) stock[action.output_item] += action.output_quantity;
+        if (action.op == kag::OP_FEED) stock[kag::WHEAT] -= action.quantity;
+        if (action.op == kag::OP_FERTILIZE) stock[kag::FERTILIZER] -= action.quantity;
+        if (action.op == kag::OP_PLACE) stock[action.arg] -= action.quantity;
+    }
+    Count discarded = 0;
+    for (int item = 0; item < items; ++item)
+        discarded += std::max(Count(0), stock[item] - problem.shed_availability.back()[item] - problem.end_shed[item]);
+    return discarded;
+}
 
 struct ScreenData {
     ds::DayProblem problem;

@@ -71,7 +71,7 @@ struct PhysicalState {
     std::vector<ManagedTile> managed_tiles;
     std::array<InventoryCount, kag::N_ITEMS> shed{};
     std::array<InventoryCount, kag::N_CROPS> seeds{};
-    int16_t shed_capacity = 100;
+    int16_t shed_capacity = std::numeric_limits<int16_t>::max();
     int64_t cash = 0;
 
     friend bool operator==(const PhysicalState&, const PhysicalState&) = default;

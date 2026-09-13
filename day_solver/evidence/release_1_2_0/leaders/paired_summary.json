@@ -1,0 +1,67 @@
+[
+  {
+    "extra": 0,
+    "n": 145,
+    "baseline": 124,
+    "candidate": 129,
+    "baseline_mean": 1.0859900388068966,
+    "candidate_mean": 0.8071329723241379,
+    "gains": [
+      "108264640_p0_d14_extra0",
+      "108264640_p0_d15_extra0",
+      "108264640_p0_d22_extra0",
+      "108264640_p0_d24_extra0",
+      "108281702_p1_d25_extra0"
+    ],
+    "losses": []
+  },
+  {
+    "extra": 1,
+    "n": 145,
+    "baseline": 143,
+    "candidate": 142,
+    "baseline_mean": 0.6992463412137931,
+    "candidate_mean": 0.5275458049724138,
+    "gains": [
+      "108293743_p0_d17_extra1"
+    ],
+    "losses": [
+      "108264640_p0_d16_extra1",
+      "108264640_p0_d18_extra1"
+    ]
+  },
+  {
+    "extra": 2,
+    "n": 145,
+    "baseline": 140,
+    "candidate": 140,
+    "baseline_mean": 0.7542615045034483,
+    "candidate_mean": 0.48500881408275864,
+    "gains": [
+      "108264640_p0_d15_extra2",
+      "108281702_p1_d25_extra2"
+    ],
+    "losses": [
+      "108264640_p0_d22_extra2",
+      "108288489_p0_d25_extra2"
+    ]
+  },
+  {
+    "extra": 3,
+    "n": 145,
+    "baseline": 140,
+    "candidate": 142,
+    "baseline_mean": 0.7195279037379311,
+    "candidate_mean": 0.4557633436413793,
+    "gains": [
+      "108264640_p0_d15_extra3",
+      "108264640_p0_d18_extra3",
+      "108264640_p0_d24_extra3",
+      "108281702_p1_d25_extra3"
+    ],
+    "losses": [
+      "108264640_p0_d20_extra3",
+      "108288489_p0_d23_extra3"
+    ]
+  }
+]

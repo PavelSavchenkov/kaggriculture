@@ -19,19 +19,26 @@ struct Node {
 struct ScreenModel {
     const ScreenData& data;
     const ScreenOptions& options;
+    bool track_all_drops;
+    bool extra_pickups;
+    Count pickup_pressure;
     sat::CpModelBuilder model;
     std::unique_ptr<SpawnCheckpoints> checkpoints;
     std::vector<IntVar> task_time, concrete_worker;
     std::vector<std::vector<Node>> route_nodes;
     std::array<int, items> input_ready{};
     std::map<Key, BoolVar> route_worker, route_profile;
-    std::map<Triple, BoolVar> deposit_active, delivery_uses;
+    std::map<Triple, BoolVar> deposit_active, delivery_uses, drop_all;
     std::map<Triple, IntVar> deposit_time, delivered_units;
     std::vector<std::tuple<int, int, BoolVar>> cross_violations;
     std::vector<std::tuple<int, int, int, IntVar>> deficits;
     std::map<int, std::map<int, std::vector<int>>> pickup_requirements;
+    std::map<Key, IntVar> pickup_units;
+    std::map<Key, Count> pickup_limit;
 
-    explicit ScreenModel(const ScreenData& supplied) : data(supplied), options(data.options) {
+    explicit ScreenModel(const ScreenData& supplied, bool track_all_drops = false, bool extra_pickups = false, Count extra_buffer = 0)
+        : data(supplied), options(data.options), track_all_drops(track_all_drops), extra_pickups(extra_pickups),
+          pickup_pressure(extra_pickups ? std::max(purchase_pressure(data.problem), extra_buffer) : 0) {
         if (options.dynamic) checkpoints = std::make_unique<SpawnCheckpoints>(model, data.hires);
         for (const auto& task : data.tasks) task_time.push_back(integer(model, data.early[task.id], data.late[task.id], name("time", {task.id})));
         for (int item = 0; item < items; ++item) {
@@ -179,6 +186,12 @@ struct ScreenModel {
             if (std::any_of(output_limits.begin(), output_limits.end(), [&](auto value) { return deadline <= value.second; })) deadlines.push_back(deadline);
         std::map<Key, int> pickup_node;
         for (const auto& [item, consumers] : pickups) {
+            if (extra_pickups) {
+                const Count minimum = consumers.size();
+                const Count maximum = minimum + std::min(pickup_pressure, data.problem.start.shed[item]);
+                pickup_limit[{route, item}] = maximum;
+                pickup_units.emplace(Key{route, item}, integer(model, minimum, maximum, name("pickup_units", {route, item})));
+            }
             std::vector<BoolVar> alternatives;
             for (int access = 0; access < 4; ++access) {
                 auto time = integer(model, 0, hours - 1, name("pickup_time", {route, item, access}));
@@ -377,6 +390,25 @@ struct ScreenModel {
     }
 
     void deposit_resets() {
+        // Match the same locally reserved production as the stock model.
+        // A multi-item DROP cannot sit between a needed source and consumer:
+        // it empties the worker's whole cargo, including retained inputs.
+        std::map<int, int> producer_of;
+        if (options.fixed_order && !options.ignore_pickups)
+            for (int route = 0; route < int(data.route_ids.size()); ++route) {
+                if (options.free_order.contains(route)) continue;
+                auto order = data.hinted[route]; std::sort(order.begin(), order.end());
+                std::array<std::vector<int>, items> pending;
+                for (auto it = order.rbegin(); it != order.rend(); ++it) {
+                    const auto& task = data.tasks[it->second];
+                    if (task.output >= 0)
+                        for (Count left = task.quantity; left > 0 && !pending[task.output].empty(); --left) {
+                            producer_of[pending[task.output].back()] = task.id;
+                            pending[task.output].pop_back();
+                        }
+                    if (task.input >= 0) pending[task.input].push_back(task.id);
+                }
+            }
         std::map<Triple, std::map<int, std::vector<LinearExpr>>> grouped;
         for (const auto& [key, used] : delivery_uses) {
             const auto [task, deadline, access] = key;
@@ -387,17 +419,30 @@ struct ScreenModel {
             const auto [route, deadline, access] = key;
             std::vector<int> consumers;
             for (const auto& task : data.tasks) if (data.owner[task.id] == route && task.input >= 0) consumers.push_back(task.id);
-            if (consumers.empty()) continue;
+            if (consumers.empty() && !track_all_drops) continue;
             LinearExpr count;
             for (const auto& [item, literals] : by_item) {
                 auto used = boolean(model, name("deposited_item", {route, deadline, access, item}));
                 model.AddMaxEquality(used, literals); count += used;
             }
             auto multiple = boolean(model, name("multi_item_drop", {route, deadline, access}));
+            drop_all.emplace(key, multiple);
             model.AddGreaterOrEqual(count, 2).OnlyEnforceIf(multiple); model.AddLessOrEqual(count, 1).OnlyEnforceIf(multiple.Not());
             for (int task : consumers) {
-                const int gap = distance(shed[access], data.tasks[task].point) + 2;
-                model.AddLinearConstraint(task_time[task] - deposit_time.at(key), Domain::FromIntervals({{-hours, 0}, {gap, hours}})).OnlyEnforceIf(multiple);
+                const auto time = deposit_time.at(key);
+                if (options.fixed_order && !options.free_order.contains(route) && !options.ignore_pickups) {
+                    auto after = boolean(model, name("consumer_after_drop", {route, deadline, access, task}));
+                    model.AddGreaterThan(task_time[task], time).OnlyEnforceIf(after);
+                    model.AddLessOrEqual(task_time[task], time).OnlyEnforceIf(after.Not());
+                    if (producer_of.contains(task))
+                        model.AddGreaterOrEqual(task_time[producer_of.at(task)], time).OnlyEnforceIf({multiple, after});
+                    else for (const auto& node : route_nodes[route])
+                        if (node.kind == 1 && node.value == data.tasks[task].input)
+                            model.AddGreaterOrEqual(node.time, time).OnlyEnforceIf({multiple, after, node.active});
+                } else {
+                    const int gap = distance(shed[access], data.tasks[task].point) + 2;
+                    model.AddLinearConstraint(task_time[task] - time, Domain::FromIntervals({{-hours, 0}, {gap, hours}})).OnlyEnforceIf(multiple);
+                }
             }
         }
     }

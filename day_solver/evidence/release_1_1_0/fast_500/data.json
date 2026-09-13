@@ -1,0 +1,493 @@
+{
+  "profiles": [
+    {
+      "name": "deferred500",
+      "solver": "regret_deferred",
+      "seconds": 0.5,
+      "by_extra": {
+        "0": {
+          "requested": 145,
+          "exact": 90,
+          "within_limit": 89,
+          "fraction_within_limit": 0.6137931034482759,
+          "mean_seconds": 0.265142382,
+          "max_seconds": 0.604562
+        },
+        "1": {
+          "requested": 145,
+          "exact": 109,
+          "within_limit": 109,
+          "fraction_within_limit": 0.7517241379310344,
+          "mean_seconds": 0.2500840084137931,
+          "max_seconds": 0.574972
+        },
+        "2": {
+          "requested": 145,
+          "exact": 102,
+          "within_limit": 102,
+          "fraction_within_limit": 0.7034482758620689,
+          "mean_seconds": 0.2619704624137931,
+          "max_seconds": 0.568457
+        }
+      },
+      "by_player": {
+        "Majkel1337": {
+          "0": {
+            "requested": 29,
+            "exact": 12,
+            "within_limit": 11,
+            "fraction_within_limit": 0.3793103448275862,
+            "mean_seconds": 0.3757988724137931,
+            "max_seconds": 0.604562
+          },
+          "1": {
+            "requested": 29,
+            "exact": 15,
+            "within_limit": 15,
+            "fraction_within_limit": 0.5172413793103449,
+            "mean_seconds": 0.36249408275862066,
+            "max_seconds": 0.574972
+          },
+          "2": {
+            "requested": 29,
+            "exact": 13,
+            "within_limit": 13,
+            "fraction_within_limit": 0.4482758620689655,
+            "mean_seconds": 0.36501825517241376,
+            "max_seconds": 0.547281
+          }
+        },
+        "Unknown Mother-Goose": {
+          "0": {
+            "requested": 29,
+            "exact": 27,
+            "within_limit": 27,
+            "fraction_within_limit": 0.9310344827586207,
+            "mean_seconds": 0.1456280651724138,
+            "max_seconds": 0.509486
+          },
+          "1": {
+            "requested": 29,
+            "exact": 27,
+            "within_limit": 27,
+            "fraction_within_limit": 0.9310344827586207,
+            "mean_seconds": 0.1538288351724138,
+            "max_seconds": 0.501913
+          },
+          "2": {
+            "requested": 29,
+            "exact": 28,
+            "within_limit": 28,
+            "fraction_within_limit": 0.9655172413793104,
+            "mean_seconds": 0.15091257068965516,
+            "max_seconds": 0.501336
+          }
+        },
+        "THIRD FARM CLUB": {
+          "0": {
+            "requested": 29,
+            "exact": 20,
+            "within_limit": 20,
+            "fraction_within_limit": 0.6896551724137931,
+            "mean_seconds": 0.23955136896551724,
+            "max_seconds": 0.524783
+          },
+          "1": {
+            "requested": 29,
+            "exact": 23,
+            "within_limit": 23,
+            "fraction_within_limit": 0.7931034482758621,
+            "mean_seconds": 0.19771747931034483,
+            "max_seconds": 0.525056
+          },
+          "2": {
+            "requested": 29,
+            "exact": 21,
+            "within_limit": 21,
+            "fraction_within_limit": 0.7241379310344828,
+            "mean_seconds": 0.21614722068965517,
+            "max_seconds": 0.568457
+          }
+        },
+        "ymg_aq": {
+          "0": {
+            "requested": 29,
+            "exact": 22,
+            "within_limit": 22,
+            "fraction_within_limit": 0.7586206896551724,
+            "mean_seconds": 0.22735365862068965,
+            "max_seconds": 0.524461
+          },
+          "1": {
+            "requested": 29,
+            "exact": 23,
+            "within_limit": 23,
+            "fraction_within_limit": 0.7931034482758621,
+            "mean_seconds": 0.2478832448275862,
+            "max_seconds": 0.51069
+          },
+          "2": {
+            "requested": 29,
+            "exact": 19,
+            "within_limit": 19,
+            "fraction_within_limit": 0.6551724137931034,
+            "mean_seconds": 0.2910562068965517,
+            "max_seconds": 0.518012
+          }
+        },
+        "M & M & P & Q": {
+          "0": {
+            "requested": 29,
+            "exact": 9,
+            "within_limit": 9,
+            "fraction_within_limit": 0.3103448275862069,
+            "mean_seconds": 0.3373799448275862,
+            "max_seconds": 0.518644
+          },
+          "1": {
+            "requested": 29,
+            "exact": 21,
+            "within_limit": 21,
+            "fraction_within_limit": 0.7241379310344828,
+            "mean_seconds": 0.2884964,
+            "max_seconds": 0.53213
+          },
+          "2": {
+            "requested": 29,
+            "exact": 21,
+            "within_limit": 21,
+            "fraction_within_limit": 0.7241379310344828,
+            "mean_seconds": 0.28671805862068966,
+            "max_seconds": 0.536329
+          }
+        }
+      }
+    },
+    {
+      "name": "raw90_500",
+      "solver": "beam1_regret_cache_polish_rawfirst_rawtimed_night_urgent_seeds_pickups_alternate_long_defer_raw90",
+      "seconds": 0.5,
+      "by_extra": {
+        "0": {
+          "requested": 145,
+          "exact": 92,
+          "within_limit": 91,
+          "fraction_within_limit": 0.6275862068965518,
+          "mean_seconds": 0.26377424696551727,
+          "max_seconds": 0.594965
+        },
+        "1": {
+          "requested": 145,
+          "exact": 113,
+          "within_limit": 113,
+          "fraction_within_limit": 0.7793103448275862,
+          "mean_seconds": 0.24711315627586208,
+          "max_seconds": 0.557804
+        },
+        "2": {
+          "requested": 145,
+          "exact": 108,
+          "within_limit": 108,
+          "fraction_within_limit": 0.7448275862068966,
+          "mean_seconds": 0.2586788256551724,
+          "max_seconds": 0.536853
+        }
+      },
+      "by_player": {
+        "Majkel1337": {
+          "0": {
+            "requested": 29,
+            "exact": 12,
+            "within_limit": 11,
+            "fraction_within_limit": 0.3793103448275862,
+            "mean_seconds": 0.3756193931034483,
+            "max_seconds": 0.594965
+          },
+          "1": {
+            "requested": 29,
+            "exact": 17,
+            "within_limit": 17,
+            "fraction_within_limit": 0.5862068965517241,
+            "mean_seconds": 0.34984905862068966,
+            "max_seconds": 0.557804
+          },
+          "2": {
+            "requested": 29,
+            "exact": 14,
+            "within_limit": 14,
+            "fraction_within_limit": 0.4827586206896552,
+            "mean_seconds": 0.3636709344827586,
+            "max_seconds": 0.536853
+          }
+        },
+        "Unknown Mother-Goose": {
+          "0": {
+            "requested": 29,
+            "exact": 27,
+            "within_limit": 27,
+            "fraction_within_limit": 0.9310344827586207,
+            "mean_seconds": 0.14550285206896552,
+            "max_seconds": 0.509833
+          },
+          "1": {
+            "requested": 29,
+            "exact": 27,
+            "within_limit": 27,
+            "fraction_within_limit": 0.9310344827586207,
+            "mean_seconds": 0.1523299227586207,
+            "max_seconds": 0.502364
+          },
+          "2": {
+            "requested": 29,
+            "exact": 28,
+            "within_limit": 28,
+            "fraction_within_limit": 0.9655172413793104,
+            "mean_seconds": 0.15099523862068967,
+            "max_seconds": 0.502222
+          }
+        },
+        "THIRD FARM CLUB": {
+          "0": {
+            "requested": 29,
+            "exact": 21,
+            "within_limit": 21,
+            "fraction_within_limit": 0.7241379310344828,
+            "mean_seconds": 0.23779275862068966,
+            "max_seconds": 0.525239
+          },
+          "1": {
+            "requested": 29,
+            "exact": 23,
+            "within_limit": 23,
+            "fraction_within_limit": 0.7931034482758621,
+            "mean_seconds": 0.1981735931034483,
+            "max_seconds": 0.525304
+          },
+          "2": {
+            "requested": 29,
+            "exact": 21,
+            "within_limit": 21,
+            "fraction_within_limit": 0.7241379310344828,
+            "mean_seconds": 0.2122940344827586,
+            "max_seconds": 0.522313
+          }
+        },
+        "ymg_aq": {
+          "0": {
+            "requested": 29,
+            "exact": 23,
+            "within_limit": 23,
+            "fraction_within_limit": 0.7931034482758621,
+            "mean_seconds": 0.2235314551724138,
+            "max_seconds": 0.522022
+          },
+          "1": {
+            "requested": 29,
+            "exact": 25,
+            "within_limit": 25,
+            "fraction_within_limit": 0.8620689655172413,
+            "mean_seconds": 0.2461897379310345,
+            "max_seconds": 0.510802
+          },
+          "2": {
+            "requested": 29,
+            "exact": 23,
+            "within_limit": 23,
+            "fraction_within_limit": 0.7931034482758621,
+            "mean_seconds": 0.2813498551724138,
+            "max_seconds": 0.514578
+          }
+        },
+        "M & M & P & Q": {
+          "0": {
+            "requested": 29,
+            "exact": 9,
+            "within_limit": 9,
+            "fraction_within_limit": 0.3103448275862069,
+            "mean_seconds": 0.336424775862069,
+            "max_seconds": 0.518702
+          },
+          "1": {
+            "requested": 29,
+            "exact": 21,
+            "within_limit": 21,
+            "fraction_within_limit": 0.7241379310344828,
+            "mean_seconds": 0.2890234689655172,
+            "max_seconds": 0.533054
+          },
+          "2": {
+            "requested": 29,
+            "exact": 22,
+            "within_limit": 22,
+            "fraction_within_limit": 0.7586206896551724,
+            "mean_seconds": 0.28508406551724136,
+            "max_seconds": 0.536054
+          }
+        }
+      }
+    },
+    {
+      "name": "main_first500",
+      "solver": "main_then_regret",
+      "seconds": 0.5,
+      "by_extra": {
+        "0": {
+          "requested": 145,
+          "exact": 87,
+          "within_limit": 86,
+          "fraction_within_limit": 0.593103448275862,
+          "mean_seconds": 0.30205481862068967,
+          "max_seconds": 0.59196
+        },
+        "1": {
+          "requested": 145,
+          "exact": 104,
+          "within_limit": 103,
+          "fraction_within_limit": 0.7103448275862069,
+          "mean_seconds": 0.29332338137931036,
+          "max_seconds": 0.557718
+        },
+        "2": {
+          "requested": 145,
+          "exact": 98,
+          "within_limit": 98,
+          "fraction_within_limit": 0.6758620689655173,
+          "mean_seconds": 0.3026851193103448,
+          "max_seconds": 0.562124
+        }
+      },
+      "by_player": {
+        "Majkel1337": {
+          "0": {
+            "requested": 29,
+            "exact": 11,
+            "within_limit": 11,
+            "fraction_within_limit": 0.3793103448275862,
+            "mean_seconds": 0.39539816896551727,
+            "max_seconds": 0.59196
+          },
+          "1": {
+            "requested": 29,
+            "exact": 14,
+            "within_limit": 13,
+            "fraction_within_limit": 0.4482758620689655,
+            "mean_seconds": 0.3890028137931035,
+            "max_seconds": 0.557718
+          },
+          "2": {
+            "requested": 29,
+            "exact": 12,
+            "within_limit": 12,
+            "fraction_within_limit": 0.41379310344827586,
+            "mean_seconds": 0.3959236724137931,
+            "max_seconds": 0.562124
+          }
+        },
+        "Unknown Mother-Goose": {
+          "0": {
+            "requested": 29,
+            "exact": 26,
+            "within_limit": 26,
+            "fraction_within_limit": 0.896551724137931,
+            "mean_seconds": 0.19543381724137932,
+            "max_seconds": 0.523511
+          },
+          "1": {
+            "requested": 29,
+            "exact": 27,
+            "within_limit": 27,
+            "fraction_within_limit": 0.9310344827586207,
+            "mean_seconds": 0.20027305517241378,
+            "max_seconds": 0.501992
+          },
+          "2": {
+            "requested": 29,
+            "exact": 27,
+            "within_limit": 27,
+            "fraction_within_limit": 0.9310344827586207,
+            "mean_seconds": 0.20212153103448274,
+            "max_seconds": 0.514719
+          }
+        },
+        "THIRD FARM CLUB": {
+          "0": {
+            "requested": 29,
+            "exact": 20,
+            "within_limit": 19,
+            "fraction_within_limit": 0.6551724137931034,
+            "mean_seconds": 0.2706376793103448,
+            "max_seconds": 0.530977
+          },
+          "1": {
+            "requested": 29,
+            "exact": 22,
+            "within_limit": 22,
+            "fraction_within_limit": 0.7586206896551724,
+            "mean_seconds": 0.23930284827586207,
+            "max_seconds": 0.529119
+          },
+          "2": {
+            "requested": 29,
+            "exact": 20,
+            "within_limit": 20,
+            "fraction_within_limit": 0.6896551724137931,
+            "mean_seconds": 0.24978957586206896,
+            "max_seconds": 0.526571
+          }
+        },
+        "ymg_aq": {
+          "0": {
+            "requested": 29,
+            "exact": 21,
+            "within_limit": 21,
+            "fraction_within_limit": 0.7241379310344828,
+            "mean_seconds": 0.2813320103448276,
+            "max_seconds": 0.537634
+          },
+          "1": {
+            "requested": 29,
+            "exact": 21,
+            "within_limit": 21,
+            "fraction_within_limit": 0.7241379310344828,
+            "mean_seconds": 0.3017993379310345,
+            "max_seconds": 0.511882
+          },
+          "2": {
+            "requested": 29,
+            "exact": 18,
+            "within_limit": 18,
+            "fraction_within_limit": 0.6206896551724138,
+            "mean_seconds": 0.33086519999999997,
+            "max_seconds": 0.521053
+          }
+        },
+        "M & M & P & Q": {
+          "0": {
+            "requested": 29,
+            "exact": 9,
+            "within_limit": 9,
+            "fraction_within_limit": 0.3103448275862069,
+            "mean_seconds": 0.3674724172413793,
+            "max_seconds": 0.512389
+          },
+          "1": {
+            "requested": 29,
+            "exact": 20,
+            "within_limit": 20,
+            "fraction_within_limit": 0.6896551724137931,
+            "mean_seconds": 0.3362388517241379,
+            "max_seconds": 0.538825
+          },
+          "2": {
+            "requested": 29,
+            "exact": 21,
+            "within_limit": 21,
+            "fraction_within_limit": 0.7241379310344828,
+            "mean_seconds": 0.3347256172413793,
+            "max_seconds": 0.517964
+          }
+        }
+      }
+    }
+  ]
+}

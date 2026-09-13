@@ -85,6 +85,22 @@ struct RoutingData {
             }
             int index = int(targets.size()) - 1;
             for (int ready : readiness) if (ready > 0) late_inputs[targets[index--]] = ready;
+            // The default assignment follows task order. A delivery deadline
+            // can require initial stock on one of those later tasks instead.
+            // Rematch interchangeable input units only when that assignment
+            // produces an empty time window.
+            const bool conflict = std::ranges::any_of(targets, [&](int task) {
+                const auto found = late_inputs.find(task);
+                return found != late_inputs.end() && found->second > task_data.late[task];
+            });
+            if (conflict && readiness.size() == targets.size()) {
+                std::sort(targets.begin(), targets.end(), [&](int a, int b) {
+                    return std::pair(task_data.late[a], a) < std::pair(task_data.late[b], b);
+                });
+                for (int task : targets) late_inputs.erase(task);
+                for (size_t slot = 0; slot < targets.size(); ++slot)
+                    if (readiness[slot] > 0) late_inputs[targets[slot]] = readiness[slot];
+            }
         }
     }
 

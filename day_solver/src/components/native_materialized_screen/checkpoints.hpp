@@ -9,11 +9,11 @@ using sat::BoolVar;
 using sat::IntVar;
 using sat::LinearExpr;
 
-IntVar integer(sat::CpModelBuilder& model, Count lower, Count upper, const std::string& label) {
+inline IntVar integer(sat::CpModelBuilder& model, Count lower, Count upper, const std::string& label) {
     return model.NewIntVar(Domain(lower, upper)).WithName(label);
 }
-BoolVar boolean(sat::CpModelBuilder& model, const std::string& label) { return model.NewBoolVar().WithName(label); }
-LinearExpr point_distance(sat::CpModelBuilder& model, IntVar x, IntVar y,
+inline BoolVar boolean(sat::CpModelBuilder& model, const std::string& label) { return model.NewBoolVar().WithName(label); }
+inline LinearExpr point_distance(sat::CpModelBuilder& model, IntVar x, IntVar y,
                           LinearExpr px, LinearExpr py, const std::string& label) {
     const auto dx = integer(model, 0, 9, label + ".dx"), dy = integer(model, 0, 9, label + ".dy");
     model.AddAbsEquality(dx, x - px); model.AddAbsEquality(dy, y - py);

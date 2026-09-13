@@ -1,5 +1,36 @@
 # Benchmarks and their limits
 
+Current release1.2.0 paired results and self-contained evidence are documented
+in [release_1_2_0.md](release_1_2_0.md). The measurements below describe earlier
+releases and historical cohorts.
+
+The packaged Crop Dusta inputs omit `start.shed_capacity`, which means unlimited
+storage. Their availability withdrawals also abstract the caller's market orders.
+Passing these contracts is not the same test as preserving actual timed trades
+under the game's 100-item shed limit. Keep these historical regressions separate
+from the full-game leader evaluations.
+
+A September 13 pilot re-extracted 87 days from three existing Crop Dusta archive
+games using the same bounded-capacity, canonical-order, full-game validator as
+the leader tests. Frozen retained main passed 87/87 at both 4s and 12s limits;
+the 4s run averaged 305ms, median 183ms, maximum 2.491s. Regret at 2s passed86/87,
+averaging224ms. These games were analyzed historically; this is a comparable
+exposed pilot, not a new large unseen validation. Evidence is in
+`experiments/v7/sep12_composition_to_schedule/results/strict_v438_crop_full_contract_family/`.
+
+The later complete bounded-capacity archive comparison covers1943ordinary days
+from67 historically examined Crop games. At4s, retained main succeeds1922/1943
+(98.9%), averaging307ms; the paired pre-repair build succeeds1921/1943,
+averaging311ms. There is one gain and no paired losses. This is broader exposed
+validation, not a new unused-replay test. Frozen sources, physical-input hashes
+and full-game validation are recorded in experiment result v511.
+
+On145ordinary days from one exposed replay per current leader, the same retained
+main4 policy succeeds123/145 at original replay workers,143/145 at+1,139/145
+at+2 and140/145 at+3. Mean times are1096/723/757/712ms, including failures.
+The paired pre-repair counts are123/141/139/140, with no losses (v510).
+These worker counts are independent calls, not a sequential4s policy.
+
 ## Historical coverage
 
 | Version / cohort | Unique days | Strict | Hard days | Episodes |

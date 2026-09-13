@@ -4,9 +4,9 @@
 #include <map>
 #include <tuple>
 
-// Generated from the unchanged replay source by prepare_tile_graph_adapter.py. Compile
-// this translation unit instead of src/replay.cpp, never alongside it.
-#include "../build/replay_tile_adapter.cpp"
+// Tile biology and complete replay share the same transition implementation.
+// Compile this translation unit instead of src/replay.cpp, never alongside it.
+#include "../../../../replay.cpp"
 
 namespace day_solver {
 namespace {
@@ -81,4 +81,3 @@ std::vector<TileGraph> build_tile_graphs(const DayProblem& problem) {
 }
 
 }  // namespace day_solver
-

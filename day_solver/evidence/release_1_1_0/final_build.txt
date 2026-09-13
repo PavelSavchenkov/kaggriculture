@@ -1,0 +1,38 @@
+-- Configuring done (0.0s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/pavel/Programming/kaggriculture/day_solver/build
+[  3%] Building CXX object CMakeFiles/day_scheduler.dir/src/scheduler.cpp.o
+[  6%] Building CXX object CMakeFiles/day_scheduler.dir/src/prepare_problem.cpp.o
+[ 10%] Building CXX object CMakeFiles/day_scheduler.dir/src/fast_routes.cpp.o
+[ 13%] Building CXX object CMakeFiles/day_scheduler.dir/src/repair_partition.cpp.o
+[ 16%] Building CXX object CMakeFiles/day_scheduler.dir/src/event_routes.cpp.o
+[ 20%] Building CXX object CMakeFiles/day_scheduler.dir/src/job_beam.cpp.o
+[ 23%] Building CXX object CMakeFiles/day_scheduler.dir/src/components/native_quick_portfolio_v30/quick.cpp.o
+[ 26%] Linking CXX static library libday_scheduler.a
+[ 46%] Built target day_scheduler
+[ 50%] Building CXX object CMakeFiles/day_solver_example.dir/examples/cpp/main.cpp.o
+[ 53%] Building CXX object CMakeFiles/day_solver_cli.dir/src/solve_cli.cpp.o
+[ 56%] Linking CXX executable day_solver_example
+[ 56%] Built target day_solver_example
+[ 60%] Linking CXX executable test_constructor_budget
+[ 63%] Linking CXX executable day_solver_cli
+[ 66%] Built target test_constructor_budget
+[ 70%] Building CXX object CMakeFiles/test_materialized_stock.dir/tests/test_materialized_stock.cpp.o
+[ 70%] Built target day_solver_cli
+[ 73%] Building CXX object CMakeFiles/test_day_storage.dir/tests/test_storage.cpp.o
+[ 76%] Linking CXX executable test_materialized_stock
+[ 76%] Built target test_materialized_stock
+[ 80%] Building CXX object CMakeFiles/test_day_scheduler.dir/tests/test_scheduler.cpp.o
+[ 83%] Linking CXX executable test_day_scheduler
+[ 86%] Linking CXX executable test_day_storage
+[ 86%] Built target test_day_scheduler
+[ 90%] Building CXX object CMakeFiles/test_cold_day.dir/tests/test_cold_day.cpp.o
+[ 90%] Built target test_day_storage
+[ 93%] Building CXX object CMakeFiles/test_problem_builder.dir/tests/test_problem_builder.cpp.o
+[ 96%] Linking CXX executable test_cold_day
+[100%] Linking CXX executable test_problem_builder
+[100%] Built target test_cold_day
+[100%] Built target test_problem_builder
+[ 87%] Built target day_scheduler
+[ 93%] Linking CXX executable day_solver_audit
+[100%] Built target day_solver_audit

@@ -52,7 +52,9 @@ jobs, routes, worker assignments, and an original schedule are not inputs.
 - Each increase in `shed_availability` reserves that many additional units for
   the external strategy layer. Reserved units are immediately removed and
   cannot satisfy a later increase.
-- Ignore shed capacity and overflow in this version.
+- Optional `start.shed_capacity` enforces shed capacity, overflow and the exact
+  retained day-end inventory. Omission retains the original unlimited-storage
+  v3 contract for historical inputs.
 - Workers may make any legal pickups and deposits, including transfers through
   the shed between workers, provided all fixed requirements remain satisfied.
 - After hour 23, all remaining worker cargo is transferred to the shed

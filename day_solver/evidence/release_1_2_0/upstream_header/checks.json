@@ -1,0 +1,48 @@
+[
+  {
+    "name": "upstream_header_configure",
+    "command": [
+      "cmake",
+      "-S",
+      "/home/pavel/Programming/kaggriculture/day_solver",
+      "-B",
+      "/home/pavel/Programming/kaggriculture/work/day_solver_push_validation/build",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DDAY_SOLVER_BUILD_TESTS=ON",
+      "-DDAY_SOLVER_BUILD_EXAMPLES=ON"
+    ],
+    "exit_code": 0,
+    "seconds": 0.5021312579629011
+  },
+  {
+    "name": "upstream_header_build",
+    "command": [
+      "taskset",
+      "-c",
+      "0,2",
+      "cmake",
+      "--build",
+      "/home/pavel/Programming/kaggriculture/work/day_solver_push_validation/build",
+      "--target",
+      "all",
+      "day_solver_audit",
+      "-j2"
+    ],
+    "exit_code": 0,
+    "seconds": 103.61105597700225
+  },
+  {
+    "name": "upstream_header_tests",
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "ctest",
+      "--test-dir",
+      "/home/pavel/Programming/kaggriculture/work/day_solver_push_validation/build",
+      "--output-on-failure"
+    ],
+    "exit_code": 8,
+    "seconds": 70.67985021800268
+  }
+]

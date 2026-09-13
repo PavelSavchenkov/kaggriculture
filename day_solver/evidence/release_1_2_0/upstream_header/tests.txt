@@ -1,0 +1,126 @@
+Internal ctest changing into directory: /home/pavel/Programming/kaggriculture/work/day_solver_push_validation/build
+Test project /home/pavel/Programming/kaggriculture/work/day_solver_push_validation/build
+    Start 1: day_solver_constructor_budget
+1/7 Test #1: day_solver_constructor_budget ....   Passed    0.05 sec
+    Start 2: day_solver_materialized_stock
+2/7 Test #2: day_solver_materialized_stock ....   Passed   26.57 sec
+    Start 3: day_solver_storage
+3/7 Test #3: day_solver_storage ...............   Passed    4.89 sec
+    Start 4: day_solver_cold
+4/7 Test #4: day_solver_cold ..................Subprocess aborted***Exception:  18.68 sec
+/home/pavel/Programming/kaggriculture/day_solver/tests/cold/early_milk_handoff.json strict 1.97826
+/home/pavel/Programming/kaggriculture/day_solver/tests/cold/staged_seed_and_animal_purchases.json strict 3.29033
+capacity/fixed_stock/build	variables=3166	0.00179929
+capacity/fixed_stock/search	INFEASIBLE	0.192735
+capacity/candidate	REJECTED	0.249591
+capacity/fixed_stock/build	variables=4084	0.00212804
+capacity/fixed_stock/search	UNKNOWN	0.0211385
+capacity/candidate	REJECTED	0.0776745
+capacity/candidate	REJECTED	0.0371797
+proposal/quick/r0/v0/construct	FEASIBLE	0.236866
+proposal/quick/r0/v0/complete	FEASIBLE	0.841025
+proposal/quick/r0/v0/complete/direct_schedule	FEASIBLE	0.000438534
+proposal/quick/r0/v0/complete/screen	OPTIMAL	0.577206
+proposal/quick/r0/v0/complete/exact	FEASIBLE	0
+proposal/quick/r0/v1/construct	FEASIBLE	0.240289
+proposal/quick/r0/v1/complete	UNKNOWN	0.95508
+proposal/quick/r0/v1/complete/screen	UNKNOWN	0.920887
+proposal/jobs/job_beam/build	UNKNOWN	0.00567044
+proposal/jobs/job_beam/build/detail	jobs=67	0
+proposal/jobs/job_beam/v0/search	UNKNOWN	0.300104
+proposal/jobs/job_beam/v0/search/detail	depth=67 candidates=99937	0
+proposal/jobs/job_beam/v0/polish	UNKNOWN	0.501918
+proposal/jobs/job_beam/v0/polish/detail	1352.800000 -> 1232.400000	0
+proposal/jobs/job_beam/v0/candidate0	UNKNOWN	0
+proposal/jobs/job_beam/v0/candidate0/detail	cost=1352.800000 overtime=0 late=0 wheat=17 fertilizer=4	0
+proposal/jobs/job_beam/v0/complete0	UNKNOWN	2.13547
+proposal/jobs/job_beam/v0/complete0/detail	UNKNOWN	0
+proposal/jobs/job_beam/v0/profile0	UNKNOWN	0
+proposal/jobs/job_beam/v0/profile0/detail	build=0.077819 solve=2.057443 materialize=0.000000 branches=2270 conflicts=38	0
+proposal/jobs/job_beam/v0/candidate1	UNKNOWN	0
+proposal/jobs/job_beam/v0/candidate1/detail	cost=1232.400000 overtime=0 late=0 wheat=17 fertilizer=3	0
+proposal/jobs/job_beam/v0/complete1	UNKNOWN	1.12989
+proposal/jobs/job_beam/v0/complete1/detail	UNKNOWN	0
+proposal/jobs/job_beam/v0/profile1	UNKNOWN	0
+proposal/jobs/job_beam/v0/profile1/detail	build=0.090941 solve=1.038641 materialize=0.000000 branches=0 conflicts=0	0
+proposal/job_resource/job_beam/build	UNKNOWN	0.00309591
+proposal/job_resource/job_beam/build/detail	jobs=67	0
+proposal/job_resource/job_beam/v2/search	UNKNOWN	0.346578
+proposal/job_resource/job_beam/v2/search/detail	depth=67 candidates=100371	0
+proposal/job_resource/job_beam/v2/polish	UNKNOWN	0.334418
+proposal/job_resource/job_beam/v2/polish/detail	1275.200000 -> 1171.000000	0
+proposal/job_resource/job_beam/v2/candidate0	UNKNOWN	0
+proposal/job_resource/job_beam/v2/candidate0/detail	cost=1171.000000 overtime=0 late=0 wheat=15 fertilizer=1	0
+proposal/job_resource/job_beam/v2/complete0	UNKNOWN	0.48471
+proposal/job_resource/job_beam/v2/complete0/detail	UNKNOWN	0
+proposal/job_resource/job_beam/v2/profile0	UNKNOWN	0
+proposal/job_resource/job_beam/v2/profile0/detail	build=0.028209 solve=0.456350 materialize=0.000000 branches=0 conflicts=0	0
+proposal/job_regret/job_beam/build	UNKNOWN	0.00564696
+proposal/job_regret/job_beam/build/detail	jobs=67	0
+proposal/job_regret/job_beam/v0/search	UNKNOWN	0.165248
+proposal/job_regret/job_beam/v0/search/detail	depth=67 candidates=83533	0
+proposal/job_regret/job_beam/v0/polish	UNKNOWN	0.384551
+proposal/job_regret/job_beam/v0/polish/detail	1291.600000 -> 1203.000000	0
+proposal/job_regret/job_beam/v0/candidate0	UNKNOWN	0
+proposal/job_regret/job_beam/v0/candidate0/detail	cost=1291.600000 overtime=0 late=0 wheat=17 fertilizer=1	0
+proposal/job_regret/job_beam/v0/complete0	UNKNOWN	1.48947
+proposal/job_regret/job_beam/v0/complete0/detail	UNKNOWN	0
+proposal/job_regret/job_beam/v0/profile0	UNKNOWN	0
+proposal/job_regret/job_beam/v0/profile0/detail	build=0.028034 solve=1.461259 materialize=0.000000 branches=21828 conflicts=212	0
+proposal/job_regret/job_beam/cache	UNKNOWN	0
+proposal/job_regret/job_beam/cache/detail	hits=185619 misses=44014 entries=11246 resets=2	0
+proposal/quick/r0/v2/construct	FEASIBLE	0.247849
+proposal/quick/r0/v2/complete	FEASIBLE	0.935868
+proposal/quick/r0/v2/complete/direct_schedule	FEASIBLE	0.000389291
+proposal/quick/r0/v2/complete/screen	OPTIMAL	0.829981
+proposal/quick/r0/v2/complete/exact	FEASIBLE	0
+proposal/quick/r0/v3/construct	FEASIBLE	0.277512
+proposal/quick/r0/v3/complete	FEASIBLE	0.571968
+proposal/quick/r0/v3/complete/direct_schedule	FEASIBLE	0.000462367
+proposal/quick/r0/v3/complete/screen	OPTIMAL	0.521548
+proposal/quick/r0/v3/complete/exact	FEASIBLE	0
+proposal/quick/r0/v4/construct	FEASIBLE	0.188528
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  /home/pavel/Programming/kaggriculture/day_solver/tests/cold/unpolished_completion.json: cold contract returned UNKNOWN
+
+    Start 5: day_solver_search_regressions
+5/7 Test #5: day_solver_search_regressions ....Subprocess aborted***Exception:   5.37 sec
+/home/pavel/Programming/kaggriculture/day_solver/tests/cold/local_wheat_sale.json strict 0.123799
+fast_front/job_beam/build	jobs=66	0.00260019
+fast_front/job_beam/v0/search	depth=66 candidates=80959	0.116082
+fast_front/job_beam/v0/polish	3366.800000 -> 1299.200000	0.257015
+fast_front/job_beam/v0/candidate0	cost=1299.200000 overtime=0 late=0 wheat=18 fertilizer=0	0
+fast_front/job_beam/v0/complete0	UNKNOWN	1.6436
+fast_front/job_beam/v0/profile0	build=0.013878 solve=1.629614 materialize=0.000000 branches=19213 conflicts=2059	0
+fast_front/job_beam/cache	hits=170601 misses=37925 entries=5157 resets=2	0
+smaller_routes/job_beam/build	jobs=66	0.0030518
+smaller_routes/job_beam/v0/search	depth=66 candidates=78799	0.146606
+smaller_routes/job_beam/v0/polish	3556.400000 -> 1365.600000	0.327941
+smaller_routes/job_beam/v0/candidate0	cost=1365.600000 overtime=0 late=0 wheat=17 fertilizer=0	0
+smaller_routes/job_beam/v0/complete0	UNKNOWN	1.0123
+smaller_routes/job_beam/v0/profile0	build=0.012645 solve=0.999568 materialize=0.000000 branches=19611 conflicts=351	0
+smaller_routes/job_beam/cache	hits=172730 misses=32552 entries=16168 resets=1	0
+capacity/fixed_stock/build	variables=4557	0.00235498
+capacity/fixed_stock/search	UNKNOWN	0.0246006
+capacity/candidate	REJECTED	0.0798812
+proposal/quick/r0/v0/construct	FEASIBLE	0.0669649
+proposal/quick/r0/v0/complete	FEASIBLE	0.39963
+proposal/quick/r0/v0/complete/direct_schedule	FEASIBLE	0.000257051
+proposal/quick/r0/v0/complete/screen	OPTIMAL	0.313604
+proposal/quick/r0/v0/complete/exact	FEASIBLE	0
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  /home/pavel/Programming/kaggriculture/day_solver/tests/cold/idle_last_hire.json: cold contract returned UNKNOWN
+
+    Start 6: day_solver_api
+6/7 Test #6: day_solver_api ...................   Passed   11.42 sec
+    Start 7: day_solver_problem_builder
+7/7 Test #7: day_solver_problem_builder .......   Passed    3.65 sec
+
+71% tests passed, 2 tests failed out of 7
+
+Total Test time (real) =  70.64 sec
+
+The following tests FAILED:
+	  4 - day_solver_cold (Subprocess aborted)
+	  5 - day_solver_search_regressions (Subprocess aborted)
+Errors while running CTest

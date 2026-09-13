@@ -21,29 +21,34 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('output', type=Path, help='new output directory')
     parser.add_argument('--group', default='smoke', choices=['smoke', 'quick', 'development', 'synthetic', 'slow'])
+    parser.add_argument('--case', action='append', default=[], help='exposed catalog case; overrides group')
     parser.add_argument('--jobs', type=int, default=2)
     parser.add_argument('--seconds', type=float, default=900)
     parser.add_argument('--threads', type=int, default=8)
-    parser.add_argument('--audit', type=Path, default=PACKAGE / 'runtime/audit_schedule')
+    parser.add_argument('--solver', type=Path, default=PACKAGE / 'build/day_solver_cli')
+    parser.add_argument('--audit', type=Path, default=PACKAGE / 'build/day_solver_audit')
     args = parser.parse_args()
     if args.jobs < 1 or args.threads < 1 or not 0 <= args.seconds < float('inf'):
         parser.error('positive jobs/threads and a finite nonnegative budget are required')
     assert args.audit.is_file(), args.audit
+    assert args.solver.is_file(), args.solver
     output = args.output.resolve()
     output.mkdir(parents=True, exist_ok=False)
     catalog = json.loads((PACKAGE / 'benchmarks/cases.json').read_text())
-    selected = {name: catalog['cases'][name] for name in catalog['groups'][args.group]}
+    selected = {name: catalog['cases'][name] for name in (args.case or catalog['groups'][args.group])}
     for row in selected.values():
         assert hashlib.sha256((PACKAGE / row['path']).read_bytes()).hexdigest() == row['sha256']
     write(output / 'plan.json', dict(group=args.group, cases=selected, jobs=args.jobs,
         seconds=args.seconds, fallback_threads=args.threads, scope='Exposed regression; not unseen validation',
-        solver_sha256=hashlib.sha256((PACKAGE / 'runtime/fast_solver_cli').read_bytes()).hexdigest()))
+        solver_path=str(args.solver.resolve()),
+        solver_sha256=hashlib.sha256(args.solver.read_bytes()).hexdigest(),
+        auditor_sha256=hashlib.sha256(args.audit.read_bytes()).hexdigest()))
 
     def run(name, row):
         problem = PACKAGE / row['path']
         target = output / name
         started = time.perf_counter()
-        completed = subprocess.run([str(PACKAGE / 'solve.sh'), str(problem), str(target),
+        completed = subprocess.run([str(PACKAGE / 'with_runtime.sh'), str(args.solver.resolve()), str(problem), str(target),
             str(args.seconds), str(args.threads)], capture_output=True, text=True,
             timeout=args.seconds + 60)
         wall = time.perf_counter() - started

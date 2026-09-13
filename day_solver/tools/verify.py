@@ -18,7 +18,7 @@ def main():
             raise RuntimeError('Checksum mismatch: ' + path)
         count += 1
     env = dict(os.environ, LD_LIBRARY_PATH=str(PACKAGE / 'runtime/lib'))
-    for name in ('fast_solver_cli', 'reference_solver_cli', 'audit_schedule'):
+    for name in ('day_solver_cli', 'day_solver_audit', 'fast_solver_cli', 'reference_solver_cli', 'audit_schedule'):
         result = subprocess.run(['ldd', str(PACKAGE / 'runtime' / name)],
                                 env=env, text=True, capture_output=True, check=True)
         if 'not found' in result.stdout:

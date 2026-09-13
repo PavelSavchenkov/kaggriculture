@@ -1,0 +1,28 @@
+[ 44%] Built target day_solver_core
+[ 46%] Building CXX object CMakeFiles/day_scheduler.dir/src/job_beam.cpp.o
+[ 48%] Building CXX object CMakeFiles/day_scheduler.dir/src/scheduler.cpp.o
+[ 50%] Linking CXX static library libday_scheduler.a
+[ 70%] Built target day_scheduler
+[ 72%] Building CXX object CMakeFiles/day_solver_example.dir/examples/cpp/main.cpp.o
+[ 74%] Linking CXX executable day_solver_cli
+[ 75%] Linking CXX executable day_solver_example
+[ 77%] Built target day_solver_cli
+[ 79%] Linking CXX executable test_constructor_budget
+[ 79%] Built target day_solver_example
+[ 81%] Linking CXX executable test_materialized_stock
+[ 83%] Built target test_constructor_budget
+[ 85%] Linking CXX executable test_day_storage
+[ 87%] Built target test_materialized_stock
+[ 88%] Linking CXX executable test_day_scheduler
+[ 90%] Built target test_day_storage
+[ 92%] Building CXX object CMakeFiles/test_cold_day.dir/tests/test_cold_day.cpp.o
+[ 94%] Built target test_day_scheduler
+[ 96%] Linking CXX executable test_problem_builder
+[ 98%] Built target test_problem_builder
+[100%] Linking CXX executable test_cold_day
+[100%] Built target test_cold_day
+[ 60%] Built target day_solver_core
+[ 95%] Built target day_scheduler
+[ 97%] Building CXX object CMakeFiles/day_solver_audit.dir/src/components/native_exact_domains/solver/src/audit_baseline.cpp.o
+[100%] Linking CXX executable day_solver_audit
+[100%] Built target day_solver_audit

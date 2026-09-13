@@ -63,6 +63,12 @@
           },
           "minItems": 5,
           "maxItems": 5
+        },
+        "shed_capacity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 32766,
+          "description": "Optional storage capacity. Omission retains unlimited-storage v3 behavior."
         }
       },
       "required": [

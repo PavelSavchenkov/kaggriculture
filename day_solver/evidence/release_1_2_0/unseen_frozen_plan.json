@@ -1,0 +1,95 @@
+{
+  "frozen_utc": "2026-09-13T18:04:05.134791+00:00",
+  "source_entry": {
+    "id": "108286683",
+    "leaders": [
+      "ymg_aq",
+      "THIRD FARM CLUB"
+    ],
+    "split": "leaders_test",
+    "source": "experiments/v7/sep12_composition_to_schedule/cases/leaders/replays/108286683.json.gz"
+  },
+  "selection": "First unexported game in the pre-existing hash-ordered split",
+  "profiles": [
+    {
+      "name": "sealed_main",
+      "policy": "portfolio",
+      "seconds": 4.0,
+      "binary": "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/unseen_v568_worker_search_plan/sealed_main_cli",
+      "binary_sha256": "59d7c152515a3cbfbe9c20cee7611641058175e62ec8734c49b94a8c752db92d"
+    },
+    {
+      "name": "route_main",
+      "policy": "portfolio",
+      "seconds": 4.0,
+      "binary": "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/unseen_v568_worker_search_plan/route_main_cli",
+      "binary_sha256": "79e34837f3f4e8a01c337e1be4e8926969c0ba2c3cb84630fbe080bc8a0b74bf"
+    },
+    {
+      "name": "fixed_main",
+      "policy": "portfolio",
+      "seconds": 4.0,
+      "binary": "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/unseen_v568_worker_search_plan/fixed_main_cli",
+      "binary_sha256": "cdc43bb05302a8790a9a96665577af6ed15119e9f313fd53d3bdbd0136edc175"
+    },
+    {
+      "name": "sealed_fast",
+      "policy": "regret-fast",
+      "seconds": 0.5,
+      "binary": "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/unseen_v568_worker_search_plan/sealed_fast_cli",
+      "binary_sha256": "59d7c152515a3cbfbe9c20cee7611641058175e62ec8734c49b94a8c752db92d"
+    },
+    {
+      "name": "fixed_fast",
+      "policy": "regret-fast",
+      "seconds": 0.5,
+      "binary": "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/unseen_v568_worker_search_plan/fixed_fast_cli",
+      "binary_sha256": "cdc43bb05302a8790a9a96665577af6ed15119e9f313fd53d3bdbd0136edc175"
+    }
+  ],
+  "cpu": 14,
+  "days": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "extra_workers": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "extractor_sha256": "427598dad0f3f10574fa39b304a25554b6005322916155476716f4eb2112bc90",
+  "extractor_budget": 0,
+  "canonical_tiles": true,
+  "engine_version": "1.32.7",
+  "engine_source_hash": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+  "criteria": "Exact outputs, trades at original order slots, retained state; original replay workforce; payroll credit only.",
+  "analysis": "Complete all profiles and contracts before inspecting quality or tuning on this game."
+}

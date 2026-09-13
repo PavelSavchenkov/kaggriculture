@@ -1,0 +1,10 @@
+{
+  "candidate": "v556 with its new portfolio order limited to 1..4 seconds; previous order for longer calls",
+  "rejected": [
+    "v561 fixed-path repair",
+    "v563 hint-only change",
+    "v566 fixed-worker trial"
+  ],
+  "reason": "Best measured four-second aggregate coverage/runtime, retaining long-budget cold controls",
+  "stop_after_seal": true
+}

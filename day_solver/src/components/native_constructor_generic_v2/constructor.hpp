@@ -29,8 +29,8 @@ struct ConstructorResult {
     double seconds = 0;
 };
 
-inline RouteProposal export_generic(const RoutingData& routing, const vrp::Solution& solution) {
-    auto assignments = Bundles::solution_assignments(routing, solution);
+inline RouteProposal export_generic(const RoutingData& routing, const vrp::Solution& solution, bool allow_infeasible = false) {
+    auto assignments = Bundles::solution_assignments(routing, solution, allow_infeasible);
     const auto& tasks = routing.task_data.tasks;
     const int workers = routing.task_data.problem.worker_count;
     require(int(solution.numRoutes()) <= workers, "too many generic worker routes");
@@ -69,13 +69,9 @@ inline ConstructorResult construct(const ds::DayProblem& problem, ConstructorOpt
     Search search(data, options.routing.seed);
     SearchOptions search_options;
     search_options.iterations = options.iterations > 0 ? options.iterations : std::numeric_limits<int>::max() - 1;
-    std::optional<std::chrono::steady_clock::time_point> search_started;
-    std::function<bool()> stop;
-    if (options.iterations == 0) stop = [&] {
-        // PyVRP MaxRuntime starts on its first call, after initial search.
-        if (!search_started) search_started = std::chrono::steady_clock::now();
-        return std::chrono::duration<double>(std::chrono::steady_clock::now() - *search_started).count() > options.seconds;
-    };
+    // Iteration and time limits both apply. Include setup and the initial
+    // local search in the budget; a search iteration is not interruptible.
+    const auto stop = [&] { return elapsed() >= options.seconds; };
     const auto solution = search.run(search_options, {}, stop);
     ConstructorResult result;
     result.iterations = search.iterations_run;
@@ -122,7 +118,9 @@ inline ConstructorResult repair_generated(const ds::DayProblem& problem, Constru
     options.repair.target_routes = options.use_all_workers ? problem.worker_count : 0;
     options.repair.separate_output_routes = options.routing.separate_delivery_routes;
     RouteProposal repaired;
-    repaired.repaired = Repair(context, options.repair).run(context.initial);
+    repaired.repaired = Repair(context, options.repair).run(context.initial, [&] {
+        return std::chrono::duration<double>(std::chrono::steady_clock::now() - started).count() >= options.seconds;
+    });
     export_workers(context, repaired);
     ConstructorResult result;
     result.proposal = std::move(repaired);

@@ -1,0 +1,58 @@
+{
+  "profiles": [
+    {
+      "name": "baseline",
+      "seconds": 4.0,
+      "solver": "main",
+      "by_extra": {
+        "0": {
+          "requested": 1943,
+          "exact": 1921,
+          "within_limit": 1921,
+          "fraction_within_limit": 0.988677303139475,
+          "mean_seconds": 0.3111560958826557,
+          "max_seconds": 4.03812
+        }
+      },
+      "by_player": {
+        "Crop Dusta": {
+          "0": {
+            "requested": 1943,
+            "exact": 1921,
+            "within_limit": 1921,
+            "fraction_within_limit": 0.988677303139475,
+            "mean_seconds": 0.3111560958826557,
+            "max_seconds": 4.03812
+          }
+        }
+      }
+    },
+    {
+      "name": "candidate",
+      "seconds": 4.0,
+      "solver": "main",
+      "by_extra": {
+        "0": {
+          "requested": 1943,
+          "exact": 1922,
+          "within_limit": 1922,
+          "fraction_within_limit": 0.9891919711785898,
+          "mean_seconds": 0.3068736277920741,
+          "max_seconds": 4.06379
+        }
+      },
+      "by_player": {
+        "Crop Dusta": {
+          "0": {
+            "requested": 1943,
+            "exact": 1922,
+            "within_limit": 1922,
+            "fraction_within_limit": 0.9891919711785898,
+            "mean_seconds": 0.3068736277920741,
+            "max_seconds": 4.06379
+          }
+        }
+      }
+    }
+  ]
+}

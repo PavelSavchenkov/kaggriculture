@@ -1,0 +1,18 @@
+Internal ctest changing into directory: /home/pavel/Programming/kaggriculture/day_solver/build
+Test project /home/pavel/Programming/kaggriculture/day_solver/build
+    Start 1: day_solver_constructor_budget
+1/6 Test #1: day_solver_constructor_budget ....   Passed    0.03 sec
+    Start 2: day_solver_materialized_stock
+2/6 Test #2: day_solver_materialized_stock ....   Passed    7.70 sec
+    Start 3: day_solver_storage
+3/6 Test #3: day_solver_storage ...............   Passed    1.59 sec
+    Start 4: day_solver_cold
+4/6 Test #4: day_solver_cold ..................   Passed   19.20 sec
+    Start 5: day_solver_api
+5/6 Test #5: day_solver_api ...................   Passed    4.04 sec
+    Start 6: day_solver_problem_builder
+6/6 Test #6: day_solver_problem_builder .......   Passed    1.01 sec
+
+100% tests passed, 0 tests failed out of 6
+
+Total Test time (real) =  33.57 sec

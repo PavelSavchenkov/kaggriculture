@@ -1,0 +1,18 @@
+{
+  "name": "upstream_header_timing_recheck",
+  "command": [
+    "taskset",
+    "-c",
+    "10",
+    "ctest",
+    "--test-dir",
+    "/home/pavel/Programming/kaggriculture/work/day_solver_push_validation/build",
+    "--output-on-failure",
+    "-R",
+    "^day_solver_(cold|search_regressions)$"
+  ],
+  "exit_code": 0,
+  "seconds": 22.148621546977665,
+  "automatic_git_packing_paused": true,
+  "cpu": 10
+}

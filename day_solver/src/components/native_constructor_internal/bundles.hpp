@@ -46,8 +46,10 @@ struct Bundles {
         return result;
     }
 
-    static std::vector<TaskAssignment> solution_assignments(const RoutingData& data, const vrp::Solution& solution) {
-        require(solution.isFeasible(), "bundle assembly requires a feasible routing proposal");
+    static std::vector<TaskAssignment> solution_assignments(const RoutingData& data, const vrp::Solution& solution,
+                                                           bool allow_infeasible = false) {
+        require(allow_infeasible ? solution.isComplete() : solution.isFeasible(),
+                "bundle assembly requires a complete routing proposal and feasibility unless explicitly relaxed");
         std::vector<TaskAssignment> result;
         // The Python constructor numbers used routes here; it does not retain
         // a PyVRP vehicle's worker identity when coalescing and rematching.

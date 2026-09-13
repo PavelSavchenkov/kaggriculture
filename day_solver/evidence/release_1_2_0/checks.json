@@ -1,0 +1,564 @@
+[
+  {
+    "name": "root_build",
+    "command": [
+      "taskset",
+      "-c",
+      "0,2",
+      "cmake",
+      "--build",
+      "day_solver/build",
+      "--target",
+      "all",
+      "day_solver_audit",
+      "-j2"
+    ],
+    "exit_code": 0,
+    "seconds": 11.64224059303524
+  },
+  {
+    "name": "root_tests",
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "ctest",
+      "--test-dir",
+      "day_solver/build",
+      "--output-on-failure"
+    ],
+    "exit_code": 0,
+    "seconds": 36.76747693499783
+  },
+  {
+    "name": "source_configure",
+    "command": [
+      "cmake",
+      "-S",
+      "day_solver",
+      "-B",
+      "day_solver/build-source",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DDAY_SOLVER_REBUILD_CORE=ON",
+      "-DDAY_SOLVER_BUILD_TESTS=ON",
+      "-DDAY_SOLVER_BUILD_EXAMPLES=ON"
+    ],
+    "exit_code": 0,
+    "seconds": 0.10566723201191053
+  },
+  {
+    "name": "source_build",
+    "command": [
+      "taskset",
+      "-c",
+      "6,8",
+      "cmake",
+      "--build",
+      "day_solver/build-source",
+      "--target",
+      "all",
+      "day_solver_audit",
+      "-j2"
+    ],
+    "exit_code": 0,
+    "seconds": 12.315249934967142
+  },
+  {
+    "name": "source_tests",
+    "command": [
+      "taskset",
+      "-c",
+      "6",
+      "ctest",
+      "--test-dir",
+      "day_solver/build-source",
+      "--output-on-failure"
+    ],
+    "exit_code": 0,
+    "seconds": 36.51532872696407
+  },
+  {
+    "name": "cli_portfolio",
+    "command": [
+      "taskset",
+      "-c",
+      "6",
+      "/home/pavel/Programming/kaggriculture/day_solver/solve.sh",
+      "/home/pavel/Programming/kaggriculture/day_solver/examples/tomato/input.json",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/cli_portfolio",
+      "2",
+      "1",
+      "portfolio"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.015350744011811912
+  },
+  {
+    "name": "audit_portfolio",
+    "command": [
+      "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+      "/home/pavel/Programming/kaggriculture/day_solver/runtime/day_solver_audit",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/cli_portfolio/input.json",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/cli_portfolio/schedule.json"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.004947591980453581
+  },
+  {
+    "name": "cli_regret",
+    "command": [
+      "taskset",
+      "-c",
+      "6",
+      "/home/pavel/Programming/kaggriculture/day_solver/solve.sh",
+      "/home/pavel/Programming/kaggriculture/day_solver/examples/tomato/input.json",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/cli_regret",
+      "2",
+      "1",
+      "regret"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.015960351971443743
+  },
+  {
+    "name": "audit_regret",
+    "command": [
+      "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+      "/home/pavel/Programming/kaggriculture/day_solver/runtime/day_solver_audit",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/cli_regret/input.json",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/cli_regret/schedule.json"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.005228768975939602
+  },
+  {
+    "name": "cli_regret-deferred",
+    "command": [
+      "taskset",
+      "-c",
+      "6",
+      "/home/pavel/Programming/kaggriculture/day_solver/solve.sh",
+      "/home/pavel/Programming/kaggriculture/day_solver/examples/tomato/input.json",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/cli_regret-deferred",
+      "2",
+      "1",
+      "regret-deferred"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.014510712993796915
+  },
+  {
+    "name": "audit_regret-deferred",
+    "command": [
+      "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+      "/home/pavel/Programming/kaggriculture/day_solver/runtime/day_solver_audit",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/cli_regret-deferred/input.json",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/cli_regret-deferred/schedule.json"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.0048029840108938515
+  },
+  {
+    "name": "cli_regret-fast",
+    "command": [
+      "taskset",
+      "-c",
+      "6",
+      "/home/pavel/Programming/kaggriculture/day_solver/solve.sh",
+      "/home/pavel/Programming/kaggriculture/day_solver/examples/tomato/input.json",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/cli_regret-fast",
+      "2",
+      "1",
+      "regret-fast"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.015411438012961298
+  },
+  {
+    "name": "audit_regret-fast",
+    "command": [
+      "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+      "/home/pavel/Programming/kaggriculture/day_solver/runtime/day_solver_audit",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/cli_regret-fast/input.json",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/cli_regret-fast/schedule.json"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.005143488000612706
+  },
+  {
+    "name": "full_cli_0",
+    "command": [
+      "taskset",
+      "-c",
+      "6",
+      "/home/pavel/Programming/kaggriculture/day_solver/solve.sh",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/strict_v510_stock_repair_leaders/candidate/108293743_p0_d2_extra0/problem.json",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/full_case_0",
+      "0.5",
+      "1",
+      "regret-fast"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.058502450003288686
+  },
+  {
+    "name": "full_engine_0",
+    "command": [
+      "taskset",
+      "-c",
+      "6",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/builds/release/audit_capacity",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/cases/leaders_dev/108293743/trace.txt",
+      "0",
+      "2",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/full_case_0/schedule.actions",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/full_case_0/full_audit",
+      "0"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.010906648996751755
+  },
+  {
+    "name": "full_cli_1",
+    "command": [
+      "taskset",
+      "-c",
+      "6",
+      "/home/pavel/Programming/kaggriculture/day_solver/solve.sh",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/strict_v510_stock_repair_leaders/candidate/108293743_p0_d2_extra2/problem.json",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/full_case_1",
+      "0.5",
+      "1",
+      "regret-fast"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.061856619955506176
+  },
+  {
+    "name": "full_engine_1",
+    "command": [
+      "taskset",
+      "-c",
+      "6",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/builds/release/audit_capacity",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/cases/leaders_dev/108293743/trace.txt",
+      "0",
+      "2",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/full_case_1/schedule.actions",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/full_case_1/full_audit",
+      "2"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.011086151003837585
+  },
+  {
+    "name": "full_cli_2",
+    "command": [
+      "taskset",
+      "-c",
+      "6",
+      "/home/pavel/Programming/kaggriculture/day_solver/solve.sh",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/strict_v510_stock_repair_leaders/candidate/108264640_p0_d15_extra3/problem.json",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/full_case_2",
+      "4",
+      "1",
+      "portfolio"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 2.7583961430354975
+  },
+  {
+    "name": "full_engine_2",
+    "command": [
+      "taskset",
+      "-c",
+      "6",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/builds/release/audit_capacity",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/cases/leaders_dev/108264640/trace.txt",
+      "0",
+      "15",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/full_case_2/schedule.actions",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/full_case_2/full_audit",
+      "3"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.014802774996496737
+  },
+  {
+    "name": "full_cli_3",
+    "command": [
+      "taskset",
+      "-c",
+      "6",
+      "/home/pavel/Programming/kaggriculture/day_solver/solve.sh",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/strict_v510_stock_repair_leaders/candidate/108281702_p1_d25_extra0/problem.json",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/full_case_3",
+      "4",
+      "1",
+      "portfolio"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.2647159170010127
+  },
+  {
+    "name": "full_engine_3",
+    "command": [
+      "taskset",
+      "-c",
+      "6",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/builds/release/audit_capacity",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/cases/leaders_dev/108281702/trace.txt",
+      "1",
+      "25",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/full_case_3/schedule.actions",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/full_case_3/full_audit",
+      "0"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.015286697016563267
+  },
+  {
+    "name": "full_cli_4",
+    "command": [
+      "taskset",
+      "-c",
+      "6",
+      "/home/pavel/Programming/kaggriculture/day_solver/solve.sh",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/unseen_v568_worker_search_plan/contracts/108286683_p0_d26_extra2/problem.json",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/full_case_4",
+      "4",
+      "1",
+      "portfolio"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.7056622040108778
+  },
+  {
+    "name": "full_engine_4",
+    "command": [
+      "taskset",
+      "-c",
+      "6",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/builds/release/audit_capacity",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/cases/leaders_test/108286683/trace.txt",
+      "0",
+      "26",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/full_case_4/schedule.actions",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/full_case_4/full_audit",
+      "2"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.014028755016624928
+  },
+  {
+    "name": "full_cli_5",
+    "command": [
+      "taskset",
+      "-c",
+      "6",
+      "/home/pavel/Programming/kaggriculture/day_solver/solve.sh",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/unseen_v568_worker_search_plan/contracts/108286683_p1_d27_extra0/problem.json",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/full_case_5",
+      "4",
+      "1",
+      "portfolio"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.4899513010168448
+  },
+  {
+    "name": "full_engine_5",
+    "command": [
+      "taskset",
+      "-c",
+      "6",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/builds/release/audit_capacity",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/cases/leaders_test/108286683/trace.txt",
+      "1",
+      "27",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/full_case_5/schedule.actions",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/full_case_5/full_audit",
+      "0"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.015010386996436864
+  },
+  {
+    "name": "overflow_cli",
+    "command": [
+      "taskset",
+      "-c",
+      "6",
+      "/home/pavel/Programming/kaggriculture/day_solver/solve.sh",
+      "/home/pavel/Programming/kaggriculture/day_solver/tests/storage/full_shed_day28.json",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/overflow_cli",
+      "4",
+      "1",
+      "portfolio"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 3.479945030005183
+  },
+  {
+    "name": "overflow_audit",
+    "command": [
+      "/home/pavel/Programming/kaggriculture/day_solver/with_runtime.sh",
+      "/home/pavel/Programming/kaggriculture/day_solver/runtime/day_solver_audit",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/overflow_cli/input.json",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/overflow_cli/schedule.json"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 0,
+    "seconds": 0.00615298404591158
+  },
+  {
+    "name": "zero_budget",
+    "command": [
+      "/home/pavel/Programming/kaggriculture/day_solver/solve.sh",
+      "/home/pavel/Programming/kaggriculture/day_solver/examples/tomato/input.json",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/zero_budget",
+      "0",
+      "1"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 1,
+    "seconds": 0.01706090400693938
+  },
+  {
+    "name": "invalid_policy",
+    "command": [
+      "/home/pavel/Programming/kaggriculture/day_solver/solve.sh",
+      "/home/pavel/Programming/kaggriculture/day_solver/examples/tomato/input.json",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/invalid_policy",
+      "1",
+      "1",
+      "invalid-policy"
+    ],
+    "exit_code": 0,
+    "actual_exit_code": 2,
+    "seconds": 0.011743913986720145
+  },
+  {
+    "name": "relocated_configure",
+    "command": [
+      "cmake",
+      "-S",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/relocated/day_solver",
+      "-B",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/relocated/day_solver/build",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DDAY_SOLVER_BUILD_TESTS=ON",
+      "-DDAY_SOLVER_BUILD_EXAMPLES=ON"
+    ],
+    "exit_code": 0,
+    "seconds": 0.24341816396918148
+  },
+  {
+    "name": "relocated_build",
+    "command": [
+      "taskset",
+      "-c",
+      "0,2",
+      "cmake",
+      "--build",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/relocated/day_solver/build",
+      "-j2"
+    ],
+    "exit_code": 0,
+    "seconds": 40.95003024896141
+  },
+  {
+    "name": "relocated_tests",
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "ctest",
+      "--test-dir",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/relocated/day_solver/build",
+      "--output-on-failure"
+    ],
+    "exit_code": 0,
+    "seconds": 36.70690774999093
+  },
+  {
+    "name": "relocated_example",
+    "command": [
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/relocated/day_solver/with_runtime.sh",
+      "/home/pavel/Programming/kaggriculture/experiments/v7/sep12_composition_to_schedule/results/release_v570_production_seal/relocated/day_solver/build/day_solver_example"
+    ],
+    "exit_code": 0,
+    "seconds": 0.035426981979981065
+  },
+  {
+    "name": "upstream_header_configure",
+    "command": [
+      "cmake",
+      "-S",
+      "/home/pavel/Programming/kaggriculture/day_solver",
+      "-B",
+      "/home/pavel/Programming/kaggriculture/work/day_solver_push_validation/build",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DDAY_SOLVER_BUILD_TESTS=ON",
+      "-DDAY_SOLVER_BUILD_EXAMPLES=ON"
+    ],
+    "exit_code": 0,
+    "seconds": 0.5021312579629011
+  },
+  {
+    "name": "upstream_header_build",
+    "command": [
+      "taskset",
+      "-c",
+      "0,2",
+      "cmake",
+      "--build",
+      "/home/pavel/Programming/kaggriculture/work/day_solver_push_validation/build",
+      "--target",
+      "all",
+      "day_solver_audit",
+      "-j2"
+    ],
+    "exit_code": 0,
+    "seconds": 103.61105597700225
+  },
+  {
+    "name": "upstream_header_timing_recheck",
+    "command": [
+      "taskset",
+      "-c",
+      "10",
+      "ctest",
+      "--test-dir",
+      "/home/pavel/Programming/kaggriculture/work/day_solver_push_validation/build",
+      "--output-on-failure",
+      "-R",
+      "^day_solver_(cold|search_regressions)$"
+    ],
+    "exit_code": 0,
+    "seconds": 22.148621546977665,
+    "automatic_git_packing_paused": true,
+    "cpu": 10
+  }
+]

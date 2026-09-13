@@ -2,10 +2,10 @@
 
 ## Choose an interface
 
-Use `solve.sh INPUT OUTPUT [SECONDS] [THREADS]` for an offline process pipeline.
-It launches the unchanged V30 executable with all validated search settings.
+Use `solve.sh INPUT OUTPUT [SECONDS] [THREADS] [POLICY]` for an offline process pipeline.
+It launches the sealed capacity-aware release executable.
 Use `DaySolver::scheduler` for repeated in-process calls from C++20. It compiles
-a small public wrapper and links the exact V30 archives. C++ solving performs
+the current solver and links the remaining bundled core libraries. C++ solving performs
 no JSON serialization, file access, Python execution or subprocess calls.
 
 The package works without the original experiment or repository. Binaries were
@@ -70,8 +70,9 @@ Call it again after changing those requirements in an outer planning loop.
 The JSON parser already prepares its result. Do not supply your own
 `required_outcomes`, `allowed_acquisitions`, `sale_targets` or `limits` to extend
 the contract. `prepare_problem` replaces the first two; `sale_targets` must be
-empty. Leave `start.cash`, `start.shed_capacity`, `limits` and event `cash_delta`
-at their defaults; they are not extra v3 scheduling controls. In particular,
+empty. Set `start.shed_capacity` to enforce storage capacity, or leave its default
+for the historical unlimited contract. Leave `start.cash`, `limits` and event
+`cash_delta` at their defaults; they are not extra v3 scheduling controls. In particular,
 budgets come from `day_scheduler::Options`, not `DayProblem::limits`.
 
 ```cpp
@@ -119,7 +120,8 @@ The sibling `fast_game_engine/` provides the complete transition engine. Its
 `sim.hpp` and `pyrandom.hpp` match this package's copied engine headers at release.
 The day scheduler uses its own strict day replay with the explicit v3 contract:
 
-- Shed capacity and overflow are ignored.
+- Explicit `start.shed_capacity` enforces PLACE, DROP, purchase headroom and
+  automatic night-transfer semantics. Omission retains unlimited storage.
 - Availability withdrawals represent the outer strategy's reserved goods.
   Output orders contain purchases and hires, not sales.
 - Prices, cash, opponent orders and economic feasibility are external.
@@ -133,8 +135,9 @@ matter. Do not subtract availability again after executing the matching sales.
 
 ## Rebuild and inspect
 
-Default CMake builds only the wrapper. The exact portfolio/model archives remain
-unchanged. To rebuild their project sources:
+Default CMake builds the current wrapper, quick portfolio, capacity replay and
+capacity completion model, linking the remaining bundled archives. To rebuild
+the remaining project sources as well:
 
 ```bash
 conda run -n kaggriculture cmake -S . -B build-source -DCMAKE_BUILD_TYPE=Release \
@@ -149,8 +152,9 @@ helper shared libraries, and OR-Tools dependency closure. It is not a source
 build of every third-party dependency or a portable binary release. A rebuilt
 core can choose different branches under time limits; validate changes on the
 exposed corpus and a new held-out cohort before replacing the release binary.
-`solve.sh` always invokes the original packaged executable, even after a source
-build. To exercise a rebuilt core, run its C++ consumers/tests.
+`solve.sh` invokes the sealed `runtime/day_solver_cli`. To run a source rebuild,
+invoke `build/day_solver_cli` through `with_runtime.sh`. The frozen V30 executable remains
+at `runtime/fast_solver_cli` and uses its original command-line flags.
 
 ## Troubleshooting
 

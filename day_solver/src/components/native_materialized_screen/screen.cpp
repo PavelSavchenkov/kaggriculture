@@ -2,19 +2,28 @@
 #include "data.hpp"
 #include "model.hpp"
 #include "materialize.hpp"
+#include "stock.hpp"
+#include "capacity.hpp"
 #include "ortools/sat/cp_model_checker.h"
 
 namespace day_native::materialized_screen {
-Result solve(const ds::DayProblem& problem, const InternalHint& hint, const SolveOptions& settings, int tuning) {
+static Result solve_impl(const ds::DayProblem& problem, const InternalHint& hint, const SolveOptions& settings, int tuning,
+                         bool stock, bool capacity = false, bool exact_order = true, bool extra_pickups = false, Count extra_buffer = 0) {
     require(std::isfinite(settings.seconds) && settings.seconds > 0 && settings.workers > 0, "positive search limits required");
     const auto& options = settings.model;
     require(!(options.ignore_precedence && options.soft_precedence), "precedence cannot be both ignored and softened");
     const auto started = std::chrono::steady_clock::now();
-    const ScreenData data(problem, hint, options);
+    ScreenData data(problem, hint, options);
+    // The old surplus inequality assumes no discarded cargo. The terminal
+    // capacity model accounts for night overflow explicitly instead. Keep
+    // optional surplus deposits available for within-day transfers.
+    if (capacity) data.net.clear();
     Result result;
     if (settings.include_data) result.data = DataSnapshot{data.tasks, data.early, data.late, data.deadlines, data.owner, data.route_ids,
         data.worker_group, data.requirements, data.deliveries, data.net, data.workers, data.profiles, data.groups};
-    ScreenModel screen(data);
+    ScreenModel screen(data, capacity && exact_order, extra_pickups, extra_buffer);
+    if (stock) add_stock_constraints(screen, capacity && exact_order);
+    if (capacity) add_terminal_capacity(screen, exact_order);
     const auto& proto = screen.model.Build();
     const auto validation = sat::ValidateCpModel(proto);
     require(validation.empty(), validation);
@@ -83,11 +92,58 @@ Result solve(const ds::DayProblem& problem, const InternalHint& hint, const Solv
             }
             result.hint = std::move(proposal);
             const auto materialize_started = std::chrono::steady_clock::now();
-            result.schedule = materialize(screen, response, result.materialize_rejection);
+            const double remaining = settings.seconds - std::chrono::duration<double>(materialize_started - started).count();
+            if (settings.include_data) result.rejected_schedule.emplace();
+            result.schedule = materialize(screen, response, result.materialize_rejection, std::clamp(remaining, 0.0, 0.05),
+                result.rejected_schedule ? &*result.rejected_schedule : nullptr);
+            if (!result.materialize_rejection.starts_with("strict replay rejected materialization")) result.rejected_schedule.reset();
             result.materialize_seconds = std::chrono::duration<double>(std::chrono::steady_clock::now() - materialize_started).count();
         }
     }
     result.total_seconds = std::chrono::duration<double>(std::chrono::steady_clock::now() - started).count();
     return result;
+}
+Result solve(const ds::DayProblem& problem, const InternalHint& hint, const SolveOptions& settings, int tuning) {
+    return solve_impl(problem, hint, settings, tuning, false);
+}
+Result solve_stock(const ds::DayProblem& problem, const InternalHint& hint, const SolveOptions& settings, int tuning) {
+    return solve_impl(problem, hint, settings, tuning, true);
+}
+Result solve_capacity(const ds::DayProblem& problem, const InternalHint& hint, const SolveOptions& settings, int tuning) {
+    return solve_capacity_budgeted(problem, hint, settings, tuning, settings.seconds);
+}
+Result solve_capacity_budgeted(const ds::DayProblem& problem, const InternalHint& hint, const SolveOptions& settings, int tuning,
+                               double refinement_seconds) {
+    require(std::isfinite(refinement_seconds) && refinement_seconds >= 0, "invalid capacity refinement budget");
+    if (settings.build_only) return solve_impl(problem, hint, settings, tuning, true, true);
+    const auto started = std::chrono::steady_clock::now();
+    auto proposed = solve_impl(problem, hint, settings, tuning, true, true, false);
+    if (proposed.schedule) return proposed;
+    // A minimum-input route can be infeasible solely because it cannot clear
+    // room for purchases. Extra pickup quantities repair that restriction.
+    const bool buffered = purchase_pressure(problem) > 0;
+    // Otherwise refine only a concrete materialization failure; repeatedly
+    // expanding rejected route partitions would starve the route search.
+    if (!buffered && proposed.status != sat::OPTIMAL && proposed.status != sat::FEASIBLE) return proposed;
+    auto exact = settings;
+    exact.seconds = std::min(settings.seconds, buffered ? settings.seconds : refinement_seconds) -
+        std::chrono::duration<double>(std::chrono::steady_clock::now() - started).count();
+    if (exact.seconds <= 0) return proposed;
+    auto result = solve_impl(problem, hint, exact, tuning, true, true, true, buffered);
+    result.build_seconds += proposed.build_seconds;
+    result.solver_seconds += proposed.solver_seconds;
+    result.materialize_seconds += proposed.materialize_seconds;
+    result.branches += proposed.branches; result.conflicts += proposed.conflicts;
+    result.total_seconds = std::chrono::duration<double>(std::chrono::steady_clock::now() - started).count();
+    return result;
+}
+Result solve_capacity_ordered(const ds::DayProblem& problem, const InternalHint& hint, const SolveOptions& settings, int tuning) {
+    return solve_impl(problem, hint, settings, tuning, true, true);
+}
+Result solve_capacity_buffered(const ds::DayProblem& problem, const InternalHint& hint, const SolveOptions& settings, int tuning) {
+    return solve_impl(problem, hint, settings, tuning, true, true, true, true);
+}
+Result solve_capacity_inventory(const ds::DayProblem& problem, const InternalHint& hint, const SolveOptions& settings, int tuning) {
+    return solve_impl(problem, hint, settings, tuning, true, true, true, true, discarded_goods(problem));
 }
 } // namespace day_native::materialized_screen

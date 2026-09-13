@@ -39,6 +39,26 @@ def trace(problem, schedule):
     seeds = list(problem["start"]["seeds"])
     positions = [SHED_ACCESS[0]]
     cargo = [[0] * 12]
+    cargo_order = [[]]
+    capacity = problem["start"].get("shed_capacity", 32767)
+    discarded = [0] * 12
+    def room():
+        return max(0, capacity - sum(shed)) if capacity != 32767 else float("inf")
+    def change_cargo(worker, item, quantity):
+        before = cargo[worker][item]
+        cargo[worker][item] += quantity
+        assert cargo[worker][item] >= 0
+        if not before and cargo[worker][item]:
+            cargo_order[worker].append(item)
+        elif before and not cargo[worker][item]:
+            cargo_order[worker].remove(item)
+    def deposit(worker, item, quantity, discard):
+        accepted = min(quantity, room())
+        shed[item] += accepted
+        change_cargo(worker, item, -quantity if discard else -accepted)
+        if discard:
+            discarded[item] += quantity - accepted
+        return accepted
     events, hours, deposits = [], [], []
     completed_tasks = 0
     for hour, turn in enumerate(schedule):
@@ -62,9 +82,9 @@ def trace(problem, schedule):
                 task = candidates[index]
                 event["task"] = task.id
                 if task.input_item >= 0:
-                    cargo[worker][task.input_item] -= 1
+                    change_cargo(worker, task.input_item, -1)
                 if task.output_item >= 0:
-                    cargo[worker][task.output_item] += task.output_quantity
+                    change_cargo(worker, task.output_item, task.output_quantity)
                 if task.seed_crop >= 0:
                     seeds[task.seed_crop] -= 1
                 next_task[point] += 1
@@ -74,22 +94,20 @@ def trace(problem, schedule):
                 item = ITEM_NAMES.index(action[1])
                 quantity = min(action[2], shed[item])
                 assert quantity > 0
-                cargo[worker][item] += quantity
+                change_cargo(worker, item, quantity)
                 shed[item] -= quantity
                 event["picked"] = {item: quantity}
             elif op in ("PLACE", "DROP"):
                 assert point in SHED_ACCESS
                 if op == "PLACE":
                     item = ITEM_NAMES.index(action[1])
-                    quantity = min(action[2], cargo[worker][item])
+                    quantity = min(action[2], cargo[worker][item], room())
                     assert quantity > 0
                     units = {item: quantity}
                 else:
-                    units = {item: quantity for item, quantity in enumerate(cargo[worker]) if quantity}
+                    units = {item: cargo[worker][item] for item in cargo_order[worker]}
                     assert units
-                for item, quantity in units.items():
-                    cargo[worker][item] -= quantity
-                    shed[item] += quantity
+                units = {item: deposit(worker, item, quantity, op == "DROP") for item, quantity in units.items()}
                 event["deposited"] = units
                 event["remaining_timed_demand_for_deposited_items"] = {
                     item: remaining[item] for item in units
@@ -111,9 +129,11 @@ def trace(problem, schedule):
                 for _ in range(buy["quantity"]):
                     positions.append(min(SHED_ACCESS, key=positions.count))
                     cargo.append([0] * 12)
+                    cargo_order.append([])
             elif buy["op"] == "buy_seed":
                 seeds[buy["item"]] += buy["quantity"]
             elif buy["op"] in ("buy_product", "buy_animal"):
+                assert buy["quantity"] <= room()
                 shed[buy["item"]] += buy["quantity"]
             elif buy["op"] != "buy_land":
                 raise ValueError(f"Unexpected purchase: {buy}")
@@ -122,10 +142,13 @@ def trace(problem, schedule):
                       "shed_after_market": list(shed)})
     assert completed_tasks == len(tasks)
     assert len(positions) == problem["worker_count"]
-    final = [quantity + sum(worker[item] for worker in cargo) for item, quantity in enumerate(shed)]
+    for worker, order in enumerate(cargo_order):
+        for item in list(order):
+            deposit(worker, item, cargo[worker][item], True)
+    final = list(shed)
     assert final == problem["end_shed"] and seeds == problem["end_seeds"]
     return {"events": events, "hours": hours, "deposits": deposits, "end_shed": final,
-            "end_seeds": seeds, "tasks": completed_tasks}
+            "end_seeds": seeds, "tasks": completed_tasks, "discarded": discarded}
 
 
 def compare_auditor(ledger, audit):

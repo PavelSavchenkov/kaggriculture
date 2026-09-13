@@ -399,6 +399,19 @@ std::vector<ValidationIssue> validate_problem(const DayProblem& problem) {
         if (problem.end_seeds[crop] < 0 || problem.end_seeds[crop] > MAX_INPUT_COUNT)
             add(issues, "end_seeds[" + std::to_string(crop) + "]",
                 "must be in [0, 2147483647]");
+    if (problem.start.shed_capacity < 0)
+        add(issues, "start.shed_capacity", "must be nonnegative");
+    if (problem.start.shed_capacity != std::numeric_limits<int16_t>::max()) {
+        InventoryCount start_total = 0, end_total = 0;
+        for (int item = 0; item < kag::N_ITEMS; ++item) {
+            start_total += problem.start.shed[item];
+            end_total += problem.end_shed[item];
+        }
+        if (start_total > problem.start.shed_capacity)
+            add(issues, "start.shed", "exceeds shed capacity");
+        if (end_total > problem.start.shed_capacity)
+            add(issues, "end_shed", "exceeds shed capacity");
+    }
 
     std::set<std::pair<int, int>> market_slots;
     int hires = 0;

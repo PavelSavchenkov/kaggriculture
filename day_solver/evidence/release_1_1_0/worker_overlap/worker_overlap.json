@@ -1,0 +1,127 @@
+{
+  "profiles": [
+    {
+      "name": "deferred500",
+      "seconds": 0.5,
+      "summary": {
+        "days": 145,
+        "minus_one": 62,
+        "original": 89,
+        "both": 62,
+        "minus_only": 0,
+        "original_only": 27,
+        "neither": 56
+      },
+      "by_player": {
+        "M & M & P & Q": {
+          "days": 29,
+          "minus_one": 2,
+          "original": 9,
+          "both": 2,
+          "minus_only": 0,
+          "original_only": 7,
+          "neither": 20
+        },
+        "Majkel1337": {
+          "days": 29,
+          "minus_one": 10,
+          "original": 11,
+          "both": 10,
+          "minus_only": 0,
+          "original_only": 1,
+          "neither": 18
+        },
+        "THIRD FARM CLUB": {
+          "days": 29,
+          "minus_one": 3,
+          "original": 20,
+          "both": 3,
+          "minus_only": 0,
+          "original_only": 17,
+          "neither": 9
+        },
+        "Unknown Mother-Goose": {
+          "days": 29,
+          "minus_one": 26,
+          "original": 27,
+          "both": 26,
+          "minus_only": 0,
+          "original_only": 1,
+          "neither": 2
+        },
+        "ymg_aq": {
+          "days": 29,
+          "minus_one": 21,
+          "original": 22,
+          "both": 21,
+          "minus_only": 0,
+          "original_only": 1,
+          "neither": 7
+        }
+      },
+      "minus_only_cases": []
+    },
+    {
+      "name": "raw90_500",
+      "seconds": 0.5,
+      "summary": {
+        "days": 145,
+        "minus_one": 62,
+        "original": 92,
+        "both": 62,
+        "minus_only": 0,
+        "original_only": 30,
+        "neither": 53
+      },
+      "by_player": {
+        "M & M & P & Q": {
+          "days": 29,
+          "minus_one": 2,
+          "original": 9,
+          "both": 2,
+          "minus_only": 0,
+          "original_only": 7,
+          "neither": 20
+        },
+        "Majkel1337": {
+          "days": 29,
+          "minus_one": 10,
+          "original": 11,
+          "both": 10,
+          "minus_only": 0,
+          "original_only": 1,
+          "neither": 18
+        },
+        "THIRD FARM CLUB": {
+          "days": 29,
+          "minus_one": 3,
+          "original": 21,
+          "both": 3,
+          "minus_only": 0,
+          "original_only": 18,
+          "neither": 8
+        },
+        "Unknown Mother-Goose": {
+          "days": 29,
+          "minus_one": 26,
+          "original": 27,
+          "both": 26,
+          "minus_only": 0,
+          "original_only": 1,
+          "neither": 2
+        },
+        "ymg_aq": {
+          "days": 29,
+          "minus_one": 21,
+          "original": 24,
+          "both": 21,
+          "minus_only": 0,
+          "original_only": 3,
+          "neither": 5
+        }
+      },
+      "minus_only_cases": []
+    }
+  ],
+  "scope": "Same days, frozen binary and policy at both worker counts. Each count receives its own budget; no union is claimed as a single-budget policy."
+}

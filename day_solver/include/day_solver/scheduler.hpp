@@ -3,13 +3,21 @@
 #include <optional>
 
 namespace day_scheduler {
+enum class Search { Portfolio, Regret, RegretDeferred, RegretFast };
 struct Options {
     double seconds = 900;
     int fallback_workers = 8;
+    Search search = Search::Portfolio;
+};
+struct Stage {
+    std::string name;
+    std::string status;
+    double seconds = 0;
 };
 struct Result {
     std::optional<std::array<kag::Action, day_solver::HOURS>> schedule;
     double seconds = 0;
+    std::vector<Stage> stages;
 };
 
 // Public v3 input only. Empty schedule means UNKNOWN; malformed input throws.

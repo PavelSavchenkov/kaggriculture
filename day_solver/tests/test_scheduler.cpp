@@ -23,7 +23,23 @@ int main(int argc, char** argv) {
         require(std::isfinite(result.seconds) && result.seconds >= 0, "invalid elapsed time");
         require(before == day_solver::serialize_problem_json(problem), "input was mutated");
         require(!day_scheduler::solve(problem, {0, 1}).schedule, "zero budget must return UNKNOWN");
+        for (auto policy : {day_scheduler::Search::Regret, day_scheduler::Search::RegretDeferred,
+                            day_scheduler::Search::RegretFast}) {
+            require(!day_scheduler::solve(problem, {0, 1, policy}).schedule,
+                    "zero fast budget must return UNKNOWN");
+            const auto fast = day_scheduler::solve(problem, {2, 1, policy});
+            if (fast.schedule) {
+                const auto checked = day_solver::replay_schedule(problem, *fast.schedule);
+                require(checked.candidate.replay.strict_valid && checked.requirements_satisfied && checked.invariants_satisfied,
+                        "fast public result failed replay");
+            }
+            require(before == day_solver::serialize_problem_json(problem), "fast search mutated input");
+        }
         bool rejected = false;
+        try { day_scheduler::solve(problem, {1, 1, static_cast<day_scheduler::Search>(99)}); }
+        catch (const std::runtime_error&) { rejected = true; }
+        require(rejected, "invalid search policy was accepted");
+        rejected = false;
         try { day_scheduler::solve(problem, {std::numeric_limits<double>::quiet_NaN(), 1}); }
         catch (const std::runtime_error&) { rejected = true; }
         require(rejected, "invalid budget was accepted");

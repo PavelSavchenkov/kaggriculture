@@ -1,5 +1,6 @@
 #pragma once
 #include "replay.hpp"
+#include "../../storage.hpp"
 #include <limits>
 
 namespace day_native::materialized_screen {
@@ -7,7 +8,8 @@ namespace day_native::materialized_screen {
 // This is a candidate constructor. The coarse model is a relaxation; only a
 // successful full replay makes the constructed schedule acceptable.
 std::optional<std::array<kag::Action, hours>> materialize(
-        const ScreenModel& screen, const sat::CpSolverResponse& response, std::string& rejection) {
+        const ScreenModel& screen, const sat::CpSolverResponse& response, std::string& rejection, double repair_seconds,
+        std::array<kag::Action, hours>* rejected_schedule = nullptr) {
     const auto& data = screen.data;
     const auto& problem = data.problem;
     auto fail = [&](const std::string& reason) -> std::optional<std::array<kag::Action, hours>> {
@@ -20,6 +22,7 @@ std::optional<std::array<kag::Action, hours>> materialize(
     const int workers = problem.worker_count;
     struct Service { int kind = -1, value = -1; };
     std::vector<std::array<Service, hours>> services(workers);
+    std::map<Key, Count> selected_pickups;
     std::vector<std::array<int, hours + 1>> points(workers);
     for (auto& timeline : points) timeline.fill(-1);
     auto fix = [&](int worker, int hour, Point point) {
@@ -42,6 +45,8 @@ std::optional<std::array<kag::Action, hours>> materialize(
             if (hour < checkpoints.releases[worker] || services[worker][hour].kind >= 0)
                 return fail("overlapping or premature service");
             services[worker][hour] = {node.kind, node.value};
+            if (node.kind == 1 && screen.extra_pickups)
+                selected_pickups[{worker, hour}] = value(screen.pickup_units.at({route, node.value}));
             if (!fix(worker, hour, node.point) || !fix(worker, hour + 1, node.point))
                 return fail("service conflicts with hire waypoint");
         }
@@ -80,6 +85,13 @@ std::optional<std::array<kag::Action, hours>> materialize(
         }
     }
     using Inventory = std::array<Count, items>;
+    std::vector<std::array<Inventory, hours>> planned_returns(workers);
+    for (const auto& [key, units] : screen.delivered_units) {
+        const auto [task, deadline, access] = key;
+        const int route = data.owner[task], worker = value(screen.concrete_worker[route]);
+        const int hour = value(screen.deposit_time.at({route, deadline, access}));
+        planned_returns[worker][hour][data.tasks[task].output] += sat::SolutionIntegerValue(response, units);
+    }
     // Minimum cargo needed before the next opportunity to pick up this item.
     // Deposits can return only surplus above this amount.
     std::vector<std::array<Inventory, hours + 1>> need(workers);
@@ -99,7 +111,7 @@ std::optional<std::array<kag::Action, hours>> materialize(
         actions.insert(actions.end(), work.actions.begin(), work.actions.end());
     require(actions.size() == data.tasks.size(), "task/action mapping differs");
     Inventory shed = problem.start.shed;
-    std::vector<Inventory> cargo(workers);
+    std::vector<Inventory> cargo(workers), returned_early(workers);
     auto add = [](Count& destination, Count amount) {
         if (amount < 0 || destination > std::numeric_limits<Count>::max() - amount) return false;
         destination += amount;
@@ -121,40 +133,49 @@ std::optional<std::array<kag::Action, hours>> materialize(
                 action = {supplied.op, static_cast<uint8_t>(std::max(0, int(supplied.arg))), 1};
             } else if (service.kind == 1) {
                 const int item = service.value;
-                const Count quantity = std::max(Count(0), need[worker][hour + 1][item] - carried[item]);
+                const Count quantity = screen.extra_pickups ? selected_pickups.at({worker, hour}) :
+                    std::max(Count(0), need[worker][hour + 1][item] - carried[item]);
                 if (!quantity) continue;
-                if (quantity > shed[item] || quantity > ds::MAX_INPUT_COUNT) return fail("pickup stock not ready");
+                if (quantity > shed[item] || quantity > ds::MAX_INPUT_COUNT)
+                    return fail("pickup stock not ready: hour=" + std::to_string(hour) +
+                        " worker=" + std::to_string(worker) + " item=" + std::to_string(item) +
+                        " required=" + std::to_string(quantity) + " available=" + std::to_string(shed[item]));
                 shed[item] -= quantity;
                 if (!add(carried[item], quantity)) return fail("pickup overflow");
                 action = {kag::OP_PICKUP, static_cast<uint8_t>(item), static_cast<int32_t>(quantity)};
             } else if (service.kind == 2) {
                 bool all_surplus = true, any = false;
-                int selected = -1, urgency = hours + 1;
+                int selected = -1, types = 0;
                 Count selected_quantity = 0;
+                Inventory due{};
                 for (int item = 0; item < items; ++item) {
                     const Count safe = std::max(Count(0), carried[item] - need[worker][hour + 1][item]);
                     all_surplus &= !carried[item] || !need[worker][hour + 1][item];
                     any |= carried[item] > 0;
-                    if (!safe) continue;
-                    int deadline = hours;
-                    const Count previously_reserved = hour ? problem.shed_availability[hour - 1][item] : 0;
-                    for (int next = hour; next < hours; ++next)
-                        if (problem.shed_availability[next][item] - previously_reserved > shed[item]) { deadline = next; break; }
-                    if (selected < 0 || deadline < urgency) {
-                        selected = item; urgency = deadline; selected_quantity = std::min(safe, ds::MAX_INPUT_COUNT);
-                    }
+                    const Count credited = std::min(planned_returns[worker][hour][item], returned_early[worker][item]);
+                    returned_early[worker][item] -= credited;
+                    const Count planned = planned_returns[worker][hour][item] - credited;
+                    due[item] = planned;
+                    if (!planned) continue;
+                    if (planned > safe || planned > ds::MAX_INPUT_COUNT)
+                        return fail("deposit cargo not ready");
+                    ++types; selected = item; selected_quantity = planned;
                 }
-                if (all_surplus && any) {
+                if (types > 1 && all_surplus && any) {
                     for (int item = 0; item < items; ++item) {
+                        // DROP may bring a later planned delivery forward.
+                        // Credit it once so a subsequent return does not ask
+                        // the worker to deposit the same units again.
+                        returned_early[worker][item] += std::max(Count(0), carried[item] - due[item]);
                         if (!add(shed[item], carried[item])) return fail("deposit overflow");
                         carried[item] = 0;
                     }
                     action = {kag::OP_DROP, 0, 1};
-                } else if (selected >= 0) {
+                } else if (types == 1) {
                     if (!add(shed[selected], selected_quantity)) return fail("deposit overflow");
                     carried[selected] -= selected_quantity;
                     action = {kag::OP_PLACE, static_cast<uint8_t>(selected), static_cast<int32_t>(selected_quantity)};
-                }
+                } else if (types > 1) return fail("deposit cargo not ready: multi-item return retains inputs");
             }
         }
         for (int item = 0; item < items; ++item) {
@@ -172,8 +193,17 @@ std::optional<std::array<kag::Action, hours>> materialize(
         schedule[hour].finalize();
     }
     const auto replay = ds::replay_schedule(problem, schedule);
-    if (!replay.candidate.replay.strict_valid || !replay.requirements_satisfied || !replay.invariants_satisfied)
-        return fail("strict replay rejected materialization");
+    if (!replay.candidate.replay.strict_valid || !replay.requirements_satisfied || !replay.invariants_satisfied) {
+        if (problem.start.shed_capacity != day_scheduler::storage::unlimited && repair_seconds > 0) {
+            const auto deadline = std::chrono::steady_clock::now() + std::chrono::duration_cast<std::chrono::steady_clock::duration>(
+                std::chrono::duration<double>(repair_seconds));
+            if (auto repaired = day_scheduler::storage::repair(problem, schedule, deadline)) return repaired;
+        }
+        std::string error = "strict replay rejected materialization";
+        for (const auto& message : replay.errors) error += ": " + message;
+        if (rejected_schedule) *rejected_schedule = schedule;
+        return fail(error);
+    }
     return schedule;
 }
 } // namespace day_native::materialized_screen
