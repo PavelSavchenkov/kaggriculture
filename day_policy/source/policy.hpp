@@ -43,9 +43,9 @@ struct SolveResult {
     int attempts = 0;
     double microseconds = 0;
 };
-enum class SearchEffort { Fast, Full, Compact, Balanced, Classic };
+enum class SearchEffort { Fast, Full, Compact, Balanced, Classic, DayPolicy80p };
 struct SolveOptions {
-    SearchEffort effort = SearchEffort::Balanced; // Compact searches one timing model; Balanced adds limited alternatives; Full searches broadly.
+    SearchEffort effort = SearchEffort::Balanced;
     int max_hires = 13;
     int variants = 4; // 16 also tries finishing same-tile work before returning.
     int route_rounds = 1;
@@ -54,6 +54,8 @@ struct SolveOptions {
     int animal_reserve = 0;
     PlacementStyle placement = PlacementStyle::Staged;
 };
+// Fixed 11-hire throughput profile. Do not change max_hires or minimize_hires.
+SolveOptions day_policy_80p();
 
 class Solver {
 public:

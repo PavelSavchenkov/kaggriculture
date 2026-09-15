@@ -24,6 +24,9 @@ Profiles:
 - Balanced-4 (default): `effort=Balanced`, `variants=4`. Limited extra timing,
   split-visit and finish-before-return candidates follow failed cheap attempts.
 - Full-8: `effort=Full`, `variants=8`. Broader construction and repair search.
+- day_policy_80p: call `day_policy_80p()`. It fixes 11 hires, disables hire
+  minimization and runs six workload-gated construction groups. It keeps every
+  case in the denominator and returns only complete, verified schedules.
 - Fast, Compact and Classic remain available for earlier frontier comparisons.
 
 `route_rounds=1`, `minimize_variants=1` are ordinary settings. Balanced reuses its
@@ -31,6 +34,8 @@ successful construction when reducing hires, then tries at most two additional
 cheap seeds. Full explores more alternatives. Calls stop at success for the
 current hire count and keep a verified incumbent during minimization. No minimum
 hire proof is claimed. Full is an independent call, not an automatic fallback.
+The throughput profile is also independent; it trades workforce optimality and
+some coverage for lower mean latency.
 
 ## Placement
 

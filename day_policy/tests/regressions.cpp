@@ -161,6 +161,19 @@ int main() {
         auto answer=solver->solve(sample,profile);
         require(answer.status==SolveStatus::Success && verify(sample,answer).valid,"every search profile respects event and purchase contract");
     }
+    auto throughput_profile=day_policy_80p();
+    auto throughput_sample=empty();throughput_sample.buy_animals[0]=1;throughput_sample.buy_wheat[0]=1;
+    throughput_sample.establish_count=1;throughput_sample.establish[0]={GOOSE,Feed|Care};
+    auto throughput_answer=solver->solve(throughput_sample,throughput_profile);
+    require(throughput_answer.status==SolveStatus::Success && throughput_answer.hires==11 &&
+        verify(throughput_sample,throughput_answer).valid,"day_policy_80p uses its fixed workforce and returns a verified schedule");
+    throughput_answer=solver->solve(empty(),throughput_profile);
+    require(throughput_answer.status==SolveStatus::Success && throughput_answer.hires==11,
+        "day_policy_80p keeps its fixed workforce on an empty day");
+    throughput_profile.max_hires=10;
+    require(solver->solve(empty(),throughput_profile).status==SolveStatus::InvalidInput,"day_policy_80p requires exactly 11 hires");
+    throughput_profile=day_policy_80p();throughput_profile.minimize_hires=true;
+    require(solver->solve(empty(),throughput_profile).status==SolveStatus::InvalidInput,"day_policy_80p disables hire minimization");
     SolveOptions invalid_profile;invalid_profile.effort=static_cast<SearchEffort>(99);
     require(solver->solve(empty(),invalid_profile).status==SolveStatus::InvalidInput,"reject unknown search profile");
     invalid_profile=SolveOptions{};invalid_profile.placement=static_cast<PlacementStyle>(99);

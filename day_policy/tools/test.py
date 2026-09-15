@@ -116,6 +116,10 @@ def prepare(args, cohorts):
 
 
 def configurations(suite, labels):
+    if suite == 'throughput':
+        for label in labels:
+            yield label, 1, 'original', 0, 11, 'day_policy80p'
+        return
     if suite == 'caps-missing':
         for label in labels:
             if label == 'dev':
@@ -157,8 +161,11 @@ def benchmark(args, cohorts):
         runs = []
         for repeat in range(args.repeats):
             path = output / f'{name}_{chr(97 + repeat)}.csv'
-            effort, variants = (3, 4) if profile == 'balanced4' else (0, 8)
-            command = [args.build / 'contract_evaluate', case, path, 1000000, cap, effort, mode, 0, variants, 1, 0, style]
+            effort, variants, minimize_hires = {
+                'balanced4': (3, 4, 1), 'full8': (0, 8, 1), 'day_policy80p': (5, 8, 0)
+            }[profile]
+            command = [args.build / 'contract_evaluate', case, path, 1000000, cap, effort, mode, 0,
+                       variants, 1, 0, style, minimize_hires]
             if args.cpu is not None:
                 command = ['taskset', '-c', args.cpu, *command]
             invoke(command, path.with_suffix('.log'))
@@ -216,7 +223,7 @@ if __name__ == '__main__':
     parser.add_argument('--work', type=Path, required=True, help='Generated files directory outside day_policy')
     parser.add_argument('--build', type=Path, help='CMake build directory')
     parser.add_argument('--labels', nargs='+', choices=['dev', '639', '645'], default=['dev', '639', '645'])
-    parser.add_argument('--suite', choices=['quick', 'final', 'all', 'caps', 'caps-missing'], default='quick')
+    parser.add_argument('--suite', choices=['quick', 'final', 'all', 'caps', 'caps-missing', 'throughput'], default='quick')
     parser.add_argument('--run', default='run')
     parser.add_argument('--repeats', type=int, choices=range(1, 27), default=2)
     parser.add_argument('--cpu', type=int)

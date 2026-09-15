@@ -1,5 +1,5 @@
 {
-  "utc": "2026-09-15T13:07:48.733588+00:00",
+  "utc": "2026-09-15T23:48:17+00:00",
   "builds": {
     "release": "GCC 13.3, C++20, O3, native, LTO",
     "debug": "GCC 13.3, C++20, O1, ASan+UBSan"
@@ -92,6 +92,39 @@
       "turns_per_game": 719,
       "faults": 0,
       "generic_pair_repeat_parity": "passed"
+    }
+  },
+  "day_policy_80p": {
+    "definition": "Fixed 11 hires, no hire minimization, complete verified schedules only.",
+    "comparison_cohorts": {
+      "all_eligible_days": {
+        "days": 1284,
+        "solved": 1221,
+        "late_days": 115,
+        "late_solved": 98,
+        "median_ms": 0.2272205,
+        "mean_ms": 4.076049690420561,
+        "p95_ms": 23.343275
+      },
+      "original_hires_at_most_11": {
+        "days": 1183,
+        "solved": 1145,
+        "late_days": 88,
+        "late_solved": 78,
+        "median_ms": 0.1991315,
+        "mean_ms": 2.7747207903634825,
+        "p95_ms": 11.901525
+      }
+    },
+    "timing": "Two sequential O3/native/LTO runs pinned to logical CPU 14.",
+    "validation": {
+      "executable_sha256": "b92d40c906b9b6e733e499940a93725506cfde9318a47eb95768c4756b9c855a",
+      "repeat_non_time_parity": 1284,
+      "experiment_non_time_parity": 1284,
+      "release_regressions": "passed",
+      "asan_ubsan_regressions": "passed",
+      "arena_matches": 64,
+      "arena_faults": 0
     }
   },
   "schedule_checks": {

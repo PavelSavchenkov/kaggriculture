@@ -4,7 +4,10 @@ Deterministic C++ worker scheduling and tile placement for a supplied whole-day
 plan. The default is **Balanced-4 + Staged placement**, with hire minimization
 and a hard cap of 13 hires plus the farmer. Use cap 11 when it is mandatory.
 **Full-8** searches more broadly at higher cost; it is a separate call, not an
-automatic fallback. Both support within-day shed returns with deadlines.
+automatic fallback. **day_policy_80p** is the third option: it uses 11 hires,
+skips hire minimization and searches a smaller workload-gated set of complete
+schedules for higher throughput. All three support within-day shed returns with
+deadlines and return only complete, verified schedules.
 
 Policy code, replay data and test tools are in this folder. They use five shared
 headers already committed and pushed under `fast_game_engine/` and
@@ -18,13 +21,30 @@ with its standard library.
 Two comparison cohorts from the recorded top 30 players, using exact original
 dawn layouts and our placement for new products. At each cap, include only days
 with **original hires <= that cap**. Hires exclude the farmer. Timings are
-**median / average milliseconds**, including failed solves and hire minimization.
+**median / average milliseconds**, including failed solves and hire minimization
+when the profile enables it.
 
-| Hire cap | Balanced-4 solved | Median / average ms | Full-8 solved | Median / average ms |
-|---:|---:|---:|---:|---:|
-| 10 | 971/975 | 0.96 / 1.74 | 972/975 | 0.57 / 2.14 |
-| 11 | 1,145/1,183 | 1.06 / 4.84 | 1,162/1,183 | 0.61 / 16.22 |
-| 13 | 1,275/1,279 | 1.16 / 7.41 | 1,275/1,279 | 0.78 / 29.94 |
+| Hire cap | Balanced-4 solved | Median / average ms | Full-8 solved | Median / average ms | day_policy_80p solved | Median / average ms |
+|---:|---:|---:|---:|---:|---:|---:|
+| 10 | 971/975 | 0.96 / 1.74 | 972/975 | 0.57 / 2.14 | — | — |
+| 11 | 1,145/1,183 | 1.06 / 4.84 | 1,162/1,183 | 0.61 / 16.22 | 1,145/1,183 | 0.20 / 2.77 |
+| 13 | 1,275/1,279 | 1.16 / 7.41 | 1,275/1,279 | 0.78 / 29.94 | — | — |
+
+`day_policy_80p` is defined only for 11 hires. On the cap-11 filtered cohort it
+matches Balanced-4 coverage while reducing average solve time by 43%, and Full-8
+solves 17 more days while taking 5.9 times as long on average. The unfiltered
+cap-11 comparison, including every eligible comparison day, is:
+
+| Profile | All days solved | Late days 20–28 solved | Median / average ms |
+|---|---:|---:|---:|
+| Balanced-4 | 1,223/1,284 (95.2%) | 95/115 (82.6%) | 1.17 / 6.19 |
+| Full-8 | 1,246/1,284 (97.0%) | 106/115 (92.2%) | 0.81 / 25.93 |
+| day_policy_80p | 1,221/1,284 (95.1%) | 98/115 (85.2%) | 0.23 / 4.08 |
+
+The throughput profile therefore stays above 80% on both all days and late days.
+It trades two all-day solves against Balanced-4 for 34% lower average time, while
+solving three more late days. It does this by accepting non-minimal 11-hire
+schedules, not by removing large cases from the denominator.
 
 Measured on **Intel Core i7-14700K, Linux x86-64**, with one solver process pinned
 to logical CPU 14. Each configuration combines two sequential runs. Build:
@@ -69,6 +89,7 @@ if (result.status == SolveStatus::Success) {
     // Execute result.schedule[0..23]; propagate result.state.
 }
 // Broader independent call: options.effort=SearchEffort::Full; options.variants=8;
+// Independent throughput call: auto throughput = day_policy_80p();
 ```
 
 Initialize all 100 cells, including locked land and overnight weeds. Timestamps
@@ -107,6 +128,10 @@ Use `--suite final` without `--labels` for all 28 selected configurations, or
 `--suite all` to add the 12 Legacy comparisons. `--check-reference` compares
 every non-time CSV field, including schedule hash and hire count. Omit it when
 evaluating an intentional behavior change. Give each run a new `--run` name.
+
+Use `--suite throughput` to benchmark `day_policy_80p` on the original dawns at
+11 hires. This profile has no archived row in the older reference ZIP, so do not
+combine that suite with `--check-reference`.
 
 For timings, choose an available core with `--cpu N` and run benchmarks
 sequentially without concurrent builds. Times will vary by machine and load.

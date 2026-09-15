@@ -74,7 +74,7 @@ new layouts are confirmation tests, not unseen opponents. Late means days 20–2
 
 Use sequential, pinned solver processes. Include failed calls and hire
 minimization in median/mean timing. Report original and changed layouts separately.
-The two worker profiles run independently; chaining them adds their time.
+The three worker profiles run independently; chaining them adds their time.
 Ordinary native release and PGO are different builds and must be labeled.
 
 Minimum hires are not proved. Replay-day execution coverage provides evidence

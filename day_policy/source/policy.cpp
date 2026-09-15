@@ -166,7 +166,12 @@ bool orders(const DayInput& in, DayPlan& plan, Action* actions) {
 SolveResult Solver::solve(const DayInput& input, const SolveOptions& options) {
     const auto start = std::chrono::steady_clock::now();
     SolveResult best;
-    if (int(options.placement)<0 || int(options.placement)>int(PlacementStyle::Staged) || !detail::valid_input(input) || options.max_hires < 0 || options.max_hires > 13 || options.variants < 1 || options.variants > 16 || options.minimize_variants<1 || options.minimize_variants>options.variants || options.route_rounds<0 || options.route_rounds>4 || options.animal_reserve<0 || options.animal_reserve>25 || (options.effort!=SearchEffort::Fast && options.effort!=SearchEffort::Full && options.effort!=SearchEffort::Compact && options.effort!=SearchEffort::Balanced && options.effort!=SearchEffort::Classic)) {
+    const bool known_effort=options.effort==SearchEffort::Fast || options.effort==SearchEffort::Full ||
+        options.effort==SearchEffort::Compact || options.effort==SearchEffort::Balanced ||
+        options.effort==SearchEffort::Classic || options.effort==SearchEffort::DayPolicy80p;
+    const bool invalid_80p=options.effort==SearchEffort::DayPolicy80p &&
+        (options.max_hires!=11 || options.minimize_hires);
+    if (int(options.placement)<0 || int(options.placement)>int(PlacementStyle::Staged) || !detail::valid_input(input) || options.max_hires < 0 || options.max_hires > 13 || options.variants < 1 || options.variants > 16 || options.minimize_variants<1 || options.minimize_variants>options.variants || options.route_rounds<0 || options.route_rounds>4 || options.animal_reserve<0 || options.animal_reserve>25 || !known_effort || invalid_80p) {
         best.status = SolveStatus::InvalidInput;
         best.microseconds=std::chrono::duration<double,std::micro>(std::chrono::steady_clock::now()-start).count();
         return best;
@@ -327,7 +332,21 @@ SolveResult Solver::solve(const DayInput& input, const SolveOptions& options) {
         if(t.kind==T_PLANT && t.yield_units>0 && t.max_lifespan_step!=INT_MAX && input.events[c])
             alternative_timing |= int64_t(t.max_lifespan_step)+2*(t.yield_units-1)<24;
     }
+    int work = input.establish_count * 2;
+    for (int c = 0; c < 100; ++c) work += std::popcount(input.events[c]);
     auto search_hires=[&](int hires,int width) {
+        if(options.effort==SearchEffort::DayPolicy80p) {
+            struct Group { uint8_t family, offset, flags, minimum_work; };
+            constexpr Group groups[] = {
+                {5,0,0,0}, {6,8,2,156}, {6,0,0,114},
+                {4,8,0,112}, {6,0,1,138}, {3,0,1,119}
+            };
+            for(const auto group:groups) {
+                if(work<group.minimum_work)continue;
+                if(try_hires(hires,8,group.flags&1,group.flags&2,group.family,group.offset))return true;
+            }
+            return false;
+        }
         if(options.effort==SearchEffort::Balanced) {
             const bool legacy=!alternative_timing;
             const int families=width==1?2:8;
@@ -369,10 +388,8 @@ SolveResult Solver::solve(const DayInput& input, const SolveOptions& options) {
         return false;
     };
     int first = std::min(11,options.max_hires);
-    int work = input.establish_count * 2;
-    for (int c = 0; c < 100; ++c) work += std::popcount(input.events[c]);
     if(options.minimize_hires) first = std::min(first,std::max(0,(work+7)/8-1));
-    if (work == 0) first = 0;
+    if (work == 0 && options.effort!=SearchEffort::DayPolicy80p) first = 0;
     for (int hires = first; hires <= options.max_hires; ++hires)
         if (search_hires(hires,options.variants)) break;
     if (best.status == SolveStatus::Success && options.minimize_hires && best.hires==first) {
@@ -407,5 +424,14 @@ SolveResult Solver::solve(const DayInput& input, const SolveOptions& options) {
     best.attempts = attempts;
     best.microseconds = std::chrono::duration<double,std::micro>(std::chrono::steady_clock::now()-start).count();
     return best;
+}
+
+SolveOptions day_policy_80p() {
+    SolveOptions options;
+    options.effort=SearchEffort::DayPolicy80p;
+    options.max_hires=11;
+    options.variants=8;
+    options.minimize_hires=false;
+    return options;
 }
 }

@@ -10,15 +10,15 @@ using namespace kag;
 using namespace kag::agents::day_policy_contract;
 using contract_benchmark::Case;
 int main(int argc,char** argv) {
-    if(argc<3)throw std::runtime_error("evaluate cases.bin output.csv [limit] [max_hires] [effort: 0 Full, 1 Fast, 2 Compact, 3 Balanced, 4 Classic] [returns: 0 strict, 1 last hour, 2 windows] [animal_reserve] [variants] [minimize_variants] [repack] [placement_style]");
+    if(argc<3)throw std::runtime_error("evaluate cases.bin output.csv [limit] [max_hires] [effort: 0 Full, 1 Fast, 2 Compact, 3 Balanced, 4 Classic, 5 DayPolicy80p] [returns: 0 strict, 1 last hour, 2 windows] [animal_reserve] [variants] [minimize_variants] [repack] [placement_style] [minimize_hires]");
     std::ifstream input(argv[1],std::ios::binary);std::ofstream out(argv[2]);
     const int limit=argc>3?std::stoi(argv[3]):1000000;
     SolveOptions options;
     if(argc>4)options.max_hires=std::stoi(argv[4]);
     if(argc>5) {
         const int effort=std::stoi(argv[5]);
-        if(effort<0 || effort>4)throw std::runtime_error("invalid effort");
-        const SearchEffort profiles[]={SearchEffort::Full,SearchEffort::Fast,SearchEffort::Compact,SearchEffort::Balanced,SearchEffort::Classic};
+        if(effort<0 || effort>5)throw std::runtime_error("invalid effort");
+        const SearchEffort profiles[]={SearchEffort::Full,SearchEffort::Fast,SearchEffort::Compact,SearchEffort::Balanced,SearchEffort::Classic,SearchEffort::DayPolicy80p};
         options.effort=profiles[effort];
     }
     const int return_mode=argc>6?std::stoi(argv[6]):0;
@@ -26,6 +26,7 @@ int main(int argc,char** argv) {
     if(argc>8)options.variants=std::stoi(argv[8]);
     if(argc>9)options.minimize_variants=std::stoi(argv[9]);
     if(argc>11)options.placement=static_cast<PlacementStyle>(std::stoi(argv[11]));
+    if(argc>12)options.minimize_hires=std::stoi(argv[12]);
     auto solver=std::make_unique<Solver>();Case c;int eligible=0,ok=0;double micros=0;
     out<<"game,seat,rank,day,original_hires,work,returns,status,hires,attempts,microseconds,hash\n";
     while(input.read(reinterpret_cast<char*>(&c),sizeof(c))) {

@@ -4,9 +4,10 @@ The policy combines a day solver and tile-placement logic. Both are deterministi
 heuristics and must be fast enough for repeated day-plan evaluation. Each call
 solves one entire day, starting at hour 0.
 
-Minimize hired workers while satisfying the plan. Strongly target 11 or fewer
-hires, with a hard cap of 13. These counts exclude the farmer. The policy chooses
-the hire count.
+By default, minimize hired workers while satisfying the plan. Strongly target 11
+or fewer hires, with a hard cap of 13. These counts exclude the farmer. The
+`day_policy_80p()` throughput profile instead fixes 11 hires and skips workforce
+minimization.
 
 ## Input
 
