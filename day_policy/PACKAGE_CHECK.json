@@ -4,8 +4,7 @@
     "release": "GCC 13.3, C++20, O3, native, LTO",
     "debug": "GCC 13.3, C++20, O1, ASan+UBSan"
   },
-  "dependency_audit": "Every non-system compiler dependency is inside day_policy; no experiment/root-engine dependencies.",
-  "policy_source_and_vendor_snapshot_hashes": "unchanged from measured release",
+  "dependency_audit": "Build uses day_policy files plus the five repository headers listed in REPOSITORY_DEPENDENCIES.json; no experiment dependencies.",
   "cohort_regeneration": {
     "dev": {
       "eligible": 914,
@@ -394,5 +393,28 @@
       }
     }
   },
-  "git_operations": "none"
+  "policy_source_and_repository_dependency_hashes": "unchanged from measured release",
+  "repository_header_switch": {
+    "utc": "2026-09-15T13:17:03.163512+00:00",
+    "verified_pushed_commit": "5aeed755d2c75716f88bc31dede4ed038b4fc69a",
+    "clean_release_build": "passed",
+    "evaluator_byte_identical_to_measured_release": true,
+    "smoke": {
+      "regressions": "passed",
+      "arena_runs": 8,
+      "games_per_run": 8,
+      "turns_per_game": 719,
+      "faults": 0,
+      "generic_pair_repeat_parity": "passed"
+    },
+    "duplicate_audit": {
+      "substantial_exact_duplicates_outside_package": 0,
+      "internal_exact_duplicates": 0,
+      "unique_replay_traces": 174,
+      "all_traces_referenced": true,
+      "identical_archived_csvs": 0,
+      "retained_trivial_duplicate": "21-byte test source containing only #include \"agent.hpp\""
+    },
+    "readme_metrics": "3 totals and 90 original-agent/cap rows checked against saved CAPS data"
+  }
 }

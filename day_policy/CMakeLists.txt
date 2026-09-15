@@ -17,7 +17,11 @@ elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
 endif()
 
 add_library(contract_policy STATIC source/agent.cpp source/routes.cpp source/policy.cpp source/verify.cpp)
-target_include_directories(contract_policy PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/vendor" "${CMAKE_CURRENT_SOURCE_DIR}/source")
+get_filename_component(REPO "${CMAKE_CURRENT_SOURCE_DIR}/.." ABSOLUTE)
+if(NOT EXISTS "${REPO}/fast_game_engine/sim.hpp" OR NOT EXISTS "${REPO}/agents/common/api/agent_api.hpp")
+  message(FATAL_ERROR "Build day_policy inside the kaggriculture repository; see REPOSITORY_DEPENDENCIES.json")
+endif()
+target_include_directories(contract_policy PUBLIC "${REPO}" "${CMAKE_CURRENT_SOURCE_DIR}/source")
 target_compile_options(contract_policy PRIVATE -Wall -Wextra -fno-exceptions -fno-rtti)
 add_library(day_policy::policy ALIAS contract_policy)
 

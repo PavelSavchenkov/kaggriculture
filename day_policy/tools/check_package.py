@@ -19,8 +19,14 @@ if __name__ == '__main__':
             raise ValueError(f'File type/size changed: {name}')
         if hashlib.sha256(path.read_bytes()).hexdigest() != expected['sha256']:
             raise ValueError(f'File content changed: {name}')
+    dependencies = json.loads((PACKAGE / 'REPOSITORY_DEPENDENCIES.json').read_text())
+    for name, digest in dependencies['files'].items():
+        path = PACKAGE.parent / name
+        if hashlib.sha256(path.read_bytes()).hexdigest() != digest:
+            raise ValueError(f'Repository dependency differs from the measured version: {name}')
     data_bytes = sum(p.stat().st_size for name, p in actual.items()
                      if name.startswith(('data/', 'measurements/')))
     if data_bytes >= 50_000_000:
         raise ValueError('Replay data and measurements must remain below 50 MB')
-    print(f"Verified {len(actual)} files; replay data and measurements {data_bytes:,} bytes")
+    print(f"Verified {len(actual)} package files and {len(dependencies['files'])} repository headers; "
+          f"replay data and measurements {data_bytes:,} bytes")

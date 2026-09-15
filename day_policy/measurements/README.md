@@ -3,7 +3,7 @@
 `REPORT.md` and `SUMMARY.json` are the final September 15 measurements for the
 unchanged policy source delivered here. The JSON also contains per-player
 timings for our carried placement and original-hire-filtered per-player results.
-`vendor/PROVENANCE.json` records the measured executable hash and source hashes.
+`../PROVENANCE.json` records the measured executable hash and source hashes.
 
 `CAPS.md`, `CAPS.csv` and `CAPS.json` add the requested caps 10/11/13 comparison.
 Each row keeps only days whose original successful hires are <= that cap, then

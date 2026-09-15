@@ -6,16 +6,24 @@
       "sha256": "5492010e400266071c6ea3ad61410ed3d62b9991cafcb9b638810b3573eae657"
     },
     "CMakeLists.txt": {
-      "bytes": 1899,
-      "sha256": "9c5d4bb2093b24e9b06d844d4084ef6b7bccd70d98facd002aa81a6a71f230a7"
+      "bytes": 2169,
+      "sha256": "4fd2a418de15fa8895997d15ce1d5c69569079ddaf4639eefeabd020b39dce66"
     },
     "PACKAGE_CHECK.json": {
-      "bytes": 10539,
-      "sha256": "408431096e333790699de0896d79a1a8bf4a5bba73cf99eccc762942197a106f"
+      "bytes": 11423,
+      "sha256": "eecb8f3837b441ce3d7f848e5655c27e5bdf47f267237c551927b848153fd31d"
+    },
+    "PROVENANCE.json": {
+      "bytes": 1314,
+      "sha256": "477e92c0c04d54ce885d89941a3eb24b1ea530379bf4922e0b6d2afc8007680c"
     },
     "README.md": {
-      "bytes": 7236,
-      "sha256": "f6d460e12a999fad93758ae36832322db421b108fb4e3ead4c9423e38cae146d"
+      "bytes": 14532,
+      "sha256": "0958babff33d786a2877800098aff1d69eecb0c7e801d8b2e945ec8438692b65"
+    },
+    "REPOSITORY_DEPENDENCIES.json": {
+      "bytes": 813,
+      "sha256": "3218e14623b8591d4ecaa97e867c0eb2d03f580f4d3fa4506151d21f368e69c9"
     },
     "SPEC.md": {
       "bytes": 2810,
@@ -770,8 +778,8 @@
       "sha256": "f6add4fe8403cd88220b9a5b058e62a9a68165b294ae459ef2cbb1caba63d577"
     },
     "measurements/README.md": {
-      "bytes": 2816,
-      "sha256": "1bcc2ca1f7822161e80472ca47e56e3fff9e521ffbf03e471b74c7cde58b9741"
+      "bytes": 2812,
+      "sha256": "857a54687445cdcfe84d10af180f356808a91e291f297c0e1a2afb11ed5544bb"
     },
     "measurements/REPORT.md": {
       "bytes": 11060,
@@ -854,8 +862,8 @@
       "sha256": "475746efb2f853b8d2c79b9c412349e7805205d34fa948475fa335ebd2235e26"
     },
     "tools/check_package.py": {
-      "bytes": 1350,
-      "sha256": "26902ae8336db941f892299b439acc7d598b8fb532ff95a3142e6856bc531d67"
+      "bytes": 1767,
+      "sha256": "84c228adaa26e7ca987349626c463711fe5b751e02e4b5fc404277f77cf02c41"
     },
     "tools/evaluate.cpp": {
       "bytes": 3598,
@@ -904,36 +912,18 @@
     "tools/trace/field_effect.hpp": {
       "bytes": 980,
       "sha256": "2a899a22e897476b318811812a56ebd76cb7b119ffa99957d744dc20da50ca66"
-    },
-    "vendor/PROVENANCE.json": {
-      "bytes": 1814,
-      "sha256": "638eae56a0e466f630058ddcde607eeb93c324fece3d07fdc86c19e3a991239d"
-    },
-    "vendor/agents/common/api/agent_api.hpp": {
-      "bytes": 1164,
-      "sha256": "c441308471aa746d7c3d6e668688d39d1f77249ccd56b15fed3368d11c5aa3d8"
-    },
-    "vendor/agents/common/api/observation.hpp": {
-      "bytes": 1798,
-      "sha256": "5287df4bb141c2112059c86786e5030956f317e61a572595c91d0e8b8edeba87"
-    },
-    "vendor/agents/common/runtime/observation_builder.hpp": {
-      "bytes": 3001,
-      "sha256": "4ef231815a587f899540aadbeaf3cef9f7083cd343f893f6524fc2551ac09d4f"
-    },
-    "vendor/fast_game_engine/pyrandom.hpp": {
-      "bytes": 3828,
-      "sha256": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09"
-    },
-    "vendor/fast_game_engine/sim.hpp": {
-      "bytes": 70918,
-      "sha256": "c136c8a8ba74804cc43e5016e5aaae5fd7de15ff43138a5e1790e7f9a11ce5bb"
     }
   },
-  "file_bytes_excluding_manifest": 7317488,
-  "stored_replay_data_and_measurements_bytes": 6933235,
-  "expanded_replay_data_and_measurements_bytes": 34387357,
+  "file_bytes_excluding_manifest": 7245955,
+  "stored_replay_data_and_measurements_bytes": 6933231,
+  "expanded_replay_data_and_measurements_bytes": 34387353,
   "data_limit_bytes": 50000000,
-  "external_repository_dependencies": [],
-  "note": "Manifest excludes itself. Generated binaries, cases and logs belong outside this directory."
+  "external_repository_dependencies": [
+    "fast_game_engine/sim.hpp",
+    "fast_game_engine/pyrandom.hpp",
+    "agents/common/api/agent_api.hpp",
+    "agents/common/api/observation.hpp",
+    "agents/common/runtime/observation_builder.hpp"
+  ],
+  "note": "Manifest excludes itself. Repository header hashes are in REPOSITORY_DEPENDENCIES.json. Generated binaries, cases and logs belong outside this directory."
 }
