@@ -1,0 +1,30 @@
+{
+  "utc": "2026-09-15T13:06:39.738518+00:00",
+  "additional_runs": {
+    "suite": "caps-missing",
+    "repeats": 2,
+    "cpu": 14,
+    "reference_match": false,
+    "executable_sha256": "45197c7144fd6073ac88b75108533cf269e774047bb0df2a4046e762edf080d2",
+    "configurations": 8
+  },
+  "additional_solver_calls": 12432,
+  "repeat_parity": "all non-time fields identical on 8 new configuration pairs",
+  "native_verification": "every successful solve independently verified by evaluator",
+  "filter": "original_hires <= tested cap, before all coverage/timing aggregation",
+  "cohorts": [
+    "dev",
+    "639",
+    "645"
+  ],
+  "combined": "639 + 645",
+  "caps": [
+    10,
+    11,
+    13
+  ],
+  "original_agents": 30,
+  "aggregation_checks": "all per-agent counts sum to totals; old cap-10/11 original-layout numbers match exactly",
+  "policy_changes": "none; identical Release executable SHA-256",
+  "instrumentation": "none; wall-clock timings from ordinary native Release"
+}

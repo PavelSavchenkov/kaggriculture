@@ -1,0 +1,12 @@
+{
+  "format_version": 1,
+  "name": "day_policy_contract",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::day_policy_contract::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "source/routes.cpp",
+    "source/policy.cpp",
+    "source/verify.cpp"
+  ]
+}

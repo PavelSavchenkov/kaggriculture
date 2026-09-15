@@ -1,0 +1,398 @@
+{
+  "utc": "2026-09-15T13:07:48.733588+00:00",
+  "builds": {
+    "release": "GCC 13.3, C++20, O3, native, LTO",
+    "debug": "GCC 13.3, C++20, O1, ASan+UBSan"
+  },
+  "dependency_audit": "Every non-system compiler dependency is inside day_policy; no experiment/root-engine dependencies.",
+  "policy_source_and_vendor_snapshot_hashes": "unchanged from measured release",
+  "cohort_regeneration": {
+    "dev": {
+      "eligible": 914,
+      "exclusions": {
+        "eligible": 914,
+        "short_final_day": 87,
+        "repeated_event": 10,
+        "fertilizer_pickup": 787,
+        "fertilizer_purchase": 671,
+        "housing_without_establishment": 140,
+        "invalid_contract_input": 1
+      },
+      "original_grid_control": "passed",
+      "styles": {
+        "0": {
+          "ok": 914
+        },
+        "1": {
+          "ok": 914
+        }
+      }
+    },
+    "639": {
+      "eligible": 639,
+      "exclusions": {
+        "eligible": 639,
+        "repeated_event": 10,
+        "short_final_day": 60,
+        "fertilizer_pickup": 525,
+        "housing_without_establishment": 91,
+        "invalid_contract_input": 1,
+        "fertilizer_purchase": 473,
+        "multiple_land_purchases": 1
+      },
+      "original_grid_control": "passed",
+      "styles": {
+        "0": {
+          "ok": 636,
+          "missing_clear_target": 1,
+          "blocked_prefix": 2
+        },
+        "1": {
+          "ok": 635,
+          "missing_clear_target": 2,
+          "blocked_prefix": 2
+        }
+      }
+    },
+    "645": {
+      "eligible": 645,
+      "exclusions": {
+        "eligible": 645,
+        "short_final_day": 60,
+        "repeated_event": 3,
+        "fertilizer_pickup": 530,
+        "repeated_new_generation": 1,
+        "housing_without_establishment": 92,
+        "fertilizer_purchase": 469
+      },
+      "original_grid_control": "passed",
+      "styles": {
+        "0": {
+          "ok": 645
+        },
+        "1": {
+          "ok": 645
+        }
+      }
+    }
+  },
+  "report_regeneration": "all numerical summary fields identical to saved measurements",
+  "smoke": {
+    "release": {
+      "regressions": "passed",
+      "arena_runs": 8,
+      "games_per_run": 8,
+      "turns_per_game": 719,
+      "faults": 0,
+      "generic_pair_repeat_parity": "passed"
+    },
+    "debug": {
+      "regressions": "passed",
+      "arena_runs": 8,
+      "games_per_run": 8,
+      "turns_per_game": 719,
+      "faults": 0,
+      "generic_pair_repeat_parity": "passed"
+    }
+  },
+  "schedule_checks": {
+    "configurations": 40,
+    "selected_profiles": 28,
+    "legacy_comparisons": 12,
+    "solver_calls": 28916,
+    "repeats_in_this_check": 1,
+    "reference_comparison": "Every non-time CSV field identical, including status, hires, attempts and schedule hash.",
+    "successful_schedules": "Independently native-verified by evaluator.",
+    "run": {
+      "suite": "all",
+      "repeats": 1,
+      "cpu": 14,
+      "reference_match": true,
+      "executable_sha256": "45197c7144fd6073ac88b75108533cf269e774047bb0df2a4046e762edf080d2",
+      "configurations": 40
+    },
+    "coverage": {
+      "placement_dev_s1_release_original_r0_h11_balanced4": {
+        "days": 914,
+        "mapped": 914,
+        "solved": 860,
+        "late_days": 83,
+        "late_solved": 54
+      },
+      "placement_dev_s1_release_original_r0_h13_balanced4": {
+        "days": 914,
+        "mapped": 914,
+        "solved": 911,
+        "late_days": 83,
+        "late_solved": 83
+      },
+      "placement_dev_s1_release_original_r0_h11_full8": {
+        "days": 914,
+        "mapped": 914,
+        "solved": 882,
+        "late_days": 83,
+        "late_solved": 67
+      },
+      "placement_dev_s1_release_original_r0_h13_full8": {
+        "days": 914,
+        "mapped": 914,
+        "solved": 911,
+        "late_days": 83,
+        "late_solved": 83
+      },
+      "placement_dev_s1_release_own_r0_h11_balanced4": {
+        "days": 914,
+        "mapped": 914,
+        "solved": 807,
+        "late_days": 83,
+        "late_solved": 27
+      },
+      "placement_dev_s1_release_own_r0_h13_balanced4": {
+        "days": 914,
+        "mapped": 914,
+        "solved": 859,
+        "late_days": 83,
+        "late_solved": 63
+      },
+      "placement_dev_s1_release_own_r1_h11_balanced4": {
+        "days": 914,
+        "mapped": 914,
+        "solved": 876,
+        "late_days": 83,
+        "late_solved": 56
+      },
+      "placement_dev_s1_release_own_r1_h13_balanced4": {
+        "days": 914,
+        "mapped": 914,
+        "solved": 912,
+        "late_days": 83,
+        "late_solved": 83
+      },
+      "placement_dev_s0_release_own_r0_h11_balanced4": {
+        "days": 914,
+        "mapped": 914,
+        "solved": 728,
+        "late_days": 83,
+        "late_solved": 32
+      },
+      "placement_dev_s0_release_own_r0_h13_balanced4": {
+        "days": 914,
+        "mapped": 914,
+        "solved": 766,
+        "late_days": 83,
+        "late_solved": 54
+      },
+      "placement_dev_s0_release_own_r1_h11_balanced4": {
+        "days": 914,
+        "mapped": 914,
+        "solved": 882,
+        "late_days": 83,
+        "late_solved": 62
+      },
+      "placement_dev_s0_release_own_r1_h13_balanced4": {
+        "days": 914,
+        "mapped": 914,
+        "solved": 911,
+        "late_days": 83,
+        "late_solved": 82
+      },
+      "placement_639_s1_release_original_r0_h10_balanced4": {
+        "days": 639,
+        "mapped": 639,
+        "solved": 555,
+        "late_days": 58,
+        "late_solved": 21
+      },
+      "placement_639_s1_release_original_r0_h11_balanced4": {
+        "days": 639,
+        "mapped": 639,
+        "solved": 609,
+        "late_days": 58,
+        "late_solved": 48
+      },
+      "placement_639_s1_release_original_r0_h13_balanced4": {
+        "days": 639,
+        "mapped": 639,
+        "solved": 636,
+        "late_days": 58,
+        "late_solved": 58
+      },
+      "placement_639_s1_release_original_r0_h10_full8": {
+        "days": 639,
+        "mapped": 639,
+        "solved": 565,
+        "late_days": 58,
+        "late_solved": 25
+      },
+      "placement_639_s1_release_original_r0_h11_full8": {
+        "days": 639,
+        "mapped": 639,
+        "solved": 621,
+        "late_days": 58,
+        "late_solved": 53
+      },
+      "placement_639_s1_release_original_r0_h13_full8": {
+        "days": 639,
+        "mapped": 639,
+        "solved": 636,
+        "late_days": 58,
+        "late_solved": 58
+      },
+      "placement_639_s1_release_own_r0_h11_balanced4": {
+        "days": 639,
+        "mapped": 635,
+        "solved": 570,
+        "late_days": 58,
+        "late_solved": 25
+      },
+      "placement_639_s1_release_own_r0_h13_balanced4": {
+        "days": 639,
+        "mapped": 635,
+        "solved": 596,
+        "late_days": 58,
+        "late_solved": 44
+      },
+      "placement_639_s1_release_own_r1_h11_balanced4": {
+        "days": 639,
+        "mapped": 635,
+        "solved": 610,
+        "late_days": 58,
+        "late_solved": 41
+      },
+      "placement_639_s1_release_own_r1_h13_balanced4": {
+        "days": 639,
+        "mapped": 635,
+        "solved": 635,
+        "late_days": 58,
+        "late_solved": 56
+      },
+      "placement_639_s0_release_own_r0_h11_balanced4": {
+        "days": 639,
+        "mapped": 636,
+        "solved": 508,
+        "late_days": 58,
+        "late_solved": 21
+      },
+      "placement_639_s0_release_own_r0_h13_balanced4": {
+        "days": 639,
+        "mapped": 636,
+        "solved": 530,
+        "late_days": 58,
+        "late_solved": 34
+      },
+      "placement_639_s0_release_own_r1_h11_balanced4": {
+        "days": 639,
+        "mapped": 636,
+        "solved": 613,
+        "late_days": 58,
+        "late_solved": 42
+      },
+      "placement_639_s0_release_own_r1_h13_balanced4": {
+        "days": 639,
+        "mapped": 636,
+        "solved": 636,
+        "late_days": 58,
+        "late_solved": 56
+      },
+      "placement_645_s1_release_original_r0_h10_balanced4": {
+        "days": 645,
+        "mapped": 645,
+        "solved": 555,
+        "late_days": 57,
+        "late_solved": 18
+      },
+      "placement_645_s1_release_original_r0_h11_balanced4": {
+        "days": 645,
+        "mapped": 645,
+        "solved": 614,
+        "late_days": 57,
+        "late_solved": 47
+      },
+      "placement_645_s1_release_original_r0_h13_balanced4": {
+        "days": 645,
+        "mapped": 645,
+        "solved": 641,
+        "late_days": 57,
+        "late_solved": 57
+      },
+      "placement_645_s1_release_original_r0_h10_full8": {
+        "days": 645,
+        "mapped": 645,
+        "solved": 561,
+        "late_days": 57,
+        "late_solved": 19
+      },
+      "placement_645_s1_release_original_r0_h11_full8": {
+        "days": 645,
+        "mapped": 645,
+        "solved": 625,
+        "late_days": 57,
+        "late_solved": 53
+      },
+      "placement_645_s1_release_original_r0_h13_full8": {
+        "days": 645,
+        "mapped": 645,
+        "solved": 641,
+        "late_days": 57,
+        "late_solved": 57
+      },
+      "placement_645_s1_release_own_r0_h11_balanced4": {
+        "days": 645,
+        "mapped": 645,
+        "solved": 574,
+        "late_days": 57,
+        "late_solved": 29
+      },
+      "placement_645_s1_release_own_r0_h13_balanced4": {
+        "days": 645,
+        "mapped": 645,
+        "solved": 604,
+        "late_days": 57,
+        "late_solved": 44
+      },
+      "placement_645_s1_release_own_r1_h11_balanced4": {
+        "days": 645,
+        "mapped": 645,
+        "solved": 617,
+        "late_days": 57,
+        "late_solved": 41
+      },
+      "placement_645_s1_release_own_r1_h13_balanced4": {
+        "days": 645,
+        "mapped": 645,
+        "solved": 644,
+        "late_days": 57,
+        "late_solved": 57
+      },
+      "placement_645_s0_release_own_r0_h11_balanced4": {
+        "days": 645,
+        "mapped": 645,
+        "solved": 510,
+        "late_days": 57,
+        "late_solved": 25
+      },
+      "placement_645_s0_release_own_r0_h13_balanced4": {
+        "days": 645,
+        "mapped": 645,
+        "solved": 540,
+        "late_days": 57,
+        "late_solved": 40
+      },
+      "placement_645_s0_release_own_r1_h11_balanced4": {
+        "days": 645,
+        "mapped": 645,
+        "solved": 611,
+        "late_days": 57,
+        "late_solved": 38
+      },
+      "placement_645_s0_release_own_r1_h13_balanced4": {
+        "days": 645,
+        "mapped": 645,
+        "solved": 644,
+        "late_days": 57,
+        "late_solved": 57
+      }
+    }
+  },
+  "git_operations": "none"
+}

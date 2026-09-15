@@ -1,0 +1,64 @@
+#pragma once
+#include "agent.hpp"
+#include <climits>
+
+namespace kag::agents::day_policy_contract {
+enum Event : uint8_t {
+    Water = 1, Fertilize = 2, Harvest = 4, Clear = 8,
+    Feed = 16, Care = 32, CollectFertilizer = 64
+};
+struct NewProduct { uint8_t product = 0, events = 0; };
+
+// Tile times are relative to this dawn: planted_day = -age,
+// fertilized_until_day = remaining active days - 1, max_lifespan_step =
+// hours until decay starts (INT_MAX when unset). No calendar day is required.
+struct DayInput {
+    Tile grid[100]{};
+    int shed[N_ITEMS]{}, seeds[N_CROPS]{};
+    int buy_seeds[N_CROPS]{}, buy_animals[3]{}, buy_wheat[24]{};
+    int land_hour = -1;
+    uint8_t events[100]{};
+    NewProduct establish[100]{};
+    int establish_count = 0;
+    int returns[24][N_PRODUCTS]{};
+};
+
+struct WorkerState { uint8_t tile = 44; int inventory[N_ITEMS]{}; };
+// State after the final actions and decay, before automatic night settlement.
+// The caller applies night settlement and observes the next random weed spawn.
+struct DayState {
+    Tile grid[100]{};
+    int shed[N_ITEMS]{}, seeds[N_CROPS]{};
+    WorkerState workers[14]{};
+    int worker_count = 1;
+};
+enum class SolveStatus { Success, InvalidInput, NoScheduleFound };
+struct SolveResult {
+    SolveStatus status = SolveStatus::NoScheduleFound;
+    Action schedule[24]{};
+    DayState state{};
+    int hires = 0;
+    int receipts[24][N_PRODUCTS]{};
+    int production[N_PRODUCTS]{};
+    int attempts = 0;
+    double microseconds = 0;
+};
+enum class SearchEffort { Fast, Full, Compact, Balanced, Classic };
+struct SolveOptions {
+    SearchEffort effort = SearchEffort::Balanced; // Compact searches one timing model; Balanced adds limited alternatives; Full searches broadly.
+    int max_hires = 13;
+    int variants = 4; // 16 also tries finishing same-tile work before returning.
+    int route_rounds = 1;
+    bool minimize_hires = true;
+    int minimize_variants = 1; // Use 8 for a more expensive workforce search.
+    int animal_reserve = 0;
+    PlacementStyle placement = PlacementStyle::Staged;
+};
+
+class Solver {
+public:
+    SolveResult solve(const DayInput& input, const SolveOptions& options = {});
+private:
+    Agent executor_, prepared_;
+};
+}

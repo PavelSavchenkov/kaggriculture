@@ -1,0 +1,60 @@
+{
+  "repeats": {
+    "placement_639_s1_release_original_r0_h10_balanced4_a": 639,
+    "placement_639_s1_release_original_r0_h10_full8_a": 639,
+    "placement_639_s1_release_original_r0_h11_balanced4_a": 639,
+    "placement_639_s1_release_original_r0_h11_full8_a": 639,
+    "placement_639_s1_release_original_r0_h13_balanced4_a": 639,
+    "placement_639_s1_release_original_r0_h13_full8_a": 639,
+    "placement_639_s1_release_own_r0_h11_balanced4_a": 635,
+    "placement_639_s1_release_own_r0_h13_balanced4_a": 635,
+    "placement_639_s1_release_own_r1_h11_balanced4_a": 635,
+    "placement_639_s1_release_own_r1_h13_balanced4_a": 635,
+    "placement_645_s1_release_original_r0_h10_balanced4_a": 645,
+    "placement_645_s1_release_original_r0_h10_full8_a": 645,
+    "placement_645_s1_release_original_r0_h11_balanced4_a": 645,
+    "placement_645_s1_release_original_r0_h11_full8_a": 645,
+    "placement_645_s1_release_original_r0_h13_balanced4_a": 645,
+    "placement_645_s1_release_original_r0_h13_full8_a": 645,
+    "placement_645_s1_release_own_r0_h11_balanced4_a": 645,
+    "placement_645_s1_release_own_r0_h13_balanced4_a": 645,
+    "placement_645_s1_release_own_r1_h11_balanced4_a": 645,
+    "placement_645_s1_release_own_r1_h13_balanced4_a": 645,
+    "placement_dev_s1_release_original_r0_h11_balanced4_a": 914,
+    "placement_dev_s1_release_original_r0_h11_full8_a": 914,
+    "placement_dev_s1_release_original_r0_h13_balanced4_a": 914,
+    "placement_dev_s1_release_original_r0_h13_full8_a": 914,
+    "placement_dev_s1_release_own_r0_h11_balanced4_a": 914,
+    "placement_dev_s1_release_own_r0_h13_balanced4_a": 914,
+    "placement_dev_s1_release_own_r1_h11_balanced4_a": 914,
+    "placement_dev_s1_release_own_r1_h13_balanced4_a": 914
+  },
+  "regressions": {
+    "placement_release": "passed",
+    "placement_debug": "passed"
+  },
+  "arena": {
+    "placement_release_contract_arena_pass_a": "identical actions and rewards; zero faults",
+    "placement_release_contract_arena_pass_b": "identical actions and rewards; zero faults",
+    "placement_release_contract_arena_day_policy_contract_a": "identical actions and rewards; zero faults",
+    "placement_release_contract_arena_day_policy_contract_b": "identical actions and rewards; zero faults",
+    "placement_release_contract_pair_pass_a": "identical actions and rewards; zero faults",
+    "placement_release_contract_pair_pass_b": "identical actions and rewards; zero faults",
+    "placement_release_contract_pair_day_policy_contract_a": "identical actions and rewards; zero faults",
+    "placement_release_contract_pair_day_policy_contract_b": "identical actions and rewards; zero faults",
+    "placement_debug_contract_arena_pass_a": "identical actions and rewards; zero faults",
+    "placement_debug_contract_arena_pass_b": "identical actions and rewards; zero faults",
+    "placement_debug_contract_arena_day_policy_contract_a": "identical actions and rewards; zero faults",
+    "placement_debug_contract_arena_day_policy_contract_b": "identical actions and rewards; zero faults",
+    "placement_debug_contract_pair_pass_a": "identical actions and rewards; zero faults",
+    "placement_debug_contract_pair_pass_b": "identical actions and rewards; zero faults",
+    "placement_debug_contract_pair_day_policy_contract_a": "identical actions and rewards; zero faults",
+    "placement_debug_contract_pair_day_policy_contract_b": "identical actions and rewards; zero faults"
+  },
+  "sanitizer": {
+    "placement_debug_645_own_balanced4_11": 645,
+    "placement_debug_645_own_balanced4_13": 645,
+    "placement_debug_645_original_full8_11": 645,
+    "placement_debug_645_original_full8_13": 645
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "description": "Unmodified engine and shared API header snapshots; no external repository dependency.",
+  "engine_version": "1.32.7",
+  "official_engine_source_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+  "source_paths_and_sha256": {
+    "fast_game_engine/sim.hpp": "c136c8a8ba74804cc43e5016e5aaae5fd7de15ff43138a5e1790e7f9a11ce5bb",
+    "fast_game_engine/pyrandom.hpp": "da487a6aed6ead116def4e6ffdd6b15284714a99ac71d13767e5467466a80e09",
+    "agents/common/api/agent_api.hpp": "c441308471aa746d7c3d6e668688d39d1f77249ccd56b15fed3368d11c5aa3d8",
+    "agents/common/api/observation.hpp": "5287df4bb141c2112059c86786e5030956f317e61a572595c91d0e8b8edeba87",
+    "agents/common/runtime/observation_builder.hpp": "4ef231815a587f899540aadbeaf3cef9f7083cd343f893f6524fc2551ac09d4f"
+  },
+  "measured_executable_sha256": "45197c7144fd6073ac88b75108533cf269e774047bb0df2a4046e762edf080d2",
+  "policy_source_sha256": {
+    "agent.cpp": "007e83f0e62d5fb9bc614dbdcb80360175a71f2d3fb1b4eb3af1004ad40eb84a",
+    "agent.hpp": "f011845fa125d07469c48c4a695e6b49cf6b2576d3719bdc65efc311a2ac0b7d",
+    "day_jobs.hpp": "4903068b176f3f6795c867727c99fc413bd69b3ff70d465ed3a86c346f208199",
+    "placement.hpp": "6bcfe40edabfd7cdb74737c84f1c52482899fe1fc1d765a8347152aa9618251e",
+    "policy.cpp": "ab65c6712fc4637384ecd1cd442d59cdb9f38b3b6ed06606b56f9036ff0e94ce",
+    "policy.hpp": "7d2d040cdd12200d6203cf9e1b8906f65829e39161cd153dd2008375222018f8",
+    "routes.cpp": "8a0a23c299f6da65937b1d51fefa1b9d4031e79a4aec86eaf7e22534d3b9f66d",
+    "routes.hpp": "2f5449065c15298a0ccf8b61d8c68fab05a64300d1e5773e708867fa59d54195",
+    "verify.cpp": "5e99baed3b7328d8a0ccaf585c743b40136584ab053d15ae6ed138d3c61fd553",
+    "verify.hpp": "35bd8c9fa33ea56584fe043848b2faf5512e1a70de3f9cecff0027347bfe0b29"
+  }
+}
