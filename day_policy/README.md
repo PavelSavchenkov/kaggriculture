@@ -20,69 +20,47 @@ with its standard library.
 
 ## Coverage and timings
 
-### Earlier restricted contract
+All policy variants are compared below on the combined 639/645 held-out
+validation split with exact original dawn layouts. Timings are **median / mean
+milliseconds**, include failed calls, and use the same rows as the adjacent
+coverage cells.
 
-Two comparison cohorts from the recorded top 30 players, using exact original
-dawn layouts and our placement for new products. At each cap, include only days
-with **original hires <= that cap**. Hires exclude the farmer. Timings are
-**median / average milliseconds**, including failed solves and hire minimization
-when the profile enables it.
-
-| Hire cap | Balanced-4 solved | Median / average ms | Full-8 solved | Median / average ms | day_policy_80p solved | Median / average ms |
-|---:|---:|---:|---:|---:|---:|---:|
-| 10 | 971/975 | 0.96 / 1.74 | 972/975 | 0.57 / 2.14 | — | — |
-| 11 | 1,145/1,183 | 1.06 / 4.84 | 1,162/1,183 | 0.61 / 16.22 | 1,145/1,183 | 0.20 / 2.77 |
-| 13 | 1,275/1,279 | 1.16 / 7.41 | 1,275/1,279 | 0.78 / 29.94 | — | — |
-
-`day_policy_80p` is defined only for 11 hires. On the cap-11 filtered cohort it
-matches Balanced-4 coverage while reducing average solve time by 43%, and Full-8
-solves 17 more days while taking 5.9 times as long on average. The unfiltered
-cap-11 comparison, including every eligible comparison day, is:
-
-| Profile | All days solved | Late days 20–28 solved | Median / average ms |
-|---|---:|---:|---:|
-| Balanced-4 | 1,223/1,284 (95.2%) | 95/115 (82.6%) | 1.17 / 6.19 |
-| Full-8 | 1,246/1,284 (97.0%) | 106/115 (92.2%) | 0.81 / 25.93 |
-| day_policy_80p | 1,221/1,284 (95.1%) | 98/115 (85.2%) | 0.23 / 4.08 |
-
-The throughput profile therefore stays above 80% on both all days and late days.
-It trades two all-day solves against Balanced-4 for 34% lower average time, while
-solving three more late days. It does this by accepting non-minimal 11-hire
-schedules, not by removing large cases from the denominator.
-
-### Unrestricted contract
-
-The new extractor no longer excludes or normalizes late seed/animal purchases,
-fertilizer buys, fertilizer pickups, or hires after hour 1. This expands dev from
-914 to 2,239 eligible days and validation from 1,284 to 3,071. Each cap row
-includes days where the original schedule used no more than that cap. Fixed-cap
-rows disable hire minimization so the cap comparison is direct.
-
-| Cohort | Profile / cap | All days solved | Late days 20-28 solved | Median / average ms | Mean hires on success |
+| Input contract | Policy / profile | Hire cap | Overall coverage | Late-day coverage | Median / mean ms |
 |---|---|---:|---:|---:|---:|
-| dev | Balanced-4 cap 10 | 1,065/1,150 (92.6%) | 87/101 (86.1%) | 0.26 / 3.72 | 10.00 |
-| dev | Balanced-4 cap 11 | 1,652/1,732 (95.4%) | 365/408 (89.5%) | 0.32 / 5.75 | 11.00 |
-| dev | Balanced-4 cap 13 | 2,151/2,203 (97.6%) | 662/686 (96.5%) | 0.35 / 3.45 | 13.00 |
-| dev | unrestricted_day_policy | 2,151/2,203 (97.6%) | 662/686 (96.5%) | 0.58 / 3.68 | 11.42 |
-| validation | Balanced-4 cap 10 | 1,417/1,526 (92.9%) | 95/111 (85.6%) | 0.25 / 3.43 | 10.00 |
-| validation | Balanced-4 cap 11 | 2,217/2,327 (95.3%) | 464/512 (90.6%) | 0.31 / 5.39 | 11.00 |
-| validation | Balanced-4 cap 13 | 2,945/3,004 (98.0%) | 890/920 (96.7%) | 0.35 / 3.40 | 13.00 |
-| validation | unrestricted_day_policy | 2,945/3,004 (98.0%) | 890/920 (96.7%) | 0.54 / 3.62 | 11.39 |
+| Restricted | Balanced-4 | 10 | 99.6% (971/975) | 84.2% (16/19) | 0.96 / 1.74 |
+| Restricted | Balanced-4 | 11 | 96.8% (1,145/1,183) | 83.0% (73/88) | 1.06 / 4.84 |
+| Restricted | Balanced-4 | 13 | 99.7% (1,275/1,279) | 100.0% (115/115) | 1.16 / 7.41 |
+| Restricted | Full-8 | 10 | 99.7% (972/975) | 89.5% (17/19) | 0.57 / 2.14 |
+| Restricted | Full-8 | 11 | 98.2% (1,162/1,183) | 90.9% (80/88) | 0.61 / 16.22 |
+| Restricted | Full-8 | 13 | 99.7% (1,275/1,279) | 100.0% (115/115) | 0.78 / 29.94 |
+| Restricted | `day_policy_80p` | 11 | 96.8% (1,145/1,183) | 88.6% (78/88) | 0.20 / 2.77 |
+| Unrestricted exact input | Balanced-4, fixed cap | 10 | 92.9% (1,417/1,526) | 85.6% (95/111) | 0.25 / 3.43 |
+| Unrestricted exact input | Balanced-4, fixed cap | 11 | 95.3% (2,217/2,327) | 90.6% (464/512) | 0.31 / 5.39 |
+| Unrestricted exact input | Balanced-4, fixed cap | 13 | 98.0% (2,945/3,004) | 96.7% (890/920) | 0.35 / 3.40 |
+| Unrestricted exact input | `unrestricted_day_policy` | 13 | 98.0% (2,945/3,004) | 96.7% (890/920) | 0.54 / 3.62 |
 
-The unrestricted policy preserves cap-13 coverage while saving 3,405 hires on
-dev and 4,736 on validation. Its bounded reduction raises mean latency by 6.7%
-on dev and 6.5% on validation. It only runs after a first-attempt success with at
-most 60 work units; harder calls do not pay minimization cost.
+For every cap N row, the denominator contains only days where the original
+schedule used at most N hires; the same filter is applied to late days and
+timings. Hires exclude the farmer, and late means days 20–28. Denominators differ
+between caps by design. The restricted contract also excludes or normalizes late
+seed/animal purchases, fertilizer buys and pickups, and hires after hour 1. The
+unrestricted extractor preserves those actions exactly, expanding validation
+from 1,284 to 3,071 eligible days before the cap filter. `day_policy_80p` is only
+defined at cap 11; `unrestricted_day_policy` is the cap-13 production helper.
 
-Coverage on validation cases using each removed restriction is:
+The cap-13 unrestricted helper matches fixed-cap coverage, reduces successful
+schedules from 13 to 11.39 mean hires, and adds 6.5% mean latency. Its bounded
+reduction only runs after a cheap first-attempt success. Development results,
+all-eligible stress tests and exact per-call evidence are in
+`measurements/unrestricted/`; restricted per-cap and per-player details are in
+`measurements/CAPS.md`.
+
+On unrestricted validation cases containing each formerly unsupported feature,
+the cap-13 production helper covers:
 
 | Exact late seed/animal input | Fertilizer buy | Fertilizer pickup | Hire after hour 1 | Any removed restriction |
 |---:|---:|---:|---:|---:|
-| 2,744/2,820 (97.3%) | 1,154/1,218 (94.7%) | 1,355/1,431 (94.7%) | 420/427 (98.4%) | 2,867/2,953 (97.1%) |
-
-All three caps exceed 80% on both all days and late days when evaluated on the
-matching original-hire cohort. The all-eligible stress-test figures remain in
-`measurements/unrestricted/REPORT.md`, clearly separated from cap coverage.
+| 97.3% (2,744/2,820) | 94.7% (1,154/1,218) | 94.7% (1,355/1,431) | 98.4% (420/427) | 97.1% (2,867/2,953) |
 
 Measured on **Intel Core i7-14700K, Linux x86-64**, with one solver process pinned
 to logical CPU 14. Each configuration combines two sequential runs. Build:
