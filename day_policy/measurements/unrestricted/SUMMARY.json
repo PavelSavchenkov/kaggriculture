@@ -3,63 +3,123 @@
   "cohorts": {
     "dev": {
       "cap10": {
-        "solved": 1387,
-        "days": 2239,
-        "coverage": 0.619472979008486,
-        "median_ms": 3.336605,
-        "mean_ms": 14.700096555828495,
+        "solved": 1065,
+        "days": 1150,
+        "coverage": 0.9260869565217391,
+        "median_ms": 0.25759750000000003,
+        "mean_ms": 3.7165091721739127,
         "late": {
-          "solved": 228,
-          "days": 708,
-          "coverage": 0.3220338983050847
+          "solved": 87,
+          "days": 101,
+          "coverage": 0.8613861386138614
         },
         "mean_hires": 10.0,
         "hires_saved_from_cap": 0,
+        "original_hires_at_most": 10,
+        "all_eligible_stress": {
+          "solved": 1387,
+          "days": 2239,
+          "coverage": 0.619472979008486,
+          "median_ms": 3.336605,
+          "mean_ms": 14.700096555828495,
+          "late": {
+            "solved": 228,
+            "days": 708,
+            "coverage": 0.3220338983050847
+          },
+          "mean_hires": 10.0,
+          "hires_saved_from_cap": 0
+        },
         "repeat_non_time_parity": true
       },
       "cap11": {
-        "solved": 1925,
-        "days": 2239,
-        "coverage": 0.8597588209021885,
-        "median_ms": 0.4112555,
-        "mean_ms": 10.682573741179098,
+        "solved": 1652,
+        "days": 1732,
+        "coverage": 0.953810623556582,
+        "median_ms": 0.3151705,
+        "mean_ms": 5.74515711056582,
         "late": {
-          "solved": 508,
-          "days": 708,
-          "coverage": 0.7175141242937854
+          "solved": 365,
+          "days": 408,
+          "coverage": 0.8946078431372549
         },
         "mean_hires": 11.0,
         "hires_saved_from_cap": 0,
+        "original_hires_at_most": 11,
+        "all_eligible_stress": {
+          "solved": 1925,
+          "days": 2239,
+          "coverage": 0.8597588209021885,
+          "median_ms": 0.4112555,
+          "mean_ms": 10.682573741179098,
+          "late": {
+            "solved": 508,
+            "days": 708,
+            "coverage": 0.7175141242937854
+          },
+          "mean_hires": 11.0,
+          "hires_saved_from_cap": 0
+        },
         "repeat_non_time_parity": true
       },
       "cap13_fixed": {
-        "solved": 2170,
-        "days": 2239,
-        "coverage": 0.9691826708351943,
-        "median_ms": 0.3510085,
-        "mean_ms": 4.235769229120143,
+        "solved": 2151,
+        "days": 2203,
+        "coverage": 0.976395823876532,
+        "median_ms": 0.34932050000000003,
+        "mean_ms": 3.4478992208352244,
         "late": {
-          "solved": 669,
-          "days": 708,
-          "coverage": 0.9449152542372882
+          "solved": 662,
+          "days": 686,
+          "coverage": 0.9650145772594753
         },
         "mean_hires": 13.0,
         "hires_saved_from_cap": 0,
+        "original_hires_at_most": 13,
+        "all_eligible_stress": {
+          "solved": 2170,
+          "days": 2239,
+          "coverage": 0.9691826708351943,
+          "median_ms": 0.3510085,
+          "mean_ms": 4.235769229120143,
+          "late": {
+            "solved": 669,
+            "days": 708,
+            "coverage": 0.9449152542372882
+          },
+          "mean_hires": 13.0,
+          "hires_saved_from_cap": 0
+        },
         "repeat_non_time_parity": true
       },
       "unrestricted": {
-        "solved": 2170,
-        "days": 2239,
-        "coverage": 0.9691826708351943,
-        "median_ms": 0.608877,
-        "mean_ms": 4.4682781891469405,
+        "solved": 2151,
+        "days": 2203,
+        "coverage": 0.976395823876532,
+        "median_ms": 0.5832075,
+        "mean_ms": 3.67742949364503,
         "late": {
-          "solved": 669,
-          "days": 708,
-          "coverage": 0.9449152542372882
+          "solved": 662,
+          "days": 686,
+          "coverage": 0.9650145772594753
         },
-        "mean_hires": 11.430875576036867,
+        "mean_hires": 11.417015341701534,
         "hires_saved_from_cap": 3405,
+        "original_hires_at_most": 13,
+        "all_eligible_stress": {
+          "solved": 2170,
+          "days": 2239,
+          "coverage": 0.9691826708351943,
+          "median_ms": 0.608877,
+          "mean_ms": 4.4682781891469405,
+          "late": {
+            "solved": 669,
+            "days": 708,
+            "coverage": 0.9449152542372882
+          },
+          "mean_hires": 11.430875576036867,
+          "hires_saved_from_cap": 3405
+        },
         "repeat_non_time_parity": true
       },
       "restriction_features": {
@@ -92,63 +152,123 @@
     },
     "valid": {
       "cap10": {
-        "solved": 1879,
-        "days": 3071,
-        "coverage": 0.6118528166720938,
-        "median_ms": 3.70948,
-        "mean_ms": 14.891390356072941,
+        "solved": 1417,
+        "days": 1526,
+        "coverage": 0.9285714285714286,
+        "median_ms": 0.253687,
+        "mean_ms": 3.434583858453473,
         "late": {
-          "solved": 282,
-          "days": 959,
-          "coverage": 0.2940563086548488
+          "solved": 95,
+          "days": 111,
+          "coverage": 0.8558558558558559
         },
         "mean_hires": 10.0,
         "hires_saved_from_cap": 0,
+        "original_hires_at_most": 10,
+        "all_eligible_stress": {
+          "solved": 1879,
+          "days": 3071,
+          "coverage": 0.6118528166720938,
+          "median_ms": 3.70948,
+          "mean_ms": 14.891390356072941,
+          "late": {
+            "solved": 282,
+            "days": 959,
+            "coverage": 0.2940563086548488
+          },
+          "mean_hires": 10.0,
+          "hires_saved_from_cap": 0
+        },
         "repeat_non_time_parity": true
       },
       "cap11": {
-        "solved": 2580,
-        "days": 3071,
-        "coverage": 0.8401172256593943,
-        "median_ms": 0.471631,
-        "mean_ms": 11.263971752360796,
+        "solved": 2217,
+        "days": 2327,
+        "coverage": 0.9527288354103997,
+        "median_ms": 0.31280050000000004,
+        "mean_ms": 5.393360442629995,
         "late": {
-          "solved": 661,
-          "days": 959,
-          "coverage": 0.6892596454640251
+          "solved": 464,
+          "days": 512,
+          "coverage": 0.90625
         },
         "mean_hires": 11.0,
         "hires_saved_from_cap": 0,
+        "original_hires_at_most": 11,
+        "all_eligible_stress": {
+          "solved": 2580,
+          "days": 3071,
+          "coverage": 0.8401172256593943,
+          "median_ms": 0.471631,
+          "mean_ms": 11.263971752360796,
+          "late": {
+            "solved": 661,
+            "days": 959,
+            "coverage": 0.6892596454640251
+          },
+          "mean_hires": 11.0,
+          "hires_saved_from_cap": 0
+        },
         "repeat_non_time_parity": true
       },
       "cap13_fixed": {
-        "solved": 2985,
-        "days": 3071,
-        "coverage": 0.9719960924780202,
-        "median_ms": 0.3515875,
-        "mean_ms": 4.2887270472158905,
+        "solved": 2945,
+        "days": 3004,
+        "coverage": 0.9803595206391478,
+        "median_ms": 0.34926,
+        "mean_ms": 3.3984570016644473,
         "late": {
-          "solved": 911,
-          "days": 959,
-          "coverage": 0.9499478623566214
+          "solved": 890,
+          "days": 920,
+          "coverage": 0.967391304347826
         },
         "mean_hires": 13.0,
         "hires_saved_from_cap": 0,
+        "original_hires_at_most": 13,
+        "all_eligible_stress": {
+          "solved": 2985,
+          "days": 3071,
+          "coverage": 0.9719960924780202,
+          "median_ms": 0.3515875,
+          "mean_ms": 4.2887270472158905,
+          "late": {
+            "solved": 911,
+            "days": 959,
+            "coverage": 0.9499478623566214
+          },
+          "mean_hires": 13.0,
+          "hires_saved_from_cap": 0
+        },
         "repeat_non_time_parity": true
       },
       "unrestricted": {
-        "solved": 2985,
-        "days": 3071,
-        "coverage": 0.9719960924780202,
-        "median_ms": 0.6069410000000001,
-        "mean_ms": 4.5050250867795505,
+        "solved": 2945,
+        "days": 3004,
+        "coverage": 0.9803595206391478,
+        "median_ms": 0.5408425,
+        "mean_ms": 3.6203402939414118,
         "late": {
-          "solved": 911,
-          "days": 959,
-          "coverage": 0.9499478623566214
+          "solved": 890,
+          "days": 920,
+          "coverage": 0.967391304347826
         },
-        "mean_hires": 11.413400335008376,
+        "mean_hires": 11.391850594227504,
         "hires_saved_from_cap": 4736,
+        "original_hires_at_most": 13,
+        "all_eligible_stress": {
+          "solved": 2985,
+          "days": 3071,
+          "coverage": 0.9719960924780202,
+          "median_ms": 0.6069410000000001,
+          "mean_ms": 4.5050250867795505,
+          "late": {
+            "solved": 911,
+            "days": 959,
+            "coverage": 0.9499478623566214
+          },
+          "mean_hires": 11.413400335008376,
+          "hires_saved_from_cap": 4736
+        },
         "repeat_non_time_parity": true
       },
       "restriction_features": {

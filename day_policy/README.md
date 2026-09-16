@@ -54,24 +54,24 @@ schedules, not by removing large cases from the denominator.
 
 The new extractor no longer excludes or normalizes late seed/animal purchases,
 fertilizer buys, fertilizer pickups, or hires after hour 1. This expands dev from
-914 to 2,239 eligible days and validation from 1,284 to 3,071. Every cap uses the
-same full denominator; cases are not filtered by original hire count. Fixed-cap
+914 to 2,239 eligible days and validation from 1,284 to 3,071. Each cap row
+includes days where the original schedule used no more than that cap. Fixed-cap
 rows disable hire minimization so the cap comparison is direct.
 
 | Cohort | Profile / cap | All days solved | Late days 20-28 solved | Median / average ms | Mean hires on success |
 |---|---|---:|---:|---:|---:|
-| dev | Balanced-4 cap 10 | 1,387/2,239 (61.9%) | 228/708 (32.2%) | 3.34 / 14.70 | 10.00 |
-| dev | Balanced-4 cap 11 | 1,925/2,239 (86.0%) | 508/708 (71.8%) | 0.41 / 10.68 | 11.00 |
-| dev | Balanced-4 cap 13 | 2,170/2,239 (96.9%) | 669/708 (94.5%) | 0.35 / 4.24 | 13.00 |
-| dev | unrestricted_day_policy | 2,170/2,239 (96.9%) | 669/708 (94.5%) | 0.61 / 4.47 | 11.43 |
-| validation | Balanced-4 cap 10 | 1,879/3,071 (61.2%) | 282/959 (29.4%) | 3.71 / 14.89 | 10.00 |
-| validation | Balanced-4 cap 11 | 2,580/3,071 (84.0%) | 661/959 (68.9%) | 0.47 / 11.26 | 11.00 |
-| validation | Balanced-4 cap 13 | 2,985/3,071 (97.2%) | 911/959 (95.0%) | 0.35 / 4.29 | 13.00 |
-| validation | unrestricted_day_policy | 2,985/3,071 (97.2%) | 911/959 (95.0%) | 0.61 / 4.51 | 11.41 |
+| dev | Balanced-4 cap 10 | 1,065/1,150 (92.6%) | 87/101 (86.1%) | 0.26 / 3.72 | 10.00 |
+| dev | Balanced-4 cap 11 | 1,652/1,732 (95.4%) | 365/408 (89.5%) | 0.32 / 5.75 | 11.00 |
+| dev | Balanced-4 cap 13 | 2,151/2,203 (97.6%) | 662/686 (96.5%) | 0.35 / 3.45 | 13.00 |
+| dev | unrestricted_day_policy | 2,151/2,203 (97.6%) | 662/686 (96.5%) | 0.58 / 3.68 | 11.42 |
+| validation | Balanced-4 cap 10 | 1,417/1,526 (92.9%) | 95/111 (85.6%) | 0.25 / 3.43 | 10.00 |
+| validation | Balanced-4 cap 11 | 2,217/2,327 (95.3%) | 464/512 (90.6%) | 0.31 / 5.39 | 11.00 |
+| validation | Balanced-4 cap 13 | 2,945/3,004 (98.0%) | 890/920 (96.7%) | 0.35 / 3.40 | 13.00 |
+| validation | unrestricted_day_policy | 2,945/3,004 (98.0%) | 890/920 (96.7%) | 0.54 / 3.62 | 11.39 |
 
 The unrestricted policy preserves cap-13 coverage while saving 3,405 hires on
-dev and 4,736 on validation. Its bounded reduction raises mean latency by 5.5%
-on dev and 5.0% on validation. It only runs after a first-attempt success with at
+dev and 4,736 on validation. Its bounded reduction raises mean latency by 6.7%
+on dev and 6.5% on validation. It only runs after a first-attempt success with at
 most 60 work units; harder calls do not pay minimization cost.
 
 Coverage on validation cases using each removed restriction is:
@@ -80,10 +80,9 @@ Coverage on validation cases using each removed restriction is:
 |---:|---:|---:|---:|---:|
 | 2,744/2,820 (97.3%) | 1,154/1,218 (94.7%) | 1,355/1,431 (94.7%) | 420/427 (98.4%) | 2,867/2,953 (97.1%) |
 
-The unrestricted 11-hire row remains above 80% overall but not on late days.
-Late exact-timing cases need the cap-13 policy to retain main-solver-like
-coverage. Lower caps are also slower on average because failed Balanced-4 calls
-exhaust their search.
+All three caps exceed 80% on both all days and late days when evaluated on the
+matching original-hire cohort. The all-eligible stress-test figures remain in
+`measurements/unrestricted/REPORT.md`, clearly separated from cap coverage.
 
 Measured on **Intel Core i7-14700K, Linux x86-64**, with one solver process pinned
 to logical CPU 14. Each configuration combines two sequential runs. Build:

@@ -1,6 +1,7 @@
 # Measurements
 
 `unrestricted/` contains the current expanded-contract cap 10/11/13 benchmarks,
+with each primary cap row filtered to original schedules using at most that cap,
 the bounded hire-reduction policy, and compressed per-call evidence. The files
 directly in this folder are the earlier restricted-contract baseline.
 

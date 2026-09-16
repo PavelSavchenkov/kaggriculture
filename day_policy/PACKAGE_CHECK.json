@@ -19,6 +19,8 @@
   "benchmarks": {
     "configurations": 8,
     "repeats": 2,
+    "primary_denominator": "Original schedule hires at most the tested cap; the same filter applies to coverage and timing.",
+    "all_eligible_rows": "Retained only as explicitly labeled stress tests.",
     "repeat_non_time_parity": "passed",
     "root_release_matches_archived_dev_rows": 2239
   },

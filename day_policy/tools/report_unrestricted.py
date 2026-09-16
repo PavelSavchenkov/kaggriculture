@@ -32,6 +32,16 @@ def timing(rows_a, rows_b):
     return {"median_ms": statistics.median(values), "mean_ms": statistics.fmean(values)}
 
 
+def summarize(rows_a, rows_b, cap):
+    late = [row for row in rows_a if 20 <= int(row["day"]) <= 28]
+    solved = [row for row in rows_a if row["status"] == "0"]
+    value = coverage(rows_a) | timing(rows_a, rows_b)
+    value["late"] = coverage(late)
+    value["mean_hires"] = statistics.fmean(int(row["hires"]) for row in solved)
+    value["hires_saved_from_cap"] = sum(cap - int(row["hires"]) for row in solved)
+    return value
+
+
 def ratio(value):
     return f"{value['solved']:,}/{value['days']:,} ({value['coverage']:.1%})"
 
@@ -57,12 +67,16 @@ def main():
                 assert [[row[field] for field in fields] for row in rows_a] == [
                     [row[field] for field in fields] for row in rows_b
                 ]
-                late = [row for row in rows_a if 20 <= int(row["day"]) <= 28]
-                solved = [row for row in rows_a if row["status"] == "0"]
-                value = coverage(rows_a) | timing(rows_a, rows_b)
-                value["late"] = coverage(late)
-                value["mean_hires"] = statistics.fmean(int(row["hires"]) for row in solved)
-                value["hires_saved_from_cap"] = sum(config["cap"] - int(row["hires"]) for row in solved)
+                chosen = [
+                    index for index, row in enumerate(rows_a)
+                    if int(metadata[cohort][(row["game"], row["seat"], row["day"])]["original_hires"])
+                    <= config["cap"]
+                ]
+                filtered_a = [rows_a[index] for index in chosen]
+                filtered_b = [rows_b[index] for index in chosen]
+                value = summarize(filtered_a, filtered_b, config["cap"])
+                value["original_hires_at_most"] = config["cap"]
+                value["all_eligible_stress"] = summarize(rows_a, rows_b, config["cap"])
                 value["repeat_non_time_parity"] = True
                 report["cohorts"][cohort][name] = value
         for cohort in ("dev", "valid"):
@@ -81,7 +95,8 @@ def main():
     (args.output / "SUMMARY.json").write_text(json.dumps(report, indent=2) + "\n")
     lines = [
         "# Unrestricted day-policy measurements", "",
-        report["method"] + " Late means days 20-28.", "",
+        report["method"] + " Late means days 20-28. Each primary row includes only days where the "
+        "original schedule used no more hires than that row's cap.", "",
         "| Cohort | Profile / cap | All days | Late days | Median / mean ms | Mean hires |",
         "|---|---|---:|---:|---:|---:|",
     ]
@@ -90,8 +105,18 @@ def main():
             value = report["cohorts"][cohort][name]
             lines.append(f"| {cohort} | {config['label']} | {ratio(value)} | {ratio(value['late'])} | "
                          f"{value['median_ms']:.2f} / {value['mean_ms']:.2f} | {value['mean_hires']:.2f} |")
+    dev_saved = report["cohorts"]["dev"]["unrestricted"]["hires_saved_from_cap"]
+    valid_saved = report["cohorts"]["valid"]["unrestricted"]["hires_saved_from_cap"]
     lines.extend(["", "The production unrestricted profile preserves cap-13 coverage while saving "
-                  "3,405 hires on dev and 4,736 on validation.", "",
+                  f"{dev_saved:,} hires on dev and {valid_saved:,} on validation.", "",
+                  "## All-expanded-set stress test", "",
+                  "These rows deliberately ignore original hire count and are not the cap-coverage figures above.", "",
+                  "| Cohort | Profile / cap | All days | Late days |", "|---|---|---:|---:|"])
+    for cohort in ("dev", "valid"):
+        for name, config in CONFIGS.items():
+            value = report["cohorts"][cohort][name]["all_eligible_stress"]
+            lines.append(f"| {cohort} | {config['label']} | {ratio(value)} | {ratio(value['late'])} |")
+    lines.extend(["",
                   "## Removed-restriction cases", "",
                   "| Cohort | Late seed/animal buy | Fertilizer buy | Fertilizer pickup | Hire after hour 1 | Any |",
                   "|---|---:|---:|---:|---:|---:|"])

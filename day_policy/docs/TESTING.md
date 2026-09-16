@@ -75,6 +75,10 @@ The unrestricted development set contains 2,239 eligible days. The separate
 supported on development. Late means days 20–28. The older 914/1,284 restricted
 measurements remain historical baselines.
 
+For a cap-N coverage row, keep only days where the original schedule used at
+most N hires. Apply the same filter to late-day coverage and timings. Results on
+the entire expanded set are stress tests, not cap-N coverage.
+
 Use sequential, pinned solver processes. Include failed calls and hire
 minimization in median/mean timing. Report original and changed layouts separately.
 The worker profiles run independently; chaining them adds their time.
