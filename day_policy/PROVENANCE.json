@@ -1,18 +1,23 @@
 {
-  "description": "Measured policy source and shared engine/API hashes; dependencies are referenced from the repository.",
+  "description": "Unrestricted day-policy source, benchmark executable, case sets and evidence hashes.",
   "engine_version": "1.32.7",
   "official_engine_source_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
-  "measured_executable_sha256": "b92d40c906b9b6e733e499940a93725506cfde9318a47eb95768c4756b9c855a",
+  "measured_executable_sha256": "475b61c88f687549de94e94fe13ee7a96229e4167b5fde8dd88eec425f2292d8",
+  "case_sha256": {
+    "dev.bin": "6a03649cd1dce455261794e56011e4e65de8e7eac78b6bd88b933a434e18974a",
+    "valid.bin": "aca0a2f22dde7f5d4e61db209b35071e7bcc87d66bfa59cddd01a92bfed61381"
+  },
+  "measurement_rows_sha256": "a97c333cb754eafe843f2bfa4518ae84872e51eabb87962b0d7eaa861333202d",
   "policy_source_sha256": {
-    "agent.cpp": "007e83f0e62d5fb9bc614dbdcb80360175a71f2d3fb1b4eb3af1004ad40eb84a",
-    "agent.hpp": "f011845fa125d07469c48c4a695e6b49cf6b2576d3719bdc65efc311a2ac0b7d",
-    "day_jobs.hpp": "4903068b176f3f6795c867727c99fc413bd69b3ff70d465ed3a86c346f208199",
+    "agent.cpp": "43f445d95c8f4e81f150e56826e3c3062866bca706b3c0fa8526a483794068bc",
+    "agent.hpp": "a6b7c2283f29b22c490c5e6a668662d62ad8775f6af371fed049cee28272218a",
+    "day_jobs.hpp": "9c725b0fb7188c3848094309b242ce034b4aa8bb31b1d84fa40355da0d268288",
     "placement.hpp": "6bcfe40edabfd7cdb74737c84f1c52482899fe1fc1d765a8347152aa9618251e",
-    "policy.cpp": "bbc437d0a7d637f0b3d4727e88ee7941204feb1c9a2ec853925b6a9bde6fb762",
-    "policy.hpp": "c68de5f8d56dfbed46269b7219b9d0a54b2a883449946b844694beed2d6a51c4",
-    "routes.cpp": "8a0a23c299f6da65937b1d51fefa1b9d4031e79a4aec86eaf7e22534d3b9f66d",
+    "policy.cpp": "cf31013ef2c9051bd21272c17d8d33befcbcf184625b80ab79e5010d9d68ca70",
+    "policy.hpp": "51ae7163179a920fccdd1ce83dbf5f8cbf2c40e395b99053ea88433fe915d7bd",
+    "routes.cpp": "cdfb373d882aee6f9663c0fca1eb9f3f8a5b6a90621289edf9af2cba88569e10",
     "routes.hpp": "2f5449065c15298a0ccf8b61d8c68fab05a64300d1e5773e708867fa59d54195",
-    "verify.cpp": "5e99baed3b7328d8a0ccaf585c743b40136584ab053d15ae6ed138d3c61fd553",
+    "verify.cpp": "142a5c475afb74a237fd453972dca8c89c6ec962847d4c70debd3ce486226252",
     "verify.hpp": "35bd8c9fa33ea56584fe043848b2faf5512e1a70de3f9cecff0027347bfe0b29"
   },
   "repository_dependencies": "REPOSITORY_DEPENDENCIES.json"

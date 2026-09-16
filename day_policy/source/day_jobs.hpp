@@ -5,9 +5,12 @@ namespace kag::agents::day_policy_contract {
 inline DayPlan compile_day_jobs(const DayInput& in, int hires, int variant, bool split) {
     DayPlan plan; plan.day = detail::CALENDAR; plan.hires = hires;
     plan.relocate_new = true; plan.trade = false; plan.buy_land = in.land_hour >= 0; plan.land_hour = in.land_hour;
-    std::copy_n(in.buy_seeds, N_CROPS, plan.buy_seeds);
-    for (int h = 0; h < 24; ++h) plan.buy_items[WHEAT] += in.buy_wheat[h];
-    for (int a = 0; a < 3; ++a) plan.buy_items[GOOSE+a] = in.buy_animals[a];
+    for (int h = 0; h < 24; ++h) {
+        for (int c = 0; c < N_CROPS; ++c) plan.buy_seeds[c] += in.buy_seeds[h][c];
+        for (int a = 0; a < 3; ++a) plan.buy_items[GOOSE+a] += in.buy_animals[h][a];
+        plan.buy_items[WHEAT] += in.buy_wheat[h];
+        plan.buy_items[FERTILIZER] += in.buy_fertilizer[h];
+    }
     auto push = [](Job& job, int op, int arg = 0) { job.steps[job.count++] = {uint8_t(op),uint8_t(arg),1}; };
     for (int c = 0; c < 100; ++c) {
         auto e = in.events[c]; if (!e) continue;

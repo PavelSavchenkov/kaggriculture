@@ -1,5 +1,9 @@
 # Measurements
 
+`unrestricted/` contains the current expanded-contract cap 10/11/13 benchmarks,
+the bounded hire-reduction policy, and compressed per-call evidence. The files
+directly in this folder are the earlier restricted-contract baseline.
+
 `REPORT.md` and `SUMMARY.json` are the final September 15 measurements for the
 unchanged policy source delivered here. The JSON also contains per-player
 timings for our carried placement and original-hire-filtered per-player results.

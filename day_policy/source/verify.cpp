@@ -62,7 +62,6 @@ Verification verify(const DayInput& in, const SolveResult& result) {
                 }
                 continue;
             }
-            if(a.op==OP_PICKUP && a.arg==FERTILIZER) return fail(h,"fertilizer pickup");
             const bool animal_place=a.op==OP_PLACE && is_animal(a.arg) && !t.has_animal &&
                 t.kind==(ANIMALS[a.arg-GOOSE].structure==ST_COOP ? T_COOP : T_PASTURE);
             if(a.op==OP_PLANT || animal_place) {
@@ -103,21 +102,26 @@ Verification verify(const DayInput& in, const SolveResult& result) {
                 t=Tile{};
             }
         }
-        int seeds[N_CROPS]{}, animals[3]{}, wheat=0, land=0;
+        int seeds[N_CROPS]{}, animals[3]{}, wheat=0, fertilizer=0, land=0;
         for(int k=0;k<action.n_orders;++k) {
             const auto o=action.orders[k];
             switch(o.op) {
-                case M_HIRE: if(h>1 || ++hires>13) return fail(h,"hire limit"); break;
-                case M_BUY_SEED: if(h || !is_crop(o.item)) return fail(h,"seed purchase hour"); seeds[o.item]+=o.n; break;
-                case M_BUY_ANIMAL: if(h || !is_animal(o.item)) return fail(h,"animal purchase hour"); animals[o.item-GOOSE]+=o.n; break;
-                case M_BUY_PRODUCT: if(o.item!=WHEAT) return fail(h,"forbidden purchase"); wheat+=o.n; break;
+                case M_HIRE: if(++hires>13) return fail(h,"hire limit"); break;
+                case M_BUY_SEED: if(!is_crop(o.item)) return fail(h,"seed purchase item"); seeds[o.item]+=o.n; break;
+                case M_BUY_ANIMAL: if(!is_animal(o.item)) return fail(h,"animal purchase item"); animals[o.item-GOOSE]+=o.n; break;
+                case M_BUY_PRODUCT:
+                    if(o.item==WHEAT)wheat+=o.n;
+                    else if(o.item==FERTILIZER)fertilizer+=o.n;
+                    else return fail(h,"forbidden purchase");
+                    break;
                 case M_BUY_LAND: ++land; break;
                 default: return fail(h,"unrequested market order");
             }
         }
-        for(int c=0;c<N_CROPS;++c) if(seeds[c]!=(h ? 0 : in.buy_seeds[c])) return fail(h,"seed purchase mismatch");
-        for(int a=0;a<3;++a) if(animals[a]!=(h ? 0 : in.buy_animals[a])) return fail(h,"animal purchase mismatch");
-        if(wheat!=in.buy_wheat[h] || land!=(in.land_hour==h)) return fail(h,"wheat or land purchase mismatch");
+        for(int c=0;c<N_CROPS;++c) if(seeds[c]!=in.buy_seeds[h][c]) return fail(h,"seed purchase mismatch");
+        for(int a=0;a<3;++a) if(animals[a]!=in.buy_animals[h][a]) return fail(h,"animal purchase mismatch");
+        if(wheat!=in.buy_wheat[h] || fertilizer!=in.buy_fertilizer[h] || land!=(in.land_hour==h))
+            return fail(h,"product or land purchase mismatch");
         for(int it=0;it<N_PRODUCTS;++it) {
             check.receipts[h][it]=deposited[it];
             if(result.receipts[h][it]!=deposited[it]) return fail(h,"receipt output mismatch");

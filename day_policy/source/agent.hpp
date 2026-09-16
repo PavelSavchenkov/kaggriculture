@@ -49,6 +49,7 @@ struct DayPlan {
     bool relocate_new = false;
     bool trade = true;
     int first_wave = -1;
+    std::array<uint8_t,MAX_WORKERS> hire_hour = [] { std::array<uint8_t,MAX_WORKERS> a; a.fill(255); return a; }();
     int delivery_batch_cap = 0;
     std::array<int8_t,MAX_WORKERS> spawn_tile = [] { std::array<int8_t,MAX_WORKERS> a; a.fill(-1); return a; }();
 };

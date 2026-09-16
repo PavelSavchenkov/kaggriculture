@@ -15,7 +15,8 @@ struct NewProduct { uint8_t product = 0, events = 0; };
 struct DayInput {
     Tile grid[100]{};
     int shed[N_ITEMS]{}, seeds[N_CROPS]{};
-    int buy_seeds[N_CROPS]{}, buy_animals[3]{}, buy_wheat[24]{};
+    int buy_seeds[24][N_CROPS]{}, buy_animals[24][3]{};
+    int buy_wheat[24]{}, buy_fertilizer[24]{};
     int land_hour = -1;
     uint8_t events[100]{};
     NewProduct establish[100]{};
@@ -50,12 +51,15 @@ struct SolveOptions {
     int variants = 4; // 16 also tries finishing same-tile work before returning.
     int route_rounds = 1;
     bool minimize_hires = true;
+    bool opportunistic_hire_reduction = false;
     int minimize_variants = 1; // Use 8 for a more expensive workforce search.
     int animal_reserve = 0;
     PlacementStyle placement = PlacementStyle::Staged;
 };
 // Fixed 11-hire throughput profile. Do not change max_hires or minimize_hires.
 SolveOptions day_policy_80p();
+// Fast profile for the unrestricted within-day purchase, fertilizer and hire contract.
+SolveOptions unrestricted_day_policy();
 
 class Solver {
 public:

@@ -44,20 +44,32 @@ bool valid_input(const DayInput& in) {
         else return false;
         need_f += bool(n.events & Fertilize);
     }
-    if (need_f > source_f) return false;
     for (int it = 0; it < N_ITEMS; ++it) if (in.shed[it] < 0 || in.shed[it] > 20000) return false;
-    for (int c = 0; c < N_CROPS; ++c)
-        if (in.seeds[c] < 0 || in.buy_seeds[c] < 0 || in.seeds[c]+in.buy_seeds[c] > 20000 || seed_need[c] > in.seeds[c]+in.buy_seeds[c]) return false;
-    for (int a = 0; a < 3; ++a)
-        if (in.buy_animals[a] < 0 || in.buy_animals[a]+in.shed[GOOSE+a] > 20000 || animal_need[a] > in.buy_animals[a]+in.shed[GOOSE+a]) return false;
+    int bought_seeds[N_CROPS]{}, bought_animals[3]{}, bought_fertilizer=0;
     int wheat = in.shed[WHEAT];
     for (int h = 0; h < 24; ++h) {
-        if (in.buy_wheat[h] < 0) return false;
+        int fixed_orders=in.land_hour==h;
+        for(int c=0;c<N_CROPS;++c) {
+            if(in.buy_seeds[h][c]<0)return false;
+            bought_seeds[c]+=in.buy_seeds[h][c];fixed_orders+=in.buy_seeds[h][c]>0;
+        }
+        for(int a=0;a<3;++a) {
+            if(in.buy_animals[h][a]<0)return false;
+            bought_animals[a]+=in.buy_animals[h][a];fixed_orders+=in.buy_animals[h][a]>0;
+        }
+        if (in.buy_wheat[h] < 0 || in.buy_fertilizer[h] < 0) return false;
         wheat += in.buy_wheat[h];
-        if (wheat > 20000) return false;
+        bought_fertilizer+=in.buy_fertilizer[h];
+        fixed_orders+=in.buy_wheat[h]>0;fixed_orders+=in.buy_fertilizer[h]>0;
+        if (wheat > 20000 || fixed_orders>10) return false;
         for (int it = 0; it < N_PRODUCTS; ++it)
             if (in.returns[h][it] < (h ? in.returns[h-1][it] : 0)) return false;
     }
+    for (int c = 0; c < N_CROPS; ++c)
+        if (in.seeds[c] < 0 || in.seeds[c]+bought_seeds[c] > 20000 || seed_need[c] > in.seeds[c]+bought_seeds[c]) return false;
+    for (int a = 0; a < 3; ++a)
+        if (bought_animals[a]+in.shed[GOOSE+a] > 20000 || animal_need[a] > bought_animals[a]+in.shed[GOOSE+a]) return false;
+    if(need_f>source_f+in.shed[FERTILIZER]+bought_fertilizer)return false;
     return true;
 }
 
@@ -137,7 +149,10 @@ bool can_supply_returns(const DayInput& input) {
             available[earliest][it]+=harvest_output(job,0,input.grid[cell],0,it);
     }
     for(int j=0;j<input.establish_count;++j)fertilizations+=bool(input.establish[j].events&Fertilize);
-    if(input.returns[23][FERTILIZER]>collections-fertilizations)return false;
+    int bought_fertilizer=0;
+    for(int h=0;h<24;++h)bought_fertilizer+=input.buy_fertilizer[h];
+    if(input.returns[23][FERTILIZER]>collections ||
+       fertilizations+input.returns[23][FERTILIZER]>collections+input.shed[FERTILIZER]+bought_fertilizer)return false;
     for(int h=0;h<24;++h)for(int it=1;it<N_PRODUCTS;++it) {
         if(h)available[h][it]+=available[h-1][it];
         // This executor returns these products from declared field operations.
@@ -153,12 +168,20 @@ bool orders(const DayInput& in, DayPlan& plan, Action* actions) {
         if (actions[h].n_orders == 10) return false;
         actions[h].orders[actions[h].n_orders++] = order; return true;
     };
-    for (int c = 0; c < N_CROPS; ++c) if (in.buy_seeds[c] && !emit(0,{M_BUY_SEED,uint8_t(c),in.buy_seeds[c]})) return false;
-    for (int a = 0; a < 3; ++a) if (in.buy_animals[a] && !emit(0,{M_BUY_ANIMAL,uint8_t(GOOSE+a),in.buy_animals[a]})) return false;
-    for (int h = 0; h < 24; ++h) if (in.buy_wheat[h] && !emit(h,{M_BUY_PRODUCT,WHEAT,in.buy_wheat[h]})) return false;
+    for (int h = 0; h < 24; ++h) {
+        for (int c = 0; c < N_CROPS; ++c) if (in.buy_seeds[h][c] && !emit(h,{M_BUY_SEED,uint8_t(c),in.buy_seeds[h][c]})) return false;
+        for (int a = 0; a < 3; ++a) if (in.buy_animals[h][a] && !emit(h,{M_BUY_ANIMAL,uint8_t(GOOSE+a),in.buy_animals[h][a]})) return false;
+        if (in.buy_wheat[h] && !emit(h,{M_BUY_PRODUCT,WHEAT,in.buy_wheat[h]})) return false;
+        if (in.buy_fertilizer[h] && !emit(h,{M_BUY_PRODUCT,FERTILIZER,in.buy_fertilizer[h]})) return false;
+    }
     if (in.land_hour >= 0 && !emit(in.land_hour,{M_BUY_LAND,0,1})) return false;
-    plan.first_wave = std::min(plan.hires,10-actions[0].n_orders);
-    for (int u = 0; u < plan.hires; ++u) if (!emit(u < plan.first_wave ? 0 : 1,{M_HIRE,0,1})) return false;
+    int hired=0;plan.first_wave=0;
+    for(int h=0;h<24 && hired<plan.hires;++h)while(actions[h].n_orders<10 && hired<plan.hires) {
+        if(!emit(h,{M_HIRE,0,1}))return false;
+        plan.hire_hour[++hired]=h;
+        plan.first_wave+=h==0;
+    }
+    if(hired!=plan.hires)return false;
     return true;
 }
 }
@@ -387,7 +410,7 @@ SolveResult Solver::solve(const DayInput& input, const SolveOptions& options) {
         }
         return false;
     };
-    int first = std::min(11,options.max_hires);
+    int first = options.minimize_hires?std::min(11,options.max_hires):options.max_hires;
     if(options.minimize_hires) first = std::min(first,std::max(0,(work+7)/8-1));
     if (work == 0 && options.effort!=SearchEffort::DayPolicy80p) first = 0;
     for (int hires = first; hires <= options.max_hires; ++hires)
@@ -407,6 +430,13 @@ SolveResult Solver::solve(const DayInput& input, const SolveOptions& options) {
                 for (int variant = 1; variant <= 2 && !improved; ++variant)
                     improved = try_hires(hires, 1, !alternative_timing, false, 0, variant);
             if (!improved) break;
+        }
+    }
+    if(best.status==SolveStatus::Success && options.opportunistic_hire_reduction && !options.minimize_hires) {
+        const int floor=attempts==1 ? (work<=30?3:work<=40?4:work<=60?5:13) : 13;
+        for(int hires=best.hires-1;hires>=floor;--hires) {
+            const auto seed=winning;
+            if(!try_hires(hires,1,seed.legacy,seed.split,seed.family,seed.variant))break;
         }
     }
     // With a complete 13-hire incumbent, spend the remaining finish variants
@@ -432,6 +462,16 @@ SolveOptions day_policy_80p() {
     options.max_hires=11;
     options.variants=8;
     options.minimize_hires=false;
+    return options;
+}
+
+SolveOptions unrestricted_day_policy() {
+    SolveOptions options;
+    options.effort=SearchEffort::Balanced;
+    options.max_hires=13;
+    options.variants=4;
+    options.minimize_hires=false;
+    options.opportunistic_hire_reduction=true;
     return options;
 }
 }

@@ -1,7 +1,8 @@
 # Replay test data
 
-174 unique episodes, 207 player-games, 6,210 player-days. The extractor retains
-2,198 compatible days: development 914, comparison cohorts 639 and 645.
+174 unique episodes, 207 player-games, 6,210 player-days. The unrestricted
+extractor retains 5,310 compatible days: development 2,239 and combined
+validation 3,071. The old restricted extractor retained 2,198 days.
 `COHORTS.json` records exact selection order, game IDs, seats, player names,
 snapshot ranks and selection rules. The development list includes only the
 selected development split. These are recorded ranks, not a current leaderboard.

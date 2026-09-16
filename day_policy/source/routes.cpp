@@ -102,13 +102,23 @@ struct Builder {
         bool used[MAX_JOBS]{},split_service[MAX_JOBS]{};
         for(int j=0;j<plan.count;++j)used[j]=plan.jobs[j].count==0;
         for(int j=0;j<plan.count;++j)if(plan.jobs[j].service_predecessor>=0)split_service[plan.jobs[j].service_predecessor]=true;
-        int paired[MAX_JOBS]; std::fill_n(paired,MAX_JOBS,-1);
+        int paired[MAX_JOBS],shed_fertilizer[MAX_JOBS]{}; std::fill_n(paired,MAX_JOBS,-1);
+        int fertilizer_jobs[100],fertilizer_count=0;
+        for(int j=0;j<plan.count;++j)for(int k=0;k<plan.jobs[j].count;++k)
+            if(plan.jobs[j].steps[k].op==OP_FERTILIZE)fertilizer_jobs[fertilizer_count++]=j;
+        std::sort(fertilizer_jobs,fertilizer_jobs+fertilizer_count,[&](int a,int b) {
+            const int da=shed_distance(plan.jobs[a].tile),db=shed_distance(plan.jobs[b].tile);
+            return da!=db?da<db:a<b;
+        });
+        int shed_stock=observation.own.shed[FERTILIZER]+plan.buy_items[FERTILIZER];
+        for(int k=0;k<fertilizer_count && shed_stock>0;++k, --shed_stock)++shed_fertilizer[fertilizer_jobs[k]];
         if (variant & 512) {
             int consumers[100], sources[100], rows=0, cols=0;
             for(int j=0;j<plan.count;++j) {
                 const auto& job=plan.jobs[j];
                 if(job.tile<0 || job.depot) continue;
-                for(int k=0;k<job.count;++k) if(job.steps[k].op==OP_FERTILIZE) consumers[rows++]=j;
+                int need=0;for(int k=0;k<job.count;++k)need+=job.steps[k].op==OP_FERTILIZE;
+                for(int k=shed_fertilizer[j];k<need;++k)consumers[rows++]=j;
                 if(!job.carrier_bound && job.count==1 && job.steps[0].op==OP_COLLECT_FERTILIZER) sources[cols++]=j;
             }
             // Rectangular Hungarian assignment: each collection stays on the
@@ -172,7 +182,7 @@ struct Builder {
             if (!needed) continue;
             auto& node = nodes[n_nodes++];
             int collected = -1;
-            for (int f = 0; f < needed; ++f) {
+            for (int f = shed_fertilizer[j]; f < needed; ++f) {
                 int source = -1, best = INT_MAX;
                 for (int s = 0; s < plan.count; ++s) {
                     const auto& candidate = plan.jobs[s];
@@ -293,7 +303,6 @@ struct Builder {
             } while(!nodes[r.nodes[end++]].shipments && end<r.count);
             int pickups=0;
             for(int k=0;k<Count;++k)if(required[k]>inventory[k]) {
-                if(items[k]==FERTILIZER){cost.fertilizer+=required[k]-inventory[k];continue;}
                 ++pickups;
                 if(observation.own.shed[items[k]]+plan.buy_items[items[k]]<required[k]-inventory[k])cost.time+=24;
                 inventory[k]=required[k];
@@ -533,7 +542,11 @@ struct Builder {
                 if (plan.spawn_tile[u] >= 0) r.start = plan.spawn_tile[u];
             }
             for (int q = 0; q < 4; ++q) occupancy[q] += r.start == corners[q];
-            const int birth = u < observation.self().n_units ? observation.hour : std::max(observation.hour + 1, u <= first_hire_wave(plan, 10) ? 1 : 2);
+            int birth = observation.hour;
+            if(u>=observation.self().n_units) {
+                const int planned=plan.hire_hour[u]<24 ? plan.hire_hour[u]+1 : (u<=first_hire_wave(plan,10)?1:2);
+                birth=std::max(observation.hour+1,planned);
+            }
             r.capacity = (plan.day == 29 ? 23 : 24) - birth - ((variant & 16) ? 1 : 0);
         }
         int order[MAX_JOBS]; std::iota(order, order + n_nodes, 0);
@@ -744,7 +757,7 @@ struct Builder {
                     int end=begin,used[Count]{},needed[Count]{};
                     do {
                         const int j=r.nodes[end];const auto& v=visits[j];
-                        if(!legal(j) || used[1]+v.required[1]>inventory[1])return INT64_MAX/4;
+                        if(!legal(j))return INT64_MAX/4;
                         for(int k=0;k<Count;++k){needed[k]=std::max(needed[k],used[k]+v.required[k]);used[k]+=v.need[k];}
                     } while(!visits[r.nodes[end++]].depot && end<r.count);
                     int pickups=0;
@@ -769,7 +782,6 @@ struct Builder {
             for(int k=0;k<r.count;++k) {
                 const int j=r.nodes[k];const auto& v=visits[j];
                 if(!legal(j))return INT64_MAX/4;
-                if(consumed[1]+v.required[1]>r.inv[FERTILIZER])return INT64_MAX/4;
                 time+=distance(at,v.tile)+v.work;at=v.tile;
                 const int elapsed=start_hour(r)+time;
                 if(v.deadline<23){late+=std::max(0,elapsed-v.deadline-1);if(variant&4096)delivery_slack[nd++]=v.deadline+1-elapsed;}
@@ -1006,7 +1018,8 @@ void add_deliveries(const agent::AgentObservation& o, DayPlan& plan, const DayRe
             return da != db ? da < db : a < b;
         });
         // Field fertilizer is retained before assigning its surplus to sales.
-        const int return_sources = it == FERTILIZER ? std::max(0,count-reserve[it]) : count;
+        const int field_reserve=std::max(0,reserve[FERTILIZER]-int(o.own.shed[FERTILIZER])-plan.buy_items[FERTILIZER]);
+        const int return_sources = it == FERTILIZER ? std::max(0,count-field_reserve) : count;
         for (int s = 0; s < return_sources && available < required[23]; ++s) {
             int due = 23;
             for (int h = 0; h < 24; ++h) if (required[h] > available) { due = h; break; }

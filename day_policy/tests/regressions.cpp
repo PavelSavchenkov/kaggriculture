@@ -44,9 +44,9 @@ int main() {
     in=empty(); crop(in,43,WHEAT,2,2);in.events[43]=Water|Harvest; run(in,"water harvest no returns");
     for(int h=6;h<24;++h)in.returns[h][WHEAT]=2;
     r=run(in,"partial wheat return"); require(r.receipts[23][WHEAT]==2,"exact return");
-    in=empty();in.buy_seeds[WHEAT]=3;in.establish_count=3;
+    in=empty();in.buy_seeds[0][WHEAT]=3;in.establish_count=3;
     for(int j=0;j<3;++j)in.establish[j]={WHEAT,Water};run(in,"new crops");
-    in=empty();in.buy_animals[0]=1;in.buy_wheat[0]=1;in.establish_count=1;in.establish[0]={GOOSE,Feed|Care};run(in,"new animal");
+    in=empty();in.buy_animals[0][0]=1;in.buy_wheat[0]=1;in.establish_count=1;in.establish[0]={GOOSE,Feed|Care};run(in,"new animal");
     in=empty();crop(in,43,WHEAT,2,2);in.events[43]=Fertilize|Water|Harvest;
     auto& a=in.grid[34];a.kind=T_PASTURE;a.has_animal=true;a.what=COW;a.fertilizer_available=true;in.events[34]=CollectFertilizer;
     run(in,"field fertilizer");in.events[34]=0;require(solver->solve(in).status==SolveStatus::InvalidInput,"missing fertilizer source");
@@ -61,6 +61,13 @@ int main() {
     in.grid[44].fertilizer_available=true;in.events[44]=CollectFertilizer;in.returns[23][FERTILIZER]=1;
     r=solver->solve(in);require(r.status==SolveStatus::NoScheduleFound && r.attempts==0,"fertilizer cannot be both applied and returned");
     in=empty();in.buy_wheat[7]=3;in.land_hour=9;run(in,"timed purchases");
+    in=empty();in.buy_seeds[7][WHEAT]=1;in.establish_count=1;in.establish[0]={WHEAT,Water};run(in,"timed seed purchase");
+    in=empty();in.buy_animals[7][0]=1;in.buy_wheat[0]=1;in.establish_count=1;in.establish[0]={GOOSE,Feed|Care};run(in,"timed animal purchase");
+    in=empty();crop(in,43,WHEAT,2,2);in.events[43]=Fertilize;in.shed[FERTILIZER]=1;
+    SolveOptions no_hires;no_hires.max_hires=0;
+    r=solver->solve(in,no_hires);require(r.status==SolveStatus::Success && verify(in,r).valid,"fertilizer pickup from dawn shed");
+    in=empty();crop(in,43,WHEAT,2,2);in.events[43]=Fertilize;in.buy_fertilizer[7]=1;
+    r=solver->solve(in,no_hires);require(r.status==SolveStatus::Success && verify(in,r).valid,"fertilizer purchase and later pickup");
     in=empty();
     for(int c:{44,43}){auto& t=in.grid[c];t.kind=T_PASTURE;t.has_animal=true;t.what=COW;t.fertilizer_available=true;in.events[c]=CollectFertilizer;}
     crop(in,24,WHEAT,1,1);in.events[24]=Water;
@@ -87,12 +94,12 @@ int main() {
     require(!verify(in,r).valid,"reject unrequested wheat in combined DROP");
     in=empty();in.returns[1][WHEAT]=1;require(solver->solve(in).status==SolveStatus::InvalidInput,"reject noncumulative returns");
     in=empty();for(int c=0;c<100;++c)if(in.grid[c].kind!=T_LOCKED)crop(in,c,WHEAT,2,2);
-    in.events[0]=Harvest;in.buy_seeds[WHEAT]=1;in.establish_count=1;in.establish[0]={WHEAT,Water};
+    in.events[0]=Harvest;in.buy_seeds[0][WHEAT]=1;in.establish_count=1;in.establish[0]={WHEAT,Water};
     for(int h=20;h<24;++h)in.returns[h][WHEAT]=2;
     SolveOptions bounded;bounded.max_hires=0;bounded.variants=16;
     r=solver->solve(in,bounded);require(r.status==SolveStatus::Success && verify(in,r).valid,"distant harvest, reuse and return with farmer only");
     in=empty();for(int c=0;c<100;++c)if(in.grid[c].kind!=T_LOCKED)crop(in,c,WHEAT,2,2);
-    in.land_hour=22;in.buy_seeds[WHEAT]=1;in.establish_count=1;in.establish[0]={WHEAT,0};
+    in.land_hour=22;in.buy_seeds[0][WHEAT]=1;in.establish_count=1;in.establish[0]={WHEAT,0};
     r=solver->solve(in,bounded);require(r.status==SolveStatus::Success && verify(in,r).valid,"travel before late land unlock");
     in=empty();
     for(int c=0;c<100;++c)if(quadrant_of(c%10,c/10,10)<2)in.grid[c].kind=T_EMPTY;
@@ -111,7 +118,7 @@ int main() {
     in=empty();
     for(int c=0;c<100;++c)if(quadrant_of(c%10,c/10,10)<2)crop(in,c,WHEAT,2,2);
     for(int c:{42,43,44}){in.grid[c]=Tile{};in.grid[c].max_lifespan_step=INT_MAX;}
-    in.land_hour=19;in.buy_seeds[WHEAT]=3;in.establish_count=3;
+    in.land_hour=19;in.buy_seeds[0][WHEAT]=3;in.establish_count=3;
     for(int j=0;j<3;++j)in.establish[j]={WHEAT,Water};
     auto land_sim=detail::initial_state(in);auto land_observation=agent::runtime::make_observation(land_sim,0);
     DayPlan land;land.relocate_new=true;land.buy_land=1;land.land_hour=19;land.count=3;
@@ -157,12 +164,12 @@ int main() {
     for(int u=0;u<15;++u)require(fallback.units[u].op==OP_PASS,"out-of-contract worker fallback");
     for(auto effort:{SearchEffort::Fast,SearchEffort::Compact,SearchEffort::Balanced,SearchEffort::Full,SearchEffort::Classic}) {
         SolveOptions profile;profile.effort=effort;
-        auto sample=empty();sample.buy_animals[0]=1;sample.buy_wheat[0]=1;sample.establish_count=1;sample.establish[0]={GOOSE,Feed|Care};
+        auto sample=empty();sample.buy_animals[0][0]=1;sample.buy_wheat[0]=1;sample.establish_count=1;sample.establish[0]={GOOSE,Feed|Care};
         auto answer=solver->solve(sample,profile);
         require(answer.status==SolveStatus::Success && verify(sample,answer).valid,"every search profile respects event and purchase contract");
     }
     auto throughput_profile=day_policy_80p();
-    auto throughput_sample=empty();throughput_sample.buy_animals[0]=1;throughput_sample.buy_wheat[0]=1;
+    auto throughput_sample=empty();throughput_sample.buy_animals[0][0]=1;throughput_sample.buy_wheat[0]=1;
     throughput_sample.establish_count=1;throughput_sample.establish[0]={GOOSE,Feed|Care};
     auto throughput_answer=solver->solve(throughput_sample,throughput_profile);
     require(throughput_answer.status==SolveStatus::Success && throughput_answer.hires==11 &&
@@ -170,16 +177,56 @@ int main() {
     throughput_answer=solver->solve(empty(),throughput_profile);
     require(throughput_answer.status==SolveStatus::Success && throughput_answer.hires==11,
         "day_policy_80p keeps its fixed workforce on an empty day");
+    auto crowded_orders=empty();
+    for(int h:{0,1}) {
+        for(int c=0;c<N_CROPS;++c)crowded_orders.buy_seeds[h][c]=1;
+        for(int a=0;a<3;++a)crowded_orders.buy_animals[h][a]=1;
+        crowded_orders.buy_wheat[h]=1;crowded_orders.buy_fertilizer[h]=1;
+    }
+    throughput_answer=solver->solve(crowded_orders,throughput_profile);
+    bool hired_late=false;
+    for(int h=2;h<24;++h)for(int k=0;k<throughput_answer.schedule[h].n_orders;++k)
+        hired_late|=throughput_answer.schedule[h].orders[k].op==M_HIRE;
+    require(throughput_answer.status==SolveStatus::Success && hired_late && verify(crowded_orders,throughput_answer).valid,
+        "hires use later hours when fixed purchases occupy dawn market slots");
     throughput_profile.max_hires=10;
     require(solver->solve(empty(),throughput_profile).status==SolveStatus::InvalidInput,"day_policy_80p requires exactly 11 hires");
     throughput_profile=day_policy_80p();throughput_profile.minimize_hires=true;
     require(solver->solve(empty(),throughput_profile).status==SolveStatus::InvalidInput,"day_policy_80p disables hire minimization");
+    const auto unrestricted_profile=unrestricted_day_policy();
+    require(unrestricted_profile.effort==SearchEffort::Balanced && unrestricted_profile.max_hires==13 &&
+        unrestricted_profile.variants==4 && !unrestricted_profile.minimize_hires &&
+        unrestricted_profile.opportunistic_hire_reduction,
+        "unrestricted_day_policy keeps the measured cap-13 profile");
+    auto unrestricted_sample=empty();crop(unrestricted_sample,43,WHEAT,2,2);
+    unrestricted_sample.events[43]=Fertilize;unrestricted_sample.buy_fertilizer[7]=1;
+    unrestricted_sample.buy_seeds[8][WHEAT]=1;unrestricted_sample.establish_count=1;
+    unrestricted_sample.establish[0]={WHEAT,Water};
+    auto unrestricted_answer=solver->solve(unrestricted_sample,unrestricted_profile);
+    require(unrestricted_answer.status==SolveStatus::Success && unrestricted_answer.hires<=13 &&
+        verify(unrestricted_sample,unrestricted_answer).valid,
+        "unrestricted_day_policy supports timed purchases and fertilizer pickup");
+    auto last_hour_hire=empty();crop(last_hour_hire,43,WHEAT,2,2);last_hour_hire.events[43]=Water;
+    for(int h=0;h<=20;++h) {
+        for(int c=0;c<N_CROPS;++c)last_hour_hire.buy_seeds[h][c]=1;
+        for(int a=0;a<3;++a)last_hour_hire.buy_animals[h][a]=1;
+        last_hour_hire.buy_wheat[h]=1;last_hour_hire.buy_fertilizer[h]=1;
+    }
+    for(int c=0;c<N_CROPS;++c)last_hour_hire.buy_seeds[21][c]=1;
+    for(int a=0;a<3;++a)last_hour_hire.buy_animals[21][a]=1;
+    auto fixed_unrestricted=unrestricted_profile;fixed_unrestricted.opportunistic_hire_reduction=false;
+    auto last_hour_answer=solver->solve(last_hour_hire,fixed_unrestricted);
+    bool hired_at_23=false;
+    for(int k=0;k<last_hour_answer.schedule[23].n_orders;++k)
+        hired_at_23|=last_hour_answer.schedule[23].orders[k].op==M_HIRE;
+    require(last_hour_answer.status==SolveStatus::Success && hired_at_23 && verify(last_hour_hire,last_hour_answer).valid,
+        "unrestricted hires may use hour 23 when earlier market slots are full");
     SolveOptions invalid_profile;invalid_profile.effort=static_cast<SearchEffort>(99);
     require(solver->solve(empty(),invalid_profile).status==SolveStatus::InvalidInput,"reject unknown search profile");
     invalid_profile=SolveOptions{};invalid_profile.placement=static_cast<PlacementStyle>(99);
     require(solver->solve(empty(),invalid_profile).status==SolveStatus::InvalidInput,"reject unknown placement style");
-    in=empty();in.buy_seeds[MELON]=12;in.buy_seeds[WHEAT]=7;
-    in.buy_animals[COW-GOOSE]=2;in.buy_animals[SHEEP-GOOSE]=2;in.buy_wheat[0]=4;
+    in=empty();in.buy_seeds[0][MELON]=12;in.buy_seeds[0][WHEAT]=7;
+    in.buy_animals[0][COW-GOOSE]=2;in.buy_animals[0][SHEEP-GOOSE]=2;in.buy_wheat[0]=4;
     for(int k=0;k<7;++k)in.establish[in.establish_count++]={WHEAT,Water};
     for(int k=0;k<12;++k)in.establish[in.establish_count++]={MELON,Water};
     for(int item:{COW,COW,SHEEP,SHEEP})in.establish[in.establish_count++]={uint8_t(item),Feed|Care};
@@ -193,11 +240,11 @@ int main() {
     }
     require(melon_distance*7<wheat_distance*12,"opening wheat leaves melon sites closer to shed");
     require(near_free>=2,"opening leaves short trips for two later animals");
-    in=empty();in.buy_seeds[WHEAT]=25;in.establish_count=25;
+    in=empty();in.buy_seeds[0][WHEAT]=25;in.establish_count=25;
     for(auto& product:in.establish)product={WHEAT,Water};
     run(in,"soft reserve allows a full crop-only quadrant");
     in=empty();in.grid[44].kind=T_PASTURE;in.grid[44].has_animal=true;in.grid[44].what=COW;
-    in.land_hour=10;in.buy_animals[SHEEP-GOOSE]=1;in.buy_wheat[0]=1;
+    in.land_hour=10;in.buy_animals[0][SHEEP-GOOSE]=1;in.buy_wheat[0]=1;
     in.establish_count=1;in.establish[0]={SHEEP,Feed|Care};
     r=run(in,"permanent animal waits for central new land");
     require(r.state.grid[45].has_animal && r.state.grid[45].what==SHEEP,"animal uses new shed-access site");

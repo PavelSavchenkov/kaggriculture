@@ -269,13 +269,13 @@ int Agent::supply_cost(int u, const Job& job) const {
         if (a.op == OP_PLACE && is_animal(a.arg)) ++need[a.arg];
         if (a.op == OP_COLLECT_FERTILIZER) --need[FERTILIZER];
         if (a.op == OP_PLANT && local_.seeds[a.arg] <= 0 &&
-            !(fixed_orders_ && hour_ == 0 && plan_.buy_seeds[a.arg] > 0)) return 100000;
+            !(fixed_orders_ && plan_.buy_seeds[a.arg] > bought_seeds_[a.arg])) return 100000;
         if (a.op == OP_HARVEST) break; // Receipts may fund the following replacement.
     }
     int pickups = 0;
     for (int it = 0; it < N_ITEMS; ++it) if (need[it] > local_.inv[u][it]) {
-        if (it == FERTILIZER) return 100000;
-        if (local_.shed[it] < need[it] - local_.inv[u][it]) return 100000;
+        const int future=fixed_orders_?std::max(0,plan_.buy_items[it]-bought_items_[it]):0;
+        if (local_.shed[it]+future < need[it] - local_.inv[u][it]) return 100000;
         ++pickups;
     }
     if (!pickups) return 0;
@@ -511,7 +511,6 @@ UnitAction Agent::next_action(int u) {
             }
         }
         for (int it : {int(WHEAT), int(FERTILIZER), int(GOOSE), int(COW), int(SHEEP)}) {
-            if (it == FERTILIZER) continue;
             int n = std::min(required[it] - int(local_.inv[u][it]), int(local_.shed[it]));
             if (n > 0) return {OP_PICKUP, uint8_t(it), n};
         }
@@ -584,9 +583,6 @@ UnitAction Agent::next_action(int u) {
         if (need[it] > local_.inv[u][it]) { pickup = it; break; }
     int target = job.tile;
     if (pickup >= 0) {
-        if (pickup == FERTILIZER) {
-            owner_[w.job] = -1; w = {}; return {};
-        }
         if (hour_ == end_hour_) return {};
         target = shed_cell(pos);
         if (target == pos) {
@@ -843,7 +839,6 @@ void Agent::orders(const agent::AgentObservation& o, Action& action) {
         cash -= n * CROPS[c].seed; --buying_slots;
     }
     for (int it = 0; it < N_ITEMS && action.n_orders < limit && buying_slots > 0; ++it) {
-        if (it == FERTILIZER) continue;
         if (!(it == WHEAT || it == FERTILIZER || is_animal(it))) continue;
         if (options_.dawn_inputs && hour_ != 0 && is_animal(it)) continue;
         int want = std::min(plan_.buy_items[it] - bought_items_[it], init_.config.shed_capacity - local_.shed_total);

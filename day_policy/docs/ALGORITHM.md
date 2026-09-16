@@ -27,6 +27,11 @@ Profiles:
 - day_policy_80p: call `day_policy_80p()`. It fixes 11 hires, disables hire
   minimization and runs six workload-gated construction groups. It keeps every
   case in the denominator and returns only complete, verified schedules.
+- unrestricted: call `unrestricted_day_policy()`. It uses Balanced-4 at cap 13
+  for exact timed purchases, fertilizer shed supply and unrestricted hire hours.
+  After a first-attempt success with at most 60 work units, it reuses only that
+  winning construction while reducing hires to a work-bounded floor. Harder
+  cases pay no hire-reduction cost.
 - Fast, Compact and Classic remain available for earlier frontier comparisons.
 
 `route_rounds=1`, `minimize_variants=1` are ordinary settings. Balanced reuses its
@@ -62,8 +67,9 @@ identity or copied leader policy code enters either heuristic.
 Tile timestamps are relative to dawn; see `policy.hpp`. Purchases and returns use
 24 hour-indexed arrays. Returns are cumulative quantities delivered by workers,
 excluding dawn shed stock. The caller handles affordability, market decisions,
-shed capacity and night settlement. No fertilizer purchases or shed pickups are
-supported. Hires occur at hours 0/1, with a hard maximum of 13.
+shed capacity and night settlement. Fertilizer may come from dawn shed stock,
+hour-indexed purchases, or declared animal collection jobs. Hires use the first
+available market slots at any hour from 0 through 23, with a hard maximum of 13.
 Adding sales must respect remaining market-order slots and actual funding order;
 the solver does not reserve extra slots for them.
 

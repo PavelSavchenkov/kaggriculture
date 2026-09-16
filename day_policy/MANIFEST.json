@@ -10,24 +10,24 @@
       "sha256": "4fd2a418de15fa8895997d15ce1d5c69569079ddaf4639eefeabd020b39dce66"
     },
     "PACKAGE_CHECK.json": {
-      "bytes": 12458,
-      "sha256": "4efae9b60150978874bfdcf6244ff6b9bc7cd289cb3b3f26160335dcd74b6fd7"
+      "bytes": 949,
+      "sha256": "f8ae17fdfc453504261758479b34b931e1331311d3ff9fd0e88d905491a6eddd"
     },
     "PROVENANCE.json": {
-      "bytes": 1314,
-      "sha256": "12e1f13e6e561d96b11307391786f6088edaebb0f72997b7fb0b848e74a8ed4b"
+      "bytes": 1585,
+      "sha256": "947eb8afd2e255acd9f322c833c0670f97562eb127acfb2433174474cccccef8"
     },
     "README.md": {
-      "bytes": 16074,
-      "sha256": "c974707ca1af0070e000851185a3ded92bfaa790aa198da0348331efb6495dc8"
+      "bytes": 19117,
+      "sha256": "28f0c14321ae7d1fdc959083f30bde01716d1e195e7eb4b53d83ed2cc90d666c"
     },
     "REPOSITORY_DEPENDENCIES.json": {
       "bytes": 813,
       "sha256": "3218e14623b8591d4ecaa97e867c0eb2d03f580f4d3fa4506151d21f368e69c9"
     },
     "SPEC.md": {
-      "bytes": 2886,
-      "sha256": "8f75d1175fbff33aed2ecf1cbe9d15993b3da85f78d912e0901993e33e7cb0fb"
+      "bytes": 2964,
+      "sha256": "d1feb44a483d789d055e99996f95d6b96c6d989671386d78a859ef227d8ed86f"
     },
     "agent.json": {
       "bytes": 262,
@@ -38,8 +38,8 @@
       "sha256": "2a28d5e5b2d7bde71995a5e303c501d371d0d374cae8443dda6828666678ee87"
     },
     "data/README.md": {
-      "bytes": 2569,
-      "sha256": "ebf8fcee1512ba2048064738fe834677b52c377f1324ee2a6e54c3e8ab1b6c7a"
+      "bytes": 2632,
+      "sha256": "064bf8ae2c07714cf848d5f4c3dc9dd7dcd1a6826c57e5b7971d946bd0c05269"
     },
     "data/SOURCE_PROVENANCE.json": {
       "bytes": 41759,
@@ -746,16 +746,16 @@
       "sha256": "43bd797fe38083175d7acf86afa944766e8ad4d75f0c03635f6177b9e525838c"
     },
     "docs/ALGORITHM.md": {
-      "bytes": 4763,
-      "sha256": "ba11fab48703fb10c1444d553f79bee9b3c1348c730ff56065844360e148dab4"
+      "bytes": 5210,
+      "sha256": "b243c2ffb542ed6aa57df1eaec3e136c4516d54a121da89f9b5ce5bccba65d37"
     },
     "docs/REPLAY_PATTERNS.md": {
       "bytes": 2584,
       "sha256": "3206cf3bb2b284d4e63e9696710ec7613f6c66bd65015334ed3092568183be3b"
     },
     "docs/TESTING.md": {
-      "bytes": 4765,
-      "sha256": "03afe5e6494e5f58e3947180b32e84874897f25976c6553b74f20d2645da10eb"
+      "bytes": 4911,
+      "sha256": "5ce8fb300d858002259a42e6fd889f5394772c735b6b95df71bf8a5588fdeed8"
     },
     "measurements/CAPS.csv": {
       "bytes": 219032,
@@ -778,8 +778,8 @@
       "sha256": "f6add4fe8403cd88220b9a5b058e62a9a68165b294ae459ef2cbb1caba63d577"
     },
     "measurements/README.md": {
-      "bytes": 2812,
-      "sha256": "857a54687445cdcfe84d10af180f356808a91e291f297c0e1a2afb11ed5544bb"
+      "bytes": 3042,
+      "sha256": "f412979b49b8ccb03a4b04bb217de56596dc9baad6cfe917ce6395db73daab6d"
     },
     "measurements/REPORT.md": {
       "bytes": 11060,
@@ -793,41 +793,53 @@
       "bytes": 1327285,
       "sha256": "d4ee5c63f8782c0593b28688a253d72c4aa76729e04bfb15c1a3c51d824c2df5"
     },
+    "measurements/unrestricted/REPORT.md": {
+      "bytes": 1497,
+      "sha256": "b282dbc7b55dd1918c82d28068a381f939ee9d97ea62bd8e3f8ebf5fc9ef2e8e"
+    },
+    "measurements/unrestricted/SUMMARY.json": {
+      "bytes": 4822,
+      "sha256": "db975fd29c4643766da6ecdefcbed707078b4d3c4c6668b3aee4c53bf45c6d22"
+    },
+    "measurements/unrestricted/rows.zip": {
+      "bytes": 826023,
+      "sha256": "a97c333cb754eafe843f2bfa4518ae84872e51eabb87962b0d7eaa861333202d"
+    },
     "source/agent.cpp": {
-      "bytes": 50297,
-      "sha256": "007e83f0e62d5fb9bc614dbdcb80360175a71f2d3fb1b4eb3af1004ad40eb84a"
+      "bytes": 50175,
+      "sha256": "43f445d95c8f4e81f150e56826e3c3062866bca706b3c0fa8526a483794068bc"
     },
     "source/agent.hpp": {
-      "bytes": 8009,
-      "sha256": "f011845fa125d07469c48c4a695e6b49cf6b2576d3719bdc65efc311a2ac0b7d"
+      "bytes": 8125,
+      "sha256": "a6b7c2283f29b22c490c5e6a668662d62ad8775f6af371fed049cee28272218a"
     },
     "source/day_jobs.hpp": {
-      "bytes": 2741,
-      "sha256": "4903068b176f3f6795c867727c99fc413bd69b3ff70d465ed3a86c346f208199"
+      "bytes": 2852,
+      "sha256": "9c725b0fb7188c3848094309b242ce034b4aa8bb31b1d84fa40355da0d268288"
     },
     "source/placement.hpp": {
       "bytes": 6593,
       "sha256": "6bcfe40edabfd7cdb74737c84f1c52482899fe1fc1d765a8347152aa9618251e"
     },
     "source/policy.cpp": {
-      "bytes": 25583,
-      "sha256": "bbc437d0a7d637f0b3d4727e88ee7941204feb1c9a2ec853925b6a9bde6fb762"
+      "bytes": 27374,
+      "sha256": "cf31013ef2c9051bd21272c17d8d33befcbcf184625b80ab79e5010d9d68ca70"
     },
     "source/policy.hpp": {
-      "bytes": 2248,
-      "sha256": "c68de5f8d56dfbed46269b7219b9d0a54b2a883449946b844694beed2d6a51c4"
+      "bytes": 2461,
+      "sha256": "51ae7163179a920fccdd1ce83dbf5f8cbf2c40e395b99053ea88433fe915d7bd"
     },
     "source/routes.cpp": {
-      "bytes": 66108,
-      "sha256": "8a0a23c299f6da65937b1d51fefa1b9d4031e79a4aec86eaf7e22534d3b9f66d"
+      "bytes": 66900,
+      "sha256": "cdfb373d882aee6f9663c0fca1eb9f3f8a5b6a90621289edf9af2cba88569e10"
     },
     "source/routes.hpp": {
       "bytes": 602,
       "sha256": "2f5449065c15298a0ccf8b61d8c68fab05a64300d1e5773e708867fa59d54195"
     },
     "source/verify.cpp": {
-      "bytes": 8746,
-      "sha256": "5e99baed3b7328d8a0ccaf585c743b40136584ab053d15ae6ed138d3c61fd553"
+      "bytes": 8818,
+      "sha256": "142a5c475afb74a237fd453972dca8c89c6ec962847d4c70debd3ce486226252"
     },
     "source/verify.hpp": {
       "bytes": 665,
@@ -850,12 +862,16 @@
       "sha256": "7f7e3634e55030101ed970caeb0b406124d5530c983ecce8887bc94c3a0633d7"
     },
     "tests/regressions.cpp": {
-      "bytes": 15935,
-      "sha256": "7c831aa3d12e749d3d33e736c9b76d4528d512e1331735d5eadec706c4e0efe0"
+      "bytes": 19473,
+      "sha256": "58e4d845096945058b33708bd29ff4fb171f72497543a32d05835fbe7e486100"
     },
     "tools/arena.cpp": {
       "bytes": 7022,
       "sha256": "7cfe5d8433a4e1d109ce91e7c4134f9c262add665f85193daca712a8055d9003"
+    },
+    "tools/build_unrestricted.py": {
+      "bytes": 3127,
+      "sha256": "a53596f0a4acec24685f243f4c3bbbd780d6c1dd0e5dcbb6641a997a29e6c312"
     },
     "tools/case.hpp": {
       "bytes": 230,
@@ -866,12 +882,12 @@
       "sha256": "84c228adaa26e7ca987349626c463711fe5b751e02e4b5fc404277f77cf02c41"
     },
     "tools/evaluate.cpp": {
-      "bytes": 3717,
-      "sha256": "cfcace4cdecd5eeda63cb0708a3af2d6f2f894eb2f4a15eaa6f9cf8ad3a2167c"
+      "bytes": 3821,
+      "sha256": "e22077de49029bef26d7ccf66ac500cbd9783998dc64c8e16c43ceb4644c805a"
     },
     "tools/extract.cpp": {
-      "bytes": 7661,
-      "sha256": "a7f0c0c294d48f86aa95160b8386de229cf16603794b9bd145ba0885e4594566"
+      "bytes": 8126,
+      "sha256": "1501a3bce76136c09395a81cc22e7a89edb301e4164746c055372846714077e2"
     },
     "tools/placement_cost.cpp": {
       "bytes": 1604,
@@ -897,13 +913,17 @@
       "bytes": 9068,
       "sha256": "6612fb2aec59ee02c66fc16c31dfc6d3bb497840af4a892cd2f037ded0b14d93"
     },
+    "tools/report_unrestricted.py": {
+      "bytes": 5157,
+      "sha256": "da1c226428ac78bbc52be93455ec2547b6b67e7edb727becf53757cb2aece80d"
+    },
     "tools/return_bounds.cpp": {
       "bytes": 2122,
       "sha256": "1261c31830543b428e2afa5f8b26d7a418d06787ef97381f313d53ce864dd324"
     },
     "tools/test.py": {
-      "bytes": 13054,
-      "sha256": "39c235964e3bcc6c09dc982497ac67aa68e8df7a028ada04bb8cdb7a11d35ccf"
+      "bytes": 12457,
+      "sha256": "31ceaed21e5b9c292f554ef3c9cc8c48b27a0a1c277e0066471be949a6526f43"
     },
     "tools/trace/case.hpp": {
       "bytes": 5694,
@@ -913,17 +933,5 @@
       "bytes": 980,
       "sha256": "2a899a22e897476b318811812a56ebd76cb7b119ffa99957d744dc20da50ca66"
     }
-  },
-  "file_bytes_excluding_manifest": 7245955,
-  "stored_replay_data_and_measurements_bytes": 6933231,
-  "expanded_replay_data_and_measurements_bytes": 34387353,
-  "data_limit_bytes": 50000000,
-  "external_repository_dependencies": [
-    "fast_game_engine/sim.hpp",
-    "fast_game_engine/pyrandom.hpp",
-    "agents/common/api/agent_api.hpp",
-    "agents/common/api/observation.hpp",
-    "agents/common/runtime/observation_builder.hpp"
-  ],
-  "note": "Manifest excludes itself. Repository header hashes are in REPOSITORY_DEPENDENCIES.json. Generated binaries, cases and logs belong outside this directory."
+  }
 }

@@ -12,7 +12,8 @@ the policy contains no player identity, original route, tile tape or future plan
 The extractor restores each recorded dawn independently. It retains successful
 events, input purchases, and cumulative explicit shed returns with their original
 deadlines. It discards worker assignments, movements and new-product sites.
-Seed/animal purchases move to hour 0; wheat/land purchase hours are retained.
+The current unrestricted extractor retains the exact hour of seed, animal,
+wheat, fertilizer, and land purchases and records fertilizer pickups.
 The solver sees the event-set API, not an ordered replay route. The evaluator
 replays every reported success independently and checks all events, receipts,
 production, resulting state and hire limits.
@@ -20,9 +21,10 @@ New jobs retain their successful creation order in the trace. Placement uses
 stable input order for otherwise tied choices, so permutations can change the
 chosen layout; input order is not a required execution order.
 
-Days using fertilizer purchases/pickups, unsupported new-product events,
-standalone housing, repeated events/generations, multiple land purchases or
-invalid contract inputs are excluded. Day 29 has only 23 actions and is excluded.
+Fertilizer purchases/pickups and late purchases/hires remain eligible. Days with
+unsupported new-product events, standalone housing, repeated events/generations,
+multiple land purchases or invalid contract inputs are excluded. Day 29 has only
+23 actions and is excluded.
 Exclusion CSVs contain every player-day and its first exclusion reason. Successful
 original hires exclude the farmer; original failed hire requests are not counted.
 The solver does not constrain the new schedule to the original hire count unless
@@ -68,13 +70,14 @@ solver's returned state and recompute the next plan from that actual state.
 
 ## Selection and measurement
 
-Placement candidates are selected on the 914 development days. The 639/645
-comparison games were already exposed during worker-policy development; their
-new layouts are confirmation tests, not unseen opponents. Late means days 20–28.
+The unrestricted development set contains 2,239 eligible days. The separate
+639/645 validation set contains 3,071. Validation is used only after a change is
+supported on development. Late means days 20–28. The older 914/1,284 restricted
+measurements remain historical baselines.
 
 Use sequential, pinned solver processes. Include failed calls and hire
 minimization in median/mean timing. Report original and changed layouts separately.
-The three worker profiles run independently; chaining them adds their time.
+The worker profiles run independently; chaining them adds their time.
 Ordinary native release and PGO are different builds and must be labeled.
 
 Minimum hires are not proved. Replay-day execution coverage provides evidence

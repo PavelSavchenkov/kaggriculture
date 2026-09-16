@@ -6,8 +6,10 @@ and a hard cap of 13 hires plus the farmer. Use cap 11 when it is mandatory.
 **Full-8** searches more broadly at higher cost; it is a separate call, not an
 automatic fallback. **day_policy_80p** is the third option: it uses 11 hires,
 skips hire minimization and searches a smaller workload-gated set of complete
-schedules for higher throughput. All three support within-day shed returns with
-deadlines and return only complete, verified schedules.
+schedules for higher throughput. **unrestricted_day_policy** is the fourth
+option. It preserves the exact hour of every purchase, can buy and pick up
+fertilizer, allows hires at hours 0-23, and performs bounded cheap hire reduction
+from a cap-13 schedule. All four return only complete, verified schedules.
 
 Policy code, replay data and test tools are in this folder. They use five shared
 headers already committed and pushed under `fast_game_engine/` and
@@ -17,6 +19,8 @@ Build prerequisites are a C++20 compiler, CMake, a Linux toolchain and Python 3
 with its standard library.
 
 ## Coverage and timings
+
+### Earlier restricted contract
 
 Two comparison cohorts from the recorded top 30 players, using exact original
 dawn layouts and our placement for new products. At each cap, include only days
@@ -46,6 +50,41 @@ It trades two all-day solves against Balanced-4 for 34% lower average time, whil
 solving three more late days. It does this by accepting non-minimal 11-hire
 schedules, not by removing large cases from the denominator.
 
+### Unrestricted contract
+
+The new extractor no longer excludes or normalizes late seed/animal purchases,
+fertilizer buys, fertilizer pickups, or hires after hour 1. This expands dev from
+914 to 2,239 eligible days and validation from 1,284 to 3,071. Every cap uses the
+same full denominator; cases are not filtered by original hire count. Fixed-cap
+rows disable hire minimization so the cap comparison is direct.
+
+| Cohort | Profile / cap | All days solved | Late days 20-28 solved | Median / average ms | Mean hires on success |
+|---|---|---:|---:|---:|---:|
+| dev | Balanced-4 cap 10 | 1,387/2,239 (61.9%) | 228/708 (32.2%) | 3.34 / 14.70 | 10.00 |
+| dev | Balanced-4 cap 11 | 1,925/2,239 (86.0%) | 508/708 (71.8%) | 0.41 / 10.68 | 11.00 |
+| dev | Balanced-4 cap 13 | 2,170/2,239 (96.9%) | 669/708 (94.5%) | 0.35 / 4.24 | 13.00 |
+| dev | unrestricted_day_policy | 2,170/2,239 (96.9%) | 669/708 (94.5%) | 0.61 / 4.47 | 11.43 |
+| validation | Balanced-4 cap 10 | 1,879/3,071 (61.2%) | 282/959 (29.4%) | 3.71 / 14.89 | 10.00 |
+| validation | Balanced-4 cap 11 | 2,580/3,071 (84.0%) | 661/959 (68.9%) | 0.47 / 11.26 | 11.00 |
+| validation | Balanced-4 cap 13 | 2,985/3,071 (97.2%) | 911/959 (95.0%) | 0.35 / 4.29 | 13.00 |
+| validation | unrestricted_day_policy | 2,985/3,071 (97.2%) | 911/959 (95.0%) | 0.61 / 4.51 | 11.41 |
+
+The unrestricted policy preserves cap-13 coverage while saving 3,405 hires on
+dev and 4,736 on validation. Its bounded reduction raises mean latency by 5.5%
+on dev and 5.0% on validation. It only runs after a first-attempt success with at
+most 60 work units; harder calls do not pay minimization cost.
+
+Coverage on validation cases using each removed restriction is:
+
+| Exact late seed/animal input | Fertilizer buy | Fertilizer pickup | Hire after hour 1 | Any removed restriction |
+|---:|---:|---:|---:|---:|
+| 2,744/2,820 (97.3%) | 1,154/1,218 (94.7%) | 1,355/1,431 (94.7%) | 420/427 (98.4%) | 2,867/2,953 (97.1%) |
+
+The unrestricted 11-hire row remains above 80% overall but not on late days.
+Late exact-timing cases need the cap-13 policy to retain main-solver-like
+coverage. Lower caps are also slower on average because failed Balanced-4 calls
+exhaust their search.
+
 Measured on **Intel Core i7-14700K, Linux x86-64**, with one solver process pinned
 to logical CPU 14. Each configuration combines two sequential runs. Build:
 **GCC 13.3, C++20, O3, native CPU tuning and LTO**, without PGO or instrumentation.
@@ -68,6 +107,7 @@ and results with our placements carried from game start.
 | `measurements/REPORT.md`, `SUMMARY.json` | Total/per-player coverage, hires and timings |
 | `measurements/CAPS.md`, `CAPS.csv`, `CAPS.json` | Caps 10/11/13 filtered to original hires <= the tested cap, by cohort and original agent |
 | `measurements/rows.zip` | Compressed per-call measurement evidence |
+| `measurements/unrestricted/` | Expanded cohorts, cap 10/11/13 results and exact per-call evidence |
 | `data/` | Compressed replay traces, selected cohorts and format documentation |
 | `tests/`, `tools/` | Regressions, complete-game smoke tests and replay benchmarks |
 | `PROVENANCE.json`, `REPOSITORY_DEPENDENCIES.json` | Source hashes and the committed shared engine/API dependencies |
@@ -90,6 +130,8 @@ if (result.status == SolveStatus::Success) {
 }
 // Broader independent call: options.effort=SearchEffort::Full; options.variants=8;
 // Independent throughput call: auto throughput = day_policy_80p();
+// Expanded contract plus bounded cheap hire reduction:
+// auto unrestricted = unrestricted_day_policy();
 ```
 
 Initialize all 100 cells, including locked land and overnight weeds. Timestamps
@@ -97,6 +139,10 @@ are relative to dawn, as documented in `policy.hpp`. Success means all requested
 events and cumulative worker deposits passed native replay. `InvalidInput` and
 `NoScheduleFound` expose no executable partial plan; the latter is not an
 infeasibility proof. Minimum hires are not proved.
+
+`buy_seeds[hour][crop]`, `buy_animals[hour][animal]`, `buy_wheat[hour]`, and
+`buy_fertilizer[hour]` preserve exact purchase timing. This is an API change from
+the earlier dawn-normalized seed/animal arrays.
 
 The caller handles purchase funding, sales, shed capacity and night settlement.
 Adding sales must preserve scheduled purchases/hires and fit remaining market
@@ -116,22 +162,25 @@ conda run -n kaggriculture cmake -S day_policy -B work/day_policy/build -DCMAKE_
 conda run -n kaggriculture cmake --build work/day_policy/build -j 4
 conda run -n kaggriculture python -B day_policy/tools/check_package.py
 conda run -n kaggriculture ctest --test-dir work/day_policy/build --output-on-failure
-conda run -n kaggriculture python -B day_policy/tools/test.py prepare --work work/day_policy/check --build work/day_policy/build
-conda run -n kaggriculture python -B day_policy/tools/test.py benchmark --work work/day_policy/check --build work/day_policy/build --labels 645 --suite quick --run quick --check-reference
+conda run -n kaggriculture python -B day_policy/tools/build_unrestricted.py --work work/day_policy/unrestricted --build work/day_policy/build
+taskset -c 14 work/day_policy/build/contract_evaluate work/day_policy/unrestricted/dev.bin work/day_policy/unrestricted/dev_h13.csv 1000000 13 3 0 0 4 1 0 1 0 1
+conda run -n kaggriculture python -B day_policy/tools/report_unrestricted.py --archive day_policy/measurements/unrestricted/rows.zip --output work/day_policy/unrestricted_report
 conda run -n kaggriculture python -B day_policy/tools/test.py smoke --work work/day_policy/check --build work/day_policy/build --run smoke
 ```
 
-`prepare` checks every replay state, regenerates original/Legacy/Staged day
-cases, verifies original-grid progression and compares mapping/return bounds.
-The quick suite runs five configurations per cohort, with two repeats by default.
-Use `--suite final` without `--labels` for all 28 selected configurations, or
-`--suite all` to add the 12 Legacy comparisons. `--check-reference` compares
-every non-time CSV field, including schedule hash and hire count. Omit it when
-evaluating an intentional behavior change. Give each run a new `--run` name.
+`build_unrestricted.py` validates and expands every packaged trace, then creates
+the 2,239-case dev and 3,071-case validation binaries. The evaluator arguments
+above select cap 13, Balanced-4, four variants, no full hire minimization, and
+bounded opportunistic hire reduction. Use caps 10 or 11 and set the last argument
+to 0 for the fixed-cap comparison rows.
 
-Use `--suite throughput` to benchmark `day_policy_80p` on the original dawns at
-11 hires. This profile has no archived row in the older reference ZIP, so do not
-combine that suite with `--check-reference`.
+`measurements/unrestricted/rows.zip` stores both repeats for all eight rows in
+the unrestricted table plus the case metadata. `report_unrestricted.py`
+recomputes the tables and checks exact non-time parity between repeats.
+
+`tools/test.py` also retains the older placement/progression suites. The files
+directly under `measurements/` are historical restricted-contract baselines;
+do not compare them with `--check-reference` after this API expansion.
 
 For timings, choose an available core with `--cpu N` and run benchmarks
 sequentially without concurrent builds. Times will vary by machine and load.

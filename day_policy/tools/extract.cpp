@@ -21,7 +21,7 @@ void save(std::ofstream& file,const Case& c) {file.write(reinterpret_cast<const 
 int main(int argc,char** argv) {
     if(argc!=4)throw std::runtime_error("extract cohort.txt cases.bin exclusions.csv");
     std::ifstream cohort(argv[1]);std::ofstream binary(argv[2],std::ios::binary),csv(argv[3]);
-    csv<<"game,seat,rank,day,reason,original_hires,work,return_units\n";
+    csv<<"game,seat,rank,day,reason,original_hires,work,return_units,late_inputs,fertilizer_buys,fertilizer_pickups,late_hires\n";
     int game_id,seat,rank;std::string path;std::map<std::string,int> reasons;int total=0;
     while(cohort>>game_id>>seat>>rank>>path) {
         auto game=load_case(path);auto states=validate_case(game);
@@ -37,10 +37,12 @@ int main(int argc,char** argv) {
             for(int it=0;it<N_ITEMS;++it)in.shed[it]=dawn.shed[it];
             for(int it=0;it<N_CROPS;++it)in.seeds[it]=dawn.seeds[it];
             int label[100],built[100]{},tags[MAX_UNITS][N_PRODUCTS]{},receipts[N_PRODUCTS]{};
+            int late_inputs=0,fertilizer_buys=0,fertilizer_pickups=0,late_hires=0;
             for(int cell=0;cell<100;++cell)label[cell]=cell;
             for(int h=0;h<24 && day*24+h<719;++h) {
                 const int step=day*24+h;const auto& sim=states[step];const auto& f=sim.st.farms[seat];
                 auto accepted=sim.sanitize_joint_actions(game.turns[step].actions[0],game.turns[step].actions[1]);
+                const auto accepted_orders=accepted_action(game,states,step,seat);
                 auto field_sim=sim;auto actions=game.turns[step];for(auto& a:actions.actions)a.n_orders=0;
                 if(h==23)field_sim.st.hour=22;
                 field_sim.step(actions.actions[0],actions.actions[1]);
@@ -49,7 +51,7 @@ int main(int argc,char** argv) {
                 Tile tiles[100];std::copy_n(&f.tiles[0][0],100,tiles);
                 for(int u=0;u<f.n_units;++u) {
                     auto a=accepted[seat].units[u];const int cell=f.pos_y[u]*10+f.pos_x[u];const int g=label[cell];
-                    if(a.op==OP_PICKUP && a.arg==FERTILIZER)reject("fertilizer_pickup");
+                    fertilizer_pickups+=a.op==OP_PICKUP && a.arg==FERTILIZER;
                     const bool establish=a.op==OP_PLANT || (a.op==OP_PLACE && is_animal(a.arg) &&
                         !tiles[cell].has_animal && tiles[cell].kind==(ANIMALS[a.arg-GOOSE].structure==ST_COOP?T_COOP:T_PASTURE));
                     if(establish) {
@@ -89,13 +91,16 @@ int main(int argc,char** argv) {
                     }
                     field_effect(tiles[cell],a);
                 }
-                for(int k=0;k<accepted[seat].n_orders;++k) {
-                    const auto a=accepted[seat].orders[k];
-                    if(a.op==M_BUY_SEED)in.buy_seeds[a.item]+=a.n;
-                    if(a.op==M_BUY_ANIMAL)in.buy_animals[a.item-GOOSE]+=a.n;
-                    if(a.op==M_BUY_PRODUCT) {if(a.item==FERTILIZER)reject("fertilizer_purchase");else in.buy_wheat[h]+=a.n;}
+                for(int k=0;k<accepted_orders.n_orders;++k) {
+                    const auto a=accepted_orders.orders[k];
+                    if(a.op==M_BUY_SEED){in.buy_seeds[h][a.item]+=a.n;late_inputs+=h>0;}
+                    if(a.op==M_BUY_ANIMAL){in.buy_animals[h][a.item-GOOSE]+=a.n;late_inputs+=h>0;}
+                    if(a.op==M_BUY_PRODUCT) {
+                        if(a.item==FERTILIZER){in.buy_fertilizer[h]+=a.n;fertilizer_buys+=a.n;}
+                        else in.buy_wheat[h]+=a.n;
+                    }
                     if(a.op==M_BUY_LAND) {if(in.land_hour>=0)reject("multiple_land_purchases");in.land_hour=h;}
-                    if(a.op==M_HIRE)c.original_hires+=1;
+                    if(a.op==M_HIRE){c.original_hires+=1;late_hires+=h>1;}
                 }
                 for(int it=0;it<N_PRODUCTS;++it)in.returns[h][it]=receipts[it];
             }
@@ -112,7 +117,8 @@ int main(int argc,char** argv) {
             if(!c.reason[0] && !detail::valid_input(in))reject("invalid_contract_input");
             if(!c.reason[0])std::snprintf(c.reason,sizeof(c.reason),"eligible");
             ++reasons[c.reason];++total;
-            csv<<game_id<<','<<seat<<','<<rank<<','<<day<<','<<c.reason<<','<<c.original_hires<<','<<c.work<<','<<c.early<<'\n';
+            csv<<game_id<<','<<seat<<','<<rank<<','<<day<<','<<c.reason<<','<<c.original_hires<<','<<c.work<<','<<c.early<<','
+               <<late_inputs<<','<<fertilizer_buys<<','<<fertilizer_pickups<<','<<late_hires<<'\n';
             save(binary,c);
         }
         std::cout<<game_id<<" seat="<<seat<<" rank="<<rank<<" days="<<total<<'\n'<<std::flush;

@@ -7,14 +7,14 @@ solves one entire day, starting at hour 0.
 By default, minimize hired workers while satisfying the plan. Strongly target 11
 or fewer hires, with a hard cap of 13. These counts exclude the farmer. The
 `day_policy_80p()` throughput profile instead fixes 11 hires and skips workforce
-minimization.
+minimization. `unrestricted_day_policy()` starts at cap 13 and applies bounded
+hire reduction only to cheap schedules.
 
 ## Input
 
 - Exact dawn grid state, including weeds that appeared overnight.
 - Shed contents and seeds.
-- Seed and animal purchase quantities, bought at hour 0.
-- Wheat purchase quantities and hours.
+- Seed, animal, wheat, and fertilizer purchase quantities for each hour.
 - Optional land purchase hour; at most one purchase, unlocking the next quadrant
   in order NE, SW, SE. NW is initially owned.
 - Shed returns: `(product, CNT, T)` means at least CNT units in total returned by
@@ -53,13 +53,9 @@ assignment to avoid crop decay and reduce travel and waiting.
 - Allow multiple workers/visits per tile, partial deposits, repeated returns and
   work after returning.
 - Respect market-order slots for purchases and hires.
+- Allow fertilizer pickup from dawn or purchased shed stock.
+- Place hires in any hour from 0 through 23 when earlier order slots are full.
 - A proof of minimum hires is not required.
-
-## Limitations
-
-- No fertilizer purchases or fertilizer pickups from the shed. Use declared
-  animal collections.
-- Hire only at hours 0 or 1.
 
 The caller handles affordability, market decisions and shed capacity, including
 automatic night deposits. Cash, market state and shed capacity are not inputs.

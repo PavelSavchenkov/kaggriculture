@@ -1,0 +1,183 @@
+{
+  "method": "Two sequential CPU14-pinned native Release runs; failed calls included.",
+  "cohorts": {
+    "dev": {
+      "cap10": {
+        "solved": 1387,
+        "days": 2239,
+        "coverage": 0.619472979008486,
+        "median_ms": 3.336605,
+        "mean_ms": 14.700096555828495,
+        "late": {
+          "solved": 228,
+          "days": 708,
+          "coverage": 0.3220338983050847
+        },
+        "mean_hires": 10.0,
+        "hires_saved_from_cap": 0,
+        "repeat_non_time_parity": true
+      },
+      "cap11": {
+        "solved": 1925,
+        "days": 2239,
+        "coverage": 0.8597588209021885,
+        "median_ms": 0.4112555,
+        "mean_ms": 10.682573741179098,
+        "late": {
+          "solved": 508,
+          "days": 708,
+          "coverage": 0.7175141242937854
+        },
+        "mean_hires": 11.0,
+        "hires_saved_from_cap": 0,
+        "repeat_non_time_parity": true
+      },
+      "cap13_fixed": {
+        "solved": 2170,
+        "days": 2239,
+        "coverage": 0.9691826708351943,
+        "median_ms": 0.3510085,
+        "mean_ms": 4.235769229120143,
+        "late": {
+          "solved": 669,
+          "days": 708,
+          "coverage": 0.9449152542372882
+        },
+        "mean_hires": 13.0,
+        "hires_saved_from_cap": 0,
+        "repeat_non_time_parity": true
+      },
+      "unrestricted": {
+        "solved": 2170,
+        "days": 2239,
+        "coverage": 0.9691826708351943,
+        "median_ms": 0.608877,
+        "mean_ms": 4.4682781891469405,
+        "late": {
+          "solved": 669,
+          "days": 708,
+          "coverage": 0.9449152542372882
+        },
+        "mean_hires": 11.430875576036867,
+        "hires_saved_from_cap": 3405,
+        "repeat_non_time_parity": true
+      },
+      "restriction_features": {
+        "late_inputs": {
+          "solved": 2008,
+          "days": 2062,
+          "coverage": 0.973811833171678
+        },
+        "fertilizer_buys": {
+          "solved": 873,
+          "days": 921,
+          "coverage": 0.9478827361563518
+        },
+        "fertilizer_pickups": {
+          "solved": 1010,
+          "days": 1073,
+          "coverage": 0.9412861136999068
+        },
+        "late_hires": {
+          "solved": 317,
+          "days": 318,
+          "coverage": 0.9968553459119497
+        },
+        "any_removed_restriction": {
+          "solved": 2083,
+          "days": 2152,
+          "coverage": 0.9679368029739777
+        }
+      }
+    },
+    "valid": {
+      "cap10": {
+        "solved": 1879,
+        "days": 3071,
+        "coverage": 0.6118528166720938,
+        "median_ms": 3.70948,
+        "mean_ms": 14.891390356072941,
+        "late": {
+          "solved": 282,
+          "days": 959,
+          "coverage": 0.2940563086548488
+        },
+        "mean_hires": 10.0,
+        "hires_saved_from_cap": 0,
+        "repeat_non_time_parity": true
+      },
+      "cap11": {
+        "solved": 2580,
+        "days": 3071,
+        "coverage": 0.8401172256593943,
+        "median_ms": 0.471631,
+        "mean_ms": 11.263971752360796,
+        "late": {
+          "solved": 661,
+          "days": 959,
+          "coverage": 0.6892596454640251
+        },
+        "mean_hires": 11.0,
+        "hires_saved_from_cap": 0,
+        "repeat_non_time_parity": true
+      },
+      "cap13_fixed": {
+        "solved": 2985,
+        "days": 3071,
+        "coverage": 0.9719960924780202,
+        "median_ms": 0.3515875,
+        "mean_ms": 4.2887270472158905,
+        "late": {
+          "solved": 911,
+          "days": 959,
+          "coverage": 0.9499478623566214
+        },
+        "mean_hires": 13.0,
+        "hires_saved_from_cap": 0,
+        "repeat_non_time_parity": true
+      },
+      "unrestricted": {
+        "solved": 2985,
+        "days": 3071,
+        "coverage": 0.9719960924780202,
+        "median_ms": 0.6069410000000001,
+        "mean_ms": 4.5050250867795505,
+        "late": {
+          "solved": 911,
+          "days": 959,
+          "coverage": 0.9499478623566214
+        },
+        "mean_hires": 11.413400335008376,
+        "hires_saved_from_cap": 4736,
+        "repeat_non_time_parity": true
+      },
+      "restriction_features": {
+        "late_inputs": {
+          "solved": 2744,
+          "days": 2820,
+          "coverage": 0.9730496453900709
+        },
+        "fertilizer_buys": {
+          "solved": 1154,
+          "days": 1218,
+          "coverage": 0.9474548440065681
+        },
+        "fertilizer_pickups": {
+          "solved": 1355,
+          "days": 1431,
+          "coverage": 0.9468902865129281
+        },
+        "late_hires": {
+          "solved": 420,
+          "days": 427,
+          "coverage": 0.9836065573770492
+        },
+        "any_removed_restriction": {
+          "solved": 2867,
+          "days": 2953,
+          "coverage": 0.9708770741618693
+        }
+      }
+    }
+  }
+}

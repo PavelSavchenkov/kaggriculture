@@ -10,7 +10,7 @@ using namespace kag;
 using namespace kag::agents::day_policy_contract;
 using contract_benchmark::Case;
 int main(int argc,char** argv) {
-    if(argc<3)throw std::runtime_error("evaluate cases.bin output.csv [limit] [max_hires] [effort: 0 Full, 1 Fast, 2 Compact, 3 Balanced, 4 Classic, 5 DayPolicy80p] [returns: 0 strict, 1 last hour, 2 windows] [animal_reserve] [variants] [minimize_variants] [repack] [placement_style] [minimize_hires]");
+    if(argc<3)throw std::runtime_error("evaluate cases.bin output.csv [limit] [max_hires] [effort: 0 Full, 1 Fast, 2 Compact, 3 Balanced, 4 Classic, 5 DayPolicy80p] [returns: 0 strict, 1 last hour, 2 windows] [animal_reserve] [variants] [minimize_variants] [repack] [placement_style] [minimize_hires] [opportunistic_hire_reduction]");
     std::ifstream input(argv[1],std::ios::binary);std::ofstream out(argv[2]);
     const int limit=argc>3?std::stoi(argv[3]):1000000;
     SolveOptions options;
@@ -27,6 +27,7 @@ int main(int argc,char** argv) {
     if(argc>9)options.minimize_variants=std::stoi(argv[9]);
     if(argc>11)options.placement=static_cast<PlacementStyle>(std::stoi(argv[11]));
     if(argc>12)options.minimize_hires=std::stoi(argv[12]);
+    if(argc>13)options.opportunistic_hire_reduction=std::stoi(argv[13]);
     auto solver=std::make_unique<Solver>();Case c;int eligible=0,ok=0;double micros=0;
     out<<"game,seat,rank,day,original_hires,work,returns,status,hires,attempts,microseconds,hash\n";
     while(input.read(reinterpret_cast<char*>(&c),sizeof(c))) {
