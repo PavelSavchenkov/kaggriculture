@@ -1,0 +1,32 @@
+{
+  "replay_continuations": 72,
+  "mean_terminal_margin_deficit_by_handoff_day": {
+    "12": -22933.6,
+    "20": -12932.2,
+    "25": -5342.8,
+    "27": -2818.9,
+    "28": -1164.1,
+    "29": -127.5
+  },
+  "selected_suffix_executed_missing_commitments": 0,
+  "cases": {
+    "112062878_day20": {
+      "own_cash_delta_vs_expert": -32824,
+      "animal_clipping_bc_vs_expert": [128, 6],
+      "crop_loss_bc_vs_expert": [120, 2],
+      "input_spend_bc_vs_expert": [9172, 939]
+    },
+    "112013186_service": {
+      "animal_clipping_bc_vs_expert": [131, 3],
+      "collections_bc_vs_expert": [171, 294],
+      "crop_loss_bc_vs_expert": [76, 0],
+      "input_spend_bc_vs_expert": [10210, 2356]
+    }
+  },
+  "autoregressive_crop_audit": {
+    "labels": 18446,
+    "teacher_prefix_correct": 15398,
+    "greedy_prefix_correct": 14537,
+    "later_targets_unsupported_after_earlier_error": 834
+  }
+}

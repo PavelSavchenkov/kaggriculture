@@ -1,0 +1,207 @@
+{
+  "config": {
+    "width": 128,
+    "depth": 2,
+    "board": false,
+    "history": true,
+    "dropout": 0.0,
+    "financial": true,
+    "coordinated": true,
+    "accounting": true,
+    "space_mask": true,
+    "product_plans": true
+  },
+  "settings": {
+    "data": "/home/pavel/Programming/kaggriculture/experiments/v9/sep23_BC/data/fresh20_complete/arrays",
+    "run": "/home/pavel/Programming/kaggriculture/experiments/v9/sep23_BC/runs/full20_w128_all_complete_product_plans",
+    "width": 128,
+    "depth": 2,
+    "board": false,
+    "financial": true,
+    "coordinated": true,
+    "accounting": true,
+    "space_mask": true,
+    "product_plans": true,
+    "no_history": false,
+    "dropout": 0.0,
+    "epochs": 82,
+    "batch": 512,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "ordinal": 0.0,
+    "positive_weight": 1.0,
+    "rank": 20,
+    "team": 0,
+    "submission": 0,
+    "clean": false,
+    "seed": 2301,
+    "cpu_threads": 4,
+    "amp": false,
+    "matmul_precision": "highest",
+    "no_bf16_reduced_reduction": false,
+    "compile": false,
+    "initialize": null,
+    "save_every": 20
+  },
+  "source_hash": "a6b1adf2982b66523ab539892552ed38d98272a073cb9bd6c4d6de6a9e055235",
+  "torch_version": "2.14.0+cu130",
+  "cuda_version": "13.0",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "matmul_precision": "highest",
+  "bf16_reduced_reduction": true,
+  "dataset": {
+    "rows": 66720,
+    "perspectives": 2224,
+    "episodes": 1864,
+    "crop_groups": 44,
+    "animal_groups": 29,
+    "crop_options": 9,
+    "invalid": 0,
+    "projected_dawns": 26251,
+    "original_missing_dawns": 9709,
+    "splits": {
+      "train": 49860,
+      "validation": 10320,
+      "development": 6540,
+      "confirmation": 0
+    },
+    "shapes": {
+      "global": [
+        66720,
+        48
+      ],
+      "products": [
+        66720,
+        9,
+        32
+      ],
+      "board": [
+        66720,
+        2,
+        100,
+        36
+      ],
+      "globals": [
+        66720,
+        9
+      ],
+      "episode": [
+        66720
+      ],
+      "submission": [
+        66720
+      ],
+      "team": [
+        66720
+      ],
+      "rank": [
+        66720
+      ],
+      "seat": [
+        66720
+      ],
+      "day": [
+        66720
+      ],
+      "error": [
+        66720
+      ],
+      "projections": [
+        66720
+      ],
+      "strengthened": [
+        66720
+      ],
+      "missing": [
+        66720
+      ],
+      "split": [
+        66720
+      ],
+      "crop_key": [
+        66720,
+        44,
+        24
+      ],
+      "crop_options": [
+        66720,
+        44,
+        9,
+        12
+      ],
+      "crop_size": [
+        66720,
+        44
+      ],
+      "crop_maximum": [
+        66720,
+        44,
+        9
+      ],
+      "crop_target": [
+        66720,
+        44,
+        9
+      ],
+      "animal_size": [
+        66720,
+        29
+      ],
+      "animal_species": [
+        66720,
+        29
+      ],
+      "animal_forced": [
+        66720,
+        29
+      ],
+      "animal_serve": [
+        66720,
+        29
+      ],
+      "animal_escape": [
+        66720,
+        29
+      ],
+      "animal_key": [
+        66720,
+        29,
+        24
+      ]
+    },
+    "array_sha256": {
+      "animal_escape.npy": "24a221be34b9f6da81241b5ff468239766017c984793bb568d5963b20f1b1cd6",
+      "animal_forced.npy": "db9f74a4dc52fb17738a46c607a20230324e5b1599413683345dc68610a8348f",
+      "animal_key.npy": "80e9b53a5e647e2d49c818d087a25de37c73bcb28b1e1655525e7bd43b40eeee",
+      "animal_serve.npy": "05a5c155d190033b3e1998d3b58be583eb8a58de4b1905dbf9bf631e61bb50bd",
+      "animal_size.npy": "c0ac172856d57abf1909340c4f788e9bef0e252e4f8068ca7931bc6e61d0c754",
+      "animal_species.npy": "778b0309350ce2aaa13a12898fe64db7feb83ec0c9dc4fd11228dea441d9ffe7",
+      "board.npy": "c738fc34a947b56886b3a0e83ba70a92d6fc09e6fc9c77c59cd8cea4a78e92bb",
+      "crop_key.npy": "b3ebbb48ff9beead8924fabcdfc3afeaaec1e6e9baf648ea38d98c567080116a",
+      "crop_maximum.npy": "f09de7d717d5f97198d9552e60a3de6206dbe4fb708d2c8fe86374d4de4e7548",
+      "crop_options.npy": "f5ea08ccda6ff896e496b5796f78a9b59aa5d45d84e074960ca2de5a45bb3567",
+      "crop_size.npy": "c36c395910775cda4d357591d0af02eb4f8650fde14ae0dd527b8df6dc80f733",
+      "crop_target.npy": "b808fd042a2e2c1c0d291800d321031ee416f88d05d0c5369e3a9cac11c0c5af",
+      "day.npy": "cf355b161a2e866a8f9cca679740ea8c80a2cf8e5534887449329a4cabb22f81",
+      "episode.npy": "e122af54fa8dc0e07f5ae28088ce1908183f10ff17b150651900b0d26036888d",
+      "error.npy": "6a61b5bf2da9adc6f9c579e0aaad8e12324b5a7a0c46476f72dc8c9091a1ff42",
+      "global.npy": "c0537ee09dff7722700647a3e8741f0fd9027ef39936541263011c77e3aceb44",
+      "globals.npy": "7795faf9ee98ddddac69d980b293ab379a8349328701c1c670d5356c7d01372a",
+      "missing.npy": "c4d1e45d58efa7294b9863449293ba37916a731abfc69752b911733f52c1b6f1",
+      "products.npy": "f4094964158c7ca59327d5e6bdccef07b43fe25e7569d586a6fe230c1e16dfcc",
+      "projections.npy": "15ac2ca2f78cbe71de31728d8eb980cca5af615985e5fbcc4d654454a401fc61",
+      "rank.npy": "5c493402910c84d612ec8787b374d1f52a84527345b32fb21ef55b2085226e98",
+      "seat.npy": "2cc0bf13e8d3fc8564d04e515df8d242d0159f123560b52a60ef9a65d8df18cf",
+      "split.npy": "a6925edae46bb34c96baf2478ee2ee711b7da397d488e78ba56c017a3d2e4598",
+      "strengthened.npy": "19c5f9ccdbfe017a57f4508e74e954b44a2aa2edb4cbdf35ce63d074905015ed",
+      "submission.npy": "0d321dbbe6eed19f86b69b16e9946c544b2b1e43b32134970dc9727c12bffb95",
+      "team.npy": "f3b4839e37f199d834c1f65e59824361b5a7af17af5147a4b9f55ad8455150f2"
+    },
+    "data_hash": "0ef20bdc02c99f3c157ad823b878f9e021dfb1d02df2494f9a6f941efbd0e45d"
+  },
+  "compiler": "44158ed53dbbad54d0a2393a7dc092adc7af1d9104b4ac51af27529b17401ade",
+  "parameters": 509359,
+  "training_dawns": 49860,
+  "validation_dawns": 10320,
+  "selected_identities_sha256": "7f61c5b7634ffc3cc88a718d5572f7415c01e779674a49ac1254d06f83d67092"
+}

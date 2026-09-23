@@ -1,0 +1,163 @@
+{
+  "checkpoint": "runs/full20_w128_single56424800_complete_transfer/best.pt",
+  "data": "data/fresh20_complete/arrays",
+  "dawns": 10320,
+  "modes": {
+    "tf32": {
+      "changed_intents": 117,
+      "dawns": 10320,
+      "families": {
+        "crop": {
+          "count": 311675,
+          "changed_top1": 98,
+          "changed_top3_set": 85,
+          "changed_large_margin": 0,
+          "max_logit_error": 0.047161102294921875,
+          "kl_sum": 0.18269338342361152,
+          "reference_regret_sum": 0.1987527497112751,
+          "changed_margin_sum": 0.1985008604824543
+        },
+        "animal": {
+          "count": 85469,
+          "changed_top1": 12,
+          "changed_top3_set": 2,
+          "changed_large_margin": 0,
+          "max_logit_error": 0.03747272491455078,
+          "kl_sum": 0.03067818912677467,
+          "reference_regret_sum": 0.033874571323394775,
+          "changed_margin_sum": 0.033874571323394775
+        },
+        "global": {
+          "count": 83244,
+          "changed_top1": 19,
+          "changed_top3_set": 43,
+          "changed_large_margin": 0,
+          "max_logit_error": 0.1220703125,
+          "kl_sum": 0.04198249167529866,
+          "reference_regret_sum": 0.02369248867034912,
+          "changed_margin_sum": 0.02369248867034912
+        }
+      },
+      "gradient": {
+        "cosine": 0.9986159801483154,
+        "relative_l2_error": 0.052594926208257675,
+        "norm_ratio": 0.9983314871788025,
+        "finite": true,
+        "objectives": {
+          "fp32": 0.6463243961334229,
+          "tf32": 0.6463167071342468
+        }
+      },
+      "joint_teacher_log_probability": {
+        "mean_abs_delta": 0.00660663889721036,
+        "p95_abs_delta": 0.0186922550201416,
+        "max_abs_delta": 0.12252044677734375,
+        "same_weight_ratio_outside_20_percent": 0.0
+      }
+    },
+    "bf16": {
+      "changed_intents": 1114,
+      "dawns": 10320,
+      "families": {
+        "crop": {
+          "count": 311675,
+          "changed_top1": 812,
+          "changed_top3_set": 812,
+          "changed_large_margin": 2,
+          "max_logit_error": 0.43052148818969727,
+          "kl_sum": 11.040692292153835,
+          "reference_regret_sum": 11.232986390590668,
+          "changed_margin_sum": 11.065908871591091
+        },
+        "animal": {
+          "count": 85469,
+          "changed_top1": 82,
+          "changed_top3_set": 30,
+          "changed_large_margin": 0,
+          "max_logit_error": 0.38956451416015625,
+          "kl_sum": 1.9271431369706988,
+          "reference_regret_sum": 1.7551670372486115,
+          "changed_margin_sum": 1.7551670372486115
+        },
+        "global": {
+          "count": 83244,
+          "changed_top1": 354,
+          "changed_top3_set": 546,
+          "changed_large_margin": 1,
+          "max_logit_error": 3.02008056640625,
+          "kl_sum": 6.9867777824401855,
+          "reference_regret_sum": 7.889293074607849,
+          "changed_margin_sum": 7.782851815223694
+        }
+      },
+      "gradient": {
+        "cosine": 0.993619978427887,
+        "relative_l2_error": 0.11278938502073288,
+        "norm_ratio": 0.995031476020813,
+        "finite": true,
+        "objectives": {
+          "fp32": 0.6463243961334229,
+          "bf16": 0.6464614868164062
+        }
+      },
+      "joint_teacher_log_probability": {
+        "mean_abs_delta": 0.05822848528623581,
+        "p95_abs_delta": 0.1612624078989029,
+        "max_abs_delta": 0.7830047607421875,
+        "same_weight_ratio_outside_20_percent": 0.025872092694044113
+      }
+    },
+    "bf16_full_reduce": {
+      "changed_intents": 1099,
+      "dawns": 10320,
+      "families": {
+        "crop": {
+          "count": 311675,
+          "changed_top1": 821,
+          "changed_top3_set": 788,
+          "changed_large_margin": 4,
+          "max_logit_error": 0.44824981689453125,
+          "kl_sum": 10.673836126923561,
+          "reference_regret_sum": 11.595814447849989,
+          "changed_margin_sum": 11.430050652474165
+        },
+        "animal": {
+          "count": 85469,
+          "changed_top1": 76,
+          "changed_top3_set": 27,
+          "changed_large_margin": 0,
+          "max_logit_error": 0.45977020263671875,
+          "kl_sum": 1.581360975280404,
+          "reference_regret_sum": 1.5188027918338776,
+          "changed_margin_sum": 1.5135555565357208
+        },
+        "global": {
+          "count": 83244,
+          "changed_top1": 288,
+          "changed_top3_set": 480,
+          "changed_large_margin": 3,
+          "max_logit_error": 2.168182373046875,
+          "kl_sum": 5.179702389985323,
+          "reference_regret_sum": 5.532711148262024,
+          "changed_margin_sum": 5.4788535833358765
+        }
+      },
+      "gradient": {
+        "cosine": 0.9938863515853882,
+        "relative_l2_error": 0.11043860763311386,
+        "norm_ratio": 0.9964743852615356,
+        "finite": true,
+        "objectives": {
+          "fp32": 0.6463243961334229,
+          "bf16_full_reduce": 0.6466724872589111
+        }
+      },
+      "joint_teacher_log_probability": {
+        "mean_abs_delta": 0.053167521953582764,
+        "p95_abs_delta": 0.1512780785560608,
+        "max_abs_delta": 0.581573486328125,
+        "same_weight_ratio_outside_20_percent": 0.018798450008034706
+      }
+    }
+  }
+}

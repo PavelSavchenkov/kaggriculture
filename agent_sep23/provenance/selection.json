@@ -1,0 +1,32 @@
+{
+  "release": "agent_sep23",
+  "model": {
+    "origin": "experiments/v9/sep23_BC/runs/full20_w128_single56424800_complete_transfer/model.bin",
+    "sha256": "9c22aaa6051568a592afa39e710468f9f0a9e34edfede89271c6a207d5de47e8",
+    "bytes": 2037777,
+    "format": "BCW23004",
+    "parameters": 509359,
+    "best_epoch": 21,
+    "validation_loss": 0.8554324805736542,
+    "submission": 56424800,
+    "dataset_sha256": "0ef20bdc02c99f3c157ad823b878f9e021dfb1d02df2494f9a6f941efbd0e45d"
+  },
+  "compiler": {
+    "source_hash": "ed154431f1983df6c9b6d4fc411791cd6eb6417aec363b12d8c975cd6c1a02b4",
+    "intent_contract_sha256": "544d8ea871fa6ab44794f0c217395f7666e3adf6dfb1f8b255a6575d72940f67",
+    "variant": "product-specific collection fallback",
+    "collections": true,
+    "recovery": 1,
+    "max_worker_attempts": 256
+  },
+  "selection_basis": {
+    "fresh_compiler_games": 64,
+    "fresh_compiler_wins": 52,
+    "fresh_compiler_mean_margin": 9881.58,
+    "local_lb_games": 48,
+    "local_lb_wins": 29,
+    "local_lb_mean_margin": 5515.083333333333,
+    "native_parity_cases": 300,
+    "native_action_mismatches": 0
+  }
+}

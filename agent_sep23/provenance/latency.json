@@ -1,0 +1,26 @@
+{
+  "games": 48,
+  "calls": 34512,
+  "mean_action_ms": 3.7909958502405776,
+  "max_action_ms": 762.0813810062828,
+  "game_policy_seconds": {
+    "min": 1.7626447761576856,
+    "median": 2.689645298058167,
+    "max": 4.324733095956617
+  },
+  "complete_match_seconds": {
+    "median": 3.69874650350539,
+    "max": 5.617379041999811
+  },
+  "over_1s_games": 0,
+  "worst_game": {
+    "opponent": "replay-champion",
+    "seed": 230504,
+    "seat": 1,
+    "max_action_seconds": 0.7620813810062828,
+    "mean_action_seconds": 0.006014927810788062,
+    "seconds": 5.617379041999811,
+    "policy_calls": 719
+  },
+  "expansions": 256
+}

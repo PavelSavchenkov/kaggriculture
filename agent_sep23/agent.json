@@ -1,0 +1,32 @@
+{
+  "format_version": 1,
+  "name": "agent_sep23",
+  "header": "source/agent.hpp",
+  "type": "kag::agents::agent_sep23::Agent",
+  "sources": [
+    "source/agent.cpp",
+    "day_compiler/source/state.cpp",
+    "day_compiler/source/history.cpp",
+    "day_compiler/source/biology.cpp",
+    "day_compiler/source/intent.cpp",
+    "day_compiler/source/commitments.cpp",
+    "day_compiler/source/trading.cpp",
+    "day_compiler/source/workload.cpp",
+    "day_compiler/source/remaining.cpp",
+    "day_compiler/source/funding.cpp",
+    "day_compiler/source/schedule.cpp",
+    "day_compiler/source/seller.cpp",
+    "day_compiler/source/allocation.cpp",
+    "day_compiler/source/inventory.cpp",
+    "day_compiler/worker/source/agent.cpp",
+    "day_compiler/worker/source/routes.cpp",
+    "day_compiler/worker/source/policy.cpp",
+    "day_compiler/worker/source/verify.cpp",
+    "day_compiler/source/compiler.cpp",
+    "day_compiler/source/reactive.cpp",
+    "day_compiler/source/market.cpp",
+    "day_compiler/source/forecast.cpp",
+    "day_compiler/source/input_market.cpp",
+    "day_compiler/source/rolling.cpp"
+  ]
+}
