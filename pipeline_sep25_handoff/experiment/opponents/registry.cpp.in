@@ -1,0 +1,10 @@
+#include "@EXPERIMENT_DIR@/opponents/opponent.hpp"
+#include <cstring>
+
+namespace opponents {
+@DECLARATIONS@
+std::unique_ptr<Opponent> make(const char* name) {
+@DISPATCH@
+    return nullptr;
+}
+}

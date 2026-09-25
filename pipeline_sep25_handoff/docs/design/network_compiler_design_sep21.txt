@@ -1,0 +1,893 @@
+                                               Kaggriculture
+           Network + Deterministic Day Compiler Design
+                                           Self-contained implementation specification
+
+                                                      Revised 21 September 2026
+
+
+  Design goal
+  At every dawn, a neural policy predicts a semantic one-day plan. A deterministic compiler converts it into
+  purchases, biological jobs, harvests, shed returns, market orders and worker schedules. The network chooses
+  the intended farm and production; the compiler finds a complete, funded execution. Routing, inventory DPs and
+  economic search share one resource ledger.
+
+
+This revision retains the original 20-section structure. It incorporates the game-rule audit, our worker and multiday
+search work, the teammate repositories, recent public notebooks and two rounds of replay confirmation.
+The existing worker solver is a useful component to extend. It returns a verified route when successful; it does not
+by itself establish funding, shared shed capacity or economic optimality. A missed search does not prove the
+DayPlan infeasible.
+Recommended V1: direct animal targets with explicit retained groups; bundled animal service with zero-value
+CARE pruning; exact crop-service alternatives; causal opponent-flow forecasts; a universal partial seller starting
+with H6; a bounded search over complete return and routing candidates; wheat inventory DP and fertilizer
+reservations under shared cash, capacity and order constraints.
+
+  Strength and throughput
+  Optimize the complete compiler, with an affordable incumbent and bounded heavy-tail work. Do not constrain
+  the design to a guessed single-digit millisecond target. Measure decision latency and full-game training
+  throughput alongside quality. Offline teacher search may spend more than ordinary rollout compilation.
+
+
+The mechanics and individual mechanisms have direct tests. The full revised compiler and a gold-level agent are
+not yet validated. Section 18 distinguishes tested results from proposed integration; section 20 defines the
+implementation and learning sequence.
+
+
+
+
+Kaggriculture deterministic compiler design | Revised 21 September 2026                                              1
+1. System boundary
+The network chooses strategic commitments; the compiler chooses their execution. Current-day compilation uses
+exact mechanics and a continuation score. Full-game strategic search belongs in the outer planner or offline
+teacher, rather than every compiler call.
+
+  Layer                              Owns                                          Boundary
+
+  Neural DayPlan                     Farm composition, crop yield/harvest          Does not emit worker paths or raw market
+                                     goals, FULL/LEAN/RETIRE, animal               schedules. Joint choices must be
+                                     service and retention, land expansion;        consistent.
+                                     optional region preferences.
+
+  Deterministic compiler             Entity assignment, biological alternatives,   Preserves the requested production and
+                                     purchase obligations, worker/return timing,   retention commitments; reports any repair
+                                     trading and shared resource feasibility.      that changes them.
+
+  Worker solver                      Worker assignment, movement, job order,       A subproblem of the complete economic
+                                     cargo, shed visits, hire count and route      candidate; it may be extended or merged
+                                     verification.                                 with the DPs.
+
+  Outer planner / teacher            Alternative semantic plans, multiday          Uses legal observations for deployable
+                                     continuations and policy/value                decisions; replay futures remain
+                                     improvement.                                  evaluation data.
+
+
+2. End-to-end control loop
+  DAWN
+    1. Encode legal own/public state, history and cheap exact features.
+    2. Jointly decode a masked semantic DayPlan.
+    3. Choose entities and generate exact biological alternatives.
+    4. Build purchase obligations and a funded initial worker/return plan.
+    5. Forecast coherent rival-flow scenarios and known demand events.
+    6. Solve trading subproblems under the shared resource ledger.
+    7. Search a bounded set of complete routing/return/service candidates.
+    8. Verify the selected candidate and retain a complete incumbent.
+  HOUR BY HOUR
+    9. Reconcile actual state and fills; recompute market actions.
+   10. Keep routes while assumptions hold; repair an affected suffix
+       after a critical hire, input or return failure.
+  NEXT DAWN
+   11. Replan from the actual farm, resources and retained intentions.
+
+
+
+  Bounded joint optimization
+  Funding returns can be mandatory. Do not first choose a route that assumes free inputs, then treat financing as
+  an optional overlay. Small DPs and worker solving may alternate inside a bounded search, but only a fully
+  checked candidate can replace the incumbent. A hard iteration limit is a runtime bound, not a convergence
+  guarantee.
+
+
+
+
+Kaggriculture deterministic compiler design | Revised 21 September 2026                                                        2
+3. Network output
+Keep the output semantic and compact. It describes the intended farm and production, while dependent
+purchases and material quantities are derived mechanically. Mask inconsistent choices before sampling where
+possible; log both the sampled and executed plan if repair changes it.
+
+3.1 New crops
+  Output                                      Meaning
+
+  new_wheat_count                             New wheat plants to establish today.
+
+  new_carrot_count                            New carrot plants to establish today.
+
+  new_melon_count                             New melon plants to establish today.
+
+  new_tomato_count                            New tomato plants to establish today.
+
+  new_strawberry_count                        New strawberry plants to establish today.
+
+Counts must fit retained crops, available land, structures, seed funding and establishment WATER. Seed
+purchases and clearing jobs are derived from these counts and exact placements. A legal count vector alone is
+not proof that the day can be executed.
+
+3.2 Animals: predict direct targets
+Keep target_cows_next_dawn, target_sheep_next_dawn and target_geese_next_dawn. Also retain the
+selected existing groups, their biological state, and which requested escapes can actually occur tonight. New and
+mature animals are not interchangeable continuations.
+
+  retained_p = current_placed_p - realizable_planned_escapes_p
+  new_placements_p = target_p - retained_p
+  required_purchases_p = max(0, new_placements_p - usable_unplaced_p)
+
+
+Require new_placements_p >= 0. Usable unplaced animals include own shed and cargo animals that can reach
+a legal placement in time. Derive structures, pickups and placement jobs jointly. Do not discard an existing mature
+animal merely to satisfy an aggregate target label.
+
+  Purchase obligations are idempotent
+  Reconcile required quantities with actual fills and outstanding obligations. Repeating the same herd target must
+  not create another purchase. A failed order remains pending only while its placement commitment still needs it.
+  Replay requests that failed are not automatically intended extra animals.
+
+
+Direct targets remain convenient imitation labels. Extract them with retained/placed groups and feasible service,
+not just an isolated next-state count. A shop-based target may be an input feature; it need not define the output
+label.
+
+3.3 Land
+Keep buy_next_land_today in {0,1} for V1. The observed top-player workloads support one expansion per
+day. This is a representation choice, not the game's purchase limit. Support the legal fourth quadrant. Retry a
+required purchase while it remains feasible and useful; a single failed hour must not silently cancel the expansion.
+
+
+
+
+Kaggriculture deterministic compiler design | Revised 21 September 2026                                              3
+3.4 Existing crops
+A continuation specifies the harvest/production and yield that must be preserved. The compiler chooses the
+service calendar. Keep the common age menus and group count partitions, but make their promised
+consequences explicit.
+
+  Crop                                        Per semantic group output
+
+  Wheat                                       Continuation counts for the existing age-2/3/4 procedure menu, plus retire_count.
+                                              Bind each option to an explicit harvest age and minimum yield derived from
+                                              current state. Compile the WATER/FERTILIZE realization.
+
+  Carrot                                      The corresponding age-2/3 continuation counts, plus retire_count, with explicit
+                                              yield commitments.
+
+  Melon                                       Keep six yield by age 10 as the default. Allow explicit lower-yield goals from the
+                                              feasible frontier, plus retire_count. A cheaper service method may preserve the
+                                              same target; a lower target requires a policy choice or recorded plan revision.
+
+  Tomato / Strawberry                         full_count, lean_count, retire_count. FULL preserves intended useful doubled
+                                              production; LEAN preserves survival and its resulting base production; RETIRE
+                                              stops future preservation.
+
+For V1, the existing wheat/carrot age-by-fertilizer labels can be mapped to their resulting yield goals. They should
+not force an inefficient action sequence if a different service calendar meets the same commitment. Deduplicate
+equivalent options and mask goals that are no longer reachable.
+Include held yield, fertilizer expiry, dry state and the remaining game horizon when defining each option. Harvest
+age is a growth target; the latest safe harvest hour also depends on decay. A legal later harvest is an execution
+candidate only when it preserves the chosen yield and other commitments.
+
+3.5 Existing animals
+  Output                                      Meaning
+
+  serve_today_count                           Feed selected animals today; include CARE when it can add value under the
+                                              retained production commitments. Keep one bundled strategic service output.
+
+  allow_escape_tonight_count                  Selected animals intentionally left unfed that can actually escape tonight, given
+                                              their current unfed state.
+
+An unserved animal may survive one day without feed. Do not equate every skipped service with an immediate
+escape. The target, service and escape partitions must be consistent with the exact biological transition.
+
+  Bundled policy output, separate compiler jobs
+  FEED and CARE remain separate jobs internally. Remove CARE before routing when its bonus cannot reach a
+  useful production or is provably redundant at the cap. Otherwise keep the requested service. Do not silently
+  sacrifice a promised bonus merely because CARE uses one action, and do not remove it after executor
+  bookkeeping has already assumed it will run.
+
+
+The compiler chooses physical members with their geometry and future state in view. It does not move today's
+required feeding to another day to smooth labor. Future service intentions are provisional and are reconsidered at
+the next dawn.
+
+
+
+
+Kaggriculture deterministic compiler design | Revised 21 September 2026                                                            4
+4. Network input
+Use a compact spatial/entity encoding plus semantic summaries. Keep exact coordinates and biological state;
+distance averages alone hide placement and routing constraints. Add compiler features when they are cheap,
+causal and demonstrably useful.
+
+4.1 Own farm
+• Crops: type, age, held yield, dry/water state, fertilizer expiry, production phase, decay deadline and coordinates.
+• Animals: type, age/production phase, unfed state, care bank, held product, fertilizer availability, structure and
+   coordinates.
+• Own cash, land, empty tiles, structures, workers/positions, shed quantities and capacity, seeds and each worker's
+   cargo.
+• Pending asset and production commitments, actual fills, remaining jobs and recent compiler repairs.
+
+4.2 Visible opponent farm
+• Public crops, animals, land, structures, money and worker positions, with causal changes over time.
+• Inferred harvest/return and net-market-flow features from observable changes.
+• Bounded or probabilistic hidden-stock estimates. Do not insert the rival's private shed or replay command list into
+   live inputs.
+
+4.3 Global market and shop state
+• Current market inventory, exact marginal prices, revealed shops and known future consumption ticks.
+• Time to relevant recovery, receipt, capacity, purchase and terminal events.
+• Own executed trades and inferred rival flow. The observation does not expose the rival's submitted orders or their
+   exact accepted quantities.
+
+4.4 Downstream-value features
+  Feature family                              Useful examples
+
+  Biology                                     Exact yield and survival consequences; feasible service frontiers; pending care
+                                              value; true terminal deadlines.
+
+  Finished products                           Sell-now curves, forecast supply, known demand, candidate receipt timing and
+                                              calibrated timing value.
+
+  Wheat / fertilizer                          Usable shed/cargo supply, committed pickups and direct transfers, near-term
+                                              deficits and surplus opportunities.
+
+  Routing / placement                         Exact coordinates, cheap route insertion cost, workload peaks, hire thresholds
+                                              and shared-trip opportunities.
+
+  Cash / capacity                             Prefix spending and funding needs, shed occupancy before worker deposits, tile
+                                              and order-slot constraints.
+
+Distinguish state features from candidate-dependent values: a return value or cash floor computed for one
+proposed route is not unconditional truth. Start with exact cheap facts; add expensive forecasts or derived
+features through downstream ablation.
+
+
+
+
+Kaggriculture deterministic compiler design | Revised 21 September 2026                                                         5
+5. Deterministic day compiler: inputs and outputs
+5.1 Worker solver and shared ledger
+The worker solver receives exact jobs and logistics. Extend or merge it with inventory and economic search as
+needed. Its current measured coverage applies to an eligible workload subset; a 13-hire implementation cap is not
+a game rule or a strategic optimum.
+
+  WorkerSolveInput {
+    biological_jobs / legal_calendar_alternatives
+    exact_placement_targets
+    cumulative_worker_return_requirements // product, quantity, deadline
+    pickup_and_material_dependencies
+    hire_and_purchase_constraints
+  }
+  WorkerSolveOutput {
+    actions[hours], hires, exact_hire_cost
+    worker_deposits, pickups, cargo_by_event
+    completed_jobs, resulting_biology, route_slack
+    verified_route_or_search_failure
+  }
+
+
+A return requirement means cumulative worker deposits, excluding initial stock and market buys. Minimum
+available shed stock is a different constraint enforced by the ledger. Today's horizon is normally 24 actions; day
+29 has 23.
+
+  CompleteCandidate {
+    semantic_commitments, chosen_entities_and_calendars
+    worker_schedule, ordered_market_choices
+    shed / cargo / seed / cash ledger at every subevent
+    scenario_feasibility, resulting_farm_and_belief, score
+  }
+
+
+The ledger follows actual engine order: farmer, then hired workers; market list positions with simultaneous item
+quotes; demand and decay; night settlement when it exists. Enforce nonnegative resources, shared shed capacity
+and seed-demand rules at those phases.
+
+5.2 Compiler output
+• Exact entities, placements, biological jobs and selected calendar alternatives.
+• Worker schedule, cumulative receipts and material/purchase obligations.
+• Current legal market actions and conditional trading rules under shared constraints.
+• A fully checked incumbent, scenario assumptions and bounded repair triggers.
+• Actual wages, resource bottlenecks, next-state consequences and explicit plan revisions for training/debugging.
+
+  Feasibility is a complete-candidate property
+  A route may be valid while its hires or inputs are unfunded. Exact verification applies to our mechanics under a
+  specified rival scenario; it cannot guarantee unknown future prices. Keep a feasible fallback and reconcile actual
+  outcomes during execution.
+
+
+
+
+Kaggriculture deterministic compiler design | Revised 21 September 2026                                                6
+6. Choose concrete entities and tiles
+Map semantic counts to physical members deterministically, while preserving continuation-relevant differences.
+Counts alone do not make two tile assignments equally valuable.
+1. Start with short insertions into existing routes, compact work and low conflict with required placements.
+2. Compare the exact hire bill, input logistics and future service burden, not distance alone.
+3. Try member swaps and placements that preserve the requested state but improve current or future work. Keep
+   region preferences from the policy when useful.
+4. RETIRE does not require DIG immediately. Harvest or clear only when value, reuse or a commitment requires it;
+   escaped animals leave structures.
+5. Reserve useful near-shed sites for assets with repeated logistics. Account for hire spawning and the opportunity
+   cost of permanent animal placements.
+
+7. Expand DayPlan intent into biological tile jobs
+7.1 One-shot crops
+Generate a small exact frontier over survival, active fertilizer duration, held yield, harvest age and service cost.
+New crops must be watered on planting day. FERTILIZE must precede a yield-bearing WATER when its extra
+yield is required. Include decay at the actual hour and truncate at the true terminal turn.
+
+  Biology state: age, dry state, fertilizer expiry, held yield
+  Choice: legal WATER / FERTILIZE / HARVEST calendar
+  Keep: nondominated yield, water count, fertilizer use,
+        and distinct calendars relevant to route feasibility
+  Require: selected harvest/yield promise and survival until harvest
+
+
+The biological frontier is not yet a routing frontier. Two calendars with equal action counts may need different hires
+or share different trips. Keep a few useful calendar alternatives or pass the legal alternatives into worker solving;
+use latest timing as a candidate, not a proof of minimum cost.
+
+7.2 Melon
+Keep six yield by age 10 as the default. Compare fertilizer and watering alternatives even when both reach the
+cap. For a new melon, exact mechanics give these useful choices:
+
+  Yield at age 10                             WATER actions               Fertilizer units / FERTILIZE actions
+
+  3/4/5                                       5/6/7                       0
+
+  5                                           5                           1
+
+  6                                           8                           0
+
+  6                                           6                           1
+
+Fertilizer can save two WATER actions while adding one FERTILIZE action and its supply cost. The joint compiler
+compares the actual route, wage and material consequences. It may change the service method while preserving
+yield; lowering the yield goal is an explicit strategic change.
+
+
+
+
+Kaggriculture deterministic compiler design | Revised 21 September 2026                                                7
+7.3 Tomato and strawberry: FULL / LEAN / RETIRE
+  Mode                                        Deterministic meaning
+
+  RETIRE                                      No future-preservation service. Harvest remaining value or clear for reuse when
+                                              worthwhile or required.
+
+  LEAN                                        Preserve survival with required WATER. Do not add fertilizer solely for a bonus.
+                                              Existing fertilizer and base production still count.
+
+  FULL                                        Preserve intended useful doubled productions. WATER on each preparation day,
+                                              with fertilizer active then; add survival water as needed.
+
+For production available on day P, preparation is day P-1. If fertilizer is not already active then, an application on
+P-3, P-2 or P-1 can cover it. Optimize coverage across all intended productions in the provisional calendar, not as
+independent windows.
+
+  For each required FULL production:
+    WATER on its preparation day
+    fertilizer active on that day
+  Track shared three-day fertilizer coverage across productions.
+  If the yield commitment would clip at the held cap:
+    add a timely harvest or revise that commitment explicitly.
+
+
+Strawberry preparation ages 9, 11, 13 and 15 can use two fertilizer applications, at ages 9 and 13. Moving the first
+to age 8 can require three in total. Recompute future service cost when shifting an application. Only today's work
+is committed; replan provisional future service at the next dawn.
+
+7.4 Flexible service scheduler
+Keep a small set of calendar alternatives with their full water, fertilizer, survival and output consequences. Screen
+them by route insertion and workload peaks, then compare exact hire/resource cost. Avoid an arbitrary early-work
+penalty that outweighs a real wage saving. A greedy window assignment is a warm start, not the final coupled
+optimum.
+
+7.5 Animal service
+FEED and useful CARE are flexible within the chosen day and can share a visit with HARVEST or fertilizer
+collection. Care earned today is banked after tonight's production and affects a later scheduled production only if
+the animal is fed on that production day.
+Prune care before routing when its first usable bonus would arrive after the game, or the existing bank already
+saturates that production after accounting for any bank clearing tonight. A currently full producer alone is not
+enough: a later harvest may free room. Preserve nonzero promised care benefits.
+Collect fertilizer when its sale/use value exceeds the actual added wage, displaced work and logistics cost. An
+extra hire is allowed when profitable; unchanged worker count is not a mandatory condition.
+
+  Terminal mechanics
+  The final action is step 718, day 29 hour 22. There is no playable hour 23 and no final automatic night deposit.
+  Plan actual returns and sales by that turn. Remove terminal service only when it cannot affect useful current
+  output or another retained commitment.
+
+
+
+
+Kaggriculture deterministic compiler design | Revised 21 September 2026                                                          8
+8. Preliminary solve and purchase deadlines
+Build the first complete funded candidate, including early returns needed to pay for mandatory work. This can use
+the worker solver and small inventory DPs iteratively; it must not assume that inputs and hires are already paid
+for.
+1. Generate required biological/placement jobs, input dependencies and purchase obligations.
+2. Propose worker routes and required funding returns together. Derive the last market phase before each
+   dependent pickup, planting or placement.
+3. Check cash and materials through every order/worker prefix. Add funding sales/returns or choose a different
+   complete route when necessary.
+4. Supply those constraints to the trading subproblems. Recompute them whenever a route, hire count, purchase or
+   return changes.
+
+  cash_after(t) = initial_cash
+                + cumulative_executable_sale_receipts(t)
+                - cumulative_required_spending(t)
+  require cash_after(t) >= 0 at every subevent
+
+
+Use scenario-specific executable quotes. A fixed cash target, including the prototype's $5,000 target, is not a
+proof of funding. Preserve a complete incumbent while bounded search improves it; report failure rather than
+executing a route with unsupported assumptions.
+
+9. Opponent market-flow forecast
+Forecast uncertain market supply and timing using legal public observations and own history. Use a shared
+implementation with product-specific calibration where useful. The GBDT fitted on September 12 replays is a
+tested baseline; compare it with simple causal models by downstream decision value as well as prediction error.
+
+  Known or observed                           Inferred or forecast
+
+  Current market inventory/prices;            Rival hidden stock, net buys/sales and likely near-term supply.
+  own stock and actions.
+
+  Revealed shops and their future             Unrevealed shops remain uncertain, not replay inputs.
+  ticks; town demand.
+
+  Public farms, money and                     Harvest/return timing and order-position competition.
+  worker-position changes.
+
+
+  OpponentFlowForecast {
+    product, event_times
+    coherent_scenarios[] // quantities and timing along each trajectory
+    scenario_weights / calibrated uncertainty
+  }
+
+
+Keep cumulative sales and buys separately nonnegative and time-consistent; net flow may be negative.
+Independent quantiles at several horizons do not define a joint trajectory. Use episode-, submission-family- and
+time-separated evaluation; exclude opposite seats of an episode from other splits. Raw replay commands and
+private state may label offline targets, but must not enter live features.
+
+
+
+
+Kaggriculture deterministic compiler design | Revised 21 September 2026                                            9
+10. Finished-product seller: rolling partial-sale DP
+Use one exact seller implementation for carrot, tomato, strawberry, melon, egg, milk and wool. Start with H6;
+retain H3 as a cheaper alternative. H6 means six known future demand-recovery events, not six turns. Include
+scheduled receipts, pickups, capacity and funding deadlines as additional events even when demand does not
+recover there.
+For a per-product subproblem, condition the state and feasible actions on the common resource ledger and
+current belief. Products share cash, shed capacity and up to ten order slots; independent optima must be joined
+and checked.
+
+  State: event k, available quantity q, market inventory I,
+         shared-resource constraints and current belief
+  Action: integer sale x, 0 <= x <= q
+  For each coherent rival scenario:
+    (own_cash, rival_cash, q_next, I_next, ledger_next) =
+      exact_stage(state, x, planned_flows, rival_path, demand)
+  V = max_legal_x E[own_cash - lambda * rival_cash
+                   + V_next(q_next, I_next, ledger_next, belief_next)]
+
+
+The stage advances worker flows, order slots and demand ticks in actual order through the next event. Do not
+subtract aggregate demand after trades that should have occurred after a recovery.
+Use lambda=1 as the tested margin-aware starting objective. Both item quotes are computed before either
+simultaneous trade changes inventory. Include list positions, per-unit repricing, rounding, actual fills and the
+$1-floor transition. A sale at the floor does not increase market inventory.
+Subtract total rival stage cash or an effect relative to a fixed reference, with consistent accounting. Do not subtract
+that same effect again in the continuation value. At the strategic boundary, use either dollar margin plus additional
+future margin, or win-value directly; never mix units or count current money twice.
+
+10.1 Horizon and residual value
+At an artificial horizon, value residual inventory together with future output, liquidity and commitments. It is neither
+automatically worthless nor identical across competing return plans. A receding forced-liquidation horizon can
+keep moving away; a seller with no liquidation pressure can defer too much.
+The tested prototype used a $0.25/item/hour holding penalty, a cash target and actual capacity checks. These are
+baseline settings to compare with a calibrated residual value, not universal economic constants. At the actual
+terminal state, unsold inventory and cargo have zero value.
+
+  Evidence boundary
+  The positive H6 replay result used current-stock DP, reactive receipts and next-DROP space reservation. It did
+  not implement the complete future-receipt/shared-budget DP specified here. Adopt H6 as the starting candidate;
+  do not claim the full recurrence or horizon is already proven optimal.
+
+
+
+10.2 Rolling execution
+Commit only the current action. Update from real market and own state next turn. Use delay regret to propose
+sale ordering, then check the complete order list against funding, capacity and simultaneous rival timing. Reserve
+space before a worker DROP; selling later that hour cannot undo destroyed overflow.
+
+
+
+
+Kaggriculture deterministic compiler design | Revised 21 September 2026                                               10
+11. Shed-return and optional-harvest scheduler
+Keep the small return frontier and exact worker solver. Change the value being optimized: compare complete
+feasible continuations conditional on the returns already selected.
+
+  G(candidate | selected_returns) =
+      Q(best_complete_continuation_with_candidate)
+    - Q(best_complete_continuation_without_candidate)
+
+
+The original same-asset early-availability difference remains a useful cheap screen only when both alternatives
+preserve the asset and all relevant future work. Do not cancel continuation value when wages, clipping, shed loss,
+input reuse, future stock or funding changes.
+
+11.1 Candidate deadlines
+• Before a required hire/input/land purchase, or another DayPlan funding deadline.
+• Before worker deposits would overflow, output would decay/clip, or terminal sale becomes impossible.
+• Before/after known demand recovery, or a plausible rival supply event.
+• At shared-trip or route-completion boundaries that make several returns cheaper together.
+
+11.2 Which products get harvested
+One-shot harvest follows its chosen age/yield commitment. Animal and ongoing-crop harvests are candidates for
+sale access, retained production or terminal value. Avoiding every clipped unit is not mandatory unless the plan
+explicitly preserves it; compare the extra wage against the saved value.
+Group nearby producers into return atoms: individual tiles, nearest 2/4/all, and useful shared-route batches. The
+nearest-distance menu is a warm start, not the only allowed geometry. Each atom carries product, quantity,
+dependencies, feasible deadlines and a cheap insertion estimate.
+
+11.3 Bounded Pareto search with exact evaluation
+
+  Start: complete funded incumbent, including mandatory returns
+  Generate: service/harvest/return/placement alternatives
+  Screen: legality, cheap route bounds and conditional value estimates
+  Exact-evaluate: routes + trading + shared ledger + next-state value
+  Keep: best complete candidate and useful nondominated alternatives
+  Stop: expansion/time budget; return the checked incumbent
+
+
+Use the exact nonlinear hire bill. Count additional purchases, route sharing, inventory and future farm state. Route
+slack can break ties or model execution risk, but do not invent a large dollar price for every step. Dominance is
+valid only for labels with compatible required work and continuation-relevant state.
+
+  Return scoring must improve beyond one-day liquidation
+  Coupled route/seller tests found that even successful biological and resource checks could select a poor
+  prescribed continuation. Extra zero/mean/double-flow gates did not fix that ranking reliably. Use a calibrated
+  next-state value or short responsive continuation; do not promote the tested naive liquidation score. Fixed
+  replay suffix losses are diagnostics, not proof of what an adaptive agent would do.
+
+
+
+
+Kaggriculture deterministic compiler design | Revised 21 September 2026                                            11
+12. Wheat: rolling inventory-control DP
+Wheat is an input, produced crop and tradable stock. Retain buy/sell/hold and same-day direction changes. The
+network chooses the herd, feeding and crop goals; the compiler derives the inventory operations that execute
+them.
+
+12.1 Event timeline
+• Exact wheat pickups and feed dependencies, plus usable carried supply.
+• Planned harvests, worker returns and any direct transfers.
+• Current market inventory, revealed demand and causal rival net-flow scenarios.
+• Cash and shared-capacity constraints from other purchases and returns.
+
+12.2 DP and exact reduction
+
+  State: event, wheat quantity, market inventory,
+         required shared-resource labels
+  Action: legal buy / sell / hold quantity
+  Hard: every planned pickup has material at its actual worker phase
+  Hard: required purchases and hires remain funded; shed/slots fit
+  Value: exact trading cash + conditional continuation inventory value
+
+
+Away from the $1 price plateau, with external flow between our trading stages and no rival trade during our
+quantity order, conservation gives a smaller subproblem:
+
+  I_h + q_h = A_h
+  F_h(q) = sum(j=1..q) price(A_h - j)
+  cash from changing stock q to z = F_h(q) - F_h(z)
+
+
+This gives O(HQ) work for the isolated fixed-flow stock problem using quantity-only transitions and prefix extrema.
+Use the general exact transition at the price floor or with simultaneous rival trading. Shared cash/capacity can
+require additional labels; the reduction does not remove those constraints.
+The identity matched 8,649 solo engine transactions; 200 small DP cases matched exhaustive search. A
+buy/resell round trip without intervening events earns zero. Those checks validate arithmetic, not an independent
+financially unconstrained wheat policy.
+
+12.3 Next-dawn terminal value
+Estimate a joint distribution of next-day requirements and prices from the intended herd, service, biological state
+and legal history. Let U_s(q) be projected usable supply after unsettled cargo/receipts and other reserved uses,
+without double counting. A starting approximation is:
+
+  TV(q, state) = E_s[
+      sell_value_s(max(0, U_s(q) - R_s))
+    - buy_cost_s(max(0, R_s - U_s(q))) ]
+
+
+Evaluate nonlinear costs inside the expectation at the corresponding market state, with liquidity and capacity
+constraints. Do not replace this with a universal herd-count reserve or a fixed buffer. Actual next-day buys can
+occur at different times; validate the approximation by its complete continuation. At true game end, unsold wheat
+has zero value and no next-dawn feed requirement.
+Do not add a raw wheat-sale head. If long-horizon bias persists, prefer a small policy adjustment to the inventory
+goal or continuation value, while the compiler still handles exact flows and funding.
+
+
+
+Kaggriculture deterministic compiler design | Revised 21 September 2026                                           12
+13. Fertilizer: rule-based inventory controller
+Keep a cheap controller as the V1 candidate generator. Fertilizer has no town/shop recovery, but shares cash and
+capacity with the rest of the farm. Collections can feed crops directly from worker cargo without visiting the shed.
+1. Derive fertilizer requirements before each FERTILIZE and PICKUP dependency, including direct carried supply.
+2. Add only collections and returns that can reach the required worker/location in time.
+3. Buy the remaining shortfall before its dependent worker phase, subject to funding and order capacity.
+4. Consider early sales of safe surplus as well as waiting. No general rule prefers the final collection of the day.
+5. Derive any next-day reserve from the provisional crop calendar and continuation value. Do not freeze an arbitrary
+   zero/four/eight-unit buffer.
+6. Preserve committed crop output first. Rank optional fertilizer uses by incremental net value and actual added
+   work, not a universal species priority.
+A profitable mean surplus rule can still miss required pickups. The shared ledger and full candidate check must
+reject or repair those failures. Speculative buy/resell is not a default; an unchanged-market round trip is not free
+profit.
+
+14. Other purchases and the hourly market-order scheduler
+14.1 Seeds, animals and land
+Buy at the latest feasible market phase before use, allowing earlier purchase for capacity, funding or slot reasons.
+Reconcile outstanding commitments with actual fills. Do not reproduce failed speculative replay requests as
+additional intended purchases. Seeds bought this turn become usable next turn; same-crop simultaneous PLANT
+demand must fit the available seeds, including requests on invalid tiles.
+
+14.2 Structures and clearing
+Use existing legal structures and animals before buying/building more. Clear only enough retained/retired space
+to support selected placements or profitable reuse. Include HARVEST, DIG/BUILD, delivery, PLACE/PLANT and
+required WATER as a complete dependency chain.
+
+14.3 Legal market order sequence each hour
+  Priority for candidate                      Required check
+  generation
+
+  Funding and dependent                       Place funding sells early enough for each dependent order; enforce exact prices,
+  purchases                                   materials and all preceding costs.
+
+  Capacity release                            Free space before the relevant worker deposit or purchase. Respect partial
+                                              PLACE versus destructive DROP.
+
+  High delay regret                           Compare rival order timing and demand events; recompute after combining
+                                              products.
+
+  Ordinary surplus / patient sales            Fit remaining slots without violating commitments; waiting remains a legal choice.
+
+Compute executable own sale quantities sequentially. Filling genuinely dead sale slots is a useful small
+candidate; blanket repacking of all purchases is not a safe default. Simulate the proposed list, including
+simultaneous quotes, rather than relying on a greedy priority sort alone.
+
+
+
+
+Kaggriculture deterministic compiler design | Revised 21 September 2026                                                        13
+15. Final solve, verification and bounded repair
+1. Take a complete candidate: exact entities, calendar, route, returns, purchases and conditional market choices.
+2. Recompute dependent input and trading schedules when exact worker timings change.
+3. Verify each intended worker job, seed demand, purchase, prefix cash balance, cargo/shed flow, capacity limit and
+   terminal return under the specified scenarios.
+4. Preserve the best fully checked incumbent. If a candidate fails, repair the affected dependencies within budget or
+   discard it.
+
+15.1 Repair by dependency and loss
+There is no universal fixed order of deletions. A return may fund required work; a fertilizer collection may supply a
+committed crop. Identify the failed constraint and retain its dependency chain.
+• Reorder or resize optional trades, choose a funding return, or change a safe input-purchase time.
+• Move service within a legal calendar, share a route, swap physical members or change legal placements while
+   preserving the intended output and retained farm.
+• Remove an optional return, collection or convenience only when its dependent benefits are genuinely optional and
+   the complete candidate improves.
+• If the semantic plan cannot be supported, request a revised plan from the policy/outer planner. Record any
+    executed violation explicitly and keep a legal fallback.
+Scenario verification is exact for the modeled sequence, not a guarantee about unknown rival actions. Repairs
+must remain available when an actual price or fill differs.
+
+16. Hourly reactive execution
+Keep the chosen worker schedule while its input, hire and capacity assumptions hold. Reconcile actual state
+before generating the next actions.
+
+  Component                                   Hourly behavior
+
+  Finished-product seller                     Use real shed/market state, causal history and remaining planned receipts.
+                                              Commit the current sale only.
+
+  Wheat DP                                    Recompute buy/sell/hold under remaining pickups, cash obligations, cargo and
+                                              capacity.
+
+  Fertilizer controller                       Update time-specific deficits/surplus from actual stock, usable collections and
+                                              committed crop jobs.
+
+  Asset purchases                             Reconcile remaining quantities and deadlines; retry only still-needed obligations.
+
+  Market allocator                            Join candidates into a checked legal list; update funding/capacity dependencies.
+
+  Worker execution                            Execute the route normally; trigger bounded suffix repair after a critical missed
+                                              hire, input or deposit.
+
+
+  Do not keep executing an invalid route
+  A hire is available next turn, not retroactively. A missed hire changes worker indices and downstream work; a
+  missing input can invalidate a whole service chain. Repair only when assumptions fail, rather than solving
+  routes gratuitously every hour. Pruned jobs must already be reflected in executor completion state.
+
+
+
+
+Kaggriculture deterministic compiler design | Revised 21 September 2026                                                            14
+17. Runtime design
+Keep all online searches anytime and bounded. Strength is the objective; latency and rollout throughput
+determine how much search is practical.
+• Use fixed contiguous state, reusable scratch buffers and direct typed engine calls.
+• Cache exact biological frontiers, price kernels and unchanged route subproblems; include all relevant inputs in
+   cache keys.
+• Generate event-based deadlines and skip impossible/forced choices. Batch cheap scoring before exact route and
+   scenario work.
+• Retain a complete incumbent before expensive work. Use deterministic expansion limits for comparisons and
+   soft/hard deadlines for deployment.
+• Spend more work on high-value or uncertain decisions; stop heavy tails safely. Allow bounded hourly repair when
+   a critical assumption fails.
+• Report p50/p95/p99/max complete-decision latency, coverage, fallback/timeout rate and full-game throughput,
+   together with quality.
+The existing eligible worker benchmark reported 98% coverage and 3.62 ms mean. A coupled return prototype
+measured 97 ms mean, 213 ms p95 and 324 ms maximum on 68 accepted ordinary development days, excluding
+full replay-suffix scoring. These are different workloads, not a latency guarantee. Offline teacher improvement
+should spend more than routine rollout compilation.
+
+18. Evidence that shaped the design
+  Tested finding                                                             Design consequence
+
+  New top-ten holdout: 80 perspectives / 68 episodes. H6 plus next-DROP      Use as the seller baseline. This was a
+  reservation gains $1,317 mean margin, 95% interval +$629 to +$2,083;       reduced current-stock prototype, not the
+  54 improve, 26 worsen.                                                     full shared-budget/receipt DP.
+
+  On 2,312 tested dawns: 68.9% equal or better margin; 80.6% within $50      Retain leader-workload decision
+  or better. Mean advantage +$45.58, interval +$21.80 to +$72.06.            advantage as a primary diagnostic.
+                                                                             These are not match win rates.
+
+  First test: 2,349 care commands removed with identical terminal cash.      Keep bundled service; prune
+  New top-ten routing test: 979 care jobs removed, three days save $563 in   proven-zero care before routing. Most
+  wages.                                                                     saved actions do not change hire count.
+
+  One-shot and ongoing calendar checks match the engine;                     Use exact small biological and
+  simultaneous-sale and wheat-potential checks pass.                         transaction DPs; count-only optima still
+                                                                             need routing.
+
+  Coupled return selectors and isolated input rules still fail               Improve continuation value and enforce
+  complete-continuation checks in some cohorts.                              shared resources; do not infer success
+                                                                             from local DP or route validity.
+
+Replay purchases are normalized to the originally completed non-output workload so extra cash cannot unlock
+failed retries. Those quantities define a supplied compiler task, not live forecast features. The cow-purchase
+collapse was primarily a replay artifact. Decisions use legal observations and own supplied plans; future rival
+commands/shops enter evaluation only. The second holdout was frozen after repairs, with episode-clustered
+intervals. Existing local agents remain responsive diagnostics, not gold-level evidence.
+
+
+
+
+Kaggriculture deterministic compiler design | Revised 21 September 2026                                                 15
+19. Implementation contracts to freeze
+Freeze exact mechanics and resource semantics first. Keep the strategic menus, model capacity, horizon and
+search budget configurable until their downstream tests justify a choice.
+
+  LegalObservation + History -> StateFeatures / RivalBelief
+  DayPlan + State -> RetainedGroups / Placements / PurchaseObligations
+  DayPlan + Biology -> ServiceCalendarAlternatives
+  WorkerSolver(Jobs, Placements, Returns, Inputs) -> RouteCandidate
+  PhaseLedger(Route, Orders, Scenario) -> Feasibility / ResultingState
+  OpponentForecast(Observation, History, Events) -> CoherentScenarios
+  SellerDP(Stock, Receipts, Forecast, SharedConstraints) -> TradeChoices
+  WheatDP(Flows, Forecast, SharedConstraints, TV) -> TradeChoices
+  FertilizerRule(Uses, Collections, SharedConstraints) -> TradeChoices
+  JointCandidateSearch -> CheckedIncumbent / Alternatives / Diagnostics
+  HourlyExecutor(ActualState, Commitments) -> Actions / RepairTrigger
+  TrainingTrace -> SampledPlan / ExecutedPlan / Repairs / Outcome
+
+
+Every returned candidate must state what it assumes and which commitments it completes. Keep cumulative
+worker returns distinct from shed inventory. Preserve exact order phases, separate seeds from shed capacity,
+and keep the true terminal horizon in every component.
+
+20. Recommended V1 freeze
+  Area                                        V1 choice
+
+  Animal output                               Direct species targets with retained groups, realizable escapes and idempotent
+                                              purchases.
+
+  Crop output                                 Preserve common age menus; attach explicit yield goals. Default melon
+                                              six-by-ten; allow explicit alternatives. Keep FULL/LEAN/RETIRE.
+
+  Animal service                              Bundled service; separate FEED/CARE jobs with proven-zero care pruning
+                                              before routing.
+
+  Crop service                                Exact small biological frontiers and joint fertilizer coverage; compare
+                                              route-relevant calendars.
+
+  Finished products                           Causal forecast plus one partial-sale implementation; H6 baseline, H3
+                                              alternative, exact shared ledger.
+
+  Returns / harvest                           Bounded search over complete candidates with exact routes and a calibrated
+                                              continuation score.
+
+  Wheat / fertilizer                          Inventory DP and time-specific reserve/surplus candidates under shared cash,
+                                              capacity and slots.
+
+  Execution                                   Reactive market decisions; normally fixed routes with bounded repair when
+                                              critical assumptions fail.
+
+  Performance                                 Complete incumbent, deterministic budgets, bounded heavy tails and measured
+                                              quality/throughput tradeoff.
+
+
+
+
+Kaggriculture deterministic compiler design | Revised 21 September 2026                                                        16
+20.1 Development and learning pipeline
+Preserve the semantic-policy/compiler hierarchy throughout training. The next steps develop and validate the
+agent around that interface, rather than treating the compiler specification as the whole pipeline.
+
+  Stage                                       Deliverable and promotion check
+
+  1. Complete execution                       Joint ledger, biological alternatives, worker solver and market candidates. Exact
+                                              engine parity and completed funded commitments, including terminal and
+                                              high-hire cases.
+
+  2. Semantic imitation                       Coherent labels from top players, separated by submission and strategy family.
+                                              Derive dependent purchases/materials; evaluate complete generated rollouts,
+                                              not token accuracy.
+
+  3. Our search improves our                  Warm-start multiday search from our policy and compiler. Improve feasible
+  states                                      continuations on states we actually reach; train policy and next-state value on
+                                              those improvements.
+
+  4. Outcome-based learning                   Fine-tune complete-game outcomes with a separate learner and protected
+                                              champion, old opponents and targeted weakness tests. Monitor joint action
+                                              probabilities/KL and forgetting.
+
+  5. Independent promotion                    Use unused episodes, time-forward and family-separated tests, plus responsive
+                                              opponents. Keep some opponents unanalyzed until final evaluation. Retuning
+                                              consumes a confirmation set.
+
+Use win/draw/loss for the ultimate objective. A dollar-margin surrogate can guide search, but arbitrary cash
+bonuses need not preserve expected win rate. If using potential-based shaping, use a consistent discount and
+terminal potential zero; record compiler repairs in learning traces.
+Our existing worker and multiday search work make this hybrid practical. JJ's latest work supports separating
+learning from champion promotion; Giovanni's order/time work and our BC failures support coordinated decoding
+and complete execution. Similar competitions provide successful planning, RL and imitation examples, rather than
+one universally winning architecture.
+
+  Final principle
+  The network chooses decisions whose value depends on the future farm. The compiler uses exact mechanics,
+  joint logistics and short-horizon market arithmetic to realize them. When a local choice changes future resources
+  or production, carry that resulting state into the value comparison. Keep the interface compact without hiding
+  consequential differences.
+
+
+
+Evidence and implementation references
+• Detailed tests, raw results and scope: work/sep21_compiler_tests/EMPIRICAL_REDESIGN.md.
+• Frozen corrected protocol and hashes: work/sep21_compiler_tests/v2/PROTOCOL.md and v2/FROZEN.json.
+• Original section-by-section audit, own research, teammates and primary competition sources:
+   work/sep21_design_review/REVIEW.md.
+• Latest 100 public notebooks and source links: public_knowledge/sep21_design_findings.md.
+• Rules and implementation boundary: prompts/game_rules.md and prompts/local_agent.md.
+Public replay logic and notebook policy blocks are evidence to learn from, not schedules to copy. Keep oracle
+information out of decisions, and distinguish fixed-workload counterfactuals, responsive diagnostics and actual
+competitive strength.
+
+
+
+Kaggriculture deterministic compiler design | Revised 21 September 2026                                                           17
+

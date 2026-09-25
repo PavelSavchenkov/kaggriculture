@@ -1,0 +1,18 @@
+#include "@AGENT_DIR@/@AGENT_HEADER@"
+#include "@EXPERIMENT_DIR@/opponents/opponent.hpp"
+#include <type_traits>
+
+namespace opponents {
+struct Opponent_@AGENT_NAME@ : Opponent {
+    @AGENT_TYPE@ agent;
+    void reset(const kag::agent::AgentInit& init) override { agent.reset(init); }
+    void act(const kag::agent::AgentObservation& o, const kag::agent::DecisionBudget& b, kag::Action& a) override {
+        agent.act(o, b, a);
+    }
+    std::unique_ptr<Opponent> clone() const override {  // nullptr: this agent cannot be copied
+        if constexpr (std::is_copy_constructible_v<@AGENT_TYPE@>) return std::make_unique<Opponent_@AGENT_NAME@>(*this);
+        else return nullptr;
+    }
+};
+std::unique_ptr<Opponent> make_@AGENT_NAME@() { return std::make_unique<Opponent_@AGENT_NAME@>(); }
+}
