@@ -1,0 +1,49 @@
+--- ../bc_m3min/dc11/compiler.cpp	2026-09-29 23:43:31.812252935 +0100
++++ dc11/compiler.cpp	2026-09-30 00:37:13.944016773 +0100
+@@ -1107,6 +1107,26 @@
+             }
+         }
+     }
++    // landfirst: the land alone (today's other new entities dropped) before the NoLand level. A planting or an animal skipped today
++    // is asked again tomorrow; a slipped quadrant cascades (m1 league seed 505 vs D: Q2 d6 -> d8, Q3 d8 -> d10, and the network
++    // never asks Q4 after day 10: -16.5k).
++    if (plan.status != CompileStatus::Ok && intent.buy_land && options.land_first) {
++        DayIntent only = intent;
++        int dropped = 0;
++        for (int c = 0; c < N_CROPS; ++c)
++            while (only.new_crop[c] > 0) drop_crop(schema, only, c), ++dropped;
++        for (int a = 0; a < N_ANIMALS; ++a)
++            while (only.new_animal[a] > 0) drop_animal(schema, only, a), ++dropped;
++        if (dropped > 0) {
++            Plan p = level_plan(only, KeepAll);
++            if (p.status == CompileStatus::Ok) {
++                p.trims = dropped;
++                p.fallback = std::max(p.fallback, int(NoNewEntities));  // never "complete": the agent's larger-intent tries must not take it
++                p.reason += "land first;";
++                plan = p;
++            }
++        }
++    }
+     if (plan.status != CompileStatus::Ok && intent.buy_land) plan = level_plan(intent, NoLand);
+     // Trims: one unit of the most expensive new entity at a time.
+     if (plan.status != CompileStatus::Ok) {
+@@ -1396,6 +1416,7 @@
+         else if (k == "saleslots") o.sale_slots = int(value);
+         else if (k == "nighttrim") o.night_trim = value != 0;
+         else if (k == "survivalfloor") o.survival_floor = value != 0;
++        else if (k == "landfirst") o.land_first = value != 0;
+         else if (k == "quad_radius") o.q4_radius = int(value);
+         else if (k == "quad_rounds") o.q4_rounds = int(value);
+         else if (k == "sites") o.site_candidates = int(value);
+--- ../bc_m3min/dc11/compiler.hpp	2026-09-29 23:43:31.811998950 +0100
++++ dc11/compiler.hpp	2026-09-30 00:27:30.034246349 +0100
+@@ -154,6 +154,9 @@
+     // landtrim (Weaknesses session): an unfunded land day trims up to this many new entities with the
+     // land kept before the NoLand fallback (which drops the land and every entity on it).
+     int land_trims = 0;
++    // landfirst=1 (dc12 m4, Sep 30): when the day's full ask is unfunded and it includes land, the land alone (other new entities
++    // dropped) is tried before the NoLand level.
++    bool land_first = false;
+     // cropfirst=N: on days 0..N-1 trims drop new crops before new animals (default 1: day 0 only), so an early cow survives the
+     // funding trims at the cost of seeds (Imitation's day-3 cow; the copy-only probe cropfirst=5 on v17main: +89, SE 326).
+     int crop_first = 1;

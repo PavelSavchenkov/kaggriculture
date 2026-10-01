@@ -1,0 +1,10 @@
+# model file in the agent folder  ->  file in final_handoff/  sha256
+model/model.bin  ->  weights/network/v17g6ft5/model.bin  689fbf06727f612702c5f5ee4d664994b7f45b3ddb0019ab23d1a98beb45b272
+model/model.bin.forecast_tf  ->  weights/forecasters/fc2/seed0.bin  47630b4a0e8b86a4ad0cf4dec1b70f4c5e2df962f8578f11c207484869359d22
+model/model.bin.forecast_tf.2  ->  weights/forecasters/fc2/seed1.bin  7cbf9ae56ac71e7ef1aa29f3910b513e51cbad647d5702ddf24ac06b3ac936c6
+model/model.bin.forecast_tf.3  ->  weights/forecasters/fc2/seed2.bin  4abfb97e9bc6c3ada96a5b7214be59ea132fd4dd63a74f6f1520627db7c4017a
+model/model.bin.forecast_tf_next  ->  weights/forecasters/next_morning_head/forecast_tf_next.bin  57c5d7268a9d44ac188a94cf672b21a47ae0d8870208fdcc382d73091cd6171d
+model/members/mw2k.bin  ->  weights/network/members/mw2k.bin  1a6ec48f4f432510d5b7cecfa20385d2067899f02501c521764843ef47712f6e
+model/members/mw5k.bin  ->  weights/network/members/mw5k.bin  814d74a6543d821e148d357317519b17709428cfabdde8bbc377aa6845584dbb
+model/members/sw100.bin  ->  weights/network/members/sw100.bin  ba7ba4646f10cdd85b7c33bc4d62f6344fb19c7a5055b1b67ac63db81c091b0c
+model/members/w384b.bin  ->  weights/network/members/w384b.bin  8a4e1a27988f1fabde005f31d01b1423985ffa2f6605acfbda39866d270392fe

@@ -1,0 +1,12 @@
+--- a/dc11/compiler.cpp	2026-09-30 09:53:26.104481267 +0100
++++ b/dc11/compiler.cpp	2026-09-30 09:53:26.105181887 +0100
+@@ -1038,7 +1038,8 @@
+             int units[N_PRODUCTS]{}, zero[N_PRODUCTS]{};
+             if (options.sell_tracker) options.sell_tracker->update(dawn);  // the executor's own update this hour is then a no-op
+             bcsell::sell_units(*options.sell_model, dawn, history, zero, options.sell_seed, units, true, options.sell_tracker);
+-            for (int p = 0; p < N_PRODUCTS; ++p) sell[p] = (p == STRAWBERRY || p == EGG || p == MILK || p == WOOL) ? std::min<int>(units[p], dawn.own.shed[p]) : 0;
++            // as the executor at h0: the model's thin lots (raised to the DP's when tonight's room binds), the DP's other products
++            for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)}) sell[p] = std::max(sell[p], std::min<int>(units[p], dawn.own.shed[p]));
+         }
+         int& n = options.sale_slots == 2 || options.sale_slots == 4 ? base.sale_slots : base.sale_want;
+         for (int p = 0; p < N_PRODUCTS; ++p) n += sell[p] > 0;

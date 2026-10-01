@@ -1,0 +1,689 @@
+--- a/dc11/compiler.cpp
++++ b/dc11/compiler.cpp
+@@ -265,13 +265,18 @@
+                 ++feeds;
+                 service.priority = g.unfed >= 1 ? P_SURVIVAL : P_OUTPUT;
+                 service.value = float(g.unfed >= 1 ? ANIMALS[g.species].cost : 30);
++                if (options.feed_value && g.unfed < 1) {  // feedvalue: the banked / protected product (a new bonus is paid later: 0.8)
++                    const bool tonight = since >= 0 && since % ANIMALS[g.species].interval == 0;
++                    const double bank = (tonight ? g.bonus : 0) + (int(m) < in.care[i] ? 0.8 : 0);
++                    service.value = float(std::max(30.0, bank * price(product)));
++                }
+             }
+             if (int(m) < in.care[i] && !survival) {
+                 service.steps[service.n++] = {OP_CARE, 0};
+                 if (service.n == 1) service.value = 20;
+             }
+             const bool cheap = options.product_min > 0 && day < LAST_DAY - 1 && price(product) < options.product_min * MARKET[product].base;
+-            if ((int(m) < in.collect[i] || capped) && !cheap) {
++            if ((int(m) < in.collect[i] || capped || (options.collect_all && g.held > 0)) && !cheap) {
+                 output.harvest_at = int8_t(output.n);
+                 output.steps[output.n++] = {OP_HARVEST, 0};
+                 output.product = int8_t(product);
+@@ -573,7 +578,6 @@
+     Config config;
+     Sim sim = sim_from_observation(dawn, config);
+     Executor executor;
+-    struct Quiet { Quiet() { g_sell_quiet = true; } ~Quiet() { g_sell_quiet = false; } } quiet;  // DC11_AUDIT: live hours only
+     Options simulated = options;
+     simulated.market.intraday = nullptr;  // no opponent sales of today exist in this simulation
+     simulated.market.carry_target = nullptr;
+@@ -727,7 +731,6 @@
+     Config config;
+     Sim sim = sim_from_observation(dawn, config);
+     Executor executor;
+-    struct Quiet { Quiet() { g_sell_quiet = true; } ~Quiet() { g_sell_quiet = false; } } quiet;  // DC11_AUDIT: live hours only
+     Options simulated = options;
+     simulated.market.intraday = nullptr;
+     simulated.market.carry_target = nullptr;
+@@ -872,8 +875,9 @@
+     for (int d : out.dropped) (d >= 0 && out.stops[d].priority == P_EXTRA && out.stops[d].entity < 0 ? plan.skipped : plan.dropped) += 1;
+     plan.moves = out.moves, plan.unit_actions = out.actions, plan.waits = out.waits;
+     auto collect = [](const Stop& st) { return st.group >= 1000 && st.group < 3000 && st.product >= 0; };
+-    for (const Stop& st : pb.stops) plan.collects += collect(st);
+-    for (int d : out.dropped) plan.collects_dropped += d >= 0 && collect(out.stops[d]);
++    for (const Stop& st : pb.stops) plan.collects += collect(st), plan.collects_p[std::max<int>(0, st.product)] += collect(st);
++    for (int d : out.dropped)
++        if (d >= 0 && collect(out.stops[d])) ++plan.collects_dropped, ++plan.collects_dropped_p[out.stops[d].product];
+     int seen[BOARD * BOARD]{};
+     for (const auto& route : out.routes)
+         for (int k = 0, prev = -1; k < int(route.size()); ++k) {
+@@ -1128,6 +1132,16 @@
+             if (!expected_ok && funded(dawn, history, plan, options, expected).ok) expected_ok = true, expected_plan = plan;
+             plan.status = CompileStatus::Unfunded;
+             if (f.reserve || f.fail_hour < 0) return plan;
++            if (f.fail_op == M_BUY_LAND && options.land_cash > 0 && b.pb.cash_until < 0 && f.fail_hour < options.land_cash &&
++                options.land_cash < b.pb.last_hour - 1) {  // landcash: fund the land by T from the day's harvests
++                set_land_hour(b, dawn, options.land_cash);
++                for (int p = 0; p < N_PRODUCTS; ++p)
++                    for (int h = 0; h < options.land_cash; ++h) b.pb.gain[p][h] += 0.5 * dawn.market.prices[p];
++                b.pb.cash_until = options.land_cash;
++                log += "landcash " + std::to_string(options.land_cash) + ";";
++                --repair;
++                continue;
++            }
+             if (f.fail_op == M_BUY_LAND) {  // cashsell: the land at its first affordable hour
+                 if (!options.cash_sell || land_moves++ >= 2) return plan;
+                 const int at = land_afford_hour(dawn, history, plan, options, stress, f.fail_hour);
+@@ -1323,6 +1337,14 @@
+     // survivalfloor: the last level never leaves an idle day. An unfunded survival plan (harvests, survival water, feeds capped by the
+     // cash budget) still collects and sells today's products and feeds what the shed and the cash allow; the executor's guards drop
+     // the purchases it cannot pay. Idle, the animals go unfed and escape after two days (a $10 dawn became a dead farm, -186k).
++    // nofund=D (probe): on days 1..D the full ask runs unfunded (the executor drops the orders it cannot pay): the value ceiling of
++    // better early cash planning (rung 1: days 2-4 plant 1-2 fewer than M&M's intent; day 3 falls back on 88% of dawns).
++    if (options.no_fund >= dawn.day && dawn.day >= 1 && level == KeepAll && have_plain) {
++        plain.status = CompileStatus::Ok;
++        plain.stress_funded = false;
++        plain.reason = log + "no fund;";
++        return plain;
++    }
+     if (options.survival_floor && level == SurvivalOnly && have_plain) {
+         plain.status = CompileStatus::Ok;
+         plain.stress_funded = false;
+@@ -1406,7 +1428,7 @@
+             Plan p = level_plan(only, KeepAll);
+             if (p.status == CompileStatus::Ok) {
+                 p.trims = dropped;
+-                p.fallback = std::max(p.fallback, int(NoNewEntities));  // never "complete": the agent's larger-intent tries must not take it (Day compiler fix)
++                p.fallback = std::max(p.fallback, int(NoNewEntities));  // never "complete": the agent's larger-intent tries must not take it
+                 p.reason += "land first;";
+                 plan = p;
+             }
+@@ -1585,6 +1607,23 @@
+                 const int today = plan_.receipts[plan_.hours - 1][p] + plan_.night_items[p];  // today's production, as tomorrow's estimate
+                 market.hold_supply[p] += plan_.night_items[p] + today / 2;  // tonight's pockets + half a day's output by tomorrow noon
+             }
++    if (options_.hold_sched && obs.day < LAST_DAY - 1) {  // holdsched: tomorrow's own supply from the production schedules
++        for (int p = 0; p < N_PRODUCTS; ++p)
++            if (p != WHEAT) market.hold_supply[p] += plan_.night_items[p];
++        auto tonight = [&](int age, int first, int interval) { return age + 1 >= first && (age + 1 - first) % interval == 0; };
++        for (int y = 0; y < BOARD; ++y)
++            for (int x = 0; x < BOARD; ++x) {
++                const Tile& t = obs.self().tiles[y][x];
++                const int age = obs.day - t.planted_day;
++                if (t.has_animal) {
++                    const AnimalDef& a = ANIMALS[t.what - GOOSE];
++                    if (t.yield_units < a.max_held && tonight(age, a.first_yield_day, a.interval)) ++market.hold_supply[a.product];
++                } else if (t.kind == T_PLANT && CROPS[t.what].ongoing) {
++                    const CropDef& cd = CROPS[t.what];
++                    if (t.yield_units < cd.max_yield && tonight(age, cd.first_yield_day, cd.interval)) ++market.hold_supply[t.what];
++                }
++            }
++    }
+     if (options_.market.next_morning && obs.day < LAST_DAY - 1) options_.market.next_morning(obs, market.rival, market.hold_supply);  // local addition
+     field_flow(obs, options_.market.field_flow, market.rival);  // fieldflow (dc12)
+     if (obs.day >= LAST_DAY && !options_.market.oracle)  // day 29: the opponent's stock reaches the market now
+@@ -1618,15 +1657,6 @@
+     if (timing && charge == 0)
+         for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)})
+             if (!flag[p]) sell[p] = 0;
+-    static const bool cash_log = std::getenv("DC11_CASHLOG") != nullptr;  // local (Imitation): units sold only to cover a cash shortfall
+-    if (cash_log && short_of_cash && !g_sell_quiet) {  // live executor only (not the compiler's executor simulations)
+-        int plain[N_PRODUCTS]{};
+-        choose_sales(obs, plan_.receipts, plan_.hours, market, reserve, night_room, plain, nullptr, nullptr);
+-        std::fprintf(stderr, "cashsell p%d d%d h%d money %.0f need %.0f |", obs.player, obs.day, h, obs.self().money, need[0]);
+-        for (int p = 0; p < N_PRODUCTS; ++p)
+-            if (sell[p] != plain[p]) std::fprintf(stderr, " %d:%d>%d@%d", p, plain[p], sell[p], int(market_price(p, obs.market.inventory[p])));
+-        std::fprintf(stderr, "\n");
+-    }
+     if (h == 0) sell[WHEAT] = std::max(sell[WHEAT], std::min<int>(plan_.dawn_wheat_sale, obs.own.shed[WHEAT]));
+     if (options_.band_sell && obs.day < LAST_DAY && h + 1 < plan_.hours)  // bandsell: price-responsive rule seller
+         for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)}) {
+@@ -1915,6 +1945,8 @@
+         else if (k == "achieve") o.achieve = value != 0, o.achieve_mode = int(value), o.skip_water = o.skip_water || o.achieve;
+         else if (k == "seedlag") o.seed_lag = value != 0;
+         else if (k == "feedcost") o.feed_cost = value;
++        else if (k == "feedvalue") o.feed_value = value != 0;
++        else if (k == "landcash") o.land_cash = int(value);
+         else if (k == "sellmodel") o.sell_model_on = value != 0, o.sell_model_mode = int(value);
+         else if (k == "sellmodellast") o.sell_model_last = int(value);
+         else if (k == "sellmodelfirst") o.sell_model_first = int(value);
+@@ -1923,9 +1955,13 @@
+         else if (k == "affordall") o.afford_all = value != 0;
+         else if (k == "bestvariant") o.best_variant = value != 0;
+         else if (k == "holdown") o.hold_own = value != 0;
++        else if (k == "holdsched") o.hold_sched = value != 0;
+         else if (k == "holdsteps") o.market.hold_steps = int(value);
++        else if (k == "holdbest") o.market.hold_best = value != 0;
++        else if (k == "collectall") o.collect_all = value != 0;
+         else if (k == "landfirst") o.land_first = value != 0;
+         else if (k == "landpull") o.land_pull = int(value);
++        else if (k == "nofund") o.no_fund = int(value);
+         else if (k == "survivalfloor") o.survival_floor = value != 0;
+         else if (k == "response") o.market.response = value != 0;
+         else if (k == "stockcap") o.market.stock_cap = value != 0;
+--- a/dc11/compiler.hpp
++++ b/dc11/compiler.hpp
+@@ -95,7 +95,7 @@
+     // gives early deposits no value; early deposits pay only with early selling, so this key is judged with an early seller.
+     double dep_credit = 0;
+     int dep_hour = 8;
+-    bool dep_fert = false;
++    bool dep_fert = false;  // depfert=1: fertilizer deposits earn the credit too (the early days' cash; M&M sells it by h8 on day 3)
+     // cashseeds=0 (dc12): with cashsell, a short seed order fails the funding check again (default 1: tolerated, the executor buys
+     // what cash covers and skips the unseeded plantings). The tolerance lets animal purchases crowd out seeds silently (wide bed:
+     // cashsell funds more geese, 7 fewer strawberries); without it the ladder trims by its order instead.
+@@ -118,6 +118,14 @@
+     // feedcost=w (dc12): the router charges w x the wheat price per feed-wheat unit picked up when the shed's wheat is bought
+     // (Problem::wheat_buy_cost), so routes feed from the day's harvested wheat when they can (M&M's day 3).
+     double feed_cost = 0;
++    // landcash=T (dc12): on the first land shortfall, the land goes to hour T, deposits before T earn half their price on top and
++    // the router's cash_pass moves valuable harvests with a shed stop before T (M&M sells the day-10 melons by h8-11 and buys the land
++    // at h9; our routes harvested one melon plant every 2-3 h and the land waited to h11-21). Later shortfalls move it as before.
++    int land_cash = 0;
++    // feedvalue=1: a feed stop (unfed yesterday: the animal's cost, as before) is worth the product it banks or protects: feed + care
++    // banks +1 for the next production, and tonight's production pays the banked bonus only if fed today (rules). The flat $30 was
++    // below the wheat price that feedcost charges, so routine feeds were dropped (unfed +19% d6-11, 760 F2R -2.7k).
++    bool feed_value = false;
+     // sellmodel=1 (dc12, I1): strawberry / egg / milk / wool are sold as BC's learned M&M seller samples (<model>.sellmodel, loaded
+     // by the agent; dc11_local/sellmodel.hpp) instead of the DP's lots; tonight's night-room sales and this hour's purchase cover
+     // stay on top, and the last day stays the DP's (liquidation).
+@@ -147,9 +155,19 @@
+     // makes the held units the marginal ones: sale_value(inventory + own supply, held). Audit M5: the hold value ignored our own
+     // next-day output; Imitation: half of M&M's price lead is which days it sells on.
+     bool hold_own = false;
++    // holdsched=1 (dc12): the hold value counts our own supply that reaches the market tomorrow from the production schedules
++    // (tonight's pocket carry + one unit per animal / ongoing crop that produces tonight, below its held cap). Our output pulses
++    // (cows every 2 days, sheep every 3, in purchase batches) and the seller sold them through: made CV milk 1.11 / wool 1.65 vs
++    // M&M 0.95 / 1.22 (days 18-24, detrended); holdown used today's output as tomorrow's, which is wrong for pulses.
++    bool hold_sched = false;
++    // collectall=1 (dc12 probe): every animal holding product is collected (the network's collect intent gates it otherwise).
++    // Our farm creates evenly but the intent collects cohorts in batches (days 18-24: 28% of cow holders a day, 3.4 units each;
++    // router drops none), so collections pulse (milk CV 0.68 created -> 1.16 collected; M&M 0.82 -> 1.02) and the seller sells
++    // the pulses through. With collectall the shed is the buffer and the seller alone times the sales (nighttrim guards the room).
++    bool collect_all = false;
+     // survivalfloor=1 (dc12): when every level is unfunded, the SurvivalOnly level's routed plan is executed anyway instead of an idle
+     // day (idle: the animals go unfed and escape after two days; seat-swap game 114911253: $10 at dawn day 9 -> 13 escapes, -186k).
+-    bool survival_floor = false;  // depfert=1: fertilizer deposits earn the credit too (the early days' cash; M&M sells it by h8 on day 3)
++    bool survival_floor = false;
+     // reserve=0 (Sep 29, v95): no next-dawn reserve in the funding check (end assets >= animals x wheat price x 1.2 + 30). With
+     // cashsell the dawn sale finances tomorrow's feed; the reserve made the day-6 wave trim a cow and end with cash unspent.
+     bool dawn_reserve = true;
+@@ -254,6 +272,7 @@
+     // the plain plan, routed with the land at h0 (its crew plants the new tiles instead of depositing sellable stock), so it was
+     // late (M&M states: our land 1.5-3 h after M&M's with the same dawn cash).
+     int land_pull = 0;
++    int no_fund = 0;  // nofund=D (probe): days 1..D run the full ask unfunded (compile_level)
+     // cropfirst=N: on days 0..N-1 trims drop new crops before new animals (default 1: day 0 only), so an early cow survives the
+     // funding trims at the cost of seeds (Imitation's day-3 cow; the copy-only probe cropfirst=5 on v17main: +89, SE 326).
+     int crop_first = 1;
+@@ -279,6 +298,7 @@
+     double skipped_seed = 0;           // achieve: seed value of the plantings the funding simulation's executor skipped (seeds short)
+     int skipped = 0;                   // optional work not done (extra fertilizer collections)
+     int collects = 0, collects_dropped = 0;  // diagnostics: animal product collections bound, not served
++    int collects_p[N_PRODUCTS]{}, collects_dropped_p[N_PRODUCTS]{};  // the same by product (DC12_COLLECTLOG)
+     int visits = 0, tiles_worked = 0, revisits = 0;  // diagnostics: tile visits, tiles, tiles visited twice or more
+     int trims = 0;
+     int choice = 0;                    // plan menu: chosen alternative (0: the base plan)
+--- a/dc11/router.cpp
++++ b/dc11/router.cpp
+@@ -884,6 +884,46 @@
+         return improved;
+     }
+ 
++    // landcash: a valuable harvest (not wheat) moved together with a shed stop right after it, so its units reach the shed before
++    // pb.cash_until and fund the land; evaluated as one move (removal + insertion of both).
++    bool cash_pass() {
++        if (pb.cash_until <= 0) return false;
++        bool improved = false;
++        int16_t buf[MAX_ROUTE];
++        for (int s = 0; s < int(st.stops.size()); ++s) {
++            const Stop& S = st.stops[s];
++            const int r0 = st.where[s];
++            if (r0 < 0 || S.shed || S.product < 0 || S.product == WHEAT || S.units * S.unit_value < 300) continue;
++            const Route saved = st.routes[r0];
++            erase_stop(s);
++            route_cost(st.routes[r0]);
++            const double removal = st.routes[r0].cost - saved.cost;
++            double best = -1e-6;
++            int best_r = -1, best_q = -1;
++            for (int r = 0; r < int(st.routes.size()); ++r) {
++                const Route& R = st.routes[r];
++                if (R.n + 2 >= MAX_ROUTE) continue;
++                for (int q = 0; q <= R.n; ++q) {
++                    std::copy_n(R.ids, q, buf);
++                    buf[q] = int16_t(s), buf[q + 1] = int16_t(shed_probe);
++                    std::copy_n(R.ids + q, R.n - q, buf + q + 2);
++                    const double d = evaluate(r, buf, R.n + 2, q).cost - R.cost + removal;
++                    if (d < best) best = d, best_r = r, best_q = q;
++                }
++            }
++            if (best_r >= 0) {
++                insert_at(best_r, best_q, s);
++                insert_at(best_r, best_q + 1, new_shed_stop());
++                route_cost(st.routes[best_r]);
++                improved = true;
++            } else {
++                st.routes[r0] = saved;
++                st.where[s] = r0;
++            }
++        }
++        return improved;
++    }
++
+     bool reverse_pass() {
+         bool improved = false;
+         int16_t buf[MAX_ROUTE];
+@@ -975,6 +1015,7 @@
+                 timed(5, [&] { return member_pass(); });
+                 timed(6, [&] { return shed_pass(); });
+                 timed(7, [&] { return entity_pass(); });
++                timed(7, [&] { return cash_pass(); });
+                 ++route_prof[8];
+                 if (!any) break;
+                 continue;
+@@ -987,6 +1028,7 @@
+             any |= member_pass();
+             any |= shed_pass();
+             any |= entity_pass();
++            any |= cash_pass();
+             if (!any) break;
+         }
+     }
+--- a/dc11/router.hpp
++++ b/dc11/router.hpp
+@@ -99,6 +99,9 @@
+     // Feeding harvested wheat already forgoes its deposit value; without this, bought wheat was free and routes fed early with
+     // bought wheat and sold the day's harvest (M&M's day 3: feeds after the harvests, no wheat bought).
+     double wheat_buy_cost = 0;
++    // landcash (dc12): deposits before this hour fund today's land (credited in gain); the search then also tries moving a valuable
++    // harvest together with a shed stop right after it (cash_pass), a move no single relocate / shed insertion finds. -1: off.
++    int cash_until = -1;
+     double animal_morning = 0;             // regime M: cost per hour an animal stop starts after hour 11 (morning animal block)
+     double return_cost = 1;                // (x the trip's worker turns)
+     int first_wave = 10;                   // new hires ordered in the first hour (the rest one hour later)
+--- a/dc11/market.cpp
++++ b/dc11/market.cpp
+@@ -338,6 +338,7 @@
+ // Net market inventory removed before each step: demand minus expected opponent sales.
+ void fill_flow(const agent::AgentObservation& obs, const double rival[HOURS][N_PRODUCTS], int p, int remaining,
+                ProductSale& sale) {
++    if (sale.hold_best) sale.hold_steps = HOURS;
+     int demand[2 * HOURS]{};
+     demand_by_step(obs, p, remaining + sale.hold_steps, demand);
+     double net = 0;
+@@ -350,6 +351,16 @@
+     }
+     for (int k = 0; k < remaining + sale.hold_steps && k < 2 * HOURS; ++k) sale.step_demand[k] = demand[k];
+     for (int k = 0; k < sale.hold_steps; ++k) sale.future_rival[k] = int(std::lround(std::max(0.0, rival[(obs.step + remaining + k) % HOURS][p])));
++    if (sale.hold_best) {  // tomorrow's lowest expected inventory: the most net demand since tonight
++        int best = 1;
++        for (int k = 2; k <= HOURS; ++k)
++            if (sale.cum_demand[remaining + k] > sale.cum_demand[remaining + best]) best = k;
++        sale.hold_steps = best;
++        static const bool log = std::getenv("DC12_HOLDLOG") != nullptr;
++        if (log && sale.total > 0)
++            std::fprintf(stderr, "holdlog d%d h%d p%d remaining %d best %d net12 %d net_best %d\n", obs.day, obs.hour, p, remaining, best,
++                         sale.cum_demand[remaining + std::min(12, HOURS)] - sale.cum_demand[remaining], sale.cum_demand[remaining + best] - sale.cum_demand[remaining]);
++    }
+ }
+ }
+ 
+@@ -407,6 +418,7 @@
+     field_flow(dawn, options.field_flow, m.rival);
+     m.hold_discount = options.hold_discount;
+     m.hold_steps = std::clamp(options.hold_steps, 1, HOURS);
++    m.hold_best = options.hold_best;
+     m.rival_weight = options.rival_weight;
+     m.rival_night = options.rival_night;
+     m.tick_share = options.tick_share, m.tick_dawn = options.tick_dawn, m.tick_egg = options.tick_egg;
+@@ -444,6 +456,7 @@
+     sale.inv0 = dawn.market.inventory[p];
+     sale.hold_discount = market.hold_discount;
+     sale.hold_steps = market.hold_steps;
++    sale.hold_best = market.hold_best;
+     sale.hold_supply = market.hold_supply[p];
+     sale.terminal = dawn.day == LAST_DAY;
+     sale.rival_weight = sale.terminal ? 0 : market.rival_weight;
+@@ -529,8 +542,6 @@
+ }
+ }
+ 
+-thread_local bool g_sell_quiet = false;  // DC11_AUDIT (local, Imitation)
+-
+ thread_local bool live_seller = false;
+ 
+ void choose_sales(const agent::AgentObservation& obs, const int incoming[HOURS][N_PRODUCTS], int hours, const DayMarket& market,
+@@ -553,7 +564,7 @@
+         sale.inv0 = obs.market.inventory[p];
+         sale.hold_discount = market.hold_discount;
+         sale.hold_steps = market.hold_steps;
+-    sale.hold_steps = market.hold_steps;
++        sale.hold_best = market.hold_best;
+         sale.hold_supply = market.hold_supply[p];
+         sale.terminal = obs.day == LAST_DAY;
+         const int now_received = h > 0 ? incoming[h - 1][p] : 0;
+@@ -737,28 +748,6 @@
+             }
+             sell[p] = best_lots[0];
+         }
+-    // DC11_AUDIT=<file> (local, Imitation): the market model behind each live hourly decision, for strawberries / eggs / milk / wool:
+-    // units sold now, the plan per remaining hour, the opponent's forecast units per hour, the predicted market inventory before each
+-    // hour's sales (our planned units included) and the per-unit value of a unit held tonight.
+-    static std::FILE* audit = std::getenv("DC11_AUDIT") ? std::fopen(std::getenv("DC11_AUDIT"), "w") : nullptr;
+-    if (audit && !g_sell_quiet)
+-        for (const auto& sale : sales) {
+-            const int p = sale.product;
+-            if (p != STRAWBERRY && p != EGG && p != MILK && p != WOOL) continue;
+-            int s = 0;
+-            std::string plan, rival, path;
+-            for (int k = 0; k < sale.remaining; ++k) {
+-                path += (k ? ";" : "") + std::to_string(sale.inv0 + s - sale.cum_demand[k]);
+-                plan += (k ? ";" : "") + std::to_string(sale.plan_lots[k]);
+-                rival += (k ? ";" : "") + std::to_string(sale.rival_units[k]);
+-                s += sale.plan_lots[k];
+-            }
+-            const int hold_inventory = sale.inv0 + s - sale.cum_demand[sale.remaining + HOURS / 2] + sale.hold_supply;
+-            std::fprintf(audit, "%d,%d,%d,%d,%d,%d,%d,%d,%.1f,%.1f,%s,%s,%s\n", obs.player, obs.day, h, p, sale.inv0, obs.own.shed[p],
+-                         sale.total, sell[p], charge, sale.terminal ? 0.0 : sale.hold_discount * market_price(p, hold_inventory),
+-                         plan.c_str(), rival.c_str(), path.c_str());
+-            std::fflush(audit);
+-        }
+     if (market.tick_share > 0 && obs.day < LAST_DAY && h < hours - 1)  // dc12 ticksell (MarketOptions::tick_share)
+         for (int p : {int(STRAWBERRY), int(MILK), int(WOOL)}) {
+             const int now_received = h > 0 ? incoming[h - 1][p] : 0;
+--- a/dc11/market.hpp
++++ b/dc11/market.hpp
+@@ -59,6 +59,7 @@
+     int step_demand[2 * HOURS]{};
+     int future_rival[HOURS]{};
+     int hold_steps = HOURS / 2;  // holdsteps: steps into tomorrow at which units held tonight are priced (the lot's reference hour)
++    bool hold_best = false;      // holdbest: fill_flow sets hold_steps to tomorrow's step with the lowest expected inventory
+     // dc12 response (MarketOptions::response): the opponent's expected units at a later step scale with the price level our own
+     // sales leave (level = inventory - level_ref, the last day's mean inventory), quasi-statically in our units sold s.
+     bool response = false;
+@@ -71,7 +72,7 @@
+     bool keep_policy = false;
+     std::vector<int> policy;
+     double evaluate(const int* lots) const;
+-    int inventory_at(int k, int s) const { return response ? inv0 + s - cum_s[size_t(s) * (remaining + HOURS / 2 + 1) + k] : inv0 + s - cum_demand[k]; }
++    int inventory_at(int k, int s) const { return response ? inv0 + s - cum_s[size_t(s) * (remaining + hold_steps + 1) + k] : inv0 + s - cum_demand[k]; }
+     int rival_at(int k, int s) const { return response ? rival_s[size_t(s) * remaining + k] : rival_units[k]; }
+     int solve(double charge, int& first);  // returns units left unsold; `first` = units sold now
+     bool solve_floor(double charge, int& first, int& left);  // false: the floor is unreachable or the case too big
+@@ -94,6 +95,7 @@
+     int hold_supply[N_PRODUCTS]{};
+     double hold_discount = 0.95;
+     int hold_steps = HOURS / 2;  // MarketOptions::hold_steps
++    bool hold_best = false;      // MarketOptions::hold_best
+     double rival_weight = 1;  // margin: weight of the opponent's revenue lost to our sales (day 29: 0)
+     double rival_night = 0;   // MarketOptions::rival_night
+     double tick_share = 0, tick_dawn = 0, tick_egg = 0;  // MarketOptions::tick_share / tick_dawn / tick_egg
+@@ -130,6 +132,11 @@
+     // In a linear market with drains and a fixed opponent path one late lot is optimal; at 12 the afternoon drains are never counted,
+     // so a production pulse looks cheaper to sell tonight (Imitation: half of M&M's price lead is which days it sells on).
+     int hold_steps = HOURS / 2;
++    // holdbest=1 (dc12): the held lot is priced at tomorrow's step with the lowest expected inventory (drains and the forecast
++    // opponent flow, tomorrow = today's forecast by hour) instead of a fixed step. With a linear market our units never leave the
++    // book except through drains, so tomorrow's best single lot is optimal and spreading adds nothing; the fixed noon lot
++    // undervalued holding (holdsteps=20 on the M&M-world bed: arm +2.0k, SE 0.6k).
++    bool hold_best = false;
+     // Sale DP: weight of the opponent's revenue lost to our sales (margin objective). 0.5: +755
+     // (SE 366) over 200 fresh games vs 1 (frozen and top-team clones): with 1 the seller dumps at
+     // midday to deny a forecast opponent flow that is often early or too large.
+@@ -244,7 +251,6 @@
+ // Sales for one hour: units of each product to sell now.
+ // cash_need[k] (cashsell; nullptr: off): dollars still missing, before this hour's sales, for the planned purchases up to step k;
+ // sales up to the first uncovered step get a revenue bonus, the smallest that covers it (or the largest tried).
+-extern thread_local bool g_sell_quiet;  // DC11_AUDIT (local, Imitation): true while the compiler simulates the executor
+ void choose_sales(const agent::AgentObservation& obs, const int incoming[HOURS][N_PRODUCTS], int hours, const DayMarket& market,
+                   const int reserve[N_PRODUCTS], int night_room, int sell[N_PRODUCTS], double* charge_out = nullptr,
+                   const double* cash_need = nullptr, const bool* force = nullptr);
+--- a/tools_dc11/teacher_day.cpp
++++ b/tools_dc11/teacher_day.cpp
+@@ -11,7 +11,9 @@
+ #include "agent/bc_overhaul/source/agent.hpp"
+ #include "agents/common/runtime/observation_builder.hpp"
+ #include "source/convert.hpp"
++#include <algorithm>
+ #include <atomic>
++#include <climits>
+ #include <cstdio>
+ #include <fstream>
+ #include <iostream>
+@@ -35,6 +37,129 @@
+     return s;
+ }
+ 
++// TEACHER_LABELS=2: M&M's label for day d translated onto our (diverged) groups as per-group rates. One-shot crops: option shares of
++// M&M's groups of the same crop and age (nearest age, else water only), moved to the closest allowed option when fixed. Ongoing
++// crops: retain / clear / fertilize / harvest shares by crop and age (else any age). Animals: feed / care / collect shares by
++// species. New crops / animals as M&M's; land keeps our quadrant count in step with M&M's. New crops are trimmed (largest first)
++// while they exceed our free sites. Empty optional when no valid intent results.
++std::vector<int> shares(const std::vector<double>& rate, int n) {  // n split by rates, largest remainder
++    std::vector<int> out(rate.size(), 0);
++    double total = 0;
++    for (double r : rate) total += r;
++    if (total <= 0 || n <= 0) return out;
++    std::vector<std::pair<double, int>> rest;
++    int used = 0;
++    for (size_t o = 0; o < rate.size(); ++o) {
++        const double x = n * rate[o] / total;
++        out[o] = int(x), used += out[o];
++        rest.push_back({x - out[o], int(o)});
++    }
++    std::sort(rest.begin(), rest.end(), std::greater<>());
++    for (int k = 0; used < n; ++k, ++used) ++out[rest[k % rest.size()].second];
++    return out;
++}
++
++bool translate(const Schema& lab_s, const DayIntent& lab, int mm_quads, const agent::AgentObservation& obs, DayIntent& out) {
++    Schema s = describe(obs);
++    const int day = s.day;
++    DayIntent t{};
++    std::copy_n(lab.new_crop, N_CROPS, t.new_crop);
++    std::copy_n(lab.new_animal, N_ANIMALS, t.new_animal);
++    for (int a = 0; a < N_ANIMALS; ++a) t.reserve[a] = int16_t(std::max<int>(lab.reserve[a], s.unplaced_dawn[a] - t.new_animal[a]));
++    const int quads = obs.self().n_quadrants;
++    t.buy_land = s.land_sites > 0 && (quads < mm_quads || (quads == mm_quads && lab.buy_land));
++    for (int attempt = 0; attempt < 40; ++attempt) {
++        size_new_groups(s, t);
++        for (int i = 0; i < s.n_crops; ++i) {
++            const CropGroup& g = s.crops[i];
++            const int size = g.fresh ? t.new_crop[g.crop] : g.size;
++            if (!CROPS[g.crop].ongoing) {
++                std::vector<double> rate(OPTIONS, 0.0);
++                int best_gap = INT_MAX;
++                for (int j = 0; j < lab_s.n_crops; ++j) {  // same crop, nearest age (fresh with fresh)
++                    const CropGroup& l = lab_s.crops[j];
++                    if (l.crop != g.crop || l.fresh != g.fresh) continue;
++                    const int gap = std::abs(l.age - g.age);
++                    if (gap > best_gap) continue;
++                    if (gap < best_gap) std::fill(rate.begin(), rate.end(), 0.0), best_gap = gap;
++                    for (int o = 0; o < OPTIONS; ++o) rate[o] += lab.options[j][o];
++                }
++                if (best_gap == INT_MAX) rate[4] = 1;  // no such crop at M&M's: keep it alive
++                std::vector<int> n = shares(rate, size);
++                std::fill(t.options[i].begin(), t.options[i].end(), 0);
++                for (int o = 0; o < OPTIONS; ++o) {
++                    if (!n[o]) continue;
++                    int to = o;
++                    if (option_fixed(g, day, o)) {  // the allowed option sharing most actions (bits), water first on ties
++                        to = -1;
++                        int score = -1;
++                        for (int o2 = 0; o2 < OPTIONS; ++o2) {
++                            if (option_fixed(g, day, o2)) continue;
++                            const int sc = (o < CLEAR && o2 < CLEAR ? 2 * __builtin_popcount(o & o2) : 0) + (o2 < CLEAR && (o2 & 4) ? 1 : 0);
++                            if (sc > score) score = sc, to = o2;
++                        }
++                        if (to < 0) return false;
++                    }
++                    t.options[i][to] = int16_t(t.options[i][to] + n[o]);
++                }
++                continue;
++            }
++            if (g.fresh) continue;
++            double sz = 0, r = 0, cl = 0, f = 0, h = 0, hs = 0;
++            for (int pass = 0; pass < 2 && sz == 0; ++pass)  // same crop and age, else any age
++                for (int j = 0; j < lab_s.n_crops; ++j) {
++                    const CropGroup& l = lab_s.crops[j];
++                    if (l.crop != g.crop || l.fresh || (pass == 0 && l.age != g.age)) continue;
++                    sz += l.size, r += lab.retain[j], cl += lab.clear[j], f += lab.fertilize[j];
++                    if (l.yield > 0) hs += l.size, h += lab.harvest[j];
++                }
++            int rr = sz > 0 ? int(std::lround(size * r / sz)) : size, cc = sz > 0 ? int(std::lround(size * cl / sz)) : 0;
++            int ff = sz > 0 ? int(std::lround(size * f / sz)) : 0, hh = hs > 0 ? int(std::lround(size * h / hs)) : (g.yield > 0 ? size : 0);
++            if (day == LAST_DAY) rr = cc = ff = 0;
++            else {
++                if (!can_survive_tonight(g, day)) rr = 0;
++                rr = std::min(rr, size), cc = std::min(cc, size - rr);
++                if (!can_die_tonight(g)) cc = size - rr;
++                ff = ongoing_fertilize_fixed(g, day) ? 0 : std::min(ff, rr);
++            }
++            t.retain[i] = int16_t(rr), t.clear[i] = int16_t(cc), t.fertilize[i] = int16_t(ff);
++            t.harvest[i] = int16_t(g.yield > 0 ? std::min(hh, size) : 0);
++        }
++        for (int i = 0; i < s.n_animals; ++i) {
++            const AnimalGroup& g = s.animals[i];
++            const int size = g.fresh ? t.new_animal[g.species] : g.size;
++            double sz = 0, fe = 0, ca = 0, hs = 0, co = 0;
++            for (int j = 0; j < lab_s.n_animals; ++j) {
++                const AnimalGroup& l = lab_s.animals[j];
++                if (l.species != g.species || l.fresh != g.fresh) continue;
++                sz += l.size, fe += lab.feed[j], ca += lab.care[j];
++                if (l.held > 0) hs += l.size, co += lab.collect[j];
++            }
++            int f = sz > 0 ? int(std::lround(size * fe / sz)) : size, c = sz > 0 ? int(std::lround(size * ca / sz)) : f;
++            int k = hs > 0 ? int(std::lround(size * co / hs)) : (g.held > 0 ? size : 0);
++            if (day == LAST_DAY) f = 0;
++            f = std::min(f, size), c = care_fixed(g, day) ? 0 : std::min(c, f), k = g.held > 0 ? std::min(k, size) : 0;
++            t.feed[i] = int16_t(f), t.care[i] = int16_t(c), t.collect[i] = int16_t(k);
++        }
++        const std::string why = validate(s, t);
++        if (why.empty()) {
++            out = t;
++            return true;
++        }
++        if (why.rfind("new crops and animals exceed free sites", 0) != 0) {
++            if (std::getenv("TEACHER_LABELS_WHY")) std::fprintf(stderr, "translatefail,%d,%s\n", day, why.c_str());
++            return false;
++        }
++        int top = -1;  // too many new entities for our free sites: one fewer of the largest new crop
++        for (int c = 0; c < N_CROPS; ++c)
++            if (t.new_crop[c] > 0 && (top < 0 || t.new_crop[c] > t.new_crop[top])) top = c;
++        if (top < 0) return false;
++        --t.new_crop[top];
++        s = describe(obs);
++    }
++    return false;
++}
++
+ constexpr int SOLD[] = {WHEAT, TOMATO, STRAWBERRY, EGG, MILK, WOOL, FERTILIZER};
+ constexpr const char* SOLD_NAME[] = {"wheat", "tomato", "strawberry", "egg", "milk", "wool", "fertilizer"};
+ constexpr int N_SOLD = 7, N_BANDS = 4;
+@@ -56,6 +181,8 @@
+     // Yield waterings (rules): one-shot waters that added yield, and ongoing crops watered with fertilizer active on the day
+     // before a production (tiles marked per step, counted once per day). Other waters only keep the crop alive.
+     int water_yield = 0;
++    // One-shot crops: yield units added by waters (+1, or +2 when fertilizer was active first), and melon waters / fertilizes.
++    int water_gain = 0, melon_waters = 0, melon_ferts = 0, melon_gain = 0;
+     bool ongoing_yield[BOARD][BOARD] = {};
+ 
+     void step(const Sim& before, const Action& a, const Sim& after, int seat) {
+@@ -76,10 +203,18 @@
+         for (int y = 0; y < BOARD; ++y)
+             for (int x = 0; x < BOARD; ++x) {
+                 const Tile &t0 = f0.tiles[y][x], &t1 = f1.tiles[y][x];
++                const bool same = t0.kind == T_PLANT && t1.kind == T_PLANT && t0.planted_day == t1.planted_day && t1.what == t0.what;
++                if (same && t1.what == MELON && t1.fertilized_until_day > t0.fertilized_until_day) ++melon_ferts;
+                 if (t1.kind != T_PLANT || t1.what >= N_CROPS || !t1.watered_today) continue;
+                 const CropDef& cd = CROPS[t1.what];
+                 if (!cd.ongoing) {
+-                    water_yield += !t0.watered_today && t0.kind == T_PLANT && t0.planted_day == t1.planted_day && t1.yield_units > t0.yield_units;
++                    const bool watered_now = !t0.watered_today && same;
++                    water_yield += watered_now && t1.yield_units > t0.yield_units;
++                    if (watered_now) {
++                        const int gain = std::max(0, t1.yield_units - t0.yield_units);
++                        water_gain += gain;
++                        if (t1.what == MELON) ++melon_waters, melon_gain += gain;
++                    }
+                     continue;
+                 }
+                 const int since = day + 1 - t1.planted_day - cd.first_yield_day;
+@@ -124,7 +259,8 @@
+     for (int k = 0; k < N_SOLD; ++k)
+         for (int b = 0; b < N_BANDS; ++b) out << ",sold_" << SOLD_NAME[k] << "_b" << b;
+     out << ",plant_orders,revenue,spend,money_next,value_next,stock_next,discarded,opp_money_next,plants_next,weeds_next,dry_next,"
+-           "field_units_next,field_value_next,held_next,geese_next,cows_next,sheep_next,quadrants_next,trims,water_yield";
++           "field_units_next,field_value_next,held_next,geese_next,cows_next,sheep_next,quadrants_next,trims,water_yield,water_gain,melon_waters,"
++           "melon_ferts,melon_gain";
+     for (int k = 0; k < N_SOLD; ++k)
+         for (int b = 0; b < N_BANDS; ++b) out << ",dep_" << SOLD_NAME[k] << "_b" << b;
+     out << '\n';
+@@ -143,7 +279,8 @@
+     out << ',' << d.plant_orders << ',' << d.revenue << ',' << d.spend << ',' << d.money_next << ',' << d.value_next << ',' << d.stock_next << ','
+         << d.discarded << ',' << d.opp_money_next << ',' << d.plants_next << ',' << d.weeds_next << ',' << d.dry_next << ','
+         << d.field_units_next << ',' << d.field_value_next << ',' << d.held_next << ',' << d.animals_next[0] << ','
+-        << d.animals_next[1] << ',' << d.animals_next[2] << ',' << d.quadrants_next << ',' << d.trims << ',' << d.water_yield;
++        << d.animals_next[1] << ',' << d.animals_next[2] << ',' << d.quadrants_next << ',' << d.trims << ',' << d.water_yield << ',' << d.water_gain << ',' << d.melon_waters
++        << ',' << d.melon_ferts << ',' << d.melon_gain;
+     for (int k = 0; k < N_SOLD; ++k)
+         for (int b = 0; b < N_BANDS; ++b) out << ',' << d.deposited[k][b];
+     out << '\n';
+@@ -169,9 +306,11 @@
+     const bool net = std::getenv("TEACHER_NET") != nullptr;
+     const int span = std::getenv("TEACHER_DAYS") ? std::atoi(std::getenv("TEACHER_DAYS")) : 1;
+     const bool hourly = std::getenv("TEACHER_HOURLY") != nullptr;
+-    // TEACHER_LABELS=1 (with TEACHER_DAYS): every later dawn of the span compiles M&M's own label for that day when our farm's crop
++    // TEACHER_LABELS=1 (with TEACHER_DAYS; =2 also translates the label when groups differ, see translate()): every later dawn of
++    // the span compiles M&M's own label for that day when our farm's crop
+     // and animal groups match its schema (type, age, size); otherwise our network's intent. The multi-day compiler test.
+     const bool labels_all = std::getenv("TEACHER_LABELS") != nullptr;
++    const bool translate_labels = labels_all && std::atoi(std::getenv("TEACHER_LABELS")) == 2;  // see translate()
+     const char* model = std::getenv("BC_OPUS_MODEL");
+     if (!model) {
+         std::cerr << "BC_OPUS_MODEL is required\n";
+@@ -234,7 +373,7 @@
+                     Day ours, teacher;
+                     double prof0[16];
+                     std::copy_n(dc11::route_prof, 16, prof0);
+-                    int labels_used = 0, labels_missed = 0;  // TEACHER_LABELS: later dawns compiled with M&M's own label
++                    int labels_used = 0, labels_missed = 0, labels_translated = 0;  // TEACHER_LABELS: later dawns with M&M's label
+                     for (int k = day * HOURS; k < (day + span) * HOURS; ++k) {
+                         if (labels_all && k > day * HOURS && k % HOURS == 0) {
+                             const int d = k / HOURS;
+@@ -249,7 +388,12 @@
+                                 const auto &a = ours.animals[g], &b = lab.schema.animals[g];
+                                 same = a.species == b.species && a.size == b.size && a.fresh == b.fresh;
+                             }
++                            DayIntent translated;
+                             if (same) agent.teacher_day = d, agent.teacher_intent = lab.intent, ++labels_used;
++                            else if (translate_labels && lab.status != ConvertStatus::Failed &&
++                                     translate(lab.schema, lab.intent, kag::agent::runtime::make_observation(states[d * HOURS], seat).self().n_quadrants,
++                                               kag::agent::runtime::make_observation(sim, seat), translated))
++                                agent.teacher_day = d, agent.teacher_intent = translated, ++labels_translated;
+                             else ++labels_missed;
+                             if (!same && std::getenv("TEACHER_LABELS_WHY")) {  // labelwhy: our groups vs the label's (crop / species, age, size, fresh)
+                                 std::string w = "labelwhy," + trace + "," + std::to_string(d) + " ours";
+@@ -269,6 +413,20 @@
+                         sim.step(joint[0], joint[1]);
+                         ours.step(before, mine, sim, seat);
+                         teacher.step(states[k], replay.turns[k][seat], states[k + 1], seat);
++                        if (std::getenv("TEACHER_PRODUCT")) {  // productcsv,trace,day,hour,who,field,pockets,shed,sold of product TEACHER_PRODUCT
++                            const int item = std::atoi(std::getenv("TEACHER_PRODUCT"));
++                            auto line = [&](const char* who, const Sim& b, const Sim& n) {
++                                const Farm &f0 = b.st.farms[seat], &f1 = n.st.farms[seat];
++                                int field = 0, pockets = 0;
++                                for (int y = 0; y < BOARD; ++y)
++                                    for (int x = 0; x < BOARD; ++x)
++                                        if (f1.tiles[y][x].kind == T_PLANT && f1.tiles[y][x].what == item) field += f1.tiles[y][x].yield_units;
++                                for (int u = 0; u < f1.n_units; ++u) pockets += f1.inv[u][item];
++                                std::fprintf(stderr, "productcsv,%s,%d,%d,%s,%d,%d,%d,%d\n", trace.c_str(), k / HOURS, k % HOURS, who, field, pockets,
++                                             int(f1.shed[item]), int(f1.sold_units[item] - f0.sold_units[item]));
++                            };
++                            line("ours", before, sim), line("teacher", states[k], states[k + 1]);
++                        }
+                         if (hourly) {  // TEACHER_HOURLY: one CSV line per hour and side (prefix "hourcsv,")
+                             auto line = [&](const char* who, const Sim& b, const Action& a, const Sim& n) {
+                                 int ops[OP_INVALID + 1] = {0}, created = 0, sold = 0;
+@@ -293,8 +451,8 @@
+                     ours.finish(sim, seat), teacher.finish(states[(day + span) * HOURS], seat);
+                     const auto& r = agent.reports()[agent.reports().size() - span];
+                     ours.status = r.status, ours.fallback = r.fallback, ours.dropped = r.dropped, ours.trims = r.trims;
+-                    if (labels_all)  // labels,trace,seat,day,used,missed
+-                        std::fprintf(stderr, "labels,%s,%d,%d,%d,%d\n", trace.c_str(), seat, day, labels_used, labels_missed);
++                    if (labels_all)  // labels,trace,seat,day,used,missed,translated
++                        std::fprintf(stderr, "labels,%s,%d,%d,%d,%d,%d\n", trace.c_str(), seat, day, labels_used, labels_missed, labels_translated);
+                     if (std::getenv("DC12_ROUTEPROF")) {  // routeprof,trace,seat,day, then route_prof deltas [0..15]
+                         std::string line = "routeprof," + trace + "," + std::to_string(seat) + "," + std::to_string(day);
+                         for (int k = 0; k < 16; ++k) line += "," + std::to_string(dc11::route_prof[k] - prof0[k]);

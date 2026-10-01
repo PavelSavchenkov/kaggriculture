@@ -1,0 +1,63 @@
+diff -ru /home/pavel/Programming/kaggriculture/experiments/v10/sep29_mm_copy/src_m14or7/CMakeLists.txt src_m14or7ds/CMakeLists.txt
+--- /home/pavel/Programming/kaggriculture/experiments/v10/sep29_mm_copy/src_m14or7/CMakeLists.txt	2026-09-30 20:21:08.715115704 +0100
++++ src_m14or7ds/CMakeLists.txt	2026-09-30 20:42:54.860739232 +0100
+@@ -4,7 +4,7 @@
+ set(CMAKE_CXX_STANDARD 20)
+ set(CMAKE_CXX_STANDARD_REQUIRED ON)
+ set(CMAKE_POSITION_INDEPENDENT_CODE ON)  # static libraries also link into the Local-LB bridge
+-get_filename_component(REPO_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../../../.." ABSOLUTE)  # snapshot in experiments/v10/sep29_mm_copy (src_m14or7)
++get_filename_component(REPO_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../../.." ABSOLUTE)  # copy in work/sep29_fund (src_m14or7ds = src_m14or7 + dawnshare)
+ 
+ # BC_PORTABLE: baseline x86-64 code and a static C++ runtime for the bundled bridge
+ # (Local-LB / Kaggle agents run on other machines).
+diff -ru /home/pavel/Programming/kaggriculture/experiments/v10/sep29_mm_copy/src_m14or7/dc11/compiler.cpp src_m14or7ds/dc11/compiler.cpp
+--- /home/pavel/Programming/kaggriculture/experiments/v10/sep29_mm_copy/src_m14or7/dc11/compiler.cpp	2026-09-30 20:21:08.705992951 +0100
++++ src_m14or7ds/dc11/compiler.cpp	2026-09-30 20:42:33.830890281 +0100
+@@ -1699,6 +1699,16 @@
+         bcsell::sell_units(*options_.sell_model, obs, history, sold_today_, options_.sell_seed, units, mm == 2 || mm == 5, options_.sell_tracker);
+         for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)}) sell[p] = charge > 0 && mm != 5 ? std::max(units[p], sell[p]) : units[p];
+     }
++    // dawnshare=P (dc12 probe, the teachers' dawn lots): on days dawnfrom..LAST_DAY-1 at least P% of the dawnmask products' dawn stock
++    // sells over h0-2 (the DP's lots count toward it).
++    if (options_.dawn_share > 0 && obs.day >= options_.dawn_from && obs.day < LAST_DAY && h < 3)
++        for (int p = 0; p < N_PRODUCTS; ++p)
++            if (options_.dawn_mask >> p & 1) {
++                const int avail = std::max(0, int(obs.own.shed[p]) - reserve[p]);
++                if (h == 0) dawn_target_[p] = (avail * options_.dawn_share + 99) / 100, dawn_issued_[p] = 0;
++                sell[p] = std::max(sell[p], std::min(avail, (std::max(0, dawn_target_[p] - dawn_issued_[p]) + 2 - h) / (3 - h)));
++                dawn_issued_[p] += sell[p];
++            }
+     int dp_sell[N_PRODUCTS];  // DC12_SELLLOG probe: the seller's decision before the cover / overflow sales
+     std::copy_n(sell, N_PRODUCTS, dp_sell);
+     // Cover this hour's purchases: sell more of the highest-priced stock if needed.
+@@ -1918,6 +1928,9 @@
+         else if (k == "nofire") o.no_fire = value != 0;
+         else if (k == "latehire") o.late_hire = value != 0;
+         else if (k == "splitfert") o.split_fert = int(value);
++        else if (k == "dawnshare") o.dawn_share = int(value);
++        else if (k == "dawnmask") o.dawn_mask = int(value);
++        else if (k == "dawnfrom") o.dawn_from = int(value);
+         else if (k == "nearanimals") o.near_animals = int(value);
+         else if (k == "cashshadow") o.cash_shadow = value != 0;
+         else if (k == "hirecheck") o.hire_check = value != 0;
+diff -ru /home/pavel/Programming/kaggriculture/experiments/v10/sep29_mm_copy/src_m14or7/dc11/compiler.hpp src_m14or7ds/dc11/compiler.hpp
+--- /home/pavel/Programming/kaggriculture/experiments/v10/sep29_mm_copy/src_m14or7/dc11/compiler.hpp	2026-09-30 20:21:08.705828569 +0100
++++ src_m14or7ds/dc11/compiler.hpp	2026-09-30 20:42:33.831131314 +0100
+@@ -170,6 +170,9 @@
+     bool late_hire = false;
+     // splitfert=D (dc12): on days 3..D-1 milk / wool / egg harvest stops carry no fertilizer collection (its own optional stop)
+     int split_fert = 0;
++    // dawnshare=P (dc12 probe): on days dawnfrom..LAST_DAY-1 at least P% of the dawnmask products' (bits by product; default milk +
++    // wool) dawn shed stock sells over h0-2, like the converged teams' dawn lots (milk ~30%, wool ~23% of the day's sales). 0: off.
++    int dawn_share = 0, dawn_mask = (1 << MILK) | (1 << WOOL), dawn_from = 10;
+     // nearanimals=1 / 2 / 3 (dc12, from the Codex early-products work): days 0-5 new sheep / cows at the free sites nearest the shed;
+     // 2: sheep placed before cows; 3: every day, geese too; 4: cows and sheep alternate in placement order (balanced);
+     // 5: one cow first, then the sheep, then the other cows (M&M's census: cow at ring 0, sheep at ring 1, cows at ring 2);
+@@ -323,6 +326,7 @@
+     int consumed_[HOURS][N_ANIMALS]{};  // buyahead: planned animal units at each hour covered by an earlier purchase
+     bool unplanted_[BOARD * BOARD]{};   // skipwater: tiles whose planting was skipped today (seeds short)
+     double skipped_seed_ = 0;           // achieve: seed value of today's skipped plantings
++    int dawn_target_[N_PRODUCTS]{}, dawn_issued_[N_PRODUCTS]{};  // dawnshare: today's h0-2 target and units ordered so far
+     int sold_today_[N_PRODUCTS]{};      // sellmodel: our units ordered for sale since hour 0 (a model input)
+ public:
+     double skipped_seed() const { return skipped_seed_; }

@@ -1,0 +1,49 @@
+diff -ruN src_m14/dc11/compiler.cpp src_m14sf/dc11/compiler.cpp
+--- src_m14/dc11/compiler.cpp	2026-09-30 15:01:23.089180265 +0100
++++ src_m14sf/dc11/compiler.cpp	2026-09-30 18:38:46.202399739 +0100
+@@ -288,12 +288,21 @@
+                 tile_at(dawn, cells[m]).fertilizer_available &&
+                 (options.collect_min <= 0 || price(FERTILIZER) >= options.collect_min ||
+                  dawn.own.shed[FERTILIZER] + fertilizer_collected_for_need < fertilizer_need)) {
+-                output.steps[output.n++] = {OP_COLLECT_FERTILIZER, 0};
+-                output.fertilizer = 1;
+-                output.value += float(0.9 * price(FERTILIZER));
++                // splitfert=D (dc12, days 3..D-1): a milk / wool / egg harvest stop carries no fertilizer collection; the fertilizer is
++                // its own optional stop on the tile, so the harvest can ride a short trip and the fertilizer a later visit (our units
++                // waited ~1 h in pockets for the collection; M&M collects 79-81% of that fertilizer later, by another worker)
++                const bool split = options.split_fert > 1 && day >= 3 && day < options.split_fert && output.n > 0 &&
++                                   (product == MILK || product == WOOL || product == EGG);
++                Stop fert;
++                fert.tile = output.tile, fert.animal = true, fert.group = -1, fert.priority = P_EXTRA;
++                Stop& to = split ? fert : output;
++                to.steps[to.n++] = {OP_COLLECT_FERTILIZER, 0};
++                to.fertilizer = 1;
++                to.value += float(0.9 * price(FERTILIZER));
+                 ++b.output[FERTILIZER];
+                 ++fertilizer_collected_for_need;
+-                if (output.n == 1) output.priority = P_EXTRA;
++                if (!split && output.n == 1) output.priority = P_EXTRA;  // a fertilizer-only output stop
++                if (split) add_stop(fert);
+             }
+             if (service.n) add_stop(service);
+             if (output.n) add_stop(output);
+@@ -1907,6 +1916,7 @@
+         else if (k == "reservenet") o.reserve_net = value != 0;
+         else if (k == "nofire") o.no_fire = value != 0;
+         else if (k == "latehire") o.late_hire = value != 0;
++        else if (k == "splitfert") o.split_fert = int(value);
+         else if (k == "cashshadow") o.cash_shadow = value != 0;
+         else if (k == "hirecheck") o.hire_check = value != 0;
+         else if (k == "animalfirst") o.animal_first = value == 1, o.animal_first_mode = int(value);
+diff -ruN src_m14/dc11/compiler.hpp src_m14sf/dc11/compiler.hpp
+--- src_m14/dc11/compiler.hpp	2026-09-30 14:41:53.586087382 +0100
++++ src_m14sf/dc11/compiler.hpp	2026-09-30 18:38:46.202577748 +0100
+@@ -168,6 +168,8 @@
+     // latehire=1 (dc12): a hire the funding simulation cannot pay is ordered later in the day (Problem::cash_wave / cash_hire_hour)
+     // instead of shrinking the crew; M&M's day 1 hires its third worker at h2 from the first fertilizer sale (we hired 1 vs 3).
+     bool late_hire = false;
++    // splitfert=D (dc12): on days 3..D-1 milk / wool / egg harvest stops carry no fertilizer collection (its own optional stop)
++    int split_fert = 0;
+     // cashshadow=1 (dc12, with achieve): variants with a deposit bonus (lambda 0.5 / 1 x price) before the cash-bound hour join the
+     // achieve search (compile_level), so routes that bring cash early compete with the deferral variants.
+     bool cash_shadow = false;

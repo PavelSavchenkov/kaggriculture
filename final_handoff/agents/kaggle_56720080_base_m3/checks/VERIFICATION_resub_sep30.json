@@ -1,0 +1,145 @@
+{
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+  "libc": [
+    "glibc",
+    "2.39"
+  ],
+  "kaggle_environments": "1.32.7",
+  "archive_sha256": "f8c82bd813f7ab3e63adef8383a7990fd902f40f292045672d14e5105cf5ac17",
+  "library_sha256": "efdbd0f2d94d5ba6ad88c60b989a42b23dcfe7274c6e9367da095ba6ce56001c",
+  "main_sha256": "4ea520f515f0819e12a269d5dbf843b5ef3096c098384169e6306acb5c9e961f",
+  "games": {
+    "self_seed1": {
+      "opponent": "self",
+      "seat": 0,
+      "seed": 1,
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        89186.0,
+        89186.0
+      ],
+      "remaining_overage": [
+        60,
+        60
+      ],
+      "calls": {
+        "0": 719,
+        "1": 719
+      },
+      "max_call_seconds": {
+        "0": 0.7383083979366347,
+        "1": 0.7389314719475806
+      },
+      "calls_over_1s": {
+        "0": 0,
+        "1": 0
+      },
+      "agent_seconds": {
+        "0": 11.582914699567482,
+        "1": 11.507581992656924
+      },
+      "game_seconds": 26.137144350912422
+    },
+    "self_seed1_repeat": {
+      "opponent": "self",
+      "seat": 0,
+      "seed": 1,
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        89186.0,
+        89186.0
+      ],
+      "remaining_overage": [
+        60,
+        60
+      ],
+      "calls": {
+        "0": 719,
+        "1": 719
+      },
+      "max_call_seconds": {
+        "0": 0.7576125559862703,
+        "1": 0.754605706082657
+      },
+      "calls_over_1s": {
+        "0": 0,
+        "1": 0
+      },
+      "agent_seconds": {
+        "0": 11.630570277920924,
+        "1": 11.598382460186258
+      },
+      "game_seconds": 26.29134106100537
+    },
+    "starter_seat0": {
+      "opponent": "starter",
+      "seat": 0,
+      "seed": 2,
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        271547.0,
+        3473.0
+      ],
+      "remaining_overage": [
+        60,
+        60
+      ],
+      "calls": {
+        "0": 719
+      },
+      "max_call_seconds": {
+        "0": 0.6616058769868687
+      },
+      "calls_over_1s": {
+        "0": 0
+      },
+      "agent_seconds": {
+        "0": 8.845193868968636
+      },
+      "game_seconds": 10.725007622037083
+    },
+    "starter_seat1": {
+      "opponent": "starter",
+      "seat": 1,
+      "seed": 3,
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "rewards": [
+        3518.0,
+        249977.0
+      ],
+      "remaining_overage": [
+        60,
+        60
+      ],
+      "calls": {
+        "1": 719
+      },
+      "max_call_seconds": {
+        "1": 0.666181305074133
+      },
+      "calls_over_1s": {
+        "1": 0
+      },
+      "agent_seconds": {
+        "1": 10.388123039272614
+      },
+      "game_seconds": 12.315854820073582
+    }
+  }
+}

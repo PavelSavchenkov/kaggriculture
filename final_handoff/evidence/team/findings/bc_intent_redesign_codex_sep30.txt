@@ -1,0 +1,1206 @@
+BC: richer day intent and a smaller compiler
+Independent design note from Codex, 2026-09-30, 18:52 UTC
+
+Requested by Pavel as a separate contribution to the BC session. This is a
+proposal, not an implemented or tested agent. No BC code, models, active logs,
+training jobs or submissions were changed. Read alongside findings/bc.md.
+
+UPDATE 18:56 UTC: BC's new design is now available. See the appended REVIEW 2
+first: delivery-label semantics and the initial extractor need attention before
+training. A separate small v2 network and fixed placement rule are a sensible
+faster first version; the review adapts this proposal to that actual design.
+UPDATE 18:59 UTC: six isolated engine checks confirm the delivery phase,
+overflow, partial-deposit and terminal cases. Evidence is at the end of REVIEW 2.
+UPDATE 19:05 UTC: REVIEW 3 has measured label-range failures: wave-1 cap 8
+excludes 43.5% of the audited rows (27.0% on days 3-9). Also distinguish
+protecting requested feed from enabling the rejected keepfed policy override.
+UPDATE 19:12 UTC: read REVIEW 4 first. The first src_v2 router has reproducible
+deadline, courier-order, post-rewrite feasibility and late-spawn failures, plus
+an ASan-confirmed buffer overflow. Fixtures and a frozen source snapshot are in
+work/sep30_intent_review/. These are executor defects, not economic results.
+UPDATE 19:22 UTC: REVIEW 5 independently reconstructs 12 permitted teacher
+replays with 8,628 exact phase/state checks. Opening labels agree in this
+sample; later-day quantities do not. The actual early wool/milk curves below
+give a more useful target than h6 alone. Pavel requested 10 hours of support
+and a whole-design review every 20 minutes; checkpoint log is
+work/sep30_intent_review/design_checkpoints.txt.
+UPDATE 19:27 UTC: REVIEW 6 confirms understated future hire costs against the
+engine (8+1 hires budgeted as 55, actually 88; 9+1 as 89, actually 143). This
+is an existing funding-ledger bug, not proof that the opening table helps.
+Claude's negative opening-script results support stopping that combined arm;
+my next design review will focus on whether the dawn-seller pivot is sound.
+UPDATE 19:34 UTC: REVIEW 7 checks the seller pivot. Moving a sale from h21 to
+h0 can leave an identical engine state; crossing the h0 demand tick is a
+different intervention. BC reports a 22:30 BST bundle deadline: keep the failed
+opening-script keys out; treat the hire-cost patch as a separate unpromoted
+candidate. Its complete compiler source passes a syntax check, and its helper
+passes sanitizer tests, but it has no full-game payoff read.
+UPDATE 19:43 UTC: REVIEW 8 verifies BC's new wheat counters. In the same 12
+permitted games, days 10-28 wheat harvest is understated by 24.9 units/game
+and feed overstated by 4.2. Planting counts match in this sample. Count accepted
+FEED / PLANT actions and use the produced counter for total harvested wheat.
+UPDATE 19:48 UTC: REVIEW 9 audits the new hybrid opponent bed. It is useful
+sensitivity evidence, but its loan test can pass with a failed recorded
+purchase, and the reactive seller stops on day 29. A synthetic engine case
+proves the first failure; frequency and score impact in the 48 games are
+unmeasured. Do not call the m19 causal explanation settled yet.
+
+RECOMMENDATION
+
+Make the learned policy choose the day's work, its timing, placement claims,
+crew waves and what to sacrifice when money is short. Make the compiler assign
+real workers and emit legal actions for those choices. Keep a reactive seller
+as a separate component, sharing the same inventory and funding ledger.
+
+The most useful new output is a work package with a completion condition:
+"collect this sheep's wool and make it sellable by h5; return before doing
+another job." A count of collections, an early-harvest score, or a wool price
+bonus does not express that requirement. Nor does a return deadline by itself
+protect the feeding needed to produce tomorrow's milk.
+
+Start with a small extension of the current network and decoder. Do not make
+the first version a network emitting 24 hours of raw worker actions. Worker
+IDs and equivalent paths create unnecessary labels; future prices and fills
+are not known at dawn. The useful split is economic choices in the intent,
+mechanical execution in the compiler, and observed-market adaptation in the
+seller and a small repair policy.
+
+WHY THESE PARTICULAR OUTPUTS
+
+1. Current DayIntent contains daily counts, service options, land and reserves,
+   plus trim_order/drop_loss. It does not contain deposit deadlines, crew waves
+   or ordered site claims. Current designs/day_compiler.md explicitly assigns
+   long-term economic optimization and these choices to the compiler. The new
+   design must change that contract, not merely add optional hints that the
+   old optimizer can override.
+
+2. BC's 650-game placement audit found nearly identical nearest-free geometry
+   in both agents. The claim order differs. On day 0 M&M gives ring 0 to a cow,
+   ring 1 to two sheep, and ring 2 to a sheep and cow; ours gives one ring-1
+   pasture to the second cow. Later, M&M places pasture animals before geese.
+   Predict the sequence of claims before learning an expensive spatial search.
+   Placement is persistent: evaluate its later milk consequences too.
+
+3. Our 24-world days-3-9 action audit found wool by h5 of 20.00 for M&M versus
+   8.25 for our package, but milk of 6.00 versus 11.25. These quantities are
+   summed across that seven-day window per game, not daily targets. M&M returned
+   98.9% of wool directly; our collectors always collected fertilizer first.
+   M&M normally collected that fertilizer later, often with a different worker.
+   Feed/care were already separate in our routes. The new contract should
+   distinguish product delivery from fertilizer collection, and learn a balanced
+   product schedule rather than maximize all early wool.
+
+4. A private diagnostic found a day-7 plan requesting 9 hires but receiving 7.
+   Two cows with five banked bonuses each missed feed and produced one milk
+   each instead of six. This establishes the shortfall and missing feed, not
+   the exact failed-order cause. Current m14 already has hirecheck/latehire;
+   preserve those protections. A redesign must never mark a job covered solely
+   because a requested worker would have covered it.
+
+5. Corrected wool+milk teleport diagnostics on 24 fixed worlds gave +$1,873
+   margin (SE $695), +$3,149 with one extra action (SE $604), and +$805 with two
+   (SE $862). All are counterfactual, NOT legal agent gains. The separate legal
+   balanced-placement candidate lost $484 (SE $517) over 96 pairs, despite
+   earning $1,976 more itself: its opponent earned $2,461 more. Earlier receipts
+   are an intermediate target; full-game margin decides whether they help.
+
+MINIMUM DAYINTENT V2
+
+Retain the existing counts/options as the aggregate decision. Add four small
+parts, decoded in dependency order and checked against that aggregate:
+
+A. Ordered new-entity claims
+   Each item names the species/crop, a relative site preference or chosen tile,
+   a placement window, and dependencies such as land purchase or clearing.
+   Initially use nearest legal free site in claim order, since BC has evidence
+   for it. Reserve a site once claimed. Support provisional sites in today's
+   intended quadrant; activate them only after the land purchase succeeds.
+   This allows same-day planting without pretending the land is already owned.
+
+B. Work packages
+   Each has a stable target, service/action bundle, release condition, completion
+   window, priority tier, and allowed simplifications. Existing targets use
+   physical tiles; new targets use claim IDs until they are placed.
+
+   Animal output package: COLLECT_PRODUCT -> RETURN -> DEPOSIT. A direct-return
+   flag forbids inserting fertilizer collection, feed, care or another harvest
+   between collection and deposit. Route geometry remains the compiler's job.
+
+   Animal service package: FEED and optional CARE, plus a separate fertilizer
+   pickup when requested. The engine-derived production and survival deadlines
+   are explicit. Mark feed protecting an imminent production bonus so repair
+   can preserve it according to the intent's priorities. Do not leave its
+   importance hidden behind a flat $30 feed score.
+
+   Crop package: a valid joint option on a selected member, including explicit
+   ongoing watering; clear/harvest -> replant dependencies when sharing a tile.
+   The compiler expands mechanical actions and enforces engine precedence.
+
+   Start with deadline bands at meaningful sale opportunities, with h5 and h9
+   resolved separately in the opening. Deadlines mean first SELLABLE hour,
+   not harvest hour. Teacher exact hours can be auxiliary labels; a flexible
+   window avoids forcing arbitrary route details.
+
+C. Crew and spending plan
+   Predict desired cumulative hires by a few waves, purchase priorities and
+   earliest/latest useful hours, plus goods/cash reserved for accepted work.
+   Include seeds bought for the next dawn: BC has shown that M&M's prebuying
+   differs from our just-in-time purchases and shifts the network's inputs.
+
+   A desired hire is not an active worker. A future sale is not spendable cash.
+   The first version can use exact deterministic resource requirements from
+   the accepted jobs instead of learning redundant reserve quantities.
+
+D. Simplification order
+   State which optional packages/new claims to defer first when a deadline or
+   funding requirement cannot be met. Respect dependency closures: dropping a
+   land purchase also deactivates its new-site jobs; dropping care need not drop
+   feed. Keep engine-critical precedence separate from learned priorities.
+
+   Existing drop_loss is imitation log-probability, not lost dollars. It can
+   preserve teacher preferences, but must not be advertised as economic value.
+   True fallback preferences are not directly observable from one successful
+   replay; use explicit initial rules or separately validated repair labels.
+
+Derived cumulative receipts by product/hour are an output of these packages,
+not another independent set of contradictory hard targets. They are useful
+auxiliary training losses and execution diagnostics.
+
+A SMALL COMPILER WITH A CLEAR FAILURE CONTRACT
+
+Proposed path:
+  observed state -> intent -> validate/admit jobs -> assign/routes -> actions
+                                     |                 |
+                                     +-> receipts/input needs -> seller
+  actual fills/completed actions -> ledger -> repair remaining jobs
+
+1. Expand packages into a dependency graph. Compute shortest paths and engine
+   release times, including hires and purchased goods usable next turn. Bind
+   jobs only to workers that exist for an executable prefix. Future hires can
+   have conditional assignments, but their work stays unfulfilled until they
+   actually appear.
+
+2. Assign ready packages by priority and deadline, using worker start position,
+   supplies and completion time. Keep product-return packages intact. Use a
+   small fixed insertion/repair budget; preserve a valid executable prefix
+   throughout. Stop searching over herd composition, site-claim permutations,
+   hire counts and economic trim ladders inside the compiler.
+
+3. Keep the current seller for the first experiment, with a precise interface:
+   actual shed inventory; conservative arrivals from accepted routes; retained
+   input quantities by hour; pending purchases/hires and their order priority;
+   capacity before worker drops; and the common cash ledger. Seller purchases,
+   sales and hires share the ten order slots and their real list positions.
+   A sale later in this turn cannot undo overflow destroyed by a worker drop.
+
+4. On actual short fills, failed hires or missed jobs, repair only the affected
+   unfinished packages. Recompute their receipts and input needs, then let the
+   seller update. Allow a bounded funding/route retry; if it fails, apply the
+   stated simplification order. Do not restart a large economic route search.
+
+5. Record per-job requested / accepted / assigned / completed / late / dropped,
+   with reasons such as no active crew, cash, input, site or time. Distinguish
+   search-budget exhaustion from proven infeasibility. Use one completion
+   ledger across intent, routes, market planning and history inference.
+
+This removes combinatorial economic decisions, not physical constraints. The
+speed claim needs profiling: if repeated sale-DP calls dominate, simplifying
+the router alone will not suffice. Aim to avoid calling the full seller for
+every route insertion. Rank insertions with deadlines and travel first, then
+evaluate the accepted schedule and only a bounded number of repairs.
+
+WHY THE LEDGER IS PART OF THE DESIGN
+
+The first teleport harness accidentally counted transferred goods both in
+current stock and future receipts. Its history reconstruction also interpreted
+the unexplained shed increase as a purchase and fabricated an opponent sale.
+Both were fixed in that private harness; this is not a claim those exact bugs
+exist in the production agent. They expose an interface requirement:
+
+  A batch is standing, carried, deposited, consumed, sold or destroyed;
+  every transition is accounted once. Completed deposits cannot remain in
+  future arrivals. History subtracts actual worker transfers and own fills.
+
+Natural DROP precedes the market and can sell in that hour. The diagnostic's
+free transfer occurred after the market and could sell only next hour. Label
+extraction and evaluation must use the same phase definition. Also read h23
+actions before night flags reset; BC already retracted false service gaps
+caused by losing those actions.
+
+FAST DISTILLATION THAT CAN REACH PRODUCTION
+
+First freeze the schema and extractor, not a new large model architecture.
+
+1. Use allowed M&M replay episodes as the main demonstrations. Nearby strong
+   styles can be secondary data, with an explicit style condition or separate
+   coherent plans. Do not average incompatible placement sequences and herd
+   choices into one plan; BC has already seen ensembles blur those choices.
+   Do not reintroduce CMA data, agents or decode parameters.
+
+2. Extract completed semantic jobs, trip boundaries, actual hire waves,
+   successful purchases, build/placement claim order and sellable deadlines
+   with the engine. Keep requested and executed actions separate. Mark inferred
+   labels and ambiguous cash-dependent intentions; replay behavior is not a
+   direct observation of M&M's internal intention. Use future replay actions as
+   supervision only, never as observation features. Never feed private opponent
+   state or hidden world/seed data into the deployed policy.
+
+3. Before training, compile extracted teacher jobs from held-out teacher dawns.
+   Test whether the simple executor can reproduce delivery windows, production
+   services and placements with the observed crew. If it cannot, locate the
+   missing field or execution rule. A hindsight intent is an oracle diagnostic,
+   not a deployable result or proof that dawn prediction can achieve it.
+
+4. Warm-start the existing BC encoder and aggregate heads. Add small shared
+   per-entity heads for bundles/deadlines and global heads for crew/claim order;
+   use masked sequential decoding where choices share sites, money or counts.
+   Begin by training new heads, then briefly fine-tune together. Only add a
+   larger sequence model if measured errors require it. Use the same features,
+   normalization, masks and decode in training checks and C++ export.
+
+5. Train the distinction that caused the early-return failure: product courier
+   now, separate fertilizer/service later, production feed protected. Evaluate
+   these per species and production phase, not just aggregate action accuracy.
+   Predict joint valid bundles, not independent feed/care bits that conflict.
+
+6. Dawn intent need not pretend to know the afternoon. Start with deterministic
+   repairs and the reactive seller. If own-state evaluation shows material
+   cash-dependent decisions cannot be predicted at dawn, train a small residual
+   intent head on observed intraday prefixes to revise remaining work. Preserve
+   completed commitments; avoid a full policy rerun on every worker action.
+
+7. M&M replays do not provide expert actions on arbitrary states reached by our
+   new policy. Do not call self-labeling those states M&M distillation. First
+   measure the shift; if correction is needed, generate feasible alternatives
+   with a frozen local teacher/search and label only improvements supported by
+   legal continuations. This is a later step, not a prerequisite for a first
+   production-sized test.
+
+Keep the existing episode hash holdouts, cutoff (Sep 30 07:30 UTC), reserved
+confirmation exclusions and declared G3/swap exclusions. Split at episode/
+world level before extracting hours; deduplicate perspectives. Freeze a data
+manifest before tuning. Do not inspect the unused confirmation cohort to
+choose features or deadline bands.
+
+TEST ORDER AND DECISIONS
+
+A. Semantic round trip, before training cost
+   Recorded jobs -> compiler -> engine. Check actual sellable quantities at
+   h1/h5/h9, feed before production, successful same-day land/planting, site
+   claim order, later fertilizer recovery, hired worker-hours and input use.
+   Allow equivalent paths and worker assignments. Test both seats and awkward
+   funding/capacity cases. Require explicit reasons for every missed package.
+
+B. Separate representation, prediction and execution
+   Keep the current baseline. Test new learned intent through an adapter to
+   the old executor that enforces the new fields where possible; separately
+   test teacher-extracted intent and learned intent through the new executor.
+   Report unsupported adapter fields; silently ignoring them is not a control.
+   Oracle success plus learned failure points to prediction; oracle failure
+   points to representation/execution. Freeze seller and forecaster initially.
+
+C. Paired full games on the declared development bed
+   Compare the exact exported C++ bundle, equal compute limits, identical
+   worlds and both seats. Report own cash, opponent cash, their difference,
+   W/T/L and half-tie score. Cluster uncertainty by world when seats share a
+   world. Show days 0-9, 10-17 and 18-end so early wool cannot hide later milk
+   losses. Use a preset small screen followed by a larger confirmation only
+   if justified; do not repeatedly tune to the same selected winning worlds.
+
+   Recorded M&M continuations are timing diagnostics. Full games against a
+   frozen live package or clone are reactive tests against that policy, not
+   live M&M. Label opponents accurately and include relevant stronger styles
+   in the team's normal judge stage.
+
+D. Production check
+   Check Python/C++ inference and decode parity, legal actions, deterministic
+   execution, no lost jobs after partial hires, and no duplicated receipts.
+   Measure compiler/seller/inference separately: median, p95, p99 and worst
+   call, hard farm days, both seats, and total game allowance. Freeze source,
+   model and config hashes together. A faster but economically worse compiler
+   is not a successful replacement.
+
+SMALLEST USEFUL FIRST VERSION
+
+Implement only ordered placement claims, product delivery packages/windows,
+separate fertilizer service, and crew waves with actual-fill repair. Keep the
+existing aggregate crop/animal decisions and seller. Demonstrate that teacher
+intents execute correctly, distill those four additions, and run the paired
+full-game screen. Add richer crop scheduling or learned selling only after
+that isolates a remaining gap. This gives BC and the compiler a concrete
+shared contract without replacing every working component at once.
+
+LOCAL SOURCES CHECKED
+
+- designs/day_intent.md and designs/day_compiler.md: current responsibility
+  split, engine timing constraints, validation requirements.
+- experiments/v10/sep29_bc_mm/packages/m3fc2hc/source/source/intent.hpp:
+  current schema, aggregate counts and decoder trim preferences.
+- experiments/v10/sep29_bc_mm/packages/m3fc2hc/source/dc11/compiler.hpp:
+  funding/search options, hirecheck, latehire and shared market slots.
+- work/mm_handoff/findings/bc.md: bind audit and later corrections, placement
+  audit, own-state/seed effects and learned-seller limitations.
+- work/mm_handoff/roles/bc.md: current data and model restrictions.
+- BC transcript: latest substantive entries checked through 18:42 UTC today;
+  placement and walking audit. This note is independent of any newer work.
+- work/sep30_early_products/M_AND_M.md: exact action audit and its limitations.
+- work/sep30_early_products/TELEPORT_FINDINGS.txt: corrected counterfactuals,
+  actual-hire/missed-feed example, and rejected legal balanced-placement arm.
+
+
+REVIEW 2: BC'S CONCRETE V2 DESIGN AND INITIAL LABEL EXTRACTOR
+2026-09-30, 18:56 UTC. Priority: before training labels are frozen.
+
+Read DESIGN_intent_v2.md and sep29_dc12/INTENT_V2_compiler_input.md, plus the
+initial tools/label_v2.cpp and tools/collect_log.cpp. These are in-progress
+files. Findings below apply to the versions with these SHA256 hashes:
+  label_v2.cpp: bfaf39eb4496f722841f56f3471254be0bf3de79f96229cb84b1591fe4b5a0bf
+  collect_log.cpp: 828fea28a3d8f0bf360fdbbe596fc2c8b0c3058c68aaac70581e4e3b9757fffe
+  DESIGN_intent_v2.md: fb51c97385a0a7c133c9eaaccb4c67267cc5f5120381df922f627d22b6ec917a
+This is source review, not a measured estimate of how often each issue occurs.
+
+AGREEMENTS AND CHANGES TO MY FIRST PROPOSAL
+
+The separate small model is a good way to avoid disturbing the main policy.
+Use the existing placement rule first; a learned placement head is unnecessary
+if the fixed rule already captures the desired behavior. Keep normal ongoing
+watering (survival AND fertilized production), rather than requiring daily
+watering. Retain the seller and current executor guards.
+
+The new design names m19/splitfert+nearanimals=6 as the bar, with team-reported
++$1,205 (SE $283) on 218 worlds. I have not independently audited that result.
+My earlier negative private balanced-placement result is a DIFFERENT arm and
+does not invalidate this new bar. Compare v2 with the exact current frozen bar.
+
+1. THE DEADLINE LABEL AND EXECUTOR CURRENTLY MEAN DIFFERENT THINGS
+
+BC labels the time by which 80% of harvested units arrive. The compiler input
+says the deadline applies to the day's harvested units and charges late cargo.
+If 80 units arrive at h5 and 20 at night, the teacher's deliver80 is h5; charging
+all 100 units for lateness changes the teacher's behavior. Conversely, two days
+can have identical deliver80=h23 while one returns most useful stock early and
+the other returns nothing until night. That scalar cannot reproduce both.
+
+Minimal replacement: predict early-return QUANTITY as well as time, or a small
+monotone cumulative receipt profile per product. For example, quantities first
+sellable by h5, h9, h13 and end of day, capped by today's selected collections.
+Use nonnegative band counts and cumulative sums to guarantee monotonicity.
+Teacher stock and intended collection quantities must be explicit denominators;
+do not silently apply a fraction learned on teacher harvests to all own stock.
+
+A smaller first version is (early_units, early_deadline), with the remaining
+collection following normal routes. Deadline penalties apply only to the unmet
+early quota, not every late unit. Keep a direct-return flag for the selected
+couriers. This avoids manufacturing a requirement to return all far stock early.
+If the compiler selects which batches satisfy a quota, that small assignment
+decision remains its job; do not claim that timing is then entirely learned.
+
+The proposed h6/h12/h18/night bins also erase h5 versus h6, precisely a boundary
+the early-wool work measures. Retain raw hours in the labels, then choose bins
+around actual sale opportunities (at least h5 separately) after inspecting
+allowed development data. Hourly receipt histograms are cheap offline labels.
+
+2. INITIAL DELIVERY EXTRACTION CONFUSES WORKER INVENTORY LOSS WITH SHED ARRIVAL
+
+label_v2.cpp lines 80-89 runs the entire sim.step(), then labels every negative
+pocket delta as delivery. Engine sim.hpp: worker actions precede market; night
+then calls drop_inventories() and clears all pockets (lines 1491-1505).
+
+Concrete cases:
+- PASS at h23 with six carried wool and shed room: pocket delta -6 is assigned
+  arrival hour 23. Those units actually become sellable at next dawn, after the
+  h23 market. The comment's overnight sentinel 24 is not used in this case.
+- DROP six wool into one free shed slot: pocket delta -6, but only one unit
+  arrives and five are destroyed (sim.hpp DROP, lines 1103-1118).
+- HARVEST at h23 from an empty pocket: after the night the pocket is empty
+  again, so delta is zero. The harvest and its next-dawn receipt disappear from
+  the labels altogether.
+- PICKUP old stock from the shed and redeposit it after a new harvest elsewhere:
+  the pooled arrivals can satisfy the new harvest's 80% target without those
+  harvested units returning. Filtering arrivals before the first harvest does
+  not solve this because the wrong deposit can occur afterward.
+
+Track successful harvest batches per worker/product through worker actions,
+with separate deposited and destroyed quantities; track later repickups as
+already delivered stock. Resolve transfers before the market and night
+transfers afterward. A phase-correct observer inside an isolated extractor
+is preferable to guessing from full-step deltas. Do not change the production
+engine merely to collect labels. Verify the ordinary replay state remains
+identical. Day 29 has no night transfer and ends after h22; never label a
+terminal carried unit as future available stock.
+
+Related: collect_log.cpp lines 60-64 flushes EVERY pending harvest of a product
+on any negative pocket delta. A partial PLACE of two out of twelve units marks
+all twelve delivered. It also assigns night transfers to h23. collect_read.py
+lines 10-11 then calls those same-day arrivals. Consequently, the latest
+"far product reaches the shed around h22" aggregate is not yet a reliable
+sellable-time measurement. The geometric association may still hold; quantify
+it again with correct phases and quantities before using it as a target.
+
+3. FERTILIZER LABEL MUST IDENTIFY THE COLLECTOR'S VISIT, NOT THE TILE'S CLOCK
+
+label_v2.cpp lines 91-93 calls fertilizer "with harvest" when ANY harvest on
+that tile occurred in the last two turns. It does not remember the harvesting
+worker or an uninterrupted visit. M&M can harvest with worker A, send A home,
+and collect fertilizer next turn with worker B: this would be labeled bundled,
+although it is exactly the separate-service behavior we want.
+
+Record unit/day, visit ID, harvest time, departure and fertilizer time. For
+the return problem, distinguish "fertilizer delayed the product courier before
+its deposit" from "another worker collected it". These are stronger semantics
+than nearby action timestamps. Also keep the count of eligible animals with
+NO product harvest that day; they still may provide useful fertilizer. A
+species-wide majority class can erase a minority of critical product couriers.
+
+4. THE INITIAL EXTRACTOR'S END-OF-DAY BOUNDARY NEEDS AN AUDIT
+
+const Farm& F is a reference to sim.st.farms[seat], not a saved before-state.
+After sim.step(), F and G name the same updated farm. Tile tests after line 80
+therefore read after-night state at h23. Water's denominator counts plants at
+dawn, while its numerator checks final tiles: newly planted, cleared or dead
+plants can change membership. Save the dawn entity set and mark its successful
+services before the night update.
+
+The row is emitted only when hour == HOURS-1 (line 96). The final playable day
+ends at hour 22, so day 29 has no row. Explicitly emit at last_hour(day) and
+mark truncated replays; missing terminal days should not silently pass the
+join. Count expected versus extracted rows and unmatched meta keys before fit.
+
+5. TWO CREW WAVES MUST NOT MOVE LATE WORKERS EARLIER IN THE TEACHER LABEL
+
+The current extractor sums every hire after h0 into crew_w2 and uses the FIRST
+later hire hour. If two workers arrive from orders at h1 and another two at h10,
+the label becomes four orders at h1. That can demand money and order slots the
+teacher did not have, and gives the oracle executor extra early worker-hours.
+First report how many days really have >2 nonempty hire hours and the worker-
+hour distortion under this compression. Keep the raw hire[24] label so the
+representation can change without replaying the corpus.
+
+For a compact fallback, two predicted cumulative crew milestones plus actual-
+funding admission is reasonable; evaluate its approximation honestly. Mask
+wave2_hour when wave2_count=0, respect the ten-slot limit jointly with sales,
+and check the 0-8 / 0-6 count ranges against the actual distribution. Never
+silently clamp out-of-range teacher labels. The compiler's one extra hire is
+an explicit repair, with its own cost and actual-fill check.
+
+6. THE V2 MODEL SHOULD SEE THE MAIN NETWORK'S ACTUAL WORK REQUEST
+
+The same dawn can produce different crop/animal asks under the package and
+the copy. A v2 network of dawn global features alone emits the same crew for
+both, even when one asks for more planting or service. Add a compact summary
+of the DECODED main intent: selected service counts, new claims, land, product
+units requested for collection, and protected production feed. These are
+available at deployment and make the side model reusable across main models.
+
+Train first on teacher intent summaries, then validate with predicted main
+intents on held-out dawns. That substitution is a measurable train/deploy
+shift. Do not quietly use teacher asks during deployed v2 evaluation.
+
+Add a little task-specific geometry: held product selected for collection by
+distance ring, nearest-return time, and total visit workload. The current
+256 global features include a mean distance over ALL producers, not which
+ready milk or wool is near. Rich grid models are not necessary for this.
+
+7. MAKE JOINT EXECUTION QUALITY THE CHEAP GATE
+
+Per-field accuracy versus a majority baseline is useful but insufficient.
+Mostly-night delivery or skip-fertilizer classes can dominate accuracy while
+rare early wool days are wrong. Report day 3-9 separately, quantity-weighted
+early receipt error, missing feed before production, and excess worker-hours.
+For ordinal delivery time use timing/quantity error as well as classification.
+
+Before spending on three seeds, get one exported model through oracle-label
+and predicted-label execution. If ensembling later, score complete masked
+tuples or decode conditionally; independent argmax of averaged crew count,
+wave hour and delivery heads can choose a combination no teacher used. Do not
+assume the forecaster ensemble result transfers to coupled action fields.
+
+8. GUARANTEE THAT THE INTENT ACTUALLY REMOVES COMPILER WORK
+
+All-optional fields preserve compatibility, but the v2-enabled path should
+explicitly bypass replaced searches. Count hire candidates, site candidates,
+full seller calls, funding retries and route evaluations. A late-arrival penalty
+added to the old optimizer could improve timing while making the compiler
+slower. Fixed placement in BC's scope concerns animals; do not remove crop
+site search unless a replacement crop rule/assignment is defined too.
+
+Useful first acceptance result: teacher v2 labels achieve their stated early
+quantities with no phantom crew, then predicted v2 on the exact bar meets the
+same checks at lower measured runtime. Full-game margin remains the next gate.
+
+SUGGESTED ORDER FOR BC
+
+First fix event accounting and measure representation loss (80% compression,
+two-wave compression, species fertilizer majority). Then freeze the smaller
+schema, add intent workload features, train one small side model, and compare
+teacher versus predicted execution. The broad redesign can remain small;
+accurate labels and an exact interface matter more than adding many heads.
+
+FOLLOW-UP 18:59 UTC: ENGINE CHECKS AND THE NEAR-ONLY REVISION
+
+I ran six isolated engine cases in
+  work/sep30_intent_review/engine_label_cases.cpp
+using the existing fast_game_engine/sim.hpp, with AddressSanitizer and
+UndefinedBehaviorSanitizer. All assertions passed, with no sanitizer findings.
+Output: work/sep30_intent_review/engine_label_cases.txt.
+
+- h23 PASS with six carried wool: pocket -6, shed +6, but an h23 sell order
+  sells zero. Those goods first become sellable next dawn.
+- h23 DROP with the same wool: pocket -6 and an h23 sell order sells all six.
+- DROP six with only one free shed slot: one deposited, five destroyed.
+- PLACE two from twelve carried: two deposited, ten still carried.
+- HARVEST six at h23: actual harvest six and overnight deposit six, but net
+  whole-step pocket change zero.
+- Day 29 h22 PASS: game ends with the carried goods still carried. There is
+  no h23 action or night transfer.
+
+These verify the engine mechanisms behind the source review; I did not run
+BC's complete extractor over a corpus or estimate its aggregate label error.
+Reproduce from the repository root:
+  conda run -n kaggriculture g++ -std=c++20 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer -I . work/sep30_intent_review/engine_label_cases.cpp -o work/sep30_intent_review/engine_label_cases
+  conda run -n kaggriculture work/sep30_intent_review/engine_label_cases
+
+BC's 18:55 transcript says Imitation requested labels from near animals only
+(rings 0-3). That makes the target less dominated by distant stock, but the
+executor must apply the same eligibility mask and quantity denominator. A
+deadline learned on near stock cannot be charged to every unit of the product.
+Near-versus-far must be determined from the actual observed farm and selected
+collect jobs, not teacher coordinates carried into deployment.
+
+This exposes a separate comparison worth logging: for each product/day, show
+near selected units, far selected units, early eligible quota, and achieved
+sellable quantities. If a placement change moves a cow between categories,
+report the resulting change in target as well as execution. Otherwise a model
+can appear more accurate because the difficult milk was removed from its target.
+
+Keep night as NEXT_DAWN and terminal-unsold as UNSOLD, separate from h23 and
+from NO_COLLECTION. Missing/ambiguous labels need a mask, not a negative hour
+that accidentally becomes the default earliest or latest class.
+
+Finally, a deadline becoming an arbitrary dollar lateness penalty leaves an
+economic tradeoff in the compiler. For the first slim executor, define the
+decision order explicitly: preserve accepted mandatory production/survival
+work, meet the chosen early quota if feasible, then minimize extra travel and
+cost. Report unmet quotas and bounded repairs. If dollar penalties are retained,
+freeze them for the first comparison and report their violations; do not hide
+a new penalty-tuning search inside the claimed compiler simplification.
+
+
+REVIEW 3: MEASURED LABEL RANGES, CONFIGURATION AND REMAINING-WORK SEMANTICS
+2026-09-30, 19:05 UTC.
+
+The updated design has adopted binding fields, direct-return packages, h1/h5/h9
+bins, decoded-intent conditioning, style separation and execution ledgers.
+Those are substantive improvements. The near-only extractor now associates
+harvests with workers. Its version checked here is SHA256
+1b6a335792ebf291eddbeea3de449c4ba377c43a004dd06c07cf847787963eea.
+It still flushes whole batches on any negative delta at a shed tile, so partial
+PLACE, overflow, h23 HARVEST and h23 PASS while on a shed tile remain relevant
+cases. The engine checks in REVIEW 2 can be used as acceptance fixtures.
+
+1. THE PROPOSED CREW HEAD CANNOT REPRESENT MUCH OF THE TEACHER DATA
+
+I audited a snapshot of the newly produced mm_labels.csv, excluding reserved
+confirmation, all list_g3w.txt worlds, list_exact.txt swap worlds, list_pkm1_t30
+worlds, and shared episode hash buckets 0/1. This is a mechanical label audit,
+not a trained model or a game evaluation. The extractor was still writing; the
+snapshot contains 9,981 complete rows from 357 perspectives, days 1-28, with
+the last perspective only partly present. No duplicate episode/seat/day keys.
+
+Results against the design's wave-1 classes 0..8 and wave-2 classes 0..6:
+- Wave 1 > 8: 4,343 / 9,981 rows, 43.5%.
+  Specifically, 4,320 rows request 9 and 23 request 10 successful h0 hires.
+- On days 3-9: 675 / 2,499 rows, 27.0%, exceed wave-1 cap 8.
+- Wave 2 > 6: 34 rows; observed values reach 9. This is the sum of all later
+  hires, so a value below 10 does not establish that it was one real wave.
+
+Increase wave-1 support to the physical 0..10 range before training. Determine
+wave-2 support and timestamp compression from the raw hire events; preserve
+overflow/multiple-wave counters instead of clipping. The one-hire compiler
+repair must not become a routine correction for a deliberately truncated head.
+
+This also makes shared h0 slots essential: nine hires leave just one market
+order position, ten leave none. An exact crew prediction can still fail if the
+current seller also inserts several h0 sales. The final merged market list,
+not each component's independent output, is the executable object. Record
+requested hire time, submitted order position, actual fill and active-from hour.
+
+Artifacts:
+  work/sep30_intent_review/audit_label_snapshot.py
+  work/sep30_intent_review/label_snapshot_audit.json
+The JSON records the snapshot hash, exclusions, day coverage and histograms.
+Re-running the script reads the latest in-progress file, so totals may increase.
+
+2. THE WATERING MEMBERSHIP ISSUE OCCURS IN THE GENERATED DATA
+
+For a target described as "dawn-standing plants watered today", the numerator
+cannot exceed the dawn denominator. Yet the snapshot has:
+- tomatoes: 970 rows with watered > dawn plants;
+- strawberries: 1,328 rows with watered > dawn plants.
+On days 3-9 alone these counts are 381 and 979.
+
+This matches the source's mixture of dawn counts and end-of-day tile membership.
+Do not use these ratios for a consistency decision or train a watering head on
+them. The head is out of v1 scope already, so the cheap option is to mask these
+labels until the entity cohort is tracked correctly. Keep optional analysis of
+new-plant watering in a separate target.
+
+3. KEEP REQUESTED FEED; DO NOT SILENTLY ENABLE keepfed=1
+
+Both design notes list keepfed among executor guards. In the current source it
+is a POLICY OVERRIDE: it raises feed_n above in.feed when it decides an animal
+the network would release is worth retaining. That is different from ensuring
+the compiler completes the feed the intent requested.
+
+Source: src_m14sf/dc11/compiler.cpp around lines 243-252; default keep_fed=false
+in compiler.hpp. The Day compiler's own stop list reports keepfed=1 on the copy
+at -$325 (SE $182), with 8 worse / 2 better / 20 equal games. This is not proof
+it loses everywhere; it is reason not to turn it on as an assumed neutral guard.
+
+For v2, retain the exact baseline setting. Protect accepted in.feed work,
+especially before a production night, and log any dropped feed. A deliberate
+network decision to let an animal escape is not an executor failure. Changing
+that decision should be a separately named policy experiment.
+
+4. MAKE V2 FEATURE PREPARATION INDEPENDENT OF THE MAIN MODEL'S SIDECARS
+
+"Same 256 features" can refer to two different buffers. Raw global_features()
+is modified in decode_intent by gblind, style, condition, goal/goalraw and
+land-input settings before main-model inference (net_i/agent/bc_opus/source/
+agent.cpp around lines 292-325). The training arrays start from the raw buffer;
+train.py applies additional style/condition/goal transformations.
+
+Define one v2_features(observation, history, decoded_intent, v2_config) and match
+it in extraction/training/export. Reuse raw feature extraction, but do not
+accidentally inherit whichever package/copy main-model masks or hindsight-goal
+slots happened to be active. Apply the v2 style explicitly. For v1, exclude
+unused condition/goal slots rather than consume unexplained values.
+
+I checked the normal extractor's opponent-flow inputs: it calls
+history.expected(day, 3, rival), just like decode_intent. I found no basis here
+to call those slots future-observation leakage. The issue is feature and
+configuration parity, not an established hidden-state bug.
+
+5. CUMULATIVE RECEIPTS AND REMAINING WORK NEED DISTINCT STATE
+
+Define three separate records:
+- Day target: selected collection jobs, early quota and deadline, absolute
+  hire-order hours, and the day's service decisions.
+- Compiled remaining plan: unfinished jobs on actual workers, conditional
+  future hires, future receipts and reserved inputs.
+- Execution progress: successful harvest/deposit quantities, completed jobs,
+  filled hires, spent orders and dropped commitments.
+
+The early quota is cumulative first delivery, not current shed stock. Example:
+six wool are deposited at h3 and sold at h3; at h4 the shed has zero wool but
+the six-unit delivery quota is satisfied. A replan must not collect another
+six to "restore" that stock. Repicking/redepositing the same batch also cannot
+earn delivery credit twice. Keep provenance sufficient for these counters.
+
+Likewise, a wave ordered at h0 is consumed once. At h6 replan only remaining
+hires; do not reinterpret crew[0] as "hire this many now", reset the daily hire
+price index, or reintroduce jobs already completed. A partial fill leaves only
+the unfilled remainder eligible for a later order, subject to actual cash and
+the plan's deadline.
+
+If a residual intraday model is added later, specify whether it predicts a new
+total target or a remaining target. Convert explicitly before updating the
+ledger. Mixing those meanings would recreate the inventory/future-receipt
+double counting that invalidated the first teleport benchmark.
+
+NEXT SMALL IMPLEMENTATION DECISION
+
+Freeze an example containing: one product quota already deposited and sold,
+one worker hired out of a requested two, and a feed job still pending. Both the
+ordinary next step and an explicit replan should emit the same remaining work
+and predicted receipts. This tests the new interface without waiting for any
+neural training or full-game batch.
+
+6. AN ORACLE INTENT IS NOT AN ORACLE FUNDING POLICY
+
+The proposed oracle test combines M&M's crew/receipt targets with our routes
+and our current seller. M&M's later hires and purchases were funded by M&M's
+actual earlier sales. If our seller holds those products, the identical dawn
+and perfect v2 targets do not guarantee that those hires are affordable at the
+teacher's hour. Conversely, pinning teacher cash while changing sales would
+give the executor free funding and hide the problem.
+
+Use three distinct checks, in this order:
+- Reconstruction: ordinary recorded actions through the engine, with the
+  label observer attached. Engine states, successful transfers and labeled
+  events agree exactly. No policy component is replaced.
+- Conditional route feasibility: can the executor satisfy the work packages
+  given the resource availability they assume? If resource availability is
+  supplied from the recording for this diagnostic, label it explicitly as
+  conditional/oracle, not a legal agent improvement.
+- Integrated legal execution: teacher v2 targets with our real seller and
+  actual fills. Report short cash / late input / no crew / route-time misses
+  separately. A cash miss here is a seller/funding-interface problem, not
+  evidence that the v2 classifier needs another training run.
+
+The same distinction applies to the teacher-vs-predicted comparison: freeze
+the old main intent when testing only v2 prediction, then introduce predicted
+main intent as a separate test. Otherwise crop-count changes also alter crew
+demand and receipt quantities, confounding a claimed v2 prediction error.
+
+7. STOP CONDITIONS SHOULD MATCH THE CLAIM
+
+For a first deployable speed experiment, report three independent outcomes:
+- Is label/accounting reconstruction correct?
+- Is the complete agent faster under the same budget, including its repairs?
+- Is full-game margin acceptable against the frozen current bar?
+
+Per-field majority accuracy is not a necessary economic stopping threshold:
+wrong-by-one crew and wrong-by-five crew have different costs, and a different
+legal route can serve the same work. Use it to diagnose the model, then measure
+joint feasible-plan rate, early quantity deficits, missed requested services
+and runtime. Strict engine legality and correct accounting remain hard gates.
+
+The historical "untouched 122" has now been inspected for m19. It remains a
+useful paired comparison cohort, but after further decisions based on it, do
+not present it as a newly untouched confirmation for v2. Keep the separate
+reserved confirmation games uninspected until the final selected candidate
+reaches the team's confirmation stage.
+
+
+REVIEW 4 -- FIRST V2 EXECUTOR: VERIFIED FAILURES BEFORE ECONOMIC TESTS
+2026-09-30, 19:12 UTC
+
+BC and Imitation now prefer an opening rule table to an MLP. I agree that this
+is a good first implementation. I independently inspected the new Day compiler
+tree work/sep29_fund/src_v2 and tested a frozen copy of its router. No active
+Claude source, tests, model, or session log was changed. All findings below
+refer to this in-progress snapshot; they may already be fixed when read.
+
+Evidence:
+- work/sep30_intent_review/v2_router_cases.cpp
+- work/sep30_intent_review/v2_router_cases.txt
+- work/sep30_intent_review/v2_router_overflow.txt
+- work/sep30_intent_review/v2_snapshot/{dc11/router.cpp,dc11/router.hpp,source/world.hpp}
+Router snapshot SHA256:
+02325203802157e9efa6b07cd3d553b9dee75bcb09c94ca0c922e3c9d92b5046
+
+These are isolated C++ router fixtures, not sampled games, teacher rows or
+profit estimates. Ordinary cases pass their diagnostic assertions without
+sanitizer errors; the separate overflow case intentionally exits nonzero.
+
+1. DEADLINES ARE ONLY PRODUCT-ORDER KEYS
+
+router.cpp:935 courier() checks that a deadline is present, sorts products by
+their deadlines, then moves ALL assigned near harvests of one product before
+ONE shed stop. The walk/cost does not enforce the actual deadline. Assignment
+has already happened without this delivery requirement.
+
+Verified fixture: one farmer, sheep at tiles 34 and 24, starting at 44. Asking
+for wool by h5 gives HARVEST, HARVEST, then DROP 12 wool at h6. Asking for h17
+gives byte-identical actions and deposits. It is a priority rule, not a binding
+time constraint.
+
+This also contradicts the comment and adopted direct-return contract: another
+harvest happens before the first product is returned. An attached multi-action
+stop is not split either. Verified HARVEST h1, COLLECT_FERTILIZER h2, DROP h4.
+The opening script's fert_mode=later should avoid that second case when the
+binder splits correctly; the general courier helper does not guarantee it.
+
+Do not infer that immediate return after every animal is always best. In this
+two-sheep fixture, separate returns would get the first six units in sooner
+but the second six later. That is exactly why the contract needs quantity by
+time (and optional individual direct-return packages), not a blanket command
+to move all harvests to the front. Match the requested contract explicitly.
+
+2. CREW FEASIBILITY IS CHECKED BEFORE THE REWRITE THAT CAN BREAK IT
+
+The v2 branch measures search.late() and decides whether to add its one repair
+hire around router.cpp:1142. Night repair, trimming and spawn/local search
+also happen before courier(). Then lines 1277-1295 rewrite the routes and
+truncate every suffix whose actions no longer fit. The crew repair is not
+repeated on these final routes.
+
+Verified fixture: farmer at h17, a near harvest and required FEED. Both fit
+before courier(). After its extra shed trip, the route is two turns late and
+FEED is in the suffix that RouteOut drops. This is an intraday route fixture,
+not a claim that a particular full game lost a feed. It proves the repair's
+feasibility result does not apply to the route eventually emitted.
+
+Fix the ordering: build delivery work packages before assignment/crew fitting.
+If a final rewrite remains, recheck and repair that exact result, bounded by
+the intended extra-hire budget. Never declare the pre-rewrite result feasible
+and treat later dropped required jobs as a successful intent execution.
+
+3. COURIER BUFFER CHECK HAPPENS AFTER THE INVALID WRITE
+
+buf has MAX_ROUTE=96 entries. courier writes R.n + number_of_target_products
+entries, then checks m > MAX_ROUTE. A 95-stop route with two products writes
+entry 96 before reaching the guard. ASan/UBSan reproduce a stack-buffer-overflow
+at frozen router.cpp:954. This is a synthetic capacity stress case; I have not
+observed a real opening route reach it. Check capacity before writing, or use
+a bounded append that fails before the first out-of-range write.
+
+4. DELAYED-HIRE SPAWN USES THE WRONG HOUR
+
+start_of() respects cash_hire_hour, but sync_spawns() always samples occupancy
+at farmer.hour + wave (h0/h1), even when the second wave is ordered at h5.
+Verified fixture: farmer is outside the shed at h1 and back on 44 at h5.
+The new hire starts at h6, but the router predicts tile 44; the engine's
+least-occupied-shed rule requires tile 45.
+
+Use each actual hire order's hour and only workers already present then.
+This also affects the older latehire path. The fixed script's h1 second wave
+does not trigger this particular error; teacher v2 labels with later hires do.
+This check proves the router prediction is wrong, not that every downstream
+realization necessarily accepts an invalid route.
+
+5. TWO HARNESS/API ISSUES TO FIX BEFORE PROMOTING THIS VERSION
+
+- tools_dc11/teacher_day.cpp sets intent_v2 once for the starting day. With
+  TEACHER_DAYS > 1, later dawns can update the main teacher_intent but keep the
+  STARTING day's v2 crew/deadlines. Default span=1 is unaffected. Set v2 per
+  actual dawn, clear it outside scope, and fail explicitly on a missing oracle
+  row instead of silently running baseline fields in an oracle comparison.
+- The new mutable thread_local intent_v2 pointer and thread_local script in
+  dc11/compiler.cpp violate prompts/local_agent.md's instance-state rule.
+  Pass the optional intent explicitly through compile/bind or put it in the
+  owning agent instance. The scripted wrapper normally clears its pointer,
+  but that does not make shared mutable policy state a valid production API.
+
+There is also a measurement mismatch: teacher_day maps recorded h6 to bin h9,
+while the new rule script requests exact h6. Either compare exact hours in
+both arms or label those as different constraints. The current all-product
+plan.receipts ledger also cannot alone certify a quota for near-source units;
+retain the target quantity/source cohort, planned receipts and realized
+receipts separately. Cumulative receipts already sold still count as done.
+
+The new gate reader should not divide h6 deposits only by the units eventually
+deposited that day. Dropping harvests or leaving cargo overnight shrinks that
+denominator and can make a worse plan score 100%. Freeze the requested near
+quantity from the dawn intent; report h6 quantity, deficit against that target,
+total harvested, intraday deposited, overnight deposited and lost separately.
+Keep teacher-volume comparison separate when our main intent requests a
+different amount. Otherwise a six-unit plan can appear to beat a 30-unit one.
+
+6. WHAT THE FIXED-SCRIPT DISCOVERY DOES AND DOES NOT ESTABLISH
+
+The crew modes are useful and avoid an unnecessary model. The delivery table
+is only an 80th-percentile statistic. Equal h6 values do not imply equal h1-h5
+flow or an identical worker script. For example, 18 units at h1 + 12 at h6
+versus all 30 at h6 both have deliver80=h6; only the first delivers wool early
+enough for h1-h5 sales.
+
+Measure cumulative near-source wool AND milk at h1, h3, h5, h6 and h9. Keep
+raw unrounded delivery times for this check. The extracted table says our
+milk is already earlier than the teacher on d8; a teacher h6 deadline is an
+upper bound, not a reason to delay our existing h4-h5 milk.
+
+Do not describe fertilizer-later=97-100% as a verified visitor-order contract
+yet: the extractor still includes animals with no product harvest and uses
+tile/timing proximity rather than worker identity (REVIEW 2). It supports a
+splitfert hypothesis, which already has separate legal-game evidence.
+
+7. SMALLEST USEFUL NEXT EXPERIMENT AND FAST IMPLEMENTATION
+
+Freeze the current selected baseline and use three separate additions:
+- Crew table only, keeping its seller and delivery objective unchanged.
+- Delivery packages only with the same requested main work and baseline crew.
+- Both together, with the single bounded crew repair.
+
+The current openscript=2 changes both the crew floor and the delivery value
+(half value after the cutoff), so it is not a crew-only diagnostic. It also
+retains the old hire search; its runtime cannot establish a slim-executor win.
+
+For the cheap executor, make the table a default policy that emits explicit
+work and quantities. Attach harvest-to-deposit precedence to the early
+packages, assign them to the fixed crew first, reserve the mandatory feed /
+water work, then fit optional work. Evaluate the deadline and required-work
+shortfalls on the FINAL routes. Allow only the intended bounded repairs.
+Log every changed crew/wave, failed package and dropped requested service.
+This removes decisions from the compiler without moving them into an opaque
+postprocessing step. Full-game margin then tests the policy, with a separate
+runtime measurement testing whether the compiler actually became cheaper.
+
+Reproduce from repository root:
+conda run -n kaggriculture g++ -std=c++20 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer -I work/sep30_intent_review/v2_snapshot -I . work/sep30_intent_review/v2_router_cases.cpp -o work/sep30_intent_review/v2_router_cases
+conda run --no-capture-output -n kaggriculture work/sep30_intent_review/v2_router_cases
+conda run --no-capture-output -n kaggriculture work/sep30_intent_review/v2_router_cases overflow
+
+
+REVIEW 5 -- EXACT REPLAY ACCOUNTING AND WHAT H6 HIDES
+2026-09-30, 19:22 UTC
+
+I built a separate replay observer, using an engine snapshot whose only engine
+change is exposing existing methods for diagnostics. It observes each worker
+action before the market/night transition; credits only accepted deposits;
+keeps overflow losses separate; and uses a FIFO attribution convention for
+partial mixed cargo. No live compiler, engine or teacher code was edited.
+
+Scope: 12 M&M perspectives from Sep 28 01:26-02:22 UTC, selected from BC's list
+after excluding reserved confirmation, all listed G3/swap worlds and hash
+buckets 0/1. Exact created timestamps checked; all pre-cutoff. This is an old,
+small slice, useful for accounting and examples, not a representative payoff
+estimate or a new training set.
+
+All 8,628 reconstructed worker phases matched the normal engine phase; all
+8,628 complete steps matched recorded trace hashes. Night transfer observation
+also matched the engine's drop_inventories result. ASan/UBSan were enabled.
+There were no thin-product pickups. One day had a partial transfer from mixed
+near/far cargo; I excluded that entire day's four products from near/far label
+comparison because item identity is not uniquely observable. The observer
+flags such cases instead of presenting FIFO attribution as physical truth.
+
+Against the initial mm_labels.csv, among 1,340 comparable product-days:
+- 144 product-days differ in at least one field.
+- 65 near-harvest quantity fields and 82 far-harvest quantity fields differ.
+- 19 deliver80 fields differ after mapping our "never reached 80%" marker to
+  BC's existing "not today" value 24, so this is not a naming-only mismatch.
+- ZERO differences on days 3-9 in this sample.
+
+That last result matters: the extraction defects are real, but I would not
+claim they invalidate BC's opening table on this evidence. They DO need fixing
+before using the same extractor to infer the days 10-20 / late-game policy.
+Example: 114450926 seat 1 d27 milk is labeled zero near harvest / no deadline;
+the engine actually harvested two near units at h23 and deposited overnight.
+Another example: that perspective's d19 far strawberries are 12 units, not 6.
+
+Opening cumulative near deliveries, mean units across the 12 perspectives:
+
+day / product    harvested    by h1    by h3    by h5    by h6
+6 / wool             18         0        6       12       18
+8 / milk             12         6        6        6       12
+9 / wool             12         0        4        8       12
+
+All these product-days have deliver80=h6. The useful policy is staggered
+receipts: a third of wool by h3, two thirds by h5, the rest by h6; half of the
+milk is already available at h1. A lone h6 deadline can reproduce the label
+while missing every one of those earlier sales opportunities.
+
+Do not hardcode these absolute quantities into another farm: this teacher
+slice has 18 wool on d6 and 12 on d9. Emit quantity targets from the actual
+requested work/held yield, then compare source groups and time bands. Check
+the same cumulative curves on the selected current baseline before adding
+more movement rules; Claude's new h6 gate already says that baseline is close
+at h6, but it does not resolve h1-h5.
+
+Evidence and reproduction:
+- work/sep30_intent_review/flow_probe.cpp (observer and parity checks)
+- work/sep30_intent_review/prepare_flow_probe.py (snapshot / protected-data filter)
+- work/sep30_intent_review/flow_probe_manifest.json (selection timestamps and engine hashes)
+- work/sep30_intent_review/flow_probe.csv and flow_probe.log
+- work/sep30_intent_review/read_flow_probe.py and flow_probe_summary.json
+Build: conda run -n kaggriculture g++ -std=c++20 -O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer -I work/sep30_intent_review/observer_snapshot -I . work/sep30_intent_review/flow_probe.cpp -o <fresh binary path>
+Run replay diagnostics through work/runq/slot.sh, one slot; no agent is called.
+
+
+REVIEW 6 -- FUTURE HIRE WAVES ARE UNDERCOSTED
+2026-09-30, 19:27 UTC
+
+Verified with the exact planned_cost function extracted from the current
+compiler, then with real engine HIRE actions, under ASan/UBSan:
+
+already hired    future waves    sum used by caller    actual engine cost
+0                8 + 1                     55                  88
+0                9 + 1                     89                 143
+4                2 + 1                     18                  26
+0                10 + 0                   143                 143
+
+planned_cost initializes its local hire index from obs.self().hires_today.
+That is correct for one current action, including multiple hires in it. It
+is wrong when callers add several future actions using the SAME observation:
+the next action starts again at the old Fibonacci index.
+
+Current src_v2/dc11/compiler.cpp call sites:
+- around 1659, total commitments before enabling market scenarios;
+- around 1707, cumulative purchase needs for the cash-selling objective;
+- around 1885, commitments before pulling an animal purchase forward (calls
+  the helper once per future order, so can even repeat the cheap index within
+  one future wave).
+
+Carry a projected hire index through a chronological scan of future orders,
+starting from actual hires_today. Reset it only on the next real day. Keep the
+single-action helper's current semantics for current-hour cash checks. The
+fixture shows a carried index matches all four actual engine totals.
+
+Limits: the current-hour cover and full funding simulation still exist. This
+does NOT establish that this bug caused the earlier missing-feed example or
+that fixing it improves margin. It does establish that the cheap future-cash
+ledger is inconsistent with the engine, especially for the proposed d8/d9
+second waves. It predates v2, so compare a fix on the selected base as well.
+
+Also, a requested crew of six producing fewer than six hires is not by itself
+evidence of insufficient cash. router.cpp around 1217 prunes empty trailing
+routes, including in the binding-v2 branch. Distinguish requested, capped,
+assigned, ordered and filled crew counts before labeling a deficit "funding".
+
+Evidence: work/sep30_intent_review/{planned_cost_snapshot.inc,
+planned_cost_snapshot.json,capture_cost_function.py,cost_wave_cases.cpp,
+cost_wave_cases.txt}. The snapshot manifest records the compiler source hash.
+
+Proposed fix (active compiler untouched):
+work/sep30_intent_review/future_hire_cost.patch, generated with source-hash
+manifest by propose_hire_cost_patch.py. It carries one local projected hire
+index through the three future-order scans while retaining single-action
+calls. The exact proposed helper passes ASan/UBSan checks for 9+1 waves and
+ten individually scanned orders (143 total), plus unchanged single-wave cost.
+This is ready for owner review, not a tested economic improvement.
+
+
+REVIEW 7 -- CHECK THE DAWN-SELLER PIVOT'S CAUSAL CLAIM
+2026-09-30, 19:33 UTC
+
+Claude now reports the opening-script combined arms lose on the 48-world
+real-opponent bed: binding -615 (SE 457), soft -202 (SE 331). Both miss the
+team's minimum-effect gate. Stop those arms. The reported comparison changes
+crew AND delivery policy, so it does not separately estimate crew-only value.
+My executor findings are relevant if v2 is reused; they are not a reason to
+keep spending games on a failed combined policy.
+
+A two-day seller diagnostic is a reasonable next direction, but "tonight's
+dump lowers tomorrow's new-harvest price" is not by itself the causal test.
+
+Engine control: with no intervening opponent trades or demand, selling six
+wool at h21 versus next h0 produces IDENTICAL complete engine states after
+h0, including cash, market inventory and six newly produced wool harvested at
+h0. Waiting until h1 crosses the h0 town drain and changes the result (+1 in
+this tiny fixture, not a game estimate). Evidence:
+work/sep30_intent_review/midnight_sale_cases.cpp and midnight_sale_cases.txt.
+Passing binary is midnight_sale_cases_v3. Earlier drafts failed because a
+manually advanced public clock did not advance the engine's private demand
+timers; the verified case advances normally from reset before setting up the
+farm. All final assertions pass under ASan/UBSan.
+
+Therefore distinguish: h21 -> h0 (before demand), h21 -> h1 (after demand),
+and letting the next-day seller choose freely. These are different treatments.
+Measure intervening opponent sales, input purchases, shop/town drains, shed
+overflow, units sold and final stock. Holding an evening lot can destroy
+incoming night cargo or delay an input purchase; a failed unprotected hold is
+not a clean rejection of longer-horizon valuation.
+
+The current DP already looks beyond today for held stock: inventory_at at
+remaining + hold_steps (usually tomorrow h12), hold_supply, and optionally
+rival_night. The missing candidate term is future OWN revenue on new supply,
+not the absence of all next-day information. When adding it, avoid counting
+tomorrow's own or rival supply twice through hold_supply / future_rival.
+
+Use tomorrow's actual eligible production pattern (or a forecast of it), not
+today's output copied forward: sheep, cows and ongoing crops have different
+production days. Start with an oracle diagnostic to measure whether the term
+has value, then replace it with observation-derived estimates. Oracle future
+actions or inventory must not enter the production agent.
+
+Keep the compiler-speed objective separate. The v2 rule arm's negative margin
+does not prove a smaller compiler is impossible, and a passed delivery gate
+does not establish faster execution. No complete-agent runtime comparison has
+been reported for this new interface yet. A useful next architecture check is
+whether the slim executor can realize the CURRENT selected agent's accepted
+work/receipt plan cheaply before giving it different teacher targets.
+
+
+REVIEW 8 -- WHEAT COUNTERS: SMALL FIXES BEFORE INFERRING A NEW PLAN
+2026-09-30, 19:43 UTC
+
+The latest label_v2.cpp still measures wheat harvested/fed from whole-step
+worker pocket differences. This mixes feeding with the night transfer and
+misses h23 harvests. Three sanitizer-tested engine cases reproduce:
+- h23 FEED with five wheat carried: one fed, four deposited at night; current
+  label counts five fed.
+- h23 HARVEST of six wheat: six produced and transferred at night; current
+  label counts zero harvested.
+- First worker harvests wheat; second plants tomato on that tile in the same
+  turn: one successful planting; the before/after is-plant flag counts zero.
+
+The simplest fix uses data the extractor already has:
+- total harvested wheat = delta of Farm::produced[WHEAT];
+- wheat fed = count of OP_FEED in sanitize_joint_actions' accepted actions;
+- plantings by crop = count of accepted OP_PLANT, indexed by its argument.
+Do not count unsuccessful raw requests. Keep sold and bought as actual fills.
+
+I replayed the SAME 12 permitted perspectives as REVIEW 5. Every step passed
+recorded-state parity AND the wheat stock identity:
+  change(shed + carried) = harvest + buy - sell - feed - discarded.
+8,628 checks passed under ASan/UBSan.
+
+Days 10-28, per-game totals in this small Sep 28 sample:
+                    existing formula      corrected
+wheat harvested          725.17             750.08
+wheat fed                327.58             323.42
+wheat planted            156.75             156.75
+
+Harvest differs on 47 world-days; feed on 11. No planting counter differs in
+these recordings (the same-turn replacement failure is a synthetic reachable
+case, not an observed driver here). These are comparisons of formulas on the
+same recorded actions, not a new teacher-vs-our-agent estimate. They support
+fixing the input/output balance; they do not negate BC's observed planting
+gap or prove that more wheat helps.
+
+In fact, Imitation relayed Improve Agent's latest carrot-to-wheat intervention:
+-5,162 (SE 791), 44 games, own -3,890 and opponent +1,272. That aggressive
+substitution overshot late wheat and removed carrots. Do not generalize it to
+every wheat change, but do not turn a teacher count gap directly into a large
+crop replacement either. Preserve the crop it displaces and the existing
+funding/feeding plan in the next narrowly scoped comparison.
+
+Evidence: work/sep30_intent_review/wheat_label_cases.cpp,
+wheat_label_probe.log, wheat_label_probe.csv, read_wheat_probe.py,
+wheat_label_summary.json. Same selection/protection manifest as flow_probe.
+
+Package check (separate, 19:37 UTC): m19fc3vens BUILD.json matches all 30
+entries; the archive's 29 payload files match the same hashes. All model files
+match m3fc3vens_hc except .dc11, whose only added keys are splitfert=10 and
+nearanimals=6. No openscript key. Decode remains 93faad06. The candidate source
+omits newer inactive animalring/sitelife/nearanimals=7 experiments in the live
+src_m14sf tree; its splitfert / nearanimals=6 code is present. This is artifact
+consistency, not an independent agent run. Evidence: bundle_audit.json and
+audit_bundle.py. The inherited source/SNAPSHOT.txt is stale provenance text.
+
+REVIEW 9 -- Hybrid opponent: useful sensitivity test, incomplete validation
+2026-09-30, 19:48 UTC
+
+Imitation reports the 48-world hybrid result for m19 versus LIVE as -40
+(SE 480), own -1,830 and opponent -1,800. This is a good reason not to promote
+the opening keys on the earlier lineage result alone. It does not by itself
+identify late wool as the cause or establish performance against live M&M.
+
+I inspected src_m14or7/tools_dc11/duel_mm.cpp and runs/hybopp/run.sh, without
+reading protected cohort rows or running another full-game batch. This bed
+keeps the recorded opponent's farm orders, lends it money, and changes sales
+of products 1-7. Wheat/fertilizer sales stay recorded. Its DP also receives
+the original recording's future deposits and next-dawn room. That is a useful
+conditional fixed-farm experiment, not a complete live opponent policy.
+
+Two concrete issues need checks before giving this bed decisive weight:
+
+1. The loan loop compares total dollars spent, not successful order fills
+   (lines 437-447). In an engine fixture, the recorded player has $45, buys
+   one wheat for $25, then one carrot seed for $20. At a changed wheat price
+   of $45, it buys the wheat and fails to buy the seed. Both spend $45, so
+   got >= need passes and the harness lends nothing. ASan/UBSan passes this
+   reproduction in work/sep30_intent_review/loan_fill_case.cpp and .txt.
+   This proves a reachable failure, NOT its occurrence in the 48 games.
+   Nor can loans fix missing capacity or different worker state. Check actual
+   recorded successful quantities and subsequent farm-state divergence;
+   matching spend is insufficient. Do not simply add unlimited cash to raw
+   requests: some recordings request more than they can afford, so that can
+   create extra purchases instead of preserving recorded fills.
+
+2. The seller override requires (day + 1) * 24 < original.size() at line 276.
+   replay_states supplies the 720 recorded states. Therefore day 29 retains
+   recorded sales rather than the reactive seller, even if preceding new
+   sales changed its remaining stock. Measure terminal retained stock and
+   missed liquidation before treating the final cash as a clean seller read.
+
+The lightweight validation output should include: recorded versus executed
+purchase/service quantities, first farm divergence, actual versus supplied
+future deposits, peak/final debt, and terminal stock. The model's sold-today
+counter is also updated before order-slot filtering; reconcile it to actual
+sold_units if those filters bind. Existing identity tests are valuable but
+do not exercise changed prices and changed stocks.
+
+Recommendation: retain the negative/flat result as evidence of uncertainty;
+keep the already-tested live baseline as the deadline default. Do not reopen
+m19 as a winner because this audit found issues. Also avoid declaring the
+old result's entire mechanism explained until the above drift is measured.
+
+New dawnshare source note: src_m14or7ds defines its percentage over available
+DAWN STOCK and counts pre-filter requested sales toward its h0-2 target. The
+teacher statistic quoted in messages was a share of DAILY SOLD units. These
+are different denominators. The new arm is a valid independent policy probe,
+but it is not yet a demonstrated reproduction of teacher dawn quantities.
+Report actual h0-2 units and daily sold units, not just its configured percent.

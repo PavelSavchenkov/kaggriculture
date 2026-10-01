@@ -1,0 +1,25 @@
+--- a/dc11/compiler.cpp	2026-09-30 09:53:19.506079348 +0100
++++ b/dc11/compiler.cpp	2026-09-30 09:53:19.524510861 +0100
+@@ -1030,9 +1030,20 @@
+         int keep[N_PRODUCTS]{}, sell[N_PRODUCTS];
+         keep[WHEAT] = dawn.own.shed[WHEAT], keep[FERTILIZER] = dawn.own.shed[FERTILIZER];
+         choose_sales(dawn, none, hours, market, keep, 100, sell, nullptr, nullptr);
+-        int& n = options.sale_slots == 2 ? base.sale_slots : base.sale_want;
++        // saleslots=4: as 2 (the first hire wave always leaves the dawn sales their slots, M&M's order: sells in slot 0, hires fill the
++        // rest, the overflow hires the next hour), with the decision of the seller that sells: the learned model when it runs today.
++        const bool model = options.sale_slots == 4 && options.sell_model && dawn.day >= options.sell_model_first &&
++                           dawn.day <= options.sell_model_last && (options.sell_model_mode <= 2 || options.sell_model_mode == 5);
++        if (model) {
++            int units[N_PRODUCTS]{}, zero[N_PRODUCTS]{};
++            if (options.sell_tracker) options.sell_tracker->update(dawn);  // the executor's own update this hour is then a no-op
++            bcsell::sell_units(*options.sell_model, dawn, history, zero, options.sell_seed, units, true, options.sell_tracker);
++            // as the executor at h0: the model's thin lots (raised to the DP's when tonight's room binds), the DP's other products
++            for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)}) sell[p] = std::max(sell[p], std::min<int>(units[p], dawn.own.shed[p]));
++        }
++        int& n = options.sale_slots == 2 || options.sale_slots == 4 ? base.sale_slots : base.sale_want;
+         for (int p = 0; p < N_PRODUCTS; ++p) n += sell[p] > 0;
+-        base.wheat_slot = options.sale_slots == 2;
++        base.wheat_slot = options.sale_slots == 2 || options.sale_slots == 4;
+     }
+     // Deposit values; the opponent's sale hours are uncertain: averaged over scenarios where its
+     // expected daily volume lands early (hours 1-7), mid-day (7-13) or late (14-20).

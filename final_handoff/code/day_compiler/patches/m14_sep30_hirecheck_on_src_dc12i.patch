@@ -1,0 +1,56 @@
+diff -ruN dc11/compiler.cpp ../src_m14/dc11/compiler.cpp
+--- dc11/compiler.cpp	2026-09-30 11:37:27.430797557 +0100
++++ ../src_m14/dc11/compiler.cpp	2026-09-30 14:41:53.586524103 +0100
+@@ -531,6 +531,7 @@
+     bool reserve = false;              // next-dawn reserve failed
+     double value = 0;                  // our money + held stock - rival_weight x the opponent's money at day end
+     double skipped_seed = 0;           // achieve: seed value of the plantings the executor skipped (seeds short)
++    int hires_filled = -1;             // hirecheck: hires filled by the end of the failing hour's wave
+ };
+ 
+ double planned_cost(const agent::AgentObservation& obs, const Action& planned) {
+@@ -654,6 +655,11 @@
+                 for (int j = 0; j < mine.n_orders; ++j)
+                     if (mine.orders[j].op == M_HIRE) ++hires_submitted, hires_filled += accepted.orders[j].op == M_HIRE && accepted.orders[j].n > 0;
+                 if (hires_filled == hires_submitted && hires_submitted > 0) continue;
++                if (options.hire_check && hires_filled < hires_submitted) {  // hirecheck: a partial hire wave fails the plan
++                    r.why = "hires " + std::to_string(hires_filled) + " of " + std::to_string(hires_submitted) + " at hour " + std::to_string(h);
++                    r.fail_hour = h, r.fail_op = M_HIRE, r.fail_item = o.item, r.hires_filled = hires_filled + sim.st.farms[me].hires_today;
++                    return r;
++                }
+             }
+             // cashsell: a short seed order does not fail the plan (the executor buys what the cash covers and plants what is in stock)
+             if (filled < want && o.op == M_BUY_SEED && options.cash_sell && options.cash_seeds) continue;
+@@ -1166,7 +1172,9 @@
+                 b.pb.cash_wave = std::min(b.pb.cash_wave, paid);
+                 b.pb.cash_hire_hour = std::max(b.pb.cash_hire_hour, f.fail_hour + 2);
+                 --repair;
+-            } else if (f.fail_op == M_HIRE) max_hires = std::max(0, std::min(max_hires, plan.hires) - 1);
++            } else if (f.fail_op == M_HIRE && options.hire_check && f.hires_filled >= 0)  // hirecheck: the crew the cash covered
++                max_hires = std::max(0, std::min({max_hires, plan.hires - 1, f.hires_filled}));
++            else if (f.fail_op == M_HIRE) max_hires = std::max(0, std::min(max_hires, plan.hires) - 1);
+             else if (!delay_purchase(b, f.fail_op, f.fail_item, f.fail_hour)) return plan;
+         }
+         Plan failed;
+@@ -1893,6 +1901,7 @@
+         else if (k == "nofire") o.no_fire = value != 0;
+         else if (k == "latehire") o.late_hire = value != 0;
+         else if (k == "cashshadow") o.cash_shadow = value != 0;
++        else if (k == "hirecheck") o.hire_check = value != 0;
+         else if (k == "animalfirst") o.animal_first = value == 1, o.animal_first_mode = int(value);
+         else if (k == "regime") o.regime = int(value);
+         else if (k == "regimewait") o.regime_wait = value;
+diff -ruN dc11/compiler.hpp ../src_m14/dc11/compiler.hpp
+--- dc11/compiler.hpp	2026-09-30 11:37:27.430776173 +0100
++++ ../src_m14/dc11/compiler.hpp	2026-09-30 14:41:53.586087382 +0100
+@@ -171,6 +171,10 @@
+     // cashshadow=1 (dc12, with achieve): variants with a deposit bonus (lambda 0.5 / 1 x price) before the cash-bound hour join the
+     // achieve search (compile_level), so routes that bring cash early compete with the deferral variants.
+     bool cash_shadow = false;
++    // hirecheck=1 (dc12 bug fix, m14): the funding check fails a plan when fewer hires are filled than ordered in an hour. Before, each
++    // planned hire compared only the first hire order's fill, so a partial hire wave (dawn cash for 6 of 9) passed as funded, and the
++    // unhired workers' routes (a land day's plantings) silently vanished in the simulation and live (quick-60 day 6: 2 of 16 planted).
++    bool hire_check = false;
+     // animalfirst=1 (dc12): the deferral variants fund animals before seeds (the DC12_ANIMALFIRST probe as a per-agent key). Own games,
+     // day 9: a 4-sheep ask funded after the day's seeds came at h10 and 3 of 4 pastures were dropped; M&M buys animals in the morning.
+     bool animal_first = false;

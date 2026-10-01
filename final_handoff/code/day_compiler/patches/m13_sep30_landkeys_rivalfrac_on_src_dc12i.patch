@@ -1,0 +1,282 @@
+diff -ruN dc11/compiler.cpp ../src_m13/dc11/compiler.cpp
+--- dc11/compiler.cpp	2026-09-30 11:37:27.430797557 +0100
++++ ../src_m13/dc11/compiler.cpp	2026-09-30 11:38:04.709711894 +0100
+@@ -531,6 +531,7 @@
+     bool reserve = false;              // next-dawn reserve failed
+     double value = 0;                  // our money + held stock - rival_weight x the opponent's money at day end
+     double skipped_seed = 0;           // achieve: seed value of the plantings the executor skipped (seeds short)
++    int first_trim = -1;               // shadowskip: first hour a seed purchase was cut for cash
+ };
+ 
+ double planned_cost(const agent::AgentObservation& obs, const Action& planned) {
+@@ -666,7 +667,14 @@
+         }
+         me == 0 ? sim.step(mine, other) : sim.step(other, mine);
+     }
+-    if (options.dawn_reserve && dawn.day >= 1 && dawn.day < LAST_DAY && plan.fallback < SurvivalOnly) {
++    const auto buys_land = [&] {
++        for (int h = 0; h < plan.hours; ++h)
++            for (int k = 0; k < plan.actions[h].n_orders; ++k)
++                if (plan.actions[h].orders[k].op == M_BUY_LAND) return true;
++        return false;
++    };
++    if (options.dawn_reserve && dawn.day >= 1 && dawn.day < LAST_DAY && dawn.day < options.reserve_until && plan.fallback < SurvivalOnly &&
++        !(options.reserve_land && buys_land())) {
+         int animals = 0;
+         for (int cell = 0; cell < BOARD * BOARD; ++cell) animals += tile_at(dawn, cell).has_animal;
+         for (int a = 0; a < N_ANIMALS; ++a) animals += plan.new_animals[a];
+@@ -699,6 +707,7 @@
+     }
+     const Farm& end = sim.st.farms[me];
+     r.skipped_seed = executor.skipped_seed();
++    r.first_trim = executor.first_trim();
+     r.value = end.money - options.market.rival_weight * sim.st.farms[1 - me].money;
+     for (int p = 0; p < N_PRODUCTS; ++p) {
+         int units = end.shed[p];
+@@ -1116,6 +1125,7 @@
+                 plan.status = CompileStatus::Ok;
+                 plan.stress_funded = true;
+                 plan.skipped_seed = f.skipped_seed;
++                plan.first_trim = f.first_trim;
+                 for (int pull = 0; land_moves > 0 && pull < options.land_pull && !options.spent(prof.evaluations); ++pull) {  // landpull
+                     const int at = land_afford_hour(dawn, history, plan, options, stress, 0);
+                     if (at < 0 || at >= b.land_hour) break;
+@@ -1174,6 +1184,8 @@
+         return failed;
+     };
+     Plan plan = attempt(base, "F", 2);
++    const int trim_hour = plan.status == CompileStatus::Ok && options.shadow_skip == 1 ? plan.first_trim : -1;  // shadowskip=1
++    Bound achieved_bound = base;  // shadowskip=2: the bound of the achieved variant
+     // achieve: every funded variant is a candidate; the one achieving most is kept (see Options::achieve)
+     Plan achieved;
+     bool have_achieved = false;
+@@ -1244,9 +1256,11 @@
+     // cashshadow (with achieve): cash has a shadow price while the day's purchases are cash-bound. Variants whose deposits before the
+     // short hour (first_short, else h6 / h10) earn lambda x price on top (0.5 / 1), with and without the dawn wheat sale, compete in
+     // the achieve search: routes bring sellable stock to the shed before the purchases need the cash (M&M's day-1 fertilizer loop).
+-    if (options.achieve && options.cash_shadow && (!have_achieved || !complete(achieved)) && !options.spent(prof.evaluations)) {
++    if (options.achieve && (options.cash_shadow || (options.shadow_skip && trim_hour > 0)) && (!have_achieved || !complete(achieved)) &&
++        !options.spent(prof.evaluations)) {
+         std::vector<int> horizons;
+-        if (first_short >= 0) horizons.push_back(first_short);
++        if (options.shadow_skip && trim_hour > 0) horizons.push_back(trim_hour - 1);
++        else if (first_short >= 0) horizons.push_back(first_short);
+         else horizons = {6, 10};
+         for (const int until : horizons)
+             for (const double lambda : {0.5, 1.0})
+@@ -1262,6 +1276,7 @@
+                     Plan q = attempt(b, label.c_str(), 2);
+                     max_hires = hires_before;
+                     consider(q, label);
++                    if (achieved_label == label) achieved_bound = b;
+                 }
+     }
+     // lazyfeed: when dawn cash and stock cannot pay the plan's first feed-wheat purchase (a $0 dawn), the deferral variants fetch
+@@ -1305,6 +1320,7 @@
+             if (wheat) max_hires = hires_before;
+             if (options.achieve) {
+                 consider(plan, label);
++                if (achieved_label == label) achieved_bound = b;
+                 achieved_complete = complete(plan);
+                 continue;
+             }
+@@ -1321,6 +1337,22 @@
+         best_variant.reason = log;
+         return best_variant;
+     }
++    // shadowskip=2: the achieved variant still cuts seeds for cash: the same variant again with deposits before its first cut worth
++    // lambda x price on top (routes bring carried fertilizer / wool to the shed before the evening seeds need the cash)
++    if (options.shadow_skip >= 2 && have_achieved && achieved.skipped_seed > 0 && achieved.first_trim > 0) {
++        const Bound from = achieved_bound;
++        const int until = achieved.first_trim - 1;
++        const std::string from_label = achieved_label;
++        for (const double lambda : {0.5, 1.0}) {
++            if (options.spent(prof.evaluations)) break;
++            Bound b = from;
++            for (int p = 0; p < N_PRODUCTS; ++p)
++                for (int h = 0; h <= until && h < HOURS; ++h) b.pb.gain[p][h] += lambda * dawn.market.prices[p];
++            const std::string label = "K" + std::to_string(int(lambda * 10)) + "h" + std::to_string(until) + from_label;
++            Plan q = attempt(b, label.c_str(), 2);
++            consider(q, label);
++        }
++    }
+     if (have_achieved) {
+         achieved.reason = log + "achieve " + achieved_label + " skipped " + std::to_string(int(achieved.skipped_seed)) + ";";
+         return achieved;
+@@ -1484,6 +1516,7 @@
+     std::fill_n(band_acc_, N_PRODUCTS, 0.0);
+     std::fill_n(unplanted_, BOARD * BOARD, false);
+     skipped_seed_ = 0;
++    first_trim_ = -1;
+     std::fill_n(sold_today_, N_PRODUCTS, 0);
+     std::fill_n(ahead_, N_ANIMALS, 0);
+     for (auto& c : consumed_) std::fill_n(c, N_ANIMALS, 0);
+@@ -1754,6 +1787,7 @@
+                 cost_all -= planned_cost(obs, one);
+                 // cashsell: as many of the seeds as the cash covers (the plantings without a seed are skipped)
+                 const int n = o.op == M_BUY_SEED && options_.cash_sell ? int((cash - cost_all - 8) / CROPS[o.item].seed) : 0;
++                if (o.op == M_BUY_SEED && n < o.n && first_trim_ < 0) first_trim_ = h;
+                 if (n > 0) {
+                     guarded.orders[kept++] = {o.op, o.item, std::min(n, o.n)};
+                     cost_all += double(CROPS[o.item].seed) * std::min(n, o.n);
+@@ -1844,6 +1878,7 @@
+         else if (k == "hold") o.market.hold_discount = value;
+         else if (k == "rival") o.market.rival_weight = value;
+         else if (k == "rivalnight") o.market.rival_night = value;
++        else if (k == "rivalfrac") o.market.rival_frac = value != 0;
+         else if (k == "fieldflow") o.market.field_flow = value;
+         else if (k == "ticksell") o.market.tick_share = value;
+         else if (k == "tickdawn") o.market.tick_dawn = value;
+@@ -1888,11 +1923,14 @@
+         else if (k == "wheatcash") o.wheat_cash = value != 0;
+         else if (k == "lazyfeed") o.lazy_feed = value != 0;
+         else if (k == "reserve") o.dawn_reserve = value != 0;
++        else if (k == "reserveuntil") o.reserve_until = int(value);
++        else if (k == "reserveland") o.reserve_land = value != 0;
+         else if (k == "reservek") o.reserve_slack = value;
+         else if (k == "reservenet") o.reserve_net = value != 0;
+         else if (k == "nofire") o.no_fire = value != 0;
+         else if (k == "latehire") o.late_hire = value != 0;
+         else if (k == "cashshadow") o.cash_shadow = value != 0;
++        else if (k == "shadowskip") o.shadow_skip = int(value);
+         else if (k == "animalfirst") o.animal_first = value == 1, o.animal_first_mode = int(value);
+         else if (k == "regime") o.regime = int(value);
+         else if (k == "regimewait") o.regime_wait = value;
+diff -ruN dc11/compiler.hpp ../src_m13/dc11/compiler.hpp
+--- dc11/compiler.hpp	2026-09-30 11:37:27.430776173 +0100
++++ ../src_m13/dc11/compiler.hpp	2026-09-30 11:38:04.708469998 +0100
+@@ -153,6 +153,11 @@
+     // reserve=0 (Sep 29, v95): no next-dawn reserve in the funding check (end assets >= animals x wheat price x 1.2 + 30). With
+     // cashsell the dawn sale finances tomorrow's feed; the reserve made the day-6 wave trim a cow and end with cash unspent.
+     bool dawn_reserve = true;
++    // reserveuntil=D (dc12): the next-dawn reserve applies on days < D only. reserveland=1: no next-dawn reserve on a day whose plan buys
++    // land (the new quadrant is planted today with the cash; the days between land days keep it, so cash builds up for the next land
++    // day). On the copy's land days the reserve (~$500 for tomorrow's feed) cut the evening strawberry seeds; M&M ends day 6 at ~$73.
++    int reserve_until = 99;
++    bool reserve_land = false;
+     // reservek=X (dc12): the fixed slack in the next-dawn reserve (tomorrow's feed wheat x 1.2 + X). Day 3 on M&M's intent: the variants
+     // that sell the dawn wheat (M&M's cash) end $2-8 short of it; reserve=0 (no reserve at all) costs ~5k in games mid-game (fire-sales
+     // for tomorrow's feed, Imitation's ablation).
+@@ -171,6 +176,11 @@
+     // cashshadow=1 (dc12, with achieve): variants with a deposit bonus (lambda 0.5 / 1 x price) before the cash-bound hour join the
+     // achieve search (compile_level), so routes that bring cash early compete with the deferral variants.
+     bool cash_shadow = false;
++    // shadowskip=1 (dc12, with achieve): when the first funded plan cuts seed purchases for cash, the cashshadow variants run with
++    // the horizon at the hour before its first cut (deposits by then are sold before the seeds are bought): land-day carried
++    // fertilizer / wool reached the shed only at night while the evening strawberry seeds were cut (quick-60 day 6).
++    // shadowskip=2: after the deferral search, the achieved variant again (its own bound) with that horizon, when it still cuts seeds
++    int shadow_skip = 0;
+     // animalfirst=1 (dc12): the deferral variants fund animals before seeds (the DC12_ANIMALFIRST probe as a per-agent key). Own games,
+     // day 9: a 4-sheep ask funded after the day's seeds came at h10 and 3 of 4 pastures were dropped; M&M buys animals in the morning.
+     bool animal_first = false;
+@@ -277,6 +287,7 @@
+     int new_animals[N_ANIMALS]{};      // placed today
+     int dropped = 0;                   // intent stops or entities not served
+     double skipped_seed = 0;           // achieve: seed value of the plantings the funding simulation's executor skipped (seeds short)
++    int first_trim = -1;               // shadowskip: the funding simulation's first hour a seed purchase was cut for cash (-1: none)
+     int skipped = 0;                   // optional work not done (extra fertilizer collections)
+     int collects = 0, collects_dropped = 0;  // diagnostics: animal product collections bound, not served
+     int visits = 0, tiles_worked = 0, revisits = 0;  // diagnostics: tile visits, tiles, tiles visited twice or more
+@@ -310,9 +321,11 @@
+     int consumed_[HOURS][N_ANIMALS]{};  // buyahead: planned animal units at each hour covered by an earlier purchase
+     bool unplanted_[BOARD * BOARD]{};   // skipwater: tiles whose planting was skipped today (seeds short)
+     double skipped_seed_ = 0;           // achieve: seed value of today's skipped plantings
++    int first_trim_ = -1;               // shadowskip: today's first hour a seed purchase was cut for cash
+     int sold_today_[N_PRODUCTS]{};      // sellmodel: our units ordered for sale since hour 0 (a model input)
+ public:
+     double skipped_seed() const { return skipped_seed_; }
++    int first_trim() const { return first_trim_; }
+ };
+ 
+ double now_ms();
+diff -ruN dc11/market.cpp ../src_m13/dc11/market.cpp
+--- dc11/market.cpp	2026-09-30 11:37:27.430689659 +0100
++++ ../src_m13/dc11/market.cpp	2026-09-30 11:38:04.708223243 +0100
+@@ -341,7 +341,15 @@
+     int demand[2 * HOURS]{};
+     demand_by_step(obs, p, remaining + sale.hold_steps, demand);
+     double net = 0;
+-    for (int k = 0; k < remaining; ++k) sale.rival_units[k] = int(std::lround(std::max(0.0, rival[(obs.step + k) % HOURS][p])));
++    if (sale.rival_frac) {  // rivalfrac: cumulative rounding (a flow under 0.5 units / h is not lost)
++        double cum = 0;
++        for (int k = 0, prev = 0; k < remaining; ++k) {
++            cum += std::max(0.0, rival[(obs.step + k) % HOURS][p]);
++            const int c = int(std::lround(cum));
++            sale.rival_units[k] = c - prev, prev = c;
++        }
++    } else
++        for (int k = 0; k < remaining; ++k) sale.rival_units[k] = int(std::lround(std::max(0.0, rival[(obs.step + k) % HOURS][p])));
+     for (int k = 0; k < remaining + sale.hold_steps; ++k) {
+         const double opponent = rival[(obs.step + k) % HOURS][p];
+         sale.base_rival[k] = opponent;
+@@ -349,7 +357,15 @@
+         sale.cum_demand[k + 1] = int(std::lround(net));
+     }
+     for (int k = 0; k < remaining + sale.hold_steps && k < 2 * HOURS; ++k) sale.step_demand[k] = demand[k];
+-    for (int k = 0; k < sale.hold_steps; ++k) sale.future_rival[k] = int(std::lround(std::max(0.0, rival[(obs.step + remaining + k) % HOURS][p])));
++    if (sale.rival_frac) {
++        double cum = 0;
++        for (int k = 0, prev = 0; k < sale.hold_steps; ++k) {
++            cum += std::max(0.0, rival[(obs.step + remaining + k) % HOURS][p]);
++            const int c = int(std::lround(cum));
++            sale.future_rival[k] = c - prev, prev = c;
++        }
++    } else
++        for (int k = 0; k < sale.hold_steps; ++k) sale.future_rival[k] = int(std::lround(std::max(0.0, rival[(obs.step + remaining + k) % HOURS][p])));
+ }
+ }
+ 
+@@ -409,6 +425,7 @@
+     m.hold_steps = std::clamp(options.hold_steps, 1, HOURS);
+     m.rival_weight = options.rival_weight;
+     m.rival_night = options.rival_night;
++    m.rival_frac = options.rival_frac;
+     m.tick_share = options.tick_share, m.tick_dawn = options.tick_dawn, m.tick_egg = options.tick_egg;
+     m.grid_step = options.grid_step;
+     m.interleave = options.interleave;
+@@ -448,6 +465,7 @@
+     sale.terminal = dawn.day == LAST_DAY;
+     sale.rival_weight = sale.terminal ? 0 : market.rival_weight;
+     sale.rival_night = sale.terminal ? 0 : market.rival_night;
++    sale.rival_frac = market.rival_frac;
+     sale.interleave = market.interleave;
+     sale.wait_cost = market.wait_cost;
+     sale.lot_cap = p != WHEAT && p != FERTILIZER ? market.lot_cap : 0;
+@@ -563,6 +581,7 @@
+         if (sale.total <= 0) continue;
+         sale.rival_weight = sale.terminal ? 0 : market.rival_weight;
+         sale.rival_night = sale.terminal ? 0 : market.rival_night;
++        sale.rival_frac = market.rival_frac;
+         sale.interleave = market.interleave;
+         sale.wait_cost = market.wait_route_only ? 0 : market.wait_cost;
+         if (market.carry[p] && market.carry_hold > 0) sale.hold_discount = market.carry_hold;  // regime M: overnight hold
+diff -ruN dc11/market.hpp ../src_m13/dc11/market.hpp
+--- dc11/market.hpp	2026-09-30 11:37:27.430728196 +0100
++++ ../src_m13/dc11/market.hpp	2026-09-30 11:38:04.707707717 +0100
+@@ -36,6 +36,7 @@
+     // today stays in the book until drained, so it also lowers the price of the opponent's sales tonight and tomorrow morning; a
+     // unit held to the hold step does not. The same-day rival term stops at the day's last market. 0: off.
+     double rival_night = 0;
++    bool rival_frac = false;  // rivalfrac (MarketOptions::rival_frac)
+     double night_cost(int s) const;  // rival_night x the opponent's revenue over the hold horizon with s units sold today
+     double hold_discount = 0.95;
+     int hold_supply = 0;       // units reaching the market before held units are sold tomorrow
+@@ -96,6 +97,7 @@
+     int hold_steps = HOURS / 2;  // MarketOptions::hold_steps
+     double rival_weight = 1;  // margin: weight of the opponent's revenue lost to our sales (day 29: 0)
+     double rival_night = 0;   // MarketOptions::rival_night
++    bool rival_frac = false;  // MarketOptions::rival_frac
+     double tick_share = 0, tick_dawn = 0, tick_egg = 0;  // MarketOptions::tick_share / tick_dawn / tick_egg
+     bool no_fire = false;     // Options::no_fire (set by the executor): an uncoverable purchase gets no cashsell bonus
+     int grid_step = 2;        // deposit values: hours between exact evaluations (linear in between)
+@@ -137,6 +139,10 @@
+     // rivalnight=W (dc12): the margin term also counts the opponent's forecast sales from tonight to the hold step (ProductSale::
+     // rival_night). 0: off.
+     double rival_night = 0;
++    // rivalfrac=1 (dc12, L2): the margin term's opponent units per hour (rival_units, future_rival) by cumulative rounding of the forecast
++    // (the totals kept). lround per hour dropped every expected flow under 0.5 units / h: on the G1s bed the margin term saw ~60% of the
++    // opponent's afternoon sales while the market path (cum_demand, fractions kept) saw all of them.
++    bool rival_frac = false;
+     // fieldflow=f (dc12): the thin-product opponent sells f x each drain in the hour after it (field_flow) instead of the forecast.
+     // At f = 1 the book is flat and waiting for drains gains nothing. 0: off.
+     double field_flow = 0;

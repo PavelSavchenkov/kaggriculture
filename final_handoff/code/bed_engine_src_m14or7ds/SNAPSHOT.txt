@@ -1,0 +1,8 @@
+Wed Sep 30 12:14:48 AM BST 2026
+snapshot of work/sep29_fund/bc_dc12h (Day compiler: my src_dc12s + landfirst) for judging landfirst
+Wed Sep 30 12:39:00 AM BST 2026 landfirst fix applied (p.fallback NoNewEntities)
+Wed Sep 30 01:48:07 AM BST 2026 step 67 (BC: whole .dc11 line readers) applied via scripts/step67_only.py; duel tools at 4096
+src_dc12i = src_dc12h (Sep 30 02:55: step 68, seller_diff, deposit fix, teacher_day deposits) + Day compiler m5_sep30_funding.patch (achieve / feedcost / landpull / fieldflow / rivalnight / ticksell; rejects merged by hand) + m5_sep30_i1_hook.patch (sellmodel)
+Wed Sep 30 07:40:37 PM BST 2026 src_m14or6 = work/sep29_fund/src_m14 + m19 (splitfert + nearanimals 6) + DUEL_OPP_REC (duel_mm.cpp from src_m14or)
+Wed Sep 30 07:46:59 PM BST 2026 + regimefrom=D (regime M only on days >= D; Imitation)
+Wed Sep 30 08:21:08 PM BST 2026 src_m14or7 = src_m14or6 + DUEL_OPP_SELL (hybrid opponent: recorded farm, its own agent's seller for the listed products; Imitation)

@@ -1,0 +1,440 @@
+--- a/dc11/compiler.cpp
++++ b/dc11/compiler.cpp
+@@ -442,7 +442,8 @@
+             }
+             // Orders in the order cash should go: hires (first wave now, the rest next hour), feed and
+             // fertilizer, animals, seeds, land.
+-            const int due = h == first ? wave0 : h == first + 1 ? new_hires : 0;
++            int due = h == first ? wave0 : h >= first + 1 ? new_hires : 0;
++            if (pb.cash_wave < new_hires && h < pb.cash_hire_hour) due = std::min(due, pb.cash_wave);  // latehire: the rest at cash_hire_hour
+             for (; hired < due; ++hired) a.orders[a.n_orders++] = {M_HIRE, 0, 1};
+             if (b.land_first && b.land_hour == h) a.orders[a.n_orders++] = {M_BUY_LAND, 0, 1};
+             if (round == 1) {
+@@ -1080,6 +1081,7 @@
+     int first_short = -1;  // cashroute: the plain plan's first unfunded hour
+     auto attempt = [&](Bound& b, const char* label, int tries) {
+         int land_moves = 0;  // cashsell: up to 2 land moves on top of the tries
++        int hire_moves = 0;  // latehire: up to 3 later hire hours on top of the tries
+         int animal_moves = 0;  // affordanimal: up to 2 animal moves on top of the tries
+         for (int repair = 0; repair < tries; ++repair) {
+             Plan plan;
+@@ -1142,6 +1144,14 @@
+                         for (int h = 0; h < at; ++h) b.pb.gain[p][h] += 0.5 * dawn.market.prices[p];
+                     --repair;
+                 }
++            } else if (f.fail_op == M_HIRE && options.late_hire && hire_moves < 3 && f.fail_hour + 2 < b.pb.last_hour - 4) {
++                // latehire: the hires dawn cash cannot pay are ordered later, after the morning's sales (not dropped from the crew)
++                ++hire_moves;
++                int paid = 0;
++                for (double c = dawn.self().money; paid < plan.hires && c >= fib(paid);) c -= fib(paid++);
++                b.pb.cash_wave = std::min(b.pb.cash_wave, paid);
++                b.pb.cash_hire_hour = std::max(b.pb.cash_hire_hour, f.fail_hour + 2);
++                --repair;
+             } else if (f.fail_op == M_HIRE) max_hires = std::max(0, std::min(max_hires, plan.hires) - 1);
+             else if (!delay_purchase(b, f.fail_op, f.fail_item, f.fail_hour)) return plan;
+         }
+@@ -1157,6 +1167,11 @@
+     auto better = [&](const Plan& a, const Plan& b) {  // a achieves more than b
+         double va = 0, vb = 0;
+         for (int k = 0; k < N_ANIMALS; ++k) va += a.new_animals[k] * ANIMALS[k].cost, vb += b.new_animals[k] * ANIMALS[k].cost;
++        if (options.achieve_mode == 3) {  // by value: a planted seed returns ~10x its price over its life, an animal ~2.5x
++            const double sa = va - 4 * a.skipped_seed, sb = vb - 4 * b.skipped_seed;
++            if (sa != sb) return sa > sb;
++            return a.dropped < b.dropped;
++        }
+         if (va != vb) return va > vb;
+         if (a.skipped_seed != b.skipped_seed) return a.skipped_seed < b.skipped_seed;
+         return a.dropped < b.dropped;
+@@ -1171,7 +1186,11 @@
+                " plants " + std::to_string(plants) + ";";
+         if (!have_achieved || better(p, achieved)) achieved = p, have_achieved = true, achieved_label = lab;
+     };
+-    auto complete = [&](const Plan& p) { return p.status == CompileStatus::Ok && p.skipped_seed == 0 && p.dropped == 0; };
++    // achieve=2: only seed-cash shortfalls (skipped plantings) or unfunded plans trigger the search; a funded plan that only dropped a
++    // stop is kept as before (mid-game days otherwise switched to deferral variants: G3 exact worlds -1.1k)
++    auto complete = [&](const Plan& p) {
++        return p.status == CompileStatus::Ok && p.skipped_seed == 0 && (p.dropped == 0 || options.achieve_mode >= 2);
++    };
+     if (options.achieve && plan.status == CompileStatus::Ok && !complete(plan)) consider(plan, "F");
+     else if (plan.status != CompileStatus::Unfunded) {
+         plan.reason = log;
+@@ -1208,6 +1227,29 @@
+             return plan;
+         }
+     }
++    // cashshadow (with achieve): cash has a shadow price while the day's purchases are cash-bound. Variants whose deposits before the
++    // short hour (first_short, else h6 / h10) earn lambda x price on top (0.5 / 1), with and without the dawn wheat sale, compete in
++    // the achieve search: routes bring sellable stock to the shed before the purchases need the cash (M&M's day-1 fertilizer loop).
++    if (options.achieve && options.cash_shadow && (!have_achieved || !complete(achieved)) && !options.spent(prof.evaluations)) {
++        std::vector<int> horizons;
++        if (first_short >= 0) horizons.push_back(first_short);
++        else horizons = {6, 10};
++        for (const int until : horizons)
++            for (const double lambda : {0.5, 1.0})
++                for (int wheat = 0; wheat <= (options.wheat_cash && dawn.own.shed[WHEAT] > 0); ++wheat) {
++                    if (options.spent(prof.evaluations)) break;
++                    Bound b = base;
++                    if (wheat) b.dawn_wheat_sale = dawn.own.shed[WHEAT], b.pb.dawn_stock[CW] = 0, b.pb.lazy_wheat = true, b.pb.wheat_buy_cost = options.feed_cost * dawn.market.prices[WHEAT];
++                    for (int p = 0; p < N_PRODUCTS; ++p)
++                        for (int h = 0; h <= until && h < HOURS; ++h) b.pb.gain[p][h] += lambda * dawn.market.prices[p];
++                    const int hires_before = max_hires;
++                    if (wheat) max_hires = std::max(max_hires, std::min(options.max_hires, hire_cap(dawn, options, b.dawn_wheat_sale)));
++                    const std::string label = "S" + std::to_string(int(lambda * 10)) + "h" + std::to_string(until) + (wheat ? "w" : "");
++                    Plan q = attempt(b, label.c_str(), 2);
++                    max_hires = hires_before;
++                    consider(q, label);
++                }
++    }
+     // lazyfeed: when dawn cash and stock cannot pay the plan's first feed-wheat purchase (a $0 dawn), the deferral variants fetch
+     // the wheat at the first feed, after the trips whose deposits pay for it (otherwise each trip waits at the shed for it and
+     // nothing is sold first)
+@@ -1445,6 +1487,7 @@
+         action.finalize();
+         return;
+     }
++    if (options_.sell_tracker) options_.sell_tracker->update(obs);  // sellmodel level inputs: every hour
+     const Action& planned = plan_.actions[h];
+     for (int u = 0; u < std::min(action.n_units, planned.n_units); ++u) action.units[u] = planned.units[u];
+     if (options_.cash_sell) {  // the engine blocks all of a crop's plantings in a turn when they exceed its seeds: plant what is in stock
+@@ -1577,7 +1620,21 @@
+             short_of_cash |= need[t - h] > 0;
+         }
+     }
+-    choose_sales(obs, plan_.receipts, plan_.hours, market, reserve, night_room, sell, &charge, short_of_cash ? need : nullptr);
++    // sellmodel=3 / 4: the model picks the hours (threshold decode), the DP sizes the lots (3: forced lot >= 1; 4: the DP's own lot)
++    bool flag[N_PRODUCTS]{};
++    const bool timing = options_.sell_model && options_.sell_model_mode >= 3 && obs.day <= options_.sell_model_last &&
++                        obs.day >= options_.sell_model_first;
++    if (timing) {
++        int units[N_PRODUCTS];
++        bcsell::sell_units(*options_.sell_model, obs, history, sold_today_, options_.sell_seed, units, true, options_.sell_tracker);
++        for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)}) flag[p] = units[p] > 0;
++    }
++    market.no_fire = options_.no_fire;
++    choose_sales(obs, plan_.receipts, plan_.hours, market, reserve, night_room, sell, &charge, short_of_cash ? need : nullptr,
++                 timing && options_.sell_model_mode == 3 ? flag : nullptr);
++    if (timing && charge == 0)
++        for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)})
++            if (!flag[p]) sell[p] = 0;
+     if (h == 0) sell[WHEAT] = std::max(sell[WHEAT], std::min<int>(plan_.dawn_wheat_sale, obs.own.shed[WHEAT]));
+     if (options_.band_sell && obs.day < LAST_DAY && h + 1 < plan_.hours)  // bandsell: price-responsive rule seller
+         for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)}) {
+@@ -1608,10 +1665,11 @@
+             const int available = obs.own.shed[p] + plan_.receipts[h][p] - (h ? plan_.receipts[h - 1][p] : 0) - reserve[p];
+             sell[p] = obs.step % 4 == 1 ? std::clamp(available, 0, options_.race_lot) : 0;
+         }
+-    if (options_.sell_model && obs.day <= options_.sell_model_last && obs.day >= options_.sell_model_first) {  // sellmodel (I1): the learned M&M seller's units replace the DP's lots
++    const int mm = options_.sell_model_mode;
++    if (options_.sell_model && (mm <= 2 || mm == 5) && obs.day <= options_.sell_model_last && obs.day >= options_.sell_model_first) {  // sellmodel (I1): the learned M&M seller's units replace the DP's lots
+         int units[N_PRODUCTS];
+-        bcsell::sell_units(*options_.sell_model, obs, history, sold_today_, options_.sell_seed, units, options_.sell_model_mode == 2);
+-        for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)}) sell[p] = charge > 0 ? std::max(units[p], sell[p]) : units[p];
++        bcsell::sell_units(*options_.sell_model, obs, history, sold_today_, options_.sell_seed, units, mm == 2 || mm == 5, options_.sell_tracker);
++        for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)}) sell[p] = charge > 0 && mm != 5 ? std::max(units[p], sell[p]) : units[p];
+     }
+     int dp_sell[N_PRODUCTS];  // DC12_SELLLOG probe: the seller's decision before the cover / overflow sales
+     std::copy_n(sell, N_PRODUCTS, dp_sell);
+@@ -1624,16 +1682,24 @@
+         stock[p] = obs.own.shed[p];
+         for (int k = 0; k < sell[p]; ++k) cash += market_price(p, obs.market.inventory[p] + k);
+     }
+-    while (cash < cost) {
+-        int best = -1;
+-        for (int p = 0; p < N_PRODUCTS; ++p)
+-            if (stock[p] - reserve[p] > sell[p] &&
+-                (best < 0 || market_price(p, obs.market.inventory[p] + sell[p]) > market_price(best, obs.market.inventory[best] + sell[best])))
+-                best = p;
+-        if (best < 0) break;
+-        cash += market_price(best, obs.market.inventory[best] + sell[best]);
+-        ++sell[best];
+-    }
++    auto cover = [&](int* lots, double have) {  // sell the highest-priced stock until this hour's purchases are covered
++        while (have < cost) {
++            int best = -1;
++            for (int p = 0; p < N_PRODUCTS; ++p)
++                if (stock[p] - reserve[p] > lots[p] &&
++                    (best < 0 || market_price(p, obs.market.inventory[p] + lots[p]) > market_price(best, obs.market.inventory[best] + lots[best])))
++                    best = p;
++            if (best < 0) break;
++            have += market_price(best, obs.market.inventory[best] + lots[best]);
++            ++lots[best];
++        }
++        return have;
++    };
++    if (options_.no_fire && cash < cost) {  // nofire: cover sales only if they cover the purchases (else the purchase waits)
++        int trial[N_PRODUCTS];
++        std::copy_n(sell, N_PRODUCTS, trial);
++        if (const double have = cover(trial, cash); have >= cost) std::copy_n(trial, N_PRODUCTS, sell), cash = have;
++    } else cash = cover(sell, cash);
+     // Shed capacity: leave room for the next deposits and this hour's purchases.
+     int deposits_now = 0, pickups_now = 0, deposits_next = 0, bought = 0;
+     for (int p = 0; p < N_PRODUCTS; ++p) {
+@@ -1821,6 +1887,9 @@
+         else if (k == "reserve") o.dawn_reserve = value != 0;
+         else if (k == "reservek") o.reserve_slack = value;
+         else if (k == "reservenet") o.reserve_net = value != 0;
++        else if (k == "nofire") o.no_fire = value != 0;
++        else if (k == "latehire") o.late_hire = value != 0;
++        else if (k == "cashshadow") o.cash_shadow = value != 0;
+         else if (k == "regime") o.regime = int(value);
+         else if (k == "regimewait") o.regime_wait = value;
+         else if (k == "regimeroom") o.regime_room = int(value);
+@@ -1850,7 +1919,7 @@
+         else if (k == "depfert") o.dep_fert = value != 0;
+         else if (k == "cashseeds") o.cash_seeds = value != 0;
+         else if (k == "skipwater") o.skip_water = value != 0;
+-        else if (k == "achieve") o.achieve = value != 0, o.skip_water = o.skip_water || o.achieve;
++        else if (k == "achieve") o.achieve = value != 0, o.achieve_mode = int(value), o.skip_water = o.skip_water || o.achieve;
+         else if (k == "seedlag") o.seed_lag = value != 0;
+         else if (k == "feedcost") o.feed_cost = value;
+         else if (k == "sellmodel") o.sell_model_on = value != 0, o.sell_model_mode = int(value);
+--- a/dc11/compiler.hpp
++++ b/dc11/compiler.hpp
+@@ -10,7 +10,7 @@
+ #include <chrono>
+ #include <string>
+ 
+-namespace bcsell { struct Model; }
++namespace bcsell { struct Model; struct Tracker; }
+ 
+ namespace dc11 {
+ enum class CompileStatus { Ok, InvalidIntent, NoSchedule, Unfunded };
+@@ -110,6 +110,7 @@
+     // skipped for seed cash (seed value), then the fewest dropped stops. First-funded took the plain plan with half its plantings
+     // skipped (skipwater alone) or rejected every plan that buys M&M's h6-10 cow and runs one seed short (without it).
+     bool achieve = false;
++    int achieve_mode = 1;  // achieve=2: the search runs only when the first funded plan skipped plantings for seed cash (or none was funded); 3: as 2, variants compared by value (a skipped seed dollar = 4 animal dollars)
+     // seedlag=1 (dc12, with achieve): the deferral ladder also tries variants whose short purchases are funded animals first, the
+     // animals released at the variant's hour and the seeds 4 / 8 h later (M&M's day 3: cow at h6-10 from the morning's sales, the
+     // seeds after). One release hour for all purchases planted the seeds before the cash came (F6) or placed the cow too late (F14).
+@@ -125,6 +126,7 @@
+     int sell_model_last = 28;   // sellmodellast=D: the model sells on days <= D (29: through the last day), the DP after
+     int sell_model_first = 0;   // sellmodelfirst=D: ... and on days >= D, the DP before
+     const bcsell::Model* sell_model = nullptr;
++    bcsell::Tracker* sell_tracker = nullptr;  // level models (v5): the game's trailing market levels, updated every hour
+     unsigned long long sell_seed = 0;  // per-game constant for the model's sampling (set by the agent)
+     // keepfed=1 (dc12): an animal unfed yesterday is fed whenever its remaining production (units until day 29 x price) is worth
+     // more than feeding it every other day to the end. Full games vs our clones: ~1.8 escapes / game before day 25 (the rival 0.2-1.2);
+@@ -168,6 +170,17 @@
+     // reservenet=1 (dc12): the next-dawn reserve is tomorrow's feed wheat net of our own wheat: tonight's shed and pockets plus the
+     // wheat harvestable tomorrow (M&M feeds from its harvest); no fixed slack. The one-day funding horizon keeps tomorrow's feed.
+     bool reserve_net = false;
++    // nofire=1 (dc12): a purchase the day's sales cannot cover by its hour gets no fire-sale. The cashsell bonus reverts to none (was
++    // kept at its maximum, +400% on revenue up to the purchase: the seller dumped stock for a purchase that still failed), and the
++    // executor's cover step sells only when that covers the hour's purchases. Imitation: every weaker next-dawn reserve won G1 d2-5
++    // and lost in games, the sub taking the dumped room.
++    bool no_fire = false;
++    // latehire=1 (dc12): a hire the funding simulation cannot pay is ordered later in the day (Problem::cash_wave / cash_hire_hour)
++    // instead of shrinking the crew; M&M's day 1 hires its third worker at h2 from the first fertilizer sale (we hired 1 vs 3).
++    bool late_hire = false;
++    // cashshadow=1 (dc12, with achieve): variants with a deposit bonus (lambda 0.5 / 1 x price) before the cash-bound hour join the
++    // achieve search (compile_level), so routes that bring cash early compete with the deferral variants.
++    bool cash_shadow = false;
+     // regime=1 (the top teams' way of running the day; experiments/v10/sep28_top_lb_imitation/REDESIGN.md; off by default):
+     // - products in regimecarry (bit mask over products; default strawberries, eggs, milk, wool = 232) earn no deposit value
+     //   before regimeeve (18): no morning deposit trips, they ride in pockets to an evening shed visit or the day-end deposit;
+--- a/dc11/market.cpp
++++ b/dc11/market.cpp
+@@ -542,8 +542,11 @@
+ }
+ }
+ 
++thread_local bool live_seller = false;
++
+ void choose_sales(const agent::AgentObservation& obs, const int incoming[HOURS][N_PRODUCTS], int hours, const DayMarket& market,
+-                  const int reserve[N_PRODUCTS], int night_room, int sell[N_PRODUCTS], double* charge_out, const double* cash_need) {
++                  const int reserve[N_PRODUCTS], int night_room, int sell[N_PRODUCTS], double* charge_out, const double* cash_need,
++                  const bool* force) {
+     std::fill_n(sell, N_PRODUCTS, 0);
+     const int h = obs.hour;
+     const int remaining = hours - h;
+@@ -630,7 +633,19 @@
+                 (with(mid) ? high : low) = mid;
+             }
+         const bool funded = with(high);
+-        if (!funded) break;  // cannot be covered by then: the most it can raise
++        static const bool cash_log = std::getenv("DC12_CASHLOG") != nullptr;
++        if (cash_log && live_seller) {  // cashlog,day,hour,round,deadline,lambda,funded,need,sells... (live executor only)
++            std::fprintf(stderr, "cashlog,%d,%d,%d,%d,%.3f,%d,%.0f", obs.day, h, round, deadline, high, int(funded), cash_need[deadline]);
++            for (const auto& sale : sales) std::fprintf(stderr, ",%d:%d", sale.product, sale.plan_lots[0]);
++            std::fprintf(stderr, "\n");
++        }
++        if (!funded) {  // cannot be covered by then: the most it can raise (nofire: nothing; the purchase waits, no fire-sale)
++            if (market.no_fire) {
++                for (size_t i = 0; i < sales.size(); ++i) std::copy_n(base[i], HOURS, sales[i].bonus);
++                run(charge);
++            }
++            break;
++        }
+     }
+     // Scenario seller: this hour's units by their mean value over sampled opponent paths (night room free).
+     if (market.scenarios > 0 && charge == 0)
+@@ -676,11 +691,25 @@
+                 if (mean.empty()) mean.assign(one.first_values.size(), 0.0);
+                 for (size_t q = 0; q < mean.size(); ++q) mean[q] += one.first_values[q];
+             }
+-            int best_q = 0;
+-            for (size_t q = 1; q < mean.size(); ++q)
++            int best_q = force && force[p] && mean.size() > 1 ? 1 : 0;  // force: the best lot of at least one unit
++            for (size_t q = best_q + 1; q < mean.size(); ++q)
+                 if (mean[q] > mean[best_q] || (sale.tie_now && mean[q] >= mean[best_q] - 1e-6)) best_q = int(q);
+             sell[p] = best_q;
+         }
++    if (force)  // sellmodel=3: a forced product the DP left at 0 sells its best lot of at least one unit
++        for (auto& sale : sales) {
++            const int p = sale.product;
++            if (!force[p] || sell[p] > 0 || sale.avail[0] <= 0) continue;
++            ProductSale one = sale;
++            one.keep_first = true;
++            int first = 0;
++            one.solve(charge, first);
++            if (one.first_values.size() < 2) continue;
++            int best_q = 1;
++            for (size_t q = 2; q < one.first_values.size(); ++q)
++                if (one.first_values[q] > one.first_values[best_q]) best_q = int(q);
++            sell[p] = best_q;
++        }
+     // dc12 leader: the DP's plan vs "sell down to level l" schedules, each scored with the opponent as a follower (see leader_value).
+     if (market.leader > 0 && obs.day < LAST_DAY && h < hours - 1)
+         for (const auto& sale : sales) {
+--- a/dc11/market.hpp
++++ b/dc11/market.hpp
+@@ -99,6 +99,7 @@
+     double rival_weight = 1;  // margin: weight of the opponent's revenue lost to our sales (day 29: 0)
+     double rival_night = 0;   // MarketOptions::rival_night
+     double tick_share = 0, tick_dawn = 0, tick_egg = 0;  // MarketOptions::tick_share / tick_dawn / tick_egg
++    bool no_fire = false;     // Options::no_fire (set by the executor): an uncoverable purchase gets no cashsell bonus
+     int grid_step = 2;        // deposit values: hours between exact evaluations (linear in between)
+     bool interleave = false;  // ProductSale::interleave
+     double wait_cost = 0;     // ProductSale::wait_cost
+@@ -252,7 +253,10 @@
+ // sales up to the first uncovered step get a revenue bonus, the smallest that covers it (or the largest tried).
+ void choose_sales(const agent::AgentObservation& obs, const int incoming[HOURS][N_PRODUCTS], int hours, const DayMarket& market,
+                   const int reserve[N_PRODUCTS], int night_room, int sell[N_PRODUCTS], double* charge_out = nullptr,
+-                  const double* cash_need = nullptr);
++                  const double* cash_need = nullptr, const bool* force = nullptr);
++// force[p] (sellmodel=3): product p sells this hour; the lot is the DP's best of at least one unit.
++// Probes: true while the agent's live executor acts (not the compiler's internal executor simulations).
++extern thread_local bool live_seller;
+ 
+ double sale_value(int item, int inventory, int units);
+ }
+--- a/dc11/router.cpp
++++ b/dc11/router.cpp
+@@ -561,6 +561,7 @@
+         }
+         const int wave = w - 1;  // 0-based index among today's hires
+         hire.hour = int8_t(pb.farmer.hour + 1 + (wave >= pb.first_wave ? 1 : 0));
++        if (wave >= pb.cash_wave) hire.hour = int8_t(std::max<int>(hire.hour, pb.cash_hire_hour + 1));  // latehire
+         return hire;
+     }
+     void add_route(int w) {
+--- a/dc11/router.hpp
++++ b/dc11/router.hpp
+@@ -102,6 +102,9 @@
+     double animal_morning = 0;             // regime M: cost per hour an animal stop starts after hour 11 (morning animal block)
+     double return_cost = 1;                // (x the trip's worker turns)
+     int first_wave = 10;                   // new hires ordered in the first hour (the rest one hour later)
++    // latehire (dc12): hires from index cash_wave on are ordered at cash_hire_hour (start the hour after), when the morning's sales
++    // have paid for them (M&M's day 1: two hires at h0 with its $2, the third at h2 after the first fertilizer sale)
++    int cash_wave = 99, cash_hire_hour = 0;
+     Worker farmer;                         // start of the farmer (dawn: tile 44, hour 0)
+     bool reserve_animal_sites = true;      // crops avoid the tiles nearest the shed
+     // Lateness counts required work only: optional (P_EXTRA) stops past the end of the day are simply not done (their value
+--- a/agent/bc_overhaul/source/agent.cpp
++++ b/agent/bc_overhaul/source/agent.cpp
+@@ -122,6 +122,8 @@
+         if (!m->load(path + ".sellmodel")) std::abort();
+         sell_model_ = m;
+         options_.sell_model = sell_model_.get();
++        sell_tracker_ = std::make_shared<bcsell::Tracker>();
++        options_.sell_tracker = sell_tracker_.get();
+     }
+     forecast_.reset();  // <model>.forecast: learned opponent-sales forecast for the day market
+     if (auto learned = std::make_shared<fcast::LearnedForecast>(); learned->load(path + ".forecast")) forecast_ = learned;
+@@ -306,15 +308,36 @@
+     return dc11::day_market(dawn, seen, options_.market);
+ }
+ 
++bool Agent::model_flags(const agent::AgentObservation& obs, bool flag[N_PRODUCTS]) {
++    std::fill_n(flag, N_PRODUCTS, false);
++    if (sell_tracker_) sell_tracker_->update(obs);  // every hour (level inputs)
++    if (!sell_model_ || options_.sell_model_mode < 3 || obs.day > options_.sell_model_last || obs.day < options_.sell_model_first) return false;
++    if (obs.day != rec_day_) rec_day_ = obs.day, std::fill_n(rec_sold_, N_PRODUCTS, 0);
++    unsigned long long seed = 1469598103934665603ull ^ obs.player;
++    for (int k = 0; k < obs.n_shops; ++k) seed = (seed ^ (obs.shops[k] + 1)) * 1099511628211ull;
++    int units[N_PRODUCTS];
++    bcsell::sell_units(*sell_model_, obs, history_, rec_sold_, seed, units, true, sell_tracker_.get());
++    for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)}) flag[p] = units[p] > 0;
++    return true;
++}
++
++void Agent::model_record(const agent::AgentObservation& obs, const int sell[N_PRODUCTS]) {
++    if (!sell_model_ || options_.sell_model_mode < 3) return;
++    if (obs.day != rec_day_) rec_day_ = obs.day, std::fill_n(rec_sold_, N_PRODUCTS, 0);
++    for (int p = 0; p < N_PRODUCTS; ++p) rec_sold_[p] += std::min<int>(sell[p], obs.own.shed[p]);
++}
++
+ void Agent::model_sales(const agent::AgentObservation& obs, int sell[N_PRODUCTS], bool room_binds) {
+-    if (!sell_model_ || obs.day > options_.sell_model_last || obs.day < options_.sell_model_first) return;
++    if (sell_tracker_) sell_tracker_->update(obs);  // every hour (level inputs)
++    const int mm = options_.sell_model_mode;
++    if (!sell_model_ || (mm > 2 && mm != 5) || obs.day > options_.sell_model_last || obs.day < options_.sell_model_first) return;
+     if (obs.day != rec_day_) rec_day_ = obs.day, std::fill_n(rec_sold_, N_PRODUCTS, 0);
+     unsigned long long seed = 1469598103934665603ull ^ obs.player;
+     for (int k = 0; k < obs.n_shops; ++k) seed = (seed ^ (obs.shops[k] + 1)) * 1099511628211ull;
+     int units[N_PRODUCTS];
+-    bcsell::sell_units(*sell_model_, obs, history_, rec_sold_, seed, units, options_.sell_model_mode == 2);
++    bcsell::sell_units(*sell_model_, obs, history_, rec_sold_, seed, units, mm == 2 || mm == 5, sell_tracker_.get());
+     for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)}) {
+-        sell[p] = room_binds ? std::max(units[p], sell[p]) : units[p];
++        sell[p] = room_binds && mm != 5 ? std::max(units[p], sell[p]) : units[p];
+         rec_sold_[p] += std::min<int>(sell[p], obs.own.shed[p]);
+     }
+ }
+@@ -722,7 +745,9 @@
+         } else
+             executor_.start(obs, seen, plan, options_);
+     }
++    dc11::live_seller = true;  // probes log the live executor only
+     executor_.act(obs, history_, action);
++    dc11::live_seller = false;
+     history_.observe(obs, action);
+     if (exact_history_) exact_history_->observe(obs, action);
+ }
+--- a/agent/bc_overhaul/source/agent.hpp
++++ b/agent/bc_overhaul/source/agent.hpp
+@@ -66,9 +66,14 @@
+     // sellmodel (I1): the learned M&M seller on the same-stock bed's seller path (duel_mm REC): replaces the DP's thin-product lots
+     // unless the night room binds (then the larger).
+     void model_sales(const agent::AgentObservation& obs, int sell[N_PRODUCTS], bool room_binds);
++    // sellmodel=3 / 4 on the seller path: the model's hours (flag), and the mode; model_record adds this hour's sales to today's count.
++    bool model_flags(const agent::AgentObservation& obs, bool flag[N_PRODUCTS]);
++    int model_mode() const { return options_.sell_model_mode; }
++    void model_record(const agent::AgentObservation& obs, const int sell[N_PRODUCTS]);
+ 
+ private:
+     std::shared_ptr<const bcsell::Model> sell_model_;  // <model>.sellmodel (sellmodel=1)
++    std::shared_ptr<bcsell::Tracker> sell_tracker_;     // its trailing market levels (level models)
+     int rec_sold_[N_PRODUCTS]{};                        // model_sales: our units sold today on the seller path
+     int rec_day_ = -1;
+     std::shared_ptr<const bc_opus::Model> model_;
+--- a/tools_dc11/duel_mm.cpp
++++ b/tools_dc11/duel_mm.cpp
+@@ -258,8 +258,14 @@
+                 int reserve[N_PRODUCTS]{}, sell[N_PRODUCTS]{};
+                 for (int i = 0; i < N_PRODUCTS; ++i) reserve[i] = dp[i] ? 0 : 1 << 20;
+                 double charge = 0;
+-                dc11::choose_sales(obs, incoming, HOURS, m, reserve, room, sell, &charge);
+-                arm.model_sales(obs, sell, charge > 0);  // sellmodel (I1): no-op without it
++                bool flag[N_PRODUCTS];
++                const bool timing = arm.model_flags(obs, flag);  // sellmodel=3 / 4: the model's hours
++                dc11::choose_sales(obs, incoming, HOURS, m, reserve, room, sell, &charge, nullptr, timing && arm.model_mode() == 3 ? flag : nullptr);
++                arm.model_sales(obs, sell, charge > 0);  // sellmodel=1 / 2 (I1): no-op without it
++                if (timing && charge == 0)
++                    for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)})
++                        if (!flag[p]) sell[p] = 0;
++                arm.model_record(obs, sell);
+                 Action& x = a[s];
+                 int k = 0;
+                 for (int j = 0; j < x.n_orders; ++j)

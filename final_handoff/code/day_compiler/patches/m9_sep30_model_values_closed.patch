@@ -1,0 +1,142 @@
+--- /tmp/claude-1000/-home-pavel-Programming-kaggriculture/1bd70f11-f210-4956-bd5e-8425fb7a5070/scratchpad/compiler.cpp.mdv	2026-09-30 04:51:18.728127081 +0100
++++ dc11/compiler.cpp	2026-09-30 04:57:33.710473132 +0100
+@@ -1018,6 +1018,92 @@
+ // purchases dawn cash cannot cover wait for a return hour (3, 6, 10, 14) financed by earlier
+ // deposits; each variant gets one more repair (the failing purchase two hours later). A plan
+ // funded only under the expected forecast is kept when no variant is stress-funded.
++namespace {
++// sellmodel (dc12): deposit values from the learned seller's own decisions, so the routes value stock the way the live seller will
++// sell it. Same objective as return_value: c units reach the shed at hour `at` (at >= hours: after the last market, kept overnight);
++// value = our revenue - rival_weight x the opponent's revenue at the forecast flow + the kept units at hold_discount x the price after
++// hold_steps of the next day. The model decides each hour's lot (threshold decode) on the dawn features with this product's shed, units
++// sold today, field, market inventory and price updated hour by hour (drains, the forecast opponent flow, our lots) and a copy of the
++// game's tracker for the level inputs.
++double model_rollout(const agent::AgentObservation& dawn, const History& history, const DayMarket& market, const bcsell::Model& m,
++                     const bcsell::Tracker* live, int p, int c, int at, int hours) {
++    const bcsell::Raw r0 = bcsell::raw_from(dawn, history, nullptr);
++    bcsell::Tracker t;
++    if (live) t.past.assign(live->past.end() - std::min<ptrdiff_t>(live->past.size(), 25), live->past.end()), t.last_step = live->last_step;
++    const bool terminal = dawn.day == LAST_DAY;
++    const int hold = market.hold_best ? HOURS : market.hold_steps;
++    int demand[2 * HOURS]{};
++    demand_by_step(dawn, p, hours + hold, demand);
++    auto opp = [&](int k) { return int(std::lround(std::max(0.0, market.rival[(dawn.step + k) % HOURS][p]))); };
++    std::vector<int> flow(24 + hours, 0);  // the opponent's units: the last 24 h from History, then the forecast
++    for (int j = 1; j <= 24 && dawn.step - j >= 0; ++j) flow[24 - j] = std::max(0, history.flow_at(dawn.step - j, p));
++    int inv = dawn.market.inventory[p], stock = dawn.own.shed[p], sold = 0;
++    double value = 0;
++    float x[bcsell::IN_LEVEL_CAP];
++    std::vector<double> pr(m.k + 1);
++    for (int k = 0; k < hours; ++k) {
++        // The deposit hour: the units are still in the pockets when the seller looks (M&M sells on arrival; the model keys on the
++        // pockets) and sellable this hour (worker actions run before market orders).
++        bcsell::Raw r = r0;
++        r.hour = k, r.shed[p] = stock, r.sold_today[p] = sold, r.inv[p] = inv, r.price[p] = market_price(p, inv);
++        r.shed_total += stock - dawn.own.shed[p];
++        if (k == at) r.pocket[p] += c, r.pocket_total += c, stock += c;
++        r.field[p] = std::max(0, r0.field[p] - (k >= at ? c : 0));
++        r.opp1[p] = flow[24 + k - 1], r.opp4[p] = r.opp24[p] = 0;
++        for (int j = 1; j <= 24; ++j) r.opp24[p] += flow[24 + k - j], r.opp4[p] += j <= 4 ? flow[24 + k - j] : 0;
++        if (bcsell::has_level(m.in)) {
++            std::array<double, 2 * N_PRODUCTS> e;
++            for (int q = 0; q < N_PRODUCTS; ++q) e[q] = dawn.market.inventory[q], e[N_PRODUCTS + q] = dawn.market.prices[q];
++            e[p] = inv, e[N_PRODUCTS + p] = r.price[p];
++            if (k > 0 || t.last_step != dawn.step) t.past.push_back(e);
++            t.last_step = dawn.step + k;
++            t.levels(r);
++        }
++        bcsell::features(r, p, x, m.in);
++        m.probs(x, pr.data());
++        int q = 0;
++        if (1 - pr[0] > m.thresholds.at(p)) {
++            double lot = 0;
++            for (int u = 1; u <= m.k; ++u) lot += u * pr[u];
++            q = std::min(stock, std::max(1, int(std::lround(lot / (1 - pr[0])))));
++        }
++        const int o = opp(k);
++        if (std::getenv("DC12_MDVLOG")) std::fprintf(stderr, "mdv,%d,%d,%d,%d,%d,%d,%.3f,%.3f,%d,%d,%.1f\n", dawn.day, p, c, at, k, stock, 1 - pr[0], m.thresholds.at(p), q, inv, value);
++        for (int j = 0; j < q; ++j) value += market_price(p, inv + j + (market.interleave ? std::min(j, o) : 0));
++        if (!terminal)
++            for (int j = 0; j < o; ++j) value -= market.rival_weight * market_price(p, inv + j + (market.interleave ? std::min(j, q) : q));
++        stock -= q, sold += q;
++        inv += q + o - demand[k];
++        flow[24 + k] = o;
++    }
++    const int left = stock + (at >= hours ? c : 0);
++    if (!terminal && left > 0) {
++        for (int k = hours; k < hours + hold; ++k) inv += opp(k) - demand[k];
++        value += market.hold_discount * sale_value(p, inv + market.hold_supply[p], left);
++    }
++    return value;
++}
++
++void model_deposit_values(const agent::AgentObservation& dawn, const History& history, const DayMarket& market, const Options& options,
++                          const int output[N_PRODUCTS], int hours, double gain[N_PRODUCTS][HOURS]) {
++    for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)}) {
++        const int c = output[p];
++        if (c <= 0) continue;
++        auto rollout = [&](int at) { return model_rollout(dawn, history, market, *options.sell_model, options.sell_tracker, p, c, at, hours); };
++        const double none = rollout(HOURS);
++        double at[HOURS];
++        int grid[HOURS], n = 0;
++        for (int h = 0; h < hours; h += market.grid_step) grid[n++] = h;
++        if (grid[n - 1] != hours - 1) grid[n++] = hours - 1;
++        for (int k = 0; k < n; ++k) at[k] = (rollout(grid[k]) - none) / c;
++        for (int k = 0; k + 1 < n; ++k)
++            for (int h = grid[k]; h <= grid[k + 1]; ++h) gain[p][h] = at[k] + (at[k + 1] - at[k]) * (h - grid[k]) / double(grid[k + 1] - grid[k]);
++        for (int h = 1; h < hours; ++h) gain[p][h] = std::min(gain[p][h], gain[p][h - 1]);
++        for (int h = 0; h < hours; ++h) gain[p][h] = std::max(0.0, gain[p][h]);
++    }
++}
++}
++
+ Plan compile_level(const agent::AgentObservation& dawn, const History& history, const Schema& schema, const DayIntent& intent,
+                    int level, const Options& options, Plan& prof) {
+     Bound base = bind(dawn, schema, intent, level, options);
+@@ -1051,6 +1137,8 @@
+             for (int h = 0; h < HOURS; ++h) out[p][h] = (1 - options.timing_mix) * out[p][h] + options.timing_mix * mixed[p][h];
+     };
+     values(base.output, base.pb.gain);
++    if (options.sell_model && options.sell_model_values && dawn.day >= options.sell_model_first && dawn.day <= options.sell_model_last)
++        model_deposit_values(dawn, history, market, options, base.output, hours, base.pb.gain);  // sellmodelvalues: the live seller's view
+     if (std::getenv("DC12_GAINLOG") && level == 0)  // gainlog,day,product,output,price,gain at h0 h4 h8 h12 h16 h19 h21 h22
+         for (int p = 0; p < N_PRODUCTS; ++p)
+             if (base.output[p] > 0)
+@@ -1676,6 +1764,17 @@
+     if (options_.sell_model && (mm <= 2 || mm == 5) && obs.day <= options_.sell_model_last && obs.day >= options_.sell_model_first) {  // sellmodel (I1): the learned M&M seller's units replace the DP's lots
+         int units[N_PRODUCTS];
+         bcsell::sell_units(*options_.sell_model, obs, history, sold_today_, options_.sell_seed, units, mm == 2 || mm == 5, options_.sell_tracker);
++        if (std::getenv("DC12_MDVLOG")) {  // TEMP probe: the live model's P(sell)
++            bcsell::Raw r = bcsell::raw_from(obs, history, sold_today_);
++            if (bcsell::has_level(options_.sell_model->in)) options_.sell_tracker->levels(r);
++            float x[bcsell::IN_LEVEL_CAP];
++            std::vector<double> pr(options_.sell_model->k + 1);
++            for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)}) {
++                bcsell::features(r, p, x, options_.sell_model->in);
++                options_.sell_model->probs(x, pr.data());
++                std::fprintf(stderr, "mlive,%d,%d,%d,%d,%d,%d,%.3f,%d,%d,%d,%d\n", obs.day, p, h, int(obs.own.shed[p]), r.pocket[p], r.field[p], 1 - pr[0], units[p], obs.market.inventory[p], r.opp1[p], r.sold_today[p]);
++            }
++        }
+         for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)}) sell[p] = charge > 0 && mm != 5 ? std::max(units[p], sell[p]) : units[p];
+     }
+     int dp_sell[N_PRODUCTS];  // DC12_SELLLOG probe: the seller's decision before the cover / overflow sales
+@@ -1933,6 +2032,7 @@
+         else if (k == "sellmodel") o.sell_model_on = value != 0, o.sell_model_mode = int(value);
+         else if (k == "sellmodellast") o.sell_model_last = int(value);
+         else if (k == "sellmodelfirst") o.sell_model_first = int(value);
++        else if (k == "sellmodelvalues") o.sell_model_values = value != 0;
+         else if (k == "keepfed") o.keep_fed = value != 0;
+         else if (k == "nighttrim") o.night_trim = value != 0;
+         else if (k == "affordall") o.afford_all = value != 0;
+--- dc11/compiler.hpp	2026-09-30 04:59:25.835137210 +0100
++++ /tmp/claude-1000/-home-pavel-Programming-kaggriculture/1bd70f11-f210-4956-bd5e-8425fb7a5070/scratchpad/compiler.hpp.mdv	2026-09-30 04:59:25.825233339 +0100
+@@ -125,6 +125,9 @@
+     int sell_model_mode = 1;    // sellmodel=1: sample the model's units; 2: BC's threshold decode (deterministic)
+     int sell_model_last = 28;   // sellmodellast=D: the model sells on days <= D (29: through the last day), the DP after
+     int sell_model_first = 0;   // sellmodelfirst=D: ... and on days >= D, the DP before
++    // sellmodelvalues=1: the router's deposit values of strawberry / egg / milk / wool come from a rollout of the model's own
++    // decisions (compile_level, model_deposit_values), consistent with the live seller; else the DP's (the plan assumed the DP).
++    bool sell_model_values = false;
+     const bcsell::Model* sell_model = nullptr;
+     bcsell::Tracker* sell_tracker = nullptr;  // level models (v5): the game's trailing market levels, updated every hour
+     unsigned long long sell_seed = 0;  // per-game constant for the model's sampling (set by the agent)

@@ -1,0 +1,35 @@
+--- a/dc11/compiler.hpp	2026-09-30 08:11:26.046016494 +0100
++++ b/dc11/compiler.hpp	2026-09-30 08:11:26.058787190 +0100
+@@ -83,6 +83,10 @@
+     // of an idle day (idle: the animals go unfed and escape after two days; seat-swap game 114911253: $10 at dawn day 9 -> 13
+     // escapes, -186k; with the key -7.9k).
+     bool survival_floor = false;
++    // feedvalue=1 (dc12): a feed stop (unfed yesterday: the animal's cost, as before) is worth the product it banks or protects: feed + care
++    // banks +1 for the next production, and tonight's production pays the banked bonus only if fed today (rules); a flat $30 made
++    // routine feeds the cheapest stops to cut on tight days (league +992, SE 268, 288 games).
++    bool feed_value = false;
+     // regime=1 (the top teams' way of running the day; experiments/v10/sep28_top_lb_imitation/REDESIGN.md; off by default):
+     // - products in regimecarry (bit mask over products; default strawberries, eggs, milk, wool = 232) earn no deposit value
+     //   before regimeeve (18): no morning deposit trips, they ride in pockets to an evening shed visit or the day-end deposit;
+--- a/dc11/compiler.cpp	2026-09-30 08:11:26.045956462 +0100
++++ b/dc11/compiler.cpp	2026-09-30 08:11:26.059069745 +0100
+@@ -249,6 +249,11 @@
+                 ++feeds;
+                 service.priority = g.unfed >= 1 ? P_SURVIVAL : P_OUTPUT;
+                 service.value = float(g.unfed >= 1 ? ANIMALS[g.species].cost : 30);
++                if (options.feed_value && g.unfed < 1) {  // feedvalue: the banked / protected product (a new bonus is paid later: 0.8)
++                    const bool tonight = since >= 0 && since % ANIMALS[g.species].interval == 0;
++                    const double bank = (tonight ? g.bonus : 0) + (int(m) < in.care[i] ? 0.8 : 0);
++                    service.value = float(std::max(30.0, bank * price(product)));
++                }
+             }
+             if (int(m) < in.care[i] && !survival) {
+                 service.steps[service.n++] = {OP_CARE, 0};
+@@ -1396,6 +1401,7 @@
+         else if (k == "saleslots") o.sale_slots = int(value);
+         else if (k == "nighttrim") o.night_trim = value != 0;
+         else if (k == "survivalfloor") o.survival_floor = value != 0;
++        else if (k == "feedvalue") o.feed_value = value != 0;
+         else if (k == "quad_radius") o.q4_radius = int(value);
+         else if (k == "quad_rounds") o.q4_rounds = int(value);
+         else if (k == "sites") o.site_candidates = int(value);

@@ -1,0 +1,84 @@
+--- a/agent/bc_overhaul/source/agent.cpp
++++ b/agent/bc_overhaul/source/agent.cpp
+@@ -1,4 +1,5 @@
+ #include "agent/bc_overhaul/source/agent.hpp"
++#include "dc11_local/sellmodel.hpp"
+ #include <array>
+ #include <algorithm>
+ #include <cstdio>
+@@ -115,6 +116,13 @@
+     }
+     if (const char* r = env_ ? std::getenv("DC11_REACH_STRESS") : nullptr) reach_stress_ = std::atoi(r) != 0;
+     options_ = options_text.empty() ? options_from_env() : options_text == "-" ? Options{} : parse_options(options_text.c_str());
++    sell_model_.reset();
++    if (options_.sell_model_on) {  // sellmodel=1: <model>.sellmodel must load (fail fast)
++        auto m = std::make_shared<bcsell::Model>();
++        if (!m->load(path + ".sellmodel")) std::abort();
++        sell_model_ = m;
++        options_.sell_model = sell_model_.get();
++    }
+     forecast_.reset();  // <model>.forecast: learned opponent-sales forecast for the day market
+     if (auto learned = std::make_shared<fcast::LearnedForecast>(); learned->load(path + ".forecast")) forecast_ = learned;
+     if (std::filesystem::exists(path + ".forecast_tf")) {  // <model>.forecast_tf: transformer opponent forecast
+@@ -298,6 +306,19 @@
+     return dc11::day_market(dawn, seen, options_.market);
+ }
+ 
++void Agent::model_sales(const agent::AgentObservation& obs, int sell[N_PRODUCTS], bool room_binds) {
++    if (!sell_model_ || obs.day >= LAST_DAY) return;
++    if (obs.day != rec_day_) rec_day_ = obs.day, std::fill_n(rec_sold_, N_PRODUCTS, 0);
++    unsigned long long seed = 1469598103934665603ull ^ obs.player;
++    for (int k = 0; k < obs.n_shops; ++k) seed = (seed ^ (obs.shops[k] + 1)) * 1099511628211ull;
++    int units[N_PRODUCTS];
++    bcsell::sell_units(*sell_model_, obs, history_, rec_sold_, seed, units);
++    for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)}) {
++        sell[p] = room_binds ? std::max(units[p], sell[p]) : units[p];
++        rec_sold_[p] += std::min<int>(sell[p], obs.own.shed[p]);
++    }
++}
++
+ void Agent::seller_hour(const agent::AgentObservation& obs, dc11::DayMarket& market) {  // local, Imitation (tools_dc11/duel_mm)
+     // Mirrors the Executor's per-hour market setup (dc11/compiler.cpp, before choose_sales), except the parts that need our own
+     // compiled plan (scenario gating on planned purchases, regime pockets, holdown): the recorded farm has no plan.
+@@ -337,6 +358,11 @@
+     if (exact_history_) exact_history_->advance(obs);  // <model>.forecast_tf_exact (local addition)
+     if (obs.hour == 0 && obs.day != planned_day_) {
+         planned_day_ = obs.day;
++        if (sell_model_) {  // sellmodel: a per-game sampling seed from the shop draws (day-0 dawns look alike)
++            unsigned long long seed = 1469598103934665603ull ^ obs.player;
++            for (int k = 0; k < obs.n_shops; ++k) seed = (seed ^ (obs.shops[k] + 1)) * 1099511628211ull;
++            options_.sell_seed = seed;
++        }
+         bc_opus::DecodeKnobs knobs{};
+         knobs.max_quadrants = max_land_;
+         if (obs.day >= qpush_first_ && obs.day <= qpush_last_) knobs.q_crop = qpush_crop_, knobs.q_animal = qpush_animal_;  // .decode qpush
+--- a/agent/bc_overhaul/source/agent.hpp
++++ b/agent/bc_overhaul/source/agent.hpp
+@@ -63,7 +63,14 @@
+         history_.observe(obs, submitted);
+     }
+ 
++    // sellmodel (I1): the learned M&M seller on the same-stock bed's seller path (duel_mm REC): replaces the DP's thin-product lots
++    // unless the night room binds (then the larger).
++    void model_sales(const agent::AgentObservation& obs, int sell[N_PRODUCTS], bool room_binds);
++
+ private:
++    std::shared_ptr<const bcsell::Model> sell_model_;  // <model>.sellmodel (sellmodel=1)
++    int rec_sold_[N_PRODUCTS]{};                        // model_sales: our units sold today on the seller path
++    int rec_day_ = -1;
+     std::shared_ptr<const bc_opus::Model> model_;
+     std::shared_ptr<const fcast::LearnedForecast> forecast_;  // <model>.forecast (local addition, sep24_BC_opus)
+     std::vector<std::shared_ptr<const bc_opus::Model>> ensemble_;  // <model>.ensemble (local addition, sep24_BC_opus)
+--- a/tools_dc11/duel_mm.cpp
++++ b/tools_dc11/duel_mm.cpp
+@@ -257,7 +257,9 @@
+                 arm.seller_hour(obs, m);
+                 int reserve[N_PRODUCTS]{}, sell[N_PRODUCTS]{};
+                 for (int i = 0; i < N_PRODUCTS; ++i) reserve[i] = dp[i] ? 0 : 1 << 20;
+-                dc11::choose_sales(obs, incoming, HOURS, m, reserve, room, sell);
++                double charge = 0;
++                dc11::choose_sales(obs, incoming, HOURS, m, reserve, room, sell, &charge);
++                arm.model_sales(obs, sell, charge > 0);  // sellmodel (I1): no-op without it
+                 Action& x = a[s];
+                 int k = 0;
+                 for (int j = 0; j < x.n_orders; ++j)

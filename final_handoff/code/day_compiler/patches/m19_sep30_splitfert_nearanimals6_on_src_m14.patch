@@ -1,0 +1,150 @@
+diff -ruN src_m14/dc11/compiler.cpp src_m14sf/dc11/compiler.cpp
+--- src_m14/dc11/compiler.cpp	2026-09-30 15:01:23.089180265 +0100
++++ src_m14sf/dc11/compiler.cpp	2026-09-30 19:07:13.199371776 +0100
+@@ -84,6 +84,7 @@
+     pb.night_rounds = options.night_rounds;
+     pb.site_candidates = options.site_candidates;
+     pb.optional_late = options.optional_late;
++    pb.near_animals = day <= 5 || options.near_animals == 3 || (options.near_animals == 6 && day <= 9) ? options.near_animals : 0;  // nearanimals: days 0-5 (3: every day, geese too)
+     pb.return_cost = options.return_cost;
+     pb.final_return = options.final_return_always || day == LAST_DAY;
+     pb.place_deposits = options.regime && day < LAST_DAY;
+@@ -288,12 +289,21 @@
+                 tile_at(dawn, cells[m]).fertilizer_available &&
+                 (options.collect_min <= 0 || price(FERTILIZER) >= options.collect_min ||
+                  dawn.own.shed[FERTILIZER] + fertilizer_collected_for_need < fertilizer_need)) {
+-                output.steps[output.n++] = {OP_COLLECT_FERTILIZER, 0};
+-                output.fertilizer = 1;
+-                output.value += float(0.9 * price(FERTILIZER));
++                // splitfert=D (dc12, days 3..D-1): a milk / wool / egg harvest stop carries no fertilizer collection; the fertilizer is
++                // its own optional stop on the tile, so the harvest can ride a short trip and the fertilizer a later visit (our units
++                // waited ~1 h in pockets for the collection; M&M collects 79-81% of that fertilizer later, by another worker)
++                const bool split = options.split_fert > 1 && day >= 3 && day < options.split_fert && output.n > 0 &&
++                                   (product == MILK || product == WOOL || product == EGG);
++                Stop fert;
++                fert.tile = output.tile, fert.animal = true, fert.group = -1, fert.priority = P_EXTRA;
++                Stop& to = split ? fert : output;
++                to.steps[to.n++] = {OP_COLLECT_FERTILIZER, 0};
++                to.fertilizer = 1;
++                to.value += float(0.9 * price(FERTILIZER));
+                 ++b.output[FERTILIZER];
+                 ++fertilizer_collected_for_need;
+-                if (output.n == 1) output.priority = P_EXTRA;
++                if (!split && output.n == 1) output.priority = P_EXTRA;  // a fertilizer-only output stop
++                if (split) add_stop(fert);
+             }
+             if (service.n) add_stop(service);
+             if (output.n) add_stop(output);
+@@ -1907,6 +1917,8 @@
+         else if (k == "reservenet") o.reserve_net = value != 0;
+         else if (k == "nofire") o.no_fire = value != 0;
+         else if (k == "latehire") o.late_hire = value != 0;
++        else if (k == "splitfert") o.split_fert = int(value);
++        else if (k == "nearanimals") o.near_animals = int(value);
+         else if (k == "cashshadow") o.cash_shadow = value != 0;
+         else if (k == "hirecheck") o.hire_check = value != 0;
+         else if (k == "animalfirst") o.animal_first = value == 1, o.animal_first_mode = int(value);
+diff -ruN src_m14/dc11/compiler.hpp src_m14sf/dc11/compiler.hpp
+--- src_m14/dc11/compiler.hpp	2026-09-30 14:41:53.586087382 +0100
++++ src_m14sf/dc11/compiler.hpp	2026-09-30 19:07:13.200556029 +0100
+@@ -168,6 +168,13 @@
+     // latehire=1 (dc12): a hire the funding simulation cannot pay is ordered later in the day (Problem::cash_wave / cash_hire_hour)
+     // instead of shrinking the crew; M&M's day 1 hires its third worker at h2 from the first fertilizer sale (we hired 1 vs 3).
+     bool late_hire = false;
++    // splitfert=D (dc12): on days 3..D-1 milk / wool / egg harvest stops carry no fertilizer collection (its own optional stop)
++    int split_fert = 0;
++    // nearanimals=1 / 2 / 3 (dc12, from the Codex early-products work): days 0-5 new sheep / cows at the free sites nearest the shed;
++    // 2: sheep placed before cows; 3: every day, geese too; 4: cows and sheep alternate in placement order (balanced);
++    // 5: one cow first, then the sheep, then the other cows (M&M's census: cow at ring 0, sheep at ring 1, cows at ring 2);
++    // 6: as 5 on days 0-9, and cows / sheep placed before geese (M&M builds pastures and places pasture animals first). 0: off.
++    int near_animals = 0;
+     // cashshadow=1 (dc12, with achieve): variants with a deposit bonus (lambda 0.5 / 1 x price) before the cash-bound hour join the
+     // achieve search (compile_level), so routes that bring cash early compete with the deferral variants.
+     bool cash_shadow = false;
+diff -ruN src_m14/dc11/router.cpp src_m14sf/dc11/router.cpp
+--- src_m14/dc11/router.cpp	2026-09-30 14:41:53.571291627 +0100
++++ src_m14sf/dc11/router.cpp	2026-09-30 19:07:13.199198811 +0100
+@@ -585,7 +585,38 @@
+         for (int s : order) insert_best(s);
+         std::vector<int> es(st.ents.size());
+         std::iota(es.begin(), es.end(), 0);
+-        std::stable_sort(es.begin(), es.end(), [&](int a, int b) { return st.ents[a].site_weight > st.ents[b].site_weight; });
++        // nearanimals=4 (balanced): cows and sheep alternate in placement order (cow, sheep, cow, ...), so the nearest sites are shared
++        // like M&M's (cow at ring 0, sheep at ring 1, cows at ring 2) instead of all going to one species.
++        std::vector<int> rank(st.ents.size(), 0);
++        if (pb.near_animals == 4) {
++            int seen[3] = {0, 0, 0};
++            for (int e = 0; e < int(st.ents.size()); ++e)
++                if (st.ents[e].item == COW || st.ents[e].item == SHEEP) rank[e] = seen[st.ents[e].item - GOOSE]++;
++        }
++        if (pb.near_animals == 5 || pb.near_animals == 6) {  // M&M's census: one cow at the nearest site, then the sheep, then the other cows
++            bool first_cow = true;                              // (6: geese after them, days 0-9: M&M places pasture animals before geese)
++            for (int e = 0; e < int(st.ents.size()); ++e)
++                if (st.ents[e].item == COW) rank[e] = first_cow ? 0 : 2, first_cow = false;
++                else if (st.ents[e].item == SHEEP) rank[e] = 1;
++                else if (st.ents[e].item == GOOSE) rank[e] = 3;
++        }
++        std::stable_sort(es.begin(), es.end(), [&](int a, int b) {
++            if (st.ents[a].site_weight != st.ents[b].site_weight) return st.ents[a].site_weight > st.ents[b].site_weight;
++            if (pb.near_animals == 5 || pb.near_animals == 6) {
++                const auto animal = [&](int e) { const int it = st.ents[e].item; return it == COW || it == SHEEP || (pb.near_animals == 6 && it == GOOSE); };
++                return animal(a) && animal(b) && rank[a] < rank[b];
++            }
++            if (pb.near_animals == 4) {
++                const bool pa = st.ents[a].item == COW || st.ents[a].item == SHEEP, pb2 = st.ents[b].item == COW || st.ents[b].item == SHEEP;
++                if (pa && pb2) {
++                    if (rank[a] != rank[b]) return rank[a] < rank[b];
++                    return st.ents[a].item == COW && st.ents[b].item == SHEEP;
++                }
++                return false;
++            }
++            if (pb.near_animals >= 2 && pb.near_animals < 4 && (st.ents[a].item == SHEEP) != (st.ents[b].item == SHEEP)) return st.ents[a].item == SHEEP;  // nearanimals
++            return false;
++        });
+         for (int e : es) place_entity(e);
+     }
+     void insert_best(int s) {
+@@ -597,11 +628,24 @@
+     // Best site for entity e: an own stop at a free tile or a freeing stop without an entity.
+     void place_entity(int e) {
+         const Entity en = st.ents[e];
++        // nearanimals (dc12, ported from the Codex early-products work): new sheep / cows (and geese at 3) take only the sites nearest the
++        // shed that are still free today (hosts or free tiles), so their products reach the shed early.
++        const bool near = pb.near_animals && (en.item == SHEEP || en.item == COW || (pb.near_animals == 3 && en.item == GOOSE));
++        int nearest = BOARD * 2;
++        if (near) {
++            for (int tile = 0; tile < BOARD * BOARD; ++tile)
++                if (pb.site_release[tile] >= 0 && pb.site_release[tile] <= pb.last_hour && !st.site_used[tile])
++                    nearest = std::min(nearest, shed_dist(tile));
++            for (int h = 0; h < int(st.stops.size()); ++h)
++                if (is_host(h) && st.stops[h].entity < 0 && st.where[h] >= 0)
++                    nearest = std::min(nearest, shed_dist(st.stops[h].tile));
++        }
+         double best = 1e18;
+         int best_host = -1, best_tile = -1;
+         Slot best_slot;
+         for (int h = 0; h < int(st.stops.size()); ++h) {
+             if (!is_host(h) || st.stops[h].entity >= 0 || st.where[h] < 0) continue;
++            if (near && shed_dist(st.stops[h].tile) != nearest) continue;
+             const int r = st.where[h];
+             const Route& R = st.routes[r];
+             int at = 0;
+@@ -616,6 +660,7 @@
+         std::vector<std::pair<double, int>> cand;
+         for (int tile = 0; tile < BOARD * BOARD; ++tile) {
+             if (pb.site_release[tile] < 0 || st.site_used[tile]) continue;
++            if (near && shed_dist(tile) != nearest) continue;
+             int near = shed_dist(tile);
+             for (int s = 0; s < int(st.stops.size()); ++s)
+                 if (st.where[s] >= 0 && !st.stops[s].shed) near = std::min(near, dist(tile, st.stops[s].tile));
+diff -ruN src_m14/dc11/router.hpp src_m14sf/dc11/router.hpp
+--- src_m14/dc11/router.hpp	2026-09-30 14:41:53.571260710 +0100
++++ src_m14sf/dc11/router.hpp	2026-09-30 18:45:22.170914902 +0100
+@@ -110,6 +110,7 @@
+     // Lateness counts required work only: optional (P_EXTRA) stops past the end of the day are simply not done (their value
+     // is the cost), so they neither pay the late-turn penalty nor make a crew incomplete in the hire search.
+     bool optional_late = false;
++    int near_animals = 0;                  // nearanimals: new sheep / cows at the nearest free sites (1), sheep placed first (2)
+     // Tonight's shed room for the workers' cargo (the shed sold down to kept inputs) and the feed
+     // wheat tomorrow needs (cargo wheat counts); overflow is destroyed.
+     int night_room = 1000, feed_reserve = 0;

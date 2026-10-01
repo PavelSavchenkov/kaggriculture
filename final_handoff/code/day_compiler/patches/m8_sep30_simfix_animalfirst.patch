@@ -1,0 +1,83 @@
+--- a/dc11/compiler.cpp
++++ b/dc11/compiler.cpp
+@@ -578,6 +578,7 @@
+     simulated.market.carry_target = nullptr;
+     simulated.market.next_morning = nullptr;  // local addition (nextm)
+     simulated.market.scenarios = 0;       // the funding check uses the deterministic seller (scen: live executor only)
++    simulated.sell_model = nullptr, simulated.sell_tracker = nullptr;  // sellmodel: live executor only (a simulation must not feed the game's tracker)
+     executor.start(dawn, history, plan, simulated);
+     const int me = dawn.player;
+     for (int h = 0; h < plan.hours; ++h) {
+@@ -730,6 +731,7 @@
+     simulated.market.carry_target = nullptr;
+     simulated.market.next_morning = nullptr;  // local addition (nextm)
+     simulated.market.scenarios = 0;
++    simulated.sell_model = nullptr, simulated.sell_tracker = nullptr;  // sellmodel: live executor only
+     executor.start(dawn, history, p, simulated);
+     const int me = dawn.player, quadrants = dawn.self().n_quadrants;
+     auto owned = [&](const Farm& f) {  // animals of species `item`: in the shed, carried, placed
+@@ -918,7 +920,7 @@
+ // Funding variant: the purchases of `plain` that dawn cash (money + sellable
+ // shed stock, after the hires) cannot cover, in survival order (wheat, fertilizer, seeds, land,
+ // animals), are bought from hour `from`; deposits before then earn a financing bonus.
+-void defer_purchases(Bound& b, const Plan& plain, const agent::AgentObservation& dawn, int from, int seed_lag = 0) {
++void defer_purchases(Bound& b, const Plan& plain, const agent::AgentObservation& dawn, int from, int seed_lag = 0, bool animal_first = false) {
+     double cash = dawn.self().money + 0.9 * sale_value(WHEAT, dawn.market.inventory[WHEAT], b.dawn_wheat_sale);
+     for (int p = 0; p < N_PRODUCTS; ++p)
+         if (p != WHEAT && p != FERTILIZER) cash += 0.9 * sale_value(p, dawn.market.inventory[p], dawn.own.shed[p]);
+@@ -932,7 +934,7 @@
+             // dc12: animals are funded right after feed wheat (M&M buys the day-3 cow at h8, before the seeds); was rank 4 (last)
+             // seedlag: animals are funded right after feed wheat, before the seeds (M&M buys the day-3 cow at h6-10, the seeds after)
+             const int rank = o.op == M_BUY_PRODUCT ? (o.item == WHEAT ? 0 : 2)
+-                             : o.op == M_BUY_ANIMAL ? (std::getenv("DC12_ANIMALFIRST") || seed_lag > 0 ? 1 : 5) : o.op == M_BUY_SEED ? 3 : 4;
++                             : o.op == M_BUY_ANIMAL ? (animal_first || std::getenv("DC12_ANIMALFIRST") || seed_lag > 0 ? 1 : 5) : o.op == M_BUY_SEED ? 3 : 4;
+             const double cost = o.op == M_BUY_SEED ? double(CROPS[o.item].seed) * o.n
+                                 : o.op == M_BUY_ANIMAL ? double(ANIMALS[o.item - GOOSE].cost) * o.n
+                                 : o.op == M_BUY_LAND ? double(LAND_PRICES[std::min(2, dawn.self().n_quadrants - 1)])
+@@ -1268,7 +1270,12 @@
+     bool have_best = false;
+     bool achieved_complete = false;  // achieve: a variant with nothing skipped or dropped ends the search
+     const int lags = options.achieve && options.seed_lag ? 3 : 1;  // seedlag: seeds released 0 / 4 / 8 h after the animals
++    // animalfirst=2 (with achieve): both funding orders (seeds before animals, animals before seeds) are variants; the search keeps
++    // the one achieving more (day 9: a big sheep ask funded after the seeds lost its pastures; day 6: the new quadrant's seeds after
++    // the animals lost plantings)
++    const int orders = options.achieve && options.animal_first_mode == 2 ? 2 : 1;
+     for (const int from : {3, 6, 10, 14})
++     for (int order = 0; order < orders; ++order)
+       for (int lag_i = 0; lag_i < lags; ++lag_i)
+         for (int wheat = 0; wheat <= (options.wheat_cash && dawn.own.shed[WHEAT] > 0) && !achieved_complete; ++wheat) {
+             if (options.spent(prof.evaluations)) break;
+@@ -1276,10 +1283,10 @@
+             if (lag && from + 1 + lag > 14) break;  // later seed releases plant too late to water them today (weeds)
+             Bound b = base;
+             if (wheat) b.dawn_wheat_sale = dawn.own.shed[WHEAT], b.pb.dawn_stock[CW] = 0, b.pb.lazy_wheat = true, b.pb.wheat_buy_cost = options.feed_cost * dawn.market.prices[WHEAT];
+-            defer_purchases(b, plain, dawn, from, lag);
++            defer_purchases(b, plain, dawn, from, lag, orders == 2 ? order == 1 : options.animal_first);
+             if (lazy_feed) b.pb.lazy_wheat = true;
+             if (wheat) b.pb.buy_from[CW] = int8_t(std::max<int>(b.pb.buy_from[CW], from));
+-            const std::string label = "F" + std::to_string(from) + (lag ? "s" + std::to_string(lag) : "") + (wheat ? "w" : "") + "r";
++            const std::string label = "F" + std::to_string(from) + (lag ? "s" + std::to_string(lag) : "") + (orders == 2 && order ? "a" : "") + (wheat ? "w" : "") + "r";
+             const int hires_before = max_hires;  // wheatcash: the sold wheat pays hires too
+             if (wheat) max_hires = std::max(max_hires, std::min(options.max_hires, hire_cap(dawn, options, b.dawn_wheat_sale)));
+             plan = attempt(b, label.c_str(), 2);
+@@ -1890,6 +1897,7 @@
+         else if (k == "nofire") o.no_fire = value != 0;
+         else if (k == "latehire") o.late_hire = value != 0;
+         else if (k == "cashshadow") o.cash_shadow = value != 0;
++        else if (k == "animalfirst") o.animal_first = value == 1, o.animal_first_mode = int(value);
+         else if (k == "regime") o.regime = int(value);
+         else if (k == "regimewait") o.regime_wait = value;
+         else if (k == "regimeroom") o.regime_room = int(value);
+--- a/dc11/compiler.hpp
++++ b/dc11/compiler.hpp
+@@ -181,6 +181,10 @@
+     // cashshadow=1 (dc12, with achieve): variants with a deposit bonus (lambda 0.5 / 1 x price) before the cash-bound hour join the
+     // achieve search (compile_level), so routes that bring cash early compete with the deferral variants.
+     bool cash_shadow = false;
++    // animalfirst=1 (dc12): the deferral variants fund animals before seeds (the DC12_ANIMALFIRST probe as a per-agent key). Own games,
++    // day 9: a 4-sheep ask funded after the day's seeds came at h10 and 3 of 4 pastures were dropped; M&M buys animals in the morning.
++    bool animal_first = false;
++    int animal_first_mode = 0;  // animalfirst=2 (with achieve): both funding orders compete in the variant search
+     // regime=1 (the top teams' way of running the day; experiments/v10/sep28_top_lb_imitation/REDESIGN.md; off by default):
+     // - products in regimecarry (bit mask over products; default strawberries, eggs, milk, wool = 232) earn no deposit value
+     //   before regimeeve (18): no morning deposit trips, they ride in pockets to an evening shed visit or the day-end deposit;

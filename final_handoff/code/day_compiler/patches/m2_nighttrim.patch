@@ -1,0 +1,82 @@
+--- ../bc_m1min/dc11/router.cpp	2026-09-29 21:27:07.544470558 +0100
++++ dc11/router.cpp	2026-09-29 22:38:27.781465411 +0100
+@@ -1077,6 +1077,36 @@
+         for (auto& r : search.st.routes) search.route_cost(r);
+         search.local_search(3);
+     }
++    // nighttrim (dc12 m2): cargo that still does not fit tonight is destroyed at the night deposit. Output stops whose product
++    // cannot be stored are worth nothing today and their product stays on the animal / crop for tomorrow: remove the pure output
++    // stops (harvest / collect only, no entity, not survival) that cut the night cargo most until it fits.
++    if (pb.night_trim)
++        for (int guard = 0; guard < 64 && overflow() > 0; ++guard) {
++            int best_r = -1, best_k = -1, best_cut = 0;
++            for (int r = 0; r < int(search.st.routes.size()); ++r) {
++                const Route& R = search.st.routes[r];
++                const Eval base = walk(pb, search.st.stops, R.start, R.ids, R.n, NoEmit{});
++                for (int k = 0; k < R.n; ++k) {
++                    const Stop& s = search.st.stops[R.ids[k]];
++                    if (s.shed || s.entity >= 0 || s.priority == P_SURVIVAL || (s.units <= 0 && s.fertilizer <= 0)) continue;
++                    bool pure = true;
++                    for (int j = 0; j < s.n && pure; ++j) pure = s.steps[j].op == OP_HARVEST || s.steps[j].op == OP_COLLECT_FERTILIZER;
++                    if (!pure) continue;
++                    int16_t ids[MAX_ROUTE];
++                    int m = 0;
++                    for (int j = 0; j < R.n; ++j)
++                        if (j != k) ids[m++] = R.ids[j];
++                    const Eval e = walk(pb, search.st.stops, R.start, ids, m, NoEmit{});
++                    const int cut = base.night - e.night;
++                    if (cut > best_cut || (cut == best_cut && cut > 0 && k > best_k)) best_cut = cut, best_r = r, best_k = k;
++                }
++            }
++            if (best_r < 0) break;
++            const int stop = search.st.routes[best_r].ids[best_k];
++            search.erase_stop(stop);
++            search.st.stops[stop].dead = true;  // not re-inserted by later passes
++            search.route_cost(search.st.routes[best_r]);
++        }
+     // The spawn tiles must match the final routes (a search can stop on its round limit).
+     for (int round = 0; round < 4 && search.sync_spawns(); ++round) search.local_search(2);
+ 
+--- ../bc_m1min/dc11/router.hpp	2026-09-29 21:27:07.544495667 +0100
++++ dc11/router.hpp	2026-09-29 22:38:27.781286296 +0100
+@@ -87,6 +87,7 @@
+                                            // new links at most this many moves longer
+     int search_rounds = 6;                 // local search rounds (each stops early without a gain)
+     int drop_any = 0;                      // hire search: routes besides the last tried for removal (least-loaded first)
++    bool night_trim = false;               // nighttrim: remove pure output stops whose cargo cannot be stored tonight
+     int night_rounds = 0;                  // night-cargo repair rounds (0: 3)
+     int site_candidates = 5;               // free tiles tried per new entity (best by site cost + distance)
+     int max_hires = 13;
+--- ../bc_m1min/dc11/compiler.cpp	2026-09-29 21:27:37.446002787 +0100
++++ dc11/compiler.cpp	2026-09-29 22:38:27.782800393 +0100
+@@ -98,7 +98,8 @@
+     const bool survival = level >= SurvivalOnly, no_new = level >= NoNewEntities;
+     const bool land = in.buy_land && level < NoLand && !no_new;
+     if (land) set_land_hour(b, dawn, 0);
+-    pb.drop_any = land ? 0 : options.drop_any;  // land days: a smaller crew there broke the land's funding (day 10 fallbacks)
++    pb.drop_any = land ? 0 : options.drop_any;
++    pb.night_trim = options.night_trim;  // land days: a smaller crew there broke the land's funding (day 10 fallbacks)
+     auto price = [&](int p) { return double(dawn.market.prices[p]); };
+     int feed_budget = INT_MAX;
+     if (survival) {
+@@ -1384,6 +1385,7 @@
+         else if (k == "rounds") o.search_rounds = int(value);
+         else if (k == "dropany") o.drop_any = int(value);
+         else if (k == "saleslots") o.sale_slots = int(value);
++        else if (k == "nighttrim") o.night_trim = value != 0;
+         else if (k == "quad_radius") o.q4_radius = int(value);
+         else if (k == "quad_rounds") o.q4_rounds = int(value);
+         else if (k == "sites") o.site_candidates = int(value);
+--- ../bc_m1min/dc11/compiler.hpp	2026-09-29 21:27:37.446083278 +0100
++++ dc11/compiler.hpp	2026-09-29 22:38:27.782892441 +0100
+@@ -75,6 +75,10 @@
+     // names the thin products it sells; they take first-hour slots from hires only when routing again with the smaller first wave
+     // keeps the crew and drops no required stop. Pinned real games +362 (SE 109); with the other m1 keys +1,495 trimmed.
+     int sale_slots = 0;
++    // nighttrim=1 (dc12 m2, Sep 29): when tonight's cargo still exceeds the shed room after the router's deposit repairs, remove pure
++    // output stops (harvest / collect only) until it fits; their product stays on the animal / crop. Full games vs our clones lost
++    // ~10-12 units per game at the night deposit (end-game nights: 143-148 units in pockets vs capacity 100). Contested bed +268 (SE 129).
++    bool night_trim = false;
+     // regime=1 (the top teams' way of running the day; experiments/v10/sep28_top_lb_imitation/REDESIGN.md; off by default):
+     // - products in regimecarry (bit mask over products; default strawberries, eggs, milk, wool = 232) earn no deposit value
+     //   before regimeeve (18): no morning deposit trips, they ride in pockets to an evening shed visit or the day-end deposit;

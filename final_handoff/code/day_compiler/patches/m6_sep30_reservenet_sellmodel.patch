@@ -1,0 +1,97 @@
+--- a/dc11/compiler.cpp
++++ b/dc11/compiler.cpp
+@@ -669,7 +669,18 @@
+         for (int a = 0; a < N_ANIMALS; ++a) animals += plan.new_animals[a];
+         const Farm& end = sim.st.farms[me];
+         const double price = market_price(WHEAT, sim.st.market.inventory[WHEAT] - 1);
+-        const double reserve = std::max(0, animals - int(end.shed[WHEAT])) * price * 1.2 + 30;
++        int own_wheat = end.shed[WHEAT];
++        if (options.reserve_net) {  // reservenet: tomorrow's feed net of our own wheat (pockets tonight, harvestable wheat tomorrow)
++            for (int u = 0; u < end.n_units; ++u) own_wheat += end.inv[u][WHEAT];
++            for (int y = 0; y < BOARD; ++y)
++                for (int x = 0; x < BOARD; ++x) {
++                    const Tile& t = end.tiles[y][x];
++                    const int age = dawn.day + 1 - t.planted_day;
++                    if (t.kind == T_PLANT && t.what == WHEAT && age >= CROPS[WHEAT].first_yield_day && age <= CROPS[WHEAT].max_yield_day)
++                        own_wheat += t.yield_units;
++                }
++        }
++        const double reserve = std::max(0, animals - own_wheat) * price * 1.2 + (options.reserve_net ? 0.0 : options.reserve_slack);
+         double assets = end.money;
+         for (int p = 0; p < N_PRODUCTS; ++p) {
+             if (p == WHEAT) continue;
+@@ -1597,9 +1608,9 @@
+             const int available = obs.own.shed[p] + plan_.receipts[h][p] - (h ? plan_.receipts[h - 1][p] : 0) - reserve[p];
+             sell[p] = obs.step % 4 == 1 ? std::clamp(available, 0, options_.race_lot) : 0;
+         }
+-    if (options_.sell_model && obs.day < LAST_DAY) {  // sellmodel (I1): the learned M&M seller's units replace the DP's lots
++    if (options_.sell_model && obs.day <= options_.sell_model_last && obs.day >= options_.sell_model_first) {  // sellmodel (I1): the learned M&M seller's units replace the DP's lots
+         int units[N_PRODUCTS];
+-        bcsell::sell_units(*options_.sell_model, obs, history, sold_today_, options_.sell_seed, units);
++        bcsell::sell_units(*options_.sell_model, obs, history, sold_today_, options_.sell_seed, units, options_.sell_model_mode == 2);
+         for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)}) sell[p] = charge > 0 ? std::max(units[p], sell[p]) : units[p];
+     }
+     int dp_sell[N_PRODUCTS];  // DC12_SELLLOG probe: the seller's decision before the cover / overflow sales
+@@ -1808,6 +1819,8 @@
+         else if (k == "wheatcash") o.wheat_cash = value != 0;
+         else if (k == "lazyfeed") o.lazy_feed = value != 0;
+         else if (k == "reserve") o.dawn_reserve = value != 0;
++        else if (k == "reservek") o.reserve_slack = value;
++        else if (k == "reservenet") o.reserve_net = value != 0;
+         else if (k == "regime") o.regime = int(value);
+         else if (k == "regimewait") o.regime_wait = value;
+         else if (k == "regimeroom") o.regime_room = int(value);
+@@ -1840,7 +1853,9 @@
+         else if (k == "achieve") o.achieve = value != 0, o.skip_water = o.skip_water || o.achieve;
+         else if (k == "seedlag") o.seed_lag = value != 0;
+         else if (k == "feedcost") o.feed_cost = value;
+-        else if (k == "sellmodel") o.sell_model_on = value != 0;
++        else if (k == "sellmodel") o.sell_model_on = value != 0, o.sell_model_mode = int(value);
++        else if (k == "sellmodellast") o.sell_model_last = int(value);
++        else if (k == "sellmodelfirst") o.sell_model_first = int(value);
+         else if (k == "keepfed") o.keep_fed = value != 0;
+         else if (k == "nighttrim") o.night_trim = value != 0;
+         else if (k == "affordall") o.afford_all = value != 0;
+--- a/dc11/compiler.hpp
++++ b/dc11/compiler.hpp
+@@ -121,6 +121,9 @@
+     // by the agent; dc11_local/sellmodel.hpp) instead of the DP's lots; tonight's night-room sales and this hour's purchase cover
+     // stay on top, and the last day stays the DP's (liquidation).
+     bool sell_model_on = false;
++    int sell_model_mode = 1;    // sellmodel=1: sample the model's units; 2: BC's threshold decode (deterministic)
++    int sell_model_last = 28;   // sellmodellast=D: the model sells on days <= D (29: through the last day), the DP after
++    int sell_model_first = 0;   // sellmodelfirst=D: ... and on days >= D, the DP before
+     const bcsell::Model* sell_model = nullptr;
+     unsigned long long sell_seed = 0;  // per-game constant for the model's sampling (set by the agent)
+     // keepfed=1 (dc12): an animal unfed yesterday is fed whenever its remaining production (units until day 29 x price) is worth
+@@ -158,6 +161,13 @@
+     // reserve=0 (Sep 29, v95): no next-dawn reserve in the funding check (end assets >= animals x wheat price x 1.2 + 30). With
+     // cashsell the dawn sale finances tomorrow's feed; the reserve made the day-6 wave trim a cow and end with cash unspent.
+     bool dawn_reserve = true;
++    // reservek=X (dc12): the fixed slack in the next-dawn reserve (tomorrow's feed wheat x 1.2 + X). Day 3 on M&M's intent: the variants
++    // that sell the dawn wheat (M&M's cash) end $2-8 short of it; reserve=0 (no reserve at all) costs ~5k in games mid-game (fire-sales
++    // for tomorrow's feed, Imitation's ablation).
++    double reserve_slack = 30;
++    // reservenet=1 (dc12): the next-dawn reserve is tomorrow's feed wheat net of our own wheat: tonight's shed and pockets plus the
++    // wheat harvestable tomorrow (M&M feeds from its harvest); no fixed slack. The one-day funding horizon keeps tomorrow's feed.
++    bool reserve_net = false;
+     // regime=1 (the top teams' way of running the day; experiments/v10/sep28_top_lb_imitation/REDESIGN.md; off by default):
+     // - products in regimecarry (bit mask over products; default strawberries, eggs, milk, wool = 232) earn no deposit value
+     //   before regimeeve (18): no morning deposit trips, they ride in pockets to an evening shed visit or the day-end deposit;
+--- a/agent/bc_overhaul/source/agent.cpp
++++ b/agent/bc_overhaul/source/agent.cpp
+@@ -307,12 +307,12 @@
+ }
+ 
+ void Agent::model_sales(const agent::AgentObservation& obs, int sell[N_PRODUCTS], bool room_binds) {
+-    if (!sell_model_ || obs.day >= LAST_DAY) return;
++    if (!sell_model_ || obs.day > options_.sell_model_last || obs.day < options_.sell_model_first) return;
+     if (obs.day != rec_day_) rec_day_ = obs.day, std::fill_n(rec_sold_, N_PRODUCTS, 0);
+     unsigned long long seed = 1469598103934665603ull ^ obs.player;
+     for (int k = 0; k < obs.n_shops; ++k) seed = (seed ^ (obs.shops[k] + 1)) * 1099511628211ull;
+     int units[N_PRODUCTS];
+-    bcsell::sell_units(*sell_model_, obs, history_, rec_sold_, seed, units);
++    bcsell::sell_units(*sell_model_, obs, history_, rec_sold_, seed, units, options_.sell_model_mode == 2);
+     for (int p : {int(STRAWBERRY), int(EGG), int(MILK), int(WOOL)}) {
+         sell[p] = room_binds ? std::max(units[p], sell[p]) : units[p];
+         rec_sold_[p] += std::min<int>(sell[p], obs.own.shed[p]);

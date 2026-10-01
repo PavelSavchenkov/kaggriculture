@@ -1,0 +1,102 @@
+--- ../bc_v95/dc11/compiler.cpp	2026-09-29 17:41:32.320106209 +0100
++++ dc11/compiler.cpp	2026-09-29 21:27:37.446002787 +0100
+@@ -34,6 +34,8 @@
+     int new_animals[N_ANIMALS]{};
+     int entities = 0;
+     int dawn_wheat_sale = 0;  // wheatcash: dawn shed wheat sold at hour 0 (not in the routes' dawn stock)
++    int sale_slots = 0;       // saleslots=3: first-hour order slots given to the seller's dawn sales (set on the re-route)
++    int sale_want = 0;        // saleslots=3: thin products the seller's dawn decision sells
+     bool land_first = false;  // cashsell: the land is ordered before the hour's other purchases (it gates the new quadrant's work)
+ };
+ 
+@@ -338,6 +340,7 @@
+     int night_carried = 0, night_items[N_PRODUCTS]{};
+     int spawn[MAX_WORKERS];        // actual spawn tile of hire k (index = unit)
+     int first_wave = -1;           // hires that fit the first hour's orders (-1: all planned did)
++    int first_orders = 0;          // the first hour's land / seed / item orders
+     std::vector<int> unfinished;   // routes whose actions run past the day
+     int placed[N_ANIMALS]{};
+ };
+@@ -467,10 +470,11 @@
+         }
+         const Farm& end = day.st.farms[me];
+         if (round == 0) {
+-            // First-hour orders: purchases go first, hires fill the free slots.
+-            int orders = b.land_hour == first;
++            // First-hour orders: purchases (and, saleslots=3, the dawn sales) go first, hires fill the free slots.
++            int orders = (b.land_hour == first) + b.sale_slots;
+             for (int c = 0; c < N_CROPS; ++c) orders += seeds[first][c] > 0;
+             for (int i = 0; i < N_ITEMS; ++i) orders += items[first][i] > 0;
++            z.first_orders = orders - b.sale_slots;
+             if (orders + wave0 > 10) {
+                 z.first_wave = std::max(0, 10 - orders);
+                 z.why = "first-hour orders";
+@@ -766,6 +770,32 @@
+         why = z.why;
+         return false;
+     }
++    // saleslots=3: the engine takes 10 orders a turn, one per hire. The dawn sales the seller wants take first-hour slots from
++    // hires only when the later start costs no work: route again with the smaller first wave and keep it if the crew is the same
++    // and no required stop is dropped (on 13-hire days a later start drops waterings / plantings).
++    if (b.sale_want > 0) {
++        const int want = b.sale_want + (b.dawn_wheat_sale > 0);
++        const int wave0 = std::min(out.hires, pb.first_wave), displaced = want - std::max(0, 10 - z.first_orders - wave0);
++        auto required = [](const RouteOut& o, const Realized& r) {
++            int n = int(r.unfinished.size());
++            for (int d : o.dropped) n += !(d >= 0 && o.stops[d].priority == P_EXTRA && o.stops[d].entity < 0);
++            return n;
++        };
++        if (displaced > 0 && wave0 > 0) {
++            Bound late = b;
++            late.pb.first_wave = std::max(0, wave0 - displaced);
++            late.sale_slots = want;
++            double t = now_ms();
++            const RouteOut out2 = route_day(late.pb);
++            prof.ms_route += now_ms() - t;
++            plan.evaluations += out2.evaluations;
++            prof.evaluations += out2.evaluations;
++            t = now_ms();
++            const Realized z2 = realize(dawn, late, out2);
++            prof.ms_realize += now_ms() - t;
++            if (z2.ok && out2.hires == out.hires && required(out2, z2) <= required(out, z)) b = late, out = out2, z = z2;
++        }
++    }
+     plan.hours = pb.last_hour + 1;
+     std::copy_n(z.actions, HOURS, plan.actions);
+     std::copy_n(&z.receipts[0][0], HOURS * N_PRODUCTS, &plan.receipts[0][0]);
+@@ -876,6 +906,13 @@
+     base.land_first = options.cash_sell;
+     const int hours = base.pb.last_hour + 1;
+     const DayMarket market = day_market(dawn, history, options.market);
++    if (options.sale_slots == 3) {  // saleslots=3: the thin products the seller sells at the dawn (its h0 decision on the dawn stock)
++        static const int none[HOURS][N_PRODUCTS]{};
++        int keep[N_PRODUCTS]{}, sell[N_PRODUCTS];
++        keep[WHEAT] = dawn.own.shed[WHEAT], keep[FERTILIZER] = dawn.own.shed[FERTILIZER];
++        choose_sales(dawn, none, hours, market, keep, 100, sell, nullptr, nullptr);
++        for (int p = 0; p < N_PRODUCTS; ++p) base.sale_want += sell[p] > 0;
++    }
+     // Deposit values; the opponent's sale hours are uncertain: averaged over scenarios where its
+     // expected daily volume lands early (hours 1-7), mid-day (7-13) or late (14-20).
+     auto values = [&](const int output[N_PRODUCTS], double out[N_PRODUCTS][HOURS]) {
+@@ -1346,6 +1383,7 @@
+         else if (k == "radius") o.search_radius = int(value);
+         else if (k == "rounds") o.search_rounds = int(value);
+         else if (k == "dropany") o.drop_any = int(value);
++        else if (k == "saleslots") o.sale_slots = int(value);
+         else if (k == "quad_radius") o.q4_radius = int(value);
+         else if (k == "quad_rounds") o.q4_rounds = int(value);
+         else if (k == "sites") o.site_candidates = int(value);
+--- ../bc_v95/dc11/compiler.hpp	2026-09-29 17:41:32.320256611 +0100
++++ dc11/compiler.hpp	2026-09-29 21:27:37.446083278 +0100
+@@ -70,6 +70,11 @@
+     // reserve=0 (Sep 29, v95): no next-dawn reserve in the funding check (end assets >= animals x wheat price x 1.2 + 30). With
+     // cashsell the dawn sale finances tomorrow's feed; the reserve made the day-6 wave trim a cow and end with cash unspent.
+     bool dawn_reserve = true;
++    // saleslots=3 (dc12 m1, Sep 29; experiments/v10/sep29_dc12): the engine takes 10 orders a turn, one per hire, and dc11 filled the
++    // first hour with hires, so the seller's dawn lots were dropped. The seller's dawn decision (choose_sales at h0 on the dawn stock)
++    // names the thin products it sells; they take first-hour slots from hires only when routing again with the smaller first wave
++    // keeps the crew and drops no required stop. Pinned real games +362 (SE 109); with the other m1 keys +1,495 trimmed.
++    int sale_slots = 0;
+     // regime=1 (the top teams' way of running the day; experiments/v10/sep28_top_lb_imitation/REDESIGN.md; off by default):
+     // - products in regimecarry (bit mask over products; default strawberries, eggs, milk, wool = 232) earn no deposit value
+     //   before regimeeve (18): no morning deposit trips, they ride in pockets to an evening shed visit or the day-end deposit;

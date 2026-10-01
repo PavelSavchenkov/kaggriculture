@@ -1,0 +1,35 @@
+base: Local-LB #1 pavel-bc-opus-v17d-dc12m19-fc2-m68 (Local-LB main); all model files byte-identical plus two new ones
+added: model/model.bin.forecast_tf.2 / .forecast_tf.3 = fc2 seeds 1 / 2 from experiments/v10/sep29_bc_mm/models/lb1/f1_fc2ens (the runtime
+       averages .forecast_tf, .2, .3); model.bin.forecast_tf is #1's fc2 (byte-identical); model dir = f1_fc2ens byte-identical
+bridge: #1's with debug info stripped (kagbuild strip --strip-debug, 14.5 -> 3.9 MB; #1's files + this bridge reproduce #1's self-play 133,577)
+package: experiments/v10/sep30_pkg_improve/packages/pavel-bc-opus-v17d-dc12m19-fc2ens-m68 (Improve Agent)
+sha256:
+b2e71ba333bb428f8b1838dff0e0cbb70033a4ca2a9d20bcd8a7ee9a9476f546  libopus_lb_bridge.so
+4ea520f515f0819e12a269d5dbf843b5ef3096c098384169e6306acb5c9e961f  main.py
+1a6ec48f4f432510d5b7cecfa20385d2067899f02501c521764843ef47712f6e  model/members/mw2k.bin
+da2397fd130841b8a974f7dbc76143ccaedd9aab1e34131715e16e023dd4a1e5  model/members/mw2k.bin.condition
+7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d  model/members/mw2k.bin.features
+814d74a6543d821e148d357317519b17709428cfabdde8bbc377aa6845584dbb  model/members/mw5k.bin
+da2397fd130841b8a974f7dbc76143ccaedd9aab1e34131715e16e023dd4a1e5  model/members/mw5k.bin.condition
+7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d  model/members/mw5k.bin.features
+ba7ba4646f10cdd85b7c33bc4d62f6344fb19c7a5055b1b67ac63db81c091b0c  model/members/sw100.bin
+da2397fd130841b8a974f7dbc76143ccaedd9aab1e34131715e16e023dd4a1e5  model/members/sw100.bin.condition
+7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d  model/members/sw100.bin.features
+8a4e1a27988f1fabde005f31d01b1423985ffa2f6605acfbda39866d270392fe  model/members/w384b.bin
+da2397fd130841b8a974f7dbc76143ccaedd9aab1e34131715e16e023dd4a1e5  model/members/w384b.bin.condition
+7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d  model/members/w384b.bin.features
+689fbf06727f612702c5f5ee4d664994b7f45b3ddb0019ab23d1a98beb45b272  model/model.bin
+15a1c6d0447176d3fc2d3fea67084bbcd2c6a662c88e945266e636502e8e893b  model/model.bin.compiler
+da2397fd130841b8a974f7dbc76143ccaedd9aab1e34131715e16e023dd4a1e5  model/model.bin.condition
+bfcfb8c512ba50bb231168597f0a38a30f640fecd7dee22232ab7a7af7a6d713  model/model.bin.dc11
+93faad06164857e0b2e60e3702742fb58a67eda966c3dba1741d4a395da13b45  model/model.bin.decode
+8e4bcc23c04f900e627826482536b6fae0ea317c8b6ea02e00402c14c406e328  model/model.bin.ensemble
+7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d  model/model.bin.features
+47630b4a0e8b86a4ad0cf4dec1b70f4c5e2df962f8578f11c207484869359d22  model/model.bin.forecast_tf
+7cbf9ae56ac71e7ef1aa29f3910b513e51cbad647d5702ddf24ac06b3ac936c6  model/model.bin.forecast_tf.2
+4abfb97e9bc6c3ada96a5b7214be59ea132fd4dd63a74f6f1520627db7c4017a  model/model.bin.forecast_tf.3
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  model/model.bin.forecast_tf_exact
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  model/model.bin.forecast_tf_intra
+57c5d7268a9d44ac188a94cf672b21a47ae0d8870208fdcc382d73091cd6171d  model/model.bin.forecast_tf_next
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  model/model.bin.forecast_tf_nextm
+92beac052e1a608a885c3feb21893dd2d45b1ff351f121dc84e6080bbc8db309  model/model.bin.opening
